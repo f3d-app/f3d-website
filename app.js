@@ -3,13 +3,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const navList = document.querySelector('.nav-list');
     const navLinks = document.querySelectorAll('.nav-item-link');
 
-    // Function to check if we're on mobile view
-    const isMobileView = () => window.innerWidth < 992;
+    const MOBILE_BREAKPOINT = 992;
 
-    // Toggle navigation
-    openNavBtn.addEventListener('click', function (e) {
+    // Check if we're on mobile view
+    const isMobileView = () => window.innerWidth < MOBILE_BREAKPOINT;
+
+    // Open navigation
+    function openNavigation() {
+        navList.classList.add('active');
+        openNavBtn.classList.add('active');
+        document.body.classList.add('nav-open');
+    }
+
+    // Close navigation
+    function closeNavigation() {
+        navList.classList.remove('active');
+        openNavBtn.classList.remove('active');
+        document.body.classList.remove('nav-open');
+    }
+
+    // Toggle navigation on button click
+    openNavBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        e.stopPropagation(); // Prevent event from bubbling up
+        e.stopPropagation();
 
         if (navList.classList.contains('active')) {
             closeNavigation();
@@ -18,24 +34,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Function to open navigation
-    function openNavigation() {
-        navList.classList.add('active');
-        openNavBtn.classList.add('active');
-        document.body.style.overflow = 'hidden'; // Prevent scrolling
-    }
-
-    // Function to close navigation
-    function closeNavigation() {
-        navList.classList.remove('active');
-        openNavBtn.classList.remove('active');
-        document.body.style.overflow = ''; // Restore scrolling
-    }
-
-    // Close navigation when a link is clicked
+    // Close navigation when a link is clicked (mobile only)
     navLinks.forEach(link => {
         link.addEventListener('click', () => {
-            if (isMobileView() && navList.classList.contains('active')) {
+            if (isMobileView()) {
                 closeNavigation();
             }
         });
@@ -49,29 +51,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // Handle window resize
+    // Handle window resize - prevent transition animations during resize
     let resizeTimer;
     window.addEventListener('resize', () => {
-        // Clear the timeout
-        clearTimeout(resizeTimer);
-
-        // Add a class during resize to prevent transitions
+        // Add a class to disable transitions during resize
         document.body.classList.add('resize-animation-stopper');
 
-        // Set a timeout to remove the class after resizing is done
+        // Force correct state when crossing breakpoint
+        if (!isMobileView()) {
+            closeNavigation();
+        }
+
+        clearTimeout(resizeTimer);
         resizeTimer = setTimeout(() => {
             document.body.classList.remove('resize-animation-stopper');
-
-            // Reset navigation state based on screen size
-            if (!isMobileView()) {
-                // Desktop mode - reset everything
-                closeNavigation();
-            }
-        }, 250);
+        }, 100);
     });
-
-    // Initialize navigation state based on screen size
-    if (!isMobileView()) {
-        closeNavigation();
-    }
 });
