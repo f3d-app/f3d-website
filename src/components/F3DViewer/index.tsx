@@ -1,11 +1,13 @@
-import React, { ReactNode, useEffect, useRef } from "react";
+import React, { ReactNode, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import f3d from "f3d";
 import styles from "./styles.module.css";
 
-function initViewer(engineInstanceRef) {
+function initViewer(moduleRef) {
   f3d({ canvas: document.getElementById("canvas") })
     .then(async (Module) => {
+
+      moduleRef.current = Module;
 
       // write in the filesystem
       const defaultFile = await fetch("data/f3d.vtp").then((b) =>
@@ -16,34 +18,33 @@ function initViewer(engineInstanceRef) {
       // automatically load all supported file format readers
       Module.Engine.autoloadPlugins();
 
-      const engineInstance = Module.Engine.create();
-      engineInstanceRef.current = engineInstance;
+      Module.engineInstance = Module.Engine.create();
 
       // background must be set to black for proper blending with transparent canvas
-      engineInstance.getOptions().set_color("render.background.color", 0, 0, 0);
+      Module.engineInstance.getOptions().set_color("render.background.color", 0, 0, 0);
 
       // setup coloring
-      engineInstance.getOptions().toggle("model.scivis.enable");
-      engineInstance.getOptions().set_string("model.scivis.array_name", "Colors");
-      engineInstance.getOptions().set_integer("model.scivis.component", -2);
-      engineInstance.getOptions().toggle("model.scivis.cells");
+      Module.engineInstance.getOptions().toggle("model.scivis.enable");
+      Module.engineInstance.getOptions().set_string("model.scivis.array_name", "Colors");
+      Module.engineInstance.getOptions().set_integer("model.scivis.component", -2);
+      Module.engineInstance.getOptions().toggle("model.scivis.cells");
 
       // make it look nice
-      engineInstance.getOptions().toggle("render.effect.antialiasing.enable");
-      engineInstance.getOptions().toggle("render.effect.tone_mapping");
-      engineInstance.getOptions().toggle("render.effect.ambient_occlusion");
-      engineInstance.getOptions().toggle("render.hdri.ambient");
+      Module.engineInstance.getOptions().toggle("render.effect.antialiasing.enable");
+      Module.engineInstance.getOptions().toggle("render.effect.tone_mapping");
+      Module.engineInstance.getOptions().toggle("render.effect.ambient_occlusion");
+      Module.engineInstance.getOptions().toggle("render.hdri.ambient");
 
       // display widgets
-      engineInstance.getOptions().toggle("ui.axis");
-      engineInstance.getOptions().toggle("render.grid.enable");
+      Module.engineInstance.getOptions().toggle("ui.axis");
+      Module.engineInstance.getOptions().toggle("render.grid.enable");
 
       // default to +Z
-      engineInstance.getOptions().set_as_string("scene.up_direction", "+Z");
+      Module.engineInstance.getOptions().set_as_string("scene.up_direction", "+Z");
 
       // setup the window size based on the canvas size
       const scale = window.devicePixelRatio;
-      engineInstance
+      Module.engineInstance
         .getWindow()
         .setSize(
           scale * Module.canvas.clientWidth,
@@ -51,27 +52,48 @@ function initViewer(engineInstanceRef) {
         );
 
       // load file
-      const scene = engineInstance.getScene();
+      const scene = Module.engineInstance.getScene();
       if (scene.supports("f3d.vtp")) {
         scene.clear();
         scene.add("f3d.vtp");
       } else {
         console.error("File " + "f3d.vtp" + " cannot be opened");
       }
-      engineInstance.getWindow().resetCamera();
-      engineInstance.getWindow().render();
+      Module.engineInstance.getWindow().resetCamera();
+      Module.engineInstance.getWindow().render();
 
       // do a first render and start the interactor
-      engineInstance.getWindow().render();
-      engineInstance.getInteractor().start();
+      Module.engineInstance.getWindow().render();
+      Module.engineInstance.getInteractor().start();
     })
     .catch((error) => console.error("Internal exception: " + error));
 }
 
-export default function F3DViewer(): ReactNode {
-  const engineInstanceRef = useRef(null);
+const F3DViewer = forwardRef((props, ref) => {
+  const moduleRef = useRef(null);
+
+  useImperativeHandle(ref, () => ({
+
+    loadFile: (file, buffer) => {
+
+      // add to FS
+      moduleRef.current.FS.writeFile(file, buffer);
+
+      const scene = moduleRef.current.engineInstance.getScene();
+      if (scene.supports(file)) {
+        scene.clear();
+        scene.add(file);
+      } else {
+        console.error("File " + file + " cannot be opened");
+      }
+      moduleRef.current.engineInstance.getWindow().resetCamera();
+      moduleRef.current.engineInstance.getWindow().render();
+    }
+
+  }));
+
   useEffect(() => {
-    initViewer(engineInstanceRef);
+    initViewer(moduleRef);
   }, []);
 
   return (
@@ -79,4 +101,6 @@ export default function F3DViewer(): ReactNode {
       <canvas id="canvas"></canvas>
     </div>
   );
-}
+});
+
+export default F3DViewer;

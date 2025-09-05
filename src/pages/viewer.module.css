@@ -1,3 +1,139 @@
+.viewerPage {
+  min-height: 70vh;
+  padding: 2rem 1rem;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+}
+.menuPanel {
+  min-width: 240px;
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+.viewerPanel {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+}
+
+/* File input */
+.fileInputGroup {
+  margin-bottom: 1rem;
+}
+.fileLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.fileInput {
+  display: none;
+}
+.fileCta {
+  background: var(--ifm-color-primary);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.fileCta:hover {
+  background: var(--ifm-color-primary-dark);
+}
+.fileName {
+  font-size: 0.9rem;
+  color: var(--ifm-color-secondary);
+}
+
+/* Up direction buttons */
+.upDirectionGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.upButton {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.upButtonActive, .upButton:active {
+  background: var(--ifm-color-primary);
+  color: #fff;
+}
+.upLabel {
+  margin-left: 0.5rem;
+  font-size: 1rem;
+  color: var(--ifm-color-secondary);
+}
+
+/* Section labels */
+.sectionLabel {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Switches and fields */
+.switchField {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.switchInput {
+  position: relative;
+  width: 2.5em;
+  height: 1.3em;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 1em;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.switchInput:checked {
+  background: var(--ifm-color-primary);
+}
+.switchInput::before {
+  content: '';
+  position: absolute;
+  left: 0.2em;
+  top: 0.18em;
+  width: 0.95em;
+  height: 0.95em;
+  background: #fff;
+  border-radius: 50%;
+  transition: transform 0.3s;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.15);
+}
+.switchInput:checked::before {
+  transform: translateX(1.2em);
+}
+.switchField label {
+  cursor: pointer;
+  user-select: none;
+  margin-left: 0.5em;
+}
+
+/* Event log and progress */
 .eventLog {
   position: absolute;
   z-index: 10;
@@ -5,7 +141,6 @@
   width: 100%;
   display: none;
 }
-
 .progress {
   transition: all 2s;
   width: 500px;
