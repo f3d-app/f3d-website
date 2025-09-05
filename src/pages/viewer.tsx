@@ -81,7 +81,7 @@ function ViewerApp() {
                 onChange={handleFileChange}
               />
               <span className={styles.fileCta}>Open a file...</span>
-              <span className={styles.fileName} id="file-name"></span>
+              <span className={styles.fileName} id="file-name">f3d.vtp</span>
             </label>
           </div>
           <div className={styles.upDirectionGroup}>
