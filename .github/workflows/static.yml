@@ -47,7 +47,7 @@ jobs:
         if: steps.cache-npm.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          key: ${{ steps.cache-npm.outputs.cache-primary-key }}
           path: '~/.npm'
 
   # Single deploy job since we're just deploying
