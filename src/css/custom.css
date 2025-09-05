@@ -6,6 +6,23 @@
 
 /* You can override the default Infima variables here. */
 :root {
+  /* Color Palette */
+  --bg-primary: #1B1B19;
+  --text-primary: #F0E7DA;
+  --accent-yellow: #F8B20A;
+  --accent-blue: #788AFE;
+
+  /* Typography */
+  --font-primary: "Mulish", sans-serif;
+  --font-heading: "DM Sans", serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 4rem;
+  --spacing-xs-small: 0.25rem;
+
   --ifm-color-primary: #2e8555;
   --ifm-color-primary-dark: #29784c;
   --ifm-color-primary-darker: #277148;
@@ -19,6 +36,13 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
+  --ifm-navbar-background-color: var(--bg-primary);
+  --ifm-hero-background-color: var(--bg-primary);
+  --ifm-background-color: var(--bg-primary);
+  --ifm-font-color-base: var(--text-primary);
+  --ifm-font-family-base: var(--font-primary);
+  --ifm-font-family-headings: var(--font-heading);
+
   --ifm-color-primary: #25c2a0;
   --ifm-color-primary-dark: #21af90;
   --ifm-color-primary-darker: #1fa588;
