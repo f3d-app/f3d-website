@@ -52,21 +52,24 @@ function initViewer(moduleRef) {
         );
 
       // load file
-      const scene = Module.engineInstance.getScene();
-      if (scene.supports("f3d.vtp")) {
-        scene.clear();
-        scene.add("f3d.vtp");
-      } else {
-        console.error("File " + "f3d.vtp" + " cannot be opened");
-      }
-      Module.engineInstance.getWindow().resetCamera();
-      Module.engineInstance.getWindow().render();
+      openFile(moduleRef, "f3d.vtp");
 
-      // do a first render and start the interactor
-      Module.engineInstance.getWindow().render();
       Module.engineInstance.getInteractor().start();
     })
     .catch((error) => console.error("Internal exception: " + error));
+}
+
+function openFile(moduleRef, file) {
+  const scene = moduleRef.current.engineInstance.getScene();
+  if (scene.supports(file)) {
+    scene.clear();
+    scene.add(file);
+  } else {
+    console.error("File " + file + " cannot be opened");
+  }
+  moduleRef.current.engineInstance.getWindow().resetCamera();
+  moduleRef.current.engineInstance.getWindow().render();
+  moduleRef.current.currentFile = file;
 }
 
 const F3DViewer = forwardRef((props, ref) => {
@@ -75,21 +78,21 @@ const F3DViewer = forwardRef((props, ref) => {
   useImperativeHandle(ref, () => ({
 
     loadFile: (file, buffer) => {
-
       // add to FS
       moduleRef.current.FS.writeFile(file, buffer);
-
-      const scene = moduleRef.current.engineInstance.getScene();
-      if (scene.supports(file)) {
-        scene.clear();
-        scene.add(file);
-      } else {
-        console.error("File " + file + " cannot be opened");
-      }
-      moduleRef.current.engineInstance.getWindow().resetCamera();
+      openFile(moduleRef, file);
+    },
+    setUpDirection: (direction) => {
+      if (!moduleRef.current) return;
+      // Set up direction in the engine options
+      moduleRef.current.engineInstance.getOptions().set_as_string("scene.up_direction", direction);
+      openFile(moduleRef, moduleRef.current.currentFile);
+    },
+    toggleOption: (option) => {
+      if (!moduleRef.current) return;
+      moduleRef.current.engineInstance.getOptions().toggle(option);
       moduleRef.current.engineInstance.getWindow().render();
     }
-
   }));
 
   useEffect(() => {
