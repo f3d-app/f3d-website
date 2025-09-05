@@ -1,9 +1,8 @@
 name: Deploy static content to Pages
 
 on:
-  # TODO: change that to "main"
   push:
-    branches: ["add-docusaurus"]
+    branches: ["main"]
 
   # Allows manual triggering of the workflow in the Actions tab
   workflow_dispatch:
@@ -28,10 +27,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      - name: Restore cache
+        id: cache-npm
+        uses: actions/cache/restore@v4
+        with:
+          path: '~/.npm'
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
       - name: Install Dependencies
-        run: npm install
+        run: npm install --no-fund --no-audit --loglevel verbose
       - name: Build
         run: npm run build
+      - name: Save cache
+        if: steps.cache-npm.outputs.cache-hit != 'true'
+        uses: actions/cache/save@v4
+        with:
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          path: '~/.npm'
 
   # Single deploy job since we're just deploying
   deploy:
