@@ -22,13 +22,13 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/docs/doc/user/INSTALLATION">
             <Icon icon="material-symbols:download-rounded" />
             Download
           </Link>
           <Link
             className="button button--secondary button--lg"
-            to="/docs/intro">
+            to="/viewer">
             <Icon icon="material-symbols:3d-rotation-rounded" />
             Web viewer
           </Link>
