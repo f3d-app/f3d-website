@@ -21,7 +21,7 @@ function HomepageHeader() {
         <img src="images/hero-image.png" />
         <div className={styles.buttons}>
           <Link
-            className="button button--primary button--outline button--lg"
+            className={`button button--primary button--outline button--lg ${styles.downloadButton}`}
             to="/docs/doc/user/INSTALLATION">
             <Icon icon="material-symbols:download-rounded" />
             Download

@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "F3D",
-  tagline: "Visualise 3D data in the simplest way",
+  title: "Visualise 3D data in the simplest way",
+  tagline: "Interact, generate high quality screenshots, and browse quickly through a series of 3D models",
   favicon: "icons/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -39,8 +39,6 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          // TODO: Change this before merging!
-          editUrl: "https://github.com/meakk/f3d-website/tree/add-docusaurus/",
           onInlineTags: "warn",
           onInlineAuthors: "warn",
           onUntruncatedBlogPosts: "warn",

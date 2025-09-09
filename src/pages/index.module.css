@@ -8,6 +8,8 @@
   text-align: center;
   position: relative;
   overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
 }
 
 @media screen and (max-width: 996px) {
@@ -21,10 +23,21 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-top: 1.5em;
 }
 
 .buttons :global(.iconify) {
   font-size: 1.8rem;
   margin-right: 0.8rem;
   vertical-align: -0.25em;
+}
+
+.downloadButton {
+  --ifm-button-border-color: var(--accent-yellow);
+  --ifm-button-color: var(--accent-yellow);
+}
+
+.downloadButton:hover {
+  --ifm-button-background-color: var(--accent-yellow);
+  --ifm-button-color: var(--bg-primary);
 }

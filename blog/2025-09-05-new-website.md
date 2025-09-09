@@ -5,8 +5,15 @@ authors: [meak]
 tags: [website]
 ---
 
-Lorem ipsum dolor sit amet...
+Welcome to the new website!
 
 <!-- truncate -->
 
-...consectetur adipiscing elit. Pellentesque elementum dignissim ultricies. Fusce rhoncus ipsum tempor eros aliquam consequat. Lorem ipsum dolor sit amet
+:::info
+Work in progress
+:::
+
+
+## Why?
+
+Explain about versioning and flexibility
