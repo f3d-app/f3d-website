@@ -80,7 +80,7 @@ function ViewerApp() {
                 accept=".gml,.gltf,.glb,.obj,.ply,.pts,.stl,.vtk,.vtp,.vtu,.vtkhdf,.3ds,.wrl,.vrml,.fbx,.off,.x,.dae,.ex2,.exo,.e,.g,.stp,.step,.igs,.iges,.brep,.xbf,.drc,.mdl,.nc,.cdf,.ncdf"
                 onChange={handleFileChange}
               />
-              <span className={styles.fileCta}>Open a file...</span>
+              <span className="button button--primary button--lg">Open a file...</span>
               <span className={styles.fileName} id="file-name">f3d.vtp</span>
             </label>
           </div>

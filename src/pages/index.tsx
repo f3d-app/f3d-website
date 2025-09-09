@@ -21,13 +21,13 @@ function HomepageHeader() {
         <img src="images/hero-image.png" />
         <div className={styles.buttons}>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--primary button--outline button--lg"
             to="/docs/doc/user/INSTALLATION">
             <Icon icon="material-symbols:download-rounded" />
             Download
           </Link>
           <Link
-            className="button button--secondary button--lg"
+            className="button button--primary button--outline button--lg"
             to="/viewer">
             <Icon icon="material-symbols:3d-rotation-rounded" />
             Web viewer
@@ -46,7 +46,9 @@ export default function Home(): ReactNode {
       description="F3D website">
       <HomepageHeader />
       <main>
+        {/* 
         <HomepageFeatures />
+        */}
       </main>
     </Layout>
   );

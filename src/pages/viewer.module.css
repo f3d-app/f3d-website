@@ -38,21 +38,8 @@
 .fileInput {
   display: none;
 }
-.fileCta {
-  background: var(--ifm-color-primary);
-  color: var(--ifm-font-color-base);
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  text-align: center;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: background 0.2s;
-}
-.fileCta:hover {
-  background: var(--ifm-color-primary-dark);
-}
 .fileName {
-  font-size: 0.9rem;
+  font-size: 0.8rem;
 }
 
 /* Up direction buttons */

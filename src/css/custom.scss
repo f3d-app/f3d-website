@@ -3,6 +3,7 @@
  * bundles Infima by default. Infima is a CSS framework designed to
  * work well for content-centric websites.
  */
+@use 'sass:color';
 
 @font-face {
   font-family: 'Mulish';
@@ -13,6 +14,12 @@
   font-family: 'DM Sans';
   src: local('DM Sans'), url(../fonts/DMSans.ttf) format('truetype');
 }
+
+$f3d_black: #1B1B19;
+$f3d_white: #F0E7DA;
+$f3d_blue: #788AFE;
+$f3d_yellow: #F8B20A;
+$f3d_red: #F94306;
 
 /* You can override the default Infima variables here. */
 :root {
@@ -35,14 +42,16 @@
   --spacing-xs-small: 0.25rem;
 
   /* ifm colors */
-  --ifm-background-color: var(--bg-primary);
-  --ifm-background-surface-color: var(--bg-primary);
+  --ifm-background-color: #{color.scale($f3d_white, $lightness: 90%)};
+  --ifm-background-surface-color: #{color.scale($f3d_white, $lightness: 70%)};
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-button-background-color: var(--accent-blue);
+  --ifm-button-color: var(--text-primary);
 
-
-  --ifm-color-primary: var(--accent-blue);
-
-  --ifm-hero-background-color: var(--bg-primary);
-  --ifm-footer-background-color: var(--bg-primary);
+  --ifm-color-primary: #{$f3d_blue};
+  --ifm-color-primary-dark: #{color.scale($f3d_blue, $lightness: -5%)};
+  --ifm-color-primary-darker: #{color.scale($f3d_blue, $lightness: -10%)};
 
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -53,6 +62,16 @@
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-footer-background-color: var(--bg-primary);
+  --ifm-background-color: #{$f3d_black};
+  --ifm-background-surface-color: #{color.scale($f3d_black, $lightness: -10%)};
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-button-background-color: var(--accent-blue);
+  --ifm-button-color: var(--text-primary);
+
+  --ifm-color-primary: #{$f3d_blue};
+  --ifm-color-primary-dark: #{color.scale($f3d_blue, $lightness: -5%)};
+  --ifm-color-primary-darker: #{color.scale($f3d_blue, $lightness: -10%)};
+  
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }

@@ -25,6 +25,7 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       "classic",
@@ -45,7 +46,7 @@ const config: Config = {
           onUntruncatedBlogPosts: "warn",
         },
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: "./src/css/custom.scss",
         },
       } satisfies Preset.Options,
     ],
@@ -69,10 +70,10 @@ const config: Config = {
         },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/viewer", label: "Web Viewer", position: "left" },
-        {
+        /*{
           type: 'docsVersionDropdown',
           position: "right",
-        },
+        },*/
         {
           href: "https://github.com/f3d-app/f3d",
           label: "GitHub",
@@ -83,11 +84,19 @@ const config: Config = {
     footer: {
       links: [
         {
-          title: "Docs",
+          title: "Documentation",
           items: [
             {
-              label: "Documentation",
-              to: "/docs",
+              label: "Application",
+              to: "/docs/doc/user/QUICKSTART",
+            },
+            {
+              label: "Library",
+              to: "/docs/doc/libf3d/OVERVIEW",
+            },
+            {
+              label: "Developers",
+              to: "/docs/doc/dev/GETTING_STARTED",
             },
           ],
         },
@@ -99,7 +108,7 @@ const config: Config = {
               href: "https://discord.f3d.app",
             },
             {
-              label: "Sponsor <3",
+              label: "Sponsor ♥️",
               href: "https://github.com/sponsors/f3d-app",
             },
           ],
