@@ -50,7 +50,7 @@
 }
 .upButton {
   background: var(--ifm-background-surface-color);
-  border: 1px solid var(--ifm-color-primary-lightest);
+  border: 1px solid var(--ifm-color-primary);
   color: var(--ifm-color-primary);
   border-radius: 4px;
   padding: 0.25rem 0.75rem;
@@ -59,8 +59,8 @@
 }
 .upButtonActive {
   background: var(--ifm-color-primary);
-  border: 1px solid var(--ifm-color-primary-lightest);
-  color: var(--ifm-font-color-base);
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-background-surface-color);
   border-radius: 4px;
   padding: 0.25rem 0.75rem;
   cursor: pointer;
