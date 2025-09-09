@@ -21,6 +21,7 @@
   --text-primary: #F0E7DA;
   --accent-yellow: #F8B20A;
   --accent-blue: #788AFE;
+  --accent-red: #F94306;
 
   /* Typography */
   --font-primary: "Mulish", sans-serif;
@@ -32,6 +33,11 @@
   --spacing-md: 1rem;
   --spacing-lg: 4rem;
   --spacing-xs-small: 0.25rem;
+
+  /* ifm colors */
+  --ifm-background-color: var(--bg-primary);
+  --ifm-background-surface-color: var(--bg-primary);
+
 
   --ifm-color-primary: var(--accent-blue);
 

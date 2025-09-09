@@ -22,3 +22,9 @@
   justify-content: center;
   gap: 1rem;
 }
+
+.buttons :global(.iconify) {
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+  vertical-align: -0.25em;
+}

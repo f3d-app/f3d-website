@@ -19,7 +19,7 @@
     "@docusaurus/preset-classic": "3.8.1",
     "@mdx-js/react": "^3.0.0",
     "clsx": "^2.0.0",
-    "f3d": "github:Meakk/f3d#refactor-wasm",
+    "f3d": "file:../../Downloads/f3d-wasm-package/f3d-3.2.0.tgz",
     "prism-react-renderer": "^2.3.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -28,6 +28,7 @@
     "@docusaurus/module-type-aliases": "3.8.1",
     "@docusaurus/tsconfig": "3.8.1",
     "@docusaurus/types": "3.8.1",
+    "@iconify/react": "^6.0.1",
     "typescript": "~5.6.2"
   },
   "browserslist": {
