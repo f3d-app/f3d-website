@@ -67,7 +67,6 @@
   color: var(--ifm-color-primary);
   border-radius: 4px;
   padding: 0.25rem 0.75rem;
-  font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
@@ -77,13 +76,11 @@
   color: var(--ifm-font-color-base);
   border-radius: 4px;
   padding: 0.25rem 0.75rem;
-  font-size: 1rem;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
 }
 .upLabel {
   margin-left: 0.5rem;
-  font-size: 1rem;
 }
 
 /* Section labels */
