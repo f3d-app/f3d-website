@@ -7,7 +7,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 const config: Config = {
   title: "Visualise 3D data in the simplest way",
   tagline: "Interact, generate high quality screenshots, and browse quickly through a series of 3D models",
-  favicon: "icons/favicon.ico",
+  favicon: "logos/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
   future: {
@@ -53,11 +53,25 @@ const config: Config = {
   themeConfig: {
     // TODO: do we need that?
     image: "images/xxx.jpg",
+    colorMode: {
+      defaultMode: 'dark',
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
+    },
+    announcementBar: {
+      id: 'survey',
+      content:
+        'Help us to improve! Please fill <a target="_blank" rel="noopener noreferrer" href="https://my.liberaforms.org/f3d-community-survey">this survey</a>',
+      backgroundColor: '#F8B20A',
+      textColor: '#1B1B19',
+      isCloseable: true,
+    },
     navbar: {
       title: "F3D",
       logo: {
         alt: "F3D Logo",
-        src: "logos/color-logo.svg",
+        src: "logos/logo.svg",
+        width: 32,
       },
       items: [
         {
@@ -84,6 +98,10 @@ const config: Config = {
         {
           title: "Documentation",
           items: [
+            {
+              label: "Gallery",
+              to: "/docs/doc/GALLERY",
+            },
             {
               label: "Application",
               to: "/docs/doc/user/QUICKSTART",
@@ -117,6 +135,10 @@ const config: Config = {
             {
               label: "Blog",
               to: "/blog",
+            },
+            {
+              label: "Web Viewer",
+              to: "/viewer",
             },
             {
               label: "GitHub",
