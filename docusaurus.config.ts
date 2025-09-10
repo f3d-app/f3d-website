@@ -114,6 +114,10 @@ const config: Config = {
               label: "Developers",
               to: "/docs/doc/dev/GETTING_STARTED",
             },
+            {
+              label: "API Reference",
+              to: "/docs/api",
+            },
           ],
         },
         {

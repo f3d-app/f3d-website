@@ -90,7 +90,12 @@ const sidebars: SidebarsConfig = {
       id: 'doc/CHANGELOG',
       label: 'Changelog',
     },
-  ],
+    {
+      type: 'doc',
+      id: 'api',
+      label: 'API Reference',
+    },
+  ]
 };
 
 /*
