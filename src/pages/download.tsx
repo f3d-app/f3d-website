@@ -1,7 +1,8 @@
 import type {ReactNode} from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
-import DownloadRecommandations from '@site/src/components/DownloadRecommandations';
+import BrowserOnly from '@docusaurus/BrowserOnly';
+import DownloadRecommendations from '@site/src/components/DownloadRecommendations';
 import Heading from '@theme/Heading';
 import downloadLinks from './downloadLinks.json';
 
@@ -16,7 +17,9 @@ export default function DownloadPage(): ReactNode {
           <Heading as="h1" className="hero__title">
             Visualize your 3D assets with F3D
           </Heading>
-          <DownloadRecommandations links={downloadLinks} />
+          <BrowserOnly>
+            {() => <DownloadRecommendations links={downloadLinks} />}
+          </BrowserOnly>
         </div>
       </header>
       <section>

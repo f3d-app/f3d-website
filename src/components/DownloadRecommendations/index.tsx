@@ -25,7 +25,7 @@ function GuessClient() {
   }
 }
 
-export type DownloadRecommandationsProps = {
+export type DownloadRecommendationsProps = {
   links: Record<string, {
     primary: { url: string; label: string };
     secondary: { url: string; label: string };
@@ -33,7 +33,7 @@ export type DownloadRecommandationsProps = {
   }>;
 };
 
-export default function DownloadRecommandations({ links }: DownloadRecommandationsProps): ReactNode {
+export default function DownloadRecommendations({ links }: DownloadRecommendationsProps): ReactNode {
   // check OS: first check for `?os=foo` in the URL, otherwise guess from user agent
   const params = new URLSearchParams(window.location.search);
   const current_os = params.get('os') || GuessClient();
