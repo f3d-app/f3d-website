@@ -12,9 +12,9 @@ function HomepageHeader() {
     <header className={`hero heroBanner`}>
       <div className="container">
         <Heading as="h1" className="hero__title">
-          {siteConfig.title}
+          {siteConfig.tagline}
         </Heading>
-        <p className="hero__subtitle">{siteConfig.tagline}</p>
+        <p className="hero__subtitle">Interact, generate high quality screenshots, and browse quickly through a series of 3D models</p>
         <div className="buttons">
           <Link
             className={`button button--primary button--outline button--lg highlightButton`}

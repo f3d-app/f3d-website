@@ -5,8 +5,8 @@ import type * as Preset from "@docusaurus/preset-classic";
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: "Visualise 3D data in the simplest way",
-  tagline: "Interact, generate high quality screenshots, and browse quickly through a series of 3D models",
+  title: "F3D",
+  tagline: "Visualise 3D data in the simplest way.",
   favicon: "logos/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -51,8 +51,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-    // TODO: do we need that?
-    image: "images/xxx.jpg",
+    image: "images/typical_opengraph.jpg",
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,
