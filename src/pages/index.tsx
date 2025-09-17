@@ -1,5 +1,4 @@
 import type {ReactNode} from 'react';
-import clsx from 'clsx';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -7,21 +6,18 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import { Icon } from '@iconify/react';
 
-import styles from './index.module.css';
-
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   return (
-    <header className={clsx('hero', styles.heroBanner)}>
+    <header className={`hero heroBanner`}>
       <div className="container">
         <Heading as="h1" className="hero__title">
           {siteConfig.title}
         </Heading>
         <p className="hero__subtitle">{siteConfig.tagline}</p>
-        <img src="images/hero-image.png" />
-        <div className={styles.buttons}>
+        <div className="buttons">
           <Link
-            className={`button button--primary button--outline button--lg ${styles.downloadButton}`}
+            className={`button button--primary button--outline button--lg highlightButton`}
             to="/docs/doc/user/INSTALLATION">
             <Icon icon="material-symbols:download-rounded" />
             Download
@@ -46,9 +42,7 @@ export default function Home(): ReactNode {
       description="F3D website">
       <HomepageHeader />
       <main>
-        {/* 
         <HomepageFeatures />
-        */}
       </main>
     </Layout>
   );

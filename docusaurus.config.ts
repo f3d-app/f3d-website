@@ -74,12 +74,14 @@ const config: Config = {
         width: 32,
       },
       items: [
+        { to: "/download", label: "Download", position: "left" },
         {
           type: "docSidebar",
           sidebarId: "mainSidebar",
           position: "left",
           label: "Documentation",
         },
+        { to: "/gallery", label: "Gallery", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/viewer", label: "Web Viewer", position: "left" },
         /*{

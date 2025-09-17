@@ -54,7 +54,6 @@ $f3d_red: #F94306;
   --ifm-font-family-headings: var(--font-heading);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
   --ifm-background-color: #{$f3d_black};
   --ifm-background-surface-color: #{color.scale($f3d_black, $lightness: -10%)};
@@ -76,4 +75,50 @@ $f3d_red: #F94306;
 /* Explicitly apply heading fonts to ensure they override theme defaults */
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-heading);
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .heroBanner {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5em;
+}
+
+.buttons .iconify {
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+  vertical-align: -0.25em;
+}
+
+small .iconify {
+  font-size: 1.2rem !important;
+  margin-right: 0.6rem !important;
+}
+
+.highlightButton {
+  --ifm-button-border-color: var(--accent-yellow);
+  --ifm-button-color: var(--accent-yellow);
+}
+
+.highlightButton:hover {
+  --ifm-button-background-color: var(--accent-yellow);
+  --ifm-button-color: var(--bg-primary);
 }
