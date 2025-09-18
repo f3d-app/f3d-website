@@ -4,7 +4,6 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import Logo from '@site/static/logos/logo.svg';
 import { Icon } from '@iconify/react';
 
 function HomepageHeader() {
@@ -13,7 +12,7 @@ function HomepageHeader() {
     <header className={`hero heroBanner`}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <Logo style={{ maxWidth: '320px', width: '100%', height: 'auto' }} />
+          <video src={require('../../static/logos/logo-animated.mp4').default} autoPlay loop muted playsInline style={{ maxWidth: '320px', width: '100%', height: 'auto' }} />
         </div>
         <Heading as="h1" className="hero__title">
           {siteConfig.tagline}
