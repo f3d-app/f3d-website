@@ -38,6 +38,7 @@ $f3d_red: #F94306;
   /* ifm colors */
   --ifm-background-color: #{color.scale($f3d_white, $lightness: 90%)};
   --ifm-background-surface-color: #{color.scale($f3d_white, $lightness: 70%)};
+  --ifm-hr-background-color: var(--ifm-hero-text-color);
   --ifm-hero-background-color: var(--ifm-background-color);
   --ifm-footer-background-color: var(--ifm-background-surface-color);
   --ifm-button-background-color: var(--accent-blue);
@@ -78,7 +79,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: center;
   position: relative;
   overflow: hidden;
