@@ -5,14 +5,19 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import { Icon } from '@iconify/react';
+import { useColorMode } from '@docusaurus/theme-common';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
+  const { colorMode } = useColorMode();
+  const videoSrc = colorMode === 'dark'
+    ? require('@site/static/logos/logo-animated-dark.webm').default
+    : require('@site/static/logos/logo-animated-light.webm').default;
   return (
     <header className={`hero heroBanner`}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <video src={require('../../static/logos/logo-animated.mp4').default} autoPlay loop muted playsInline style={{ maxWidth: '320px', width: '100%', height: 'auto' }} />
+          <video src={videoSrc} autoPlay loop muted playsInline style={{ maxWidth: '320px', width: '100%', height: 'auto' }} />
         </div>
         <Heading as="h1" className="hero__title">
           {siteConfig.tagline}
