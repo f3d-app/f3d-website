@@ -9,7 +9,7 @@ export default function HomepageFeatures(): ReactNode {
         <div className="row">
           <div className='col col--4'>
             <div className="text--center">
-              <img className={styles.featureSvg} src={require('@site/static/images/realisticMask.png').default} style={{ width: '100%', borderRadius: '8px' }}/>
+              <img src={require('@site/static/images/realisticMask.png').default} style={{ width: '100%', borderRadius: '8px' }}/>
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Realistic rendering</Heading>
@@ -18,7 +18,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
           <div className='col col--4'>
             <div className="text--center">
-              <video className={styles.featureSvg} src={require('@site/static/images/dota.webm').default}
+              <video src={require('@site/static/images/dota.webm').default}
                 autoPlay
                 loop
                 muted
@@ -32,7 +32,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
           <div className='col col--4'>
             <div className="text--center">
-              <img className={styles.featureSvg} src={require('@site/static/images/step.png').default} style={{ width: '100%', borderRadius: '8px' }} />
+              <img src={require('@site/static/images/step.png').default} style={{ width: '100%', borderRadius: '8px' }} />
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">CAD</Heading>
@@ -44,7 +44,7 @@ export default function HomepageFeatures(): ReactNode {
         <div className="row">
           <div className='col col--4'>
             <div className="text--center">
-              <video className={styles.featureSvg} src={require('@site/static/images/counter.webm').default}
+              <video src={require('@site/static/images/counter.webm').default}
                 autoPlay
                 loop
                 muted
@@ -58,7 +58,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
           <div className='col col--4'>
             <div className="text--center">
-              <img className={styles.featureSvg} src={require('@site/static/images/volumeMedical.png').default} style={{ width: '100%', borderRadius: '8px' }}/>
+              <img src={require('@site/static/images/volumeMedical.png').default} style={{ width: '100%', borderRadius: '8px' }}/>
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Volume Rendering</Heading>
@@ -67,7 +67,7 @@ export default function HomepageFeatures(): ReactNode {
           </div>
           <div className='col col--4'>
             <div className="text--center">
-              <img className={styles.featureSvg} src={require('@site/static/images/cfd.png').default} style={{ width: '100%', borderRadius: '8px' }}/>
+              <img src={require('@site/static/images/cfd.png').default} style={{ width: '100%', borderRadius: '8px' }}/>
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Scientific Visualization</Heading>

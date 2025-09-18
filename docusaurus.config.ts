@@ -6,7 +6,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 const config: Config = {
   title: "F3D",
-  tagline: "Visualise 3D data in the simplest way.",
+  tagline: "Visualize 3D data in the simplest way.",
   favicon: "logos/favicon.ico",
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future

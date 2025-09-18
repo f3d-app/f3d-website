@@ -4,6 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
+import Logo from '@site/static/logos/logo.svg';
 import { Icon } from '@iconify/react';
 
 function HomepageHeader() {
@@ -11,10 +12,13 @@ function HomepageHeader() {
   return (
     <header className={`hero heroBanner`}>
       <div className="container">
+        <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
+          <Logo style={{ maxWidth: '320px', width: '100%', height: 'auto' }} />
+        </div>
         <Heading as="h1" className="hero__title">
           {siteConfig.tagline}
         </Heading>
-        <p className="hero__subtitle">Interact, generate high quality screenshots, and browse quickly through a series of 3D models</p>
+        <p className="hero__subtitle">Interact, generate high quality renderings, and browse quickly through a series of 3D models</p>
         <div className="buttons">
           <Link
             className={`button button--primary button--outline button--lg highlightButton`}
@@ -28,6 +32,10 @@ function HomepageHeader() {
             <Icon icon="material-symbols:3d-rotation-rounded" />
             Web viewer
           </Link>
+        </div>
+        <div>
+          F3D is free and open source software.<br />
+          <strong>Try it now!</strong>
         </div>
       </div>
     </header>
