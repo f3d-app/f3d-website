@@ -4,7 +4,7 @@ import Layout from '@theme/Layout';
 import Admonition from '@theme/Admonition';
 import Heading from '@theme/Heading';
 import React from 'react';
-import '@splidejs/react-splide/css';
+import '@splidejs/react-splide/css/sea-green';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import CodeBlock from '@theme/CodeBlock';
 
@@ -210,7 +210,7 @@ export default function Gallery(): ReactNode {
                 <Splide options={{ type: 'loop', perPage: 1, gap: '2rem', autoplay: true, pauseOnHover: true, pagination: true, arrows: true }}>
                     {galleryItems.map((item, idx) => (
                         <SplideSlide key={idx}>
-                            <section style={{ marginBottom: '2em', textAlign: 'center' }}>
+                            <section style={{ textAlign: 'center' }}>
                                 <Heading as="h3">{item.title}</Heading>
                                 <div style={{ marginBottom: '1em' }}>{item.media}</div>
                                 <CodeBlock>{item.command}</CodeBlock>

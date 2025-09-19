@@ -1,16 +1,16 @@
 import React, { ReactNode, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
+import useBaseUrl from "@docusaurus/useBaseUrl";
 import f3d from "f3d";
 import styles from "./styles.module.css";
 
-function initViewer(moduleRef) {
+function initViewer(moduleRef, fileUrl) {
   f3d({ canvas: document.getElementById("canvas") })
     .then(async (Module) => {
 
       moduleRef.current = Module;
 
       // write in the filesystem
-      const defaultFile = await fetch("data/f3d.vtp").then((b) =>
+      const defaultFile = await fetch(fileUrl).then((b) =>
         b.arrayBuffer()
       );
       Module.FS.writeFile("f3d.vtp", new Uint8Array(defaultFile));
@@ -74,7 +74,7 @@ function openFile(moduleRef, file) {
 
 const F3DViewer = forwardRef((props, ref) => {
   const moduleRef = useRef(null);
-
+  const fileUrl = useBaseUrl('/data/f3d.vtp');
   useImperativeHandle(ref, () => ({
 
     loadFile: (file, buffer) => {
@@ -96,8 +96,8 @@ const F3DViewer = forwardRef((props, ref) => {
   }));
 
   useEffect(() => {
-    initViewer(moduleRef);
-  }, []);
+    initViewer(moduleRef, fileUrl); // Pass fileUrl to initViewer
+  }, [fileUrl]);
 
   return (
     <div className={styles.viewer}>

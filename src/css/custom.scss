@@ -18,11 +18,11 @@ $f3d_red: #F94306;
 
 :root {
   /* Color Palette */
-  --bg-primary: #1B1B19;
-  --text-primary: #F0E7DA;
-  --accent-yellow: #F8B20A;
-  --accent-blue: #788AFE;
-  --accent-red: #F94306;
+  --bg-primary: #{$f3d_white};
+  --text-primary: #{$f3d_black};
+  --accent-yellow: #{$f3d_yellow};
+  --accent-blue: #{$f3d_blue};
+  --accent-red: #{$f3d_red};
 
   /* Typography */
   --font-primary: "Mulish", sans-serif;
@@ -56,6 +56,9 @@ $f3d_red: #F94306;
 }
 
 [data-theme='dark'] {
+  --bg-primary: #{$f3d_black};
+  --text-primary: #{$f3d_white};
+
   --ifm-background-color: #{$f3d_black};
   --ifm-background-surface-color: #{color.scale($f3d_black, $lightness: -10%)};
   --ifm-hero-background-color: var(--ifm-background-color);
@@ -122,4 +125,21 @@ small .iconify {
 .highlightButton:hover {
   --ifm-button-background-color: var(--accent-yellow);
   --ifm-button-color: var(--bg-primary);
+}
+
+/* Change arrow color */
+.splide__arrow svg {
+  fill: var(--ifm-color-primary) !important;
+}
+
+.splide__arrow:hover svg {
+  fill: var(--ifm-color-primary-dark) !important;
+}
+
+.splide__pagination__page {
+  background: var(--ifm-button-color) !important;
+}
+
+.splide__pagination__page.is-active {
+  background: var(--ifm-color-primary) !important;
 }
