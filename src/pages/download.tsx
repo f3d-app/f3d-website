@@ -5,6 +5,7 @@ import BrowserOnly from '@docusaurus/BrowserOnly';
 import DownloadRecommendations from '@site/src/components/DownloadRecommendations';
 import Heading from '@theme/Heading';
 import downloadLinks from './downloadLinks.json';
+import SplitBar from '../components/SplitBar';
 
 export default function DownloadPage(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
@@ -23,6 +24,7 @@ export default function DownloadPage(): ReactNode {
         </div>
       </header>
       <section>
+      <SplitBar />
       <div className="container">
         <div className="row">
           <Heading as="h1">TODO</Heading>

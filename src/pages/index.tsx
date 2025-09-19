@@ -6,7 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import { Icon } from '@iconify/react';
 import { useColorMode } from '@docusaurus/theme-common';
-import Logo from '@site/static/logos/logo-mono.svg';
+import SplitBar from '../components/SplitBar';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -55,20 +55,7 @@ export default function Home(): ReactNode {
       description="F3D website">
       <HomepageHeader />
       <main>
-        <div className="container">
-          <div style={{ position: 'relative', textAlign: 'center', margin: '3rem 8rem' }}>
-            <hr />
-            <span style={{
-              position: 'absolute',
-              width:'200px',
-              transform: 'translate(-55%, -90%)',
-              background: 'var(--ifm-background-color)',
-              display: 'inline-block'
-            }}>
-              <Logo style={{ height: '48px', color: 'var(--ifm-hr-background-color)', fill: 'var(--ifm-hr-background-color)' }} />
-            </span>
-          </div>
-        </div>
+        <SplitBar />
         <HomepageFeatures />
       </main>
     </Layout>

@@ -27,9 +27,9 @@ function GuessClient() {
 
 export type DownloadRecommendationsProps = {
   links: Record<string, {
-    primary: { url: string; label: string };
-    secondary: { url: string; label: string };
-    icon: string;
+    tag: string;
+    date: Date;
+    assets: Object;
   }>;
 };
 
@@ -39,8 +39,8 @@ export default function DownloadRecommendations({ links }: DownloadRecommendatio
   const current_os = params.get('os') || GuessClient();
   if (current_os == null) return null;
 
-  const osLinks = links[current_os];
-  if (osLinks == null) return null;
+  const osLinks = links.assets[current_os];
+  if (osLinks == null || osLinks.binaries.length < 2) return null;
 
   return (
     <section>
@@ -48,17 +48,17 @@ export default function DownloadRecommendations({ links }: DownloadRecommendatio
         <div className="buttons">
           <a
             className={`button button--primary button--lg`}
-            href={osLinks.primary.url}
+            href={osLinks.binaries[0].url}
             download
           >
-            Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{current_os}</b> ({osLinks.primary.label})</small>
+            Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{current_os}</b> ({osLinks.binaries[0].short})</small>
           </a>
           <a
             className="button button--primary button--outline button--lg"
-            href={osLinks.secondary.url}
+            href={osLinks.binaries[1].url}
             download
           >
-            Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{current_os}</b> ({osLinks.secondary.label})</small>
+            Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{current_os}</b> ({osLinks.binaries[1].short})</small>
           </a>
         </div>
         <div style={{ textAlign: 'center', marginTop: '0.3rem', marginBottom: '2rem' }}>or see other available versions below</div>
