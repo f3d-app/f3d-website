@@ -46,8 +46,8 @@
           "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-Linux-x86_64-raytracing.deb",
           "size": "120.0 MB",
           "digest": "sha256:0a8df96d9b8fcc43e6304f64483554f1ba21893c9cd77b0202fea23da850860f",
-          "short": "Debian package",
-          "long": "Debian package (.deb) with raytracing support"
+          "short": "Package",
+          "long": "Package (.deb) with raytracing support"
         },
         {
           "name": "F3D-3.2.0-Linux-x86_64-raytracing.tar.xz",
@@ -70,8 +70,8 @@
           "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-Linux-x86_64.deb",
           "size": "54.0 MB",
           "digest": "sha256:34f8b1571eb1cb27ab548d4783b6a52479e9e4cbbad79868358a3ea019fb2f4e",
-          "short": "Debian package",
-          "long": "Debian package (.deb) without raytracing support"
+          "short": "Package",
+          "long": "Package (.deb) without raytracing support"
         },
         {
           "name": "F3D-3.2.0-Linux-x86_64.tar.xz",
@@ -95,14 +95,6 @@
     "macOS": {
       "binaries": [
         {
-          "name": "F3D-3.2.0-macOS-x86_64-raytracing.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-macOS-x86_64-raytracing.dmg",
-          "size": "106.8 MB",
-          "digest": "sha256:18501cf383181ecb70088bccbff5111af8bd51296d67ad43bbe8b8acb91d4a2f",
-          "short": "Intel",
-          "long": "Intel installer with raytracing support"
-        },
-        {
           "name": "F3D-3.2.0-macOS-arm64-raytracing.dmg",
           "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-macOS-arm64-raytracing.dmg",
           "size": "82.1 MB",
@@ -111,12 +103,12 @@
           "long": "Silicon installer with raytracing support"
         },
         {
-          "name": "F3D-3.2.0-macOS-x86_64.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-macOS-x86_64.dmg",
-          "size": "42.8 MB",
-          "digest": "sha256:0089f5ad35e504397b499c06352e84223a95973303b492fd2a69704f7940c756",
+          "name": "F3D-3.2.0-macOS-x86_64-raytracing.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-macOS-x86_64-raytracing.dmg",
+          "size": "106.8 MB",
+          "digest": "sha256:18501cf383181ecb70088bccbff5111af8bd51296d67ad43bbe8b8acb91d4a2f",
           "short": "Intel",
-          "long": "Intel installer without raytracing support"
+          "long": "Intel installer with raytracing support"
         },
         {
           "name": "F3D-3.2.0-macOS-arm64.dmg",
@@ -125,6 +117,14 @@
           "digest": "sha256:9b6f4a4fb98d7266e4066d65186e03c0b07648fbe54be768a95555e727cad00f",
           "short": "Silicon",
           "long": "Silicon installer without raytracing support"
+        },
+        {
+          "name": "F3D-3.2.0-macOS-x86_64.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.2.0/F3D-3.2.0-macOS-x86_64.dmg",
+          "size": "42.8 MB",
+          "digest": "sha256:0089f5ad35e504397b499c06352e84223a95973303b492fd2a69704f7940c756",
+          "short": "Intel",
+          "long": "Intel installer without raytracing support"
         }
       ],
       "icon": "cib:apple"

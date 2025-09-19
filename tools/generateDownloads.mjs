@@ -65,18 +65,18 @@ try {
     result.assets.Windows.binaries.push(getAsset(response.data.assets, /Windows-x86_64.zip/, "Portable", "Portable (.zip) without raytracing support"));
 
     // Linux
-    result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64-raytracing.deb/, "Debian package", "Debian package (.deb) with raytracing support"));
+    result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64-raytracing.deb/, "Package", "Package (.deb) with raytracing support"));
     result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64-raytracing.tar.xz/, "Portable", "Tarball (.tar.xz) with raytracing support"));
     result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64-raytracing.tar.gz/, "Portable", "Tarball (.tar.gz) with raytracing support"));
-    result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64.deb/, "Debian package", "Debian package (.deb) without raytracing support"));
+    result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64.deb/, "Package", "Package (.deb) without raytracing support"));
     result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64.tar.xz/, "Portable", "Tarball (.tar.xz) without raytracing support"));
     result.assets.Linux.binaries.push(getAsset(response.data.assets, /Linux-x86_64.tar.gz/, "Portable", "Tarball (.tar.gz) without raytracing support"));
 
     // macOS
-    result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-x86_64-raytracing.dmg/, "Intel", "Intel installer with raytracing support"));
     result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-arm64-raytracing.dmg/, "Silicon", "Silicon installer with raytracing support"));
-    result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-x86_64.dmg/, "Intel", "Intel installer without raytracing support"));
+    result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-x86_64-raytracing.dmg/, "Intel", "Intel installer with raytracing support"));
     result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-arm64.dmg/, "Silicon", "Silicon installer without raytracing support"));
+    result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-x86_64.dmg/, "Intel", "Intel installer without raytracing support"));
 
     const outputPath = path.resolve(import.meta.dirname, "../src/pages/downloadLinks.json");
     writeFileSync(outputPath, JSON.stringify(result, null, 2));
