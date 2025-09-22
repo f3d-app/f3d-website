@@ -12,8 +12,8 @@ function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
   const { colorMode } = useColorMode();
   const videoSrc = colorMode === 'dark'
-    ? require('@site/static/logos/logo-animated-dark.webm').default
-    : require('@site/static/logos/logo-animated-light.webm').default;
+    ? require('@site/static/logos/logo-animated-dark.mp4').default
+    : require('@site/static/logos/logo-animated-light.mp4').default;
   return (
     <header className={`hero heroBanner`}>
       <div className="container">
