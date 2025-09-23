@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import BrowserOnly from '@docusaurus/BrowserOnly';
@@ -6,9 +6,25 @@ import DownloadRecommendations from '@site/src/components/DownloadRecommendation
 import Heading from '@theme/Heading';
 import downloadLinks from './downloadLinks.json';
 import SplitBar from '../components/SplitBar';
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import { Icon } from '@iconify/react';
+import { Tooltip } from 'react-tooltip';
+import { useState } from 'react';
+import Admonition from '@theme/Admonition';
+import Link from '@docusaurus/Link';
 
 export default function DownloadPage(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
+  const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>({});
+
+  const handleCopy = (text: string, key: string) => {
+    navigator.clipboard.writeText(text);
+    setCopiedStates(prev => ({ ...prev, [key]: true }));
+    setTimeout(() => {
+      setCopiedStates(prev => ({ ...prev, [key]: false }));
+    }, 2000);
+  };
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -16,21 +32,168 @@ export default function DownloadPage(): ReactNode {
       <header className={`hero heroBanner`}>
         <div className="container">
           <Heading as="h1" className="hero__title">
-            Visualize your 3D assets with F3D
+            {downloadLinks.tag} · {new Date(downloadLinks.date).toLocaleDateString('en-US', {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+            })}
           </Heading>
           <BrowserOnly>
-            {() => <DownloadRecommendations links={downloadLinks} />}
+            {() => <DownloadRecommendations links={downloadLinks as any} />}
           </BrowserOnly>
         </div>
       </header>
-      <section>
-      <SplitBar />
       <div className="container">
         <div className="row">
-          <Heading as="h1">TODO</Heading>
+          <main className="col col--8 col--offset-2" style={{ marginBottom: '2rem' }}>
+            <Tabs>
+              {Object.keys(downloadLinks.assets).map((platform, index) => {
+                return (
+                  <TabItem
+                    key={platform}
+                    value={platform.toLowerCase()}
+                    label={(
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Icon icon={downloadLinks.assets[platform].icon} />
+                        <span>{platform}</span>
+                      </div>
+                    ) as any}
+                    default={index === 0}
+                  >
+                    {
+                      platform === 'macOS' && (
+                        <Admonition type="warning" title={`Installing on ${platform}`}>
+                          <p>
+                            macOS package is not signed, see the <Link to="/docs/doc/user/LIMITATIONS_AND_TROUBLESHOOTING#macos">troubleshooting section</Link> for a workaround if needed.
+                          </p>
+                        </Admonition>)
+                    }
+                    <div style={{
+                      display: 'grid',
+                      gap: '1rem',
+                      gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))',
+                      marginTop: '1.5rem'
+                    }}>
+                      {downloadLinks.assets[platform].binaries.map((binary, binaryIndex) => {
+                        const tooltipId = `digest-${platform}-${binaryIndex}`;
+                        const copyKey = `${platform}-${binaryIndex}`;
+                        const isCopied = copiedStates[copyKey];
+
+                        return (
+                          <div
+                            key={binary.name}
+                            style={{
+                              border: '1px solid var(--ifm-color-emphasis-300)',
+                              borderRadius: '8px',
+                              padding: '1rem',
+                              background: 'var(--ifm-background-surface-color)',
+                              boxShadow: '0 1px 4px rgba(0,0,0,0.1)',
+                              transition: 'transform 0.2s ease, box-shadow 0.2s ease',
+                              cursor: 'pointer'
+                            }}
+                            onMouseEnter={(e) => {
+                              e.currentTarget.style.transform = 'translateY(-1px)';
+                              e.currentTarget.style.boxShadow = '0 2px 8px rgba(0,0,0,0.15)';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.currentTarget.style.transform = 'translateY(0)';
+                              e.currentTarget.style.boxShadow = '0 1px 4px rgba(0,0,0,0.1)';
+                            }}
+                          >
+                            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '0.75rem' }}>
+                              <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem', minWidth: 0, flex: 1 }}>
+                                <Icon icon={downloadLinks.assets[platform].icon} style={{ fontSize: '1.2rem', flexShrink: 0 }} />
+                                <div style={{ minWidth: 0, flex: 1 }}>
+                                  <h4 style={{
+                                    margin: 0,
+                                    fontSize: '0.9rem',
+                                    whiteSpace: 'nowrap',
+                                    overflow: 'hidden',
+                                    textOverflow: 'ellipsis'
+                                  }}>{binary.long}</h4>
+                                  <p style={{
+                                    margin: 0,
+                                    fontSize: '0.8rem',
+                                    color: 'var(--ifm-color-emphasis-600)'
+                                  }}>
+                                    {binary.size} - <a
+                                      data-tooltip-id={tooltipId}
+                                      style={{
+                                        textDecoration: 'underline dotted',
+                                        color: 'inherit',
+                                        cursor: 'pointer'
+                                      }}
+                                    >
+                                      sha256
+                                    </a>
+                                  </p>
+                                  <Tooltip id={tooltipId} clickable={true} positionStrategy='fixed' place="bottom">
+                                    <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                                      <span>{binary.digest.replace('sha256:', '')}</span>
+                                      <button
+                                        onClick={() => handleCopy(binary.digest.replace('sha256:', ''), copyKey)}
+                                        style={{
+                                          background: 'none',
+                                          border: 'none',
+                                          cursor: 'pointer',
+                                          padding: '2px',
+                                          display: 'flex',
+                                          alignItems: 'center'
+                                        }}
+                                        title={isCopied ? "Copied!" : "Copy to clipboard"}
+                                      >
+                                        <Icon
+                                          icon={isCopied ? "material-symbols:check" : "material-symbols:content-copy"}
+                                          style={{
+                                            fontSize: '14px',
+                                            color: isCopied ? '#22c55e' : '#666',
+                                            transition: 'color 0.2s ease'
+                                          }}
+                                        />
+                                      </button>
+                                    </div>
+                                  </Tooltip>
+                                </div>
+                              </div>
+                            </div>
+
+                            <a
+                              href={`/thanks?download=${encodeURIComponent(binary.url)}`}
+                              style={{
+                                display: 'inline-flex',
+                                alignItems: 'center',
+                                gap: '0.25rem',
+                                background: 'var(--ifm-color-primary)',
+                                color: 'white',
+                                padding: '0.5rem 1rem',
+                                borderRadius: '6px',
+                                textDecoration: 'none',
+                                fontWeight: 'bold',
+                                fontSize: '0.8rem',
+                                transition: 'background-color 0.2s ease',
+                                width: '100%',
+                                justifyContent: 'center'
+                              }}
+                              onMouseEnter={(e) => {
+                                e.currentTarget.style.backgroundColor = 'var(--ifm-color-primary-dark)';
+                              }}
+                              onMouseLeave={(e) => {
+                                e.currentTarget.style.backgroundColor = 'var(--ifm-color-primary)';
+                              }}
+                            >
+                              Download
+                            </a>
+                          </div>
+                        );
+                      })}
+                    </div>
+                  </TabItem>
+                );
+              })}
+            </Tabs>
+          </main>
         </div>
       </div>
-    </section>
     </Layout>
   );
 }

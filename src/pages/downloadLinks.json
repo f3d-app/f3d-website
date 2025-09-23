@@ -90,7 +90,7 @@
           "long": "Tarball (.tar.gz) without raytracing support"
         }
       ],
-      "icon": "cib:linux"
+      "icon": "mdi:linux"
     },
     "macOS": {
       "binaries": [

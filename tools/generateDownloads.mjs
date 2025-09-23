@@ -33,7 +33,7 @@ try {
     result.date = response.data.published_at;
     result.assets = {
         Windows: { "binaries": [], icon: "cib:windows" },
-        Linux: { "binaries": [], icon: "cib:linux" },
+        Linux: { "binaries": [], icon: "mdi:linux" },
         macOS: { "binaries": [], icon: "cib:apple" }
     };
 
