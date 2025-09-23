@@ -88,6 +88,11 @@ const config: Config = {
           position: "right",
         },*/
         {
+          to: "/thanks",
+          label: "♥️ Donate",
+          position: "right",
+        },
+        {
           href: "https://github.com/f3d-app/f3d",
           label: "GitHub",
           position: "right",
@@ -129,8 +134,8 @@ const config: Config = {
               href: "https://discord.f3d.app",
             },
             {
-              label: "Sponsor ♥️",
-              href: "https://github.com/sponsors/f3d-app",
+              label: "♥️ Donate",
+              to: "/thanks",
             },
           ],
         },

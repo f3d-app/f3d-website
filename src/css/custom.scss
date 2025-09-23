@@ -143,3 +143,44 @@ small .iconify {
 .splide__pagination__page.is-active {
   background: var(--ifm-color-primary) !important;
 }
+
+/* Donation Button Styles */
+.donationButton {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.donationButton:enabled {
+  background: var(--accent-yellow);
+  opacity: 1;
+}
+
+.donationButton:disabled {
+  background: var(--ifm-hr-background-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.donationButton:enabled:hover {
+  transform: translateY(-2px);
+}
+
+.donationButton:hover {
+  transform: translateY(0);
+}
+
+.donationButton:disabled:hover {
+  transform: translateY(0);
+}
