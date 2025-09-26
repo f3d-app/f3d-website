@@ -20,7 +20,11 @@ const config: Config = {
   organizationName: "f3d-app",
   projectName: "f3d-website",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
+  markdown: {
+    hooks: {
+      onBrokenMarkdownLinks: "warn",
+    },
+  },
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -32,6 +36,11 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
+          versions: {
+              current: {
+                label: `🚧 Nightly`,
+              },
+            },
         },
         blog: {
           showReadingTime: true,
@@ -90,6 +99,11 @@ const config: Config = {
         {
           to: "/thanks",
           label: "♥️ Donate",
+          position: "right",
+        },
+        {
+          type: 'docsVersionDropdown',
+          versions: ['current', '3.2.0'],
           position: "right",
         },
         {

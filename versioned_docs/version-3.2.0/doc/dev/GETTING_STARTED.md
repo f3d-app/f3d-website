@@ -4,8 +4,6 @@ This is a getting started guide, aimed to people that are not used
 to C++ programming, configuring and compiling. If you are already used
 to such processes, you may be looking for our [build guide](BUILD.md).
 
-You may also want to take a look into the [mentoring program](MENTORING.md).
-
 This guide will help you to compile your own version of F3D with required dependencies.
 Optional dependencies or covered in the build guide.
 
@@ -93,7 +91,7 @@ and the internal VCPKG to automatically build the dependencies.
 
 - Open Visual Studio
 - Select `Clone a repository`
-- Specify the repository address: `https://github.com/f3d-app/f3d.git` and the local directory of your choice
+- Specify the repository address: `https://github.com/f3d-app/f3d.git` and the local folder of your choice
 
 > [!WARNING]
 > The first run will take a while (up to 1 hour) because VTK is compiled twice (in Debug and Release mode)
@@ -135,7 +133,7 @@ git clone https://github.com/f3d-app/f3d.git src
 mkdir build
 ```
 
-Note: Resulting directory architecture should look like this:
+Note: Resulting folder architecture should look like this:
 
 ```
 dev
@@ -148,7 +146,7 @@ dev
     `-- src
 ```
 
-#### Build and install VTK in a dedicated directory
+#### Build and install VTK in a dedicated folder
 
 - Open x64 Native Tools Command Prompt for VS 2022
 

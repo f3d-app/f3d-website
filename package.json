@@ -13,12 +13,12 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "moxygen": "moxygen --anchors --noindex --templates moxygen-templates --output docs/api.md /path/to/f3d/xml",
-    "update-downloads": "node ./tools/generateDownloads.mjs"
+    "update-downloads": "node ./tools/generateDownloads.mjs",
+    "update-doc": "node ./tools/generateDocumentation.mjs"
   },
   "dependencies": {
-    "@docusaurus/core": "3.8.1",
-    "@docusaurus/preset-classic": "3.8.1",
+    "@docusaurus/core": "^3.9.1",
+    "@docusaurus/preset-classic": "^3.9.1",
     "@mdx-js/react": "^3.0.0",
     "@splidejs/react-splide": "^0.7.12",
     "clsx": "^2.0.0",
@@ -31,9 +31,9 @@
     "sass": "^1.92.1"
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "3.8.1",
-    "@docusaurus/tsconfig": "3.8.1",
-    "@docusaurus/types": "3.8.1",
+    "@docusaurus/module-type-aliases": "^3.9.1",
+    "@docusaurus/tsconfig": "^3.9.1",
+    "@docusaurus/types": "^3.9.1",
     "@iconify/react": "^6.0.1",
     "@octokit/core": "^7.0.4",
     "moxygen": "^0.8.0",

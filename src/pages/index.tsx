@@ -27,7 +27,7 @@ function HomepageHeader() {
         <div className="buttons">
           <Link
             className={`button button--primary button--outline button--lg highlightButton`}
-            to="/docs/doc/user/INSTALLATION">
+            to="/download">
             <Icon icon="material-symbols:download-rounded" />
             Download
           </Link>

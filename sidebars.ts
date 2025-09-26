@@ -73,6 +73,7 @@ const sidebars: SidebarsConfig = {
         'doc/dev/ROADMAPS_AND_RELEASES',
         'doc/dev/GOVERNANCE',
         'doc/dev/MAINTAINERS_AND_CONTRIBUTORS',
+        "doc/dev/MENTORING",
         'CODE_OF_CONDUCT',
         'doc/dev/BUILD_WASM',
       ],

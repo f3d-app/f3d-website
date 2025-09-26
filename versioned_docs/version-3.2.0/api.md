@@ -22,7 +22,6 @@
 `class `[`f3d::window`](#classf3d_1_1window) | Abstract class to render in a window or an image.
 `struct `[`f3d::camera_state_t`](#structf3d_1_1camera__state__t) | 
 `struct `[`f3d::interaction_bind_t`](#structf3d_1_1interaction__bind__t) | 
-`struct `[`f3d::light_state_t`](#structf3d_1_1light__state__t) | 
 `struct `[`f3d::mesh_t`](#structf3d_1_1mesh__t) | Describe a 3D surfacic mesh. A valid mesh fulfills these requirements:
 `struct `[`f3d::point3_t`](#structf3d_1_1point3__t) | Describe a 3D point.
 `struct `[`f3d::type_access_exception`](#structf3d_1_1type__access__exception) | An exception that can be thrown by any type if it fails when accessing data for some reason.
@@ -450,7 +449,6 @@ A class to control interaction with the window as well as animation. It also pro
 
  Members                        | Descriptions                                
 --------------------------------|---------------------------------------------
-`public `[`BindingType`](#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e)` `[`getBindingType`](#classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17)`(const `[`interaction_bind_t`](#structf3d_1_1interaction__bind__t)` & bind) const` | Get the type of a binding.
 `public bool `[`playInteraction`](#classf3d_1_1interactor_1a1ed1405954d49fcee5e687a56cc83bf1)`(const std::filesystem::path & file,double deltaTime,std::function< void()> userCallBack)` | Play a VTK interaction file. Provided file path is used as is and file existence will be checked. The event loop will be triggered every deltaTime in seconds, and userCallBack will be called at the start of the event loop
 `public bool `[`recordInteraction`](#classf3d_1_1interactor_1a22d9604dde214323080fae5ab947e08b)`(const std::filesystem::path & file)` | Start interaction and record it all in a VTK interaction file. Provided file path will be used as is and the parent directories of the file will be created
 `public `[`interactor`](#classf3d_1_1interactor)` & `[`start`](#classf3d_1_1interactor_1af971c61f5dd60430a8f574f9572c8aed)`(double deltaTime,std::function< void()> userCallBack)` | Start the interactor event loop. The event loop will be triggered every deltaTime in seconds, and userCallBack will be called at the start of the event loop
@@ -458,12 +456,6 @@ A class to control interaction with the window as well as animation. It also pro
 `public `[`interactor`](#classf3d_1_1interactor)` & `[`requestRender`](#classf3d_1_1interactor_1a12abd21c1a1fb5973e09633c877e2e7a)`()` | Request a render to be done on the next event loop Safe to call in a multithreaded environment
 
 ### Members
-
-#### `public `[`BindingType`](#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e)` `[`getBindingType`](#classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17)`(const `[`interaction_bind_t`](#structf3d_1_1interaction__bind__t)` & bind) const` {#classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17}
-
-Get the type of a binding.
-
-Getting type for a bind that does not exists will throw a [does_not_exists_exception](#structf3d_1_1interactor_1_1does__not__exists__exception).
 
 #### `public bool `[`playInteraction`](#classf3d_1_1interactor_1a1ed1405954d49fcee5e687a56cc83bf1)`(const std::filesystem::path & file,double deltaTime,std::function< void()> userCallBack)` {#classf3d_1_1interactor_1a1ed1405954d49fcee5e687a56cc83bf1}
 
@@ -555,12 +547,6 @@ if (load.[supports](#classf3d_1_1scene_1a7542a5ca95dd82a89a3b7772cb416dfd)(path)
 --------------------------------|---------------------------------------------
 `public `[`scene`](#classf3d_1_1scene)` & `[`add`](#classf3d_1_1scene_1a7bdb1253de9d9b0a2ecafea62628b9e4)`(const `[`mesh_t`](#structf3d_1_1mesh__t)` & mesh)` | Add and load provided mesh into the scene
 `public `[`scene`](#classf3d_1_1scene)` & `[`clear`](#classf3d_1_1scene_1ae154db17f90d720aafb2346411604c1d)`()` | Clear the scene of all added files
-`public int `[`addLight`](#classf3d_1_1scene_1ae0dbd636405f91b884a41798c0488000)`(const `[`light_state_t`](#structf3d_1_1light__state__t)` & lightState) const` | Add a light based on a light state, returns the index of the added light.
-`public int `[`getLightCount`](#classf3d_1_1scene_1a05905e5c7dc7540ba29303153b881af6)`() const` | Get the number of lights.
-`public `[`light_state_t`](#structf3d_1_1light__state__t)` `[`getLight`](#classf3d_1_1scene_1a7dd307c6b9005ca6673d5738a9df6ef2)`(int index) const` | Get the light state at provided index. `[light_exception](#structf3d_1_1scene_1_1light__exception)` is thrown if the index is invalid.
-`public `[`scene`](#classf3d_1_1scene)` & `[`updateLight`](#classf3d_1_1scene_1a77e8a0bad217262f01f902e756ba49c2)`(int index,const `[`light_state_t`](#structf3d_1_1light__state__t)` & lightState)` | Update a light at provided index with the provided light state. `[light_exception](#structf3d_1_1scene_1_1light__exception)` is thrown if the index is invalid.
-`public `[`scene`](#classf3d_1_1scene)` & `[`removeLight`](#classf3d_1_1scene_1ad3b235b9a70810f1cbfa609d9802fa34)`(int index)` | Remove a light at provided index. `[light_exception](#structf3d_1_1scene_1_1light__exception)` is thrown if the index is invalid.
-`public `[`scene`](#classf3d_1_1scene)` & `[`removeAllLights`](#classf3d_1_1scene_1adcd47d1cee28ec70333ac691d3db48aa)`()` | Remove all lights from the scene.
 `public bool `[`supports`](#classf3d_1_1scene_1a7542a5ca95dd82a89a3b7772cb416dfd)`(const std::filesystem::path & filePath)` | Return true if provided file path is supported, false otherwise.
 `public `[`scene`](#classf3d_1_1scene)` & `[`loadAnimationTime`](#classf3d_1_1scene_1ae225316a771e942f930ec61588201233)`(double timeValue)` | Load added files at provided time value if they contain any animation Providing a timeVale outside of the current animationTimeRange will clamp to the closest value in the range. Does not do anything if there is no animations.
 `public std::pair< double, double > `[`animationTimeRange`](#classf3d_1_1scene_1af6303bb8cd99ba35cf67c700d1550867)`()` | Get animation time range of currently added files. Returns [0, 0] if there is no animations.
@@ -575,30 +561,6 @@ Add and load provided mesh into the scene
 #### `public `[`scene`](#classf3d_1_1scene)` & `[`clear`](#classf3d_1_1scene_1ae154db17f90d720aafb2346411604c1d)`()` {#classf3d_1_1scene_1ae154db17f90d720aafb2346411604c1d}
 
 Clear the scene of all added files
-
-#### `public int `[`addLight`](#classf3d_1_1scene_1ae0dbd636405f91b884a41798c0488000)`(const `[`light_state_t`](#structf3d_1_1light__state__t)` & lightState) const` {#classf3d_1_1scene_1ae0dbd636405f91b884a41798c0488000}
-
-Add a light based on a light state, returns the index of the added light.
-
-#### `public int `[`getLightCount`](#classf3d_1_1scene_1a05905e5c7dc7540ba29303153b881af6)`() const` {#classf3d_1_1scene_1a05905e5c7dc7540ba29303153b881af6}
-
-Get the number of lights.
-
-#### `public `[`light_state_t`](#structf3d_1_1light__state__t)` `[`getLight`](#classf3d_1_1scene_1a7dd307c6b9005ca6673d5738a9df6ef2)`(int index) const` {#classf3d_1_1scene_1a7dd307c6b9005ca6673d5738a9df6ef2}
-
-Get the light state at provided index. `[light_exception](#structf3d_1_1scene_1_1light__exception)` is thrown if the index is invalid.
-
-#### `public `[`scene`](#classf3d_1_1scene)` & `[`updateLight`](#classf3d_1_1scene_1a77e8a0bad217262f01f902e756ba49c2)`(int index,const `[`light_state_t`](#structf3d_1_1light__state__t)` & lightState)` {#classf3d_1_1scene_1a77e8a0bad217262f01f902e756ba49c2}
-
-Update a light at provided index with the provided light state. `[light_exception](#structf3d_1_1scene_1_1light__exception)` is thrown if the index is invalid.
-
-#### `public `[`scene`](#classf3d_1_1scene)` & `[`removeLight`](#classf3d_1_1scene_1ad3b235b9a70810f1cbfa609d9802fa34)`(int index)` {#classf3d_1_1scene_1ad3b235b9a70810f1cbfa609d9802fa34}
-
-Remove a light at provided index. `[light_exception](#structf3d_1_1scene_1_1light__exception)` is thrown if the index is invalid.
-
-#### `public `[`scene`](#classf3d_1_1scene)` & `[`removeAllLights`](#classf3d_1_1scene_1adcd47d1cee28ec70333ac691d3db48aa)`()` {#classf3d_1_1scene_1adcd47d1cee28ec70333ac691d3db48aa}
-
-Remove all lights from the scene.
 
 #### `public bool `[`supports`](#classf3d_1_1scene_1a7542a5ca95dd82a89a3b7772cb416dfd)`(const std::filesystem::path & filePath)` {#classf3d_1_1scene_1a7542a5ca95dd82a89a3b7772cb416dfd}
 
@@ -633,7 +595,6 @@ Store a 3x3 transform matrix as a sequence of 9 float values VTK expects a 4x4 m
 `public inline  explicit `[`transform2d_t`](#classf3d_1_1transform2d__t_1a3081204d9c43256e72f6cca0576f0651)`(const std::vector< double > & vec)` | 
 `public inline  `[`transform2d_t`](#classf3d_1_1transform2d__t_1a2800721840535bd112285ec29d34e881)`(const std::initializer_list< double > & list)` | 
 `public inline  `[`transform2d_t`](#classf3d_1_1transform2d__t_1a7e76f1c32dec6276bacbbf82b35dc1bf)`(double M1_1,double M1_2,double M1_3,double M2_1,double M2_2,double M2_3,double M3_1,double M3_2,double M3_3)` | The variables of this function are based on the mathematical notation for matrices, where the coordinates correspond to the following:   [M1_1, M1_2, M1_3]
-`public F3D_EXPORT `[`transform2d_t`](#classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf)`(const `[`double_array_t`](#classf3d_1_1double__array__t)`< 2 > & scale,const `[`double_array_t`](#classf3d_1_1double__array__t)`< 2 > & translate,const angle_deg_t & angleRad)` | The general form of a 3x3 transformation matrix M with scale S(x,y), translation T(x,y), and angle a (in degrees), is solved out to the following: [cos(a)*S(x), -sin(a)*S(y),   T(x)]
 
 ### Members
 
@@ -647,13 +608,6 @@ Store a 3x3 transform matrix as a sequence of 9 float values VTK expects a 4x4 m
 
 The variables of this function are based on the mathematical notation for matrices, where the coordinates correspond to the following:   [M1_1, M1_2, M1_3]
  M = [M2_1, M2_2, M2_3] [M3_1, M3_2, M3_3]
-
-#### `public F3D_EXPORT `[`transform2d_t`](#classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf)`(const `[`double_array_t`](#classf3d_1_1double__array__t)`< 2 > & scale,const `[`double_array_t`](#classf3d_1_1double__array__t)`< 2 > & translate,const angle_deg_t & angleRad)` {#classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf}
-
-The general form of a 3x3 transformation matrix M with scale S(x,y), translation T(x,y), and angle a (in degrees), is solved out to the following: [cos(a)*S(x), -sin(a)*S(y),   T(x)]
- M = [sin(a)*S(x), cos(a)*S(y), T(y)] [0, 0, 1 ]
-
-Using this formula, we fill each cell using the values in the constructor
 
 ## class `f3d::utils` {#classf3d_1_1utils}
 
@@ -837,39 +791,6 @@ SHIFT            |
 CTRL_SHIFT            | 
 
 Enumeration of supported modifier combination, in binary.
-
-## struct `f3d::light_state_t` {#structf3d_1_1light__state__t}
-
-### Summary
-
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public light_type `[`type`](#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11) | 
-`public `[`point3_t`](#structf3d_1_1point3__t)` `[`position`](#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a) | 
-`public `[`color_t`](#classf3d_1_1color__t)` `[`color`](#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633) | 
-`public `[`vector3_t`](#structf3d_1_1vector3__t)` `[`direction`](#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465) | 
-`public bool `[`positionalLight`](#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24) | 
-`public double `[`intensity`](#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6) | 
-`public bool `[`switchState`](#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a) | 
-`public inline bool `[`operator==`](#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168)`(const `[`light_state_t`](#structf3d_1_1light__state__t)` & other) const` | 
-
-### Members
-
-#### `public light_type `[`type`](#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11) {#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11}
-
-#### `public `[`point3_t`](#structf3d_1_1point3__t)` `[`position`](#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a) {#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a}
-
-#### `public `[`color_t`](#classf3d_1_1color__t)` `[`color`](#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633) {#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633}
-
-#### `public `[`vector3_t`](#structf3d_1_1vector3__t)` `[`direction`](#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465) {#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465}
-
-#### `public bool `[`positionalLight`](#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24) {#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24}
-
-#### `public double `[`intensity`](#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6) {#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6}
-
-#### `public bool `[`switchState`](#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a) {#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a}
-
-#### `public inline bool `[`operator==`](#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168)`(const `[`light_state_t`](#structf3d_1_1light__state__t)` & other) const` {#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168}
 
 ## struct `f3d::mesh_t` {#structf3d_1_1mesh__t}
 
@@ -1069,7 +990,7 @@ struct f3d::interactor::command_runtime_exception
   : public f3d::exception
 ```
 
-An exception that can be thrown by [interactor::triggerCommand](#classf3d_1_1interactor_1a20ab155181432751c7644b87490a1085) when a command callback throw an exception
+An exception that can be thrown by [interactor::triggerCommand](#classf3d_1_1interactor_1a67df6532e93887fbb5e50ef10d1bc90a) when a command callback throw an exception
 
 ### Summary
 
@@ -1175,25 +1096,6 @@ A structure providing information about the libf3d. Returned by [getLibInfo()](#
 #### `public std::vector< std::string > `[`Copyrights`](#structf3d_1_1engine_1_1lib_information_1aa5fcaf4da0e499f963511197bafcaa68) {#structf3d_1_1engine_1_1lib_information_1aa5fcaf4da0e499f963511197bafcaa68}
 
 #### `public std::string `[`License`](#structf3d_1_1engine_1_1lib_information_1aa1fc55f2019aefc29181dc1220d29093) {#structf3d_1_1engine_1_1lib_information_1aa1fc55f2019aefc29181dc1220d29093}
-
-## struct `f3d::scene::light_exception` {#structf3d_1_1scene_1_1light__exception}
-
-```
-struct f3d::scene::light_exception
-  : public f3d::exception
-```
-
-An exception that can be thrown by the scene when it fails to index the light
-
-### Summary
-
- Members                        | Descriptions                                
---------------------------------|---------------------------------------------
-`public inline  explicit `[`light_exception`](#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed)`(const std::string & what)` | 
-
-### Members
-
-#### `public inline  explicit `[`light_exception`](#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed)`(const std::string & what)` {#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed}
 
 ## struct `f3d::scene::load_failure_exception` {#structf3d_1_1scene_1_1load__failure__exception}
 
