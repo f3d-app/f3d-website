@@ -1,0 +1,6 @@
+{
+  "theme.docs.versions.unreleasedVersionLabel": {
+    "message": "This is the documentation for the {versionLabel} version.",
+    "description": "The label used to tell the user that he's browsing an unreleased doc version"
+  }
+}
