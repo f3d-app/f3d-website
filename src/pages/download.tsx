@@ -157,8 +157,8 @@ export default function DownloadPage(): ReactNode {
                               </div>
                             </div>
 
-                            <a
-                              href={`/thanks?download=${encodeURIComponent(binary.url)}`}
+                            <Link
+                              to={`/thanks?download=${encodeURIComponent(binary.url)}`}
                               style={{
                                 display: 'inline-flex',
                                 alignItems: 'center',
@@ -182,7 +182,7 @@ export default function DownloadPage(): ReactNode {
                               }}
                             >
                               Download
-                            </a>
+                            </Link>
                           </div>
                         );
                       })}
