@@ -64,58 +64,72 @@ function DonationWidget(): ReactNode {
   const [currency, setCurrency] = useState<'USD' | 'EUR'>('EUR');
   const [selectedAmount, setSelectedAmount] = useState<number | string | null>(5);
   const [customAmount, setCustomAmount] = useState<string>('');
-  const suggestedAmounts = [1, 5, 10, 50, 100, 'Custom'];
+  
+  const suggestedAmounts = {
+    'one-time': [1, 5, 10, 50, 100, 'Custom'],
+    'monthly': [1, 2, 5, 10, 20, "Let's chat!"]
+  };
+
+  const membershipTiers = {
+    1: { name: 'Bronze', color: '#CD7F32' },
+    2: { name: 'Silver', color: '#C0C0C0' },
+    5: { name: 'Gold', color: '#FFD700' },
+    10: { name: 'Platinum', color: '#E5E4E2' },
+    20: { name: 'Diamond', color: '#B9F2FF' }
+  };
 
   // Stripe Payment Links - Replace these with your actual Stripe Payment Links
   // You can create specific links for each amount or use "Customer chooses price" for Custom
   const stripeLinks = {
     'one-time': {
       'USD': {
-        1: 'https://buy.stripe.com/YOUR_ONE_TIME_1_USD_LINK',
+        1: 'https://donate.stripe.com/6oU9ATdSc4Igdwzdbscs807',
         5: 'https://donate.stripe.com/dRm4gzaG00s078bgnEcs802',
-        10: 'https://buy.stripe.com/YOUR_ONE_TIME_10_USD_LINK',
-        50: 'https://buy.stripe.com/YOUR_ONE_TIME_50_USD_LINK',
-        100: 'https://buy.stripe.com/YOUR_ONE_TIME_100_USD_LINK',
-        'Custom': 'https://buy.stripe.com/YOUR_ONE_TIME_CUSTOM_USD_LINK', // Customer chooses price
+        10: 'https://donate.stripe.com/9B68wPbK4eiQ6470oGcs808',
+        50: 'https://donate.stripe.com/6oU28r4hCdeM5031sKcs809',
+        100: 'https://donate.stripe.com/bJe14n3dy7Us0JN6N4cs80a',
+        'Custom': 'https://donate.stripe.com/00w5kD01m4IggIL0oGcs80b',
       },
       'EUR': {
         1: 'https://donate.stripe.com/3cI6oHg0k4Ig5036N4cs803',
         5: 'https://donate.stripe.com/dRmfZh3dy5Mk3VZ0oGcs801',
         10: 'https://donate.stripe.com/9B67sL5lGb6E8cfb3kcs804',
-        50: 'https://buy.stripe.com/YOUR_ONE_TIME_50_EUR_LINK',
-        100: 'https://buy.stripe.com/YOUR_ONE_TIME_100_EUR_LINK',
-        'Custom': 'https://donate.stripe.com/4gM00j7tO1w4eAD5J0cs800', // Customer chooses price
+        50: 'https://donate.stripe.com/cNi8wP8xSa2Acsv8Vccs805',
+        100: 'https://donate.stripe.com/5kQ9ATdSc8Yw3VZ0oGcs806',
+        'Custom': 'https://donate.stripe.com/4gM00j7tO1w4eAD5J0cs800',
       },
     },
     'monthly': {
       'USD': {
-        1: 'https://buy.stripe.com/YOUR_MONTHLY_1_USD_LINK',
-        5: 'https://buy.stripe.com/YOUR_MONTHLY_5_USD_LINK',
-        10: 'https://buy.stripe.com/YOUR_MONTHLY_10_USD_LINK',
-        50: 'https://buy.stripe.com/YOUR_MONTHLY_50_USD_LINK',
-        100: 'https://buy.stripe.com/YOUR_MONTHLY_100_USD_LINK',
-        'Custom': 'https://buy.stripe.com/YOUR_MONTHLY_CUSTOM_USD_LINK', // Customer chooses price
+        1: 'https://donate.stripe.com/bJe8wPcO85Mk5039Zgcs80d',
+        2: 'https://donate.stripe.com/5kQ28r4hCb6Ecsv4EWcs80f',
+        5: 'https://donate.stripe.com/7sY9ATdSc4IgeAD4EWcs80h',
+        10: 'https://donate.stripe.com/aFa8wP29u4Ig3VZ3AScs80j',
+        20: 'https://donate.stripe.com/00wdR97tO5Mk6476N4cs80l',
       },
       'EUR': {
-        1: 'https://buy.stripe.com/YOUR_MONTHLY_1_EUR_LINK',
-        5: 'https://buy.stripe.com/YOUR_MONTHLY_5_EUR_LINK',
-        10: 'https://buy.stripe.com/YOUR_MONTHLY_10_EUR_LINK',
-        50: 'https://buy.stripe.com/YOUR_MONTHLY_50_EUR_LINK',
-        100: 'https://buy.stripe.com/YOUR_MONTHLY_100_EUR_LINK',
-        'Custom': 'https://buy.stripe.com/YOUR_MONTHLY_CUSTOM_EUR_LINK', // Customer chooses price
+        1: 'https://donate.stripe.com/7sYdR96pK6QofEHb3kcs80c',
+        2: 'https://donate.stripe.com/fZu28rcO8b6Eborefwcs80e',
+        5: 'https://donate.stripe.com/6oU7sL15qcaIdwzdbscs80g',
+        10: 'https://donate.stripe.com/28E9ATeWg6QoeADb3kcs80i',
+        20: 'https://donate.stripe.com/cNi9ATg0ka2A3VZ4EWcs80k',
       },
     }
   };
 
   const formatAmount = (amount: any) => {
-    if (amount === 'Custom') {
-      return 'Custom';
+    if (amount === 'Custom' || amount === "Let's chat!") {
+      return amount;
     }
     const suffix = donationType === 'monthly' ? '/mo' : '';
+    const membership = donationType === 'monthly' && membershipTiers[amount] 
+      ? membershipTiers[amount].name 
+      : '';
+    
     if (currency === 'USD') {
-      return `$${amount}${suffix}`;
+      return membership ? `$${amount}${suffix}\n${membership}` : `$${amount}${suffix}`;
     } else {
-      return `${amount}€${suffix}`;
+      return membership ? `${amount}€${suffix}\n${membership}` : `${amount}€${suffix}`;
     }
   };
 
@@ -134,8 +148,8 @@ function DonationWidget(): ReactNode {
       return;
     }
 
-    // Redirect to Stripe
-    window.location.href = paymentLink;
+    // Open Stripe in a new window/tab
+    window.open(paymentLink, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -168,7 +182,11 @@ function DonationWidget(): ReactNode {
           marginBottom: '1rem'
         }}>
           <button
-            onClick={() => setDonationType('one-time')}
+            onClick={() => {
+              setDonationType('one-time');
+              // Reset to a default amount for one-time donations
+              setSelectedAmount(5);
+            }}
             style={{
               flex: 1,
               padding: '0.75rem',
@@ -185,7 +203,11 @@ function DonationWidget(): ReactNode {
             One-time
           </button>
           <button
-            onClick={() => setDonationType('monthly')}
+            onClick={() => {
+              setDonationType('monthly');
+              // Reset to a default amount for monthly donations
+              setSelectedAmount(5);
+            }}
             style={{
               flex: 1,
               padding: '0.75rem',
@@ -237,39 +259,56 @@ function DonationWidget(): ReactNode {
           gap: '0.5rem',
           marginBottom: '1rem'
         }}>
-          {suggestedAmounts.map((amount) => (
-            <button
-              key={amount}
-              onClick={() => {
-                setSelectedAmount(amount);
-              }}
-              style={{
-                padding: '0.75rem',
-                border: '1px solid var(--ifm-color-primary)',
-                borderRadius: '6px',
-                background: selectedAmount === amount ? 'var(--ifm-color-primary)' : 'transparent',
-                color: selectedAmount === amount ? 'white' : 'var(--ifm-color-primary)',
-                cursor: 'pointer',
-                fontSize: '0.9rem',
-                fontWeight: 'bold',
-                transition: 'all 0.2s ease'
-              }}
-              onMouseEnter={(e) => {
-                if (selectedAmount !== amount) {
-                  e.currentTarget.style.background = 'var(--ifm-color-primary)';
-                  e.currentTarget.style.color = 'white';
-                }
-              }}
-              onMouseLeave={(e) => {
-                if (selectedAmount !== amount) {
-                  e.currentTarget.style.background = 'transparent';
-                  e.currentTarget.style.color = 'var(--ifm-color-primary)';
-                }
-              }}
-            >
-              {formatAmount(amount)}
-            </button>
-          ))}
+          {suggestedAmounts[donationType].map((amount) => {
+            const membership = donationType === 'monthly' && membershipTiers[amount];
+            return (
+              <button
+                key={amount}
+                onClick={() => {
+                  setSelectedAmount(amount);
+                }}
+                style={{
+                  padding: '0.75rem',
+                  border: `1px solid var(--ifm-color-primary)`,
+                  borderRadius: '6px',
+                  background: selectedAmount === amount ? 'var(--ifm-color-primary)' : 'transparent',
+                  color: selectedAmount === amount ? 'white' : 'var(--ifm-color-primary)',
+                  cursor: 'pointer',
+                  fontSize: '0.85rem',
+                  fontWeight: 'bold',
+                  transition: 'all 0.2s ease',
+                  textAlign: 'center',
+                  whiteSpace: 'pre-line',
+                  minHeight: membership ? '3.5rem' : '2.5rem',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  justifyContent: 'center',
+                  alignItems: 'center'
+                }}
+                onMouseEnter={(e) => {
+                  if (selectedAmount !== amount) {
+                    e.currentTarget.style.background = 'var(--ifm-color-primary)';
+                    e.currentTarget.style.color = 'white';
+                  }
+                }}
+                onMouseLeave={(e) => {
+                  if (selectedAmount !== amount) {
+                    e.currentTarget.style.background = 'transparent';
+                    e.currentTarget.style.color = 'var(--ifm-color-primary)';
+                  }
+                }}
+              >
+                {amount === 'Custom' || amount === "Let's chat!" ? (
+                  amount
+                ) : (
+                  <>
+                    <div>{currency === 'USD' ? `$${amount}` : `${amount}€`}{donationType === 'monthly' ? '/mo' : ''}</div>
+                    {membership && <div style={{ fontSize: '0.75rem', marginTop: '0.25rem' }}>{membership.name}</div>}
+                  </>
+                )}
+              </button>
+            );
+          })}
         </div>
       </div>
 
@@ -325,7 +364,7 @@ export default function ThanksPage(): ReactNode {
                 <div style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
                   <p>
                     F3D is a <strong>free and open source</strong> 3D viewer that helps thousands of users
-                    visualize and interact with 3D models every day. Our mission is to provide a fast,
+                    visualize, render and interact with 3D models every day. Our mission is to provide a fast,
                     lightweight, and powerful tool that remains accessible to everyone.
                   </p>
 
@@ -335,10 +374,11 @@ export default function ThanksPage(): ReactNode {
 
                   <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
                     <li>Continue active development and add new features</li>
-                    <li>Maintain compatibility with the latest file formats</li>
-                    <li>Provide support and fix bugs</li>
+                    <li>Maintain compatibility with the many file formats</li>
+                    <li>Fix bugs and regressions</li>
+                    <li>Provide free support to our users</li>
                     <li>Keep our infrastructure running</li>
-                    <li>Ensure F3D remains free for everyone</li>
+                    <li>Ensure F3D remains free (as in beer and speech!) for everyone</li>
                   </ul>
 
                   <p>
