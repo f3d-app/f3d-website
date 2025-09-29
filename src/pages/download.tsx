@@ -10,9 +10,33 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import { Icon } from '@iconify/react';
 import { Tooltip } from 'react-tooltip';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Admonition from '@theme/Admonition';
 import Link from '@docusaurus/Link';
+
+function GuessClient() {
+  /* https://stackoverflow.com/a/38241481 */
+  const userAgent = window.navigator.userAgent;
+  const platform =
+    (window.navigator as any)?.userAgentData?.platform || window.navigator.platform;
+  const macosPlatforms = ["macOS", "Macintosh", "MacIntel", "MacPPC", "Mac68K"];
+  const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
+  const iosPlatforms = ["iPhone", "iPad", "iPod"];
+
+  if (macosPlatforms.indexOf(platform) !== -1) {
+    return "macOS";
+  } else if (iosPlatforms.indexOf(platform) !== -1) {
+    return "iOS";
+  } else if (windowsPlatforms.indexOf(platform) !== -1) {
+    return "Windows";
+  } else if (/Android/.test(userAgent)) {
+    return "Android";
+  } else if (/Linux/.test(platform)) {
+    return "Linux";
+  } else {
+    return null;
+  }
+}
 
 export default function DownloadPage(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
@@ -25,6 +49,17 @@ export default function DownloadPage(): ReactNode {
       setCopiedStates(prev => ({ ...prev, [key]: false }));
     }, 2000);
   };
+
+  // Default to first platform for SSR, will be updated client-side
+  const [operatingSystem, setOperatingSystem] = useState<string | null>(null);
+
+  useEffect(() => {
+    // Client-side only: check OS from URL params or user agent
+    const params = new URLSearchParams(window.location.search);
+    const detectedOS = params.get('os') || GuessClient();
+    setOperatingSystem(detectedOS);
+  }, []);
+
   return (
     <Layout
       title={`${siteConfig.title}`}
@@ -39,14 +74,14 @@ export default function DownloadPage(): ReactNode {
             })}
           </Heading>
           <BrowserOnly>
-            {() => <DownloadRecommendations links={downloadLinks as any} />}
+            {() => <DownloadRecommendations operatingSystem={operatingSystem || 'Windows'} links={downloadLinks as any} />}
           </BrowserOnly>
         </div>
       </header>
       <div className="container">
         <div className="row">
           <main className="col col--8 col--offset-2" style={{ marginBottom: '2rem' }}>
-            <Tabs>
+            <Tabs defaultValue={operatingSystem?.toLowerCase() || 'windows'}>
               {Object.keys(downloadLinks.assets).map((platform, index) => {
                 return (
                   <TabItem

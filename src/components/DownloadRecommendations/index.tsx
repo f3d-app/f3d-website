@@ -4,31 +4,8 @@ import { Tooltip } from 'react-tooltip';
 import Link from '@docusaurus/Link';
 import { useState } from 'react';
 
-function GuessClient() {
-  /* https://stackoverflow.com/a/38241481 */
-  const userAgent = window.navigator.userAgent;
-  const platform =
-    (window.navigator as any)?.userAgentData?.platform || window.navigator.platform;
-  const macosPlatforms = ["macOS", "Macintosh", "MacIntel", "MacPPC", "Mac68K"];
-  const windowsPlatforms = ["Win32", "Win64", "Windows", "WinCE"];
-  const iosPlatforms = ["iPhone", "iPad", "iPod"];
-
-  if (macosPlatforms.indexOf(platform) !== -1) {
-    return "macOS";
-  } else if (iosPlatforms.indexOf(platform) !== -1) {
-    return "iOS";
-  } else if (windowsPlatforms.indexOf(platform) !== -1) {
-    return "Windows";
-  } else if (/Android/.test(userAgent)) {
-    return "Android";
-  } else if (/Linux/.test(platform)) {
-    return "Linux";
-  } else {
-    return null;
-  }
-}
-
 export type DownloadRecommendationsProps = {
+  operatingSystem: string | null;
   links: Record<string, {
     tag: string;
     date: Date;
@@ -36,13 +13,10 @@ export type DownloadRecommendationsProps = {
   }>;
 };
 
-export default function DownloadRecommendations({ links }: DownloadRecommendationsProps): ReactNode {
-  // check OS: first check for `?os=foo` in the URL, otherwise guess from user agent
-  const params = new URLSearchParams(window.location.search);
-  const current_os = params.get('os') || GuessClient();
-  if (current_os == null) return null;
+export default function DownloadRecommendations({ operatingSystem, links }: DownloadRecommendationsProps): ReactNode {
+  if (operatingSystem == null) return null;
 
-  const osLinks = links.assets[current_os];
+  const osLinks = links.assets[operatingSystem];
   if (osLinks == null || osLinks.binaries.length < 2) return null;
 
   // State for copy button feedback
@@ -69,7 +43,7 @@ export default function DownloadRecommendations({ links }: DownloadRecommendatio
               className={`button button--primary button--lg`}
               to={`/thanks?download=${encodeURIComponent(osLinks.binaries[0].url)}`}
             >
-              Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{current_os}</b> ({osLinks.binaries[0].short})</small>
+              Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{operatingSystem}</b> ({osLinks.binaries[0].short})</small>
             </Link>
             <ul style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#888', listStyle: 'none', padding: 0 }}>
               <li>{osLinks.binaries[0].long}</li>
@@ -107,7 +81,7 @@ export default function DownloadRecommendations({ links }: DownloadRecommendatio
               className="button button--primary button--outline button--lg"
               to={`/thanks?download=${encodeURIComponent(osLinks.binaries[1].url)}`}
             >
-              Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{current_os}</b> ({osLinks.binaries[1].short})</small>
+              Download <b>F3D</b><br /><small><Icon icon={osLinks.icon} /><b>{operatingSystem}</b> ({osLinks.binaries[1].short})</small>
             </Link>
             <ul style={{ marginTop: '0.5rem', fontSize: '0.8rem', color: '#888', listStyle: 'none', padding: 0 }}>
               <li>{osLinks.binaries[1].long}</li>
