@@ -7,6 +7,7 @@ import Heading from '@theme/Heading';
 import { Icon } from '@iconify/react';
 import { useColorMode } from '@docusaurus/theme-common';
 import SplitBar from '../components/SplitBar';
+import LogoSvg from '@site/static/logos/logo.svg';
 
 function HomepageHeader() {
   const {siteConfig} = useDocusaurusContext();
@@ -18,7 +19,19 @@ function HomepageHeader() {
     <header className={`hero heroBanner`}>
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
-          <video src={videoSrc} autoPlay loop muted playsInline style={{ maxWidth: '320px', width: '100%', height: 'auto' }} />
+          <LogoSvg id='fallbackImg' style={{ maxWidth: '320px', width: '100%', height: 'auto', display: 'none' }} />
+          <video 
+            src={videoSrc}
+            autoPlay 
+            loop 
+            muted 
+            playsInline 
+            style={{ maxWidth: '320px', width: '100%', height: 'auto' }}
+            onError={(e) => {
+              (e.target as HTMLVideoElement).style.display = 'none';
+              document.getElementById('fallbackImg')!.style.display = 'block';
+            }}
+          />
         </div>
         <Heading as="h1" className="hero__title">
           {siteConfig.tagline}
