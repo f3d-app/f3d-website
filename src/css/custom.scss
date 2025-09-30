@@ -138,10 +138,13 @@ small .iconify {
 
 .splide__pagination__page {
   background: var(--ifm-button-color) !important;
+  width: 5px !important;
+  transition: width 0.3s ease, background 0.3s ease !important;
 }
 
 .splide__pagination__page.is-active {
   background: var(--ifm-color-primary) !important;
+  width: 20px !important;
 }
 
 /* Donation Button Styles */

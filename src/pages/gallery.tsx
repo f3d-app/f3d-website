@@ -16,9 +16,9 @@ const galleryItems = [
                 src='https://user-images.githubusercontent.com/3129530/194735274-395839e9-e2cb-4a47-83b9-5c6987640032.webm'
                 autoPlay
                 loop
-                width={700}
                 muted
                 playsInline
+                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
             />
         ),
         command: 'f3d gearbox/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtgas',
@@ -30,9 +30,9 @@ const galleryItems = [
                 src='https://user-images.githubusercontent.com/3129530/194734947-f34bc377-8ee4-472a-b130-30ce9e86facf.webm'
                 autoPlay
                 loop
-                width={700}
                 muted
                 playsInline
+                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
             />
         ),
         command: 'f3d dota/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtgas',
@@ -44,9 +44,9 @@ const galleryItems = [
                 src='https://user-images.githubusercontent.com/3129530/194735269-b62216e6-33da-484c-9f0d-39befc8253bf.webm'
                 autoPlay
                 loop
-                width={700}
                 muted
                 playsInline
+                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
             />
         ),
         command:
@@ -59,9 +59,9 @@ const galleryItems = [
                 src='https://media.githubusercontent.com/media/f3d-app/f3d-media/main/media/counter.webm'
                 autoPlay
                 loop
-                width={700}
                 muted
                 playsInline
+                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
             />
         ),
         command:
