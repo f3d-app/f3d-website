@@ -13,6 +13,7 @@ import { Tooltip } from 'react-tooltip';
 import { useState, useEffect } from 'react';
 import Admonition from '@theme/Admonition';
 import Link from '@docusaurus/Link';
+import CodeBlock from '@theme/CodeBlock';
 
 function GuessClient() {
   /* https://stackoverflow.com/a/38241481 */
@@ -81,7 +82,10 @@ export default function DownloadPage(): ReactNode {
       <div className="container">
         <div className="row">
           <main className="col col--8 col--offset-2" style={{ marginBottom: '2rem' }}>
-            <Tabs defaultValue={operatingSystem?.toLowerCase() || 'windows'}>
+            <Heading as="h2">
+            Application installation
+            </Heading>
+            <Tabs groupId="operating-systems" defaultValue={operatingSystem?.toLowerCase() || 'windows'}>
               {Object.keys(downloadLinks.assets).map((platform, index) => {
                 return (
                   <TabItem
@@ -181,7 +185,7 @@ export default function DownloadPage(): ReactNode {
                                           icon={isCopied ? "material-symbols:check" : "material-symbols:content-copy"}
                                           style={{
                                             fontSize: '14px',
-                                            color: isCopied ? '#22c55e' : '#666',
+                                            color: isCopied ? 'var(--accent-yellow)' : 'var(--accent-blue)',
                                             transition: 'color 0.2s ease'
                                           }}
                                         />
@@ -226,6 +230,95 @@ export default function DownloadPage(): ReactNode {
                 );
               })}
             </Tabs>
+            <Heading as="h2">
+            Package managers
+            </Heading>
+            <Tabs groupId="operating-systems" defaultValue={operatingSystem?.toLowerCase() || 'windows'}>
+              {Object.keys(downloadLinks.assets).map((platform, index) => {
+                return (
+                  <TabItem
+                    key={platform}
+                    value={platform.toLowerCase()}
+                    label={(
+                      <div style={{ display: 'flex', alignItems: 'center', gap: '0.5rem' }}>
+                        <Icon icon={downloadLinks.assets[platform].icon} />
+                        <span>{platform}</span>
+                      </div>
+                    ) as any}
+                    default={index === 0}
+                  >
+                    {
+                      platform === 'macOS' && (
+                        <ul>
+                          <li>
+                            <a href="https://formulae.brew.sh/formula/f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Homebrew</a>
+                          </li>
+                        </ul>
+                      )
+                    }
+                    {
+                      platform === 'Linux' && (
+                        <ul>
+                          <li>
+                            <a href="https://packages.ubuntu.com/search?keywords=f3d&searchon=names&exact=1&suite=all&section=all" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Ubuntu</a>
+                          </li>
+                          <li>
+                            <a href="https://packages.debian.org/search?keywords=f3d&searchon=names&exact=1&suite=all&section=all" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Debian</a>
+                          </li>
+                          <li>
+                            <a href="https://archlinux.org/packages/extra/x86_64/f3d/" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Arch</a>
+                          </li>
+                          <li>
+                            <a href="https://packages.fedoraproject.org/pkgs/f3d/f3d/" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Fedora</a>
+                          </li>
+                          <li>
+                            <a href="https://software.opensuse.org/package/f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>openSUSE</a>
+                          </li>
+                          <li>
+                            <a href="https://github.com/OpenMandrivaAssociation/f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>OpenMandriva</a>
+                          </li>
+                          <li>
+                            <a href="https://madb.mageialinux-online.org/rpmshow?rpm=f3d&repo=9-SRPMS-core-release&distribution=9&architecture=x86_64&graphical=0" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Mageia</a>
+                          </li>
+                          <li>
+                            <a href="https://packages.altlinux.org/en/sisyphus/srpms/f3d/" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>ALT Linux</a>
+                          </li>
+                          <li>
+                            <a href="https://hpc.guix.info/package/f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Guix</a>
+                          </li>
+                          <li>
+                            <a href="https://flathub.org/apps/details/io.github.f3d_app.f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Flathub</a>
+                          </li>
+                          <li>
+                            <a href="https://search.nixos.org/packages?query=f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>NixOS</a>
+                          </li>
+                        </ul>
+                      )
+                    }
+                    {
+                      platform === 'Windows' && (
+                        <ul>
+                          <li>
+                            <a href="https://scoop.sh/#/apps?q=f3d&s=0&d=1&o=true" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>Scoop</a>
+                          </li>
+                          <li>
+                            <a href="https://winstall.app/apps/f3d-app.f3d" target="_blank" rel="noreferrer" style={{ textDecoration: 'none' }}>winget</a>
+                          </li>
+                        </ul>
+                      )
+                    }
+                  </TabItem>
+                );
+              })}
+            </Tabs>
+            <Heading as="h2">
+            Python library
+            </Heading>
+            <CodeBlock className="language-bash" >pip install f3d</CodeBlock>
+            <Heading as="h2">
+            Web package library
+            </Heading>
+            <CodeBlock className="language-bash" >npm install f3d</CodeBlock>
           </main>
         </div>
       </div>

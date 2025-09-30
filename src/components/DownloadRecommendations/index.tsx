@@ -67,7 +67,7 @@ export default function DownloadRecommendations({ operatingSystem, links }: Down
                       icon={copied0 ? "material-symbols:check" : "material-symbols:content-copy"} 
                       style={{ 
                         fontSize: '14px', 
-                        color: copied0 ? '#22c55e' : '#666',
+                        color: copied0 ? 'var(--accent-yellow)' : 'var(--accent-blue)',
                         transition: 'color 0.2s ease'
                       }} 
                     />
