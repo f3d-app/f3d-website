@@ -5,6 +5,7 @@ import Heading from '@theme/Heading';
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
+import Link from '@docusaurus/Link';
 
 function DownloadStatus(): ReactNode {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
@@ -358,7 +359,7 @@ export default function ThanksPage(): ReactNode {
               {/* Left side - Information */}
               <div style={{ paddingRight: '2rem' }}>
                 <Heading as="h2" style={{ marginBottom: '1.5rem' }}>
-                  F3D is Open Source and Needs Your Support
+                  F3D is open source and needs your support
                 </Heading>
 
                 <div style={{ fontSize: '1.1rem', lineHeight: '1.6' }}>
@@ -374,10 +375,10 @@ export default function ThanksPage(): ReactNode {
 
                   <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
                     <li>Continue active development and add new features</li>
-                    <li>Maintain compatibility with the many file formats</li>
+                    <li>Maintain compatibility with support for many file formats</li>
                     <li>Fix bugs and regressions</li>
                     <li>Provide free support to our users</li>
-                    <li>Keep our infrastructure running</li>
+                    <li>Keep our infrastructure running (git lfs, servers, domain name)</li>
                     <li>Ensure F3D remains free (as in beer and speech!) for everyone</li>
                   </ul>
 
@@ -385,6 +386,44 @@ export default function ThanksPage(): ReactNode {
                     Your contribution, no matter the size, makes a real difference in keeping F3D alive
                     and thriving. Thank you for considering supporting our work!
                   </p>
+
+                  <p>
+                    If you donate monthly, you get a few perks!
+                  </p>
+                  <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                    <li>1$/month: ❤️ Access to the VIP channel on our <a href="https://discord.f3d.app">discord</a></li>
+                    <li>5$/month: 🗳️ Vote for the next feature to implement</li>
+                    <li>20$/month: 🖼️ Showcase your work with F3D in our <Link to="/gallery">gallery</Link></li>
+                  </ul>
+
+                  <p>
+                    Make sure to reach out on <a href="https://discord.f3d.app">discord</a> once you start donating.
+                  </p>
+
+                  <details>
+                    <summary>Alternatives</summary>
+
+                    <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                      <li><a href="https://github.com/sponsors/f3d-app">Github sponsors</a></li>
+                      <li><a href="https://patreon.com/f3d_app_foundation">Patreon</a></li>
+                      <li><a href="https://ko-fi.com/f3d_app">ko-fi</a></li>
+                      <li><a href="https://liberapay.com/f3d-app/">liberapay</a></li>
+                      <li><a href="https://fr.tipeee.com/f3d-app/">Tipee</a></li>
+                      <li><a href="https://buymeacoffee.com/f3d.app">buy me a coffee</a></li>
+                      <li><a href="https://donorbox.org/support-f3d">donorbox</a></li>
+                      <li>Direct Transfer</li>
+                      <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                        <li>IBAN: FR7616958000018496562230572</li>
+                        <li>BIC/SWIFT: QNTOFRP1XXX</li>
+                      </ul>
+                    </ul>
+
+                    <p>
+                      If you or your company are using F3D in any capacity and you want to ensure F3D keeps growing and being maintained, we would love to hear from you!
+                      You can sponsor F3D through the non-profit F3D-APP FOUNDATION and we will acknowledge your support by displaying your logo on our README.md as well as sharing about your support whenever we get the chance.
+                      Please reach out at <a href="mailto:contact@f3d.app">contact@f3d.app</a>.
+                    </p>
+                  </details>
 
                   <div style={{
                     background: 'var(--ifm-background-surface-color)',
