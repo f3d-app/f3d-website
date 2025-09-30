@@ -13,7 +13,7 @@ const galleryItems = [
         title: 'Animated realistic rendering',
         media: (
             <video
-                src='https://user-images.githubusercontent.com/3129530/194735274-395839e9-e2cb-4a47-83b9-5c6987640032.webm'
+                src={require('@site/static/images/gearbox.webm').default}
                 autoPlay
                 loop
                 muted
@@ -27,7 +27,7 @@ const galleryItems = [
         title: 'Animated, skinned and morphed rendering',
         media: (
             <video
-                src='https://user-images.githubusercontent.com/3129530/194734947-f34bc377-8ee4-472a-b130-30ce9e86facf.webm'
+                src={require('@site/static/images/dota.webm').default}
                 autoPlay
                 loop
                 muted
@@ -41,7 +41,7 @@ const galleryItems = [
         title: 'Animated scientific visualization rendering',
         media: (
             <video
-                src='https://user-images.githubusercontent.com/3129530/194735269-b62216e6-33da-484c-9f0d-39befc8253bf.webm'
+                src={require('@site/static/images/can.webm').default}
                 autoPlay
                 loop
                 muted
@@ -56,7 +56,7 @@ const galleryItems = [
         title: '3D Gaussians Splatting',
         media: (
             <video
-                src='https://media.githubusercontent.com/media/f3d-app/f3d-media/main/media/counter.webm'
+                src={require('@site/static/images/counter.webm').default}
                 autoPlay
                 loop
                 muted
@@ -71,7 +71,7 @@ const galleryItems = [
         title: 'Direct scalars rendering of a point cloud',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735272-5bcd3e7c-a333-41f5-8066-9b0bec9885e8.png'
+                src={require('@site/static/images/directScalars.png').default}
                 width={700}
                 alt='Direct scalars rendering of a point cloud'
             />
@@ -83,7 +83,7 @@ const galleryItems = [
         title: 'Raytraced CAD assembly',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735378-b8be4df2-e030-4d13-b12f-24806cbb385b.png'
+                src={require('@site/static/images/cad.png').default}
                 width={700}
                 alt='Raytraced CAD assembly'
             />
@@ -94,7 +94,7 @@ const galleryItems = [
         title: 'Volume rendering of a security bag scan',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735377-127fa5d8-ece5-40c7-8176-672279ebdacc.png'
+                src={require('@site/static/images/volume.png').default}
                 width={700}
                 alt='Volume rendering of a security bag scan'
             />
@@ -106,7 +106,7 @@ const galleryItems = [
         title: 'Realistic rendering #1',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735376-3a476643-00d6-4cfc-9a88-e0dd33658564.png'
+                src={require('@site/static/images/realisticHelmet.png').default}
                 width={700}
                 alt='Realistic rendering #1'
             />
@@ -117,7 +117,7 @@ const galleryItems = [
         title: 'Showcase of interactive widgets',
         media: (
             <img
-                src='https://media.githubusercontent.com/media/f3d-app/f3d-media/95b76c22d927bb24759bbe0246b6260121f2933b/media/typical.png'
+                src={require('@site/static/images/typical.png').default}
                 width={700}
                 alt='Showcase of interactive widgets'
             />
@@ -128,7 +128,7 @@ const galleryItems = [
         title: 'Metallic Rendering of a STEP file',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735370-4d1f067c-704c-4118-9d94-c1adf4039c39.png'
+                src={require('@site/static/images/step.png').default}
                 width={700}
                 alt='Metallic Rendering of a STEP file'
             />
@@ -140,7 +140,7 @@ const galleryItems = [
         title: 'Rendering of a FBX file',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735366-e79a8d45-8b76-4a65-9445-4a0ca1b63876.png'
+                src={require('@site/static/images/fbx.png').default}
                 width={700}
                 alt='Rendering of a FBX file'
             />
@@ -151,7 +151,7 @@ const galleryItems = [
         title: 'Realistic rendering #2',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735363-d2be23bb-90b6-4e90-941d-14b6dc24b476.png'
+                src={require('@site/static/images/realisticMask.png').default}
                 width={700}
                 alt='Realistic rendering #2'
             />
@@ -162,7 +162,7 @@ const galleryItems = [
         title: 'Visualization of a CFD velocity field',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735361-7e827d8e-531a-4938-b608-18825a9574f8.png'
+                src={require('@site/static/images/cfd.png').default}
                 width={700}
                 alt='Visualization of a CFD velocity field'
             />
@@ -174,7 +174,7 @@ const galleryItems = [
         title: 'Volume rendering of a medical skull scan',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735354-486999dd-3c57-4ab1-a9ad-b8e97bac0da0.png'
+                src={require('@site/static/images/volumeMedical.png').default}
                 width={700}
                 alt='Volume rendering of a medical skull scan'
             />
@@ -185,7 +185,7 @@ const galleryItems = [
         title: 'Point cloud rendering using sprites',
         media: (
             <img
-                src='https://user-images.githubusercontent.com/3129530/194735348-7dd14922-f546-4f54-8bc2-b6602617c4cc.png'
+                src={require('@site/static/images/pointCloud.png').default}
                 width={700}
                 alt='Point cloud rendering using sprites'
             />

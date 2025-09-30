@@ -391,9 +391,9 @@ export default function ThanksPage(): ReactNode {
                     If you donate monthly, you get a few perks!
                   </p>
                   <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                    <li>1$/month: ❤️ Access to the VIP channel on our <a href="https://discord.f3d.app">discord</a></li>
-                    <li>5$/month: 🗳️ Vote for the next feature to implement</li>
-                    <li>20$/month: 🖼️ Showcase your work with F3D in our <Link to="/gallery">gallery</Link></li>
+                    <li>1$/month: <Icon icon="openmoji:red-heart" style={{ verticalAlign: '-0.125em' }} /> Access to the VIP channel on our <a href="https://discord.f3d.app">discord</a></li>
+                    <li>5$/month: <Icon icon="openmoji:ballot-box-with-ballot" style={{ verticalAlign: '-0.125em' }} /> Vote for the next feature to implement</li>
+                    <li>20$/month: <Icon icon="openmoji:framed-picture" style={{ verticalAlign: '-0.125em' }} /> Showcase your work with F3D in our <Link to="/gallery">gallery</Link></li>
                   </ul>
 
                   <p>
