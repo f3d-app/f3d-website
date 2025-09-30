@@ -2,12 +2,14 @@ import React, { useRef, useState, ReactNode } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import F3DViewer from '@site/src/components/F3DViewer';
+import { Icon } from '@iconify/react';
 import styles from './viewer.module.css';
 
 
 function ViewerApp() {
   const viewerRef = useRef(null);
   const [upDirection, setUpDirection] = useState('+Z');
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   // Callback for switch toggles
   const handleSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -69,8 +71,24 @@ function ViewerApp() {
 
   return (
     <div className={styles.viewerPage}>
+      <div 
+        className={`${styles.mobileMenuToggle} ${isMobileMenuOpen ? styles.mobileMenuToggleHidden : ''}`}
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        aria-label="Toggle controls panel"
+        title="Controls"
+      >
+        <Icon icon="material-symbols:settings" />
+      </div>
+      
       <div className={styles.layout}>
-        <nav className={styles.menuPanel} aria-label="Viewer controls">
+        <nav className={`${styles.menuPanel} ${isMobileMenuOpen ? styles.menuPanelOpen : ''}`} aria-label="Viewer controls">
+          <div
+            className={styles.menuCloseButton}
+            onClick={() => setIsMobileMenuOpen(false)}
+            aria-label="Close controls panel"
+          >
+            <Icon icon="material-symbols:close" />
+          </div>
           <div className={styles.fileInputGroup}>
             <label className={styles.fileLabel} htmlFor="file-selector">
               <input
@@ -131,6 +149,14 @@ function ViewerApp() {
             <label htmlFor="ambient">Ambient light</label>
           </div>
         </nav>
+        
+        {isMobileMenuOpen && (
+          <div 
+            className={styles.mobileMenuBackdrop}
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+        )}
+        
         <main className={styles.viewerPanel}>
           <F3DViewer ref={viewerRef} />
         </main>
