@@ -50,7 +50,7 @@ const galleryItems = [
             />
         ),
         command:
-            'f3d can.ex2 -xtgans --up=+Z --scalar-coloring --coloring-array=VEL --animation-speed-factor=0.005',
+            'f3d can.ex2 -xtgans --up=+Z --scalar-coloring --coloring-array=VEL --animation-speed-factor=0.002',
     },
     {
         title: '3D Gaussians Splatting',
@@ -77,7 +77,7 @@ const galleryItems = [
             />
         ),
         command:
-            'f3d Carola_PointCloud.ply --point-size=0 --coloring-component=-2 -sofj --coloring-array=RGBA --up=+Z --hdri-file=venice_sunset_8k.hdr',
+            'f3d Carola_PointCloud.ply --point-sprites-size=0 --coloring-component=-2 -sofj --coloring-array=RGBA --up=+Z --hdri-file=venice_sunset_8k.hdr',
     },
     {
         title: 'Raytraced CAD assembly',
@@ -190,7 +190,7 @@ const galleryItems = [
                 alt='Point cloud rendering using sprites'
             />
         ),
-        command: 'f3d pointCloud.vtp -o --point-size=0.2 --colormap=0,0,0.8,0,0.4,0.9,0,0,0.8,0.9,0.9,0,1,0.5,0.5,1 --up=+Z',
+        command: 'f3d pointCloud.vtp -o --point-sprites-size=0.2 --colormap=0,0,0.8,0,0.4,0.9,0,0,0.8,0.9,0.9,0,1,0.5,0.5,1 --up=+Z',
     },
 ];
 
