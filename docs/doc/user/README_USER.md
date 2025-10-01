@@ -1,7 +1,6 @@
 # User Documentation
 
 - [How to use F3D.](QUICKSTART.md)
-- [How to install F3D.](INSTALLATION.md)
 - [List of all supported file formats.](SUPPORTED_FORMATS.md)
 - [List of all F3D command line options.](OPTIONS.md)
 - [The different interactions in F3D.](INTERACTIONS.md)
@@ -14,4 +13,3 @@
 - [How to integrate F3D in your desktop.](DESKTOP_INTEGRATION.md)
 - [How to configure plugins in F3D.](PLUGINS.md)
 - [Limitations and troubleshooting of F3D.](LIMITATIONS_AND_TROUBLESHOOTING.md)
-- [How to sponsor F3D.](SPONSORING.md)
