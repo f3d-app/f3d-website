@@ -37,10 +37,10 @@ const config: Config = {
         docs: {
           sidebarPath: "./sidebars.ts",
           versions: {
-              current: {
-                label: `🚧 Nightly`,
-              },
+            current: {
+              label: `🚧 Nightly`,
             },
+          },
         },
         blog: {
           showReadingTime: true,
@@ -73,6 +73,18 @@ const config: Config = {
       backgroundColor: '#F8B20A',
       textColor: '#1B1B19',
       isCloseable: true,
+    },
+    metadata: [
+      { name: 'algolia-site-verification', content: '3C64CB24A16EEA03' },
+    ],
+    algolia: {
+      appId: 'PGZA24S7SJ',
+      apiKey: '8be0f81e2da704ea5e67f4ed651f7770', // Public API key: it is safe to commit it
+      indexName: 'test_F3D',
+      contextualSearch: true,
+      searchParameters: {},
+      searchPagePath: 'search',
+      insights: false,
     },
     navbar: {
       title: "F3D",

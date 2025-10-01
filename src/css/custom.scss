@@ -191,3 +191,112 @@ small .iconify {
 .theme-doc-version-badge {
   margin-bottom: 1rem;
 }
+
+/* Algolia DocSearch Integration */
+.DocSearch {
+  --docsearch-primary-color: var(--accent-blue);
+  --docsearch-text-color: var(--text-primary);
+  --docsearch-spacing: 12px;
+  --docsearch-icon-stroke-width: 1.4;
+  --docsearch-highlight-color: var(--accent-blue);
+  --docsearch-muted-color: #{color.scale($f3d_black, $alpha: -30%)};
+  --docsearch-container-background: rgba(27, 27, 25, 0.8);
+  --docsearch-logo-color: var(--accent-blue);
+  
+  /* Modal */
+  --docsearch-modal-width: 600px;
+  --docsearch-modal-height: 400px;
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Search box */
+  --docsearch-searchbox-height: 56px;
+  --docsearch-searchbox-background: var(--ifm-background-surface-color);
+  --docsearch-searchbox-focus-background: var(--ifm-background-surface-color);
+  --docsearch-searchbox-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
+  /* Hit */
+  --docsearch-hit-height: 56px;
+  --docsearch-hit-color: var(--text-primary);
+  --docsearch-hit-active-color: var(--ifm-background-color);
+  --docsearch-hit-background: var(--ifm-background-color);
+  --docsearch-hit-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  
+  /* Key */
+  --docsearch-key-gradient: linear-gradient(-26.5deg, #{color.scale($f3d_blue, $lightness: 20%)} 0%, var(--accent-blue) 100%);
+  --docsearch-key-shadow: inset 0 -2px 0 0 #{color.scale($f3d_blue, $lightness: -20%)}, inset 0 0 1px 1px var(--accent-blue), 0 1px 2px 1px rgba(30, 35, 90, 0.4);
+}
+
+[data-theme='dark'] .DocSearch {
+  --docsearch-text-color: var(--text-primary);
+  --docsearch-muted-color: #{color.scale($f3d_white, $alpha: -40%)};
+  --docsearch-container-background: rgba(27, 27, 25, 0.9);
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-searchbox-background: var(--ifm-background-surface-color);
+  --docsearch-searchbox-focus-background: var(--ifm-background-surface-color);
+  --docsearch-hit-color: var(--text-primary);
+  --docsearch-hit-active-color: var(--ifm-background-color);
+  --docsearch-hit-background: var(--ifm-background-color);
+}
+
+/* DocSearch Button Styling */
+.DocSearch-Button {
+  border-radius: 8px;
+  border: 1px solid #{color.scale($f3d_blue, $alpha: -70%)};
+  background: var(--ifm-background-surface-color);
+  font-family: var(--font-primary);
+  transition: all 0.2s ease;
+}
+
+.DocSearch-Button:hover {
+  background: var(--ifm-background-color);
+  border-color: var(--accent-blue);
+  box-shadow: 0 4px 12px rgba(120, 138, 254, 0.15);
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.DocSearch-Button-Key {
+  background: var(--accent-blue);
+  border: 1px solid #{$f3d_blue};
+  color: #{$f3d_white};
+  border-radius: 4px;
+  font-family: var(--font-primary);
+}
+
+/* DocSearch Modal Enhancements */
+.DocSearch-Modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.DocSearch-SearchBar {
+  border-radius: 8px 8px 0 0;
+}
+
+.DocSearch-Hits mark {
+  background: linear-gradient(90deg, var(--accent-yellow), #{color.scale($f3d_yellow, $lightness: 20%)});
+  color: var(--text-primary);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.DocSearch-Hit[aria-selected='true'] {
+  background: var(--accent-blue);
+  border-radius: 6px;
+  margin: 0 8px;
+}
+
+.DocSearch-Hit[aria-selected='true'] mark {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.DocSearch-Footer {
+  visibility: hidden;
+}
