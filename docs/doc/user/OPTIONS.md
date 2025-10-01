@@ -1,4 +1,4 @@
-# Command line options
+# Command Line Options
 
 F3D behavior can be fully controlled from the command line using the following options.
 

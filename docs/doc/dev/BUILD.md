@@ -1,4 +1,4 @@
-# Build
+# Building
 
 > [!NOTE]
 > For WebAssembly cross-compilation, follow the dedicated guide [here](./BUILD_WASM.md).

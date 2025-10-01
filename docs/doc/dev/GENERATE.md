@@ -1,4 +1,6 @@
-# How to generate the full coverage report
+# Tooling
+
+## How to generate the full coverage report
 
 Requires `gcovr` program and `gcc` toolchain.
 
@@ -6,7 +8,7 @@ Requires `gcovr` program and `gcc` toolchain.
 2. Run all tests, `xdotool` needs to be installed. This will generate many `.gcda` files.
 3. Generate the report with: `gcovr -r /path/to/sources --html --html-details -o coverage.html`.
 
-# How to build and test with sanitizer
+## How to build and test with sanitizer
 
 Requires `clang` toolchain.
 
@@ -15,7 +17,7 @@ Requires `clang` toolchain.
 3. `export TSAN_OPTIONS=suppressions=/path/to/f3d/.tsan.supp`.
 4. Run all tests.
 
-# How to locally generate the Jekyll based website
+## How to locally generate the Jekyll based website
 
 1. Install `ruby` and make sure ruby binaries directory is added to your `PATH`
 2. Install Jekyll and all dependencies: `gem install jekyll jekyll-remote-theme jekyll-relative-links jekyll-seo-tag jekyll-optional-front-matter jekyll-titles-from-headings jekyll-include-cache`
@@ -24,7 +26,7 @@ Requires `clang` toolchain.
 
 Please note the favicon and search bar are not working locally, this is expected.
 
-# How to locally generate the doxygen documentation
+## How to locally generate the doxygen documentation
 
 1. Install Python, pip and doxygen
 2. `pip install sphinx sphinx-book-theme exhale`

@@ -1,4 +1,4 @@
-# Options exhaustive list
+# Options
 
 An option is a specific value stored in different struct in an `options` instance.
 They can be accessed directly through the structs, through a string API or through a std::variant API.

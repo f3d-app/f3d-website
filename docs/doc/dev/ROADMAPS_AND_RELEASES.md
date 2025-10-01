@@ -1,4 +1,4 @@
-# Roadmaps and release cycles
+# Roadmaps and Release Cycles
 
 F3D is a community driven project and we try to provide as much information as we can about the upcoming features
 and release expectations. Please keep in mind while we may try to fulfill what was planned, some features may not be available

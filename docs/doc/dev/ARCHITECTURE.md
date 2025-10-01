@@ -1,4 +1,4 @@
-# F3D Architecture
+# Architecture
 
 F3D is structured in different parts, interacting with each others and with F3D dependencies.
 This architecture is reflected by the directories organisation.

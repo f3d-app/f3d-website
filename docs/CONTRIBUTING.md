@@ -1,4 +1,4 @@
-# How to Contribute
+# Contributing
 
 F3D welcomes all contributors, regardless of skill level or experience!
 
