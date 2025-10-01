@@ -59,7 +59,10 @@ export default function DownloadPage(): ReactNode {
     // Client-side only: check OS from URL params or user agent
     const params = new URLSearchParams(window.location.search);
     const detectedOS = params.get('os') || GuessClient();
-    setOperatingSystem(detectedOS);
+    if (['Windows', 'macOS', 'Linux'].includes(detectedOS)) {
+      // There's no support for Android or iOS yet
+      setOperatingSystem(detectedOS);
+    }
   }, []);
 
   return (
@@ -142,7 +145,7 @@ export default function DownloadPage(): ReactNode {
                 </p>
               </div>
 
-              <Tabs groupId="operating-systems" defaultValue={operatingSystem?.toLowerCase() || 'windows'}>
+              <Tabs defaultValue={operatingSystem?.toLowerCase() || 'windows'}>
                 {Object.keys(downloadLinks.assets).map((platform, index) => {
                   return (
                     <TabItem
@@ -403,7 +406,9 @@ export default function DownloadPage(): ReactNode {
                                   { name: 'ALT Linux', url: 'https://packages.altlinux.org/en/sisyphus/srpms/f3d/' },
                                   { name: 'Guix', url: 'https://hpc.guix.info/package/f3d' },
                                   { name: 'Flathub', url: 'https://flathub.org/apps/details/io.github.f3d_app.f3d' },
-                                  { name: 'NixOS', url: 'https://search.nixos.org/packages?query=f3d' }
+                                  { name: 'NixOS', url: 'https://search.nixos.org/packages?query=f3d' },
+                                  { name: 'FreeBSD', url: 'https://cgit.freebsd.org/ports/tree/graphics/f3d' },
+                                  { name: 'Spack', url: 'https://packages.spack.io/package.html?name=f3d' }
                                 ].map((distro, index) => (
                                   <a
                                     key={index}
