@@ -24,7 +24,7 @@ _Animation of a glTF file within F3D_
 
 _A direct scalars render by F3D_
 
-See the [gallery](TODO) for more images, take a look at the [changelog](doc/CHANGELOG.md) or go to the [install guide](doc/user/INSTALLATION.md) to download and install F3D!
+See the [gallery](https://meakk.github.io/f3d-website/gallery) for more images, take a look at the [changelog](doc/CHANGELOG.md) or go to the [download page](https://meakk.github.io/f3d-website/download) to download and install F3D!
 
 You can even use F3D directly in your [browser](https://f3d.app/web)!
 
@@ -54,9 +54,9 @@ See the [Quickstart Guide](doc/user/QUICKSTART.md) for more information about ge
 F3D needs your help!
 
 If you can, please consider sponsoring F3D. Even a small donation would help us offset the recurring maintenance costs.
-With enough sponsors we would be able to make F3D grow faster and stronger! Read more about it [here](TODO).
+With enough sponsors we would be able to make F3D grow faster and stronger! Read more about it [here](https://meakk.github.io/f3d-website/thanks).
 
-If you are an industry user of F3D and want to make sure it can keep growing and being maintained, [please reach out](TODO)!
+If you are an industry user of F3D and want to make sure it can keep growing and being maintained, [please reach out](https://meakk.github.io/f3d-website/thanks)!
 
 In any case, please star it on github and share the word about it!
 

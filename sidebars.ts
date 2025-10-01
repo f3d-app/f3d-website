@@ -11,11 +11,6 @@ const sidebars: SidebarsConfig = {
       label: 'Home',
     },
     {
-      type: 'doc',
-      id: 'doc/GALLERY',
-      label: 'Gallery',
-    },
-    {
       type: 'category',
       label: 'Application documentation',
       link:{
@@ -24,7 +19,6 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'doc/user/QUICKSTART',
-        'doc/user/INSTALLATION',
         'doc/user/SUPPORTED_FORMATS',
         'doc/user/OPTIONS',
         'doc/user/INTERACTIONS',
@@ -37,7 +31,6 @@ const sidebars: SidebarsConfig = {
         'doc/user/DESKTOP_INTEGRATION',
         'doc/user/PLUGINS',
         'doc/user/LIMITATIONS_AND_TROUBLESHOOTING',
-        'doc/user/SPONSORING',
       ],
     },
     {
