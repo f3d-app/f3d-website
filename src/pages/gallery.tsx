@@ -134,7 +134,7 @@ const galleryItems = [
             />
         ),
         command:
-            'f3d eta_asm.stp --hdri-file=future_parking_2k.hdr -fjuqxtga --up=+Z --metallic=1 --roughness=0.6 --color=0.98,0.90,0.59 --scalar-coloring=false',
+            'f3d eta_asm.stp --hdri-file=future_parking_2k.hdr -DSTEP.linear_deflection=0.01 -fjuqxtga --up=+Z --metallic=1 --roughness=0.6 --color=0.98,0.90,0.59 --scalar-coloring=false',
     },
     {
         title: 'Rendering of a FBX file',
