@@ -21,7 +21,7 @@ const galleryItems = [
                 style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
             />
         ),
-        command: 'f3d gearbox/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtgas',
+        command: 'f3d gearbox/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtga',
     },
     {
         title: 'Animated, skinned and morphed rendering',
@@ -35,7 +35,7 @@ const galleryItems = [
                 style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
             />
         ),
-        command: 'f3d dota/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtgas',
+        command: 'f3d dota/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtga',
     },
     {
         title: 'Animated scientific visualization rendering',
@@ -77,7 +77,7 @@ const galleryItems = [
             />
         ),
         command:
-            'f3d Carola_PointCloud.ply --point-sprites-size=0 --coloring-component=-2 -sofj --coloring-array=RGBA --up=+Z --hdri-file=venice_sunset_8k.hdr',
+            'f3d Carola_PointCloud.ply --point-sprites-size=0 --coloring-component=-2 -sofju --blur-coc=50 --coloring-array=RGBA --up=+Z --hdri-file=venice_sunset_8k.hdr',
     },
     {
         title: 'Raytraced CAD assembly',
@@ -88,7 +88,7 @@ const galleryItems = [
                 alt='Raytraced CAD assembly'
             />
         ),
-        command: 'f3d 202.vtp -xtgans -rd --raytracing-samples=10 --coloring-range=-2,9',
+        command: 'f3d 202.vtp -xtgans -rd --raytracing-samples=20 --coloring-range=-2,9',
     },
     {
         title: 'Volume rendering of a security bag scan',
@@ -145,7 +145,7 @@ const galleryItems = [
                 alt='Rendering of a FBX file'
             />
         ),
-        command: 'f3d zeldaPosed001.fbx --hdri-file=hikers_cave_2k.hdr -fjuqxtga --light-intensity=1.5',
+        command: 'f3d zeldaPosed001.fbx --hdri-file=hikers_cave_2k.hdr -fjuqxtga --light-intensity=1.5 --blur-coc=50',
     },
     {
         title: 'Realistic rendering #2',
@@ -179,7 +179,7 @@ const galleryItems = [
                 alt='Volume rendering of a medical skull scan'
             />
         ),
-        command: 'f3d skull.vti -vxbt --coloring-range=40,200 --camera-direction=1,0,0',
+        command: 'f3d skull.vti -vxbt --coloring-range=40,200 --camera-direction=1,0,0 --up=+Z',
     },
     {
         title: 'Point cloud rendering using sprites',
