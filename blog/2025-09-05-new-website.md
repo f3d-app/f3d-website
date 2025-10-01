@@ -1,7 +1,7 @@
 ---
 slug: new-website
 title: New website!
-authors: [mwestphal]
+authors: [mwestphal, meak]
 tags: [website]
 ---
 
@@ -44,8 +44,9 @@ Yes we can! We took some care to improve all these pages until it felt just righ
 
 You will also have the chance to occasionally read what F3D maintainers want to share.
 
-Don't ask me how it works, it's all Meakk anyway!
+The website is also open source, the code can be found [here](https://github.com/f3d-app/f3d-website).
+We are happy to review modification to any part of the website if you are a web developer. Also, if you are a technical writer, feel free to reach out in order to contribute by submitting blog articles too!
 
-By the way, the new website was mostly designed by [Mariami](https://www.linkedin.com/in/mariami-zedginidze/)!
+Special thanks to [Mariami](https://www.linkedin.com/in/mariami-zedginidze/) for the initial design and the great color scheme!
 
 Take a look and let us know what you think!
