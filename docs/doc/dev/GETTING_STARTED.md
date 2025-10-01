@@ -1,4 +1,4 @@
-# Getting started guide
+# Getting Started
 
 This is a getting started guide, aimed to people that are not used
 to C++ programming, configuring and compiling. If you are already used

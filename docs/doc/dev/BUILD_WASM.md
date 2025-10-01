@@ -1,4 +1,4 @@
-# Introduction
+# Build WebAssembly
 
 F3D can be built in WebAssembly using emscripten in order to embed it into a web browser.
 It is still experimental and only a small fraction of the libf3d public API is bound (see `../LANGUAGE_BINDINGS.md`).
