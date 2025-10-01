@@ -122,7 +122,7 @@ const galleryItems = [
                 alt='Showcase of interactive widgets'
             />
         ),
-        command: 'f3d dragon.vtu -xtganse --coloring-component=0',
+        command: 'f3d dragon.vtu -xtgansemf --coloring-component=0',
     },
     {
         title: 'Metallic Rendering of a STEP file',
