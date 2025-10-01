@@ -100,11 +100,17 @@ export default function DownloadPage(): ReactNode {
               marginBottom: '2rem',
               fontWeight: '500'
             }}>
-              Released on {new Date(downloadLinks.date).toLocaleDateString('en-US', {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-              })}
+              <BrowserOnly fallback={<span>Released on {downloadLinks.date}</span>}>
+                {() => (
+                  <span>
+                    Released on {new Date(downloadLinks.date).toLocaleDateString('en-US', {
+                      year: 'numeric',
+                      month: 'long',
+                      day: 'numeric'
+                    })}
+                  </span>
+                )}
+              </BrowserOnly>
             </p>
           </div>
           <BrowserOnly>
