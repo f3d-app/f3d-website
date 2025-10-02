@@ -155,11 +155,11 @@ const config: Config = {
           items: [
             {
               label: "Application",
-              to: "/docs/doc/user/QUICKSTART",
+              to: "/docs/user/QUICKSTART",
             },
             {
               label: "Library",
-              to: "/docs/doc/libf3d/OVERVIEW",
+              to: "/docs/libf3d/OVERVIEW",
             },
           ],
         },

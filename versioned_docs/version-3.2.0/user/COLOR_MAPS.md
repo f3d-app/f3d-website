@@ -47,7 +47,7 @@ Here's the list of all supported image formats that can be used as color maps:
 - `.CT`
 - `.mhd`, `.mha`
 - `.tga`
-- `.exr` (if `F3D_MODULE_EXR` is [enabled](../dev/BUILD.md))
+- `.exr` (if `F3D_MODULE_EXR` is [enabled](/dev/BUILD))
 
 ## Custom values
 

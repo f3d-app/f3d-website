@@ -22,7 +22,7 @@
 You can find other (older, smaller, checksum, RCs) release related packages and files on the [releases page](https://github.com/f3d-app/f3d/releases).
 You can also find there the [nightly release](https://github.com/f3d-app/f3d/releases/tag/nightly) to test the development version of F3D.
 See the [desktop integration](DESKTOP_INTEGRATION.md) section in order actually integrate the binary release in your desktop.
-Alternatively, you can build F3D yourself by following the [build](../dev/BUILD.md) guide.
+Alternatively, you can build F3D yourself by following the [build](/dev/BUILD) guide.
 
 You can also find packages for the following repositories:
 

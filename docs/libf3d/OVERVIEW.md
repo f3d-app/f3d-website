@@ -122,11 +122,11 @@ Most options are dynamic, some are only taken into account when loading a file. 
 Find more examples in the [examples directory](https://github.com/f3d-app/f3d/tree/master/examples),
 you can also find other usages in the [testing directory](https://github.com/f3d-app/f3d/tree/master/library/testing).
 
-For the complete documentation, please consult the [libf3d doxygen documentation.](https://f3d.app/doc/libf3d/doxygen/).
+For the complete documentation, please consult the [libf3d doxygen documentation.](API.md).
 
 ## Building against the libf3d
 
-Please follow instructions in the [F3D build guide](../dev/BUILD.md), make sure to build with `BUILD_SHARED_LIBS=ON` and to install the `sdk` component then use CMake to find the libf3d
+Please follow instructions in the [F3D build guide](/dev/BUILD), make sure to build with `BUILD_SHARED_LIBS=ON` and to install the `sdk` component then use CMake to find the libf3d
 and link against it like this in your CMakeLists.txt:
 
 ```cmake
