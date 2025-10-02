@@ -185,11 +185,11 @@ const config: Config = {
           items: [
             {
               label: "Changelog",
-              to: "/changelog",
+              to: "/CHANGELOG",
             },
             {
               label: "OSS licenses",
-              to: "/licenses",
+              to: "/THIRD_PARTY_LICENSES",
             },
             {
               label: "Web Viewer",

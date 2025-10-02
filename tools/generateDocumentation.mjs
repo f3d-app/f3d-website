@@ -70,7 +70,7 @@ async function runMoxygen() {
     const options = {
         ...moxygen.defaultOptions,
         directory: path.join(__dirname, 'doxygen_output', 'xml'),
-        output: path.join(__dirname, '..', 'docs', 'api.md'),
+        output: path.join(__dirname, '..', 'docs', 'libf3d', 'API.md'),
         templates: path.join(__dirname, '..', 'moxygen-templates'),
         noindex: true,
         anchors: true
@@ -82,24 +82,24 @@ async function runMoxygen() {
 async function copyDocs() {
     console.log("Copying documentation...");
 
-    const sourceDocDir = path.join(SOURCE_DIR, "doc");
-    const targetDocDir = path.join(__dirname, "..", "docs", "doc");
-
     try {
-        // Remove existing docs/doc directory if it exists
-        await rm(targetDocDir, { recursive: true, force: true });
-        
-        // Ensure parent directory exists
-        await mkdir(path.dirname(targetDocDir), { recursive: true });
-        
-        // Copy the entire doc folder
-        await cp(sourceDocDir, targetDocDir, { recursive: true });
+        // copy user and libf3d docs
+        for (const dir of ["user", "libf3d"]) {
+            const srcDir = path.join(SOURCE_DIR, "doc", dir);
+            const destDir = path.join(__dirname, "..", "docs", dir);
+            await cp(srcDir, destDir, { recursive: true });
+        }
 
         // copy some specific files
-        const filesToCopy = ["LICENSE.md", "README.md", "CONTRIBUTING.md", "CODE_OF_CONDUCT.md"];
-        for (const file of filesToCopy) {
+        for (const file of ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"]) {
             const srcFile = path.join(SOURCE_DIR, file);
-            const destFile = path.join(__dirname, "..", "docs", file);
+            const destFile = path.join(__dirname, "..", "dev", file);
+            await cp(srcFile, destFile);
+        }
+
+        for (const file of ["CHANGELOG.md", "THIRD_PARTY_LICENSES.md"]) {
+            const srcFile = path.join(SOURCE_DIR, "doc", file);
+            const destFile = path.join(__dirname, "..", "src", "pages", file);
             await cp(srcFile, destFile);
         }
 

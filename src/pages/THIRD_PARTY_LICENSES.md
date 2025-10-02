@@ -1,8 +1,6 @@
-# Third Party
+# Third Party Copyrights and License within F3D application source
 
-Copyrights and License within F3D application source
-
-### cxxopts.hpp:
+## cxxopts.hpp:
 
 ```
 Copyright (c) 2014, 2015, 2016, 2017 Jarryd Beck
@@ -26,7 +24,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 THE SOFTWARE.
 ```
 
-### json.hpp:
+## json.hpp:
 
 ```
     __ _____ _____ _____
@@ -57,7 +55,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE  OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### dmon.h:
+## dmon.h:
 
 ```
 BSD 2-Clause License
@@ -87,7 +85,7 @@ OR TORT (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
 OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 ```
 
-### ImGui
+## ImGui
 
 ```
 The MIT License (MIT)
@@ -113,7 +111,7 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
 
-### MonaspaceNeon-Regular.0tf
+## MonaspaceNeon-Regular.0tf
 
 ```
 Copyright (c) 2023, GitHub https://github.com/githubnext/monaspace
