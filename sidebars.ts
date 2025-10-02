@@ -12,7 +12,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Application documentation',
+      label: 'Application',
       link:{
         type: 'doc',
         id: 'doc/user/README_USER',
@@ -35,7 +35,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Library documentation',
+      label: 'Library',
       link:{
         type: 'doc',
         id: 'doc/libf3d/README_LIBF3D',
@@ -50,7 +50,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Developer documentation',
+      label: 'Developer',
       link:{
         type: 'doc',
         id: 'doc/dev/README_DEV',
@@ -74,8 +74,11 @@ const sidebars: SidebarsConfig = {
     {
       type: 'category',
       label: 'Licenses',
+      link:{
+        type: 'doc',
+        id: 'LICENSE',
+      },
       items: [
-        'LICENSE',
         'doc/THIRD_PARTY_LICENSES',
       ],
     },
