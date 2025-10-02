@@ -131,10 +131,6 @@ const config: Config = {
           title: "Documentation",
           items: [
             {
-              label: "Gallery",
-              to: "/docs/doc/GALLERY",
-            },
-            {
               label: "Application",
               to: "/docs/doc/user/QUICKSTART",
             },
@@ -144,7 +140,7 @@ const config: Config = {
             },
             {
               label: "Developers",
-              to: "/docs/doc/dev/GETTING_STARTED",
+              to: "/docs/CONTRIBUTING",
             },
             {
               label: "API Reference",

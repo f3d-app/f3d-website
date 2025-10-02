@@ -13,7 +13,7 @@ export default function HomepageFeatures(): ReactNode {
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Realistic rendering</Heading>
-              <p>F3D can render your assets with realistic lighting and materials, providing visually accurate previews for your 3D models.</p>
+              <p>Render your assets with realistic lighting and materials, for a nice previews of your 3D models.</p>
             </div>
           </div>
           <div className='col col--4'>
@@ -27,7 +27,7 @@ export default function HomepageFeatures(): ReactNode {
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Animations</Heading>
-              <p>F3D supports animations, including GPU accelerated skinning for smooth and efficient playback of complex character rigs.</p>
+              <p>Show animations, with GPU accelerated skinning for a smooth and efficient playback of complex character rigs.</p>
             </div>
           </div>
           <div className='col col--4'>
@@ -36,7 +36,7 @@ export default function HomepageFeatures(): ReactNode {
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">CAD</Heading>
-              <p>F3D supports CAD designs, allowing you to view and inspect engineering models with precision and clarity.</p>
+              <p>Render CAD designs, allowing you to view and inspect engineering models.</p>
             </div>
           </div>
         </div>
@@ -53,7 +53,7 @@ export default function HomepageFeatures(): ReactNode {
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Gaussian Splatting</Heading>
-              <p>F3D can efficiently render gaussian splatting, enabling high-performance visualization of real world scans.</p>
+              <p>Efficiently render gaussian splatting scenes, enabling high-performance visualization of real world scans.</p>
             </div>
           </div>
           <div className='col col--4'>
@@ -62,7 +62,7 @@ export default function HomepageFeatures(): ReactNode {
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Volume Rendering</Heading>
-              <p>F3D supports advanced volume rendering, allowing you to visualize complex volumetric datasets such as medical scans and scientific simulations with clarity and precision.</p>
+              <p>Perform advanced volume rendering, so you can visualize complex volumetric datasets such as medical scans and scientific simulations.</p>
             </div>
           </div>
           <div className='col col--4'>
@@ -71,7 +71,7 @@ export default function HomepageFeatures(): ReactNode {
             </div>
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Scientific Visualization</Heading>
-              <p>F3D provides tools for scientific visualization, enabling researchers to create accurate and informative visual representations of complex data.</p>
+              <p>Color with you data, so you can create accurate scientific visualisations.</p>
             </div>
           </div>
         </div>
