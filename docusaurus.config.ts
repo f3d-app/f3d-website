@@ -161,6 +161,10 @@ const config: Config = {
               label: "Library",
               to: "/docs/libf3d/OVERVIEW",
             },
+            {
+              label: "Developers",
+              to: "/dev/CONTRIBUTING",
+            },
           ],
         },
         {
