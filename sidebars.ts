@@ -4,112 +4,31 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
 
-  mainSidebar: [
-    {
-      type: 'doc',
-      id: 'README',
-      label: 'Home',
-    },
-    {
-      type: 'category',
-      label: 'Application',
-      link:{
-        type: 'doc',
-        id: 'doc/user/README_USER',
-      },
-      items: [
-        'doc/user/QUICKSTART',
-        'doc/user/SUPPORTED_FORMATS',
-        'doc/user/OPTIONS',
-        'doc/user/INTERACTIONS',
-        'doc/user/ANIMATIONS',
-        'doc/user/CONFIGURATION_FILE',
-        'doc/user/COMMANDS',
-        'doc/user/PARSING',
-        'doc/user/COLOR_MAPS',
-        'doc/user/FINAL_SHADER',
-        'doc/user/DESKTOP_INTEGRATION',
-        'doc/user/PLUGINS',
-        'doc/user/LIMITATIONS_AND_TROUBLESHOOTING',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Library',
-      link:{
-        type: 'doc',
-        id: 'doc/libf3d/README_LIBF3D',
-      },
-      items: [
-        'doc/libf3d/OVERVIEW',
-        'doc/libf3d/CLASSES',
-        'doc/libf3d/OPTIONS',
-        'doc/libf3d/LANGUAGE_BINDINGS',
-        'doc/libf3d/PLUGINS',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Developer',
-      link:{
-        type: 'doc',
-        id: 'doc/dev/README_DEV',
-      },
-      items: [
-        'doc/dev/GETTING_STARTED',
-        'doc/dev/BUILD',
-        'doc/dev/TESTING',
-        'CONTRIBUTING',
-        'doc/dev/GENERATE',
-        'doc/dev/ARCHITECTURE',
-        'doc/dev/CODING_STYLE',
-        'doc/dev/ROADMAPS_AND_RELEASES',
-        'doc/dev/GOVERNANCE',
-        'doc/dev/MAINTAINERS_AND_CONTRIBUTORS',
-        "doc/dev/MENTORING",
-        'CODE_OF_CONDUCT',
-        'doc/dev/BUILD_WASM',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Licenses',
-      link:{
-        type: 'doc',
-        id: 'LICENSE',
-      },
-      items: [
-        'doc/THIRD_PARTY_LICENSES',
-      ],
-    },
-    {
-      type: 'doc',
-      id: 'doc/CHANGELOG',
-      label: 'Changelog',
-    },
-    {
-      type: 'doc',
-      id: 'api',
-      label: 'API Reference',
-    },
+  appSidebar: [
+    'doc/user/README_USER',
+    'doc/user/QUICKSTART',
+    'doc/user/SUPPORTED_FORMATS',
+    'doc/user/OPTIONS',
+    'doc/user/INTERACTIONS',
+    'doc/user/ANIMATIONS',
+    'doc/user/CONFIGURATION_FILE',
+    'doc/user/COMMANDS',
+    'doc/user/PARSING',
+    'doc/user/COLOR_MAPS',
+    'doc/user/FINAL_SHADER',
+    'doc/user/DESKTOP_INTEGRATION',
+    'doc/user/PLUGINS',
+    'doc/user/LIMITATIONS_AND_TROUBLESHOOTING',
+  ],
+  libSidebar: [
+    'doc/libf3d/README_LIBF3D',
+    'doc/libf3d/OVERVIEW',
+    'doc/libf3d/CLASSES',
+    'doc/libf3d/OPTIONS',
+    'doc/libf3d/LANGUAGE_BINDINGS',
+    'doc/libf3d/PLUGINS',
+    'api',
   ]
 };
-
-/*
-- [How to get started with building F3D.](GETTING_STARTED.md)
-- [How to build F3D.](BUILD.md)
-- [How to test F3D.](TESTING.md)
-- [How to contribute to F3D.](../../CONTRIBUTING.md)
-- [How to Generate coverage and sanitizer report.](GENERATE.md)
-- [Overview of the architecture of F3D.](ARCHITECTURE.md)
-- [Coding Style.](CODING_STYLE.md)
-- [Roadmaps and release cycle.](ROADMAPS_AND_RELEASES.md)
-- [Governance.](GOVERNANCE.md)
-- [Maintainers and Contributors.](MAINTAINERS_AND_CONTRIBUTORS.md)
-- [Code of conduct.](../../CODE_OF_CONDUCT.md)
-- [How to build F3D for webassembly.](BUILD_WASM.md)
-
-
-*/
 
 export default sidebars;

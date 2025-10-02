@@ -19,7 +19,7 @@ Usually it looks like this:
 - Once you are able to build and use F3D, your mentor asks you to look at ["good-first-issue"](https://github.com/f3d-app/f3d/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22)
 - You pick an _unassigned_ issue
 - Your mentor explain the issue in details to you to get your started on it
-- While you progress on the issue, your mentor will guide you with technical issue and [contribution steps](../../CONTRIBUTING.md)
+- While you progress on the issue, your mentor will guide you with technical issue and [contribution steps](CONTRIBUTING.md)
 
 ## Important points
 

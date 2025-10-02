@@ -29,7 +29,6 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-  plugins: ['docusaurus-plugin-sass'],
   presets: [
     [
       "classic",
@@ -58,7 +57,18 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-
+  plugins: [
+    'docusaurus-plugin-sass',
+    [
+      '@docusaurus/plugin-content-docs',
+      {
+        id: 'dev',
+        path: 'dev',
+        routeBasePath: 'dev',
+        sidebarPath: './sidebarsDev.ts',
+      },
+    ],
+  ],
   themeConfig: {
     image: "images/typical_opengraph.jpg",
     colorMode: {
@@ -96,18 +106,31 @@ const config: Config = {
       items: [
         { to: "/download", label: "Download", position: "left" },
         {
-          type: "docSidebar",
-          sidebarId: "mainSidebar",
+          type: 'dropdown',
+          label: 'Documentation',
           position: "left",
-          label: "Documentation",
+          items: [
+            {
+              type: "docSidebar",
+              sidebarId: "appSidebar",
+              label: "Application",
+            },
+            {
+              type: "docSidebar",
+              sidebarId: "libSidebar",
+              label: "Library",
+            },
+            {
+              type: "docSidebar",
+              sidebarId: "devSidebar",
+              docsPluginId: "dev",
+              label: "Developers",
+            },
+          ],
         },
         { to: "/gallery", label: "Gallery", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "/viewer", label: "Web Viewer", position: "left" },
-        /*{
-          type: 'docsVersionDropdown',
-          position: "right",
-        },*/
         {
           to: "/thanks",
           label: "♥️ Donate",
@@ -138,19 +161,15 @@ const config: Config = {
               label: "Library",
               to: "/docs/doc/libf3d/OVERVIEW",
             },
-            {
-              label: "Developers",
-              to: "/docs/CONTRIBUTING",
-            },
-            {
-              label: "API Reference",
-              to: "/docs/api",
-            },
           ],
         },
         {
           title: "Community",
           items: [
+            {
+              label: "Contribute",
+              to: "/dev/CONTRIBUTING",
+            },
             {
               label: "Discord",
               href: "https://discord.f3d.app",
@@ -165,8 +184,12 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Changelog",
+              to: "/changelog",
+            },
+            {
+              label: "OSS licenses",
+              to: "/licenses",
             },
             {
               label: "Web Viewer",

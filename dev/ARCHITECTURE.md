@@ -8,15 +8,15 @@ This architecture is reflected by the directories organisation.
 - doc: this very documentation
 - examples: examples usage of the libf3d and plugin framework in python and C++
 - external: dependencies that are included directly in the code
-- java: [java bindings](../libf3d/LANGUAGE_BINDINGS.md#java-experimental) and associated tests.
-- **library**: the [libf3d](../libf3d/README_LIBF3D.md) itself, see below
-- **plugins**: all the [plugins](../libf3d/PLUGINS.md) providing different readers, see below
-- python: [python bindings](../libf3d/LANGUAGE_BINDINGS.md#python) and tests
+- java: [java bindings](/docs/doc/libf3d/LANGUAGE_BINDINGS#java-experimental) and associated tests.
+- **library**: the [libf3d](/docs/doc/libf3d/README_LIBF3D) itself, see below
+- **plugins**: all the [plugins](/docs/doc/libf3d/PLUGINS) providing different readers, see below
+- python: [python bindings](/docs/doc/libf3d/LANGUAGE_BINDINGS#python) and tests
 - resources: all non code, non doc, like icon, configs and such
 - testing: all testing related resources, does not contain the test themselves
 - **vtkext**: extensions to VTK and related tests, see below
-- webassembly: [webassembly/javascript bindings](../libf3d/LANGUAGE_BINDINGS.md#javascript-experimental) and [F3DWeb](https://f3d.app/web/) application code
-- winshellext: shell extension for Windows, provide [thumbnails for Windows](../user/DESKTOP_INTEGRATION.md#windows)
+- webassembly: [webassembly/javascript bindings](/docs/doc/libf3d/LANGUAGE_BINDINGS#javascript-experimental) and [F3DWeb](https://f3d.app/web/) application code
+- winshellext: shell extension for Windows, provide [thumbnails for Windows](/docs/doc/user/DESKTOP_INTEGRATION#windows)
 
 Here is diagram explaining how some of these parts interact together:
 
@@ -63,7 +63,7 @@ Each of these modules also contains [tests](TESTING.md#vtkextensions-layer) in t
 
 ## plugins
 
-`plugins` contains [libf3d plugins](../libf3d/PLUGINS.md) that are provided by default in the F3D packages. Each of these plugins correspond to a specific dependency and are named accordingly. Each of these plugins provide access to specific readers for specific formats. Without plugins, F3D and the libf3d would not be able to open any file. These plugins can be loaded statically or dynamically, which makes the dependencies truly optional if needed.
+`plugins` contains [libf3d plugins](/docs/doc/libf3d/PLUGINS) that are provided by default in the F3D packages. Each of these plugins correspond to a specific dependency and are named accordingly. Each of these plugins provide access to specific readers for specific formats. Without plugins, F3D and the libf3d would not be able to open any file. These plugins can be loaded statically or dynamically, which makes the dependencies truly optional if needed.
 
 ## library
 
@@ -75,7 +75,7 @@ Logically, it is structured in 3 parts, `public` which contains the public API h
 
 There is also a dedicated `testing` directory which contains the [unit and functional testing](TESTING.md#library-layer) of the libf3d.
 
-It also contains the `options.json` file, which is the file used to generate all [options](../libf3d/OPTIONS.md) code.
+It also contains the `options.json` file, which is the file used to generate all [options](/docs/doc/libf3d/OPTIONS) code.
 
 ## application
 
@@ -83,7 +83,7 @@ It also contains the `options.json` file, which is the file used to generate all
 The most important class in the `F3DStarter` which contains most of the top logic on the application. `F3DOptionsTools` is also notable as it handles most of
 the command line options logic.
 
-There is also a dedicated `testing` directory which contains all of the [applicative testing](TESTING.md#application-layer) of the F3D application as well as many functional testing of the libf3d.
+There is also a dedicated `testing` directory which contains all of the [applicative testing](TESTING#application-layer) of the F3D application as well as many functional testing of the libf3d.
 
 ## Other f3d-app repositories
 

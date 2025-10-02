@@ -1,94 +1,27 @@
 {
-  "mainSidebar": [
-    {
-      "type": "doc",
-      "id": "README",
-      "label": "Home"
-    },
-    {
-      "type": "doc",
-      "id": "doc/GALLERY",
-      "label": "Gallery"
-    },
-    {
-      "type": "category",
-      "label": "Application documentation",
-      "link": {
-        "type": "doc",
-        "id": "doc/user/README_USER"
-      },
-      "items": [
-        "doc/user/QUICKSTART",
-        "doc/user/INSTALLATION",
-        "doc/user/SUPPORTED_FORMATS",
-        "doc/user/OPTIONS",
-        "doc/user/INTERACTIONS",
-        "doc/user/ANIMATIONS",
-        "doc/user/CONFIGURATION_FILE",
-        "doc/user/COMMANDS",
-        "doc/user/PARSING",
-        "doc/user/COLOR_MAPS",
-        "doc/user/FINAL_SHADER",
-        "doc/user/DESKTOP_INTEGRATION",
-        "doc/user/PLUGINS",
-        "doc/user/LIMITATIONS_AND_TROUBLESHOOTING",
-        "doc/user/SPONSORING"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Library documentation",
-      "link": {
-        "type": "doc",
-        "id": "doc/libf3d/README_LIBF3D"
-      },
-      "items": [
-        "doc/libf3d/OVERVIEW",
-        "doc/libf3d/CLASSES",
-        "doc/libf3d/OPTIONS",
-        "doc/libf3d/LANGUAGE_BINDINGS",
-        "doc/libf3d/PLUGINS"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Developer documentation",
-      "link": {
-        "type": "doc",
-        "id": "doc/dev/README_DEV"
-      },
-      "items": [
-        "doc/dev/GETTING_STARTED",
-        "doc/dev/BUILD",
-        "doc/dev/TESTING",
-        "CONTRIBUTING",
-        "doc/dev/GENERATE",
-        "doc/dev/ARCHITECTURE",
-        "doc/dev/CODING_STYLE",
-        "doc/dev/ROADMAPS_AND_RELEASES",
-        "doc/dev/GOVERNANCE",
-        "doc/dev/MAINTAINERS_AND_CONTRIBUTORS",
-        "CODE_OF_CONDUCT",
-        "doc/dev/BUILD_WASM"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Licenses",
-      "items": [
-        "LICENSE",
-        "doc/THIRD_PARTY_LICENSES"
-      ]
-    },
-    {
-      "type": "doc",
-      "id": "doc/CHANGELOG",
-      "label": "Changelog"
-    },
-    {
-      "type": "doc",
-      "id": "api",
-      "label": "API Reference"
-    }
+  "appSidebar": [
+    "doc/user/README_USER",
+    "doc/user/QUICKSTART",
+    "doc/user/SUPPORTED_FORMATS",
+    "doc/user/OPTIONS",
+    "doc/user/INTERACTIONS",
+    "doc/user/ANIMATIONS",
+    "doc/user/CONFIGURATION_FILE",
+    "doc/user/COMMANDS",
+    "doc/user/PARSING",
+    "doc/user/COLOR_MAPS",
+    "doc/user/FINAL_SHADER",
+    "doc/user/DESKTOP_INTEGRATION",
+    "doc/user/PLUGINS",
+    "doc/user/LIMITATIONS_AND_TROUBLESHOOTING"
+  ],
+  "libSidebar": [
+    "doc/libf3d/README_LIBF3D",
+    "doc/libf3d/OVERVIEW",
+    "doc/libf3d/CLASSES",
+    "doc/libf3d/OPTIONS",
+    "doc/libf3d/LANGUAGE_BINDINGS",
+    "doc/libf3d/PLUGINS",
+    "api"
   ]
 }
