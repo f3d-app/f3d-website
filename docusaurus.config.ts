@@ -192,8 +192,8 @@ const config: Config = {
               to: "/CHANGELOG",
             },
             {
-              label: "OSS licenses",
-              to: "/THIRD_PARTY_LICENSES",
+              label: "License",
+              to: "/LICENSE",
             },
             {
               label: "Web Viewer",

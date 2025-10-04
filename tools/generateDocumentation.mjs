@@ -97,8 +97,8 @@ async function copyDocs() {
             await cp(srcFile, destFile);
         }
 
-        for (const file of ["CHANGELOG.md", "THIRD_PARTY_LICENSES.md"]) {
-            const srcFile = path.join(SOURCE_DIR, "doc", file);
+        for (const file of ["doc/CHANGELOG.md", "LICENSE.md"]) {
+            const srcFile = path.join(SOURCE_DIR, file);
             const destFile = path.join(__dirname, "..", "src", "pages", file);
             await cp(srcFile, destFile);
         }
