@@ -5,7 +5,6 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 const sidebars: SidebarsConfig = {
 
   appSidebar: [
-    'user/README_USER',
     'user/QUICKSTART',
     'user/SUPPORTED_FORMATS',
     'user/OPTIONS',
@@ -21,7 +20,6 @@ const sidebars: SidebarsConfig = {
     'user/LIMITATIONS_AND_TROUBLESHOOTING',
   ],
   libSidebar: [
-    'libf3d/README_LIBF3D',
     'libf3d/OVERVIEW',
     'libf3d/CLASSES',
     'libf3d/OPTIONS',
