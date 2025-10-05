@@ -43,11 +43,11 @@ It is open to anyone willing to learn more about open source contribution to F3D
 
 ### 1.5. Sponsor
 
-Sponsor are users that are currently sponsoring the project. They are acknowledged as such in each release and on [discord](https://discord.f3d.app). Sponsoring can be done either one-time or monthly. One-time sponsor will only be considered sponsor until the next release. See the detail on our [sponsor page](https://github.com/sponsors/f3d-app).
+Sponsor are users that are currently sponsoring the project. They are acknowledged as specified in our [donation page](https://meakk.github.io/f3d-website/thanks).
 
 ### 1.6 Industry sponsor
 
-Industry sponsor are company that are currently sponsoring the project. They are acknowledged as such in each release and in the [README.md](https://github.com/f3d-app/f3d/blob/master/README.md) of the project with an appropriate logo. Potential industry sponsor should reach out to maintainers.
+Industry sponsor are company that are currently sponsoring the project. They are acknowledged as specified in our [donation page](https://meakk.github.io/f3d-website/thanks).
 
 ## 2. Decisions
 

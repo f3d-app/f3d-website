@@ -2,7 +2,7 @@
 
 F3D can be built in WebAssembly using emscripten in order to embed it into a web browser.
 It is still experimental and only a small fraction of the libf3d public API is bound (see `../LANGUAGE_BINDINGS.md`).
-An example can be seen live at https://f3d.app/web, and a code example is available in `example/libf3d/web`.
+An example can be seen live at https://meakk.github.io/f3d-website/viewer, and a code example is available in `example/libf3d/web`.
 
 This guide is describing how to build VTK and F3D with emscripten using Docker on Linux or Windows.
 

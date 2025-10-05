@@ -44,8 +44,8 @@ When contributing to F3D, it is necessary that new code is covered by a test in 
 
 ### Application layer
 
-All application tests are initiated via the `CTest` (https://cmake.org/cmake/help/book/mastering-cmake/chapter/Testing%20With%20CMake%20and%20CTest.html) testing framework.
-`CTest` runs `f3d` with the `--output` and `--reference arguments which renders an output image and compares it to a reference image. F3D compares the differences between the 2 images and compute a difference value and compare it to a threshold to check if a test passes or not.
+All application tests are initiated via the [CTest](https://cmake.org/cmake/help/book/mastering-cmake/chapter/Testing%20With%20CMake%20and%20CTest.html) testing framework.
+CTest runs `f3d` with the `--output` and `--reference` arguments which renders an output image and compares it to a reference image. F3D compares the differences between the 2 images and compute a difference value and compare it to a threshold to check if a test passes or not.
 
 All aspects of the application test framework are handled in `application/testing/CMakeLists.txt`.
 
@@ -133,7 +133,7 @@ to add a C++ test in the library layer. These tests are simple C++ methods that 
 Library test cases are handled in `library/testing`.
 
 To add a test, create a new `TestSDKName.cxx` file containing a `int TestSDKName(int argc, char* argv[])` method,
-then implement your test in C++ using the [libf3d](/docs/libf3d/README_LIBF3D) API.
+then implement your test in C++ using the [libf3d](/docs/libf3d/OVERVIEW) API.
 Then add you new file to `src/library/testing/CMakeLists.txt`.
 
 It is supported to read file as input and perform image comparison against baselines as an output, see other tests as examples.

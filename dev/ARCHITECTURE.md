@@ -9,13 +9,13 @@ This architecture is reflected by the directories organisation.
 - examples: examples usage of the libf3d and plugin framework in python and C++
 - external: dependencies that are included directly in the code
 - java: [java bindings](/docs/libf3d/LANGUAGE_BINDINGS#java-experimental) and associated tests.
-- **library**: the [libf3d](/docs/libf3d/README_LIBF3D) itself, see below
+- **library**: the [libf3d](/docs/libf3d/OVERVIEW) itself, see below
 - **plugins**: all the [plugins](/docs/libf3d/PLUGINS) providing different readers, see below
 - python: [python bindings](/docs/libf3d/LANGUAGE_BINDINGS#python) and tests
 - resources: all non code, non doc, like icon, configs and such
 - testing: all testing related resources, does not contain the test themselves
 - **vtkext**: extensions to VTK and related tests, see below
-- webassembly: [webassembly/javascript bindings](/docs/libf3d/LANGUAGE_BINDINGS#javascript-experimental) and [F3DWeb](https://f3d.app/web/) application code
+- webassembly: [webassembly/javascript bindings](/docs/libf3d/LANGUAGE_BINDINGS#javascript-experimental) and [F3DWeb](https://meakk.github.io/f3d-website/viewer) application code
 - winshellext: shell extension for Windows, provide [thumbnails for Windows](/docs/user/DESKTOP_INTEGRATION#windows)
 
 Here is diagram explaining how some of these parts interact together:
@@ -54,7 +54,7 @@ Here is diagram explaining how some of these parts interact together:
 `vtkext` contains two [VTK modules](https://docs.vtk.org/en/latest/api/cmake/ModuleSystem.html) that are used extensively in the libf3d. The public one is used in the plugins.
 
 `public` is a VTK module that contains classes and utilities that can be installed as part of the `plugin_sdk` and used by plugins, including externals plugins. `vtkF3DImporter` is a class
-that is specifically made for plugin developers to inherit their importers from. The documentation of this module can be found [here](https://f3d.app/doc/libf3d/vtkext_doxygen/).
+that is specifically made for plugin developers to inherit their importers from. The documentation of this module can be found [here](https://meakk.github.io/f3d-website/docs/next/libf3d/VTKEXT_TODO).
 
 `private` is a VTK module that contains many classes and utilities used by the libf3d to provide all features of F3D, especially the rendering, interactions and UI.
 A notable class is `vtkF3DRenderer` that is responsible to actually add the different actors in the 3D scene.
