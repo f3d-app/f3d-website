@@ -6,7 +6,6 @@ const sidebars: SidebarsConfig = {
 
   devSidebar: [
     'CONTRIBUTING',
-    'CODE_OF_CONDUCT',
     'GETTING_STARTED',
     'BUILD',
     'TESTING',
@@ -14,9 +13,10 @@ const sidebars: SidebarsConfig = {
     'ARCHITECTURE',
     'CODING_STYLE',
     'ROADMAPS_AND_RELEASES',
+    'CODE_OF_CONDUCT',
     'GOVERNANCE',
     'MAINTAINERS_AND_CONTRIBUTORS',
-    "MENTORING",
+    'MENTORING',
     'BUILD_WASM',
   ]
 };
