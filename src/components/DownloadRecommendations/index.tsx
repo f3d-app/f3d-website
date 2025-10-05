@@ -37,8 +37,8 @@ export default function DownloadRecommendations({ operatingSystem, links }: Down
   return (
     <section>
       <div className="container">
-        <div className="buttons" style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', margin: '1.5rem 0'}}>
-          <div>
+        <div className="buttons">
+          <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
             <Link
               className={`button button--primary button--lg`}
               to={`/thanks?download=${encodeURIComponent(osLinks.binaries[0].url)}`}
@@ -63,13 +63,13 @@ export default function DownloadRecommendations({ operatingSystem, links }: Down
                     }}
                     title={copied0 ? "Copied!" : "Copy to clipboard"}
                   >
-                    <Icon
-                      icon={copied0 ? "material-symbols:check" : "material-symbols:content-copy"}
-                      style={{
-                        fontSize: '14px',
+                    <Icon 
+                      icon={copied0 ? "material-symbols:check" : "material-symbols:content-copy"} 
+                      style={{ 
+                        fontSize: '14px', 
                         color: copied0 ? 'var(--accent-yellow)' : 'var(--accent-blue)',
                         transition: 'color 0.2s ease'
-                      }}
+                      }} 
                     />
                   </button>
                 </div>
@@ -101,13 +101,13 @@ export default function DownloadRecommendations({ operatingSystem, links }: Down
                     }}
                     title={copied1 ? "Copied!" : "Copy to clipboard"}
                   >
-                    <Icon
-                      icon={copied1 ? "material-symbols:check" : "material-symbols:content-copy"}
-                      style={{
-                        fontSize: '14px',
+                    <Icon 
+                      icon={copied1 ? "material-symbols:check" : "material-symbols:content-copy"} 
+                      style={{ 
+                        fontSize: '14px', 
                         color: copied1 ? '#22c55e' : '#666',
                         transition: 'color 0.2s ease'
-                      }}
+                      }} 
                     />
                   </button>
                 </div>
