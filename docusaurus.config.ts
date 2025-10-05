@@ -171,8 +171,8 @@ const config: Config = {
           title: "Community",
           items: [
             {
-              label: "Contribute",
-              to: "/dev/CONTRIBUTING",
+              label: "Code of conduct",
+              to: "/dev/CODE_OF_CONDUCT",
             },
             {
               label: "Discord",
