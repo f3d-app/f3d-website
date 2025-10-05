@@ -124,7 +124,7 @@ const config: Config = {
               type: "docSidebar",
               sidebarId: "devSidebar",
               docsPluginId: "dev",
-              label: "Contributors",
+              label: "Contributing",
             },
           ],
         },
@@ -162,7 +162,7 @@ const config: Config = {
               to: "/docs/libf3d/OVERVIEW",
             },
             {
-              label: "Contributors",
+              label: "Contributing",
               to: "/dev/CONTRIBUTING",
             },
           ],
