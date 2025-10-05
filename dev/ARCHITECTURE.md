@@ -8,15 +8,15 @@ This architecture is reflected by the directories organisation.
 - doc: this very documentation
 - examples: examples usage of the libf3d and plugin framework in python and C++
 - external: dependencies that are included directly in the code
-- java: [java bindings](/docs/libf3d/LANGUAGE_BINDINGS#java-experimental) and associated tests.
-- **library**: the [libf3d](/docs/libf3d/OVERVIEW) itself, see below
-- **plugins**: all the [plugins](/docs/libf3d/PLUGINS) providing different readers, see below
-- python: [python bindings](/docs/libf3d/LANGUAGE_BINDINGS#python) and tests
+- java: [java bindings](/docs/next/libf3d/LANGUAGE_BINDINGS#java-experimental) and associated tests.
+- **library**: the [libf3d](/docs/next/libf3d/OVERVIEW) itself, see below
+- **plugins**: all the [plugins](/docs/next/libf3d/PLUGINS) providing different readers, see below
+- python: [python bindings](/docs/next/libf3d/LANGUAGE_BINDINGS#python) and tests
 - resources: all non code, non doc, like icon, configs and such
 - testing: all testing related resources, does not contain the test themselves
 - **vtkext**: extensions to VTK and related tests, see below
-- webassembly: [webassembly/javascript bindings](/docs/libf3d/LANGUAGE_BINDINGS#javascript-experimental) and [F3DWeb](https://meakk.github.io/f3d-website/viewer) application code
-- winshellext: shell extension for Windows, provide [thumbnails for Windows](/docs/user/DESKTOP_INTEGRATION#windows)
+- webassembly: [webassembly/javascript bindings](/docs/next/libf3d/LANGUAGE_BINDINGS#javascript-experimental) and [F3DWeb](https://meakk.github.io/f3d-website/viewer) application code
+- winshellext: shell extension for Windows, provide [thumbnails for Windows](/docs/next/user/DESKTOP_INTEGRATION#windows)
 
 Here is diagram explaining how some of these parts interact together:
 
@@ -54,7 +54,7 @@ Here is diagram explaining how some of these parts interact together:
 `vtkext` contains two [VTK modules](https://docs.vtk.org/en/latest/api/cmake/ModuleSystem.html) that are used extensively in the libf3d. The public one is used in the plugins.
 
 `public` is a VTK module that contains classes and utilities that can be installed as part of the `plugin_sdk` and used by plugins, including externals plugins. `vtkF3DImporter` is a class
-that is specifically made for plugin developers to inherit their importers from. The documentation of this module can be found [here](https://meakk.github.io/f3d-website/docs/next/libf3d/VTKEXT_TODO).
+that is specifically made for plugin developers to inherit their importers from. The documentation of this module can be found [here](https://meakk.github.io/f3d-website/docs/next/next/libf3d/VTKEXT_TODO).
 
 `private` is a VTK module that contains many classes and utilities used by the libf3d to provide all features of F3D, especially the rendering, interactions and UI.
 A notable class is `vtkF3DRenderer` that is responsible to actually add the different actors in the 3D scene.
@@ -63,7 +63,7 @@ Each of these modules also contains [tests](TESTING.md#vtkextensions-layer) in t
 
 ## plugins
 
-`plugins` contains [libf3d plugins](/docs/libf3d/PLUGINS) that are provided by default in the F3D packages. Each of these plugins correspond to a specific dependency and are named accordingly. Each of these plugins provide access to specific readers for specific formats. Without plugins, F3D and the libf3d would not be able to open any file. These plugins can be loaded statically or dynamically, which makes the dependencies truly optional if needed.
+`plugins` contains [libf3d plugins](/docs/next/libf3d/PLUGINS) that are provided by default in the F3D packages. Each of these plugins correspond to a specific dependency and are named accordingly. Each of these plugins provide access to specific readers for specific formats. Without plugins, F3D and the libf3d would not be able to open any file. These plugins can be loaded statically or dynamically, which makes the dependencies truly optional if needed.
 
 ## library
 
@@ -75,7 +75,7 @@ Logically, it is structured in 3 parts, `public` which contains the public API h
 
 There is also a dedicated `testing` directory which contains the [unit and functional testing](TESTING.md#library-layer) of the libf3d.
 
-It also contains the `options.json` file, which is the file used to generate all [options](/docs/libf3d/OPTIONS) code.
+It also contains the `options.json` file, which is the file used to generate all [options](/docs/next/libf3d/OPTIONS) code.
 
 ## application
 
