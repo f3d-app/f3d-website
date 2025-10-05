@@ -20,12 +20,12 @@ function HomepageHeader() {
       <div className="container">
         <div style={{ textAlign: 'center', marginBottom: '2rem' }}>
           <LogoSvg id='fallbackImg' style={{ maxWidth: '320px', width: '100%', height: 'auto', display: 'none' }} />
-          <video 
+          <video
             src={videoSrc}
-            autoPlay 
-            loop 
-            muted 
-            playsInline 
+            autoPlay
+            loop
+            muted
+            playsInline
             style={{ maxWidth: '320px', width: '100%', height: 'auto' }}
             onError={(e) => {
               (e.target as HTMLVideoElement).style.display = 'none';
@@ -37,19 +37,21 @@ function HomepageHeader() {
           {siteConfig.tagline}
         </Heading>
         <p className="hero__subtitle">Interact, generate high quality renderings, and browse quickly through a series of 3D models</p>
-        <div className="buttons">
-          <Link
-            className={`button button--primary button--outline button--lg highlightButton`}
-            to="/download">
-            <Icon icon="material-symbols:download-rounded" />
-            Download
-          </Link>
-          <Link
-            className="button button--primary button--outline button--lg"
-            to="/viewer">
-            <Icon icon="material-symbols:3d-rotation-rounded" />
-            Web viewer
-          </Link>
+        <div className="container">
+          <div className="buttons" style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', margin: '1.5rem 0'}}>
+            <Link
+              className={`button button--primary button--outline button--lg highlightButton`}
+              to="/download">
+              <Icon icon="material-symbols:download-rounded" />
+              Download
+            </Link>
+            <Link
+              className="button button--primary button--outline button--lg"
+              to="/viewer">
+              <Icon icon="material-symbols:3d-rotation-rounded" />
+              Web viewer
+            </Link>
+          </div>
         </div>
         <div>
           F3D is free and open source software.<br />
