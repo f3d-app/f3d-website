@@ -712,9 +712,11 @@ export default function DownloadPage(): ReactNode {
                     marginBottom: '1rem'
                   }}
                 />
-                <Heading as="h3" style={{ marginBottom: '1rem', color: 'var(--accent-blue)' }}>
-                  Python Library
-                </Heading>
+                <a href="https://pypi.org/project/f3d/">
+                  <Heading as="h3" style={{ marginBottom: '1rem', color: 'var(--accent-blue)' }}>
+                    Python Library
+                  </Heading>
+                </a>
                 <p style={{
                   marginBottom: '1.5rem',
                   color: 'var(--ifm-color-emphasis-700)',
@@ -740,9 +742,11 @@ export default function DownloadPage(): ReactNode {
                   }}
                 />
                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: '1rem' }}>
-                  <Heading as="h3" style={{ marginBottom: '0', color: 'var(--accent-blue)' }}>
-                    Web Package
-                  </Heading>
+                  <a href="https://www.npmjs.com/package/f3d">
+                    <Heading as="h3" style={{ marginBottom: '0', color: 'var(--accent-blue)' }}>
+                      Web Package
+                    </Heading>
+                  </a>
                   <span style={{
                     fontSize: '0.7rem',
                     fontWeight: '600',
