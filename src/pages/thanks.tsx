@@ -384,16 +384,18 @@ export default function ThanksPage(): ReactNode {
 
                   <p>
                     Your contribution, no matter the size, makes a real difference in keeping F3D alive
-                    and thriving. Thank you for considering supporting our work!
+                    and thriving and will be acknowlodged in our releases notes. Thank you for supporting our work!
                   </p>
 
                   <p>
                     If you donate monthly, you get a few perks!
                   </p>
                   <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                    <li>1$/month: <Icon icon="openmoji:red-heart" style={{ verticalAlign: '-0.125em' }} /> Access to the VIP channel on our <a href="https://discord.f3d.app">discord</a></li>
-                    <li>5$/month: <Icon icon="openmoji:ballot-box-with-ballot" style={{ verticalAlign: '-0.125em' }} /> Vote for the next feature to implement</li>
-                    <li>20$/month: <Icon icon="openmoji:framed-picture" style={{ verticalAlign: '-0.125em' }} /> Showcase your work with F3D in our <Link to="/gallery">gallery</Link></li>
+                    <li>1$/month: Bronze: <Icon icon="openmoji:red-heart" style={{ verticalAlign: '-0.125em' }} /> Special role on our <a href="https://discord.f3d.app">discord</a></li>
+                    <li>2$/month: Silver: Bronze + <Icon icon="openmoji:check-mark" style={{ verticalAlign: '-0.125em' }} /> Access to the VIP channel on our <a href="https://discord.f3d.app">discord</a></li>
+                    <li>5$/month: Gold: Silver + <Icon icon="openmoji:ballot-box-with-ballot" style={{ verticalAlign: '-0.125em' }} /> Vote for the next feature to implement</li>
+                    <li>10$/month: Titanium: Gold + <Icon icon="openmoji:fountain-pen" style={{ verticalAlign: '-0.125em' }} /> Your name will be added to the README</li>
+                    <li>20$/month: Diamond: Titanium + <Icon icon="openmoji:framed-picture" style={{ verticalAlign: '-0.125em' }} /> Showcase your work with F3D in our <Link to="/gallery">gallery</Link></li>
                   </ul>
 
                   <p>
