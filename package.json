@@ -19,6 +19,7 @@
   "dependencies": {
     "@docusaurus/core": "^3.9.1",
     "@docusaurus/preset-classic": "^3.9.1",
+    "@docusaurus/theme-mermaid": "^3.9.1",
     "@mdx-js/react": "^3.0.0",
     "@splidejs/react-splide": "^0.7.12",
     "clsx": "^2.0.0",
@@ -36,7 +37,7 @@
     "@docusaurus/types": "^3.9.1",
     "@iconify/react": "^6.0.1",
     "@octokit/core": "^7.0.4",
-    "moxygen": "^0.8.0",
+    "@seaborg/cli": "^0.6.3",
     "typescript": "~5.6.2"
   },
   "browserslist": {

@@ -21,7 +21,6 @@
     "libf3d/CLASSES",
     "libf3d/OPTIONS",
     "libf3d/LANGUAGE_BINDINGS",
-    "libf3d/PLUGINS",
-    "libf3d/API"
+    "libf3d/PLUGINS"
   ]
 }

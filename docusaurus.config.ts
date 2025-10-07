@@ -21,10 +21,12 @@ const config: Config = {
   projectName: "f3d-website",
   onBrokenLinks: "throw",
   markdown: {
+    mermaid: true,
     hooks: {
       onBrokenMarkdownLinks: "warn",
     },
   },
+  themes: ['@docusaurus/theme-mermaid'],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],

@@ -1,6 +1,33 @@
 import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
+import type { SidebarItemConfig } from '@docusaurus/plugin-content-docs/lib/sidebars/types.js'
+import fs from 'fs';
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
+
+const decodeFileName = (file: string) => {
+  return file.replaceAll('_8', '.').replaceAll('_1', ':').replaceAll('__', '_');
+}
+
+const apiFiles: SidebarItemConfig[] = fs.readdirSync('./docs/api').filter((file: string) => file.includes('_8h')).map((file: string) => {
+  // Keep the file name only and remove the directories
+  const fileName = file.split('/').pop().replace('.md', '');
+
+  return { type: 'doc', id: 'api/' + fileName, label: decodeFileName(fileName) };
+});
+
+const apiClasses: SidebarItemConfig[] = fs.readdirSync('./docs/api').filter((file: string) => file.includes('classf3d')).map((file: string) => {
+  // Keep the file name only and remove the directories
+  const fileName = file.split('/').pop().replace('.md', '');
+
+  return { type: 'doc', id: 'api/' + fileName, label: decodeFileName(fileName).replace('class', '') };
+});
+
+const apiStructs: SidebarItemConfig[] = fs.readdirSync('./docs/api').filter((file: string) => file.includes('structf3d')).map((file: string) => {
+  // Keep the file name only and remove the directories
+  const fileName = file.split('/').pop().replace('.md', '');
+
+  return { type: 'doc', id: 'api/' + fileName, label: decodeFileName(fileName).replace('struct', '') };
+});
 
 const sidebars: SidebarsConfig = {
 
@@ -25,8 +52,50 @@ const sidebars: SidebarsConfig = {
     'libf3d/OPTIONS',
     'libf3d/LANGUAGE_BINDINGS',
     'libf3d/PLUGINS',
-    'libf3d/API',
-  ]
+    {
+      type: 'category',
+      label: 'API Reference',
+      link: {
+        type: 'generated-index',
+        title: 'TODO',
+        description: 'foo bar!',
+      },
+      items: [
+        {
+          type: 'doc',
+          id: 'api/namespacef3d',
+          label: 'Namespace f3d'
+        },
+        {
+          type: 'category',
+          label: 'Files',
+          link: {
+            type: 'doc',
+            id: 'api/file_contents',
+          },
+          items: apiFiles,
+        },
+        {
+          type: 'category',
+          label: 'Classes',
+          link: {
+            type: 'doc',
+            id: 'api/class_contents',
+          },
+          items: apiClasses,
+        },
+        {
+          type: 'category',
+          label: 'Structures',
+          link: {
+            type: 'doc',
+            id: 'api/struct_contents',
+          },
+          items: apiStructs,
+        },
+      ]
+    },
+  ],
 };
 
 export default sidebars;

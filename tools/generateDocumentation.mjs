@@ -3,7 +3,7 @@ import { exec } from "child_process";
 import { promisify } from "util";
 import path from "path";
 import { fileURLToPath } from 'url';
-import moxygen from "moxygen";
+import fs from "fs";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -64,19 +64,62 @@ async function runDoxygen() {
     }
 }
 
-async function runMoxygen() {
-    console.log("Running moxygen...");
+async function runSeaborg() {
+    console.log("Running seaborg...");
 
-    const options = {
-        ...moxygen.defaultOptions,
-        directory: path.join(__dirname, 'doxygen_output', 'xml'),
-        output: path.join(__dirname, '..', 'docs', 'libf3d', 'API.md'),
-        templates: path.join(__dirname, '..', 'moxygen-templates'),
-        noindex: true,
-        anchors: true
-    };
+    const inPath = path.join(__dirname, 'doxygen_output', 'xml');
+    const outPath = path.join(__dirname, '..', 'docs', 'api');
 
-    moxygen.run(options);
+    const seaborgCmd = `seaborg ${inPath} ${outPath}`;
+
+    try {
+        const { stdout, stderr } = await execAsync(seaborgCmd);
+
+        console.log("Seaborg completed successfully");
+        if (stdout) console.log("Seaborg output:", stdout);
+        if (stderr) console.log("Seaborg warnings/errors:", stderr);
+
+    } catch (error) {
+        throw new Error(`Failed to run seaborg: ${error.message}`);
+    }
+
+    // Postprocess files in ../docs/api
+    console.log("Postprocessing generated markdown files...");
+
+    // List files in outPath
+    const files = await fs.promises.readdir(outPath);
+    for (const file of files) {
+        if (file.endsWith('.md')) {
+            const filePath = path.join(outPath, file);
+            let content = await fs.promises.readFile(filePath, 'utf-8');
+
+            // First apply the multi-line regex before splitting into lines
+            // replace <a> elements by Markdown anchors
+            content = content.replace(/<a id="([^"]+)"><\/a>\n(.+)/g, '$2 {#$1}');
+
+            const lines = content.split('\n');
+            const newLines = [];
+            for (let i = 0; i < lines.length; i++) {
+                // remove lines starting with "**TODO**" and following lines
+                if (lines[i].startsWith("**TODO**:") || lines[i].includes('{"type":"element"')) {
+                    continue;
+                }
+
+                // remove links when pointing to undefined.md
+                lines[i] = lines[i].replace(/\[(.+)\]\(undefined.md#undefined\)/g, '$1');
+
+                // remove h1 anchors and point to the file only
+                lines[i] = lines[i].replace(/\(([^.#]+)\.md#\1\)/g, '($1.md)');
+
+                newLines.push(lines[i]);
+            }
+            content = newLines.join('\n');
+            await fs.promises.writeFile(filePath, content, 'utf-8');
+            console.log(`Postprocessed ${file}`);
+        }
+    }
+
+    console.log("Postprocessing completed.");
 }
 
 async function copyDocs() {
@@ -133,7 +176,7 @@ try {
     await fetchRepository(tag);
     await copyDocs();
     await runDoxygen();
-    await runMoxygen();
+    await runSeaborg();
     console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);
 } catch (error) {
     console.error("❌ Error generating doxygen documentation:", error.message);
