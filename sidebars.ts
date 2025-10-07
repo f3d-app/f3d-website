@@ -57,8 +57,8 @@ const sidebars: SidebarsConfig = {
       label: 'API Reference',
       link: {
         type: 'generated-index',
-        title: 'TODO',
-        description: 'foo bar!',
+        title: 'libf3d doxygen documentation',
+        description: 'This is the automatically generated doxygen documentation for the libf3d, which is part of F3D. It contains all the classes, structures, functions, and other elements that make up the library. You can use this documentation to understand how to use the libf3d in your own applications, as well as to explore its features and capabilities.',
       },
       items: [
         {
