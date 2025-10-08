@@ -2,10 +2,10 @@ import type { ReactNode } from 'react';
 import Layout from '@theme/Layout';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Heading from '@theme/Heading';
+import Admonition from '@theme/Admonition';
 import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
-import Link from '@docusaurus/Link';
 import styles from './thanks.module.css';
 
 function DownloadStatus(): ReactNode {
@@ -363,14 +363,14 @@ function DonationWidget(): ReactNode {
               </p>
 
               <p>
-                <strong>What we offer:</strong>
+                <strong>What we can connect you with:</strong>
               </p>
               <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
                 <li>Priority feature development</li>
                 <li>Custom integration support</li>
                 <li>Direct communication channel with maintainers</li>
-                <li>Service level agreements (SLA)</li>
                 <li>Logo placement and public recognition</li>
+                <li>Professional contracting through our expert partner companies</li>
                 <li>Training and consultation services</li>
               </ul>
 
@@ -383,6 +383,10 @@ function DonationWidget(): ReactNode {
                 <li>Businesses wanting to ensure F3D's long-term sustainability</li>
                 <li>Teams requiring custom features or integrations</li>
               </ul>
+
+              <Admonition type="info" title="Important">
+                Professional contracting and service level agreements (SLA) will be handled by our expert partner companies, not directly by the F3D APP Foundation.
+              </Admonition>
 
               <p>
                 Ready to discuss how F3D can support your organization's needs?
