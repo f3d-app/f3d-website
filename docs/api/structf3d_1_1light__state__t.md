@@ -1,4 +1,4 @@
-# Structure f3d::light\_state\_t {#structf3d_1_1light__state__t}
+# Structure f3d::light\_state\_t
 
 ![][C++]
 ![][public]
@@ -208,3 +208,4 @@ bool f3d::light_state_t::operator==(const light_state_t &other) const
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

@@ -1,4 +1,4 @@
-# File context.h {#context_8h}
+# File context.h
 
 ![][C++]
 

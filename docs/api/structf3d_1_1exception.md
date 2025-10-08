@@ -1,4 +1,4 @@
-# Class f3d::exception {#structf3d_1_1exception}
+# Class f3d::exception
 
 ![][C++]
 ![][public]
@@ -72,3 +72,4 @@ f3d::exception::exception(const std::string &what="")
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

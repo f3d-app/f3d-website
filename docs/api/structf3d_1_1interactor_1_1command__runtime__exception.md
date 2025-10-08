@@ -1,4 +1,4 @@
-# Structure f3d::interactor::command\_runtime\_exception {#structf3d_1_1interactor_1_1command__runtime__exception}
+# Structure f3d::interactor::command\_runtime\_exception
 
 ![][C++]
 ![][public]
@@ -47,4 +47,3 @@ f3d::interactor::command_runtime_exception::command_runtime_exception(const std:
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
 [const]: https://img.shields.io/badge/-const-lightblue (const)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)

@@ -1,4 +1,4 @@
-# Class f3d::interactor {#classf3d_1_1interactor}
+# Class f3d::interactor
 
 ![][C++]
 ![][public]

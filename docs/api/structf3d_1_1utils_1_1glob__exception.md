@@ -1,4 +1,4 @@
-# Structure f3d::utils::glob\_exception {#structf3d_1_1utils_1_1glob__exception}
+# Structure f3d::utils::glob\_exception
 
 ![][C++]
 ![][public]
@@ -49,3 +49,4 @@ f3d::utils::glob_exception::glob_exception(const std::string &what="")
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

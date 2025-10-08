@@ -1,4 +1,4 @@
-# Class f3d::camera {#classf3d_1_1camera}
+# Class f3d::camera
 
 ![][C++]
 ![][public]
@@ -648,4 +648,3 @@ Reset the camera using the bounds of actors in the scene. Provided zoomFactor wi
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)

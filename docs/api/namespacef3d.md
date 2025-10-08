@@ -1,8 +1,7 @@
-# Namespace f3d {#namespacef3d}
+# Namespace f3d
 
 ![][C++]
 
-**Definition**: `camera.h` (line 12)
 
 
 
@@ -41,7 +40,6 @@
 
 ![][public]
 
-**Definition**: `types.h` (line 55)
 
 
 ```cpp
@@ -65,7 +63,6 @@ Describe an angle in degrees.
 
 ![][public]
 
-**Definition**: `types.h` (line 333)
 
 
 ```cpp
@@ -87,7 +84,6 @@ enum F3D_EXPORT f3d::light_type
 
 ![][public]
 
-**Definition**: `types.h` (line 336)
 
 
 ```cpp
@@ -109,7 +105,6 @@ enum F3D_EXPORT f3d::CAMERA_LIGHT = 2
 
 ![][public]
 
-**Definition**: `types.h` (line 337)
 
 
 ```cpp

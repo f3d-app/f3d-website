@@ -1,4 +1,4 @@
-# Structure f3d::image::read\_exception {#structf3d_1_1image_1_1read__exception}
+# Structure f3d::image::read\_exception
 
 ![][C++]
 ![][public]

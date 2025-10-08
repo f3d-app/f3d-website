@@ -1,4 +1,4 @@
-# File interactor.h {#interactor_8h}
+# File interactor.h
 
 ![][C++]
 

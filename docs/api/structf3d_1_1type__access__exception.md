@@ -1,4 +1,4 @@
-# Structure f3d::type\_access\_exception {#structf3d_1_1type__access__exception}
+# Structure f3d::type\_access\_exception
 
 ![][C++]
 ![][public]

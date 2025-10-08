@@ -1,4 +1,4 @@
-# File scene.h {#scene_8h}
+# File scene.h
 
 ![][C++]
 

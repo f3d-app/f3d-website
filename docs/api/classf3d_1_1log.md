@@ -1,4 +1,4 @@
-# Class f3d::log {#classf3d_1_1log}
+# Class f3d::log
 
 ![][C++]
 ![][public]

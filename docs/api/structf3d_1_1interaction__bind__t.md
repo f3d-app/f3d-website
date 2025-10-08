@@ -1,4 +1,4 @@
-# Structure f3d::interaction\_bind\_t {#structf3d_1_1interaction__bind__t}
+# Structure f3d::interaction\_bind\_t
 
 ![][C++]
 ![][public]
@@ -228,3 +228,4 @@ Create and return an interaction bind from provided string
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

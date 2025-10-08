@@ -1,4 +1,4 @@
-# Class f3d::utils::string\_template {#classf3d_1_1utils_1_1string__template}
+# Class f3d::utils::string\_template
 
 ![][C++]
 ![][public]

@@ -1,14 +1,7 @@
 # Contents
 
-* [f3d::engine::cache\_exception](structf3d_1_1engine_1_1cache__exception.md) Structure
-  * [cache\_exception](structf3d_1_1engine_1_1cache__exception.md#structf3d_1_1engine_1_1cache__exception_1ab75d07f81b5a88b12a4e45781aed373d) Function
 * [f3d::interactor::already\_exists\_exception](structf3d_1_1interactor_1_1already__exists__exception.md) Structure
   * [already\_exists\_exception](structf3d_1_1interactor_1_1already__exists__exception.md#structf3d_1_1interactor_1_1already__exists__exception_1a356bff2bef426f4c93727c87f8850521) Function
-* [f3d::camera\_state\_t](structf3d_1_1camera__state__t.md) Structure
-  * [position](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1aa2e4ba7abf206ef14ad9b851af1fcbc6) Variable
-  * [focalPoint](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1a108b56174ebc8c1ee9a9ad5bb6548ccc) Variable
-  * [viewUp](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1afda85e5dd3f7bc9773bc5ef22c1ccad7) Variable
-  * [viewAngle](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1a28f08d9fc1076fe6e265822cb93fbed7) Variable
 * [f3d::camera](classf3d_1_1camera.md) Class
   * [setPosition](classf3d_1_1camera.md#classf3d_1_1camera_1a14f81460eb981f789c5d4a6784fd8d29) Function
   * [getPosition](classf3d_1_1camera.md#classf3d_1_1camera_1af9c38dd7e513c71e4c80c1fd61d5d464) Function
@@ -44,6 +37,11 @@
   * [r](classf3d_1_1color__t.md#classf3d_1_1color__t_1a029f159302976b8bc773a29fa8587f69) Function
   * [g](classf3d_1_1color__t.md#classf3d_1_1color__t_1a2248b84a5ada178f2679426f9fea73fd) Function
   * [b](classf3d_1_1color__t.md#classf3d_1_1color__t_1a51dcb99a6f2845d9d31d3a1a9adacda2) Function
+* [f3d::camera\_state\_t](structf3d_1_1camera__state__t.md) Structure
+  * [position](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1aa2e4ba7abf206ef14ad9b851af1fcbc6) Variable
+  * [focalPoint](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1a108b56174ebc8c1ee9a9ad5bb6548ccc) Variable
+  * [viewUp](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1afda85e5dd3f7bc9773bc5ef22c1ccad7) Variable
+  * [viewAngle](structf3d_1_1camera__state__t.md#structf3d_1_1camera__state__t_1a28f08d9fc1076fe6e265822cb93fbed7) Variable
 * [f3d::colormap\_t](classf3d_1_1colormap__t.md) Class
   * [Vector](classf3d_1_1colormap__t.md#classf3d_1_1colormap__t_1aa9d270c81176f8025c47cc7d7c933975) Variable
   * [colormap\_t](classf3d_1_1colormap__t.md#classf3d_1_1colormap__t_1a52bf9c26a6d9658e080ce536cf67f195) Function
@@ -63,6 +61,8 @@
   * [egl](classf3d_1_1context.md#classf3d_1_1context_1a90a0689215151ede480d3b1c94c28b2a) Function
   * [osmesa](classf3d_1_1context.md#classf3d_1_1context_1a88a487aa18dd42869f7852b7c6c44aed) Function
   * [getSymbol](classf3d_1_1context.md#classf3d_1_1context_1a605d0609b2db440c9e00349d9c17e2c9) Function
+* [f3d::engine::cache\_exception](structf3d_1_1engine_1_1cache__exception.md) Structure
+  * [cache\_exception](structf3d_1_1engine_1_1cache__exception.md#structf3d_1_1engine_1_1cache__exception_1ab75d07f81b5a88b12a4e45781aed373d) Function
 * [f3d::direction\_t](classf3d_1_1direction__t.md) Class
   * [direction\_t](classf3d_1_1direction__t.md#classf3d_1_1direction__t_1aeef8b5002e7596df41f95feb8d7ee8aa) Function
   * [direction\_t](classf3d_1_1direction__t.md#classf3d_1_1direction__t_1a4a537a5f6eeb6bac3a07b0b86f3cd2e4) Function
@@ -74,6 +74,8 @@
   * [operator f3d::vector3\_t](classf3d_1_1direction__t.md#classf3d_1_1direction__t_1ae242b6bd09057602bc2666b5d857f57e) Function
 * [f3d::interactor::does\_not\_exists\_exception](structf3d_1_1interactor_1_1does__not__exists__exception.md) Structure
   * [does\_not\_exists\_exception](structf3d_1_1interactor_1_1does__not__exists__exception.md#structf3d_1_1interactor_1_1does__not__exists__exception_1a8f83956aa6132858e28d94ca1f8b7685) Function
+* [f3d::exception](structf3d_1_1exception.md) Class
+  * [exception](structf3d_1_1exception.md#structf3d_1_1exception_1aef4c85042406694200c7f8793785692d) Function
 * [f3d::double\_array\_t](classf3d_1_1double__array__t.md) Class
   * [Array](classf3d_1_1double__array__t.md#classf3d_1_1double__array__t_1ab4ec6824918af432b4c7b3fa6ac54792) Variable
   * [double\_array\_t](classf3d_1_1double__array__t.md#classf3d_1_1double__array__t_1a13bdc79ab1512e3105862d0cf06a1e50) Function
@@ -84,58 +86,8 @@
   * [operator[]](classf3d_1_1double__array__t.md#classf3d_1_1double__array__t_1a0c160f2e0625cce337988dd018e7b6a1) Function
   * [operator[]](classf3d_1_1double__array__t.md#classf3d_1_1double__array__t_1ac2ebe0188822e128084ac53be7ffbf03) Function
   * [data](classf3d_1_1double__array__t.md#classf3d_1_1double__array__t_1af27ad47a15ebbfde487ecb7d67ffe0de) Function
-* [f3d::exception](structf3d_1_1exception.md) Class
-  * [exception](structf3d_1_1exception.md#structf3d_1_1exception_1aef4c85042406694200c7f8793785692d) Function
 * [f3d::utils::glob\_exception](structf3d_1_1utils_1_1glob__exception.md) Structure
   * [glob\_exception](structf3d_1_1utils_1_1glob__exception.md#structf3d_1_1utils_1_1glob__exception_1aabe348542f8fb983670e0871892166b9) Function
-* [f3d::engine](classf3d_1_1engine.md) Class
-  * [Internals](classf3d_1_1engine.md#classf3d_1_1engine_1a5129a2dfd256ea59aa30818d30708188) Variable
-  * [create](classf3d_1_1engine.md#classf3d_1_1engine_1a8dc98863d9785dee5c90725248c46b8a) Function
-  * [createNone](classf3d_1_1engine.md#classf3d_1_1engine_1a6c74166d9132a8e0e30e7bd8c4a3ce0f) Function
-  * [createGLX](classf3d_1_1engine.md#classf3d_1_1engine_1a0cf626f2585af37614b088c5c78a2a1a) Function
-  * [createWGL](classf3d_1_1engine.md#classf3d_1_1engine_1aad8377f8ceef620a494c3d1ccb86ef4a) Function
-  * [createEGL](classf3d_1_1engine.md#classf3d_1_1engine_1af2ad280d2be4c58a8f30eec351cd3bf4) Function
-  * [createOSMesa](classf3d_1_1engine.md#classf3d_1_1engine_1a1ea3b63b10d5f826528545a562297cd1) Function
-  * [createExternal](classf3d_1_1engine.md#classf3d_1_1engine_1ad34defb23976727cdb2ae884e119e533) Function
-  * [createExternalGLX](classf3d_1_1engine.md#classf3d_1_1engine_1a4fc077683aa9807ce52d3c0b45494250) Function
-  * [createExternalWGL](classf3d_1_1engine.md#classf3d_1_1engine_1aa5ae12e2c05726524b94df82f63e1cc3) Function
-  * [createExternalCOCOA](classf3d_1_1engine.md#classf3d_1_1engine_1aa361310e43db522f80340d1b6489f614) Function
-  * [createExternalEGL](classf3d_1_1engine.md#classf3d_1_1engine_1a033427bc8d9cfc37340d566e7d901fbe) Function
-  * [createExternalOSMesa](classf3d_1_1engine.md#classf3d_1_1engine_1a2228768b97a56a53ce23fb315ff368ab) Function
-  * [getRenderingBackendList](classf3d_1_1engine.md#classf3d_1_1engine_1ac2fc13fa23e4f33f0aeda81d9925a2ac) Function
-  * [loadPlugin](classf3d_1_1engine.md#classf3d_1_1engine_1a820b4a59f829b77f669f267cfde09186) Function
-  * [autoloadPlugins](classf3d_1_1engine.md#classf3d_1_1engine_1ac4d909a879b94b496a3e9292162fb855) Function
-  * [getPluginsList](classf3d_1_1engine.md#classf3d_1_1engine_1ab72eb52263a39accd6f296f893808b5a) Function
-  * [getAllReaderOptionNames](classf3d_1_1engine.md#classf3d_1_1engine_1ae1f1d77bb0ec0b5df9997eb77c1b42fd) Function
-  * [setReaderOption](classf3d_1_1engine.md#classf3d_1_1engine_1a95e7c2840b75b4f56f6a48ce25a4bc45) Function
-  * [getLibInfo](classf3d_1_1engine.md#classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7) Function
-  * [getReadersInfo](classf3d_1_1engine.md#classf3d_1_1engine_1a5b2887501e1975218442d9142f4d3b8e) Function
-  * [~engine](classf3d_1_1engine.md#classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37) Function
-  * [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) Function
-  * [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a763538a512e6405aa5d05de6eef8e43e) Function
-  * [operator=](classf3d_1_1engine.md#classf3d_1_1engine_1a4755881d465474f30bda5b7f1b630ecf) Function
-  * [operator=](classf3d_1_1engine.md#classf3d_1_1engine_1a99cd2684bdd36a245b947075cb28dfa5) Function
-  * [setCachePath](classf3d_1_1engine.md#classf3d_1_1engine_1a4883c97389b1ab88d606e138d969611a) Function
-  * [setOptions](classf3d_1_1engine.md#classf3d_1_1engine_1ac4f1d538ed3b0f29c4730893208689df) Function
-  * [setOptions](classf3d_1_1engine.md#classf3d_1_1engine_1ac59b6c8c87b1b671b8c7f55d0d7cc6d9) Function
-  * [getOptions](classf3d_1_1engine.md#classf3d_1_1engine_1a412f027391ddf8a752eb9230ae30986a) Function
-  * [getWindow](classf3d_1_1engine.md#classf3d_1_1engine_1a621751cc41669de47c318b6f20ec0cd7) Function
-  * [getScene](classf3d_1_1engine.md#classf3d_1_1engine_1a7de2279c63696943a16c8995f6fbbc82) Function
-  * [getInteractor](classf3d_1_1engine.md#classf3d_1_1engine_1aaa84654442772987a9d233ed1ca8e113) Function
-  * [engine](classf3d_1_1engine.md#classf3d_1_1engine_1ace9f4b7a546a1be097355df320bf0953) Function
-* [f3d::interaction\_bind\_t](structf3d_1_1interaction__bind__t.md) Structure
-  * [ModifierKeys](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34) Enumeration type
-  * [ANY](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a8e1bde3c3d303163521522cf1d62f21f) Enumerator
-  * [NONE](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab50339a10e1de285ac99d4c3990b8693) Enumerator
-  * [CTRL](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a32f7eee2581c72a5561c21df3013a89a) Enumerator
-  * [SHIFT](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a46afff2b309b8b16a46d812172a9235c) Enumerator
-  * [CTRL\_SHIFT](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab99320973a4dd4f1f442037248dcaf8f) Enumerator
-  * [mod](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a65b5e074b63fbbfa01b35e5edddf9513) Variable
-  * [inter](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a1fc8a5b848dea0d130986d1c55ec4afa) Variable
-  * [operator\<](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a8eb647fcb004f4d79a900f685ec61b2c) Function
-  * [operator==](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a64a19a262ebd0f0c75757d458306285b) Function
-  * [format](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1ada344efb3314a4980cae5a76ba0eceb9) Function
-  * [parse](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2e76d79fb88e1dfb682b51c41d259349) Function
 * [f3d::image](classf3d_1_1image.md) Class
   * [image](classf3d_1_1image.md#classf3d_1_1image_1aefc24a2599c90b88461892a9010b2521) Function
   * [~image](classf3d_1_1image.md#classf3d_1_1image_1a22ecd909c5406f00af4ecab8c5f65924) Function
@@ -174,6 +126,21 @@
   * [getMetadata](classf3d_1_1image.md#classf3d_1_1image_1a9e10e64f8bde29faaba00e00d134e60f) Function
   * [allMetadata](classf3d_1_1image.md#classf3d_1_1image_1a253f66210d3ffee1e3810ed850965859) Function
   * [getSupportedFormats](classf3d_1_1image.md#classf3d_1_1image_1a7172165ee5c5b19d15a94914becc4a12) Function
+* [f3d::interaction\_bind\_t](structf3d_1_1interaction__bind__t.md) Structure
+  * [ModifierKeys](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34) Enumeration type
+  * [ANY](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a8e1bde3c3d303163521522cf1d62f21f) Enumerator
+  * [NONE](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab50339a10e1de285ac99d4c3990b8693) Enumerator
+  * [CTRL](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a32f7eee2581c72a5561c21df3013a89a) Enumerator
+  * [SHIFT](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a46afff2b309b8b16a46d812172a9235c) Enumerator
+  * [CTRL\_SHIFT](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab99320973a4dd4f1f442037248dcaf8f) Enumerator
+  * [mod](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a65b5e074b63fbbfa01b35e5edddf9513) Variable
+  * [inter](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a1fc8a5b848dea0d130986d1c55ec4afa) Variable
+  * [operator\<](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a8eb647fcb004f4d79a900f685ec61b2c) Function
+  * [operator==](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a64a19a262ebd0f0c75757d458306285b) Function
+  * [format](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1ada344efb3314a4980cae5a76ba0eceb9) Function
+  * [parse](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2e76d79fb88e1dfb682b51c41d259349) Function
+* [f3d::interactor::invalid\_args\_exception](structf3d_1_1interactor_1_1invalid__args__exception.md) Structure
+  * [invalid\_args\_exception](structf3d_1_1interactor_1_1invalid__args__exception.md#structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8) Function
 * [f3d::engine::libInformation](structf3d_1_1engine_1_1lib_information.md) Structure
   * [Version](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a77e76b84e18488fd4cbc69011632809c) Variable
   * [VersionFull](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a22ab02e3f1d8e92fbd4e391bdbab16ee) Variable
@@ -184,25 +151,6 @@
   * [VTKVersion](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1ae18443c52968409bbba45aa86ecbe116) Variable
   * [Copyrights](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1aa5fcaf4da0e499f963511197bafcaa68) Variable
   * [License](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1aa1fc55f2019aefc29181dc1220d29093) Variable
-* [f3d::interactor::invalid\_args\_exception](structf3d_1_1interactor_1_1invalid__args__exception.md) Structure
-  * [invalid\_args\_exception](structf3d_1_1interactor_1_1invalid__args__exception.md#structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8) Function
-* [f3d::scene::light\_exception](structf3d_1_1scene_1_1light__exception.md) Structure
-  * [light\_exception](structf3d_1_1scene_1_1light__exception.md#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed) Function
-* [f3d::scene::load\_failure\_exception](structf3d_1_1scene_1_1load__failure__exception.md) Structure
-  * [load\_failure\_exception](structf3d_1_1scene_1_1load__failure__exception.md#structf3d_1_1scene_1_1load__failure__exception_1ac9d2e898967ab161709bc871afc4e0a7) Function
-* [f3d::light\_state\_t](structf3d_1_1light__state__t.md) Structure
-  * [type](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11) Variable
-  * [position](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a) Variable
-  * [color](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633) Variable
-  * [direction](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465) Variable
-  * [positionalLight](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24) Variable
-  * [intensity](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6) Variable
-  * [switchState](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a) Variable
-  * [operator==](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168) Function
-* [f3d::context::loading\_exception](structf3d_1_1context_1_1loading__exception.md) Structure
-  * [loading\_exception](structf3d_1_1context_1_1loading__exception.md#structf3d_1_1context_1_1loading__exception_1ad8bf27581245eff871b457f9d184dbf2) Function
-* [f3d::utils::string\_template::lookup\_error](structf3d_1_1utils_1_1string__template_1_1lookup__error.md) Structure
-  * [lookup\_error](structf3d_1_1utils_1_1string__template_1_1lookup__error.md#structf3d_1_1utils_1_1string__template_1_1lookup__error_1ace69fe341e39403ce1ac61a1e8ded114) Function
 * [f3d::interactor](classf3d_1_1interactor.md) Class
   * [BindingType](classf3d_1_1interactor.md#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e) Enumeration type
   * [CYCLIC](classf3d_1_1interactor.md#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9eab970fa647bc2f4761a80276428780061) Enumerator
@@ -260,6 +208,21 @@
   * [start](classf3d_1_1interactor.md#classf3d_1_1interactor_1af971c61f5dd60430a8f574f9572c8aed) Function
   * [stop](classf3d_1_1interactor.md#classf3d_1_1interactor_1ab8172c398e25b753a421e6b38f568539) Function
   * [requestRender](classf3d_1_1interactor.md#classf3d_1_1interactor_1a12abd21c1a1fb5973e09633c877e2e7a) Function
+* [f3d::scene::light\_exception](structf3d_1_1scene_1_1light__exception.md) Structure
+  * [light\_exception](structf3d_1_1scene_1_1light__exception.md#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed) Function
+* [f3d::light\_state\_t](structf3d_1_1light__state__t.md) Structure
+  * [type](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11) Variable
+  * [position](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a) Variable
+  * [color](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633) Variable
+  * [direction](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465) Variable
+  * [positionalLight](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24) Variable
+  * [intensity](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6) Variable
+  * [switchState](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a) Variable
+  * [operator==](structf3d_1_1light__state__t.md#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168) Function
+* [f3d::scene::load\_failure\_exception](structf3d_1_1scene_1_1load__failure__exception.md) Structure
+  * [load\_failure\_exception](structf3d_1_1scene_1_1load__failure__exception.md#structf3d_1_1scene_1_1load__failure__exception_1ac9d2e898967ab161709bc871afc4e0a7) Function
+* [f3d::context::loading\_exception](structf3d_1_1context_1_1loading__exception.md) Structure
+  * [loading\_exception](structf3d_1_1context_1_1loading__exception.md#structf3d_1_1context_1_1loading__exception_1ad8bf27581245eff871b457f9d184dbf2) Function
 * [f3d::log](classf3d_1_1log.md) Class
   * [VerboseLevel](classf3d_1_1log.md#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28) Enumeration type
   * [DEBUG](classf3d_1_1log.md#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28adc30ec20708ef7b0f641ef78b7880a15) Enumerator
@@ -275,37 +238,24 @@
   * [setUseColoring](classf3d_1_1log.md#classf3d_1_1log_1a53fe829551853d63206efb6a93287bec) Function
   * [setVerboseLevel](classf3d_1_1log.md#classf3d_1_1log_1a42acb3b11578123d01b58420ebff5d65) Function
   * [getVerboseLevel](classf3d_1_1log.md#classf3d_1_1log_1a8fedb73d694ea0b04845b59c03bb5a62) Function
-* [f3d::mesh\_t](structf3d_1_1mesh__t.md) Structure
-  * [points](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1aae9562d60d312a986f8a0d0f61bd4d3c) Variable
-  * [normals](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1ad0b4a90786f214a89dbae5b2d8468e59) Variable
-  * [texture\_coordinates](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a5c2cd44ccd008d9f258dc74e4bb074bd) Variable
-  * [face\_sides](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a40e1735ee41d5c088e446dce73214d31) Variable
-  * [face\_indices](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a309630f63c3f2105e70e079f777f0c81) Variable
-  * [isValid](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a16d9b017479bf3e65e3d50e5081916eb) Function
 * [f3d::image::metadata\_exception](structf3d_1_1image_1_1metadata__exception.md) Structure
   * [metadata\_exception](structf3d_1_1image_1_1metadata__exception.md#structf3d_1_1image_1_1metadata__exception_1a9752d5ec2bd62827529058654e0c9ce7) Function
 * [f3d::engine::no\_interactor\_exception](structf3d_1_1engine_1_1no__interactor__exception.md) Structure
   * [no\_interactor\_exception](structf3d_1_1engine_1_1no__interactor__exception.md#structf3d_1_1engine_1_1no__interactor__exception_1ab6af47fb76e7a030e2cd4353387277e3) Function
 * [f3d::engine::no\_window\_exception](structf3d_1_1engine_1_1no__window__exception.md) Structure
   * [no\_window\_exception](structf3d_1_1engine_1_1no__window__exception.md#structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64) Function
-* [f3d::point3\_t](structf3d_1_1point3__t.md) Structure
 * [f3d::engine::plugin\_exception](structf3d_1_1engine_1_1plugin__exception.md) Structure
   * [plugin\_exception](structf3d_1_1engine_1_1plugin__exception.md#structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119) Function
+* [f3d::point3\_t](structf3d_1_1point3__t.md) Structure
+* [f3d::image::read\_exception](structf3d_1_1image_1_1read__exception.md) Structure
+  * [read\_exception](structf3d_1_1image_1_1read__exception.md#structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477) Function
 * [f3d::ratio\_t](classf3d_1_1ratio__t.md) Class
   * [Value](classf3d_1_1ratio__t.md#classf3d_1_1ratio__t_1a57569a1ebdba597ad042e0a7b6273a29) Variable
   * [ratio\_t](classf3d_1_1ratio__t.md#classf3d_1_1ratio__t_1a02a8a65c4b269d42dbdc136d96744b31) Function
   * [ratio\_t](classf3d_1_1ratio__t.md#classf3d_1_1ratio__t_1a4f363d564b0a7b77e9abbfec2349ec04) Function
   * [operator double](classf3d_1_1ratio__t.md#classf3d_1_1ratio__t_1ad3cabd2f8bd0ef87119cdc46fc635dec) Function
-* [f3d::image::read\_exception](structf3d_1_1image_1_1read__exception.md) Structure
-  * [read\_exception](structf3d_1_1image_1_1read__exception.md#structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477) Function
-* [f3d::engine::readerInformation](structf3d_1_1engine_1_1reader_information.md) Structure
-  * [Name](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a30aac8488fbed9ef92fba2bba859263a) Variable
-  * [Description](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a8cd967fb8400bcafb84fac1aff4bc0af) Variable
-  * [Extensions](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a9e778db98dc3a41875ed9c2caeaf3517) Variable
-  * [MimeTypes](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1aac8ec25ca07da4cafd1f8a157d583f27) Variable
-  * [PluginName](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a9d938bd142eb2feb3ac72f6c07eafb6b) Variable
-  * [HasSceneReader](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1ac0dc89d52c535db198c513fb0543755e) Variable
-  * [HasGeometryReader](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a63da7048de227a690590703369523aa3) Variable
+* [f3d::utils::string\_template::lookup\_error](structf3d_1_1utils_1_1string__template_1_1lookup__error.md) Structure
+  * [lookup\_error](structf3d_1_1utils_1_1string__template_1_1lookup__error.md#structf3d_1_1utils_1_1string__template_1_1lookup__error_1ace69fe341e39403ce1ac61a1e8ded114) Function
 * [f3d::scene](classf3d_1_1scene.md) Class
   * [add](classf3d_1_1scene.md#classf3d_1_1scene_1abb62b89f76dc0c102c7b040cd8837fae) Function
   * [add](classf3d_1_1scene.md#classf3d_1_1scene_1a7bfb6563cbc4b43741141da059092c1f) Function
@@ -336,28 +286,65 @@
   * [symbol\_exception](structf3d_1_1context_1_1symbol__exception.md#structf3d_1_1context_1_1symbol__exception_1a7b0caa387c41f6de33f386b3519079a5) Function
 * [f3d::utils::tokenize\_exception](structf3d_1_1utils_1_1tokenize__exception.md) Structure
   * [tokenize\_exception](structf3d_1_1utils_1_1tokenize__exception.md#structf3d_1_1utils_1_1tokenize__exception_1a0693bd9dc5395dedd10c3e6bd7f3e271) Function
+* [f3d::type\_access\_exception](structf3d_1_1type__access__exception.md) Structure
+  * [type\_access\_exception](structf3d_1_1type__access__exception.md#structf3d_1_1type__access__exception_1ab3fb2a5741c6a58afd1c17c7607fd7aa) Function
 * [f3d::transform2d\_t](classf3d_1_1transform2d__t.md) Class
   * [transform2d\_t](classf3d_1_1transform2d__t.md#classf3d_1_1transform2d__t_1ab657bdb45cbf4124f28b96828d056d63) Function
   * [transform2d\_t](classf3d_1_1transform2d__t.md#classf3d_1_1transform2d__t_1a3081204d9c43256e72f6cca0576f0651) Function
   * [transform2d\_t](classf3d_1_1transform2d__t.md#classf3d_1_1transform2d__t_1a2800721840535bd112285ec29d34e881) Function
   * [transform2d\_t](classf3d_1_1transform2d__t.md#classf3d_1_1transform2d__t_1a7e76f1c32dec6276bacbbf82b35dc1bf) Function
   * [transform2d\_t](classf3d_1_1transform2d__t.md#classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf) Function
-* [f3d::type\_access\_exception](structf3d_1_1type__access__exception.md) Structure
-  * [type\_access\_exception](structf3d_1_1type__access__exception.md#structf3d_1_1type__access__exception_1ab3fb2a5741c6a58afd1c17c7607fd7aa) Function
-* [f3d::type\_construction\_exception](structf3d_1_1type__construction__exception.md) Structure
-  * [type\_construction\_exception](structf3d_1_1type__construction__exception.md#structf3d_1_1type__construction__exception_1ae979e25c0c37cd043f1f82fee310209e) Function
+* [f3d::mesh\_t](structf3d_1_1mesh__t.md) Structure
+  * [points](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1aae9562d60d312a986f8a0d0f61bd4d3c) Variable
+  * [normals](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1ad0b4a90786f214a89dbae5b2d8468e59) Variable
+  * [texture\_coordinates](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a5c2cd44ccd008d9f258dc74e4bb074bd) Variable
+  * [face\_sides](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a40e1735ee41d5c088e446dce73214d31) Variable
+  * [face\_indices](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a309630f63c3f2105e70e079f777f0c81) Variable
+  * [isValid](structf3d_1_1mesh__t.md#structf3d_1_1mesh__t_1a16d9b017479bf3e65e3d50e5081916eb) Function
 * [f3d::vector3\_t](structf3d_1_1vector3__t.md) Structure
-* [f3d::utils](classf3d_1_1utils.md) Class
-  * [KnownFolder](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037) Enumeration type
-  * [ROAMINGAPPDATA](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037ae38588db6e73d4680ec6a0fb2717b85b) Enumerator
-  * [LOCALAPPDATA](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a26e533b6cb5cf77f7d0a48c2e45598f7) Enumerator
-  * [PICTURES](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a7aa9c13a2316c4a661679ecb863b3775) Enumerator
-  * [textDistance](classf3d_1_1utils.md#classf3d_1_1utils_1a57ebdf21e25b83bdefe7f23743e74424) Function
-  * [tokenize](classf3d_1_1utils.md#classf3d_1_1utils_1ae1cfff8e2b9d13a7556133db81b7971f) Function
-  * [collapsePath](classf3d_1_1utils.md#classf3d_1_1utils_1a42d295d8692eeab2def58534f52dd3cb) Function
-  * [globToRegex](classf3d_1_1utils.md#classf3d_1_1utils_1a31985a8c903ca9880f66e48e0b2cdd99) Function
-  * [getEnv](classf3d_1_1utils.md#classf3d_1_1utils_1a79dd2ab7d2021779d80b14dbfc7520d1) Function
-  * [getKnownFolder](classf3d_1_1utils.md#classf3d_1_1utils_1a19f45d7340b90d124a7bef05d82acbaf) Function
+* [f3d::engine](classf3d_1_1engine.md) Class
+  * [Internals](classf3d_1_1engine.md#classf3d_1_1engine_1a5129a2dfd256ea59aa30818d30708188) Variable
+  * [create](classf3d_1_1engine.md#classf3d_1_1engine_1a8dc98863d9785dee5c90725248c46b8a) Function
+  * [createNone](classf3d_1_1engine.md#classf3d_1_1engine_1a6c74166d9132a8e0e30e7bd8c4a3ce0f) Function
+  * [createGLX](classf3d_1_1engine.md#classf3d_1_1engine_1a0cf626f2585af37614b088c5c78a2a1a) Function
+  * [createWGL](classf3d_1_1engine.md#classf3d_1_1engine_1aad8377f8ceef620a494c3d1ccb86ef4a) Function
+  * [createEGL](classf3d_1_1engine.md#classf3d_1_1engine_1af2ad280d2be4c58a8f30eec351cd3bf4) Function
+  * [createOSMesa](classf3d_1_1engine.md#classf3d_1_1engine_1a1ea3b63b10d5f826528545a562297cd1) Function
+  * [createExternal](classf3d_1_1engine.md#classf3d_1_1engine_1ad34defb23976727cdb2ae884e119e533) Function
+  * [createExternalGLX](classf3d_1_1engine.md#classf3d_1_1engine_1a4fc077683aa9807ce52d3c0b45494250) Function
+  * [createExternalWGL](classf3d_1_1engine.md#classf3d_1_1engine_1aa5ae12e2c05726524b94df82f63e1cc3) Function
+  * [createExternalCOCOA](classf3d_1_1engine.md#classf3d_1_1engine_1aa361310e43db522f80340d1b6489f614) Function
+  * [createExternalEGL](classf3d_1_1engine.md#classf3d_1_1engine_1a033427bc8d9cfc37340d566e7d901fbe) Function
+  * [createExternalOSMesa](classf3d_1_1engine.md#classf3d_1_1engine_1a2228768b97a56a53ce23fb315ff368ab) Function
+  * [getRenderingBackendList](classf3d_1_1engine.md#classf3d_1_1engine_1ac2fc13fa23e4f33f0aeda81d9925a2ac) Function
+  * [loadPlugin](classf3d_1_1engine.md#classf3d_1_1engine_1a820b4a59f829b77f669f267cfde09186) Function
+  * [autoloadPlugins](classf3d_1_1engine.md#classf3d_1_1engine_1ac4d909a879b94b496a3e9292162fb855) Function
+  * [getPluginsList](classf3d_1_1engine.md#classf3d_1_1engine_1ab72eb52263a39accd6f296f893808b5a) Function
+  * [getAllReaderOptionNames](classf3d_1_1engine.md#classf3d_1_1engine_1ae1f1d77bb0ec0b5df9997eb77c1b42fd) Function
+  * [setReaderOption](classf3d_1_1engine.md#classf3d_1_1engine_1a95e7c2840b75b4f56f6a48ce25a4bc45) Function
+  * [getLibInfo](classf3d_1_1engine.md#classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7) Function
+  * [getReadersInfo](classf3d_1_1engine.md#classf3d_1_1engine_1a5b2887501e1975218442d9142f4d3b8e) Function
+  * [~engine](classf3d_1_1engine.md#classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37) Function
+  * [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) Function
+  * [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a763538a512e6405aa5d05de6eef8e43e) Function
+  * [operator=](classf3d_1_1engine.md#classf3d_1_1engine_1a4755881d465474f30bda5b7f1b630ecf) Function
+  * [operator=](classf3d_1_1engine.md#classf3d_1_1engine_1a99cd2684bdd36a245b947075cb28dfa5) Function
+  * [setCachePath](classf3d_1_1engine.md#classf3d_1_1engine_1a4883c97389b1ab88d606e138d969611a) Function
+  * [setOptions](classf3d_1_1engine.md#classf3d_1_1engine_1ac4f1d538ed3b0f29c4730893208689df) Function
+  * [setOptions](classf3d_1_1engine.md#classf3d_1_1engine_1ac59b6c8c87b1b671b8c7f55d0d7cc6d9) Function
+  * [getOptions](classf3d_1_1engine.md#classf3d_1_1engine_1a412f027391ddf8a752eb9230ae30986a) Function
+  * [getWindow](classf3d_1_1engine.md#classf3d_1_1engine_1a621751cc41669de47c318b6f20ec0cd7) Function
+  * [getScene](classf3d_1_1engine.md#classf3d_1_1engine_1a7de2279c63696943a16c8995f6fbbc82) Function
+  * [getInteractor](classf3d_1_1engine.md#classf3d_1_1engine_1aaa84654442772987a9d233ed1ca8e113) Function
+  * [engine](classf3d_1_1engine.md#classf3d_1_1engine_1ace9f4b7a546a1be097355df320bf0953) Function
+* [f3d::engine::readerInformation](structf3d_1_1engine_1_1reader_information.md) Structure
+  * [Name](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a30aac8488fbed9ef92fba2bba859263a) Variable
+  * [Description](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a8cd967fb8400bcafb84fac1aff4bc0af) Variable
+  * [Extensions](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a9e778db98dc3a41875ed9c2caeaf3517) Variable
+  * [MimeTypes](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1aac8ec25ca07da4cafd1f8a157d583f27) Variable
+  * [PluginName](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a9d938bd142eb2feb3ac72f6c07eafb6b) Variable
+  * [HasSceneReader](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1ac0dc89d52c535db198c513fb0543755e) Variable
+  * [HasGeometryReader](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a63da7048de227a690590703369523aa3) Variable
 * [f3d::image::write\_exception](structf3d_1_1image_1_1write__exception.md) Structure
   * [write\_exception](structf3d_1_1image_1_1write__exception.md#structf3d_1_1image_1_1write__exception_1ae60ce88787aeb45de2d75c16d1ae0e3a) Function
 * [f3d::window](classf3d_1_1window.md) Class
@@ -384,19 +371,32 @@
   * [setWindowName](classf3d_1_1window.md#classf3d_1_1window_1ae5d1313a7822bd6bf234369feb544f37) Function
   * [getWorldFromDisplay](classf3d_1_1window.md#classf3d_1_1window_1ae963c7f41cecb2fb585a83495b05bb73) Function
   * [getDisplayFromWorld](classf3d_1_1window.md#classf3d_1_1window_1a95946b71f0ff9a3cbc36bc9b717270b8) Function
+* [f3d::type\_construction\_exception](structf3d_1_1type__construction__exception.md) Structure
+  * [type\_construction\_exception](structf3d_1_1type__construction__exception.md#structf3d_1_1type__construction__exception_1ae979e25c0c37cd043f1f82fee310209e) Function
+* [camera.h](camera_8h.md) File
+* [f3d::utils](classf3d_1_1utils.md) Class
+  * [KnownFolder](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037) Enumeration type
+  * [ROAMINGAPPDATA](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037ae38588db6e73d4680ec6a0fb2717b85b) Enumerator
+  * [LOCALAPPDATA](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a26e533b6cb5cf77f7d0a48c2e45598f7) Enumerator
+  * [PICTURES](classf3d_1_1utils.md#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a7aa9c13a2316c4a661679ecb863b3775) Enumerator
+  * [textDistance](classf3d_1_1utils.md#classf3d_1_1utils_1a57ebdf21e25b83bdefe7f23743e74424) Function
+  * [tokenize](classf3d_1_1utils.md#classf3d_1_1utils_1ae1cfff8e2b9d13a7556133db81b7971f) Function
+  * [collapsePath](classf3d_1_1utils.md#classf3d_1_1utils_1a42d295d8692eeab2def58534f52dd3cb) Function
+  * [globToRegex](classf3d_1_1utils.md#classf3d_1_1utils_1a31985a8c903ca9880f66e48e0b2cdd99) Function
+  * [getEnv](classf3d_1_1utils.md#classf3d_1_1utils_1a79dd2ab7d2021779d80b14dbfc7520d1) Function
+  * [getKnownFolder](classf3d_1_1utils.md#classf3d_1_1utils_1a19f45d7340b90d124a7bef05d82acbaf) Function
+* [exception.h](exception_8h.md) File
+* [engine.h](engine_8h.md) File
+* [context.h](context_8h.md) File
 * [f3d](namespacef3d.md) Namespace
   * [angle\_deg\_t](namespacef3d.md#types_8h_1afffcb2b9b7c98468046339a5f53837ce) Typedef
   * [light\_type](namespacef3d.md#types_8h_1abf2507668577f7e4f3f728cd68724320) Variable
   * [CAMERA\_LIGHT](namespacef3d.md#types_8h_1aa00b99d10397b786c4d08f690cf37bde) Variable
   * [SCENE\_LIGHT](namespacef3d.md#types_8h_1a05caa6569d9851cec58bebd695c05d3d) Variable
-* [camera.h](camera_8h.md) File
-* [context.h](context_8h.md) File
-* [exception.h](exception_8h.md) File
-* [engine.h](engine_8h.md) File
-* [image.h](image_8h.md) File
 * [log.h](log_8h.md) File
-* [scene.h](scene_8h.md) File
+* [image.h](image_8h.md) File
 * [interactor.h](interactor_8h.md) File
+* [scene.h](scene_8h.md) File
 * [window.h](window_8h.md) File
-* [utils.h](utils_8h.md) File
 * [types.h](types_8h.md) File
+* [utils.h](utils_8h.md) File

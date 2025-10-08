@@ -1,4 +1,4 @@
-# Structure f3d::engine::readerInformation {#structf3d_1_1engine_1_1reader_information}
+# Structure f3d::engine::readerInformation
 
 ![][C++]
 ![][public]

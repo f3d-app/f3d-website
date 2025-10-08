@@ -1,4 +1,4 @@
-# File utils.h {#utils_8h}
+# File utils.h
 
 ![][C++]
 

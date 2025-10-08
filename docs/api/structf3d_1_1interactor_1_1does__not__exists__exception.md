@@ -1,4 +1,4 @@
-# Structure f3d::interactor::does\_not\_exists\_exception {#structf3d_1_1interactor_1_1does__not__exists__exception}
+# Structure f3d::interactor::does\_not\_exists\_exception
 
 ![][C++]
 ![][public]

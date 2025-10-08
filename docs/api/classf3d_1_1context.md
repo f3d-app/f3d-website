@@ -1,4 +1,4 @@
-# Class f3d::context {#classf3d_1_1context}
+# Class f3d::context
 
 ![][C++]
 ![][public]

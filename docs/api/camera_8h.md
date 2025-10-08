@@ -1,4 +1,4 @@
-# File camera.h {#camera_8h}
+# File camera.h
 
 ![][C++]
 

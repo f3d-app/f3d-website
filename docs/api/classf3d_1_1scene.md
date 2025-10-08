@@ -1,4 +1,4 @@
-# Class f3d::scene {#classf3d_1_1scene}
+# Class f3d::scene
 
 ![][C++]
 ![][public]

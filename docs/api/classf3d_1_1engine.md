@@ -1,4 +1,4 @@
-# Class f3d::engine {#classf3d_1_1engine}
+# Class f3d::engine
 
 ![][C++]
 ![][public]

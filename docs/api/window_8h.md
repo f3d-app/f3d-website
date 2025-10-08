@@ -1,4 +1,4 @@
-# File window.h {#window_8h}
+# File window.h
 
 ![][C++]
 

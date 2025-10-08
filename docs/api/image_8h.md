@@ -1,4 +1,4 @@
-# File image.h {#image_8h}
+# File image.h
 
 ![][C++]
 

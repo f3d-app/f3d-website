@@ -1,4 +1,4 @@
-# File log.h {#log_8h}
+# File log.h
 
 ![][C++]
 

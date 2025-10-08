@@ -1,4 +1,4 @@
-# Class f3d::image {#classf3d_1_1image}
+# Class f3d::image
 
 ![][C++]
 ![][public]

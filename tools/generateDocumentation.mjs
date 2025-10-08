@@ -108,8 +108,16 @@ async function runSeaborg() {
                 // remove links when pointing to undefined.md
                 lines[i] = lines[i].replace(/\[(.+)\]\(undefined.md#undefined\)/g, '$1');
 
-                // remove h1 anchors and point to the file only
+                // remove h1 anchor links and point to the file only
                 lines[i] = lines[i].replace(/\(([^.#]+)\.md#\1\)/g, '($1.md)');
+
+                // remove h1 anchors
+                lines[i] = lines[i].replace(/^# (.+) \{#.*\}$/g, '# $1');
+
+                // remove file in namespace
+                if (file.includes('namespace') && lines[i].startsWith("**Definition**")) {
+                    continue;
+                }
 
                 newLines.push(lines[i]);
             }

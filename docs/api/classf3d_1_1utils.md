@@ -1,4 +1,4 @@
-# Class f3d::utils {#classf3d_1_1utils}
+# Class f3d::utils
 
 ![][C++]
 ![][public]

@@ -1,4 +1,4 @@
-# Class f3d::window {#classf3d_1_1window}
+# Class f3d::window
 
 ![][C++]
 ![][public]

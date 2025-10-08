@@ -1,4 +1,4 @@
-# Structure f3d::interactor::invalid\_args\_exception {#structf3d_1_1interactor_1_1invalid__args__exception}
+# Structure f3d::interactor::invalid\_args\_exception
 
 ![][C++]
 ![][public]
@@ -49,3 +49,4 @@ f3d::interactor::invalid_args_exception::invalid_args_exception(const std::strin
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

@@ -1,4 +1,4 @@
-# File exception.h {#exception_8h}
+# File exception.h
 
 ![][C++]
 

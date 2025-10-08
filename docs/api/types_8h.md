@@ -1,4 +1,4 @@
-# File types.h {#types_8h}
+# File types.h
 
 ![][C++]
 

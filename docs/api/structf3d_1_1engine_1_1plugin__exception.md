@@ -1,4 +1,4 @@
-# Structure f3d::engine::plugin\_exception {#structf3d_1_1engine_1_1plugin__exception}
+# Structure f3d::engine::plugin\_exception
 
 ![][C++]
 ![][public]

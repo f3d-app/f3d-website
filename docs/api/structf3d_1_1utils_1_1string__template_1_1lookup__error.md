@@ -1,4 +1,4 @@
-# Structure f3d::utils::string\_template::lookup\_error {#structf3d_1_1utils_1_1string__template_1_1lookup__error}
+# Structure f3d::utils::string\_template::lookup\_error
 
 ![][C++]
 ![][public]
@@ -48,3 +48,4 @@ f3d::utils::string_template::lookup_error::lookup_error(const std::string &what=
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

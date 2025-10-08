@@ -1,4 +1,4 @@
-# Class f3d::double\_array\_t {#classf3d_1_1double__array__t}
+# Class f3d::double\_array\_t
 
 ![][C++]
 ![][public]

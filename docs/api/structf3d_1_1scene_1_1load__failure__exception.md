@@ -1,4 +1,4 @@
-# Structure f3d::scene::load\_failure\_exception {#structf3d_1_1scene_1_1load__failure__exception}
+# Structure f3d::scene::load\_failure\_exception
 
 ![][C++]
 ![][public]
@@ -49,3 +49,4 @@ f3d::scene::load_failure_exception::load_failure_exception(const std::string &wh
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)
