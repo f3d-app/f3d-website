@@ -6,6 +6,7 @@ import { Icon } from '@iconify/react';
 import { useEffect, useState } from 'react';
 import BrowserOnly from '@docusaurus/BrowserOnly';
 import Link from '@docusaurus/Link';
+import styles from './thanks.module.css';
 
 function DownloadStatus(): ReactNode {
   const [downloadUrl, setDownloadUrl] = useState<string | null>(null);
@@ -343,7 +344,7 @@ export default function ThanksPage(): ReactNode {
       description="Support F3D development with a donation. Help keep this open source 3D viewer free for everyone.">
       <main>
         <section>
-          <div className="container">
+          <div className={`container ${styles.container}`}>
             <BrowserOnly>
               {() => <DownloadStatus />}
             </BrowserOnly>
@@ -358,7 +359,7 @@ export default function ThanksPage(): ReactNode {
 
               {/* Left side - Information */}
               <div style={{ paddingRight: '2rem' }}>
-                <Heading as="h2" style={{ marginBottom: '1.5rem' }}>
+                <Heading as="h1" style={{ marginTop: '2rem', marginBottom: '1.5rem' }}>
                   F3D is open source and needs your support
                 </Heading>
 
@@ -390,13 +391,234 @@ export default function ThanksPage(): ReactNode {
                   <p>
                     If you donate monthly, you get a few perks!
                   </p>
-                  <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                    <li>1$/month: Bronze: <Icon icon="openmoji:red-heart" style={{ verticalAlign: '-0.125em' }} /> Special role on our <a href="https://discord.f3d.app">discord</a></li>
-                    <li>2$/month: Silver: Bronze + <Icon icon="openmoji:check-mark" style={{ verticalAlign: '-0.125em' }} /> Access to the VIP channel on our <a href="https://discord.f3d.app">discord</a></li>
-                    <li>5$/month: Gold: Silver + <Icon icon="openmoji:ballot-box-with-ballot" style={{ verticalAlign: '-0.125em' }} /> Vote for the next feature to implement</li>
-                    <li>10$/month: Titanium: Gold + <Icon icon="openmoji:fountain-pen" style={{ verticalAlign: '-0.125em' }} /> Your name will be added to the README</li>
-                    <li>20$/month: Diamond: Titanium + <Icon icon="openmoji:framed-picture" style={{ verticalAlign: '-0.125em' }} /> Showcase your work with F3D in our <Link to="/gallery">gallery</Link></li>
-                  </ul>
+                  
+                  <div style={{
+                    display: 'grid',
+                    gridTemplateColumns: 'repeat(5, 1fr)',
+                    gap: '0.5rem',
+                    marginBottom: '1.5rem'
+                  }}>
+                    {/* Bronze Tier */}
+                    <div 
+                      className={styles.tierCard}
+                      style={{
+                        background: 'linear-gradient(135deg, #CD7F32 0%, #B8722A 100%)',
+                        padding: '0.5rem 0.25rem',
+                        borderRadius: '6px',
+                        color: 'white',
+                        position: 'relative',
+                        overflow: 'visible',
+                        textAlign: 'center',
+                        cursor: 'pointer'
+                      }}
+                      title="Bronze Tier - $1/month: Get a special role on our Discord server to show your support for F3D development!"
+                    >
+                      <div style={{ fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '0.25rem' }}>
+                        Bronze
+                      </div>
+                      <div style={{ 
+                        background: 'rgba(255,255,255,0.2)', 
+                        padding: '0.125rem 0.25rem', 
+                        borderRadius: '8px', 
+                        fontSize: '0.7rem',
+                        fontWeight: 'bold',
+                        marginBottom: '0.25rem',
+                        display: 'inline-block'
+                      }}>
+                        $1/mo
+                      </div>
+                      <div style={{ fontSize: '0.65rem', marginBottom: '0.125rem', opacity: 0.9, visibility: 'hidden' }}>
+                        Base tier
+                      </div>
+                      <div style={{ fontSize: '0.75rem' }}>
+                        <Icon icon="openmoji:red-heart" style={{ fontSize: '0.85rem', display: 'block', margin: '0 auto 0.125rem' }} />
+                        Discord role
+                      </div>
+                    </div>
+
+                    {/* Silver Tier */}
+                    <div 
+                      className={styles.tierCard}
+                      style={{
+                        background: 'linear-gradient(135deg, #C0C0C0 0%, #A8A8A8 100%)',
+                        padding: '0.5rem 0.25rem',
+                        borderRadius: '6px',
+                        color: 'white',
+                        position: 'relative',
+                        overflow: 'visible',
+                        textAlign: 'center',
+                        cursor: 'pointer'
+                      }}
+                      title="Silver Tier - $2/month: All Bronze benefits plus access to our exclusive VIP channel where you can chat directly with the maintainers and other supporters!"
+                    >
+                      <div style={{ fontSize: '0.85rem', fontWeight: 'bold', marginBottom: '0.25rem' }}>
+                        Silver
+                      </div>
+                      <div style={{ 
+                        background: 'rgba(255,255,255,0.2)', 
+                        padding: '0.125rem 0.25rem', 
+                        borderRadius: '8px', 
+                        fontSize: '0.7rem',
+                        fontWeight: 'bold',
+                        marginBottom: '0.25rem',
+                        display: 'inline-block'
+                      }}>
+                        $2/mo
+                      </div>
+                      <div style={{ fontSize: '0.65rem', marginBottom: '0.125rem', opacity: 0.9 }}>
+                        Bronze +
+                      </div>
+                      <div style={{ fontSize: '0.75rem' }}>
+                        <Icon icon="openmoji:check-mark" style={{ fontSize: '0.85rem', display: 'block', margin: '0 auto 0.125rem' }} />
+                        VIP channel
+                      </div>
+                    </div>
+
+                    {/* Gold Tier */}
+                    <div 
+                      className={styles.tierCard}
+                      style={{
+                        background: 'linear-gradient(135deg, #FFD700 0%, #FFC700 100%)',
+                        padding: '0.5rem 0.25rem',
+                        borderRadius: '6px',
+                        color: '#333',
+                        position: 'relative',
+                        overflow: 'visible',
+                        boxShadow: '0 2px 8px rgba(255, 215, 0, 0.3)',
+                        textAlign: 'center',
+                        cursor: 'pointer'
+                      }}
+                      title="Gold Tier - $5/month: All Silver benefits plus voting rights! Help decide which features we prioritize in future releases."
+                    >
+                      <div style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '0.25rem',
+                        fontSize: '0.85rem', 
+                        fontWeight: 'bold', 
+                        marginBottom: '0.25rem' 
+                      }}>
+                        Gold
+                        <Icon icon="material-symbols:star-rounded" style={{ fontSize: '0.9rem', color: '#FFA500' }} />
+                      </div>
+                      <div style={{ 
+                        background: 'rgba(0,0,0,0.1)', 
+                        padding: '0.125rem 0.25rem', 
+                        borderRadius: '8px', 
+                        fontSize: '0.7rem',
+                        fontWeight: 'bold',
+                        marginBottom: '0.25rem',
+                        display: 'inline-block'
+                      }}>
+                        $5/mo
+                      </div>
+                      <div style={{ fontSize: '0.65rem', marginBottom: '0.125rem', opacity: 0.8 }}>
+                        Silver +
+                      </div>
+                      <div style={{ fontSize: '0.75rem' }}>
+                        <Icon icon="openmoji:ballot-box-with-ballot" style={{ fontSize: '0.85rem', display: 'block', margin: '0 auto 0.125rem' }} />
+                        Vote features
+                      </div>
+                    </div>
+
+                    {/* Platinum Tier */}
+                    <div 
+                      className={styles.tierCard}
+                      style={{
+                        background: 'linear-gradient(135deg, #E5E4E2 0%, #D3D3D3 100%)',
+                        padding: '0.5rem 0.25rem',
+                        borderRadius: '6px',
+                        color: '#333',
+                        position: 'relative',
+                        overflow: 'visible',
+                        boxShadow: '0 2px 8px rgba(229, 228, 226, 0.4)',
+                        textAlign: 'center',
+                        cursor: 'pointer'
+                      }}
+                      title="Platinum Tier - $10/month: All Gold benefits plus recognition! Your name will be permanently added to our README file as a valued supporter."
+                    >
+                      <div style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '0.25rem',
+                        fontSize: '0.8rem', 
+                        fontWeight: 'bold', 
+                        marginBottom: '0.25rem' 
+                      }}>
+                        <span>Platinum</span>
+                        <Icon icon="material-symbols:workspace-premium-rounded" style={{ fontSize: '0.85rem', color: '#888' }} />
+                      </div>
+                      <div style={{ 
+                        background: 'rgba(0,0,0,0.1)', 
+                        padding: '0.125rem 0.25rem', 
+                        borderRadius: '8px', 
+                        fontSize: '0.7rem',
+                        fontWeight: 'bold',
+                        marginBottom: '0.25rem',
+                        display: 'inline-block'
+                      }}>
+                        $10/mo
+                      </div>
+                      <div style={{ fontSize: '0.65rem', marginBottom: '0.125rem', opacity: 0.8 }}>
+                        Gold +
+                      </div>
+                      <div style={{ fontSize: '0.7rem' }}>
+                        <Icon icon="openmoji:fountain-pen" style={{ fontSize: '0.8rem', display: 'block', margin: '0 auto 0.125rem' }} />
+                        README credit
+                      </div>
+                    </div>
+
+                    {/* Diamond Tier */}
+                    <div 
+                      className={styles.tierCard}
+                      style={{
+                        background: 'linear-gradient(135deg, #B9F2FF 0%, #87CEEB 100%)',
+                        padding: '0.5rem 0.25rem',
+                        borderRadius: '6px',
+                        color: '#333',
+                        position: 'relative',
+                        overflow: 'visible',
+                        boxShadow: '0 3px 12px rgba(185, 242, 255, 0.4)',
+                        border: '1px solid rgba(255,255,255,0.5)',
+                        textAlign: 'center',
+                        cursor: 'pointer'
+                      }}
+                      title="Diamond Tier - $20/month: All Platinum benefits plus gallery showcase! Feature your F3D work prominently in our official gallery for everyone to see."
+                    >
+                      <div style={{ 
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'center',
+                        gap: '0.25rem',
+                        fontSize: '0.8rem', 
+                        fontWeight: 'bold', 
+                        marginBottom: '0.25rem' 
+                      }}>
+                        <span>Diamond</span>
+                        <Icon icon="material-symbols:diamond-rounded" style={{ fontSize: '0.85rem', color: '#4A90E2' }} />
+                      </div>
+                      <div style={{ 
+                        background: 'rgba(0,0,0,0.1)', 
+                        padding: '0.125rem 0.25rem', 
+                        borderRadius: '8px', 
+                        fontSize: '0.7rem',
+                        fontWeight: 'bold',
+                        marginBottom: '0.25rem',
+                        display: 'inline-block'
+                      }}>
+                        $20/mo
+                      </div>
+                      <div style={{ fontSize: '0.65rem', marginBottom: '0.125rem', opacity: 0.8 }}>
+                        Platinum +
+                      </div>
+                      <div style={{ fontSize: '0.7rem' }}>
+                        <Icon icon="openmoji:framed-picture" style={{ fontSize: '0.8rem', display: 'block', margin: '0 auto 0.125rem' }} />
+                        Gallery feature
+                      </div>
+                    </div>
+                  </div>
 
                   <p>
                     Make sure to reach out on <a href="https://discord.f3d.app">discord</a> once you start donating.
@@ -450,20 +672,6 @@ export default function ThanksPage(): ReactNode {
             </div>
           </div>
         </section>
-
-        {/* Responsive mobile layout */}
-        <style>{`
-          @media (max-width: 768px) {
-            .container > div {
-              grid-template-columns: 1fr !important;
-              gap: 2rem !important;
-            }
-            
-            .container > div > div:first-child {
-              padding-right: 0 !important;
-            }
-          }
-        `}</style>
       </main>
     </Layout>
   );

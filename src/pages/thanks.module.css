@@ -1,0 +1,61 @@
+/* Tier card hover effects */
+.tierCard {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.tierCard:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15) !important;
+}
+
+.tierCard:hover::after {
+  content: attr(title);
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  white-space: normal;
+  width: 200px;
+  text-align: left;
+  z-index: 1000;
+  margin-bottom: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.tierCard:hover::before {
+  content: '';
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid rgba(0, 0, 0, 0.9);
+  z-index: 1000;
+  margin-bottom: 2px;
+}
+
+/* Responsive mobile layout for thanks page */
+@media (max-width: 768px) {
+  .container > div {
+    grid-template-columns: 1fr !important;
+    gap: 2rem !important;
+  }
+  
+  .container > div > div:first-child {
+    padding-right: 0 !important;
+  }
+
+  .tierCard:hover::after {
+    width: 180px;
+    font-size: 0.75rem;
+  }
+}
