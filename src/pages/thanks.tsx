@@ -507,7 +507,6 @@ export default function ThanksPage(): ReactNode {
                         Base tier
                       </div>
                       <div style={{ fontSize: '0.75rem' }}>
-                        <Icon icon="openmoji:red-heart" style={{ fontSize: '0.85rem', display: 'block', margin: '0 auto 0.125rem' }} />
                         Discord role
                       </div>
                     </div>
@@ -545,7 +544,6 @@ export default function ThanksPage(): ReactNode {
                         Bronze +
                       </div>
                       <div style={{ fontSize: '0.75rem' }}>
-                        <Icon icon="openmoji:check-mark" style={{ fontSize: '0.85rem', display: 'block', margin: '0 auto 0.125rem' }} />
                         VIP channel
                       </div>
                     </div>
@@ -593,7 +591,6 @@ export default function ThanksPage(): ReactNode {
                         Silver +
                       </div>
                       <div style={{ fontSize: '0.75rem' }}>
-                        <Icon icon="openmoji:ballot-box-with-ballot" style={{ fontSize: '0.85rem', display: 'block', margin: '0 auto 0.125rem' }} />
                         Vote features
                       </div>
                     </div>
@@ -641,7 +638,6 @@ export default function ThanksPage(): ReactNode {
                         Gold +
                       </div>
                       <div style={{ fontSize: '0.7rem' }}>
-                        <Icon icon="openmoji:fountain-pen" style={{ fontSize: '0.8rem', display: 'block', margin: '0 auto 0.125rem' }} />
                         README credit
                       </div>
                     </div>
@@ -690,7 +686,6 @@ export default function ThanksPage(): ReactNode {
                         Platinum +
                       </div>
                       <div style={{ fontSize: '0.7rem' }}>
-                        <Icon icon="openmoji:framed-picture" style={{ fontSize: '0.8rem', display: 'block', margin: '0 auto 0.125rem' }} />
                         Gallery feature
                       </div>
                     </div>
