@@ -469,12 +469,7 @@ export default function ThanksPage(): ReactNode {
                     If you donate monthly, you get a few perks!
                   </p>
                   
-                  <div style={{
-                    display: 'grid',
-                    gridTemplateColumns: 'repeat(5, 1fr)',
-                    gap: '0.5rem',
-                    marginBottom: '1.5rem'
-                  }}>
+                  <div className={styles.tierCardsGrid}>
                     {/* Bronze Tier */}
                     <div 
                       className={styles.tierCard}

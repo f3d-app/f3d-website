@@ -43,6 +43,14 @@
   margin-bottom: 2px;
 }
 
+/* Tier cards grid */
+.tierCardsGrid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
 /* Partnership Modal Styles */
 .modalOverlay {
   position: fixed;
@@ -138,6 +146,13 @@
   
   .container > div > div:first-child {
     padding-right: 0 !important;
+  }
+
+  /* Make tier cards display in 2 rows on mobile for better readability */
+  .tierCardsGrid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+    margin-bottom: 1.5rem;
   }
 
   .tierCard:hover::after {
