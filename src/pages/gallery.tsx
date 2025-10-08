@@ -7,6 +7,7 @@ import React from 'react';
 import '@splidejs/react-splide/css/sea-green';
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import CodeBlock from '@theme/CodeBlock';
+import styles from './gallery.module.css';
 
 const galleryItems = [
     {
@@ -18,7 +19,7 @@ const galleryItems = [
                 loop
                 muted
                 playsInline
-                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
+                className={styles.media}
             />
         ),
         command: 'f3d gearbox/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtga',
@@ -32,7 +33,7 @@ const galleryItems = [
                 loop
                 muted
                 playsInline
-                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
+                className={styles.media}
             />
         ),
         command: 'f3d dota/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtga',
@@ -46,7 +47,7 @@ const galleryItems = [
                 loop
                 muted
                 playsInline
-                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
+                className={styles.media}
             />
         ),
         command:
@@ -61,7 +62,7 @@ const galleryItems = [
                 loop
                 muted
                 playsInline
-                style={{ maxWidth: '100%', height: 'auto', width: '700px' }}
+                className={styles.media}
             />
         ),
         command:
@@ -72,8 +73,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/directScalars.png').default}
-                width={700}
                 alt='Direct scalars rendering of a point cloud'
+                className={styles.media}
             />
         ),
         command:
@@ -84,8 +85,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/cad.png').default}
-                width={700}
                 alt='Raytraced CAD assembly'
+                className={styles.media}
             />
         ),
         command: 'f3d 202.vtp -xtgans -rd --raytracing-samples=20 --coloring-range=-2,9',
@@ -95,8 +96,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/volume.png').default}
-                width={700}
                 alt='Volume rendering of a security bag scan'
+                className={styles.media}
             />
         ),
         command:
@@ -107,8 +108,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/realisticHelmet.png').default}
-                width={700}
                 alt='Realistic rendering #1'
+                className={styles.media}
             />
         ),
         command: 'f3d DamagedHelmet.glb --hdri-file=lebombo_4k.hdr -fjtuqap',
@@ -118,8 +119,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/typical.png').default}
-                width={700}
                 alt='Showcase of interactive widgets'
+                className={styles.media}
             />
         ),
         command: 'f3d dragon.vtu -xtgansemf --coloring-component=0',
@@ -129,8 +130,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/step.png').default}
-                width={700}
                 alt='Metallic Rendering of a STEP file'
+                className={styles.media}
             />
         ),
         command:
@@ -141,8 +142,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/fbx.png').default}
-                width={700}
                 alt='Rendering of a FBX file'
+                className={styles.media}
             />
         ),
         command: 'f3d zeldaPosed001.fbx --hdri-file=hikers_cave_2k.hdr -fjuqxtga --light-intensity=1.5 --blur-coc=50',
@@ -152,8 +153,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/realisticMask.png').default}
-                width={700}
                 alt='Realistic rendering #2'
+                className={styles.media}
             />
         ),
         command: 'f3d FlightHelmet.glb --hdri-file=lebombo_4k.hdr -fjtuqap',
@@ -163,8 +164,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/cfd.png').default}
-                width={700}
                 alt='Visualization of a CFD velocity field'
+                className={styles.media}
             />
         ),
         command:
@@ -175,8 +176,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/volumeMedical.png').default}
-                width={700}
                 alt='Volume rendering of a medical skull scan'
+                className={styles.media}
             />
         ),
         command: 'f3d skull.vti -vxbt --coloring-range=40,200 --camera-direction=1,0,0 --up=+Z',
@@ -186,8 +187,8 @@ const galleryItems = [
         media: (
             <img
                 src={require('@site/static/images/pointCloud.png').default}
-                width={700}
                 alt='Point cloud rendering using sprites'
+                className={styles.media}
             />
         ),
         command: 'f3d pointCloud.vtp -o --point-sprites-size=0.2 --colormap=0,0,0.8,0,0.4,0.9,0,0,0.8,0.9,0.9,0,1,0.5,0.5,1 --up=+Z',
@@ -206,12 +207,12 @@ export default function Gallery(): ReactNode {
                 </Heading>
                 <p>Examples of renderings with their associated command lines.</p>
             </div>
-            <div className="container" style={{ marginTop: '4rem' }}>
+            <div className="container">
                 <Splide options={{ type: 'loop', perPage: 1, gap: '2rem', autoplay: true, pauseOnHover: true, pagination: true, arrows: true }}>
                     {galleryItems.map((item, idx) => (
                         <SplideSlide key={idx}>
                             <section style={{ textAlign: 'center' }}>
-                                <Heading as="h3">{item.title}</Heading>
+                                <Heading as="h2">{item.title}</Heading>
                                 <div style={{ marginBottom: '1em' }}>{item.media}</div>
                                 <CodeBlock>{item.command}</CodeBlock>
                             </section>
@@ -219,7 +220,7 @@ export default function Gallery(): ReactNode {
                     ))}
                 </Splide>
                 <section>
-                    <h2>Acknowledgments</h2>
+                    <Heading as="h2">Acknowledgments</Heading>
                     <Admonition type="note">
                         Images and videos displayed below use public
                         datasets, you can download them{' '}
