@@ -43,6 +43,92 @@
   margin-bottom: 2px;
 }
 
+/* Partnership Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  padding: 1rem;
+}
+
+.modalContent {
+  background: var(--ifm-background-color);
+  border-radius: 12px;
+  padding: 2rem;
+  max-width: 500px;
+  width: 100%;
+  max-height: 80vh;
+  overflow: auto;
+  position: relative;
+}
+
+.modalCloseButton {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--ifm-color-primary);
+  padding: 0.25rem;
+}
+
+.modalHeader {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.modalBody {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.modalActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 2rem;
+  flex-direction: column;
+}
+
+.modalPrimaryButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: var(--accent-blue);
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+  transition: transform 0.2s ease;
+}
+
+.modalPrimaryButton:hover {
+  transform: translateY(-2px);
+  color: white;
+  text-decoration: none;
+}
+
+.modalSecondaryButton {
+  padding: 0.75rem;
+  background: transparent;
+  border: 1px solid var(--ifm-color-primary);
+  border-radius: 8px;
+  color: var(--ifm-color-primary);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
 /* Responsive mobile layout for thanks page */
 @media (max-width: 768px) {
   .container > div {

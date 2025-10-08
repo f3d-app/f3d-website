@@ -65,7 +65,7 @@ function DonationWidget(): ReactNode {
   const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time');
   const [currency, setCurrency] = useState<'USD' | 'EUR'>('EUR');
   const [selectedAmount, setSelectedAmount] = useState<number | string | null>(5);
-  const [customAmount, setCustomAmount] = useState<string>('');
+  const [showPartnershipModal, setShowPartnershipModal] = useState<boolean>(false);
   
   const suggestedAmounts = {
     'one-time': [1, 5, 10, 50, 100, 'Custom'],
@@ -267,7 +267,11 @@ function DonationWidget(): ReactNode {
               <button
                 key={amount}
                 onClick={() => {
-                  setSelectedAmount(amount);
+                  if (amount === "Let's chat!") {
+                    setShowPartnershipModal(true);
+                  } else {
+                    setSelectedAmount(amount);
+                  }
                 }}
                 style={{
                   padding: '0.75rem',
@@ -331,6 +335,79 @@ function DonationWidget(): ReactNode {
       }}>
         Secure payment via Stripe
       </p>
+
+      {/* Partnership Modal */}
+      {showPartnershipModal && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContent}>
+            <button
+              onClick={() => setShowPartnershipModal(false)}
+              className={styles.modalCloseButton}
+            >
+              ×
+            </button>
+
+            <div className={styles.modalHeader}>
+              <Icon
+                icon="material-symbols:handshake-rounded"
+                style={{ fontSize: '3rem', color: 'var(--accent-blue)', marginBottom: '0.5rem' }}
+              />
+              <Heading as="h3" style={{ margin: '0.5rem 0 1rem 0' }}>
+                Industry Partnership
+              </Heading>
+            </div>
+
+            <div className={styles.modalBody}>
+              <p>
+                We'd love to chat with <strong>companies and organizations</strong> interested in sponsoring F3D for a custom partnership with industry-standard support.
+              </p>
+
+              <p>
+                <strong>What we offer:</strong>
+              </p>
+              <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                <li>Priority feature development</li>
+                <li>Custom integration support</li>
+                <li>Direct communication channel with maintainers</li>
+                <li>Service level agreements (SLA)</li>
+                <li>Logo placement and public recognition</li>
+                <li>Training and consultation services</li>
+              </ul>
+
+              <p>
+                <strong>Perfect for:</strong>
+              </p>
+              <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                <li>Companies using F3D in production</li>
+                <li>Organizations needing reliable 3D visualization</li>
+                <li>Businesses wanting to ensure F3D's long-term sustainability</li>
+                <li>Teams requiring custom features or integrations</li>
+              </ul>
+
+              <p>
+                Ready to discuss how F3D can support your organization's needs?
+              </p>
+            </div>
+
+            <div className={styles.modalActions}>
+              <a
+                href="mailto:contact@f3d.app?subject=Industry Partnership Inquiry"
+                className={styles.modalPrimaryButton}
+              >
+                <Icon icon="material-symbols:email-rounded" />
+                Contact Us: contact@f3d.app
+              </a>
+
+              <button
+                onClick={() => setShowPartnershipModal(false)}
+                className={styles.modalSecondaryButton}
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
