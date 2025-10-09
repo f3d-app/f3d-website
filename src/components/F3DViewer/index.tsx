@@ -12,7 +12,10 @@ function initViewer(moduleRef, fileUrl) {
       const defaultFile = await fetch(fileUrl).then((b) =>
         b.arrayBuffer()
       );
-      Module.FS.writeFile("f3d.vtp", new Uint8Array(defaultFile));
+
+      const modelName = fileUrl.split("/").pop();
+
+      Module.FS.writeFile(modelName, new Uint8Array(defaultFile));
 
       // automatically load all supported file format readers
       Module.Engine.autoloadPlugins();
@@ -51,7 +54,7 @@ function initViewer(moduleRef, fileUrl) {
         );
 
       // load file
-      openFile(moduleRef, "f3d.vtp");
+      openFile(moduleRef, modelName);
 
       Module.engineInstance.getInteractor().start();
     })

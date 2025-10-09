@@ -1,4 +1,5 @@
 import React, { useRef, useState, ReactNode } from 'react';
+import { useLocation } from '@docusaurus/router';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
@@ -7,11 +8,15 @@ import { Icon } from '@iconify/react';
 import styles from './viewer.module.css';
 
 
-function ViewerApp() {
+interface ViewerAppProps {
+  model?: string;
+}
+
+function ViewerApp({ model }: ViewerAppProps) {
   const viewerRef = useRef(null);
   const [upDirection, setUpDirection] = useState('+Z');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const fileUrl = useBaseUrl('/data/f3d.vtp');
+  const fileUrl = model || useBaseUrl('/data/f3d.vtp');
 
   // Callback for switch toggles
   const handleSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -125,7 +130,7 @@ function ViewerApp() {
                 onChange={handleFileChange}
               />
               <span className="button button--primary button--lg">Open a file...</span>
-              <span className={styles.fileName} id="file-name">f3d.vtp</span>
+              <span className={styles.fileName} id="file-name">{model || 'f3d.vtp'}</span>
             </label>
           </div>
           <div className={styles.upDirectionGroup}>
@@ -199,11 +204,20 @@ function ViewerApp() {
 
 export default function Viewer(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
+  const location = useLocation();
+  
+  // Remove the leading '#' and parse as query string
+  const hashWithoutHash = location.hash.substring(1);
+  const searchParams = new URLSearchParams(hashWithoutHash);
+  const model = searchParams.get('model') || undefined;
+
+  console.log("Extracted model:", model);
+  
   return (
     <Layout
       title={`${siteConfig.title}`}
       description="F3D website">
-      <ViewerApp />
+      <ViewerApp model={model} />
     </Layout>
   );
 }
