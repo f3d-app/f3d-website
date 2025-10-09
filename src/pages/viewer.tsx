@@ -37,7 +37,7 @@ function ViewerApp() {
       const reader = new FileReader();
       reader.addEventListener("loadend", (e) => {
 
-        viewerRef.current?.loadFile(file.name, new Uint8Array(reader.result));
+        viewerRef.current?.loadFile(file.name, new Uint8Array(reader.result as ArrayBuffer));
 
         /*
         progressEl.textContent = "100%";
