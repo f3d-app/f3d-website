@@ -1,0 +1,332 @@
+/* Download page styles */
+
+.hero {
+  background: var(--ifm-hero-background-color);
+  padding-bottom: 3rem;
+}
+
+.heroContent {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.heroHeader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.heroTitle {
+  font-size: 2.5rem;
+  margin-bottom: 0;
+  color: var(--accent-blue);
+  display: inline-block;
+}
+
+.latestBadge {
+  font-size: 0.75rem;
+  font-weight: 600;
+  background: var(--accent-blue);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.heroSubtitle {
+  font-size: 1.1rem;
+  color: var(--ifm-color-emphasis-700);
+  margin-bottom: 2rem;
+  font-weight: 500;
+}
+
+.mainContent {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.installationSection {
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 3rem;
+}
+
+.sectionHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.sectionLogo {
+  height: 3rem;
+  margin-bottom: 1rem;
+}
+
+.sectionTitle {
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+}
+
+.sectionDescription {
+  color: var(--ifm-color-emphasis-700);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.binariesGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 1.5rem 0;
+}
+
+.binaryCard {
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 12px;
+  padding: 1.5rem;
+  background: var(--ifm-background-surface-color);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.binaryHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.75rem;
+}
+
+.binaryInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  min-width: 0;
+  flex: 1;
+}
+
+.binaryIcon {
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+.binaryDetails {
+  min-width: 0;
+  flex: 1;
+}
+
+.binaryTitle {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.binaryMeta {
+  margin: 0;
+  font-size: 0.8rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.hashLink {
+  text-decoration: underline dotted;
+  color: inherit;
+  cursor: pointer;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--accent-blue);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.9rem;
+  width: 100%;
+  justify-content: center;
+  position: relative;
+}
+
+.downloadIcon {
+  font-size: 1.1rem;
+}
+
+.additionalSection {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: var(--ifm-background-color);
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.packageHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.packageIcon {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+}
+
+.packageTitle {
+  margin: 0;
+  color: var(--accent-blue);
+}
+
+.packageDescription {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.additionalGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(250px, 100%), 1fr));
+  gap: 1rem;
+}
+
+.additionalCard {
+  padding: 1rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.additionalCard:hover {
+  transform: translateY(-1px);
+}
+
+.additionalCard.nightly:hover {
+  border-color: var(--accent-yellow);
+}
+
+.additionalCard.history:hover {
+  border-color: var(--ifm-color-emphasis-500);
+}
+
+.additionalCardHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.additionalCardIcon {
+  font-size: 1.2rem;
+}
+
+.additionalCardIcon.nightly {
+  color: var(--accent-yellow);
+}
+
+.additionalCardIcon.history {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.additionalCardTitle {
+  margin: 0;
+  font-weight: 600;
+}
+
+.additionalCardTitle.nightly {
+  color: var(--accent-yellow);
+}
+
+.additionalCardTitle.history {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.additionalCardDescription {
+  margin: 0 0 1rem 0;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+  line-height: 1.4;
+}
+
+.additionalCardLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
+.additionalCardLink.nightly {
+  color: var(--accent-yellow);
+}
+
+.additionalCardLink.history {
+  color: var(--ifm-color-emphasis-700);
+}
+
+.windowsPackageGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+.bottomGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.libraryCard {
+  padding: 2rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  text-align: center;
+}
+
+.libraryIcon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.libraryTitle {
+  margin-bottom: 1rem;
+  color: var(--accent-blue);
+}
+
+.libraryDescription {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+  line-height: 1.6;
+}
+
+.betaBadge {
+  font-size: 0.7rem;
+  font-weight: 600;
+  background: var(--accent-yellow);
+  color: var(--text-primary);
+  padding: 0.2rem 0.6rem;
+  border-radius: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.libraryTitleWithBadge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.libraryTitleWithBadge .libraryTitle {
+  margin-bottom: 0;
+}

@@ -1,0 +1,128 @@
+/* Package Manager Components Styles */
+
+.packageSection {
+  background: var(--ifm-background-color);
+  padding: 1.5rem;
+  border-radius: 8px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+}
+
+.packageHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.packageIcon {
+  font-size: 1.5rem;
+  color: var(--accent-blue);
+}
+
+.packageTitle {
+  margin: 0;
+  color: var(--accent-blue);
+}
+
+.packageDescription {
+  margin-bottom: 1.5rem;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.packageManagerCard {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 8px;
+  padding: 1.25rem;
+  transition: all 0.2s ease;
+}
+
+.packageManagerCard:hover {
+  border-color: var(--accent-blue);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(120, 138, 254, 0.15);
+}
+
+.packageManagerHeader {
+  margin-bottom: 0.75rem;
+}
+
+.packageManagerIcon {
+  font-size: 1.2rem;
+}
+
+.packageManagerTitle {
+  margin: 0 0 0.25rem 0;
+  color: var(--accent-blue);
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.packageManagerSubtitle {
+  margin: 0;
+  font-size: 0.85rem;
+  color: var(--ifm-color-emphasis-600);
+}
+
+.packageManagerCode {
+  margin-bottom: 1rem;
+}
+
+.packageManagerLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: var(--accent-blue);
+  color: white;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+}
+
+.packageManagerLink:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+  color: white;
+}
+
+.distroGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 0.75rem;
+}
+
+.distroLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-emphasis-200);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ifm-color-emphasis-800);
+  font-size: 0.85rem;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  min-height: 2.5rem;
+}
+
+.distroLink:hover {
+  background: var(--accent-blue);
+  color: white;
+  transform: translateY(-1px);
+  border-color: var(--accent-blue);
+}
+
+.homebrewHeader {
+  display: flex;
+  color: var(--accent-blue);
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.25rem;
+}
