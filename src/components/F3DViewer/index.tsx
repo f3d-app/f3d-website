@@ -1,5 +1,4 @@
 import React, { ReactNode, useEffect, useRef, forwardRef, useImperativeHandle } from "react";
-import useBaseUrl from "@docusaurus/useBaseUrl";
 import f3d from "f3d";
 import styles from "./styles.module.css";
 
@@ -72,9 +71,12 @@ function openFile(moduleRef, file) {
   moduleRef.current.currentFile = file;
 }
 
-const F3DViewer = forwardRef((props, ref) => {
+interface F3DViewerProps {
+  fileUrl: string;
+}
+
+const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   const moduleRef = useRef(null);
-  const fileUrl = useBaseUrl('/data/f3d.vtp');
   useImperativeHandle(ref, () => ({
 
     loadFile: (file, buffer) => {

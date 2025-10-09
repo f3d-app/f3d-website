@@ -1,5 +1,6 @@
 import React, { useRef, useState, ReactNode } from 'react';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 import Layout from '@theme/Layout';
 import F3DViewer from '@site/src/components/F3DViewer';
 import { Icon } from '@iconify/react';
@@ -10,6 +11,7 @@ function ViewerApp() {
   const viewerRef = useRef(null);
   const [upDirection, setUpDirection] = useState('+Z');
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const fileUrl = useBaseUrl('/data/f3d.vtp');
 
   // Callback for switch toggles
   const handleSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,26 +38,50 @@ function ViewerApp() {
 
       const reader = new FileReader();
       reader.addEventListener("loadend", (e) => {
+        const progressContainer = document.getElementById("progressContainer");
+        const progressFill = document.getElementById("progressFill");
+        const progressText = document.getElementById("progressText");
+        
+        if (progressFill && progressText) {
+          progressFill.style.width = "100%";
+          progressText.textContent = "100%";
+        }
+        
+        if (progressContainer) {
+          progressContainer.classList.add(styles.fadeOut);
+          setTimeout(() => {
+            progressContainer.style.display = "none";
+            progressContainer.classList.remove(styles.fadeOut);
+          }, 1000);
+        }
 
         viewerRef.current?.loadFile(file.name, new Uint8Array(reader.result as ArrayBuffer));
-
-        /*
-        progressEl.textContent = "100%";
-        progressEl.value = 100;
-        Module.FS.writeFile(file.name, new Uint8Array(reader.result));
-        openFile(file.name);
-        progressEl.parentElement.style.display = "none";
-        */
       });
+      
       reader.addEventListener("progress", (evt) => {
-        /*
-        console.log(evt);
-        const progress = Math.floor((100 * evt.loaded) / evt.total);
-        progressEl.parentElement.style.display = "block";
-        progressEl.value = progress;
-        progressEl.textContent = `${progress}%`;
-        */
+        const progressContainer = document.getElementById("progressContainer");
+        const progressFill = document.getElementById("progressFill");
+        const progressText = document.getElementById("progressText");
+        
+        if (evt.lengthComputable && progressFill && progressText) {
+          const progress = Math.floor((100 * evt.loaded) / evt.total);
+          if (progressContainer) {
+            progressContainer.style.display = "flex";
+          }
+          progressFill.style.width = `${progress}%`;
+          progressText.textContent = `${progress}%`;
+        }
       });
+
+      const progressContainer = document.getElementById("progressContainer");
+      const progressFill = document.getElementById("progressFill");
+      const progressText = document.getElementById("progressText");
+      
+      if (progressFill && progressText && progressContainer) {
+        progressFill.style.width = "0%";
+        progressText.textContent = "0%";
+        progressContainer.style.display = "flex";
+      }
 
       reader.readAsArrayBuffer(file);
     }
@@ -158,19 +184,14 @@ function ViewerApp() {
         )}
         
         <main className={styles.viewerPanel}>
-          <F3DViewer ref={viewerRef} />
+          <F3DViewer ref={viewerRef} fileUrl={fileUrl} />
         </main>
       </div>
-      <div className={styles.eventLog}>
-        <p style={{ textAlign: 'center' }}>Loading 3D object...</p>
-        <progress
-          className={styles.progress}
-          id="progressEl"
-          value="0"
-          max="100"
-        >
-          30%
-        </progress>
+      <div className={styles.progressContainer} id="progressContainer">
+        <span className={styles.progressText} id="progressText">0%</span>
+        <div className={styles.progressBar}>
+          <div className={styles.progressFill} id="progressFill" style={{ width: '0%' }}></div>
+        </div>
       </div>
     </div>
   );
