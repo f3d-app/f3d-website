@@ -148,11 +148,15 @@ async function copyDocs() {
             await cp(srcFile, destFile);
         }
 
-        for (const file of ["doc/CHANGELOG.md", "LICENSE.md"]) {
-            const srcFile = path.join(SOURCE_DIR, file);
-            const destFile = path.join(__dirname, "..", "src", "pages", file);
-            await cp(srcFile, destFile);
-        }
+        // copy CHANGELOG.md
+        const changelogSrc = path.join(SOURCE_DIR, "doc", "CHANGELOG.md");
+        const changelogDest = path.join(__dirname, "..", "src", "pages", "CHANGELOG.md");
+        await cp(changelogSrc, changelogDest);
+
+        // copy LICENSE.md
+        const licenseSrc = path.join(SOURCE_DIR, "LICENSE.md");
+        const licenseDest = path.join(__dirname, "..", "src", "pages", "LICENSE.md");
+        await cp(licenseSrc, licenseDest);
 
         console.log("Documentation copied successfully");
     } catch (error) {

@@ -83,7 +83,7 @@ The GCC flag `-latomic` is not being added automatically with specific architect
 
 > `--rendering-backend` CLI option is not working as expected
 
-Dynamically switching rendering backend require VTK 9.4.0, you may need to update VTK or to use our [binary release](https://meakk.github.io/f3d-website/download).
+Dynamically switching rendering backend require VTK 9.4.0, you may need to update VTK or to use our [binary release](/download).
 
 > I'm unable to link C++ examples against my local F3D install directory, it complains about missing VTK symbols
 
@@ -132,7 +132,7 @@ It's a limitation from the Windows "subsystem". Use `f3d-console.exe` instead.
 
 > When playing an animation, the animation appear to move too slowly
 
-This is a limitation of older VTK version before VTK 9.5.0, use our [binaries](https://meakk.github.io/f3d-website/download) or compile a recent version of VTK.
+This is a limitation of older VTK version before VTK 9.5.0, use our [binaries](/download) or compile a recent version of VTK.
 
 ### MacOS
 
