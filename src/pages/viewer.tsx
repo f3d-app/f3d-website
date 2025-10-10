@@ -96,8 +96,6 @@ function ViewerApp({ model }: ViewerAppProps) {
   const handleUpDirection = (direction: '+Y' | '+Z') => {
     setUpDirection(direction);
     viewerRef.current?.setUpDirection?.(direction);
-    // Optionally, update button styles here if you want to reflect active state
-    console.log('Set up direction:', direction);
   };
 
   return (
@@ -210,8 +208,6 @@ export default function Viewer(): ReactNode {
   const hashWithoutHash = location.hash.substring(1);
   const searchParams = new URLSearchParams(hashWithoutHash);
   const model = searchParams.get('model') || undefined;
-
-  console.log("Extracted model:", model);
   
   return (
     <Layout

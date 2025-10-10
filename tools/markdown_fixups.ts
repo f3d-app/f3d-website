@@ -1,8 +1,7 @@
-
-export function process_options_md(content: string) {
+function process_options_md(content: string) {
     const known_flags: { [k: string]: string; } = {}
 
-    function fix_cli_headers(substring: string, ...args: string[]) {
+    function fix_cli_headers(_: string, ...args: string[]) {
         const h_tag = args[0];
         let flags_md = args[1];
         const details = args[2];
@@ -28,8 +27,10 @@ export function process_options_md(content: string) {
         return is_known_flag && !is_header ? `[\`${args[0]}${args[1] || ""}\`](#${known_flags[args[0]]})` : substring;
     }
 
-    let lines = content.split('\n');
-    lines = lines.map(l => l.replace(/(##+) *(`[^\()]+) *(\(.+\))?/, fix_cli_headers));
+    let lines = content.split(/\r?\n/g);
+    lines = lines.map(l => l.replace(/(##+) *(`[^\(\)]+) *(\(.+\))?/, fix_cli_headers));
     lines = lines.map(l => l.replaceAll(/`(--?[^=`]+)(=[^`]*)?`/g, add_anchor_links_for_known_flags));
     return lines.join('\n');
 }
+
+module.exports = process_options_md;

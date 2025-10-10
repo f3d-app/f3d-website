@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import { process_options_md } from "./markdown_fixups.ts";
+import process_options_md from "./markdown_fixups.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -99,7 +99,7 @@ async function runSeaborg() {
             // replace <a> elements by Markdown anchors
             content = content.replace(/<a id="([^"]+)"><\/a>\n(.+)/g, '$2 {#$1}');
 
-            const lines = content.split('\n');
+            const lines = content.split(/\r?\n/g);
             const newLines = [];
             for (let i = 0; i < lines.length; i++) {
                 // remove lines starting with "**TODO**" and following lines
