@@ -300,3 +300,29 @@ small .iconify {
 .DocSearch-Footer {
   visibility: hidden;
 }
+
+
+.docs-doc-id-user\/OPTIONS{
+  /* dim value hints in header */
+  h3 > em > code {
+    opacity: .5;
+    font-style: normal;
+    font-weight: normal;
+  }
+  /* make default values not bold */
+  h3 > small {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  /* dim value hints in TOC */
+  ul.table-of-contents li > a > em {
+    opacity: .5;
+    font-style: normal;
+    font-weight: normal;
+  }
+  /* hide default values in TOC */
+  ul.table-of-contents li > a > small {
+    display: none;
+  }
+}

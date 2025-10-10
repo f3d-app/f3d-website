@@ -1,9 +1,11 @@
-import { mkdir, rm, cp } from "fs/promises";
+import { mkdir, rm, cp, writeFile, readFile } from "fs/promises";
 import { exec } from "child_process";
 import { promisify } from "util";
 import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
+
+import { process_options_md } from "./markdown_fixups.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -164,6 +166,12 @@ async function copyDocs() {
     }
 }
 
+async function preprocess_OptionsMd() {
+    const filePath = path.join(__dirname, "..", "docs", "user", 'OPTIONS.md');
+    const contents = await readFile(filePath, { encoding: 'utf8' });
+    await writeFile(filePath, process_options_md(contents));
+}
+
 async function cleanup() {
     console.log("Cleaning up temporary files...");
     try {
@@ -187,6 +195,7 @@ console.log(`Generating Doxygen documentation for F3D tag: ${tag}`);
 try {
     await fetchRepository(tag);
     await copyDocs();
+    await preprocess_OptionsMd();
     await runDoxygen();
     await runSeaborg();
     console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);
