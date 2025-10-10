@@ -61,6 +61,11 @@ Make sure that VTK has been built with _OpenImageDenoise_ support (`VTKOSPRAY_EN
 
 Your data probably contains some translucent data for some reason, turn on translucency support by pressing `P` or using the `-p` command line option.
 
+> My 3D Gaussian Splatting data in .ply format isn't opened properly.
+
+.ply is a generic file format, we cannot assumes it's a 3DGS, thus we do not give good presets for this specific use case.
+It's recommended to use these options: `--point-sprites-size=1 --point-sprites-type=gaussian -soyk`, but you can also add them in your [config file](CONFIGURATION_FILE.md).
+
 ### Linux
 
 > I have a link error related to `stdc++fs` not found or I'm unable to run F3D due to filesystem errors.
@@ -79,11 +84,11 @@ The GCC flag `-latomic` is not being added automatically with specific architect
 - If they are working, then it is an issue specific to your file manager (see below for a potential work around).
 - If only a few format have working thumbnails, then it is an issue with the mime types database.
 - If no formats have working thumbnails, then it is can be an issue with sandboxing or with the `f3d-plugin-xxx.thumbnailer` files.
-- If only big file do not have thumbnails, this is intended, you can modify this behavior in the `thumbnail.d/05_all.json` configuration folder using the `max-size` option.
+- If only big file do not have thumbnails, this is intended, you can modify this behavior in the `thumbnail.d/05_all.json` configuration directory using the `max-size` option.
 
 > `--rendering-backend` CLI option is not working as expected
 
-Dynamically switching rendering backend require VTK 9.4.0, you may need to update VTK or to use our [binary release](/download).
+Dynamically switching rendering backend require VTK 9.4.0, you may need to update VTK or to use our binary release.
 
 > I'm unable to link C++ examples against my local F3D install directory, it complains about missing VTK symbols
 
@@ -110,7 +115,7 @@ OpenGL applications like F3D can have issues when launched from Windows Server o
 You can try to use a software implementation of OpenGL, called [Mesa](https://github.com/pal1000/mesa-dist-win/releases).
 
 - Download the latest `release-msvc`.
-- copy `x64/opengl32.dll`, `libgallium_wgl.dll` and `x64/libglapi.dll` in the same folder as `f3d.exe`.
+- copy `x64/opengl32.dll`, `libgallium_wgl.dll` and `x64/libglapi.dll` in the same directory as `f3d.exe`.
 - set the environment variable `MESA_GL_VERSION_OVERRIDE` to 4.5.
 - run `f3d.exe`.
 
@@ -132,7 +137,7 @@ It's a limitation from the Windows "subsystem". Use `f3d-console.exe` instead.
 
 > When playing an animation, the animation appear to move too slowly
 
-This is a limitation of older VTK version before VTK 9.5.0, use our [binaries](/download) or compile a recent version of VTK.
+This is a limitation of older VTK version before VTK 9.5.0, use our binaries or compile a recent version of VTK.
 
 ### MacOS
 
