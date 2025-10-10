@@ -1,4 +1,4 @@
-function processOptionsMd(content: string) {
+function processOptions(content: string): string {
     const known_flags: { [k: string]: string; } = {}
 
     function fixCliHeaders(_: string, ...args: string[]) {
@@ -33,9 +33,9 @@ function processOptionsMd(content: string) {
     return lines.join('\n');
 }
 
-function convertGithubAdmonitions(content) {
+function convertGithubAdmonitions(content: string): string {
     const admonitionRegex = /^> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*\n((?:^>.*\n?)*)/gm;
-    
+
     return content.replace(admonitionRegex, (_, type, body) => {
         const docusaurusType = type.toLowerCase();
         const cleanBody = body
@@ -44,17 +44,17 @@ function convertGithubAdmonitions(content) {
             .filter(line => line.trim() !== '')
             .join('\n')
             .trim();
-        
+
         return `:::${docusaurusType}\n\n${cleanBody}\n\n:::`;
     });
 }
 
-function fixContributingLinks(content) {
+function fixContributingLinks(content: string): string {
     return content.replaceAll('doc/dev/', '');
 }
 
-function fixImages(content) {
+function fixImages(content: string): string {
     return content.replaceAll(/<img.*\/([^\/]+)\.png.*\/>/g, '![$1]($1.png)');
 }
 
-module.exports = { processOptionsMd, convertGithubAdmonitions, fixContributingLinks, fixImages };
+export { processOptions, convertGithubAdmonitions, fixContributingLinks, fixImages };

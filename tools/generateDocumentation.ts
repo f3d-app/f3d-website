@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import { processOptionsMd, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdown_fixups.ts";
+import { processOptions, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdownFixups";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -16,7 +16,7 @@ const REPO_URL = "https://github.com/f3d-app/f3d";
 const SOURCE_DIR = path.join(__dirname, "f3d-src");
 const OUTPUT_DIR = path.join(__dirname, "doxygen_output");
 
-async function fetchRepository(tag) {
+async function fetchRepository(tag: string): Promise<void> {
     console.log(`Fetching F3D repository at tag ${tag}...`);
 
     // Clean up any existing source directory
@@ -34,11 +34,11 @@ async function fetchRepository(tag) {
         console.log("Repository cloned successfully");
         if (stderr) console.log("Git output:", stderr);
     } catch (error) {
-        throw new Error(`Failed to clone repository: ${error.message}`);
+        throw new Error(`Failed to clone repository: ${(error as Error).message}`);
     }
 }
 
-async function runDoxygen() {
+async function runDoxygen(): Promise<void> {
     console.log("Running doxygen...");
 
     try {
@@ -62,11 +62,11 @@ async function runDoxygen() {
         if (stderr) console.log("Doxygen warnings/errors:", stderr);
 
     } catch (error) {
-        throw new Error(`Failed to run doxygen: ${error.message}`);
+        throw new Error(`Failed to run doxygen: ${(error as Error).message}`);
     }
 }
 
-async function runSeaborg() {
+async function runSeaborg(): Promise<void> {
     console.log("Running seaborg...");
 
     const inPath = path.join(__dirname, 'doxygen_output', 'xml');
@@ -82,7 +82,7 @@ async function runSeaborg() {
         if (stderr) console.log("Seaborg warnings/errors:", stderr);
 
     } catch (error) {
-        throw new Error(`Failed to run seaborg: ${error.message}`);
+        throw new Error(`Failed to run seaborg: ${(error as Error).message}`);
     }
 
     // Postprocess files in ../docs/api
@@ -100,7 +100,7 @@ async function runSeaborg() {
             content = content.replace(/<a id="([^"]+)"><\/a>\n(.+)/g, '$2 {#$1}');
 
             const lines = content.split(/\r?\n/g);
-            const newLines = [];
+            const newLines: string[] = [];
             for (let i = 0; i < lines.length; i++) {
                 // remove lines starting with "**TODO**" and following lines
                 if (lines[i].startsWith("**TODO**:") || lines[i].includes('{"type":"element"')) {
@@ -132,7 +132,7 @@ async function runSeaborg() {
     console.log("Postprocessing completed.");
 }
 
-async function copyDocs() {
+async function copyDocs(): Promise<void> {
     console.log("Copying documentation...");
 
     try {
@@ -142,9 +142,9 @@ async function copyDocs() {
             const destDir = path.join(__dirname, "..", "docs", dir);
             await cp(srcDir, destDir, {
                 recursive: true,
-                filter: (src, _) => {
+                filter: (src: string, _: string) => {
                     // TODO: remove this filter when the files are removed from f3d
-                    if (["INSTALLATION.md", "README_USER.md", "README_LIBF3D.md","SPONSORING.md"].includes(path.basename(src))) {
+                    if (["INSTALLATION.md", "README_USER.md", "README_LIBF3D.md", "SPONSORING.md"].includes(path.basename(src))) {
                         return false;
                     }
                     return true;
@@ -171,16 +171,16 @@ async function copyDocs() {
 
         console.log("Documentation copied successfully");
     } catch (error) {
-        throw new Error(`Failed to copy documentation: ${error.message}`);
+        throw new Error(`Failed to copy documentation: ${(error as Error).message}`);
     }
 }
 
-async function preprocessMarkdown() {
+async function preprocessMarkdown(): Promise<void> {
     // Improve OPTIONS.md anchors and formatting
     for (const file of ["docs/user/OPTIONS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
-        await writeFile(filePath, processOptionsMd(contents));
+        await writeFile(filePath, processOptions(contents));
     }
 
     // Fix links in CONTRIBUTING.md
@@ -212,14 +212,14 @@ async function preprocessMarkdown() {
     }
 }
 
-async function cleanup() {
+async function cleanup(): Promise<void> {
     console.log("Cleaning up temporary files...");
     try {
         await rm(SOURCE_DIR, { recursive: true, force: true });
         await rm(OUTPUT_DIR, { recursive: true, force: true });
         console.log("Cleanup completed");
     } catch (error) {
-        console.warn("Failed to cleanup temp directory:", error.message);
+        console.warn("Failed to cleanup temp directory:", (error as Error).message);
     }
 }
 
@@ -232,16 +232,18 @@ if (!tag) {
 
 console.log(`Generating Doxygen documentation for F3D tag: ${tag}`);
 
-try {
-    await fetchRepository(tag);
-    await copyDocs();
-    await preprocessMarkdown();
-    await runDoxygen();
-    await runSeaborg();
-    console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);
-} catch (error) {
-    console.error("❌ Error generating doxygen documentation:", error.message);
-    process.exit(1);
-} finally {
-    await cleanup();
-}
+(async () => {
+    try {
+        await fetchRepository(tag);
+        await copyDocs();
+        await preprocessMarkdown();
+        await runDoxygen();
+        await runSeaborg();
+        console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);
+    } catch (error) {
+        console.error("❌ Error generating doxygen documentation:", (error as Error).message);
+        process.exit(1);
+    } finally {
+        await cleanup();
+    }
+})();
