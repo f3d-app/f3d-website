@@ -13,20 +13,16 @@ This specific example uses an animation file which can be downloaded [here](http
 Load the example animation file shown above by executing within command line: `f3d InterpolationTest.glb`
 
 ![animation_1](animation_1.png)
-
 To view current animation name, press <kbd>H</kbd> to open up cheatsheet menu
 
 ![animation_2](animation_2.png)
-
 Press <kbd>W</kbd> to cycle through available animations
 
 ![animation_3](animation_3.png)
-
 Press <kbd>space</kbd> to play/pause current animation.
 Note: A red bar runs along the bottom of screen to indicate the current time interval of the animation sequence if animation-progress was turned on.
 
 ![animation_4](animation_4.png)
-
 "All Animations" will play all animations at the same time if supported by the file format.
 
 ## Command line options

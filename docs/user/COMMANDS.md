@@ -149,8 +149,11 @@ Command syntax is similar to bash, as in they will be split by "token" to be pro
 - Quotes and spaces can be escaped, eg: `set render.hdri.file /path/to/file\ with\ spaces\ and\ \'quotes\".png`.
 - Comment are supported using `#`, Any character after will be ignored. Use `\#` to add it verbatim.
 
-> [!NOTE]
-> Comments are only supported in command script, in interactive console `#` and all characters after will be handled
+:::note
+
+Comments are only supported in command script, in interactive console `#` and all characters after will be handled
+
+:::
 > as standard character.
 
 - Escapes can be escaped too: eg: `set render.hdri.file C:\\path\\to\\windows\\file.png`.

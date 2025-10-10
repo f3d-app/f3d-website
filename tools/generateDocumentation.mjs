@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import process_options_md from "./markdown_fixups.ts";
+import { processOptionsMd, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdown_fixups.ts";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -18,14 +18,14 @@ const OUTPUT_DIR = path.join(__dirname, "doxygen_output");
 
 async function fetchRepository(tag) {
     console.log(`Fetching F3D repository at tag ${tag}...`);
-    
+
     // Clean up any existing source directory
     try {
         await rm(SOURCE_DIR, { recursive: true, force: true });
     } catch (error) {
         // Directory might not exist, that's ok
     }
-    
+
     // Clone the repository at the specific tag
     const cloneCmd = `git clone --depth 1 --branch ${tag} ${REPO_URL} "${SOURCE_DIR}"`;
 
@@ -56,11 +56,11 @@ async function runDoxygen() {
         const { stdout, stderr } = await execAsync(doxygenCmd, {
             maxBuffer: 1024 * 1024 * 10 // 10MB buffer for large doxygen output
         });
-        
+
         console.log("Doxygen completed successfully");
         if (stdout) console.log("Doxygen output:", stdout);
         if (stderr) console.log("Doxygen warnings/errors:", stderr);
-        
+
     } catch (error) {
         throw new Error(`Failed to run doxygen: ${error.message}`);
     }
@@ -140,7 +140,16 @@ async function copyDocs() {
         for (const dir of ["user", "libf3d"]) {
             const srcDir = path.join(SOURCE_DIR, "doc", dir);
             const destDir = path.join(__dirname, "..", "docs", dir);
-            await cp(srcDir, destDir, { recursive: true });
+            await cp(srcDir, destDir, {
+                recursive: true,
+                filter: (src, _) => {
+                    // TODO: remove this filter when the files are removed from f3d
+                    if (["INSTALLATION.md", "README_USER.md", "README_LIBF3D.md","SPONSORING.md"].includes(path.basename(src))) {
+                        return false;
+                    }
+                    return true;
+                }
+            });
         }
 
         // copy some specific files
@@ -166,10 +175,41 @@ async function copyDocs() {
     }
 }
 
-async function preprocess_OptionsMd() {
-    const filePath = path.join(__dirname, "..", "docs", "user", 'OPTIONS.md');
-    const contents = await readFile(filePath, { encoding: 'utf8' });
-    await writeFile(filePath, process_options_md(contents));
+async function preprocessMarkdown() {
+    // Improve OPTIONS.md anchors and formatting
+    for (const file of ["docs/user/OPTIONS.md"]) {
+        const filePath = path.join(__dirname, "..", file);
+        const contents = await readFile(filePath, { encoding: 'utf8' });
+        await writeFile(filePath, processOptionsMd(contents));
+    }
+
+    // Fix links in CONTRIBUTING.md
+    for (const file of ["dev/CONTRIBUTING.md"]) {
+        const filePath = path.join(__dirname, "..", file);
+        const contents = await readFile(filePath, { encoding: 'utf8' });
+        await writeFile(filePath, fixContributingLinks(contents));
+    }
+
+    // Fix images in ANIMATIONS.md and COLOR_MAPS.md
+    for (const file of ["docs/user/ANIMATIONS.md", "docs/user/COLOR_MAPS.md"]) {
+        const filePath = path.join(__dirname, "..", file);
+        const contents = await readFile(filePath, { encoding: 'utf8' });
+        await writeFile(filePath, fixImages(contents));
+    }
+
+    // Convert GitHub-style admonitions in all markdown files
+    for (const dir of ["dev", "docs/libf3d", "docs/user"]) {
+        const fullDir = path.join(__dirname, "..", dir);
+        const files = await fs.promises.readdir(fullDir);
+        for (const file of files) {
+            if (file.endsWith('.md')) {
+                const filePath = path.join(fullDir, file);
+                let content = await fs.promises.readFile(filePath, 'utf-8');
+                content = convertGithubAdmonitions(content);
+                await fs.promises.writeFile(filePath, content, 'utf-8');
+            }
+        }
+    }
 }
 
 async function cleanup() {
@@ -195,7 +235,7 @@ console.log(`Generating Doxygen documentation for F3D tag: ${tag}`);
 try {
     await fetchRepository(tag);
     await copyDocs();
-    await preprocess_OptionsMd();
+    await preprocessMarkdown();
     await runDoxygen();
     await runSeaborg();
     console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);

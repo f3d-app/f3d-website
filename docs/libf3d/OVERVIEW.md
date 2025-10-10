@@ -123,8 +123,11 @@ For the complete documentation, please consult the [libf3d doxygen documentation
 
 ## Building against the libf3d
 
-> [!NOTE]
-> `libf3d` works best when built as a shared library, make sure it's the case. The `sdk` component must also be installed in order to be able to use CMake to find `libf3d`.
+:::note
+
+`libf3d` works best when built as a shared library, make sure it's the case. The `sdk` component must also be installed in order to be able to use CMake to find `libf3d`.
+
+:::
 
 It's as simple as linking against it like this in your CMakeLists.txt:
 
