@@ -38,10 +38,9 @@ see [the format list](SUPPORTED_FORMATS.md) for more details.
 :::note
 
 Native plugin is always loaded automatically.
+If you downloaded the binaries from the release page, it's not necessary to specify manually the plugins above. F3D loads them automatically.
 
 :::
-> If you downloaded the binaries from the release page, it's not necessary to specify manually the plugins above. F3D loads them automatically.
-
 Here is how the plugins are searched (in preceding order):
 
 1. Search the static plugins.

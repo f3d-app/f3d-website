@@ -51,6 +51,7 @@ click 1 "types_8h.md#types_8h"
 ## Included by
 
 * [camera.h](camera_8h.md)
+* [options.h](options_8h.md)
 * [scene.h](scene_8h.md)
 
 
@@ -67,14 +68,20 @@ click 4 "engine_8h_source.md#engine_8h_source"
 click 5 "interactor_8h_source.md#interactor_8h_source"
 4 --> 5
 
-6["scene.h"]
-click 6 "scene_8h_source.md#scene_8h_source"
+6["options.h"]
+click 6 "options_8h_source.md#options_8h_source"
 4 --> 6
+5 --> 6
+
+7["scene.h"]
+click 7 "scene_8h_source.md#scene_8h_source"
+4 --> 7
 
 1["types.h"]
 click 1 "types_8h.md#types_8h"
 2 --> 1
 6 --> 1
+7 --> 1
 
 3["window.h"]
 click 3 "window_8h_source.md#window_8h_source"
@@ -383,7 +390,7 @@ struct F3D_EXPORT light_state_t
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[const]: https://img.shields.io/badge/-const-lightblue (const)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
 [private]: https://img.shields.io/badge/-private-red (private)

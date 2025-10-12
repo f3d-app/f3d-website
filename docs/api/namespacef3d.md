@@ -24,6 +24,7 @@
 * [f3d::light\_state\_t](structf3d_1_1light__state__t.md)
 * [f3d::log](classf3d_1_1log.md)
 * [f3d::mesh\_t](structf3d_1_1mesh__t.md)
+* [f3d::options](classf3d_1_1options.md)
 * [f3d::point3\_t](structf3d_1_1point3__t.md)
 * [f3d::ratio\_t](classf3d_1_1ratio__t.md)
 * [f3d::scene](classf3d_1_1scene.md)
@@ -35,6 +36,28 @@
 * [f3d::window](classf3d_1_1window.md)
 
 ## Typedefs
+
+### Typedef option\_variant\_t {#options_8h_1a64f3fb0a25524b592638f097793a05f6}
+
+![][public]
+
+
+
+```cpp
+using f3d::option_variant_t = 
+  std::variant<bool, int, double, std::string, std::vector<double>, std::vector<int>>
+```
+
+
+
+
+
+
+
+
+**Return type**: std::variant< bool, int, double, std::string, std::vector< double >, std::vector< int > >
+
+
 
 ### Typedef angle\_deg\_t {#types_8h_1afffcb2b9b7c98468046339a5f53837ce}
 
@@ -124,7 +147,7 @@ enum F3D_EXPORT f3d::SCENE_LIGHT = 3
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[const]: https://img.shields.io/badge/-const-lightblue (const)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
 [private]: https://img.shields.io/badge/-private-red (private)

@@ -28,17 +28,17 @@
 * [exception.h](exception_8h.md)
 * export.h
 * [interactor.h](interactor_8h.md)
-* options.h
+* [options.h](options_8h.md)
 * [scene.h](scene_8h.md)
 * [window.h](window_8h.md)
 
 
 ```mermaid
 graph LR
-9["camera.h"]
-click 9 "camera_8h_source.md#camera_8h_source"
-9 --> 4
-9 --> 10
+10["camera.h"]
+click 10 "camera_8h_source.md#camera_8h_source"
+10 --> 4
+10 --> 8
 
 2["context.h"]
 click 2 "context_8h_source.md#context_8h_source"
@@ -53,7 +53,7 @@ click 1 "engine_8h.md#engine_8h"
 1 --> 5
 1 --> 7
 1 --> 12
-1 --> 8
+1 --> 9
 
 3["exception.h"]
 click 3 "exception_8h_source.md#exception_8h_source"
@@ -69,32 +69,36 @@ click 5 "interactor_8h_source.md#interactor_8h_source"
 5 --> 4
 5 --> 6
 5 --> 7
-5 --> 8
+5 --> 9
 
 6["log.h"]
 click 6 "log_8h_source.md#log_8h_source"
 6 --> 4
 
+7["options.h"]
+click 7 "options_8h_source.md#options_8h_source"
+7 --> 3
+7 --> 4
+7 --> 8
+
 12["scene.h"]
 click 12 "scene_8h_source.md#scene_8h_source"
 12 --> 3
 12 --> 4
-12 --> 10
+12 --> 8
 
-10["types.h"]
-click 10 "types_8h_source.md#types_8h_source"
-10 --> 3
-10 --> 4
-
-8["window.h"]
-click 8 "window_8h_source.md#window_8h_source"
-8 --> 9
+8["types.h"]
+click 8 "types_8h_source.md#types_8h_source"
+8 --> 3
 8 --> 4
-8 --> 11
+
+9["window.h"]
+click 9 "window_8h_source.md#window_8h_source"
+9 --> 10
+9 --> 4
+9 --> 11
 
 4["export.h"]
-
-7["options.h"]
 
 ```
 
@@ -246,7 +250,7 @@ private:
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[const]: https://img.shields.io/badge/-const-lightblue (const)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
 [private]: https://img.shields.io/badge/-private-red (private)

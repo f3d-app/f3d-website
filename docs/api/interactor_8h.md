@@ -26,16 +26,16 @@
 * [exception.h](exception_8h.md)
 * export.h
 * [log.h](log_8h.md)
-* options.h
+* [options.h](options_8h.md)
 * [window.h](window_8h.md)
 
 
 ```mermaid
 graph LR
-7["camera.h"]
-click 7 "camera_8h_source.md#camera_8h_source"
-7 --> 3
-7 --> 8
+8["camera.h"]
+click 8 "camera_8h_source.md#camera_8h_source"
+8 --> 3
+8 --> 6
 
 2["exception.h"]
 click 2 "exception_8h_source.md#exception_8h_source"
@@ -51,26 +51,30 @@ click 1 "interactor_8h.md#interactor_8h"
 1 --> 3
 1 --> 4
 1 --> 5
-1 --> 6
+1 --> 7
 
 4["log.h"]
 click 4 "log_8h_source.md#log_8h_source"
 4 --> 3
 
-8["types.h"]
-click 8 "types_8h_source.md#types_8h_source"
-8 --> 2
-8 --> 3
+5["options.h"]
+click 5 "options_8h_source.md#options_8h_source"
+5 --> 2
+5 --> 3
+5 --> 6
 
-6["window.h"]
-click 6 "window_8h_source.md#window_8h_source"
-6 --> 7
+6["types.h"]
+click 6 "types_8h_source.md#types_8h_source"
+6 --> 2
 6 --> 3
-6 --> 9
+
+7["window.h"]
+click 7 "window_8h_source.md#window_8h_source"
+7 --> 8
+7 --> 3
+7 --> 9
 
 3["export.h"]
-
-5["options.h"]
 
 ```
 
@@ -373,7 +377,7 @@ inline interaction_bind_t interaction_bind_t::parse(std::string_view str)
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[const]: https://img.shields.io/badge/-const-lightblue (const)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
 [private]: https://img.shields.io/badge/-private-red (private)

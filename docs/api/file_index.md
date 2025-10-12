@@ -2,8 +2,8 @@
 
 ## C
 
-* [camera.h](camera_8h.md)
 * [context.h](context_8h.md)
+* [camera.h](camera_8h.md)
 
 ## E
 
@@ -18,6 +18,10 @@
 ## L
 
 * [log.h](log_8h.md)
+
+## O
+
+* [options.h](options_8h.md)
 
 ## S
 

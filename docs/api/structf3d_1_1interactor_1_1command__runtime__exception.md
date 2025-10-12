@@ -3,7 +3,7 @@
 ![][C++]
 ![][public]
 
-**Definition**: `interactor.h` (line 408)
+**Definition**: `interactor.h` (line 407)
 
 
 
@@ -46,4 +46,5 @@ f3d::interactor::command_runtime_exception::command_runtime_exception(const std:
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [const]: https://img.shields.io/badge/-const-lightblue (const)

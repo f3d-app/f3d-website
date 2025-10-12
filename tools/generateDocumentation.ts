@@ -173,6 +173,9 @@ async function copyDocs(): Promise<void> {
     } catch (error) {
         throw new Error(`Failed to copy documentation: ${(error as Error).message}`);
     }
+
+    // Postprocess some markdown files
+    await preprocessMarkdown();
 }
 
 async function preprocessMarkdown(): Promise<void> {
@@ -212,6 +215,20 @@ async function preprocessMarkdown(): Promise<void> {
     }
 }
 
+async function generateOptionsHeader(): Promise<void> {
+    console.log("Generating options.h file...");
+
+    const script = path.join(__dirname, "generateOptionsHeader.cmake");
+
+    const cmakeCmd = `cmake -DF3D_SOURCE_DIR="${SOURCE_DIR}" -P ${script}`;
+
+    try {
+        await execAsync(cmakeCmd);
+    } catch (error) {
+        throw new Error(`Failed to run CMake: ${(error as Error).message}`);
+    }
+}
+
 async function cleanup(): Promise<void> {
     console.log("Cleaning up temporary files...");
     try {
@@ -236,7 +253,7 @@ console.log(`Generating Doxygen documentation for F3D tag: ${tag}`);
     try {
         await fetchRepository(tag);
         await copyDocs();
-        await preprocessMarkdown();
+        await generateOptionsHeader();
         await runDoxygen();
         await runSeaborg();
         console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);

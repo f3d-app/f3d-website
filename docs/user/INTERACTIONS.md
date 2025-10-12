@@ -20,7 +20,6 @@ Simple interaction with the displayed data is possible directly within the windo
 When playing an animation with a scene camera, camera interactions are locked.
 
 :::
-
 ## Bindings
 
 The coloring can be controlled directly by pressing the following hotkeys:

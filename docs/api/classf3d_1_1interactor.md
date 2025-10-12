@@ -411,13 +411,44 @@ Getting documentation for a bind that does not exists will throw a [does\_not\_e
 
 
 
+### Function getBindingType {#classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17}
+
+![][public]
+![][const]
+
+
+```cpp
+virtual BindingType f3d::interactor::getBindingType(const interaction_bind_t &bind) const =0
+```
+
+
+
+
+Get the type of a binding.
+
+
+
+
+
+Getting type for a bind that does not exists will throw a [does\_not\_exists\_exception](structf3d_1_1interactor_1_1does__not__exists__exception.md).
+
+
+
+**Parameters**:
+
+* const [interaction\_bind\_t](structf3d_1_1interaction__bind__t.md) & **bind**
+
+**Return type**: [BindingType](classf3d_1_1interactor.md#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e)
+
+
+
 ## Forwarding input events
 
 ### Enumeration type MouseButton {#classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4}
 
 ![][public]
 
-**Definition**: `interactor.h` (line 266)
+**Definition**: `interactor.h` (line 265)
 
 
 ```cpp
@@ -459,7 +490,7 @@ Enumeration of supported mouse buttons.
 
 ![][public]
 
-**Definition**: `interactor.h` (line 276)
+**Definition**: `interactor.h` (line 275)
 
 
 ```cpp
@@ -508,7 +539,7 @@ Enumeration of supported mouse wheel directions.
 
 ![][public]
 
-**Definition**: `interactor.h` (line 287)
+**Definition**: `interactor.h` (line 286)
 
 
 ```cpp
@@ -543,7 +574,7 @@ Enumeration of supported input actions.
 
 ![][public]
 
-**Definition**: `interactor.h` (line 296)
+**Definition**: `interactor.h` (line 295)
 
 
 ```cpp
@@ -1032,37 +1063,6 @@ Control if camera movements are enabled, which they are by default.
 
 ## Public functions
 
-### Function getBindingType {#classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17}
-
-![][public]
-![][const]
-
-
-```cpp
-virtual BindingType f3d::interactor::getBindingType(const interaction_bind_t &bind) const =0
-```
-
-
-
-
-Get the type of a binding.
-
-
-
-
-
-Getting type for a bind that does not exists will throw a [does\_not\_exists\_exception](structf3d_1_1interactor_1_1does__not__exists__exception.md).
-
-
-
-**Parameters**:
-
-* const [interaction\_bind\_t](structf3d_1_1interaction__bind__t.md) & **bind**
-
-**Return type**: [BindingType](classf3d_1_1interactor.md#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e)
-
-
-
 ### Function playInteraction {#classf3d_1_1interactor_1a1ed1405954d49fcee5e687a56cc83bf1}
 
 ![][public]
@@ -1182,7 +1182,7 @@ Request a render to be done on the next event loop Safe to call in a multithread
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[const]: https://img.shields.io/badge/-const-lightblue (const)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
 [private]: https://img.shields.io/badge/-private-red (private)

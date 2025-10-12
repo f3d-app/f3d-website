@@ -499,7 +499,7 @@ static void f3d::engine::setReaderOption(const std::string &name, const std::str
 
 
 
-Set a specific reader option from a plugin to provided value if it exists. Throws a options::inexistent_exception if the option does not exists in any reader of any plugin.
+Set a specific reader option from a plugin to provided value if it exists. Throws a [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__exception.md) if the option does not exists in any reader of any plugin.
 
 
 
@@ -719,7 +719,7 @@ Engine provide a default options that you can use using [engine::getOptions()](c
 
 **Parameters**:
 
-* const options & **opt**
+* const [options](classf3d_1_1options.md) & **opt**
 
 **Return type**: [engine](classf3d_1_1engine.md) &
 
@@ -743,7 +743,7 @@ Engine provide a default options that you can use using [engine::getOptions()](c
 
 **Parameters**:
 
-* options && **opt**
+* [options](classf3d_1_1options.md) && **opt**
 
 **Return type**: [engine](classf3d_1_1engine.md) &
 
@@ -765,7 +765,7 @@ Get the default options provided by the engine.
 
 
 
-**Return type**: options &
+**Return type**: [options](classf3d_1_1options.md) &
 
 
 
@@ -861,7 +861,7 @@ Engine constructor. This is a private method. The user must rely on factories to
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[const]: https://img.shields.io/badge/-const-lightblue (const)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
 [private]: https://img.shields.io/badge/-private-red (private)

@@ -152,10 +152,9 @@ Command syntax is similar to bash, as in they will be split by "token" to be pro
 :::note
 
 Comments are only supported in command script, in interactive console `#` and all characters after will be handled
+as standard character.
 
 :::
-> as standard character.
-
 - Escapes can be escaped too: eg: `set render.hdri.file C:\\path\\to\\windows\\file.png`.
 - Other escaped character will be processed as if the escape was not present, eg: `set scene.up.direction +\Z`
 - Unfinished quoted section is invalid, eg: `set scene.up.direction "+Z`
