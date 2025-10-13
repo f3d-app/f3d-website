@@ -15,8 +15,7 @@ const config: Config = {
   },
 
   url: "https://f3d.app",
-  // TODO: change to '/' when we migrate to f3d.app
-  baseUrl: "/f3d-website/",
+  baseUrl: "/",
   organizationName: "f3d-app",
   projectName: "f3d-website",
   onBrokenLinks: "throw",
@@ -79,9 +78,9 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
     announcementBar: {
-      id: 'survey',
+      id: 'main_announcement',
       content:
-        'Help us to improve! Please fill <a target="_blank" rel="noopener noreferrer" href="https://my.liberaforms.org/f3d-community-survey">this survey</a>',
+        'Welcome to our new website! Read the <a target="_blank" rel="noopener noreferrer" href="https://f3d-app.github.io/f3d-website/blog/new-website">blog post</a>. We would love to hear your feedback!',
       backgroundColor: '#F8B20A',
       textColor: '#1B1B19',
       isCloseable: true,
