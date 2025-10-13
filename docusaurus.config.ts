@@ -91,7 +91,7 @@ const config: Config = {
     algolia: {
       appId: 'PGZA24S7SJ',
       apiKey: '8be0f81e2da704ea5e67f4ed651f7770', // Public API key: it is safe to commit it
-      indexName: 'test_F3D',
+      indexName: 'F3D Documentation',
       contextualSearch: true,
       searchParameters: {},
       searchPagePath: 'search',
