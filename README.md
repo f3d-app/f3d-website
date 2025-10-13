@@ -1,6 +1,7 @@
 # f3d-website
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator for React-based documentation sites. Docusaurus is developed by Meta (Facebook) and is MIT licensed, providing excellent performance, SEO optimization, and developer experience for building documentation websites.
+This is the source code of the f3d wbesite visible [here](https://f3d.app), under the BSD [License](LICENSE).
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator for React-based documentation sites.
 
 ## Installation
 
