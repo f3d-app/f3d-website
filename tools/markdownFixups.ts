@@ -34,7 +34,7 @@ function processOptions(content: string): string {
 }
 
 function convertGithubAdmonitions(content: string): string {
-    const admonitionRegex = /^> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*\n((?:^>.*\n?)*)/gm;
+    const admonitionRegex = /^> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*\n((?:^>.*\r?\n?)*)/gm;
 
     return content.replace(admonitionRegex, (_, type, body) => {
         const docusaurusType = type.toLowerCase();
