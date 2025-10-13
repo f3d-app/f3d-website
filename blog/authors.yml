@@ -1,0 +1,19 @@
+meak:
+  name: Michael Migliore
+  title: Co-creator, Maintainer
+  url: https://linkedin.com/in/mcmigliore
+  image_url: https://github.com/meakk.png
+  page: true
+  socials:
+    linkedin: mcmigliore
+    github: meakk
+
+mwestphal:
+  name: Mathieu Westphal
+  title: Co-creator, Maintainer
+  url: https://www.linkedin.com/in/mathieu-westphal-a675028a/
+  image_url: https://github.com/mwestphal.png
+  page: true
+  socials:
+    linkedin: mathieu-westphal-a675028a
+    github: mwestphal

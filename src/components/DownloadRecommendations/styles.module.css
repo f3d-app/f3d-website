@@ -1,0 +1,75 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  justify-content: center;
+  align-items: stretch;
+  flex-wrap: wrap;
+}
+
+.downloadOption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 280px;
+  min-width: 280px;
+  max-width: 400px;
+}
+
+.downloadButton {
+  width: 100%;
+  text-align: center;
+}
+
+.buttonIcon {
+  vertical-align: -0.25rem;
+  margin-right: 0.25rem;
+}
+
+.details {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: #888;
+  list-style: none;
+  padding: 0;
+}
+
+.digestLink {
+  text-decoration: underline dotted;
+  color: inherit;
+  cursor: pointer;
+}
+
+.tooltipContent {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.copyButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.copyIcon {
+  font-size: 14px;
+  transition: color 0.2s ease;
+}
+
+.copyIconDefault {
+  color: var(--accent-blue);
+}
+
+.copyIconCopied {
+  color: var(--accent-yellow);
+}
+
+.footer {
+  text-align: center;
+  margin-top: 0.3rem;
+  margin-bottom: 2rem;
+}
