@@ -9,10 +9,6 @@ Welcome to the new website!
 
 <!-- truncate -->
 
-:::info
-Work in progress
-:::
-
 It is time to say goodbye to our technical albeit beloved markdown based website that we have been rocking
 since we moved to github 4 years ago.
 
@@ -33,11 +29,12 @@ But that means that, if we support versions, which part of the website should NO
 And how do we generate that?
 
 So we had to design a whole new website which is not generated from the sources in order to show unversionned:
- - Hero page
+ - Landing page
  - Gallery
  - Download page
  - Donation page
  - Blog
+ - Contribution guide
 
 And if we create proper web pages for these, can we not integrate some juicy javascript into it?
 Yes we can! We took some care to improve all these pages until it felt just right!

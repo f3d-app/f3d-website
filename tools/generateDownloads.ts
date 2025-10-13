@@ -84,7 +84,7 @@ import path from "path";
         result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-x86_64.dmg/, "Intel", "Intel installer without raytracing support"));
 
         const outputPath = path.resolve(import.meta.dirname, "../src/pages/downloadLinks.json");
-        writeFileSync(outputPath, JSON.stringify(result, null, 2));
+        writeFileSync(outputPath, JSON.stringify(result, null, 2) + '\n');
         console.log(`Saved result to ${outputPath}`);
 
     } catch (error) {
