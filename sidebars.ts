@@ -5,7 +5,11 @@ import fs from 'fs';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const decodeFileName = (file: string) => {
-  return file.replaceAll('_8', '.').replaceAll('_1', ':').replaceAll(/[^_]_[a-z]/g, (match) => { return '_' + match[2].toUpperCase(); }).replaceAll('__', '_');
+  return file.replaceAll('_8', '.')
+    .replaceAll('_1', ':')
+    .replaceAll(/[^_]_[a-z]/g, (match) => { return match[0] + match[2].toUpperCase(); })
+    .replaceAll(/[^_]_[a-z]/g, (match) => { return match[0] + match[2].toUpperCase(); }) // run twice to handle consecutive matches
+    .replaceAll('__', '_');
 }
 
 const getFiles = (api: string) : SidebarItemConfig[] => {
