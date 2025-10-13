@@ -1,0 +1,9 @@
+website:
+  label: Website
+  permalink: /website
+  description: Articles related to the website
+
+release:
+  label: Release
+  permalink: /release
+  description: Articles related to the software releases

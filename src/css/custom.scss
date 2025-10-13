@@ -1,0 +1,328 @@
+@use 'sass:color';
+
+@font-face {
+  font-family: 'Mulish';
+  src: local('Mulish'), url(../fonts/Mulish.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'DM Sans';
+  src: local('DM Sans'), url(../fonts/DMSans.ttf) format('truetype');
+}
+
+$f3d_black: #1B1B19;
+$f3d_white: #F0E7DA;
+$f3d_blue: #788AFE;
+$f3d_yellow: #F8B20A;
+$f3d_red: #F94306;
+
+:root {
+  /* Color Palette */
+  --bg-primary: #{$f3d_white};
+  --text-primary: #{$f3d_black};
+  --accent-yellow: #{$f3d_yellow};
+  --accent-blue: #{$f3d_blue};
+  --accent-red: #{$f3d_red};
+
+  /* Typography */
+  --font-primary: "Mulish", sans-serif;
+  --font-heading: "DM Sans", serif;
+
+  /* Spacing */
+  --spacing-xs: 0.5rem;
+  --spacing-sm: 0.75rem;
+  --spacing-md: 1rem;
+  --spacing-lg: 4rem;
+  --spacing-xs-small: 0.25rem;
+
+  /* ifm colors */
+  --ifm-background-color: #{color.scale($f3d_white, $lightness: 90%)};
+  --ifm-background-surface-color: #{color.scale($f3d_white, $lightness: 70%)};
+  --ifm-hr-background-color: var(--ifm-hero-text-color);
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-button-background-color: var(--accent-blue);
+  --ifm-button-color: var(--text-primary);
+
+  --ifm-color-primary: #{$f3d_blue};
+  --ifm-color-primary-dark: #{color.scale($f3d_blue, $lightness: -5%)};
+  --ifm-color-primary-darker: #{color.scale($f3d_blue, $lightness: -10%)};
+
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-family-base: var(--font-primary);
+  --ifm-font-family-headings: var(--font-heading);
+}
+
+[data-theme='dark'] {
+  --bg-primary: #{$f3d_black};
+  --text-primary: #{$f3d_white};
+
+  --ifm-background-color: #{$f3d_black};
+  --ifm-background-surface-color: #{color.scale($f3d_black, $lightness: -10%)};
+  --ifm-hero-background-color: var(--ifm-background-color);
+  --ifm-footer-background-color: var(--ifm-background-surface-color);
+  --ifm-button-background-color: var(--accent-blue);
+  --ifm-button-color: var(--text-primary);
+
+  --ifm-color-primary: #{$f3d_blue};
+  --ifm-color-primary-dark: #{color.scale($f3d_blue, $lightness: -5%)};
+  --ifm-color-primary-darker: #{color.scale($f3d_blue, $lightness: -10%)};
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+  --ifm-font-family-base: var(--font-primary);
+  --ifm-font-family-headings: var(--font-heading);
+}
+
+/* Explicitly apply heading fonts to ensure they override theme defaults */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-heading);
+}
+
+.heroBanner {
+  padding: 5rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width: 700px) {
+  .heroBanner {
+    padding: 2rem;
+    max-width: 100%;
+    margin: 0;
+  }
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin: 1rem 0;
+}
+
+.buttons .iconify {
+  font-size: 1.8rem;
+  margin-right: 0.8rem;
+  vertical-align: -0.25em;
+}
+
+small .iconify {
+  font-size: 1.2rem !important;
+  margin-right: 0.6rem !important;
+}
+
+.highlightButton {
+  --ifm-button-border-color: var(--accent-yellow);
+  --ifm-button-color: var(--accent-yellow);
+}
+
+.highlightButton:hover {
+  --ifm-button-background-color: var(--accent-yellow);
+  --ifm-button-color: var(--bg-primary);
+}
+
+/* Change arrow color */
+.splide__arrow svg {
+  fill: var(--ifm-color-primary) !important;
+}
+
+.splide__arrow:hover svg {
+  fill: var(--ifm-color-primary-dark) !important;
+}
+
+.splide__pagination__page {
+  background: var(--ifm-button-color) !important;
+  width: 5px !important;
+  transition: width 0.3s ease, background 0.3s ease !important;
+}
+
+.splide__pagination__page.is-active {
+  background: var(--ifm-color-primary) !important;
+  width: 20px !important;
+}
+
+/* Donation Button Styles */
+.donationButton {
+  width: 100%;
+  padding: 1rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: transform 0.2s ease;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.donationButton:enabled {
+  background: var(--accent-yellow);
+  opacity: 1;
+}
+
+.donationButton:disabled {
+  background: var(--ifm-hr-background-color);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.donationButton:enabled:hover {
+  transform: translateY(-2px);
+}
+
+.donationButton:hover {
+  transform: translateY(0);
+}
+
+.donationButton:disabled:hover {
+  transform: translateY(0);
+}
+
+.theme-doc-version-badge {
+  margin-bottom: 1rem;
+}
+
+/* Algolia DocSearch Integration */
+.DocSearch {
+  --docsearch-primary-color: var(--accent-blue);
+  --docsearch-text-color: var(--text-primary);
+  --docsearch-spacing: 12px;
+  --docsearch-icon-stroke-width: 1.4;
+  --docsearch-highlight-color: var(--accent-blue);
+  --docsearch-muted-color: #{color.scale($f3d_black, $alpha: -30%)};
+  --docsearch-container-background: rgba(27, 27, 25, 0.8);
+  --docsearch-logo-color: var(--accent-blue);
+  
+  /* Modal */
+  --docsearch-modal-width: 600px;
+  --docsearch-modal-height: 400px;
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-modal-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  
+  /* Search box */
+  --docsearch-searchbox-height: 56px;
+  --docsearch-searchbox-background: var(--ifm-background-surface-color);
+  --docsearch-searchbox-focus-background: var(--ifm-background-surface-color);
+  --docsearch-searchbox-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  
+  /* Hit */
+  --docsearch-hit-height: 56px;
+  --docsearch-hit-color: var(--text-primary);
+  --docsearch-hit-active-color: var(--ifm-background-color);
+  --docsearch-hit-background: var(--ifm-background-color);
+  --docsearch-hit-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  
+  /* Key */
+  --docsearch-key-gradient: var(--accent-blue);
+  --docsearch-key-shadow: inset 0 -2px 0 0 #{color.scale($f3d_blue, $lightness: -20%)}, inset 0 0 1px 1px var(--accent-blue), 0 1px 2px 1px rgba(30, 35, 90, 0.4);
+}
+
+[data-theme='dark'] .DocSearch {
+  --docsearch-text-color: var(--text-primary);
+  --docsearch-muted-color: #{color.scale($f3d_white, $alpha: -40%)};
+  --docsearch-container-background: rgba(27, 27, 25, 0.9);
+  --docsearch-modal-background: var(--ifm-background-color);
+  --docsearch-searchbox-background: var(--ifm-background-surface-color);
+  --docsearch-searchbox-focus-background: var(--ifm-background-surface-color);
+  --docsearch-hit-color: var(--text-primary);
+  --docsearch-hit-active-color: var(--ifm-background-color);
+  --docsearch-hit-background: var(--ifm-background-color);
+}
+
+/* DocSearch Button Styling */
+.DocSearch-Button {
+  border-radius: 8px;
+  border: 1px solid #{color.scale($f3d_blue, $alpha: -70%)};
+  background: var(--ifm-background-surface-color);
+  font-family: var(--font-primary);
+  transition: all 0.2s ease;
+}
+
+.DocSearch-Button:hover {
+  background: var(--ifm-background-color);
+  border-color: var(--accent-blue);
+  box-shadow: 0 4px 12px rgba(120, 138, 254, 0.15);
+}
+
+.DocSearch-Button-Placeholder {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+  opacity: 0.7;
+}
+
+.DocSearch-Button-Key {
+  background: var(--accent-blue);
+  border: 1px solid #{$f3d_blue};
+  color: #{$f3d_white};
+  border-radius: 4px;
+  font-family: var(--font-primary);
+}
+
+/* DocSearch Modal Enhancements */
+.DocSearch-Modal {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.DocSearch-SearchBar {
+  border-radius: 8px 8px 0 0;
+}
+
+.DocSearch-Hits mark {
+  background: var(--accent-yellow);
+  color: var(--text-primary);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  font-weight: 600;
+}
+
+.DocSearch-Hit[aria-selected='true'] {
+  background: var(--accent-blue);
+  border-radius: 6px;
+  margin: 0 8px;
+}
+
+.DocSearch-Hit[aria-selected='true'] mark {
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+}
+
+.DocSearch-Footer {
+  visibility: hidden;
+}
+
+
+.docs-doc-id-user\/OPTIONS{
+  /* dim value hints in header */
+  h3 > em > code {
+    opacity: .5;
+    font-style: normal;
+    font-weight: normal;
+  }
+  /* make default values not bold */
+  h3 > small {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  /* dim value hints in TOC */
+  ul.table-of-contents li > a > em {
+    opacity: .5;
+    font-style: normal;
+    font-weight: normal;
+  }
+  /* hide default values in TOC */
+  ul.table-of-contents li > a > small {
+    display: none;
+  }
+}

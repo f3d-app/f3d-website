@@ -1,0 +1,23 @@
+# Doxyfile 1.14.0
+
+PROJECT_NAME           = "F3D"
+INPUT                  = ./tools/f3d-src/library/public
+OUTPUT_DIRECTORY       = ./tools/doxygen_output/libf3d
+
+GENERATE_HTML          = NO
+GENERATE_LATEX         = NO
+GENERATE_XML           = YES
+
+DISTRIBUTE_GROUP_DOC   = YES
+BRIEF_MEMBER_DESC      = NO
+INLINE_SIMPLE_STRUCTS  = YES
+RECURSIVE              = NO
+EXTRACT_STATIC         = YES
+MARKDOWN_SUPPORT       = NO
+ALPHABETICAL_INDEX     = NO
+FULL_PATH_NAMES        = NO
+STRIP_FROM_PATH        = ./tools/f3d-src/library/public
+SHOW_NAMESPACES        = NO
+EXCLUDE_SYMBOLS        = std*
+DISABLE_INDEX          = YES
+FILE_PATTERNS          = *.h

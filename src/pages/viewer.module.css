@@ -1,0 +1,316 @@
+.viewerPage {
+  height: 90vh;
+  padding: 1rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+.layout {
+  display: flex;
+  flex-direction: row;
+  gap: 2rem;
+  flex: 1;
+  min-height: 0;
+  height: 100%;
+}
+.menuPanel {
+  min-width: 240px;
+  width: 240px;
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  padding: 1.5rem 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+  transition: transform 0.3s ease;
+  position: relative;
+}
+.viewerPanel {
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  justify-content: center;
+  min-width: 0;
+  height: 100%;
+}
+
+/* Mobile menu toggle */
+.mobileMenuToggle {
+  display: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-primary);
+  transition: opacity 0.3s ease;
+}
+
+.mobileMenuToggle svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.mobileMenuToggleHidden {
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+/* Menu close button */
+.menuCloseButton {
+  display: none;
+  top: 1rem;
+  right: 1rem;
+  width: 2rem;
+  height: 2rem;
+  background: transparent;
+  cursor: pointer;
+  color: var(--ifm-color-primary);
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+  z-index: 1002;
+}
+
+.menuCloseButton svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Mobile menu backdrop */
+.mobileMenuBackdrop {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+}
+
+/* File input */
+.fileInputGroup {
+  margin-bottom: 1rem;
+}
+.fileLabel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 500;
+  cursor: pointer;
+}
+.fileInput {
+  display: none;
+}
+.fileName {
+  font-size: 0.8rem;
+}
+
+/* Up direction buttons */
+.upDirectionGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.upButton {
+  background: var(--ifm-background-surface-color);
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-color-primary);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.upButtonActive {
+  background: var(--ifm-color-primary);
+  border: 1px solid var(--ifm-color-primary);
+  color: var(--ifm-background-surface-color);
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.upLabel {
+  margin-left: 0.5rem;
+}
+
+/* Section labels */
+.sectionLabel {
+  font-weight: 600;
+  color: var(--ifm-color-primary);
+  margin: 1.5rem 0 0.5rem 0;
+  font-size: 1.1rem;
+}
+
+/* Switches and fields */
+.switchField {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.switchInput {
+  position: relative;
+  width: 2.5em;
+  height: 1.3em;
+  -webkit-appearance: none;
+  appearance: none;
+  background: #c6c6c6;
+  outline: none;
+  border-radius: 1em;
+  transition: background 0.3s;
+  cursor: pointer;
+}
+.switchInput:checked {
+  background: var(--ifm-color-primary);
+}
+.switchInput::before {
+  content: '';
+  position: absolute;
+  left: 0.2em;
+  top: 0.18em;
+  width: 0.95em;
+  height: 0.95em;
+  background: var(--ifm-font-color-base);
+  border-radius: 50%;
+  transition: transform 0.3s;
+}
+.switchInput:checked::before {
+  transform: translateX(1.2em);
+}
+.switchField label {
+  cursor: pointer;
+  user-select: none;
+  margin-left: 0.5em;
+}
+
+/* Progress bar container */
+.progressContainer {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 280px;
+  max-width: 90%;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-background-surface-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  display: none;
+  flex-direction: column;
+  gap: 0.5rem;
+  backdrop-filter: blur(10px);
+  opacity: 1;
+  transition: opacity 1s ease-out;
+}
+
+.progressContainer.fadeOut {
+  opacity: 0;
+}
+
+.progressBar {
+  width: 100%;
+  height: 6px;
+  background: var(--ifm-color-emphasis-200);
+  border-radius: 3px;
+  overflow: hidden;
+  position: relative;
+}
+
+.progressFill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--ifm-color-primary), var(--ifm-color-primary-dark));
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.progressText {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--ifm-font-color-base);
+  white-space: nowrap;
+  text-align: center;
+  display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .viewerPage {
+    padding: 0.5rem;
+  }
+  
+  .layout {
+    flex-direction: column;
+    gap: 1rem;
+    height: 80vh;
+  }
+  
+  .mobileMenuToggle {
+    display: flex;
+  }
+  
+  .menuCloseButton {
+    display: flex;
+  }
+  
+  .menuPanel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 280px;
+    z-index: 1000;
+    transform: translateX(-100%);
+    border-radius: 0;
+    box-shadow: 2px 0 8px rgba(0,0,0,0.15);
+  }
+  
+  .menuPanelOpen {
+    transform: translateX(0);
+  }
+  
+  .mobileMenuBackdrop {
+    display: block;
+  }
+  
+  .viewerPanel {
+    width: 100%;
+    height: 100%;
+    margin-top: 0;
+  }
+  
+  .progressContainer {
+    width: 220px;
+    bottom: 1rem;
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .progressText {
+    font-size: 0.65rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .menuPanel {
+    width: 250px;
+    padding: 1rem 0.75rem;
+  }
+  
+  .fileLabel .button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+  
+  .sectionLabel {
+    font-size: 1rem;
+  }
+}
