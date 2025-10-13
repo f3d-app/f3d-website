@@ -22,14 +22,18 @@ function processOptions(content: string): string {
     }
 
     function addAnchorLinksForKnownFlags(substring: string, ...args: string[]) {
-        const is_header = args[args.length - 1].startsWith('#')
-        const is_known_flag = known_flags[args[0]] != undefined;
-        return is_known_flag && !is_header ? `[\`${args[0]}${args[1] || ""}\`](#${known_flags[args[0]]})` : substring;
+        function make_link(k: string, v: string) {
+            return known_flags[k] ? `[\`${k}${v}\`](#${known_flags[k]})` : `\`${k}${v}\``;
+        }
+        const is_header = args[args.length - 1].startsWith('#');
+        if (!is_header && args[0] != undefined) return make_link(args[1], args[2] || "");
+        if (!is_header && args[3] != undefined) return make_link(args[4], args[5] || "");
+        return substring;
     }
 
     let lines = content.split(/\r?\n/g);
     lines = lines.map(l => l.replace(/(##+) *(`[^\(\)]+) *(\(.+\))?/, fixCliHeaders));
-    lines = lines.map(l => l.replaceAll(/`(--?[^=`]+)(=[^`]*)?`/g, addAnchorLinksForKnownFlags));
+    lines = lines.map(l => l.replaceAll(/(`(--[^=`]+)(=[^`]*)?`)|(`(-[^=`])([^`]*)?`)/g, addAnchorLinksForKnownFlags));
     return lines.join('\n');
 }
 
