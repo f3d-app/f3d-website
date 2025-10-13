@@ -8,6 +8,7 @@ on:
   workflow_dispatch:
 
   # TODO: add nightly?
+  # https://github.com/f3d-app/f3d-website/issues/5
 
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
