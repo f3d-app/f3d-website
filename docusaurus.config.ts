@@ -157,11 +157,11 @@ const config: Config = {
           items: [
             {
               label: "Application",
-              to: "/docs/user/QUICKSTART",
+              to: "/docs/next/user/QUICKSTART",
             },
             {
               label: "Library",
-              to: "/docs/libf3d/OVERVIEW",
+              to: "/docs/next/libf3d/OVERVIEW",
             },
             {
               label: "Contributing",

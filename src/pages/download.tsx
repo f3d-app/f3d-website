@@ -226,7 +226,7 @@ export default function DownloadPage(): ReactNode {
                       <>
                         <Admonition type="warning" title={`Installing on ${platform}`}>
                           <p>
-                            macOS package is not signed, see the <Link to="/docs/user/LIMITATIONS_AND_TROUBLESHOOTING#macos">troubleshooting section</Link> for a workaround if needed.
+                            macOS package is not signed, see the <Link to="/docs/next/user/LIMITATIONS_AND_TROUBLESHOOTING#macos">troubleshooting section</Link> for a workaround if needed.
                           </p>
                         </Admonition>
                         
