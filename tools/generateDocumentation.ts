@@ -41,36 +41,37 @@ async function fetchRepository(tag: string): Promise<void> {
 async function runDoxygen(): Promise<void> {
     console.log("Running doxygen...");
 
-    try {
-        await rm(OUTPUT_DIR, { recursive: true, force: true });
-    } catch (error) {
-        // Directory might not exist, that's ok
-    }
+    for (const api of ["libf3d", "vtkext"]) {
+        const apiOutputDir = path.join(OUTPUT_DIR, api);
+        try {
+            await rm(apiOutputDir, { recursive: true, force: true });
+        } catch (error) {
+            // Directory might not exist, that's ok
+        }
 
-    // Ensure output directory exists
-    await mkdir(OUTPUT_DIR, { recursive: true });
+        // Ensure output directory exists
+        await mkdir(apiOutputDir, { recursive: true });
 
-    const doxygenCmd = `doxygen ${__dirname}/Doxyfile`;
+        const doxygenCmd = `doxygen ${__dirname}/Doxyfile-${api}`;
 
-    try {
-        const { stdout, stderr } = await execAsync(doxygenCmd, {
-            maxBuffer: 1024 * 1024 * 10 // 10MB buffer for large doxygen output
-        });
+        try {
+            await execAsync(doxygenCmd);
 
-        console.log("Doxygen completed successfully");
-        if (stdout) console.log("Doxygen output:", stdout);
-        if (stderr) console.log("Doxygen warnings/errors:", stderr);
+            console.log("Doxygen completed successfully");
 
-    } catch (error) {
-        throw new Error(`Failed to run doxygen: ${(error as Error).message}`);
+        } catch (error) {
+            throw new Error(`Failed to run doxygen: ${(error as Error).message}`);
+        }
+
+        runSeaborg(api);
     }
 }
 
-async function runSeaborg(): Promise<void> {
+async function runSeaborg(api: string): Promise<void> {
     console.log("Running seaborg...");
 
-    const inPath = path.join(__dirname, 'doxygen_output', 'xml');
-    const outPath = path.join(__dirname, '..', 'docs', 'api');
+    const inPath = path.join(__dirname, 'doxygen_output', api, 'xml');
+    const outPath = path.join(__dirname, '..', 'docs', `api-${api}`);
 
     const seaborgCmd = `seaborg ${inPath} ${outPath}`;
 
@@ -84,13 +85,24 @@ async function runSeaborg(): Promise<void> {
     } catch (error) {
         throw new Error(`Failed to run seaborg: ${(error as Error).message}`);
     }
+    
+    // Fix case to avoid issues with files starting with underscore
+    const filesToRename = await fs.promises.readdir(outPath);
+    for (const file of filesToRename) {
+        const filePath = path.join(outPath, file);
+
+        // rename files starting with underscore, otherwise it's ignored by Docusaurus
+        const newFileName = file.replace(/^_([a-z])/g, (_, letter) => letter.toUpperCase());
+        const newFilePath = path.join(outPath, newFileName);
+        await fs.promises.rename(filePath, newFilePath);
+    }
 
     // Postprocess files in ../docs/api
     console.log("Postprocessing generated markdown files...");
 
     // List files in outPath
-    const files = await fs.promises.readdir(outPath);
-    for (const file of files) {
+    const filesToProcess = await fs.promises.readdir(outPath);
+    for (const file of filesToProcess) {
         if (file.endsWith('.md')) {
             const filePath = path.join(outPath, file);
             let content = await fs.promises.readFile(filePath, 'utf-8');
@@ -120,6 +132,9 @@ async function runSeaborg(): Promise<void> {
                 if (file.includes('namespace') && lines[i].startsWith("**Definition**")) {
                     continue;
                 }
+
+                // fix links to files starting with underscore
+                lines[i] = lines[i].replace(/\(_([a-z]+)(.*)\.md\)/g, (_, letter, rest) => `(${letter.toUpperCase()}${rest}.md)`);
 
                 newLines.push(lines[i]);
             }
@@ -255,7 +270,6 @@ console.log(`Generating Doxygen documentation for F3D tag: ${tag}`);
         await copyDocs();
         await generateOptionsHeader();
         await runDoxygen();
-        await runSeaborg();
         console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);
     } catch (error) {
         console.error("❌ Error generating doxygen documentation:", (error as Error).message);

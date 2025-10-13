@@ -5,29 +5,35 @@ import fs from 'fs';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const decodeFileName = (file: string) => {
-  return file.replaceAll('_8', '.').replaceAll('_1', ':').replaceAll('__', '_');
+  return file.replaceAll('_8', '.').replaceAll('_1', ':').replaceAll('__', '_').replaceAll(/_[a-z]/g, (match) => match[1].toUpperCase());
 }
 
-const apiFiles: SidebarItemConfig[] = fs.readdirSync('./docs/api').filter((file: string) => file.includes('_8h')).map((file: string) => {
-  // Keep the file name only and remove the directories
-  const fileName = file.split('/').pop().replace('.md', '');
+const getFiles = (api: string) : SidebarItemConfig[] => {
+  return fs.readdirSync(`./docs/api-${api}`).filter((file: string) => file.includes('_8h')).map((file: string) => {
+    // Keep the file name only and remove the directories
+    const fileName = file.split('/').pop().replace('.md', '');
 
-  return { type: 'doc', id: 'api/' + fileName, label: decodeFileName(fileName) };
-});
+    return { type: 'doc', id: `api-${api}/` + fileName, label: decodeFileName(fileName) };
+  });
+}
 
-const apiClasses: SidebarItemConfig[] = fs.readdirSync('./docs/api').filter((file: string) => file.includes('classf3d')).map((file: string) => {
-  // Keep the file name only and remove the directories
-  const fileName = file.split('/').pop().replace('.md', '');
+const getClasses = (api: string) : SidebarItemConfig[] => {
+  return fs.readdirSync(`./docs/api-${api}`).filter((file: string) => file.match(/^class[^_]/)).map((file: string) => {
+    // Keep the file name only and remove the directories
+    const fileName = file.split('/').pop().replace('.md', '');
 
-  return { type: 'doc', id: 'api/' + fileName, label: decodeFileName(fileName).replace('class', '') };
-});
+    return { type: 'doc', id: `api-${api}/` + fileName, label: decodeFileName(fileName).replace('class', '') };
+  });
+}
 
-const apiStructs: SidebarItemConfig[] = fs.readdirSync('./docs/api').filter((file: string) => file.includes('structf3d')).map((file: string) => {
-  // Keep the file name only and remove the directories
-  const fileName = file.split('/').pop().replace('.md', '');
+const getStructs = (api: string) : SidebarItemConfig[] => {
+  return fs.readdirSync(`./docs/api-${api}`).filter((file: string) => file.match(/^struct[^_]/)).map((file: string) => {
+    // Keep the file name only and remove the directories
+    const fileName = file.split('/').pop().replace('.md', '');
 
-  return { type: 'doc', id: 'api/' + fileName, label: decodeFileName(fileName).replace('struct', '') };
-});
+    return { type: 'doc', id: `api-${api}/` + fileName, label: decodeFileName(fileName).replace('struct', '') };
+  });
+}
 
 const sidebars: SidebarsConfig = {
 
@@ -54,7 +60,7 @@ const sidebars: SidebarsConfig = {
     'libf3d/PLUGINS',
     {
       type: 'category',
-      label: 'API Reference',
+      label: 'libf3d API Reference',
       link: {
         type: 'generated-index',
         title: 'libf3d doxygen documentation',
@@ -63,35 +69,76 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: 'doc',
-          id: 'api/namespacef3d',
-          label: 'Namespace f3d'
+          key: 'namespace-libf3d',
+          id: 'api-libf3d/namespacef3d',
+          label: 'Namespace'
         },
         {
           type: 'category',
+          key: 'files-libf3d',
           label: 'Files',
           link: {
             type: 'doc',
-            id: 'api/file_contents',
+            id: 'api-libf3d/file_contents',
           },
-          items: apiFiles,
+          items: getFiles('libf3d'),
         },
         {
           type: 'category',
+          key: 'classes-libf3d',
           label: 'Classes',
           link: {
             type: 'doc',
-            id: 'api/class_contents',
+            id: 'api-libf3d/class_contents',
           },
-          items: apiClasses,
+          items: getClasses('libf3d'),
         },
         {
           type: 'category',
+          key: 'structs-libf3d',
           label: 'Structures',
           link: {
             type: 'doc',
-            id: 'api/struct_contents',
+            id: 'api-libf3d/struct_contents',
           },
-          items: apiStructs,
+          items: getStructs('libf3d'),
+        },
+      ]
+    },
+    {
+      type: 'category',
+      label: 'vtkext API Reference',
+      link: {
+        type: 'generated-index',
+        title: 'vtkext doxygen documentation',
+        description: 'This is the automatically generated doxygen documentation for the vtkext, which is part of F3D. It contains the VTK module you can use to create f3d plugins.',
+      },
+      items: [
+        {
+          type: 'doc',
+          key: 'namespace-vtkext',
+          id: 'api-vtkext/namespace_f3_d_utils',
+          label: 'Namespace F3DUtils'
+        },
+        {
+          type: 'category',
+          key: 'files-vtkext',
+          label: 'Files',
+          link: {
+            type: 'doc',
+            id: 'api-vtkext/file_contents',
+          },
+          items: getFiles('vtkext'),
+        },
+        {
+          type: 'category',
+          key: 'classes-vtkext',
+          label: 'Classes',
+          link: {
+            type: 'doc',
+            id: 'api-vtkext/class_contents',
+          },
+          items: getClasses('vtkext'),
         },
       ]
     },
