@@ -61,11 +61,10 @@ function DownloadStatus(): ReactNode {
   );
 }
 
-function DonationWidget(): ReactNode {
+function DonationWidget({ showPartnershipModal, setShowPartnershipModal }: { showPartnershipModal: boolean; setShowPartnershipModal: (show: boolean) => void }): ReactNode {
   const [donationType, setDonationType] = useState<'one-time' | 'monthly'>('one-time');
   const [currency, setCurrency] = useState<'USD' | 'EUR'>('EUR');
   const [selectedAmount, setSelectedAmount] = useState<number | string | null>(5);
-  const [showPartnershipModal, setShowPartnershipModal] = useState<boolean>(false);
   
   const suggestedAmounts = {
     'one-time': [1, 5, 10, 50, 100, 'Custom'],
@@ -359,19 +358,16 @@ function DonationWidget(): ReactNode {
 
             <div className={styles.modalBody}>
               <p>
-                We'd love to chat with <strong>companies and organizations</strong> interested in sponsoring F3D for a custom partnership with industry-standard support.
+                We'd love to chat with <strong>companies and organizations</strong> interested in sponsoring F3D at an industry level!
               </p>
 
               <p>
-                <strong>What we can connect you with:</strong>
+                <strong>By sponsoring us, you can:</strong>
               </p>
               <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                <li>Priority feature development</li>
-                <li>Custom integration support</li>
-                <li>Direct communication channel with maintainers</li>
-                <li>Logo placement and public recognition</li>
-                <li>Professional contracting through our expert partner companies</li>
-                <li>Training and consultation services</li>
+                <li>Have a direct communication channel with maintainers</li>
+                <li>Get our logo on a strategic location and get public recognition for your sponsorship</li>
+                <li>Ensure F3D future has an open source framework</li>
               </ul>
 
               <p>
@@ -381,16 +377,11 @@ function DonationWidget(): ReactNode {
                 <li>Companies using F3D in production</li>
                 <li>Organizations needing reliable 3D visualization</li>
                 <li>Businesses wanting to ensure F3D's long-term sustainability</li>
-                <li>Teams requiring custom features or integrations</li>
               </ul>
 
               <Admonition type="info" title="Important">
-                Professional contracting and service level agreements (SLA) will be handled by our expert partner companies, not directly by the F3D APP Foundation.
+                Looking for professional help with support, consulting, training, or custom development? We can also connect you with our expert partner companies.
               </Admonition>
-
-              <p>
-                Ready to discuss how F3D can support your organization's needs?
-              </p>
             </div>
 
             <div className={styles.modalActions}>
@@ -418,6 +409,7 @@ function DonationWidget(): ReactNode {
 
 export default function ThanksPage(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+  const [showPartnershipModal, setShowPartnershipModal] = useState<boolean>(false);
 
   return (
     <Layout
@@ -692,39 +684,52 @@ export default function ThanksPage(): ReactNode {
                   </div>
 
                   <p>
+                    <details>
+                      <summary>Alternatives</summary>
+
+                      <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                        <li><a href="https://github.com/sponsors/f3d-app">Github sponsors</a></li>
+                        <li><a href="https://patreon.com/f3d_app_foundation">Patreon</a></li>
+                        <li><a href="https://ko-fi.com/f3d_app">ko-fi</a></li>
+                        <li><a href="https://liberapay.com/f3d-app/">liberapay</a></li>
+                        <li><a href="https://fr.tipeee.com/f3d-app/">Tipee</a></li>
+                        <li><a href="https://buymeacoffee.com/f3d.app">buy me a coffee</a></li>
+                        <li><a href="https://donorbox.org/support-f3d">donorbox</a></li>
+                        <li>Direct Transfer</li>
+                        <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
+                          <li>IBAN: FR7616958000018496562230572</li>
+                          <li>BIC/SWIFT: QNTOFRP1XXX</li>
+                        </ul>
+                      </ul>
+                    </details>
+                  </p>
+
+                  <p>
                     Make sure to reach out on <a href="https://discord.f3d.app">discord</a> once you start donating.
                   </p>
 
-                  <details>
-                    <summary>Alternatives</summary>
-
-                    <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                      <li><a href="https://github.com/sponsors/f3d-app">Github sponsors</a></li>
-                      <li><a href="https://patreon.com/f3d_app_foundation">Patreon</a></li>
-                      <li><a href="https://ko-fi.com/f3d_app">ko-fi</a></li>
-                      <li><a href="https://liberapay.com/f3d-app/">liberapay</a></li>
-                      <li><a href="https://fr.tipeee.com/f3d-app/">Tipee</a></li>
-                      <li><a href="https://buymeacoffee.com/f3d.app">buy me a coffee</a></li>
-                      <li><a href="https://donorbox.org/support-f3d">donorbox</a></li>
-                      <li>Direct Transfer</li>
-                      <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
-                        <li>IBAN: FR7616958000018496562230572</li>
-                        <li>BIC/SWIFT: QNTOFRP1XXX</li>
-                      </ul>
-                    </ul>
-
-                    <p>
-                      If you or your company are using F3D in any capacity and you want to ensure F3D keeps growing and being maintained, we would love to hear from you!
-                      You can sponsor F3D through the non-profit F3D-APP FOUNDATION and we will acknowledge your support by displaying your logo on our README.md as well as sharing about your support whenever we get the chance.
-                      Please reach out at <a href="mailto:contact@f3d.app">contact@f3d.app</a>.
-                    </p>
-                  </details>
+                  <p>
+                    If your company are using F3D in any capacity and you want to ensure F3D keeps growing and being maintained, we would love to hear from you!
+                  </p>
+                  <p>
+                    You can sponsor F3D through the non-profit <strong>F3D-APP FOUNDATION</strong> and we can acknowledge your support by displaying your logo on our README.md as well as sharing about your support whenever we get the chance.
+                  </p>
+                  
+                  <div style={{ textAlign: 'center', marginTop: '1rem' }}>
+                    <button
+                      onClick={() => setShowPartnershipModal(true)}
+                      className={styles.industryPartnersButton}
+                    >
+                      <Icon icon="material-symbols:handshake-rounded" />
+                      Industry Partners
+                    </button>
+                  </div>
 
                   <div style={{
                     background: 'var(--ifm-background-surface-color)',
                     padding: '1rem',
                     borderRadius: '8px',
-                    marginTop: '1.5rem',
+                    margin: '1.5rem 0',
                     fontSize: '0.9rem'
                   }}>
                     <Icon
@@ -738,7 +743,10 @@ export default function ThanksPage(): ReactNode {
 
               {/* Right side - Donation Widget */}
               <div>
-                <DonationWidget />
+                <DonationWidget 
+                  showPartnershipModal={showPartnershipModal}
+                  setShowPartnershipModal={setShowPartnershipModal}
+                />
               </div>
             </div>
           </div>

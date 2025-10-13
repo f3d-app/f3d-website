@@ -137,6 +137,27 @@
   font-size: 0.9rem;
 }
 
+/* Industry Partners Button */
+.industryPartnersButton {
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.9rem;
+  font-weight: bold;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all 0.2s ease;
+}
+
+.industryPartnersButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--ifm-color-primary-rgb), 0.3);
+}
+
 /* Responsive mobile layout for thanks page */
 @media (max-width: 768px) {
   .container > div {
