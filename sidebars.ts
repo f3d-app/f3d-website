@@ -5,7 +5,7 @@ import fs from 'fs';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const decodeFileName = (file: string) => {
-  return file.replaceAll('_8', '.').replaceAll('_1', ':').replaceAll('__', '_').replaceAll(/_[a-z]/g, (match) => match[1].toUpperCase());
+  return file.replaceAll('_8', '.').replaceAll('_1', ':').replaceAll(/[^_]_[a-z]/g, (match) => { return '_' + match[2].toUpperCase(); }).replaceAll('__', '_');
 }
 
 const getFiles = (api: string) : SidebarItemConfig[] => {
