@@ -10,7 +10,7 @@
 
 ## Classes
 
-* [vtkF3DGLTFImporter](classvtk_f3_d_g_l_t_f_importer.md)
+* [vtkF3DGLTFImporter](classvtkF3DGLTFImporter.md)
 
 ## Includes
 
@@ -20,7 +20,7 @@
 ```mermaid
 graph LR
 1["vtkF3DGLTFImporter.h"]
-click 1 "vtk_f3_d_g_l_t_f_importer_8h.md#vtk_f3_d_g_l_t_f_importer_8h"
+click 1 "vtkF3DGLTFImporter_8h.md#vtkF3DGLTFImporter_8h"
 1 --> 2
 
 2["vtkextModule.h"]
@@ -68,8 +68,8 @@ private:
 ```
 
 
+[private]: https://img.shields.io/badge/-private-red (private)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)
-[private]: https://img.shields.io/badge/-private-red (private)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)

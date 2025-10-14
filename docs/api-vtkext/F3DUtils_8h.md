@@ -10,7 +10,7 @@
 
 ## Namespaces
 
-* [F3DUtils](namespace_f3_d_utils.md)
+* [F3DUtils](namespaceF3DUtils.md)
 
 ## Includes
 
@@ -20,7 +20,7 @@
 ```mermaid
 graph LR
 1["F3DUtils.h"]
-click 1 "_f3_d_utils_8h.md#_f3_d_utils_8h"
+click 1 "F3DUtils_8h.md#F3DUtils_8h"
 1 --> 2
 
 2["vtkextModule.h"]
@@ -63,8 +63,8 @@ VTKEXT_EXPORT int ParseToInt(const std::string& str, int def, const std::string&
 ```
 
 
+[private]: https://img.shields.io/badge/-private-red (private)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)
-[private]: https://img.shields.io/badge/-private-red (private)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)

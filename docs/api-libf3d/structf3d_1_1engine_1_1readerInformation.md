@@ -11,17 +11,17 @@ A structure providing information about a reader. Returned in a vector by [getRe
 
 ## Members
 
-* [Description](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a8cd967fb8400bcafb84fac1aff4bc0af)
-* [Extensions](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a9e778db98dc3a41875ed9c2caeaf3517)
-* [HasGeometryReader](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a63da7048de227a690590703369523aa3)
-* [HasSceneReader](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1ac0dc89d52c535db198c513fb0543755e)
-* [MimeTypes](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1aac8ec25ca07da4cafd1f8a157d583f27)
-* [Name](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a30aac8488fbed9ef92fba2bba859263a)
-* [PluginName](structf3d_1_1engine_1_1reader_information.md#structf3d_1_1engine_1_1reader_information_1a9d938bd142eb2feb3ac72f6c07eafb6b)
+* [Description](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1a8cd967fb8400bcafb84fac1aff4bc0af)
+* [Extensions](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1a9e778db98dc3a41875ed9c2caeaf3517)
+* [HasGeometryReader](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1a63da7048de227a690590703369523aa3)
+* [HasSceneReader](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1ac0dc89d52c535db198c513fb0543755e)
+* [MimeTypes](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1aac8ec25ca07da4cafd1f8a157d583f27)
+* [Name](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1a30aac8488fbed9ef92fba2bba859263a)
+* [PluginName](structf3d_1_1engine_1_1readerInformation.md#structf3d_1_1engine_1_1readerInformation_1a9d938bd142eb2feb3ac72f6c07eafb6b)
 
 ## Public attributes
 
-### Variable Name {#structf3d_1_1engine_1_1reader_information_1a30aac8488fbed9ef92fba2bba859263a}
+### Variable Name {#structf3d_1_1engine_1_1readerInformation_1a30aac8488fbed9ef92fba2bba859263a}
 
 ![][public]
 
@@ -43,7 +43,7 @@ std::string f3d::engine::readerInformation::Name
 
 
 
-### Variable Description {#structf3d_1_1engine_1_1reader_information_1a8cd967fb8400bcafb84fac1aff4bc0af}
+### Variable Description {#structf3d_1_1engine_1_1readerInformation_1a8cd967fb8400bcafb84fac1aff4bc0af}
 
 ![][public]
 
@@ -65,7 +65,7 @@ std::string f3d::engine::readerInformation::Description
 
 
 
-### Variable Extensions {#structf3d_1_1engine_1_1reader_information_1a9e778db98dc3a41875ed9c2caeaf3517}
+### Variable Extensions {#structf3d_1_1engine_1_1readerInformation_1a9e778db98dc3a41875ed9c2caeaf3517}
 
 ![][public]
 
@@ -87,7 +87,7 @@ std::vector<std::string> f3d::engine::readerInformation::Extensions
 
 
 
-### Variable MimeTypes {#structf3d_1_1engine_1_1reader_information_1aac8ec25ca07da4cafd1f8a157d583f27}
+### Variable MimeTypes {#structf3d_1_1engine_1_1readerInformation_1aac8ec25ca07da4cafd1f8a157d583f27}
 
 ![][public]
 
@@ -109,7 +109,7 @@ std::vector<std::string> f3d::engine::readerInformation::MimeTypes
 
 
 
-### Variable PluginName {#structf3d_1_1engine_1_1reader_information_1a9d938bd142eb2feb3ac72f6c07eafb6b}
+### Variable PluginName {#structf3d_1_1engine_1_1readerInformation_1a9d938bd142eb2feb3ac72f6c07eafb6b}
 
 ![][public]
 
@@ -131,7 +131,7 @@ std::string f3d::engine::readerInformation::PluginName
 
 
 
-### Variable HasSceneReader {#structf3d_1_1engine_1_1reader_information_1ac0dc89d52c535db198c513fb0543755e}
+### Variable HasSceneReader {#structf3d_1_1engine_1_1readerInformation_1ac0dc89d52c535db198c513fb0543755e}
 
 ![][public]
 
@@ -153,7 +153,7 @@ bool f3d::engine::readerInformation::HasSceneReader
 
 
 
-### Variable HasGeometryReader {#structf3d_1_1engine_1_1reader_information_1a63da7048de227a690590703369523aa3}
+### Variable HasGeometryReader {#structf3d_1_1engine_1_1readerInformation_1a63da7048de227a690590703369523aa3}
 
 ![][public]
 

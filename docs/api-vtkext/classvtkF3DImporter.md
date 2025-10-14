@@ -15,13 +15,13 @@ This generic importer is provided to simplify implementation of other importers 
 
 ## Members
 
-* [ACTOR\_IS\_ARMATURE](classvtk_f3_d_importer.md#classvtk_f3_d_importer_1a6a7e67761cb0b562ceadf7903ec139b0)
-* [SetFailureStatus](classvtk_f3_d_importer.md#classvtk_f3_d_importer_1acd5c322fbe7f72589db10fc2fcfc8ea4)
-* [UpdateAtTimeValue](classvtk_f3_d_importer.md#classvtk_f3_d_importer_1afa7f0fc1608a37a57e9a2f21fcba400d)
+* [ACTOR\_IS\_ARMATURE](classvtkF3DImporter.md#classvtkF3DImporter_1a6a7e67761cb0b562ceadf7903ec139b0)
+* [SetFailureStatus](classvtkF3DImporter.md#classvtkF3DImporter_1acd5c322fbe7f72589db10fc2fcfc8ea4)
+* [UpdateAtTimeValue](classvtkF3DImporter.md#classvtkF3DImporter_1afa7f0fc1608a37a57e9a2f21fcba400d)
 
 ## Public static functions
 
-### Function ACTOR\_IS\_ARMATURE {#classvtk_f3_d_importer_1a6a7e67761cb0b562ceadf7903ec139b0}
+### Function ACTOR\_IS\_ARMATURE {#classvtkF3DImporter_1a6a7e67761cb0b562ceadf7903ec139b0}
 
 ![][public]
 ![][static]
@@ -44,7 +44,7 @@ Information key used to flag actors. Actors having this flag will be drawn on to
 
 ## Public functions
 
-### Function UpdateAtTimeValue {#classvtk_f3_d_importer_1afa7f0fc1608a37a57e9a2f21fcba400d}
+### Function UpdateAtTimeValue {#classvtkF3DImporter_1afa7f0fc1608a37a57e9a2f21fcba400d}
 
 ![][public]
 
@@ -68,7 +68,7 @@ This method should be reimplemented in importer implementations to handle update
 
 
 
-### Function SetFailureStatus {#classvtk_f3_d_importer_1acd5c322fbe7f72589db10fc2fcfc8ea4}
+### Function SetFailureStatus {#classvtkF3DImporter_1acd5c322fbe7f72589db10fc2fcfc8ea4}
 
 ![][public]
 
@@ -90,8 +90,8 @@ Call this method to set the status to failure if supported by the VTK version in
 
 
 
+[private]: https://img.shields.io/badge/-private-red (private)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)
-[private]: https://img.shields.io/badge/-private-red (private)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)

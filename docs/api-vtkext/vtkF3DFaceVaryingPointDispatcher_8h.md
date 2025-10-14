@@ -10,7 +10,7 @@
 
 ## Classes
 
-* [vtkF3DFaceVaryingPointDispatcher](classvtk_f3_d_face_varying_point_dispatcher.md)
+* [vtkF3DFaceVaryingPointDispatcher](classvtkF3DFaceVaryingPointDispatcher.md)
 
 ## Includes
 
@@ -20,7 +20,7 @@
 ```mermaid
 graph LR
 1["vtkF3DFaceVaryingPointDispatcher.h"]
-click 1 "vtk_f3_d_face_varying_point_dispatcher_8h.md#vtk_f3_d_face_varying_point_dispatcher_8h"
+click 1 "vtkF3DFaceVaryingPointDispatcher_8h.md#vtkF3DFaceVaryingPointDispatcher_8h"
 1 --> 2
 
 2["vtkextModule.h"]
@@ -63,8 +63,8 @@ private:
 ```
 
 
+[private]: https://img.shields.io/badge/-private-red (private)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)
-[private]: https://img.shields.io/badge/-private-red (private)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)

@@ -86,16 +86,6 @@ async function runSeaborg(api: string): Promise<void> {
         throw new Error(`Failed to run seaborg: ${(error as Error).message}`);
     }
 
-    // Fix case to avoid issues with files starting with underscore
-    const filesToRename = await fs.promises.readdir(outPath);
-    for (const file of filesToRename) {
-        const filePath = path.join(outPath, file);
-
-        // rename files starting with underscore, otherwise it's ignored by Docusaurus
-        const newFileName = file.replace(/^_([a-z])/g, (_, letter) => letter.toUpperCase());
-        const newFilePath = path.join(outPath, newFileName);
-        await fs.promises.rename(filePath, newFilePath);
-    }
 
     // Postprocess files in ../docs/api
     console.log("Postprocessing generated markdown files...");
