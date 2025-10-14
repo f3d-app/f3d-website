@@ -63,7 +63,7 @@ async function runDoxygen(): Promise<void> {
             throw new Error(`Failed to run doxygen: ${(error as Error).message}`);
         }
 
-        runSeaborg(api);
+        await runSeaborg(api);
     }
 }
 
