@@ -9,7 +9,7 @@ const sidebars: SidebarsConfig = {
     'GETTING_STARTED',
     'BUILD',
     'TESTING',
-    'GENERATE',
+    'TOOLING',
     'ARCHITECTURE',
     'CODING_STYLE',
     'ROADMAPS_AND_RELEASES',
