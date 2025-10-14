@@ -10,7 +10,7 @@
 
 ## Classes
 
-* [vtkF3DBitonicSort](classvtk_f3_d_bitonic_sort.md)
+* [vtkF3DBitonicSort](classvtkF3DBitonicSort.md)
 
 ## Includes
 
@@ -20,7 +20,7 @@
 ```mermaid
 graph LR
 1["vtkF3DBitonicSort.h"]
-click 1 "vtk_f3_d_bitonic_sort_8h.md#vtk_f3_d_bitonic_sort_8h"
+click 1 "vtkF3DBitonicSort_8h.md#vtkF3DBitonicSort_8h"
 1 --> 2
 
 2["vtkextModule.h"]
@@ -74,8 +74,8 @@ private:
 ```
 
 
+[private]: https://img.shields.io/badge/-private-red (private)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)
-[private]: https://img.shields.io/badge/-private-red (private)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)

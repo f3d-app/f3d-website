@@ -8,14 +8,14 @@
   * [f3d::context::symbol\_exception](structf3d_1_1context_1_1symbol__exception.md)
 * [f3d::direction\_t](classf3d_1_1direction__t.md)
 * [f3d::double\_array\_t](classf3d_1_1double__array__t.md)
-* [f3d::exception](structf3d_1_1exception.md): a generic exception used in the libf3d
 * [f3d::engine](classf3d_1_1engine.md): Class used to create instance of other classes.
   * [f3d::engine::cache\_exception](structf3d_1_1engine_1_1cache__exception.md)
-  * [f3d::engine::libInformation](structf3d_1_1engine_1_1lib_information.md)
+  * [f3d::engine::libInformation](structf3d_1_1engine_1_1libInformation.md)
   * [f3d::engine::no\_interactor\_exception](structf3d_1_1engine_1_1no__interactor__exception.md)
   * [f3d::engine::no\_window\_exception](structf3d_1_1engine_1_1no__window__exception.md)
   * [f3d::engine::plugin\_exception](structf3d_1_1engine_1_1plugin__exception.md)
-  * [f3d::engine::readerInformation](structf3d_1_1engine_1_1reader_information.md)
+  * [f3d::engine::readerInformation](structf3d_1_1engine_1_1readerInformation.md)
+* [f3d::exception](structf3d_1_1exception.md): a generic exception used in the libf3d
 * [f3d::image](classf3d_1_1image.md): Class used to represent an image.
   * [f3d::image::metadata\_exception](structf3d_1_1image_1_1metadata__exception.md)
   * [f3d::image::read\_exception](structf3d_1_1image_1_1read__exception.md)
@@ -26,7 +26,6 @@
   * [f3d::interactor::does\_not\_exists\_exception](structf3d_1_1interactor_1_1does__not__exists__exception.md)
   * [f3d::interactor::invalid\_args\_exception](structf3d_1_1interactor_1_1invalid__args__exception.md)
 * [f3d::log](classf3d_1_1log.md): Class used to show logs in F3D.
-* [f3d::ratio\_t](classf3d_1_1ratio__t.md)
 * [f3d::options](classf3d_1_1options.md): Class used to control the different options.
   * [f3d::options::incompatible\_exception](structf3d_1_1options_1_1incompatible__exception.md)
   * [f3d::options::inexistent\_exception](structf3d_1_1options_1_1inexistent__exception.md)
@@ -59,6 +58,7 @@
   * [f3d::options::ui](structf3d_1_1options_1_1ui.md)
     * [f3d::options::ui::backdrop](structf3d_1_1options_1_1ui_1_1backdrop.md)
     * [f3d::options::ui::drop\_zone](structf3d_1_1options_1_1ui_1_1drop__zone.md)
+* [f3d::ratio\_t](classf3d_1_1ratio__t.md)
 * [f3d::scene](classf3d_1_1scene.md): Class to load files into.
   * [f3d::scene::light\_exception](structf3d_1_1scene_1_1light__exception.md)
   * [f3d::scene::load\_failure\_exception](structf3d_1_1scene_1_1load__failure__exception.md)

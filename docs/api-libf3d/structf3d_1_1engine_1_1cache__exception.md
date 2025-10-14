@@ -46,4 +46,3 @@ f3d::engine::cache_exception::cache_exception(const std::string &what="")
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)

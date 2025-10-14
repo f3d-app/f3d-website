@@ -13,8 +13,8 @@ Provide simple utilities to for plugins to avoid code duplication.
 
 
 
+[private]: https://img.shields.io/badge/-private-red (private)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
-[protected]: https://img.shields.io/badge/-protected-yellow (protected)
-[private]: https://img.shields.io/badge/-private-red (private)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[protected]: https://img.shields.io/badge/-protected-yellow (protected)

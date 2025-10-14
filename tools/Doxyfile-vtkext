@@ -21,3 +21,4 @@ SHOW_NAMESPACES        = NO
 EXCLUDE_SYMBOLS        = std*
 DISABLE_INDEX          = YES
 FILE_PATTERNS          = *.h
+CASE_SENSE_NAMES       = YES

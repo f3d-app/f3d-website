@@ -31,11 +31,11 @@ inter.start();
 ## Inner classes
 
 * [f3d::engine::cache\_exception](structf3d_1_1engine_1_1cache__exception.md)
-* [f3d::engine::libInformation](structf3d_1_1engine_1_1lib_information.md)
+* [f3d::engine::libInformation](structf3d_1_1engine_1_1libInformation.md)
 * [f3d::engine::no\_interactor\_exception](structf3d_1_1engine_1_1no__interactor__exception.md)
 * [f3d::engine::no\_window\_exception](structf3d_1_1engine_1_1no__window__exception.md)
 * [f3d::engine::plugin\_exception](structf3d_1_1engine_1_1plugin__exception.md)
-* [f3d::engine::readerInformation](structf3d_1_1engine_1_1reader_information.md)
+* [f3d::engine::readerInformation](structf3d_1_1engine_1_1readerInformation.md)
 
 ## Members
 
@@ -619,7 +619,7 @@ Get a struct containing info about the libf3d.
 
 
 
-**Return type**: [libInformation](structf3d_1_1engine_1_1lib_information.md)
+**Return type**: [libInformation](structf3d_1_1engine_1_1libInformation.md)
 
 
 
@@ -640,7 +640,7 @@ Get a vector of struct containing info about the supported readers.
 
 
 
-**Return type**: std::vector< [readerInformation](structf3d_1_1engine_1_1reader_information.md) >
+**Return type**: std::vector< [readerInformation](structf3d_1_1engine_1_1readerInformation.md) >
 
 
 

@@ -11,19 +11,19 @@ A structure providing information about the libf3d. Returned by [getLibInfo()](c
 
 ## Members
 
-* [BuildDate](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a96f5421664b16f4911a2a244a5b17130)
-* [BuildSystem](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a9bc8f08c8a6a54d8c398db63a100f103)
-* [Compiler](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a89403217bdae41dc3cb2af5a46123fc2)
-* [Copyrights](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1aa5fcaf4da0e499f963511197bafcaa68)
-* [License](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1aa1fc55f2019aefc29181dc1220d29093)
-* [Modules](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1ae91661d2e5ec8af1db9b73ac3a38fe45)
-* [Version](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a77e76b84e18488fd4cbc69011632809c)
-* [VersionFull](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1a22ab02e3f1d8e92fbd4e391bdbab16ee)
-* [VTKVersion](structf3d_1_1engine_1_1lib_information.md#structf3d_1_1engine_1_1lib_information_1ae18443c52968409bbba45aa86ecbe116)
+* [BuildDate](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1a96f5421664b16f4911a2a244a5b17130)
+* [BuildSystem](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1a9bc8f08c8a6a54d8c398db63a100f103)
+* [Compiler](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1a89403217bdae41dc3cb2af5a46123fc2)
+* [Copyrights](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1aa5fcaf4da0e499f963511197bafcaa68)
+* [License](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1aa1fc55f2019aefc29181dc1220d29093)
+* [Modules](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1ae91661d2e5ec8af1db9b73ac3a38fe45)
+* [Version](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1a77e76b84e18488fd4cbc69011632809c)
+* [VersionFull](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1a22ab02e3f1d8e92fbd4e391bdbab16ee)
+* [VTKVersion](structf3d_1_1engine_1_1libInformation.md#structf3d_1_1engine_1_1libInformation_1ae18443c52968409bbba45aa86ecbe116)
 
 ## Public attributes
 
-### Variable Version {#structf3d_1_1engine_1_1lib_information_1a77e76b84e18488fd4cbc69011632809c}
+### Variable Version {#structf3d_1_1engine_1_1libInformation_1a77e76b84e18488fd4cbc69011632809c}
 
 ![][public]
 
@@ -45,7 +45,7 @@ std::string f3d::engine::libInformation::Version
 
 
 
-### Variable VersionFull {#structf3d_1_1engine_1_1lib_information_1a22ab02e3f1d8e92fbd4e391bdbab16ee}
+### Variable VersionFull {#structf3d_1_1engine_1_1libInformation_1a22ab02e3f1d8e92fbd4e391bdbab16ee}
 
 ![][public]
 
@@ -67,7 +67,7 @@ std::string f3d::engine::libInformation::VersionFull
 
 
 
-### Variable BuildDate {#structf3d_1_1engine_1_1lib_information_1a96f5421664b16f4911a2a244a5b17130}
+### Variable BuildDate {#structf3d_1_1engine_1_1libInformation_1a96f5421664b16f4911a2a244a5b17130}
 
 ![][public]
 
@@ -89,7 +89,7 @@ std::string f3d::engine::libInformation::BuildDate
 
 
 
-### Variable BuildSystem {#structf3d_1_1engine_1_1lib_information_1a9bc8f08c8a6a54d8c398db63a100f103}
+### Variable BuildSystem {#structf3d_1_1engine_1_1libInformation_1a9bc8f08c8a6a54d8c398db63a100f103}
 
 ![][public]
 
@@ -111,7 +111,7 @@ std::string f3d::engine::libInformation::BuildSystem
 
 
 
-### Variable Compiler {#structf3d_1_1engine_1_1lib_information_1a89403217bdae41dc3cb2af5a46123fc2}
+### Variable Compiler {#structf3d_1_1engine_1_1libInformation_1a89403217bdae41dc3cb2af5a46123fc2}
 
 ![][public]
 
@@ -133,7 +133,7 @@ std::string f3d::engine::libInformation::Compiler
 
 
 
-### Variable Modules {#structf3d_1_1engine_1_1lib_information_1ae91661d2e5ec8af1db9b73ac3a38fe45}
+### Variable Modules {#structf3d_1_1engine_1_1libInformation_1ae91661d2e5ec8af1db9b73ac3a38fe45}
 
 ![][public]
 
@@ -155,7 +155,7 @@ std::map<std::string, bool> f3d::engine::libInformation::Modules
 
 
 
-### Variable VTKVersion {#structf3d_1_1engine_1_1lib_information_1ae18443c52968409bbba45aa86ecbe116}
+### Variable VTKVersion {#structf3d_1_1engine_1_1libInformation_1ae18443c52968409bbba45aa86ecbe116}
 
 ![][public]
 
@@ -177,7 +177,7 @@ std::string f3d::engine::libInformation::VTKVersion
 
 
 
-### Variable Copyrights {#structf3d_1_1engine_1_1lib_information_1aa5fcaf4da0e499f963511197bafcaa68}
+### Variable Copyrights {#structf3d_1_1engine_1_1libInformation_1aa5fcaf4da0e499f963511197bafcaa68}
 
 ![][public]
 
@@ -199,7 +199,7 @@ std::vector<std::string> f3d::engine::libInformation::Copyrights
 
 
 
-### Variable License {#structf3d_1_1engine_1_1lib_information_1aa1fc55f2019aefc29181dc1220d29093}
+### Variable License {#structf3d_1_1engine_1_1libInformation_1aa1fc55f2019aefc29181dc1220d29093}
 
 ![][public]
 

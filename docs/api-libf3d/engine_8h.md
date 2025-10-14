@@ -11,8 +11,8 @@
 ## Classes
 
 * [f3d::engine](classf3d_1_1engine.md)
-* [f3d::engine::libInformation](structf3d_1_1engine_1_1lib_information.md)
-* [f3d::engine::readerInformation](structf3d_1_1engine_1_1reader_information.md)
+* [f3d::engine::libInformation](structf3d_1_1engine_1_1libInformation.md)
+* [f3d::engine::readerInformation](structf3d_1_1engine_1_1readerInformation.md)
 * [f3d::engine::no\_window\_exception](structf3d_1_1engine_1_1no__window__exception.md)
 * [f3d::engine::no\_interactor\_exception](structf3d_1_1engine_1_1no__interactor__exception.md)
 * [f3d::engine::plugin\_exception](structf3d_1_1engine_1_1plugin__exception.md)

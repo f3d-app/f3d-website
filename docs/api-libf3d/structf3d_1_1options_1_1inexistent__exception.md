@@ -49,3 +49,4 @@ f3d::options::inexistent_exception::inexistent_exception(const std::string &what
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
 [static]: https://img.shields.io/badge/-static-lightgrey (static)
+[private]: https://img.shields.io/badge/-private-red (private)

@@ -1,5 +1,5 @@
 (function() {
   const script = document.getElementById('compound-list');
   const varname = script.getAttribute('data-varname');
-  this[varname] = ["classvtk_f3_d_g_l_t_f_importer.md","namespace_f3_d_utils.md","class_f3_d_utils.md","vtk_f3_d_bitonic_sort_8h.md","_f3_d_utils_8h.md","classvtk_f3_d_bitonic_sort.md","vtk_f3_d_face_varying_point_dispatcher_8h.md","classvtk_f3_d_face_varying_point_dispatcher.md","vtk_f3_d_g_l_t_f_importer_8h.md","classvtk_f3_d_importer.md","vtk_f3_d_importer_8h.md"];
+  this[varname] = ["classvtkF3DBitonicSort.md","namespaceF3DUtils.md","classvtkF3DFaceVaryingPointDispatcher.md","classvtkF3DGLTFImporter.md","classvtkF3DImporter.md","classF3DUtils.md","F3DUtils_8h.md","vtkF3DBitonicSort_8h.md","vtkF3DFaceVaryingPointDispatcher_8h.md","vtkF3DGLTFImporter_8h.md","vtkF3DImporter_8h.md"];
   })();
