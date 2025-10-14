@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import { processOptions, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdownFixups";
+import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdownFixups";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -85,7 +85,7 @@ async function runSeaborg(api: string): Promise<void> {
     } catch (error) {
         throw new Error(`Failed to run seaborg: ${(error as Error).message}`);
     }
-    
+
     // Fix case to avoid issues with files starting with underscore
     const filesToRename = await fs.promises.readdir(outPath);
     for (const file of filesToRename) {
@@ -194,11 +194,18 @@ async function copyDocs(): Promise<void> {
 }
 
 async function preprocessMarkdown(): Promise<void> {
-    // Improve OPTIONS.md anchors and formatting
+    // Improve user/OPTIONS.md anchors and formatting
     for (const file of ["docs/user/OPTIONS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
-        await writeFile(filePath, processOptions(contents));
+        await writeFile(filePath, processUserOptions(contents));
+    }
+
+    // Improve libf3d/OPTIONS.md anchors and formatting
+    for (const file of ["docs/libf3d/OPTIONS.md"]) {
+        const filePath = path.join(__dirname, "..", file);
+        const contents = await readFile(filePath, { encoding: 'utf8' });
+        await writeFile(filePath, processLibOptions(contents));
     }
 
     // Fix links in CONTRIBUTING.md

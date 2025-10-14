@@ -20,106 +20,412 @@ See the [APIs](#struct-api) details below for more info.
 
 ## Scene Options
 
-|            Option            | Type<br/>Default<br/>Trigger | Description                                                                                                                         |         F3D option         |
-| :--------------------------: | :--------------------------: | :---------------------------------------------------------------------------------------------------------------------------------- | :------------------------: |
-|   scene.animation.autoplay   |   bool<br/>false<br/>load    | Automatically start animation.                                                                                                      |   \-\-animation-autoplay   |
-|   scene.animation.indices    | vector\<int\><br/>0<br/>load | Select the animations to load.<br/>Any negative value means all animations.<br/>The default scene always has at most one animation. |   \-\-animation-indices    |
-| scene.animation.speed_factor |    ratio<br/>1<br/>render    | Set the animation speed factor to slow, speed up or even invert animation.                                                          | \-\-animation-speed-factor |
-|     scene.animation.time     | double<br/>optional<br/>load | Set the animation time to load.                                                                                                     |     \-\-animation-time     |
-|      scene.camera.index      |  int<br/>optional<br/>load   | Select the scene camera to use when available in the file.<br/>The default scene always uses automatic camera.                      |      \-\-camera-index      |
-|      scene.up_direction      |  direction<br/>+Y<br/>load   | Define the Up direction. It impacts the grid, the axis, the HDRI and the camera.                                                    |           \-\-up           |
-|      scene.force_reader      | string<br/>optional<br/>load | Force a specific reader to be used, disregarding the file extension. See [user documentation](../user/SUPPORTED_FORMATS.md)         |      \-\-force-reader      |
-|  scene.camera.orthographic   |  bool<br/>optional<br/>load  | Set to true to force orthographic projection. Model specified by default, which is false if not specified.                          |  \-\-camera\-orthographic  |
+### `scene.animation.autoplay` <small>(_bool_, default: `false`, **on load**)</small> {#scene.animation.autoplay}
+
+Automatically start animation.
+CLI: [`--animation-autoplay`](../user/OPTIONS#--animation-autoplay).
+
+### `scene.animation.indices` <small>(_vector\<int\>_, default: `0`, **on load**)</small> {#scene.animation.indices}
+
+Select the animations to load.
+Any negative value means all animations.
+The default scene always has at most one animation.
+CLI: [`--animation-indices`](../user/OPTIONS#--animation-indices).
+
+### `scene.animation.speed_factor` <small>(_ratio_, default: `1`)</small> {#scene.animation.speed_factor}
+
+Set the animation speed factor to slow, speed up or even invert animation.
+CLI: [`--animation-speed-factor`](../user/OPTIONS#--animation-speed-factor).
+
+### `scene.animation.time` <small>(_double_, optional, **on load**)</small> {#scene.animation.time}
+
+Set the animation time to load.
+CLI: [`--animation-time`](../user/OPTIONS#--animation-time).
+
+### `scene.camera.index` <small>(_int_, optional, **on load**)</small> {#scene.camera.index}
+
+Select the scene camera to use when available in the file.
+The default scene always uses automatic camera.
+CLI: [`--camera-index`](../user/OPTIONS#--camera-index).
+
+### `scene.up_direction` <small>(_direction_, default: `+Y`, **on load**)</small> {#scene.up_direction}
+
+Define the Up direction. It impacts the grid, the axis, the HDRI and the camera.
+CLI: [`--up`](../user/OPTIONS#--up).
+
+### `scene.force_reader` <small>(_string_, optional, **on load**)</small> {#scene.force_reader}
+
+Force a specific reader to be used, disregarding the file extension. See [user documentation](../user/SUPPORTED_FORMATS.md)
+CLI: [`--force-reader`](../user/OPTIONS#--force-reader).
+
+### `scene.camera.orthographic` <small>(_bool_, optional, **on load**)</small> {#scene.camera.orthographic}
+
+Set to true to force orthographic projection. Model specified by default, which is false if not specified.
+CLI: [`--camera-orthographic`](../user/OPTIONS#--camera-orthographic).
 
 ## Interactor Options
 
-|         Option         | Type<br/>Default<br/>Trigger | Description                   |   F3D option    |
-| :--------------------: | :--------------------------: | :---------------------------- | :-------------: |
-|  interactor.trackball  |  bool<br/>false<br/>render   | Enable trackball interaction. |  \-\-trackball  |
-| interactor.invert_zoom |  bool<br/>false<br/>render   | Invert the zoom direction.    | \-\-invert-zoom |
+### `interactor.trackball` <small>(_bool_, default: `false`)</small> {#interactor.trackball}
+
+Enable trackball interaction.
+CLI: [`--trackball`](../user/OPTIONS#--trackball).
+
+### `interactor.invert_zoom` <small>(_bool_, default: `false`)</small> {#interactor.invert_zoom}
+
+Invert the zoom direction.
+CLI: [`--invert-zoom`](../user/OPTIONS#--invert-zoom).
 
 ## Model Options
 
-|           Option            |       Type<br/>Default<br/>Trigger       | Description                                                                                                                                                                                                                                          |         F3D option          |
-| :-------------------------: | :--------------------------------------: | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :-------------------------: |
-|    model.matcap.texture     |       path<br/>optional<br/>render       | Path to a texture file containing a material capture. All other model options for surfaces are ignored if this is set. Model specified by default.                                                                                                   |     \-\-texture-matcap      |
-|     model.color.opacity     |      double<br/>optional<br/>render      | Set _opacity_ on the geometry. Usually used with Depth Peeling option. Multiplied with the `model.color.texture` when present. Model specified by default.                                                                                           |         \-\-opacity         |
-|       model.color.rgb       |      color<br/>optional<br/>render       | Set a _color_ on the geometry. Multiplied with the `model.color.texture` when present. Model specified by default.                                                                                                                                   |          \-\-color          |
-|     model.color.texture     |       path<br/>optional<br/>render       | Path to a texture file that sets the color of the object. Will be multiplied with rgb and opacity. Model specified by default.                                                                                                                       |   \-\-texture-base-color    |
-|    model.emissive.factor    |      color<br/>optional<br/>render       | Multiply the emissive color when an emissive texture is present. Model specified by default.                                                                                                                                                         |     \-\-emissive-factor     |
-|   model.emissive.texture    |           path<br/><br/>render           | Path to a texture file that sets the emitted light of the object. Multiplied with the `model.emissive.factor`. Model specified by default.                                                                                                           |    \-\-texture-emissive     |
-|   model.material.metallic   |      double<br/>optional<br/>render      | Set the _metallic coefficient_ on the geometry (0.0-1.0). Multiplied with the `model.material.texture` when present. Model specified by default.                                                                                                     |        \-\-metallic         |
-|  model.material.roughness   |      double<br/>optional<br/>render      | Set the _roughness coefficient_ on the geometry (0.0-1.0). Multiplied with the `model.material.texture` when present. Model specified by default.                                                                                                    |        \-\-roughness        |
-|   model.material.base_ior   |      double<br/>optional<br/>render      | Set the _index of refraction of the base layer_ (1.0-2.5). Model specified by default.                                                                                                                                                               |        \-\-base\-ior        |
-|   model.material.texture    |       path<br/>optional<br/>render       | Path to a texture file that sets the Occlusion, Roughness and Metallic values of the object. Multiplied with the `model.material.roughness` and `model.material.metallic`, set both of them to 1.0 to get a true result. Model specified by default. |    \-\-texture-material     |
-|     model.normal.scale      |      double<br/>optional<br/>render      | Normal scale affects the strength of the normal deviation from the normal texture. Model specified by default.                                                                                                                                       |      \-\-normal-scale       |
-|    model.normal.texture     |       path<br/>optional<br/>render       | Path to a texture file that sets the normal map of the object. Model specified by default.                                                                                                                                                           |     \-\-texture-normal      |
-|     model.scivis.enable     |        bool<br/>false<br/>render         | _Color by an array_ present in on the data. If `model.scivis.array_name` is not set, the first available array will be used.                                                                                                                         |     \-\-scalar-coloring     |
-|     model.scivis.cells      |        bool<br/>false<br/>render         | Color the data with value found _on the cells_ instead of points                                                                                                                                                                                     |          \-\-cells          |
-| model.scivis.discretization |       int<br/>optional<br/>render        | Set how many distinct colors will be used from the colormap. \[1, N\] will discretize, values outside that range will result in smooth shading.                                                                                                      | \-\-colormap-discretization |
-|    model.scivis.colormap    |   colormap<br/>\<inferno\><br/>render    | Set a _custom colormap for the coloring_.See [colormap parsing](../user/PARSING.md#colormap) for details.                                                                                                                                            |        \-\-colormap         |
-|   model.scivis.component    |          int<br/>-1<br/>render           | Specify the component to color with. -1 means _magnitude_. -2 means _direct values_.                                                                                                                                                                 |          \-\-comp           |
-|   model.scivis.array_name   |          string<br/><br/>render          | Select the name of the array to color with.                                                                                                                                                                                                          |     \-\-coloring-array      |
-|     model.scivis.range      | vector\<double\><br/>optional<br/>render | Set the _coloring range_. Automatically computed by default.                                                                                                                                                                                         |          \-\-range          |
-| model.point_sprites.enable  |        bool<br/>false<br/>render         | Show sphere _points sprites_ instead of the geometry.                                                                                                                                                                                                |      \-\-point-sprites      |
-|  model.point_sprites.type   |       string<br/>sphere<br/>render       | Set the sprites type when showing point sprites (can be `sphere` or `gaussian`).                                                                                                                                                                     |   \-\-point-stripes-type    |
-|  model.point_sprites.size   |        double<br/>10.0<br/>render        | Set the _size_ of point sprites.                                                                                                                                                                                                                     |   \-\-point-stripes-size    |
-|     model.volume.enable     |        bool<br/>false<br/>render         | Enable _volume rendering_. It is only available for 3D image data (vti, dcm, nrrd, mhd files) and will display nothing with other formats. It forces coloring.                                                                                       |         \-\-volume          |
-|    model.volume.inverse     |        bool<br/>false<br/>render         | Inverse the linear opacity function.                                                                                                                                                                                                                 |         \-\-inverse         |
-|  model.textures_transform   |   transform2d<br/>optional<br/>render    | Transform applied to textures on the model. If a default transform is set by the importer, the default value will be multiplied by this transform.                                                                                                   |   \-\-textures-transform    |
+### `model.matcap.texture` <small>(_path_, optional)</small> {#model.matcap.texture}
+
+Path to a texture file containing a material capture. All other model options for surfaces are ignored if this is set. Model specified by default.
+CLI: [`--texture-matcap`](../user/OPTIONS#--texture-matcap).
+
+### `model.color.opacity` <small>(_double_, optional)</small> {#model.color.opacity}
+
+Set _opacity_ on the geometry. Usually used with Depth Peeling option. Multiplied with the `model.color.texture` when present. Model specified by default.
+CLI: [`--opacity`](../user/OPTIONS#--opacity).
+
+### `model.color.rgb` <small>(_color_, optional)</small> {#model.color.rgb}
+
+Set a _color_ on the geometry. Multiplied with the `model.color.texture` when present. Model specified by default.
+CLI: [`--color`](../user/OPTIONS#--color).
+
+### `model.color.texture` <small>(_path_, optional)</small> {#model.color.texture}
+
+Path to a texture file that sets the color of the object. Will be multiplied with rgb and opacity. Model specified by default.
+CLI: [`--texture-base-color`](../user/OPTIONS#--texture-base-color).
+
+### `model.emissive.factor` <small>(_color_, optional)</small> {#model.emissive.factor}
+
+Multiply the emissive color when an emissive texture is present. Model specified by default.
+CLI: [`--emissive-factor`](../user/OPTIONS#--emissive-factor).
+
+### `model.emissive.texture` <small>(_path_, default: ``)</small> {#model.emissive.texture}
+
+Path to a texture file that sets the emitted light of the object. Multiplied with the `model.emissive.factor`. Model specified by default.
+CLI: [`--texture-emissive`](../user/OPTIONS#--texture-emissive).
+
+### `model.material.metallic` <small>(_double_, optional)</small> {#model.material.metallic}
+
+Set the _metallic coefficient_ on the geometry (0.0-1.0). Multiplied with the `model.material.texture` when present. Model specified by default.
+CLI: [`--metallic`](../user/OPTIONS#--metallic).
+
+### `model.material.roughness` <small>(_double_, optional)</small> {#model.material.roughness}
+
+Set the _roughness coefficient_ on the geometry (0.0-1.0). Multiplied with the `model.material.texture` when present. Model specified by default.
+CLI: [`--roughness`](../user/OPTIONS#--roughness).
+
+### `model.material.base_ior` <small>(_double_, optional)</small> {#model.material.base_ior}
+
+Set the _index of refraction of the base layer_ (1.0-2.5). Model specified by default.
+CLI: [`--base-ior`](../user/OPTIONS#--base-ior).
+
+### `model.material.texture` <small>(_path_, optional)</small> {#model.material.texture}
+
+Path to a texture file that sets the Occlusion, Roughness and Metallic values of the object. Multiplied with the `model.material.roughness` and `model.material.metallic`, set both of them to 1.0 to get a true result. Model specified by default.
+CLI: [`--texture-material`](../user/OPTIONS#--texture-material).
+
+### `model.normal.scale` <small>(_double_, optional)</small> {#model.normal.scale}
+
+Normal scale affects the strength of the normal deviation from the normal texture. Model specified by default.
+CLI: [`--normal-scale`](../user/OPTIONS#--normal-scale).
+
+### `model.normal.texture` <small>(_path_, optional)</small> {#model.normal.texture}
+
+Path to a texture file that sets the normal map of the object. Model specified by default.
+CLI: [`--texture-normal`](../user/OPTIONS#--texture-normal).
+
+### `model.scivis.enable` <small>(_bool_, default: `false`)</small> {#model.scivis.enable}
+
+_Color by an array_ present in on the data. If `model.scivis.array_name` is not set, the first available array will be used.
+CLI: [`--scalar-coloring`](../user/OPTIONS#--scalar-coloring).
+
+### `model.scivis.cells` <small>(_bool_, default: `false`)</small> {#model.scivis.cells}
+
+Color the data with value found _on the cells_ instead of points
+CLI: [`--cells`](../user/OPTIONS#--cells).
+
+### `model.scivis.discretization` <small>(_int_, optional)</small> {#model.scivis.discretization}
+
+Set how many distinct colors will be used from the colormap. [1, N] will discretize, values outside that range will result in smooth shading.
+CLI: [`--colormap-discretization`](../user/OPTIONS#--colormap-discretization).
+
+### `model.scivis.colormap` <small>(_colormap_, default: `\<inferno\>`)</small> {#model.scivis.colormap}
+
+Set a _custom colormap for the coloring_.See [colormap parsing](../user/PARSING.md#colormap) for details.
+CLI: [`--colormap`](../user/OPTIONS#--colormap).
+
+### `model.scivis.component` <small>(_int_, default: `-1`)</small> {#model.scivis.component}
+
+Specify the component to color with. -1 means _magnitude_. -2 means _direct values_.
+CLI: [`--comp`](../user/OPTIONS#--comp).
+
+### `model.scivis.array_name` <small>(_string_, default: ``)</small> {#model.scivis.array_name}
+
+Select the name of the array to color with.
+CLI: [`--coloring-array`](../user/OPTIONS#--coloring-array).
+
+### `model.scivis.range` <small>(_vector\<double\>_, optional)</small> {#model.scivis.range}
+
+Set the _coloring range_. Automatically computed by default.
+CLI: [`--range`](../user/OPTIONS#--range).
+
+### `model.point_sprites.enable` <small>(_bool_, default: `false`)</small> {#model.point_sprites.enable}
+
+Show sphere _points sprites_ instead of the geometry.
+CLI: [`--point-sprites`](../user/OPTIONS#--point-sprites).
+
+### `model.point_sprites.type` <small>(_string_, default: `sphere`)</small> {#model.point_sprites.type}
+
+Set the sprites type when showing point sprites (can be `sphere` or `gaussian`).
+CLI: [`--point-stripes-type`](../user/OPTIONS#--point-stripes-type).
+
+### `model.point_sprites.size` <small>(_double_, default: `10.0`)</small> {#model.point_sprites.size}
+
+Set the _size_ of point sprites.
+CLI: [`--point-stripes-size`](../user/OPTIONS#--point-stripes-size).
+
+### `model.volume.enable` <small>(_bool_, default: `false`)</small> {#model.volume.enable}
+
+Enable _volume rendering_. It is only available for 3D image data (vti, dcm, nrrd, mhd files) and will display nothing with other formats. It forces coloring.
+CLI: [`--volume`](../user/OPTIONS#--volume).
+
+### `model.volume.inverse` <small>(_bool_, default: `false`)</small> {#model.volume.inverse}
+
+Inverse the linear opacity function.
+CLI: [`--inverse`](../user/OPTIONS#--inverse).
+
+### `model.textures_transform` <small>(_transform2d_, optional)</small> {#model.textures_transform}
+
+Transform applied to textures on the model. If a default transform is set by the importer, the default value will be multiplied by this transform.
+CLI: [`--textures-transform`](../user/OPTIONS#--textures-transform).
 
 ## Render Options
 
-|               Option               |   Type<br/>Default<br/>Trigger   | Description                                                                                                                                                                 |                              F3D option                              |
-| :--------------------------------: | :------------------------------: | :-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | :------------------------------------------------------------------: |
-| render.effect.translucency_support |    bool<br/>false<br/>render     | Enable _translucency support_. This is a technique used to correctly render translucent objects, implemented using depth peeling                                            |                       \-\-translucency-support                       |
-| render.effect.antialiasing.enable  |   string<br/>false<br/>render    | Enable _anti-aliasing_. This technique is used to reduce aliasing.                                                                                                          |                          \-\-anti-aliasing                           |
-|  render.effect.antialiasing.mode   |    string<br/>fxaa<br/>render    | Set the anti-aliasing technique. Valid options are: FXAA (fast), SSAA (quality)                                                                                             |                        \-\-anti-aliasing-mode                        |
-|  render.effect.ambient_occlusion   |    bool<br/>false<br/>render     | Enable _ambient occlusion_. This is a technique providing approximate shadows, used to improve the depth perception of the object. Implemented using SSAO                   |                        \-\-ambient_occlusion                         |
-|     render.effect.tone_mapping     |    bool<br/>false<br/>render     | Enable generic filmic _Tone Mapping Pass_. This technique is used to map colors properly to the monitor colors.                                                             |                           \-\-tone-mapping                           |
-|     render.effect.final_shader     |  string<br/>optional<br/>render  | Add a final shader to the output image                                                                                                                                      | \-\-final-shader. See [user documentation](../user/FINAL_SHADER.md). |
-|         render.line_width          |  double<br/>optional<br/>render  | Set the _width_ of lines when showing edges. Model specified by default.                                                                                                    |                            \-\-line-width                            |
-|         render.show_edges          |   bool<br/>optional<br/>render   | Set to true to show the _cell edges_. Model specified by default.                                                                                                           |                              \-\-edges                               |
-|         render.point_size          |  double<br/>optional<br/>render  | Set the _size_ of points when showing vertices. Model specified by default.                                                                                                 |                            \-\-point-size                            |
-|        render.backface_type        |  string<br/>optional<br/>render  | Set the Backface type, can be `visible` or `hidden`, model specified by default.                                                                                            |                          \-\-backface-type                           |
-|         render.grid.enable         |    bool<br/>false<br/>render     | Show _a grid_ aligned with the horizontal (orthogonal to the Up direction) plane.                                                                                           |                               \-\-grid                               |
-|        render.grid.absolute        |    bool<br/>false<br/>render     | Position the grid at the _absolute origin_ of the model's coordinate system instead of below the model.                                                                     |                               \-\-grid                               |
-|          render.grid.unit          |  double<br/>optional<br/>render  | Set the size of the _unit square_ for the grid. Automatically computed by default.                                                                                          |                            \-\-grid-unit                             |
-|      render.grid.subdivisions      |      int<br/>10<br/>render       | Set the number of subdivisions for the grid.                                                                                                                                |                        \-\-grid-subdivisions                         |
-|         render.grid.color          |   color<br/>0, 0, 0<br/>render   | Set the color of grid lines.                                                                                                                                                |                            \-\-grid-color                            |
-|      render.raytracing.enable      |    bool<br/>false<br/>render     | Enable _raytracing_. Requires the raytracing module to be enabled.                                                                                                          |                            \-\-raytracing                            |
-|     render.raytracing.samples      |       int<br/>5<br/>render       | The number of _samples per pixel_.                                                                                                                                          |                             \-\-samples                              |
-|     render.raytracing.denoise      |    bool<br/>false<br/>render     | _Denoise_ the raytracing rendering.                                                                                                                                         |                             \-\-denoise                              |
-|          render.hdri.file          |   path<br/>optional<br/>render   | Set the _HDRI_ image that can be used for ambient lighting and skybox.<br/>Valid file format are hdr, exr, png, jpg, pnm, tiff, bmp.<br/>If not set, a default is provided. |                            \-\-hdri-file                             |
-|        render.hdri.ambient         |    bool<br/>false<br/>render     | Light the scene using the _HDRI_ image as ambient lighting<br/>The environment act as a light source and is reflected on the material.                                      |                           \-\-hdri-ambient                           |
-|      render.background.color       | color<br/>0.2,0.2,0.2<br/>render | Set the window _background color_.<br/>Ignored if a _hdri_ skybox is used.                                                                                                  |                         \-\-background-color                         |
-|      render.background.skybox      |    bool<br/>false<br/>render     | Show the _HDRI_ image as a skybox<br/>Overrides the the background color if any                                                                                             |                           \-\-hdri-skybox                            |
-|   render.background.blur.enable    |    bool<br/>false<br/>render     | Blur background, useful with a skybox.                                                                                                                                      |                         \-\-blur-background                          |
-|     render.background.blur.coc     |    double<br/>20.0<br/>render    | Blur background circle of confusion radius.                                                                                                                                 |                             \-\-blur-coc                             |
-|       render.light.intensity       |    double<br/>1.0<br/>render     | Adjust the intensity of every light in the scene.                                                                                                                           |                         \-\-light-intensity                          |
-|       render.armature.enable       |    bool<br/>false<br/>render     | Display armatures if present in the scene (glTF only).                                                                                                                      |                             \-\-armature                             |
+### `render.effect.translucency_support` <small>(_bool_, default: `false`)</small> {#render.effect.translucency_support}
+
+Enable _translucency support_. This is a technique used to correctly render translucent objects, implemented using depth peeling
+CLI: [`--translucency-support`](../user/OPTIONS#--translucency-support).
+
+### `render.effect.antialiasing.enable` <small>(_string_, default: `false`)</small> {#render.effect.antialiasing.enable}
+
+Enable _anti-aliasing_. This technique is used to reduce aliasing.
+CLI: [`--anti-aliasing`](../user/OPTIONS#--anti-aliasing).
+
+### `render.effect.antialiasing.mode` <small>(_string_, default: `fxaa`)</small> {#render.effect.antialiasing.mode}
+
+Set the anti-aliasing technique. Valid options are: FXAA (fast), SSAA (quality)
+CLI: [`--anti-aliasing-mode`](../user/OPTIONS#--anti-aliasing-mode).
+
+### `render.effect.ambient_occlusion` <small>(_bool_, default: `false`)</small> {#render.effect.ambient_occlusion}
+
+Enable _ambient occlusion_. This is a technique providing approximate shadows, used to improve the depth perception of the object. Implemented using SSAO
+CLI: [`--ambient_occlusion`](../user/OPTIONS#--ambient_occlusion).
+
+### `render.effect.tone_mapping` <small>(_bool_, default: `false`)</small> {#render.effect.tone_mapping}
+
+Enable generic filmic _Tone Mapping Pass_. This technique is used to map colors properly to the monitor colors.
+CLI: [`--tone-mapping`](../user/OPTIONS#--tone-mapping).
+
+### `render.effect.final_shader` <small>(_string_, optional)</small> {#render.effect.final_shader}
+
+Add a final shader to the output image
+CLI: [`--final-shader. See [user documentation](../user/FINAL_SHADER.md).`](../user/OPTIONS#--final-shader. See [user documentation](../user/FINAL_SHADER.md).).
+
+### `render.line_width` <small>(_double_, optional)</small> {#render.line_width}
+
+Set the _width_ of lines when showing edges. Model specified by default.
+CLI: [`--line-width`](../user/OPTIONS#--line-width).
+
+### `render.show_edges` <small>(_bool_, optional)</small> {#render.show_edges}
+
+Set to true to show the _cell edges_. Model specified by default.
+CLI: [`--edges`](../user/OPTIONS#--edges).
+
+### `render.point_size` <small>(_double_, optional)</small> {#render.point_size}
+
+Set the _size_ of points when showing vertices. Model specified by default.
+CLI: [`--point-size`](../user/OPTIONS#--point-size).
+
+### `render.backface_type` <small>(_string_, optional)</small> {#render.backface_type}
+
+Set the Backface type, can be `visible` or `hidden`, model specified by default.
+CLI: [`--backface-type`](../user/OPTIONS#--backface-type).
+
+### `render.grid.enable` <small>(_bool_, default: `false`)</small> {#render.grid.enable}
+
+Show _a grid_ aligned with the horizontal (orthogonal to the Up direction) plane.
+CLI: [`--grid`](../user/OPTIONS#--grid).
+
+### `render.grid.absolute` <small>(_bool_, default: `false`)</small> {#render.grid.absolute}
+
+Position the grid at the _absolute origin_ of the model's coordinate system instead of below the model.
+CLI: [`--grid`](../user/OPTIONS#--grid).
+
+### `render.grid.unit` <small>(_double_, optional)</small> {#render.grid.unit}
+
+Set the size of the _unit square_ for the grid. Automatically computed by default.
+CLI: [`--grid-unit`](../user/OPTIONS#--grid-unit).
+
+### `render.grid.subdivisions` <small>(_int_, default: `10`)</small> {#render.grid.subdivisions}
+
+Set the number of subdivisions for the grid.
+CLI: [`--grid-subdivisions`](../user/OPTIONS#--grid-subdivisions).
+
+### `render.grid.color` <small>(_color_, default: `0, 0, 0`)</small> {#render.grid.color}
+
+Set the color of grid lines.
+CLI: [`--grid-color`](../user/OPTIONS#--grid-color).
+
+### `render.raytracing.enable` <small>(_bool_, default: `false`)</small> {#render.raytracing.enable}
+
+Enable _raytracing_. Requires the raytracing module to be enabled.
+CLI: [`--raytracing`](../user/OPTIONS#--raytracing).
+
+### `render.raytracing.samples` <small>(_int_, default: `5`)</small> {#render.raytracing.samples}
+
+The number of _samples per pixel_.
+CLI: [`--samples`](../user/OPTIONS#--samples).
+
+### `render.raytracing.denoise` <small>(_bool_, default: `false`)</small> {#render.raytracing.denoise}
+
+_Denoise_ the raytracing rendering.
+CLI: [`--denoise`](../user/OPTIONS#--denoise).
+
+### `render.hdri.file` <small>(_path_, optional)</small> {#render.hdri.file}
+
+Set the _HDRI_ image that can be used for ambient lighting and skybox.
+Valid file format are hdr, exr, png, jpg, pnm, tiff, bmp.
+If not set, a default is provided.
+CLI: [`--hdri-file`](../user/OPTIONS#--hdri-file).
+
+### `render.hdri.ambient` <small>(_bool_, default: `false`)</small> {#render.hdri.ambient}
+
+Light the scene using the _HDRI_ image as ambient lighting
+The environment act as a light source and is reflected on the material.
+CLI: [`--hdri-ambient`](../user/OPTIONS#--hdri-ambient).
+
+### `render.background.color` <small>(_color_, default: `0.2,0.2,0.2`)</small> {#render.background.color}
+
+Set the window _background color_.
+Ignored if a _hdri_ skybox is used.
+CLI: [`--background-color`](../user/OPTIONS#--background-color).
+
+### `render.background.skybox` <small>(_bool_, default: `false`)</small> {#render.background.skybox}
+
+Show the _HDRI_ image as a skybox
+Overrides the the background color if any
+CLI: [`--hdri-skybox`](../user/OPTIONS#--hdri-skybox).
+
+### `render.background.blur.enable` <small>(_bool_, default: `false`)</small> {#render.background.blur.enable}
+
+Blur background, useful with a skybox.
+CLI: [`--blur-background`](../user/OPTIONS#--blur-background).
+
+### `render.background.blur.coc` <small>(_double_, default: `20.0`)</small> {#render.background.blur.coc}
+
+Blur background circle of confusion radius.
+CLI: [`--blur-coc`](../user/OPTIONS#--blur-coc).
+
+### `render.light.intensity` <small>(_double_, default: `1.0`)</small> {#render.light.intensity}
+
+Adjust the intensity of every light in the scene.
+CLI: [`--light-intensity`](../user/OPTIONS#--light-intensity).
+
+### `render.armature.enable` <small>(_bool_, default: `false`)</small> {#render.armature.enable}
+
+Display armatures if present in the scene (glTF only).
+CLI: [`--armature`](../user/OPTIONS#--armature).
 
 ## UI Options
 
-|          Option           | Type<br/>Default<br/>Trigger | Description                                                                                                              |       F3D option       |
-| :-----------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------- | :--------------------: |
-|          ui.axis          |  bool<br/>false<br/>render   | Show _axes_ as a trihedron in the scene. Requires an interactor.                                                         |        \-\-axis        |
-|       ui.scalar_bar       |  bool<br/>false<br/>render   | Show _scalar bar_ of the coloring by data array.                                                                         |        \-\-bar         |
-|       ui.cheatsheet       |  bool<br/>false<br/>render   | Show a interaction cheatsheet                                                                                            |           -            |
-|        ui.console         |  bool<br/>false<br/>render   | Show the console                                                                                                         |           -            |
-|    ui.minimal_console     |  bool<br/>false<br/>render   | Show the minimal console. Useful to execute a quick command and exit.                                                    |           -            |
-|        ui.filename        |  bool<br/>false<br/>render   | Display the _filename info content_ on top of the window.                                                                |      \-\-filename      |
-|     ui.filename_info      |   string<br/>-<br/>render    | Content of _filename info_ to display.                                                                                   |           -            |
-|       ui.font_file        | path<br/>optional<br/>render | Use the provided FreeType compatible font file to display text.<br/>Can be useful to display non-ASCII filenames.        |     \-\-font-file      |
-|         ui.scale          |   ratio<br/>1.0<br/>render   | Scale fonts.                                                                                                             |     \-\-font-scale     |
-|          ui.fps           |  bool<br/>false<br/>render   | Display a _frame per second counter_.                                                                                    |        \-\-fps         |
-|    ui.loader_progress     |   bool<br/>false<br/>load    | Show a _progress bar_ when loading the file.                                                                             |      \-\-progress      |
-|   ui.animation_progress   |   bool<br/>false<br/>load    | Show a _progress bar_ when playing the animation.                                                                        | \-\-animation-progress |
-|        ui.metadata        |  bool<br/>false<br/>render   | Display the _metadata_.                                                                                                  |      \-\-metadata      |
-|    ui.drop_zone.enable    |  bool<br/>false<br/>render   | Show a drop zone. Rendering is disabled when the viewport is smaller than 10×10 pixels.                                  |           -            |
-| ui.drop_zone.custom_binds |   string<br/>-<br/>render    | Space separated custom key bindings to display in the drop zone.                                                         |           -            |
-|  ui.drop_zone.show_logo   |  bool<br/>false<br/>render   | Display the logo. Needs ui.drop_zone.enable to be true.                                                                  |           -            |
-|    ui.backdrop.opacity    |  double<br/>0.9<br/>render   | Set the opacity of the backdrop behind the UI elements. Value is between 0.0 (fully transparent) and 1.0 (fully opaque). |  \-\-backdrop-opacity  |
+### `ui.axis` <small>(_bool_, default: `false`)</small> {#ui.axis}
+
+Show _axes_ as a trihedron in the scene. Requires an interactor.
+CLI: [`--axis`](../user/OPTIONS#--axis).
+
+### `ui.scalar_bar` <small>(_bool_, default: `false`)</small> {#ui.scalar_bar}
+
+Show _scalar bar_ of the coloring by data array.
+CLI: [`--bar`](../user/OPTIONS#--bar).
+
+### `ui.cheatsheet` <small>(_bool_, default: `false`)</small> {#ui.cheatsheet}
+
+Show a interaction cheatsheet
+CLI: `-`.
+
+### `ui.console` <small>(_bool_, default: `false`)</small> {#ui.console}
+
+Show the console
+CLI: `-`.
+
+### `ui.minimal_console` <small>(_bool_, default: `false`)</small> {#ui.minimal_console}
+
+Show the minimal console. Useful to execute a quick command and exit.
+CLI: `-`.
+
+### `ui.filename` <small>(_bool_, default: `false`)</small> {#ui.filename}
+
+Display the _filename info content_ on top of the window.
+CLI: [`--filename`](../user/OPTIONS#--filename).
+
+### `ui.filename_info` <small>(_string_, default: `-`)</small> {#ui.filename_info}
+
+Content of _filename info_ to display.
+CLI: `-`.
+
+### `ui.font_file` <small>(_path_, optional)</small> {#ui.font_file}
+
+Use the provided FreeType compatible font file to display text.
+Can be useful to display non-ASCII filenames.
+CLI: [`--font-file`](../user/OPTIONS#--font-file).
+
+### `ui.scale` <small>(_ratio_, default: `1.0`)</small> {#ui.scale}
+
+Scale fonts.
+CLI: [`--font-scale`](../user/OPTIONS#--font-scale).
+
+### `ui.fps` <small>(_bool_, default: `false`)</small> {#ui.fps}
+
+Display a _frame per second counter_.
+CLI: [`--fps`](../user/OPTIONS#--fps).
+
+### `ui.loader_progress` <small>(_bool_, default: `false`, **on load**)</small> {#ui.loader_progress}
+
+Show a _progress bar_ when loading the file.
+CLI: [`--progress`](../user/OPTIONS#--progress).
+
+### `ui.animation_progress` <small>(_bool_, default: `false`, **on load**)</small> {#ui.animation_progress}
+
+Show a _progress bar_ when playing the animation.
+CLI: [`--animation-progress`](../user/OPTIONS#--animation-progress).
+
+### `ui.metadata` <small>(_bool_, default: `false`)</small> {#ui.metadata}
+
+Display the _metadata_.
+CLI: [`--metadata`](../user/OPTIONS#--metadata).
+
+### `ui.drop_zone.enable` <small>(_bool_, default: `false`)</small> {#ui.drop_zone.enable}
+
+Show a drop zone. Rendering is disabled when the viewport is smaller than 10×10 pixels.
+CLI: `-`.
+
+### `ui.drop_zone.custom_binds` <small>(_string_, default: `-`)</small> {#ui.drop_zone.custom_binds}
+
+Space separated custom key bindings to display in the drop zone.
+CLI: `-`.
+
+### `ui.drop_zone.show_logo` <small>(_bool_, default: `false`)</small> {#ui.drop_zone.show_logo}
+
+Display the logo. Needs ui.drop_zone.enable to be true.
+CLI: `-`.
+
+### `ui.backdrop.opacity` <small>(_double_, default: `0.9`)</small> {#ui.backdrop.opacity}
+
+Set the opacity of the backdrop behind the UI elements. Value is between 0.0 (fully transparent) and 1.0 (fully opaque).
+CLI: [`--backdrop-opacity`](../user/OPTIONS#--backdrop-opacity).
 
 # APIs
 

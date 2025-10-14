@@ -1,4 +1,4 @@
-function processOptions(content: string): string {
+function processUserOptions(content: string): string {
     const known_flags: { [k: string]: string; } = {}
 
     function fixCliHeaders(_: string, ...args: string[]) {
@@ -37,6 +37,28 @@ function processOptions(content: string): string {
     return lines.join('\n');
 }
 
+function processLibOptions(content: string): string {
+    function fixOptionsHeaders(_: string, ...args: string[]) {
+        const h_tag = args[0];
+        const option = args[1];
+        const details = args[2];
+
+        const anchor = option;
+        const details_html = details ? ` <small>${details}</small>` : ""
+
+        return `${h_tag} \`${option}\`${details_html} {#${anchor}}`;
+    }
+
+    function addCliLink(substring: string, ...args: string[]) {
+        return `${args[0]}[${args[1]}](../user/OPTIONS#${args[2]})`;
+    }
+
+    let lines = content.split(/\r?\n/g);
+    lines = lines.map(l => l.replace(/(##+) *`([^\(\)]+)` *(\(.+\))?/, fixOptionsHeaders));
+    lines = lines.map(l => l.replace(/(CLI: *)(`(--[^`]+)`)/, addCliLink));
+    return lines.join('\n');
+}
+
 function convertGithubAdmonitions(content: string): string {
     const admonitionRegex = /^> \[!(NOTE|TIP|IMPORTANT|WARNING|CAUTION)\]\s*\n((?:^>.*\r?\n?)*)/gm;
 
@@ -61,4 +83,4 @@ function fixImages(content: string): string {
     return content.replaceAll(/<img.*\/([^\/]+)\.png.*\/>/g, '![$1]($1.png)');
 }
 
-export { processOptions, convertGithubAdmonitions, fixContributingLinks, fixImages };
+export { processUserOptions, processLibOptions, convertGithubAdmonitions, fixContributingLinks, fixImages };
