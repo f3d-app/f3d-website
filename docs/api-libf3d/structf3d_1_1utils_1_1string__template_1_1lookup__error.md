@@ -1,4 +1,4 @@
-# Structure f3d::utils::string\_template::lookup\_error
+# Structure f3d::utils::string_template::lookup_error
 
 ![][C++]
 ![][public]

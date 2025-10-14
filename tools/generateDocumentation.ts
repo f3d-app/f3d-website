@@ -128,6 +128,11 @@ async function runSeaborg(api: string): Promise<void> {
                 // remove h1 anchors
                 lines[i] = lines[i].replace(/^# (.+) \{#.*\}$/g, '# $1');
 
+                // remove useless backslashes before underscores in h1 anchors
+                if (lines[i].startsWith('# ')) {
+                    lines[i] = lines[i].replaceAll(/\\_/g, '_');
+                }
+
                 // remove file in namespace
                 if (file.includes('namespace') && lines[i].startsWith("**Definition**")) {
                     continue;

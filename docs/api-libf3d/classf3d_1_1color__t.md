@@ -1,4 +1,4 @@
-# Class f3d::color\_t
+# Class f3d::color_t
 
 ![][C++]
 ![][public]

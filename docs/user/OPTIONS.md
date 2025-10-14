@@ -162,6 +162,10 @@ Select the scene camera to use when available in the file. Automatically compute
 
 Enable trackball interaction.
 
+### `--invert-zoom`  <small>(_bool_, default: `false`)</small> {#--invert-zoom}
+
+Invert zoom direction with right mouse click.
+
 ### `--animation-autoplay`  <small>(_bool_, default: `false`)</small> {#--animation-autoplay}
 
 Automatically start animation.

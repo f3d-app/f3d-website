@@ -1,4 +1,4 @@
-# Structure f3d::interactor::already\_exists\_exception
+# Structure f3d::interactor::already_exists_exception
 
 ![][C++]
 ![][public]

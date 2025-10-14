@@ -1,4 +1,4 @@
-# Structure f3d::mesh\_t
+# Structure f3d::mesh_t
 
 ![][C++]
 ![][public]

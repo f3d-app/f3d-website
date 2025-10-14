@@ -1,4 +1,4 @@
-# Structure f3d::point3\_t
+# Structure f3d::point3_t
 
 ![][C++]
 ![][public]

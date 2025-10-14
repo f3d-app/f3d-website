@@ -1,4 +1,4 @@
-# Class f3d::colormap\_t
+# Class f3d::colormap_t
 
 ![][C++]
 ![][public]

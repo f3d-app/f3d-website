@@ -1,4 +1,4 @@
-# Structure f3d::options::incompatible\_exception
+# Structure f3d::options::incompatible_exception
 
 ![][C++]
 ![][public]

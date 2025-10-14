@@ -1,4 +1,4 @@
-# Class f3d::transform2d\_t
+# Class f3d::transform2d_t
 
 ![][C++]
 ![][public]

@@ -1,4 +1,4 @@
-# Class f3d::utils::string\_template
+# Class f3d::utils::string_template
 
 ![][C++]
 ![][public]

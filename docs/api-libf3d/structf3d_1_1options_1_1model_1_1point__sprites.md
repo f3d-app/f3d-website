@@ -1,4 +1,4 @@
-# Structure f3d::options::model::point\_sprites
+# Structure f3d::options::model::point_sprites
 
 ![][C++]
 ![][public]

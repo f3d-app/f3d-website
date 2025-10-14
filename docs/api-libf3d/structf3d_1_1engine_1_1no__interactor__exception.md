@@ -1,4 +1,4 @@
-# Structure f3d::engine::no\_interactor\_exception
+# Structure f3d::engine::no_interactor_exception
 
 ![][C++]
 ![][public]

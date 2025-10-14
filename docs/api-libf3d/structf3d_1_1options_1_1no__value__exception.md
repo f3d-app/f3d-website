@@ -1,4 +1,4 @@
-# Structure f3d::options::no\_value\_exception
+# Structure f3d::options::no_value_exception
 
 ![][C++]
 ![][public]

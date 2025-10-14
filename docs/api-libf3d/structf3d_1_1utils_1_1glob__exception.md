@@ -1,4 +1,4 @@
-# Structure f3d::utils::glob\_exception
+# Structure f3d::utils::glob_exception
 
 ![][C++]
 ![][public]

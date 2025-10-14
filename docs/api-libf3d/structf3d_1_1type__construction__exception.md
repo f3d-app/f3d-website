@@ -1,4 +1,4 @@
-# Structure f3d::type\_construction\_exception
+# Structure f3d::type_construction_exception
 
 ![][C++]
 ![][public]

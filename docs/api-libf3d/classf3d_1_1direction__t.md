@@ -1,4 +1,4 @@
-# Class f3d::direction\_t
+# Class f3d::direction_t
 
 ![][C++]
 ![][public]

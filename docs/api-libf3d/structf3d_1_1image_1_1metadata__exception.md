@@ -1,4 +1,4 @@
-# Structure f3d::image::metadata\_exception
+# Structure f3d::image::metadata_exception
 
 ![][C++]
 ![][public]

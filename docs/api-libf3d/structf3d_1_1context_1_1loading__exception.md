@@ -1,4 +1,4 @@
-# Structure f3d::context::loading\_exception
+# Structure f3d::context::loading_exception
 
 ![][C++]
 ![][public]

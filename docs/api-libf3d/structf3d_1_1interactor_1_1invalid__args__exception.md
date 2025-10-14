@@ -1,4 +1,4 @@
-# Structure f3d::interactor::invalid\_args\_exception
+# Structure f3d::interactor::invalid_args_exception
 
 ![][C++]
 ![][public]
