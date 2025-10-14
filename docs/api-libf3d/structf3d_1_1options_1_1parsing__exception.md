@@ -1,4 +1,4 @@
-# Structure f3d::options::parsing\_exception
+# Structure f3d::options::parsing_exception
 
 ![][C++]
 ![][public]

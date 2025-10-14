@@ -1,4 +1,4 @@
-# Structure f3d::options::ui::drop\_zone
+# Structure f3d::options::ui::drop_zone
 
 ![][C++]
 ![][public]

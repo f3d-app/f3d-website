@@ -1,4 +1,4 @@
-# Structure f3d::utils::tokenize\_exception
+# Structure f3d::utils::tokenize_exception
 
 ![][C++]
 ![][public]

@@ -1,4 +1,4 @@
-# Structure f3d::context::symbol\_exception
+# Structure f3d::context::symbol_exception
 
 ![][C++]
 ![][public]

@@ -1,4 +1,4 @@
-# Structure f3d::scene::load\_failure\_exception
+# Structure f3d::scene::load_failure_exception
 
 ![][C++]
 ![][public]

@@ -1,4 +1,4 @@
-# Structure f3d::options::render::axes\_grid
+# Structure f3d::options::render::axes_grid
 
 ![][C++]
 ![][public]

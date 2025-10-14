@@ -1,4 +1,4 @@
-# Structure f3d::image::write\_exception
+# Structure f3d::image::write_exception
 
 ![][C++]
 ![][public]

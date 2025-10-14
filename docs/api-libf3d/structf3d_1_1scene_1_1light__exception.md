@@ -1,4 +1,4 @@
-# Structure f3d::scene::light\_exception
+# Structure f3d::scene::light_exception
 
 ![][C++]
 ![][public]

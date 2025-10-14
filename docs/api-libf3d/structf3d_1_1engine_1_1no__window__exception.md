@@ -1,4 +1,4 @@
-# Structure f3d::engine::no\_window\_exception
+# Structure f3d::engine::no_window_exception
 
 ![][C++]
 ![][public]

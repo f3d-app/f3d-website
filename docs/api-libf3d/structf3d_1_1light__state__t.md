@@ -1,4 +1,4 @@
-# Structure f3d::light\_state\_t
+# Structure f3d::light_state_t
 
 ![][C++]
 ![][public]

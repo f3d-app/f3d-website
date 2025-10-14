@@ -1,4 +1,4 @@
-# Class f3d::ratio\_t
+# Class f3d::ratio_t
 
 ![][C++]
 ![][public]

@@ -180,12 +180,12 @@ CLI: [`--point-sprites`](../user/OPTIONS#--point-sprites).
 ### `model.point_sprites.type` <small>(_string_, default: `sphere`)</small> {#model.point_sprites.type}
 
 Set the sprites type when showing point sprites (can be `sphere` or `gaussian`).
-CLI: [`--point-stripes-type`](../user/OPTIONS#--point-stripes-type).
+CLI: [`--point-sprites-type`](../user/OPTIONS#--point-sprites-type).
 
 ### `model.point_sprites.size` <small>(_double_, default: `10.0`)</small> {#model.point_sprites.size}
 
 Set the _size_ of point sprites.
-CLI: [`--point-stripes-size`](../user/OPTIONS#--point-stripes-size).
+CLI: [`--point-sprites-size`](../user/OPTIONS#--point-sprites-size).
 
 ### `model.volume.enable` <small>(_bool_, default: `false`)</small> {#model.volume.enable}
 
@@ -222,7 +222,7 @@ CLI: [`--anti-aliasing-mode`](../user/OPTIONS#--anti-aliasing-mode).
 ### `render.effect.ambient_occlusion` <small>(_bool_, default: `false`)</small> {#render.effect.ambient_occlusion}
 
 Enable _ambient occlusion_. This is a technique providing approximate shadows, used to improve the depth perception of the object. Implemented using SSAO
-CLI: [`--ambient_occlusion`](../user/OPTIONS#--ambient_occlusion).
+CLI: [`--ambient-occlusion`](../user/OPTIONS#--ambient-occlusion).
 
 ### `render.effect.tone_mapping` <small>(_bool_, default: `false`)</small> {#render.effect.tone_mapping}
 

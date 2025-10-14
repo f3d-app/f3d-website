@@ -1,4 +1,4 @@
-# Structure f3d::options::inexistent\_exception
+# Structure f3d::options::inexistent_exception
 
 ![][C++]
 ![][public]
