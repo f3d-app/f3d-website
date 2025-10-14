@@ -326,3 +326,16 @@ small .iconify {
     display: none;
   }
 }
+
+.docs-doc-id-libf3d\/OPTIONS {
+  /* make details not bold */
+  h3 > small {
+    font-style: normal;
+    font-weight: normal;
+  }
+
+  /* hide details in TOC */
+  ul.table-of-contents li > a > small {
+    display: none;
+  }
+}
