@@ -1,3 +1,3 @@
-# Placeholder
+# Work in progress
 
-This is a placeholder. Will be removed when documentation for 3.3 will be frozen.
+The versioned documentation will be available at 3.3 release. For the moment, please refer to the [Nightly decumentation](/docs/next/user/QUICKSTART)
