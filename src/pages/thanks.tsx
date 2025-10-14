@@ -366,8 +366,8 @@ function DonationWidget({ showPartnershipModal, setShowPartnershipModal }: { sho
               </p>
               <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
                 <li>Have a direct communication channel with maintainers</li>
-                <li>Get our logo on a strategic location and get public recognition for your sponsorship</li>
-                <li>Ensure F3D future has an open source framework</li>
+                <li>Get your logo on a strategic location and get public recognition for your sponsorship</li>
+                <li>Ensure F3D future as an open source framework</li>
               </ul>
 
               <p>
