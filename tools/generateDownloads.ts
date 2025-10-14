@@ -1,6 +1,10 @@
 import { Octokit } from "@octokit/core";
 import { writeFileSync } from "fs";
 import path from "path";
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 
 (async () => {
@@ -83,7 +87,7 @@ import path from "path";
         result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-arm64.dmg/, "Silicon", "Silicon installer without raytracing support"));
         result.assets.macOS.binaries.push(getAsset(response.data.assets, /macOS-x86_64.dmg/, "Intel", "Intel installer without raytracing support"));
 
-        const outputPath = path.resolve(import.meta.dirname, "../src/pages/downloadLinks.json");
+        const outputPath = path.resolve(__dirname, "../src/pages/downloadLinks.json");
         writeFileSync(outputPath, JSON.stringify(result, null, 2) + '\n');
         console.log(`Saved result to ${outputPath}`);
 
