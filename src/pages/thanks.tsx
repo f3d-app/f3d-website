@@ -458,7 +458,7 @@ export default function ThanksPage(): ReactNode {
 
                   <p>
                     Your contribution, no matter the size, makes a real difference in keeping F3D alive
-                    and thriving and will be acknowlodged in our releases notes. Thank you for supporting our work!
+                    and thriving and will be acknowledged in our releases notes. Thank you for supporting our work!
                   </p>
 
                   <p>
@@ -689,12 +689,8 @@ export default function ThanksPage(): ReactNode {
 
                       <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
                         <li><a href="https://github.com/sponsors/f3d-app">Github sponsors</a></li>
-                        <li><a href="https://patreon.com/f3d_app_foundation">Patreon</a></li>
                         <li><a href="https://ko-fi.com/f3d_app">ko-fi</a></li>
                         <li><a href="https://liberapay.com/f3d-app/">liberapay</a></li>
-                        <li><a href="https://fr.tipeee.com/f3d-app/">Tipee</a></li>
-                        <li><a href="https://buymeacoffee.com/f3d.app">buy me a coffee</a></li>
-                        <li><a href="https://donorbox.org/support-f3d">donorbox</a></li>
                         <li>Direct Transfer</li>
                         <ul style={{ marginLeft: '1.5rem', marginBottom: '1.5rem' }}>
                           <li>IBAN: FR7616958000018496562230572</li>
@@ -709,7 +705,7 @@ export default function ThanksPage(): ReactNode {
                   </p>
 
                   <p>
-                    If your company are using F3D in any capacity and you want to ensure F3D keeps growing and being maintained, we would love to hear from you!
+                    If your company is using F3D in any capacity and you want to ensure F3D keeps growing and being maintained, we would love to hear from you!
                   </p>
                   <p>
                     You can sponsor F3D through the non-profit <strong>F3D-APP FOUNDATION</strong> and we can acknowledge your support by displaying your logo on our README.md as well as sharing about your support whenever we get the chance.
