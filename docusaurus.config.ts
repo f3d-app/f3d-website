@@ -71,7 +71,7 @@ const config: Config = {
     ],
   ],
   themeConfig: {
-    image: "images/typical_opengraph.jpg",
+    image: 'images/typical_opengraph.png',
     colorMode: {
       defaultMode: 'dark',
       disableSwitch: false,

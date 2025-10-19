@@ -23,12 +23,12 @@ function initViewer(moduleRef, fileUrl) {
       Module.engineInstance = Module.Engine.create();
 
       // background must be set to black for proper blending with transparent canvas
-      Module.engineInstance.getOptions().set_color("render.background.color", 0, 0, 0);
+      Module.engineInstance.getOptions().setAsString("render.background.color", "#000000");
 
       // setup coloring
       Module.engineInstance.getOptions().toggle("model.scivis.enable");
-      Module.engineInstance.getOptions().set_string("model.scivis.array_name", "Colors");
-      Module.engineInstance.getOptions().set_integer("model.scivis.component", -2);
+      Module.engineInstance.getOptions().setAsString("model.scivis.array_name", "Colors");
+      Module.engineInstance.getOptions().setAsString("model.scivis.component", "-2");
       Module.engineInstance.getOptions().toggle("model.scivis.cells");
 
       // make it look nice
@@ -42,7 +42,7 @@ function initViewer(moduleRef, fileUrl) {
       Module.engineInstance.getOptions().toggle("render.grid.enable");
 
       // default to +Z
-      Module.engineInstance.getOptions().set_as_string("scene.up_direction", "+Z");
+      Module.engineInstance.getOptions().setAsString("scene.up_direction", "+Z");
 
       // setup the window size based on the canvas size
       const scale = window.devicePixelRatio;
@@ -69,7 +69,7 @@ function openFile(moduleRef, file) {
   } else {
     console.error("File " + file + " cannot be opened");
   }
-  moduleRef.current.engineInstance.getWindow().resetCamera();
+  moduleRef.current.engineInstance.getWindow().getCamera().resetToBounds(0.9);
   moduleRef.current.engineInstance.getWindow().render();
   moduleRef.current.currentFile = file;
 }

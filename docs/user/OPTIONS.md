@@ -191,11 +191,11 @@ Can be useful to display non-ASCII filenames.
 
 ### `--font-scale`_`=<ratio>`_  <small>(_ratio_, default: `1.0`)</small> {#--font-scale}
 
-Scale fonts.
+Scale fonts. Useful for HiDPI displays.
 
 ### `--command-script`_`=<command script>`_  <small>(_script_)</small> {#--command-script}
 
-Provide a script file containing a list of commands to be executed sequentially.
+Provide a script file containing a list of [commands](COMMANDS.md) to be executed sequentially.
 Allows automation of multiple commands or pre-defined tasks.
 
 ### `--backdrop-opacity`_`=<opacity>`_  <small>(_double_, default: `0.9`)</small> {#--backdrop-opacity}
@@ -218,44 +218,44 @@ Set the _size_ of point sprites.
 
 ### `--point-size`_`=<size>`_  <small>(_double_)</small> {#--point-size}
 
-Set the _size_ of points when showing vertices. Model specified by default.
+Set the _size_ of points when showing vertices. Model-specified by default.
 
 ### `--line-width`_`=<size>`_  <small>(_double_)</small> {#--line-width}
 
-Set the _width_ of lines when showing edges. Model specified by default.
+Set the _width_ of lines when showing edges. Model-specified by default.
 
 ### `--backface-type`_`=<visible|hidden>`_  <small>(_string_)</small> {#--backface-type}
 
-Set the Backface type. Model specified by default.
+Set the Backface type. Model-specified by default.
 
 ### `--color`_`=<color>`_  <small>(_color_)</small> {#--color}
 
 Set a _color_ on the geometry. Multiplied with the base color texture when present.
-Model specified by default.
+Model-specified by default.
 
 ### `--opacity`_`=<opacity>`_  <small>(_double_)</small> {#--opacity}
 
 Set _opacity_ on the geometry. Multiplied with the base color texture when present.
-Model specified by default. Usually used with Depth Peeling option.
+Model-specified by default. Usually used with [`--translucency-support`](#--translucency-support).
 
 ### `--roughness`_`=<roughness>`_  <small>(_double_)</small> {#--roughness}
 
 Set the _roughness coefficient_ on the geometry (0.0-1.0). Multiplied with the material texture when present.
-Model specified by default.
+Model-specified by default.
 
 ### `--metallic`_`=<metallic>`_  <small>(_double_)</small> {#--metallic}
 
 Set the _metallic coefficient_ on the geometry (0.0-1.0). Multiplied with the material texture when present.
-Model specified by default.
+Model-specified by default.
 
 ### `--base-ior`_`=<base-ior>`_  <small>(_double_)</small> {#--base-ior}
 
-Set the _index of refraction of the base layer_ (1.0-2.5). Model specified by default.
+Set the _index of refraction of the base layer_ (1.0-2.5). Model-specified by default.
 
 ### `--hdri-file`_`=<HDRI file>`_  <small>(_path_)</small> {#--hdri-file}
 
 Set the _HDRI_ image that can be used as ambient lighting and skybox.
-Valid file format are hdr, exr, png, jpg, pnm, tiff, bmp.
+Valid file format are `.hdr`, `.exr`, `.png`, `.jpg`, `.pnm`, `.tiff`, `.bmp`.
 If not set, a default is provided.
 
 ### `--hdri-ambient`  <small>(_string_)</small> {#--hdri-ambient}
@@ -266,49 +266,49 @@ The environment act as a light source and is reflected on the material.
 ### `--texture-matcap`_`=<texture file>`_  <small>(_path_)</small> {#--texture-matcap}
 
 Set the texture file to control the material capture of the object. All other model options for surfaces are ignored if this is set. Must be in linear color space.
-Model specified by default.
+Model-specified by default.
 
 ### `--texture-base-color`_`=<texture file>`_  <small>(_path_)</small> {#--texture-base-color}
 
 Set the texture file to control the color of the object. Please note this will be multiplied with the color and opacity options. Must be in sRGB color space.
-Model specified by default.
+Model-specified by default.
 
 ### `--texture-material`_`=<texture file>`_  <small>(_path_)</small> {#--texture-material}
 
-Set the texture file to control the occlusion, roughness and metallic values of the object. Please note this will be multiplied with the roughness and metallic options, which have impactful default values. To obtain true results, use --roughness=1 --metallic=1. Must be in linear color space.
-Model specified by default.
+Set the texture file to control the occlusion, roughness and metallic values of the object. Please note this will be multiplied with the roughness and metallic options, which have impactful default values. To obtain true results, use [`--roughness=1`](#--roughness) and [`--metallic=1`](#--metallic). Must be in linear color space.
+Model-specified by default.
 
 ### `--texture-emissive`_`=<texture file>`_  <small>(_path_)</small> {#--texture-emissive}
 
 Set the texture file to control the emitted light of the object. Please note this will be multiplied with the emissive factor. Must be in sRGB color space.
-Model specified by default.
+Model-specified by default.
 
 ### `--emissive-factor`_`=<color>`_  <small>(_color_)</small> {#--emissive-factor}
 
 Set the emissive factor. This value is multiplied with the emissive color when an emissive texture is present.
-Model specified by default.
+Model-specified by default.
 
 ### `--texture-normal`_`=<texture file>`_  <small>(_path_)</small> {#--texture-normal}
 
 Set the texture file to control the normal map of the object. Must be in sRGB color space.
-Model specified by default.
+Model-specified by default.
 
 ### `--normal-scale`_`=<color>`_  <small>(_double_)</small> {#--normal-scale}
 
 Set the normal scale. This value affects the strength of the normal deviation from the normal texture.
-Model specified by default.
+Model-specified by default.
 
 ### `--textures-transform`_`=<transform2d>`_  <small>(_transform2d_)</small> {#--textures-transform}
 
 Set the 2d transform to use for all textures applied to the model.
-Importer may set a default value depending on file type. If a default value exists, the default value is multiplied by the transform.
+Importer may set a default value depending on file type. If a default value exists, the default value is multiplied by the provided transform.
 
 ## Window options
 
 ### `--background-color`_`=<color>`_  <small>(_color_, default: `0.2, 0.2, 0.2`)</small> {#--background-color}
 
 Set the window _background color_.
-Ignored if _hdri_ is set.
+Ignored if [`--hdri-skybox`](#--hdri-skybox) is enabled.
 
 ### `--resolution`_`=<width,height>`_  <small>(_vector\<double\>_, default: `1000, 600`)</small> {#--resolution}
 
@@ -332,7 +332,7 @@ Display the _metadata_.
 
 ### `--hdri-skybox`  <small>(_bool_, default: `false`)</small> {#--hdri-skybox}
 
-Show the HDRI as a skybox. Overrides --background-color and --no-background.
+Show the HDRI as a skybox. Overrides [`--background-color`](#--background-color) and [`--no-background`](#--no-background).
 
 ### `-u`, `--blur-background`  <small>(_bool_, default: `false`)</small> {#--blur-background}
 
@@ -356,7 +356,7 @@ Enable scalar coloring if present in the file. If [`--coloring-array`](#--colori
 ### `--coloring-array`_`=<array_name>`_  <small>(_string_)</small> {#--coloring-array}
 
 The coloring array name to use when coloring.
-Use --verbose to recover the usable array names.
+Use [`--verbose`](#--verbose) to recover the usable array names.
 
 ### `-y`, `--comp`_`=<comp_index>`_  <small>(_int_, default: `-1`)</small> {#--comp}
 
@@ -393,11 +393,11 @@ Use with the scalar option.
 
 ### `--colormap-discretization`_`=<colors>`_  <small>(_int_)</small> {#--colormap-discretization}
 
-Set How many distinct colors from [1, N] will be used in the colormap. Any values outside the valid range will result in smooth shading.
+Set the number of distinct colors from [1, N] will be used in the colormap. Any values outside the valid range will result in smooth shading.
 
 ### `-v`, `--volume`  <small>(_bool_, default: `false`)</small> {#--volume}
 
-Enable _volume rendering_. It is only available for 3D image data (vti, dcm, nrrd, mhd files) and will display nothing with other formats. It forces coloring.
+Enable _volume rendering_. It is only functional for 3D image data (VTKXMLVTI, DICOM, NRRD, MetaImage files) and will display nothing with other formats. It forces coloring.
 
 ### `-i`, `--inverse`  <small>(_bool_, default: `false`)</small> {#--inverse}
 
@@ -407,7 +407,7 @@ Inverse the linear opacity function used for volume rendering.
 
 ### `--camera-position`_`=<X,Y,Z>`_  <small>(_vector\<double\>_)</small> {#--camera-position}
 
-Set the camera position, overrides --camera-direction and camera-zoom-factor.
+Set the camera position, overrides [`--camera-direction`](#--camera-direction) and [`--camera-zoom-factor`](#--camera-zoom-factor).
 
 ### `--camera-focal-point`_`=<X,Y,Z>`_  <small>(_vector\<double\>_)</small> {#--camera-focal-point}
 
@@ -439,7 +439,7 @@ Apply an elevation transformation to the camera, in degrees, added after other c
 
 ### `--camera-orthographic`  <small>(_bool_)</small> {#--camera-orthographic}
 
-Set the camera to use the orthographic projection. Model specified by default.
+Set the camera to use the orthographic projection. Model-specified by default.
 
 ## Raytracing options
 
@@ -471,8 +471,14 @@ Enable _anti-aliasing_. This technique is used to reduce aliasing.
 
 ### `--anti-aliasing-mode`  <small>(_string_, default: `fxaa`)</small> {#--anti-aliasing-mode}
 
-Anti-aliasing method (`fxaa`: fast, `ssaa`: quality)
+Anti-aliasing method (`fxaa`: fast, `ssaa`: quality, `taa`: balanced)
 
+:::warning
+
+`taa` forces rendering of the scene at regular interval and will introduce ghosting artifacts on animated scenes.
+It also doesn't work with offscreen rendering (when using [`--output`](#--output) option)
+
+:::
 ### `-t`, `--tone-mapping`  <small>(_bool_, default: `false`)</small> {#--tone-mapping}
 
 Enable generic filmic _Tone Mapping Pass_. This technique is used to map colors properly to the monitor colors.
