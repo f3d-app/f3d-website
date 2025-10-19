@@ -211,7 +211,7 @@ export default function Viewer(): ReactNode {
   
   return (
     <Layout
-      title="F3D - Web viewer"
+      title="Web viewer"
       description="Web version of F3D based on the webassembly bindings.">
       <ViewerApp model={model} />
     </Layout>
