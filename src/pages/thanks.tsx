@@ -413,7 +413,7 @@ export default function ThanksPage(): ReactNode {
 
   return (
     <Layout
-      title="F3D - Thanks!"
+      title="Thanks!"
       description="Support F3D development with a donation. Help keep this open source 3D viewer free for everyone.">
       <main>
         <section>

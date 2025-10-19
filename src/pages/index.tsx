@@ -67,7 +67,7 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title="F3D - Home"
+      title="Home"
       description="F3D is a fast and minimalist 3D viewer desktop application. It is free to use, open source and cross-platform.">
       <HomepageHeader />
       <main>
