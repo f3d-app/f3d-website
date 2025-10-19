@@ -67,8 +67,8 @@ export default function Home(): ReactNode {
   const {siteConfig} = useDocusaurusContext();
   return (
     <Layout
-      title={`${siteConfig.title}`}
-      description="F3D website">
+      title="F3D - Home"
+      description="F3D is a fast and minimalist 3D viewer desktop application. It is free to use, open source and cross-platform.">
       <HomepageHeader />
       <main>
         <SplitBar />

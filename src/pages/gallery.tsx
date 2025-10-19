@@ -199,8 +199,8 @@ export default function Gallery(): ReactNode {
     const { siteConfig } = useDocusaurusContext();
     return (
         <Layout
-            title={`${siteConfig.title}`}
-            description="F3D website">
+            title="F3D - Gallery"
+            description="Gallery showcasing renderings and associated command lines.">
             <div className="container">
                 <Heading as="h1">
                     Gallery
