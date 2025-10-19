@@ -94,7 +94,7 @@ export default function DownloadPage(): ReactNode {
   }, []);
 
   return (
-    <Layout title="F3D - Download" description="Choose your operating system to download F3D, and use it right away.">
+    <Layout title="F3D - Download" description="Download F3D and start using it right now.">
       <header className={`hero heroBanner ${styles.hero}`}>
         <div className="container">
           <div className={styles.heroContent}>
