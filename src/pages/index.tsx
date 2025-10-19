@@ -1,4 +1,4 @@
-import type {ReactNode} from 'react';
+import type { ReactNode } from 'react';
 import Link from '@docusaurus/Link';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
@@ -11,7 +11,7 @@ import SplitBar from '../components/SplitBar';
 import LogoSvg from '@site/static/logos/logo.svg';
 
 function HomepageHeader() {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   const { colorMode } = useColorMode();
   const videoSrc = colorMode === 'dark'
     ? require('@site/static/logos/logo-animated-dark.mp4').default
@@ -39,7 +39,7 @@ function HomepageHeader() {
         </Heading>
         <p className="hero__subtitle">Interact, generate high quality renderings, and browse quickly through a series of 3D models</p>
         <div className="container">
-          <div className="buttons" style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', margin: '1.5rem 0'}}>
+          <div className="buttons" style={{ display: 'grid', gap: '1rem', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', margin: '1.5rem 0' }}>
             <Link
               className={`button button--primary button--outline button--lg highlightButton`}
               to="/download">
@@ -64,7 +64,7 @@ function HomepageHeader() {
 }
 
 export default function Home(): ReactNode {
-  const {siteConfig} = useDocusaurusContext();
+  const { siteConfig } = useDocusaurusContext();
   return (
     <Layout
       title="Home"
@@ -74,6 +74,17 @@ export default function Home(): ReactNode {
         <SplitBar />
         <HomepageFeatures />
         <Sponsors />
+        {/* Acknowledgements section */}
+        <section style={{ textAlign: 'center', padding: '4rem 0' }}>
+          <div className="container">
+            <Heading as="h1">Acknowledgements</Heading>
+            <p>
+              F3D was originally created by <a href='https://www.kitware.eu/' target='_blank'>Kitware SAS</a> and is relying on many awesome open-source projects that make our work possible.
+              <br />
+              Special thanks to <a href='https://vtk.org/' target='_blank'>VTK</a>, <a href='https://dev.opencascade.org/' target='_blank'>OCCT</a>, <a href='https://www.assimp.org/' target='_blank'>Assimp</a>, <a href='http://www.alembic.io/' target='_blank'>Alembic</a>, <a href='https://google.github.io/draco/' target='_blank'>Draco</a>, <a href='https://openusd.org/release/index.html' target='_blank'>OpenUSD</a>, <a href='https://www.openvdb.org/' target='_blank'>OpenVDB</a>, <a href='https://www.ospray.org/' target='_blank'>OSPRay</a>, and <a href='https://github.com/ocornut/imgui/' target='_blank'>ImGui</a> — and to all contributors across the ecosystem.
+            </p>
+          </div>
+        </section>
       </main>
     </Layout>
   );
