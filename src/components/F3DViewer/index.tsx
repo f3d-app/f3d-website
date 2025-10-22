@@ -90,7 +90,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     setUpDirection: (direction) => {
       if (!moduleRef.current) return;
       // Set up direction in the engine options
-      moduleRef.current.engineInstance.getOptions().set_as_string("scene.up_direction", direction);
+      moduleRef.current.engineInstance.getOptions().setAsString("scene.up_direction", direction);
       openFile(moduleRef, moduleRef.current.currentFile);
     },
     toggleOption: (option) => {
