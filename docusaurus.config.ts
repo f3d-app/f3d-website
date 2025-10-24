@@ -139,7 +139,7 @@ const config: Config = {
         },
         {
           type: 'docsVersionDropdown',
-          versions: ['current', '3.2.0'],
+          versions: ['current', '3.3'],
           position: "right",
         },
         {

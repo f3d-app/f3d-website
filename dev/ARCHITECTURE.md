@@ -15,7 +15,7 @@ This architecture is reflected by the directories organisation.
 - resources: all non code, non doc, like icon, configs and such
 - testing: all testing related resources, does not contain the test themselves
 - **vtkext**: extensions to VTK and related tests, see below
-- webassembly: [webassembly/javascript bindings](/docs/next/libf3d/LANGUAGE_BINDINGS#javascript-experimental) and [F3DWeb](https://meakk.github.io/f3d-website/viewer) application code
+- webassembly: [webassembly/javascript bindings](/docs/next/libf3d/LANGUAGE_BINDINGS#javascript) and [F3DWeb](https://meakk.github.io/f3d-website/viewer) application code
 - winshellext: shell extension for Windows, provide [thumbnails for Windows](/docs/next/user/DESKTOP_INTEGRATION#windows)
 
 Here is diagram explaining how some of these parts interact together:
