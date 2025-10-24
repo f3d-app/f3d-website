@@ -1,0 +1,608 @@
+{
+  "appSidebar": [
+    "user/QUICKSTART",
+    "user/SUPPORTED_FORMATS",
+    "user/OPTIONS",
+    "user/INTERACTIONS",
+    "user/ANIMATIONS",
+    "user/CONFIGURATION_FILE",
+    "user/COMMANDS",
+    "user/PARSING",
+    "user/COLOR_MAPS",
+    "user/FINAL_SHADER",
+    "user/DESKTOP_INTEGRATION",
+    "user/PLUGINS",
+    "user/LIMITATIONS_AND_TROUBLESHOOTING"
+  ],
+  "libSidebar": [
+    "libf3d/OVERVIEW",
+    "libf3d/CLASSES",
+    "libf3d/OPTIONS",
+    "libf3d/LANGUAGE_BINDINGS",
+    "libf3d/PLUGINS",
+    {
+      "type": "category",
+      "label": "libf3d API Reference",
+      "link": {
+        "type": "generated-index",
+        "title": "libf3d doxygen documentation",
+        "description": "This is the automatically generated doxygen documentation for the libf3d, which is part of F3D. It contains all the classes, structures, functions, and other elements that make up the library. You can use this documentation to understand how to use the libf3d in your own applications, as well as to explore its features and capabilities."
+      },
+      "items": [
+        {
+          "type": "doc",
+          "key": "namespace-libf3d",
+          "id": "api-libf3d/namespacef3d",
+          "label": "Namespace"
+        },
+        {
+          "type": "category",
+          "key": "files-libf3d",
+          "label": "Files",
+          "link": {
+            "type": "doc",
+            "id": "api-libf3d/file_contents"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "api-libf3d/camera_8h",
+              "label": "camera.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/context_8h",
+              "label": "context.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/engine_8h",
+              "label": "engine.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/exception_8h",
+              "label": "exception.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/image_8h",
+              "label": "image.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/interactor_8h",
+              "label": "interactor.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/log_8h",
+              "label": "log.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/options_8h",
+              "label": "options.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/scene_8h",
+              "label": "scene.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/types_8h",
+              "label": "types.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/utils_8h",
+              "label": "utils.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/window_8h",
+              "label": "window.h"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "key": "classes-libf3d",
+          "label": "Classes",
+          "link": {
+            "type": "doc",
+            "id": "api-libf3d/class_contents"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1camera",
+              "label": "f3d::camera"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1colormap__t",
+              "label": "f3d::colormap_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1color__t",
+              "label": "f3d::color_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1context",
+              "label": "f3d::context"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1direction__t",
+              "label": "f3d::direction_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1double__array__t",
+              "label": "f3d::double_array_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1engine",
+              "label": "f3d::engine"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1image",
+              "label": "f3d::image"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1interactor",
+              "label": "f3d::interactor"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1log",
+              "label": "f3d::log"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1options",
+              "label": "f3d::options"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1ratio__t",
+              "label": "f3d::ratio_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1scene",
+              "label": "f3d::scene"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1transform2d__t",
+              "label": "f3d::transform2d_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1utils",
+              "label": "f3d::utils"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1utils_1_1string__template",
+              "label": "f3d::utils::string_template"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/classf3d_1_1window",
+              "label": "f3d::window"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "key": "structs-libf3d",
+          "label": "Structures",
+          "link": {
+            "type": "doc",
+            "id": "api-libf3d/struct_contents"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1camera__state__t",
+              "label": "f3d::camera_state_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1context_1_1loading__exception",
+              "label": "f3d::context::loading_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1context_1_1symbol__exception",
+              "label": "f3d::context::symbol_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1engine_1_1cache__exception",
+              "label": "f3d::engine::cache_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1engine_1_1libInformation",
+              "label": "f3d::engine::libInformation"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1engine_1_1no__interactor__exception",
+              "label": "f3d::engine::no_interactor_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1engine_1_1no__window__exception",
+              "label": "f3d::engine::no_window_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1engine_1_1plugin__exception",
+              "label": "f3d::engine::plugin_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1engine_1_1readerInformation",
+              "label": "f3d::engine::readerInformation"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1exception",
+              "label": "f3d::exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1image_1_1metadata__exception",
+              "label": "f3d::image::metadata_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1image_1_1read__exception",
+              "label": "f3d::image::read_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1image_1_1write__exception",
+              "label": "f3d::image::write_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1interaction__bind__t",
+              "label": "f3d::interaction_bind_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1interactor_1_1already__exists__exception",
+              "label": "f3d::interactor::already_exists_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1interactor_1_1command__runtime__exception",
+              "label": "f3d::interactor::command_runtime_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1interactor_1_1does__not__exists__exception",
+              "label": "f3d::interactor::does_not_exists_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1interactor_1_1invalid__args__exception",
+              "label": "f3d::interactor::invalid_args_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1light__state__t",
+              "label": "f3d::light_state_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1mesh__t",
+              "label": "f3d::mesh_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1incompatible__exception",
+              "label": "f3d::options::incompatible_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1inexistent__exception",
+              "label": "f3d::options::inexistent_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1interactor",
+              "label": "f3d::options::interactor"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model",
+              "label": "f3d::options::model"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1color",
+              "label": "f3d::options::model::color"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1emissive",
+              "label": "f3d::options::model::emissive"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1matcap",
+              "label": "f3d::options::model::matcap"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1material",
+              "label": "f3d::options::model::material"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1normal",
+              "label": "f3d::options::model::normal"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1point__sprites",
+              "label": "f3d::options::model::point_sprites"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1scivis",
+              "label": "f3d::options::model::scivis"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1model_1_1volume",
+              "label": "f3d::options::model::volume"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1no__value__exception",
+              "label": "f3d::options::no_value_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1parsing__exception",
+              "label": "f3d::options::parsing_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render",
+              "label": "f3d::options::render"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1armature",
+              "label": "f3d::options::render::armature"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1axes__grid",
+              "label": "f3d::options::render::axes_grid"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1background",
+              "label": "f3d::options::render::background"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1background_1_1blur",
+              "label": "f3d::options::render::background::blur"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1effect",
+              "label": "f3d::options::render::effect"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1effect_1_1antialiasing",
+              "label": "f3d::options::render::effect::antialiasing"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1grid",
+              "label": "f3d::options::render::grid"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1hdri",
+              "label": "f3d::options::render::hdri"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1light",
+              "label": "f3d::options::render::light"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1render_1_1raytracing",
+              "label": "f3d::options::render::raytracing"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1scene",
+              "label": "f3d::options::scene"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1scene_1_1animation",
+              "label": "f3d::options::scene::animation"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1scene_1_1camera",
+              "label": "f3d::options::scene::camera"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1ui",
+              "label": "f3d::options::ui"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1ui_1_1backdrop",
+              "label": "f3d::options::ui::backdrop"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1options_1_1ui_1_1drop__zone",
+              "label": "f3d::options::ui::drop_zone"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1point3__t",
+              "label": "f3d::point3_t"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1scene_1_1light__exception",
+              "label": "f3d::scene::light_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1scene_1_1load__failure__exception",
+              "label": "f3d::scene::load_failure_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1type__access__exception",
+              "label": "f3d::type_access_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1type__construction__exception",
+              "label": "f3d::type_construction_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1utils_1_1glob__exception",
+              "label": "f3d::utils::glob_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1utils_1_1string__template_1_1lookup__error",
+              "label": "f3d::utils::string_template::lookup_error"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1utils_1_1tokenize__exception",
+              "label": "f3d::utils::tokenize_exception"
+            },
+            {
+              "type": "doc",
+              "id": "api-libf3d/structf3d_1_1vector3__t",
+              "label": "f3d::vector3_t"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "type": "category",
+      "label": "vtkext API Reference",
+      "link": {
+        "type": "generated-index",
+        "title": "vtkext doxygen documentation",
+        "description": "This is the automatically generated doxygen documentation for the vtkext, which is part of F3D. It contains the VTK module you can use to create f3d plugins."
+      },
+      "items": [
+        {
+          "type": "doc",
+          "key": "namespace-vtkext",
+          "id": "api-vtkext/namespaceF3DUtils",
+          "label": "Namespace F3DUtils"
+        },
+        {
+          "type": "category",
+          "key": "files-vtkext",
+          "label": "Files",
+          "link": {
+            "type": "doc",
+            "id": "api-vtkext/file_contents"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "api-vtkext/F3DUtils_8h",
+              "label": "F3DUtils.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/vtkF3DBitonicSort_8h",
+              "label": "vtkF3DBitonicSort.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/vtkF3DFaceVaryingPointDispatcher_8h",
+              "label": "vtkF3DFaceVaryingPointDispatcher.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/vtkF3DGLTFImporter_8h",
+              "label": "vtkF3DGLTFImporter.h"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/vtkF3DImporter_8h",
+              "label": "vtkF3DImporter.h"
+            }
+          ]
+        },
+        {
+          "type": "category",
+          "key": "classes-vtkext",
+          "label": "Classes",
+          "link": {
+            "type": "doc",
+            "id": "api-vtkext/class_contents"
+          },
+          "items": [
+            {
+              "type": "doc",
+              "id": "api-vtkext/classF3DUtils",
+              "label": "F3DUtils"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/classvtkF3DBitonicSort",
+              "label": "vtkF3DBitonicSort"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/classvtkF3DFaceVaryingPointDispatcher",
+              "label": "vtkF3DFaceVaryingPointDispatcher"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/classvtkF3DGLTFImporter",
+              "label": "vtkF3DGLTFImporter"
+            },
+            {
+              "type": "doc",
+              "id": "api-vtkext/classvtkF3DImporter",
+              "label": "vtkF3DImporter"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

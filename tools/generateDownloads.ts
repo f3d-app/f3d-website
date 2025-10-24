@@ -30,17 +30,27 @@ const __dirname = path.dirname(__filename);
             auth: token
         });
 
-        const response = await octokit.request("GET /repos/f3d-app/f3d/releases/latest", {
-            owner: "f3d-app",
-            repo: "f3d",
-            release_id: "latest",
-            headers: {
-                "X-GitHub-Api-Version": "2022-11-28"
-            }
-        });
+        const releaseSelector = process.env.F3D_RELEASE || 'latest';
+
+        let response;
+        if (releaseSelector === 'latest') {
+            response = await octokit.request("GET /repos/f3d-app/f3d/releases/latest", {
+                owner: "f3d-app",
+                repo: "f3d",
+                headers: { "X-GitHub-Api-Version": "2022-11-28" }
+            });
+        } else {
+            // treat as tag
+            response = await octokit.request("GET /repos/f3d-app/f3d/releases/tags/{tag}", {
+                owner: "f3d-app",
+                repo: "f3d",
+                tag: releaseSelector,
+                headers: { "X-GitHub-Api-Version": "2022-11-28" }
+            });
+        }
 
         if (response.status !== 200) {
-            throw new Error(`Failed to fetch latest release: ${response.status}`);
+            throw new Error(`Failed to fetch release (${releaseSelector}): ${response.status}`);
         }
 
         result.tag = response.data.tag_name;
