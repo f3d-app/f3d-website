@@ -14,16 +14,16 @@ A class to control a camera in a window. When modifying the Position/FocalPoint/
 * [azimuth](classf3d_1_1camera.md#classf3d_1_1camera_1a1f7e0da617b9404229131c722d27692b)
 * [dolly](classf3d_1_1camera.md#classf3d_1_1camera_1a52b3ef3992b10bc5d0ef0d0af78c18dd)
 * [elevation](classf3d_1_1camera.md#classf3d_1_1camera_1a834dcc2896ad2881c7bdef6e1759d67e)
-* [getFocalPoint](classf3d_1_1camera.md#classf3d_1_1camera_1a9895950ec24aac2dd984399d3a76bbda)
-* [getFocalPoint](classf3d_1_1camera.md#classf3d_1_1camera_1a8186470e18d5ef61fccb1580eb6fe7c6)
-* [getPosition](classf3d_1_1camera.md#classf3d_1_1camera_1af9c38dd7e513c71e4c80c1fd61d5d464)
-* [getPosition](classf3d_1_1camera.md#classf3d_1_1camera_1a11aa28d837de538281d0445bf47c2d6c)
-* [getState](classf3d_1_1camera.md#classf3d_1_1camera_1a52d56d566312cf8cfafdc44cb503cdae)
-* [getState](classf3d_1_1camera.md#classf3d_1_1camera_1a1751031156021ef5f035fb599e201b43)
-* [getViewAngle](classf3d_1_1camera.md#classf3d_1_1camera_1ae2ba1490e04694c66d5dbd87ecf8728c)
-* [getViewAngle](classf3d_1_1camera.md#classf3d_1_1camera_1a266993b7e1f31d447bcfc9d16a445c47)
-* [getViewUp](classf3d_1_1camera.md#classf3d_1_1camera_1a5ab680e6a0c95ed82e08391b69011b1a)
-* [getViewUp](classf3d_1_1camera.md#classf3d_1_1camera_1aa14bc0553a56d203214ee3eaab1c5fea)
+* [getFocalPoint](classf3d_1_1camera.md#classf3d_1_1camera_1a9f6c94e3ef2c043dd6cae735dec083e0)
+* [getFocalPoint](classf3d_1_1camera.md#classf3d_1_1camera_1aeb8cd30cd39bc60136669892d3cdcc57)
+* [getPosition](classf3d_1_1camera.md#classf3d_1_1camera_1a40c5b3c88d916dab949adab8d426595b)
+* [getPosition](classf3d_1_1camera.md#classf3d_1_1camera_1ab295a53f2d6f22ef7344b6e6a783f57d)
+* [getState](classf3d_1_1camera.md#classf3d_1_1camera_1a948a86b0f4cdd00ffaab16e3138b3472)
+* [getState](classf3d_1_1camera.md#classf3d_1_1camera_1ad3a3808a94f57e11ba44a06dc107bc9a)
+* [getViewAngle](classf3d_1_1camera.md#classf3d_1_1camera_1add0fc7c6cdd21ff002c8e3b9e9f41f34)
+* [getViewAngle](classf3d_1_1camera.md#classf3d_1_1camera_1a87f4da6b5c0893c703dabde78423c6d2)
+* [getViewUp](classf3d_1_1camera.md#classf3d_1_1camera_1ad063e0a053acb2e5e9275bec1d6e0054)
+* [getViewUp](classf3d_1_1camera.md#classf3d_1_1camera_1ae676ec1e47bf39276146a36ba37530c0)
 * [pan](classf3d_1_1camera.md#classf3d_1_1camera_1ab04f6d77ca126becdf76f8c54b69b2d2)
 * [pitch](classf3d_1_1camera.md#classf3d_1_1camera_1aac2ed5910d98ba57c2d19335dcbca87b)
 * [resetToBounds](classf3d_1_1camera.md#classf3d_1_1camera_1a78013e452116352500cb02af8356cb4e)
@@ -66,13 +66,14 @@ Set the position of the camera to the provided arg
 
 
 
-### Function getPosition {#classf3d_1_1camera_1af9c38dd7e513c71e4c80c1fd61d5d464}
+### Function getPosition {#classf3d_1_1camera_1a40c5b3c88d916dab949adab8d426595b}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual point3_t f3d::camera::getPosition()=0
+virtual point3_t f3d::camera::getPosition() const =0
 ```
 
 
@@ -86,13 +87,14 @@ Return the position of the camera
 
 
 
-### Function getPosition {#classf3d_1_1camera_1a11aa28d837de538281d0445bf47c2d6c}
+### Function getPosition {#classf3d_1_1camera_1ab295a53f2d6f22ef7344b6e6a783f57d}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual void f3d::camera::getPosition(point3_t &pos)=0
+virtual void f3d::camera::getPosition(point3_t &pos) const =0
 ```
 
 
@@ -134,13 +136,14 @@ Set the focal point of the camera to the provided arg
 
 
 
-### Function getFocalPoint {#classf3d_1_1camera_1a9895950ec24aac2dd984399d3a76bbda}
+### Function getFocalPoint {#classf3d_1_1camera_1a9f6c94e3ef2c043dd6cae735dec083e0}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual point3_t f3d::camera::getFocalPoint()=0
+virtual point3_t f3d::camera::getFocalPoint() const =0
 ```
 
 
@@ -154,13 +157,14 @@ Return the focal point of the camera
 
 
 
-### Function getFocalPoint {#classf3d_1_1camera_1a8186470e18d5ef61fccb1580eb6fe7c6}
+### Function getFocalPoint {#classf3d_1_1camera_1aeb8cd30cd39bc60136669892d3cdcc57}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual void f3d::camera::getFocalPoint(point3_t &foc)=0
+virtual void f3d::camera::getFocalPoint(point3_t &foc) const =0
 ```
 
 
@@ -202,13 +206,14 @@ Set the view up of the camera to the provided arg
 
 
 
-### Function getViewUp {#classf3d_1_1camera_1a5ab680e6a0c95ed82e08391b69011b1a}
+### Function getViewUp {#classf3d_1_1camera_1ad063e0a053acb2e5e9275bec1d6e0054}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual vector3_t f3d::camera::getViewUp()=0
+virtual vector3_t f3d::camera::getViewUp() const =0
 ```
 
 
@@ -222,13 +227,14 @@ Return the view up of the camera
 
 
 
-### Function getViewUp {#classf3d_1_1camera_1aa14bc0553a56d203214ee3eaab1c5fea}
+### Function getViewUp {#classf3d_1_1camera_1ae676ec1e47bf39276146a36ba37530c0}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual void f3d::camera::getViewUp(vector3_t &up)=0
+virtual void f3d::camera::getViewUp(vector3_t &up) const =0
 ```
 
 
@@ -270,13 +276,14 @@ Set the view angle in degrees of the camera to the provided arg
 
 
 
-### Function getViewAngle {#classf3d_1_1camera_1ae2ba1490e04694c66d5dbd87ecf8728c}
+### Function getViewAngle {#classf3d_1_1camera_1add0fc7c6cdd21ff002c8e3b9e9f41f34}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual angle_deg_t f3d::camera::getViewAngle()=0
+virtual angle_deg_t f3d::camera::getViewAngle() const =0
 ```
 
 
@@ -290,13 +297,14 @@ Return the view angle in degrees of the camera
 
 
 
-### Function getViewAngle {#classf3d_1_1camera_1a266993b7e1f31d447bcfc9d16a445c47}
+### Function getViewAngle {#classf3d_1_1camera_1a87f4da6b5c0893c703dabde78423c6d2}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual void f3d::camera::getViewAngle(angle_deg_t &angle)=0
+virtual void f3d::camera::getViewAngle(angle_deg_t &angle) const =0
 ```
 
 
@@ -338,13 +346,14 @@ Set the complete state of the provided arg
 
 
 
-### Function getState {#classf3d_1_1camera_1a52d56d566312cf8cfafdc44cb503cdae}
+### Function getState {#classf3d_1_1camera_1a948a86b0f4cdd00ffaab16e3138b3472}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual camera_state_t f3d::camera::getState()=0
+virtual camera_state_t f3d::camera::getState() const =0
 ```
 
 
@@ -358,13 +367,14 @@ Return the complete state of the camera
 
 
 
-### Function getState {#classf3d_1_1camera_1a1751031156021ef5f035fb599e201b43}
+### Function getState {#classf3d_1_1camera_1ad3a3808a94f57e11ba44a06dc107bc9a}
 
 ![][public]
+![][const]
 
 
 ```cpp
-virtual void f3d::camera::getState(camera_state_t &state)=0
+virtual void f3d::camera::getState(camera_state_t &state) const =0
 ```
 
 
@@ -650,3 +660,4 @@ Reset the camera using the bounds of actors in the scene. Provided zoomFactor wi
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
+[const]: https://img.shields.io/badge/-const-lightblue (const)

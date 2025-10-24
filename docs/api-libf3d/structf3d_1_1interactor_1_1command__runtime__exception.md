@@ -48,3 +48,4 @@ f3d::interactor::command_runtime_exception::command_runtime_exception(const std:
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
 [const]: https://img.shields.io/badge/-const-lightblue (const)
 [protected]: https://img.shields.io/badge/-protected-yellow (protected)
+[static]: https://img.shields.io/badge/-static-lightgrey (static)
