@@ -85,4 +85,3 @@ std::optional<std::filesystem::path> f3d::options::model::color::texture
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
-[const]: https://img.shields.io/badge/-const-lightblue (const)

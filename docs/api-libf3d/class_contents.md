@@ -1,12 +1,12 @@
 # Classes
 
-* [f3d::camera](classf3d_1_1camera.md): Abstract class to control a camera in a window.
 * [f3d::color\_t](classf3d_1_1color__t.md)
+* [f3d::camera](classf3d_1_1camera.md): Abstract class to control a camera in a window.
 * [f3d::colormap\_t](classf3d_1_1colormap__t.md)
+* [f3d::direction\_t](classf3d_1_1direction__t.md)
 * [f3d::context](classf3d_1_1context.md): Utility function that implements basic OpenGL context symbol resolvers.
   * [f3d::context::loading\_exception](structf3d_1_1context_1_1loading__exception.md)
   * [f3d::context::symbol\_exception](structf3d_1_1context_1_1symbol__exception.md)
-* [f3d::direction\_t](classf3d_1_1direction__t.md)
 * [f3d::double\_array\_t](classf3d_1_1double__array__t.md)
 * [f3d::engine](classf3d_1_1engine.md): Class used to create instance of other classes.
   * [f3d::engine::cache\_exception](structf3d_1_1engine_1_1cache__exception.md)
