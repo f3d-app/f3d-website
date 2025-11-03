@@ -302,6 +302,43 @@ small .iconify {
 }
 
 
+kbd {
+  --kbd-color-background: var(--ifm-color-emphasis-100);
+  --kbd-color-border: var(--ifm-color-emphasis-300);
+  --kbd-color-text: var(--ifm-color-content-inverse);
+
+  // Background/text colors
+  background-color: var(--kbd-color-background);
+
+  // Border/shadow
+  border-radius: 0.25rem;
+  background-clip: padding-box;
+  border: 1px solid var(--kbd-color-border);
+  box-shadow: 0 2px 0 1px var(--kbd-color-border);
+
+  // Remove the text cursor
+  cursor: default;
+
+  // text style
+  line-height: 1;
+  min-width: 0.75rem;
+  text-align: center;
+  padding: 2px 5px;
+  margin: 0 3px;
+  position: relative;
+  top: -1px;
+
+  // Push effect on hover
+  &:hover, li:hover &, span:hover & {
+    box-shadow: 0 1px 0 0.5px var(--kbd-color-border);
+    top: 1px;
+  }
+
+  // Transition is fun
+  transition: all 0.1s;
+}
+
+
 .docs-doc-id-user\/OPTIONS{
   /* dim value hints in header */
   h3 > em > code {
