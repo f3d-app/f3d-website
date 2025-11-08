@@ -37,6 +37,8 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+      - name: Install docygen
+        run: sudo apt install -y doxygen 
       - name: Setup Pages
         uses: actions/configure-pages@v5
       - name: Restore cache
