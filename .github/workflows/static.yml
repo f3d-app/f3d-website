@@ -26,6 +26,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  F3D_TAG: master
+
 jobs:
   build:
     runs-on: ubuntu-latest
