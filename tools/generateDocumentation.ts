@@ -162,6 +162,19 @@ async function copyDocs(): Promise<void> {
             });
         }
 
+        // copy colormaps png
+        const srcFile = path.join(SOURCE_DIR, "resources", "colormaps");
+        const destFile = path.join(__dirname, "..", "docs", "user");
+        await cp(srcFile, destFile, {
+            recursive: true,
+                filter: (src: string, _: string) => {
+                    if (["licenses.md"].includes(path.basename(src))) {
+                        return false;
+                    }
+                    return true;
+                }
+            });
+
         // copy some specific files
         for (const file of ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"]) {
             const srcFile = path.join(SOURCE_DIR, file);
