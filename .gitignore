@@ -4,8 +4,9 @@
 # Production
 /build
 
-# Nightly docs
+# Nightly docs and dev
 /docs
+/dev
 
 # Generated files
 .docusaurus
