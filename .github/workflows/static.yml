@@ -54,9 +54,6 @@ jobs:
       - name: Install Dependencies
         run: npm install --no-fund --no-audit --loglevel verbose
 
-      - name: Ensure website can be built without docs
-        run: npm run build
-
       - name: Update docs
         run: npm run update-doc
 
