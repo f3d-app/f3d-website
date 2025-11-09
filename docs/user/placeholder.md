@@ -1,1 +1,3 @@
-`npm run update-docs`
+# Placeholder
+
+Run `npm run update-doc`

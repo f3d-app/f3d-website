@@ -146,6 +146,12 @@ async function copyDocs(): Promise<void> {
     console.log("Copying documentation...");
 
     try {
+
+        // Remove placeholders
+        rm(path.join(__dirname, "..", "docs", "user", "placeholder.md"));
+        rm(path.join(__dirname, "..", "docs", "libf3d", "placeholder.md"));
+        rm(path.join(__dirname, "..", "dev", "placeholder.md"));
+
         // copy user and libf3d docs
         for (const dir of ["user", "libf3d"]) {
             const srcDir = path.join(SOURCE_DIR, "doc", dir);
