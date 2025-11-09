@@ -5,14 +5,14 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdownFixups";
+import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixContributingLinks, fixImages, fixLinksToCodeOfConduct } from "./markdownFixups";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 const execAsync = promisify(exec);
 
 // Configuration
-const REPO_URL = "https://github.com/f3d-app/f3d";
+const REPO_URL = "https://github.com/mwestphal/f3d";
 const SOURCE_DIR = path.join(__dirname, "f3d-src");
 const OUTPUT_DIR = path.join(__dirname, "doxygen_output");
 
@@ -150,17 +150,13 @@ async function copyDocs(): Promise<void> {
         for (const dir of ["user", "libf3d"]) {
             const srcDir = path.join(SOURCE_DIR, "doc", dir);
             const destDir = path.join(__dirname, "..", "docs", dir);
-            await cp(srcDir, destDir, {
-                recursive: true,
-                filter: (src: string, _: string) => {
-                    // TODO: remove this filter when the files are removed from f3d
-                    if (["INSTALLATION.md", "README_USER.md", "README_LIBF3D.md", "SPONSORING.md"].includes(path.basename(src))) {
-                        return false;
-                    }
-                    return true;
-                }
-            });
+            await cp(srcDir, destDir, {recursive: true});
         }
+
+        // copy dev doc
+        const srcDir = path.join(SOURCE_DIR, "doc", "dev");
+        const destDir = path.join(__dirname, "..", "dev");
+        await cp(srcDir, destDir, {recursive: true});
 
         // copy colormaps png
         const srcFile = path.join(SOURCE_DIR, "resources", "colormaps");
@@ -176,9 +172,11 @@ async function copyDocs(): Promise<void> {
             });
 
         // copy some specific files
-        for (const file of ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"]) {
-            const srcFile = path.join(SOURCE_DIR, file);
-            const destFile = path.join(__dirname, "..", "dev", file);
+        const files = ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"];
+        const preffixes = ["01-", "02-"];
+        for (var i = 0; i < 2; i++)) {
+            const srcFile = path.join(SOURCE_DIR, files[i]);
+            const destFile = path.join(__dirname, "..", "dev", preffixes[i] + files[i]);
             await cp(srcFile, destFile);
         }
 
@@ -239,6 +237,7 @@ async function preprocessMarkdown(): Promise<void> {
                 const filePath = path.join(fullDir, file);
                 let content = await fs.promises.readFile(filePath, 'utf-8');
                 content = convertGithubAdmonitions(content);
+                content = fixLinksToCodeOfConduct(content);
                 await fs.promises.writeFile(filePath, content, 'utf-8');
             }
         }

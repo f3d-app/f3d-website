@@ -79,6 +79,10 @@ function fixContributingLinks(content: string): string {
     return content.replaceAll('doc/dev/', '');
 }
 
+function fixLinksToCodeOfConduct(content: string): string {
+    return content.replaceAll('CODE_OF_CONDUCT', '02-CODE_OF_CONDUCT');
+}
+
 function fixImages(content: string): string {
     return content.replaceAll(/<img.*\/([^\/]+)\.png.*\/>/g, '![$1]($1.png)');
 }
