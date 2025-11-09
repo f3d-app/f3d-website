@@ -213,7 +213,7 @@ async function preprocessMarkdown(): Promise<void> {
         await writeFile(filePath, processUserOptions(contents));
     }
 
-    // Fix links in CONTRIBUTING.md
+    // Fix links in 01-CONTRIBUTING.md
     for (const file of ["dev/01-CONTRIBUTING.md"]) {
          const filePath = path.join(__dirname, "..", file);
          const contents = await readFile(filePath, { encoding: 'utf8' });

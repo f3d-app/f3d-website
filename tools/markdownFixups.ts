@@ -80,8 +80,11 @@ function fixContributingLinks(content: string): string {
 }
 
 function fixDevLinks(content: string): string {
+  // CODE_OF_CONDUCT and CONTRIBUTING are at the root of f3d repo
   content =  content.replaceAll('../../CODE_OF_CONDUCT', '02-CODE_OF_CONDUCT');
   content =  content.replaceAll('../../CONTRIBUTING', '01-CONTRIBUTING');
+
+  // Replace links like this: `../libf3d/01-OVERVIEW.md` into `/docs/next/libf3d/OVERVIEW`
   return content.replaceAll(/\.\.\/([^\/]+)\/..-([^\/\.#]+)\.md/g, '/docs/next/$1/$2');
 }
 
@@ -89,4 +92,4 @@ function fixImages(content: string): string {
     return content.replaceAll(/<img.*\/([^\/]+)\.png.*\/>/g, '![$1]($1.png)');
 }
 
-export { processUserOptions, processLibOptions, convertGithubAdmonitions, fixDevLinks, fixImages, fixContributingLinks};
+export { processUserOptions, processLibOptions, convertGithubAdmonitions, fixDevLinks, fixImages, fixContributingLinks };
