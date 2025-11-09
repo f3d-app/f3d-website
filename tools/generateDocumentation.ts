@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixContributingLinks, fixImages, fixLinksToCodeOfConduct } from "./markdownFixups";
+import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixDevLinks, fixImages, fixContributingLinks } from "./markdownFixups";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -200,32 +200,44 @@ async function copyDocs(): Promise<void> {
 }
 
 async function preprocessMarkdown(): Promise<void> {
-    // Improve user/OPTIONS.md anchors and formatting
-    for (const file of ["docs/user/OPTIONS.md"]) {
+    // Improve user/03-OPTIONS.md anchors and formatting
+    for (const file of ["docs/user/03-OPTIONS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
         await writeFile(filePath, processUserOptions(contents));
     }
 
-    // Improve libf3d/OPTIONS.md anchors and formatting
-    for (const file of ["docs/libf3d/OPTIONS.md"]) {
+    // Fix links in CONTRIBUTING.md
+    for (const file of ["dev/01-CONTRIBUTING.md"]) {
+         const filePath = path.join(__dirname, "..", file);
+         const contents = await readFile(filePath, { encoding: 'utf8' });
+        await writeFile(filePath, fixContributingLinks(contents));
+     }
+
+    // Improve libf3d/03-OPTIONS.md anchors and formatting
+    for (const file of ["docs/libf3d/03-OPTIONS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
         await writeFile(filePath, processLibOptions(contents));
     }
 
-    // Fix links in CONTRIBUTING.md
-    for (const file of ["dev/01-CONTRIBUTING.md"]) {
-        const filePath = path.join(__dirname, "..", file);
-        const contents = await readFile(filePath, { encoding: 'utf8' });
-        await writeFile(filePath, fixContributingLinks(contents));
-    }
-
-    // Fix images in ANIMATIONS.md and COLOR_MAPS.md
-    for (const file of ["docs/user/ANIMATIONS.md", "docs/user/COLOR_MAPS.md"]) {
+    // Fix images in 05-ANIMATIONS.md and 09-COLOR_MAPS.md
+    for (const file of ["docs/user/05-ANIMATIONS.md", "docs/user/09-COLOR_MAPS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
         await writeFile(filePath, fixImages(contents));
+    }
+
+    // Fix links in dev
+    const fullDir = path.join(__dirname, "..", "dev");
+    const files = await fs.promises.readdir(fullDir);
+    for (const file of files) {
+        if (file.endsWith('.md')) {
+            const filePath = path.join(fullDir, file);
+            let content = await fs.promises.readFile(filePath, 'utf-8');
+            content = fixDevLinks(content);
+            await fs.promises.writeFile(filePath, content, 'utf-8');
+        }
     }
 
     // Convert GitHub-style admonitions in all markdown files
@@ -237,7 +249,6 @@ async function preprocessMarkdown(): Promise<void> {
                 const filePath = path.join(fullDir, file);
                 let content = await fs.promises.readFile(filePath, 'utf-8');
                 content = convertGithubAdmonitions(content);
-                content = fixLinksToCodeOfConduct(content);
                 await fs.promises.writeFile(filePath, content, 'utf-8');
             }
         }
