@@ -82,7 +82,7 @@ function fixContributingLinks(content: string): string {
 function fixDevLinks(content: string): string {
   content =  content.replaceAll('../../CODE_OF_CONDUCT', '02-CODE_OF_CONDUCT');
   content =  content.replaceAll('../../CONTRIBUTING', '01-CONTRIBUTING');
-  return content.replaceAll(/\.\.\/([^\/]+)\/..-([^\/]+)\.md/g, '/docs/next/$1/$2');
+  return content.replaceAll(/\.\.\/([^\/]+)\/..-([^\/\.#]+)\.md/g, '/docs/next/$1/$2');
 }
 
 function fixImages(content: string): string {
