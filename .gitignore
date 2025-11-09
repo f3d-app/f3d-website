@@ -7,6 +7,8 @@
 # Nightly docs and dev
 /docs
 /dev
+/src/pages/CHANGELOG.md
+/src/pages/LICENSE.md
 
 # Generated files
 .docusaurus
