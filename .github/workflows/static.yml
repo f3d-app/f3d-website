@@ -12,17 +12,17 @@ on:
   workflow_dispatch:
     inputs:
       skip_deploy:
-        description: 'If deploy job should skipped'
+        description: "If deploy job should skipped"
         required: false
-        default: ''
+        default: ""
       docs_tag:
-        description: 'Tag to recover docs from'
+        description: "Tag to recover docs from"
         required: false
-        default: ''
+        default: ""
       docs_repository:
-        description: 'Repository to recover docs from'
+        description: "Repository to recover docs from"
         required: false
-        default: ''
+        default: ""
 
   # TODO: add nightly?
   # https://github.com/f3d-app/f3d-website/issues/5
@@ -58,7 +58,7 @@ jobs:
         id: cache-npm
         uses: actions/cache/restore@v4
         with:
-          path: '~/.npm'
+          path: "~/.npm"
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install Dependencies
@@ -76,14 +76,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'
+          path: "./build"
 
       - name: Save cache
         if: steps.cache-npm.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           key: ${{ steps.cache-npm.outputs.cache-primary-key }}
-          path: '~/.npm'
+          path: "~/.npm"
 
   # Single deploy job since we're just deploying
   deploy:
