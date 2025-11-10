@@ -22,19 +22,20 @@ Well, for starters, our online doc has always been about the latest master, buil
 This is great, we can always check the website a few minutes after merging, BUT, it means that users do not have access to
 the documentation of the release they are using.
 A few users got very confused looking for options that did not exists and documentation about yet to release features.
-So here we are, versionned documentation!
+So here we are, versioned documentation!
 Just pick whichever version you are using on the top-right corner and you are good to go!
 
-But that means that, if we support versions, which part of the website should NOT be versionned?
+But that means that, if we support versions, which part of the website should NOT be versioned?
 And how do we generate that?
 
-So we had to design a whole new website which is not generated from the sources in order to show unversionned:
- - Landing page
- - Gallery
- - Download page
- - Donation page
- - Blog
- - Contribution guide
+So we had to design a whole new website which is not generated from the sources in order to show unversioned:
+
+- Landing page
+- Gallery
+- Download page
+- Donation page
+- Blog
+- Contribution guide
 
 And if we create proper web pages for these, can we not integrate some juicy javascript into it?
 Yes we can! We took some care to improve all these pages until it felt just right!

@@ -25,7 +25,7 @@ const config: Config = {
       onBrokenMarkdownLinks: "throw",
     },
   },
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: ["@docusaurus/theme-mermaid"],
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -59,42 +59,42 @@ const config: Config = {
     ],
   ],
   plugins: [
-    'docusaurus-plugin-sass',
+    "docusaurus-plugin-sass",
     [
-      '@docusaurus/plugin-content-docs',
+      "@docusaurus/plugin-content-docs",
       {
-        id: 'dev',
-        path: 'dev',
-        routeBasePath: 'dev',
-        sidebarPath: './sidebarsDev.ts',
+        id: "dev",
+        path: "dev",
+        routeBasePath: "dev",
+        sidebarPath: "./sidebarsDev.ts",
       },
     ],
   ],
   themeConfig: {
-    image: 'images/typical_opengraph.png',
+    image: "images/typical_opengraph.png",
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
     announcementBar: {
-      id: 'main_announcement',
+      id: "main_announcement",
       content:
         'Welcome to our new website! Read the <a target="_blank" rel="noopener noreferrer" href="https://f3d-app.github.io/f3d-website/blog/new-website">blog post</a>. We would love to hear your feedback!',
-      backgroundColor: '#F8B20A',
-      textColor: '#1B1B19',
+      backgroundColor: "#F8B20A",
+      textColor: "#1B1B19",
       isCloseable: true,
     },
     metadata: [
-      { name: 'algolia-site-verification', content: '3C64CB24A16EEA03' },
+      { name: "algolia-site-verification", content: "3C64CB24A16EEA03" },
     ],
     algolia: {
-      appId: 'PGZA24S7SJ',
-      apiKey: '8be0f81e2da704ea5e67f4ed651f7770', // Public API key: it is safe to commit it
-      indexName: 'F3D Documentation',
+      appId: "PGZA24S7SJ",
+      apiKey: "8be0f81e2da704ea5e67f4ed651f7770", // Public API key: it is safe to commit it
+      indexName: "F3D Documentation",
       contextualSearch: true,
       searchParameters: {},
-      searchPagePath: 'search',
+      searchPagePath: "search",
       insights: false,
     },
     navbar: {
@@ -107,8 +107,8 @@ const config: Config = {
       items: [
         { to: "/download", label: "Download", position: "left" },
         {
-          type: 'dropdown',
-          label: 'Documentation',
+          type: "dropdown",
+          label: "Documentation",
           position: "left",
           items: [
             {
@@ -138,8 +138,8 @@ const config: Config = {
           position: "right",
         },
         {
-          type: 'docsVersionDropdown',
-          versions: ['current', '3.3'],
+          type: "docsVersionDropdown",
+          versions: ["current", "3.3"],
           position: "right",
         },
         {
