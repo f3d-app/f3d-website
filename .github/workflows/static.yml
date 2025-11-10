@@ -68,7 +68,7 @@ jobs:
         run: >
           npm run update-doc
           ${{ github.event.inputs.docs_tag == '' && 'master' || github.event.inputs.docs_tag }}
-          ${{ github.event.inputs.docs_repository == '' && 'https://github.com/f3d-app/f3d' || github.event.inputs.docs_repository }}
+          https://github.com/${{ github.event.inputs.docs_repository == '' && 'f3d-app/f3d' || github.event.inputs.docs_repository }}
 
       - name: Build
         run: npm run build
