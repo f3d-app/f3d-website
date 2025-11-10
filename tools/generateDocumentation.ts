@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 const execAsync = promisify(exec);
 
 // Configuration
-var repo_tag = "master"
+let repo_tag = "master"
 if (process.argv[2] != undefined) {
   repo_tag = process.argv[2];
 }
