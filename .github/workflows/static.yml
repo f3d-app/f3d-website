@@ -10,6 +10,11 @@ on:
 
   # Allows manual triggering of the workflow in the Actions tab
   workflow_dispatch:
+    inputs:
+      skip_deploy:
+        description: 'If deploy job should skipped'
+        required: false
+        default: ''
 
   # TODO: add nightly?
   # https://github.com/f3d-app/f3d-website/issues/5
@@ -74,7 +79,9 @@ jobs:
 
   # Single deploy job since we're just deploying
   deploy:
-    if: github.ref == 'refs/heads/main'
+    if: |
+      github.ref == 'refs/heads/main' &&
+      github.event.inputs.skip_deploy != 'true'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
