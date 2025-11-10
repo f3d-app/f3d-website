@@ -1,7 +1,7 @@
-import React from 'react';
-import { Icon } from '@iconify/react';
-import CodeBlock from '@theme/CodeBlock';
-import styles from './styles.module.css';
+import React from "react";
+import { Icon } from "@iconify/react";
+import CodeBlock from "@theme/CodeBlock";
+import styles from "./styles.module.css";
 
 interface PackageManagerProps {
   title: string;
@@ -9,11 +9,18 @@ interface PackageManagerProps {
   children: React.ReactNode;
 }
 
-export function PackageManagerSection({ title, description, children }: PackageManagerProps) {
+export function PackageManagerSection({
+  title,
+  description,
+  children,
+}: PackageManagerProps) {
   return (
     <div className={styles.packageSection}>
       <div className={styles.packageHeader}>
-        <Icon icon="material-symbols:package-2" className={styles.packageIcon} />
+        <Icon
+          icon="material-symbols:package-2"
+          className={styles.packageIcon}
+        />
         <h4 className={styles.packageTitle}>{title}</h4>
       </div>
       <p className={styles.packageDescription}>{description}</p>
@@ -27,7 +34,10 @@ export function HomebrewCard() {
     <div className={styles.packageManagerCard}>
       <div className={styles.packageManagerHeader}>
         <div className={styles.homebrewHeader}>
-          <Icon icon="file-icons:homebrew" className={styles.packageManagerIcon} />
+          <Icon
+            icon="file-icons:homebrew"
+            className={styles.packageManagerIcon}
+          />
           <h5 className={styles.packageManagerTitle}>Homebrew</h5>
         </div>
         <p className={styles.packageManagerSubtitle}>
@@ -43,7 +53,10 @@ export function HomebrewCard() {
         rel="noreferrer"
         className={styles.packageManagerLink}
       >
-        <Icon icon="material-symbols:open-in-new" style={{ fontSize: '1rem' }} />
+        <Icon
+          icon="material-symbols:open-in-new"
+          style={{ fontSize: "1rem" }}
+        />
         View on Homebrew
       </a>
     </div>
@@ -57,7 +70,12 @@ interface WindowsPackageManagerProps {
   url: string;
 }
 
-export function WindowsPackageManagerCard({ name, description, command, url }: WindowsPackageManagerProps) {
+export function WindowsPackageManagerCard({
+  name,
+  description,
+  command,
+  url,
+}: WindowsPackageManagerProps) {
   return (
     <div className={styles.packageManagerCard}>
       <div className={styles.packageManagerHeader}>
@@ -73,7 +91,10 @@ export function WindowsPackageManagerCard({ name, description, command, url }: W
         rel="noreferrer"
         className={styles.packageManagerLink}
       >
-        <Icon icon="material-symbols:open-in-new" style={{ fontSize: '1rem' }} />
+        <Icon
+          icon="material-symbols:open-in-new"
+          style={{ fontSize: "1rem" }}
+        />
         Learn more
       </a>
     </div>

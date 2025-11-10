@@ -1,28 +1,27 @@
-import React from 'react';
-import styles from './styles.module.css';
-import Heading from '@theme/Heading';
-import NGI0CoreSvg from '@site/static/sponsors/NGI0Core.svg';
+import React from "react";
+import styles from "./styles.module.css";
+import Heading from "@theme/Heading";
+import NGI0CoreSvg from "@site/static/sponsors/NGI0Core.svg";
 
 const sponsors = [
-{
-    name: 'NGI0 Core',
+  {
+    name: "NGI0 Core",
     logo: NGI0CoreSvg,
-    url: 'https://nlnet.nl/project/F3D/',
+    url: "https://nlnet.nl/project/F3D/",
     isSvg: true,
   },
   {
-    name: 'LambdaTest',
-    logo: require('@site/static/sponsors/lambdatest.png').default,
-    url: 'https://www.lambdatest.com/?utm_source=f3d&utm_medium=sponsor',
+    name: "LambdaTest",
+    logo: require("@site/static/sponsors/lambdatest.png").default,
+    url: "https://www.lambdatest.com/?utm_source=f3d&utm_medium=sponsor",
     isSvg: false,
   },
   {
-    name: 'OpenDroneMap',
-    logo: require('@site/static/sponsors/opendronemap.png').default,
-    url: 'https://www.opendronemap.org/',
+    name: "OpenDroneMap",
+    logo: require("@site/static/sponsors/opendronemap.png").default,
+    url: "https://www.opendronemap.org/",
     isSvg: false,
   },
-  
 ];
 
 export default function Sponsors() {

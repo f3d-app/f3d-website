@@ -39,7 +39,7 @@ jobs:
           lfs: true
 
       - name: Install doxygen
-        run: sudo apt install -y doxygen 
+        run: sudo apt install -y doxygen
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
@@ -48,7 +48,7 @@ jobs:
         id: cache-npm
         uses: actions/cache/restore@v4
         with:
-          path: '~/.npm'
+          path: "~/.npm"
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install Dependencies
@@ -63,14 +63,14 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: './build'
+          path: "./build"
 
       - name: Save cache
         if: steps.cache-npm.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
         with:
           key: ${{ steps.cache-npm.outputs.cache-primary-key }}
-          path: '~/.npm'
+          path: "~/.npm"
 
   # Single deploy job since we're just deploying
   deploy:
