@@ -92,7 +92,7 @@ const getLibf3dApiRef = () : SidebarItemConfig[] => {
 }
 
 const getVtkextApiRef = () : SidebarItemConfig[] => {
-  if (fs.existsSync(`./docs/api-libf3d`)) {
+  if (fs.existsSync(`./docs/api-vtkext`)) {
     return { 
       type: 'category',
       label: 'vtkext API Reference',
