@@ -148,9 +148,12 @@ async function copyDocs(): Promise<void> {
     try {
 
         // Remove placeholders
-        rm(path.join(__dirname, "..", "docs", "user", "placeholder.md"));
-        rm(path.join(__dirname, "..", "docs", "libf3d", "placeholder.md"));
-        rm(path.join(__dirname, "..", "dev", "placeholder.md"));
+        const userPH = path.join(__dirname, "..", "docs", "user", "placeholder.md");
+        if (fs.existsSync(userPH)) { rm(userPH); }
+        const libf3dPH = path.join(__dirname, "..", "docs", "libf3d", "placeholder.md");
+        if (fs.existsSync(libf3dPH)) { rm(libf3dPH); }
+        const devPH = path.join(__dirname, "..", "dev", "placeholder.md");
+        if (fs.existsSync(devPH)) { rm(devPH); }
 
         // copy user and libf3d docs
         for (const dir of ["user", "libf3d"]) {
@@ -181,7 +184,7 @@ async function copyDocs(): Promise<void> {
         const files = ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"];
         for (var i = 0; i < 2; i++) {
             const srcFile = path.join(SOURCE_DIR, files[i]);
-            const destFile = path.join(__dirname, "..", "dev", `0${i}-${files[i]}`);
+            const destFile = path.join(__dirname, "..", "dev", `0${i+1}-${files[i]}`);
             await cp(srcFile, destFile);
         }
 
