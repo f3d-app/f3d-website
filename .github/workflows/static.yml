@@ -1,8 +1,12 @@
 name: Deploy static content to Pages
 
 on:
+  pull_request:
+    types: [opened, synchronize, reopened, ready_for_review, labeled]
+
   push:
-    branches: ["main"]
+    branches:
+      - main
 
   # Allows manual triggering of the workflow in the Actions tab
   workflow_dispatch:
@@ -22,6 +26,9 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  F3D_TAG: master
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -30,22 +37,34 @@ jobs:
         uses: actions/checkout@v4
         with:
           lfs: true
+
+      - name: Install doxygen
+        run: sudo apt install -y doxygen 
+
       - name: Setup Pages
         uses: actions/configure-pages@v5
+
       - name: Restore cache
         id: cache-npm
         uses: actions/cache/restore@v4
         with:
           path: '~/.npm'
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+
       - name: Install Dependencies
         run: npm install --no-fund --no-audit --loglevel verbose
+
+      - name: Update docs
+        run: npm run update-doc
+
       - name: Build
         run: npm run build
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: './build'
+
       - name: Save cache
         if: steps.cache-npm.outputs.cache-hit != 'true'
         uses: actions/cache/save@v4
@@ -55,6 +74,7 @@ jobs:
 
   # Single deploy job since we're just deploying
   deploy:
+    if: github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}

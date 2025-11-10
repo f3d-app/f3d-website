@@ -5,7 +5,7 @@ import path from "path";
 import { fileURLToPath } from 'url';
 import fs from "fs";
 
-import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixContributingLinks, fixImages } from "./markdownFixups";
+import { processUserOptions, processLibOptions, convertGithubAdmonitions, fixDevLinks, fixImages, fixContributingLinks } from "./markdownFixups";
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -146,26 +146,45 @@ async function copyDocs(): Promise<void> {
     console.log("Copying documentation...");
 
     try {
+
+        // Remove placeholders
+        const userPH = path.join(__dirname, "..", "docs", "user", "placeholder.md");
+        if (fs.existsSync(userPH)) { rm(userPH); }
+        const libf3dPH = path.join(__dirname, "..", "docs", "libf3d", "placeholder.md");
+        if (fs.existsSync(libf3dPH)) { rm(libf3dPH); }
+        const devPH = path.join(__dirname, "..", "dev", "placeholder.md");
+        if (fs.existsSync(devPH)) { rm(devPH); }
+
         // copy user and libf3d docs
         for (const dir of ["user", "libf3d"]) {
             const srcDir = path.join(SOURCE_DIR, "doc", dir);
             const destDir = path.join(__dirname, "..", "docs", dir);
-            await cp(srcDir, destDir, {
-                recursive: true,
+            await cp(srcDir, destDir, {recursive: true});
+        }
+
+        // copy dev doc
+        const srcDir = path.join(SOURCE_DIR, "doc", "dev");
+        const destDir = path.join(__dirname, "..", "dev");
+        await cp(srcDir, destDir, {recursive: true});
+
+        // copy colormaps png
+        const srcFile = path.join(SOURCE_DIR, "resources", "colormaps");
+        const destFile = path.join(__dirname, "..", "docs", "user");
+        await cp(srcFile, destFile, {
+            recursive: true,
                 filter: (src: string, _: string) => {
-                    // TODO: remove this filter when the files are removed from f3d
-                    if (["INSTALLATION.md", "README_USER.md", "README_LIBF3D.md", "SPONSORING.md"].includes(path.basename(src))) {
+                    if (["licenses.md"].includes(path.basename(src))) {
                         return false;
                     }
                     return true;
                 }
             });
-        }
 
         // copy some specific files
-        for (const file of ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"]) {
-            const srcFile = path.join(SOURCE_DIR, file);
-            const destFile = path.join(__dirname, "..", "dev", file);
+        const files = ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"];
+        for (var i = 0; i < 2; i++) {
+            const srcFile = path.join(SOURCE_DIR, files[i]);
+            const destFile = path.join(__dirname, "..", "dev", `0${i+1}-${files[i]}`);
             await cp(srcFile, destFile);
         }
 
@@ -189,32 +208,44 @@ async function copyDocs(): Promise<void> {
 }
 
 async function preprocessMarkdown(): Promise<void> {
-    // Improve user/OPTIONS.md anchors and formatting
-    for (const file of ["docs/user/OPTIONS.md"]) {
+    // Improve user/03-OPTIONS.md anchors and formatting
+    for (const file of ["docs/user/03-OPTIONS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
         await writeFile(filePath, processUserOptions(contents));
     }
 
-    // Improve libf3d/OPTIONS.md anchors and formatting
-    for (const file of ["docs/libf3d/OPTIONS.md"]) {
+    // Fix links in 01-CONTRIBUTING.md
+    for (const file of ["dev/01-CONTRIBUTING.md"]) {
+         const filePath = path.join(__dirname, "..", file);
+         const contents = await readFile(filePath, { encoding: 'utf8' });
+        await writeFile(filePath, fixContributingLinks(contents));
+     }
+
+    // Improve libf3d/03-OPTIONS.md anchors and formatting
+    for (const file of ["docs/libf3d/03-OPTIONS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
         await writeFile(filePath, processLibOptions(contents));
     }
 
-    // Fix links in CONTRIBUTING.md
-    for (const file of ["dev/CONTRIBUTING.md"]) {
-        const filePath = path.join(__dirname, "..", file);
-        const contents = await readFile(filePath, { encoding: 'utf8' });
-        await writeFile(filePath, fixContributingLinks(contents));
-    }
-
-    // Fix images in ANIMATIONS.md and COLOR_MAPS.md
-    for (const file of ["docs/user/ANIMATIONS.md", "docs/user/COLOR_MAPS.md"]) {
+    // Fix images in 05-ANIMATIONS.md and 09-COLOR_MAPS.md
+    for (const file of ["docs/user/05-ANIMATIONS.md", "docs/user/09-COLOR_MAPS.md"]) {
         const filePath = path.join(__dirname, "..", file);
         const contents = await readFile(filePath, { encoding: 'utf8' });
         await writeFile(filePath, fixImages(contents));
+    }
+
+    // Fix links in dev
+    const fullDir = path.join(__dirname, "..", "dev");
+    const files = await fs.promises.readdir(fullDir);
+    for (const file of files) {
+        if (file.endsWith('.md')) {
+            const filePath = path.join(fullDir, file);
+            let content = await fs.promises.readFile(filePath, 'utf-8');
+            content = fixDevLinks(content);
+            await fs.promises.writeFile(filePath, content, 'utf-8');
+        }
     }
 
     // Convert GitHub-style admonitions in all markdown files
