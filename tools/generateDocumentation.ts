@@ -12,12 +12,19 @@ const __dirname = path.dirname(__filename);
 const execAsync = promisify(exec);
 
 // Configuration
-const REPO_URL = "https://github.com/f3d-app/f3d";
+var repo_tag = "master"
+if (process.argv[2] != undefined) {
+  repo_tag = process.argv[2];
+}
+var repo_url = "https://github.com/f3d-app/f3d"
+if (process.argv[3] != undefined) {
+  repo_url = process.argv[3];
+}
 const SOURCE_DIR = path.join(__dirname, "f3d-src");
 const OUTPUT_DIR = path.join(__dirname, "doxygen_output");
 
-async function fetchRepository(tag: string): Promise<void> {
-    console.log(`Fetching F3D repository at tag ${tag}...`);
+async function fetchRepository(): Promise<void> {
+    console.log(`Fetching repository ${repo_url} at tag ${repo_tag}...`);
 
     // Clean up any existing source directory
     try {
@@ -27,7 +34,7 @@ async function fetchRepository(tag: string): Promise<void> {
     }
 
     // Clone the repository at the specific tag
-    const cloneCmd = `git clone --depth 1 --branch ${tag} ${REPO_URL} "${SOURCE_DIR}"`;
+    const cloneCmd = `git clone --depth 1 --branch ${repo_tag} ${repo_url} "${SOURCE_DIR}"`;
 
     try {
         const { stdout, stderr } = await execAsync(cloneCmd);
@@ -288,22 +295,15 @@ async function cleanup(): Promise<void> {
     }
 }
 
-// Get tag from environment variable - throw if not set
-const tag = process.env.F3D_TAG;
-if (!tag) {
-    console.error("❌ F3D_TAG environment variable is required");
-    process.exit(1);
-}
-
-console.log(`Generating Doxygen documentation for F3D tag: ${tag}`);
+console.log(`Generating Doxygen documentation for F3D`);
 
 (async () => {
     try {
-        await fetchRepository(tag);
+        await fetchRepository();
         await copyDocs();
         await generateOptionsHeader();
         await runDoxygen();
-        console.log(`✅ Doxygen documentation generated successfully for tag ${tag}`);
+        console.log(`✅ Doxygen documentation generated successfully`);
     } catch (error) {
         console.error("❌ Error generating doxygen documentation:", (error as Error).message);
         process.exit(1);
