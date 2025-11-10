@@ -12,7 +12,7 @@ const __dirname = path.dirname(__filename);
 const execAsync = promisify(exec);
 
 // Configuration
-const REPO_URL = "https://github.com/mwestphal/f3d";
+const REPO_URL = "https://github.com/f3d-app/f3d";
 const SOURCE_DIR = path.join(__dirname, "f3d-src");
 const OUTPUT_DIR = path.join(__dirname, "doxygen_output");
 

@@ -27,7 +27,7 @@ concurrency:
   cancel-in-progress: false
 
 env:
-  F3D_TAG: rework_doc
+  F3D_TAG: master
 
 jobs:
   build:
