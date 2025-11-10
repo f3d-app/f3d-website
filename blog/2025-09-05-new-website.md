@@ -30,7 +30,7 @@ And how do we generate that?
 
 So we had to design a whole new website which is not generated from the sources in order to show unversionned:
 
-- Landing page
+ - Landing page
 - Gallery
 - Download page
 - Donation page
