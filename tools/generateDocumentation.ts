@@ -16,7 +16,7 @@ let repo_tag = "master"
 if (process.argv[2] != undefined) {
   repo_tag = process.argv[2];
 }
-var repo_url = "https://github.com/f3d-app/f3d"
+let repo_url = "https://github.com/f3d-app/f3d"
 if (process.argv[3] != undefined) {
   repo_url = process.argv[3];
 }
