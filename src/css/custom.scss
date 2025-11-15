@@ -10,6 +10,17 @@
   src: local('DM Sans'), url(../fonts/DMSans.ttf) format('truetype');
 }
 
+/* Copied from https://github.com/antinomyhq/antinomyhq.github.io/pull/216 */
+/* Workaround for https://github.com/facebook/docusaurus/issues/10495 */
+/* Firefox copy-paste fix: Force code block lines to behave as block elements */
+/* This helps Firefox handle text selection correctly in code blocks */
+.prism-code .token-line {
+  display: block;
+  user-select: text;
+  -moz-user-select: text;
+  -webkit-user-select: text;
+}
+
 $f3d_black: #141414;
 $f3d_white: #F4F4F4;
 $f3d_blue: #788BFF;
