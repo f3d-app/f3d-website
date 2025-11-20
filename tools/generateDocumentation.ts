@@ -45,7 +45,7 @@ async function fetchRepository(): Promise<void> {
 
   try {
     const { stdout, stderr } = await execAsync(cloneCmd, {
-      env: { ...process.env, GIT_LFS_SKIP_SMUDGE: '1' }
+      env: { ...process.env, GIT_LFS_SKIP_SMUDGE: '1' },
     });
     console.log("Repository cloned successfully");
     if (stderr) console.log("Git output:", stderr);
