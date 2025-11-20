@@ -44,7 +44,9 @@ async function fetchRepository(): Promise<void> {
   const cloneCmd = `git clone --depth 1 --branch ${repo_tag} ${repo_url} "${SOURCE_DIR}"`;
 
   try {
-    const { stdout, stderr } = await execAsync(cloneCmd);
+    const { stdout, stderr } = await execAsync(cloneCmd, {
+      env: { ...process.env, GIT_LFS_SKIP_SMUDGE: '1' }
+    });
     console.log("Repository cloned successfully");
     if (stderr) console.log("Git output:", stderr);
   } catch (error) {
