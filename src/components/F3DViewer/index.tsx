@@ -5,11 +5,17 @@ import React, {
   forwardRef,
   useImperativeHandle,
 } from "react";
-import f3d from "f3d";
+import f3d, { type LogVerboseLevel } from "f3d";
 import styles from "./styles.module.css";
 
 function initViewer(moduleRef, fileUrl) {
-  f3d({ canvas: document.getElementById("canvas") })
+  const canvas = document.getElementById("canvas");
+  canvas.oncontextmenu = function (e) {
+    e.preventDefault();
+    e.stopPropagation();
+  };
+
+  f3d({ canvas: canvas })
     .then(async (Module) => {
       moduleRef.current = Module;
 
@@ -22,6 +28,21 @@ function initViewer(moduleRef, fileUrl) {
 
       // automatically load all supported file format readers
       Module.Engine.autoloadPlugins();
+
+      Module.Log.setVerboseLevel(Module.LogVerboseLevel.DEBUG, false);
+      Module.Log.forward((lvl: LogVerboseLevel, msg: string) => {
+        if (lvl === Module.LogVerboseLevel.ERROR) {
+          console.error(msg);
+        } else if (lvl === Module.LogVerboseLevel.WARN) {
+          console.warn(msg);
+        } else if (lvl === Module.LogVerboseLevel.INFO) {
+          console.info(msg);
+        } else if (lvl === Module.LogVerboseLevel.DEBUG) {
+          console.debug(msg);
+        } else {
+          throw "unknown verbose level";
+        }
+      });
 
       Module.engineInstance = Module.Engine.create();
 
@@ -80,7 +101,12 @@ function openFile(moduleRef, file) {
   const scene = moduleRef.current.engineInstance.getScene();
   if (scene.supports(file)) {
     scene.clear();
-    scene.add(file);
+
+    try {
+      scene.add(file);
+    } catch (e) {
+      console.error("File " + file + " failed to load");
+    }
   } else {
     console.error("File " + file + " cannot be opened");
   }

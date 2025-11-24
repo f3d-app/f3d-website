@@ -199,7 +199,6 @@ export default function DownloadPage(): ReactNode {
                         </div>
                       ) as any
                     }
-                    default={index === 0}
                   >
                     <p>
                       Here are the available manual installation packages for{" "}
