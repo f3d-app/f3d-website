@@ -1,3 +1,249 @@
 .viewer {
   min-height: 100%;
+  position: relative;
+}
+
+/* Log window toggle button */
+.logToggle {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 50;
+  padding: 0;
+}
+
+.logToggle:hover {
+  transform: scale(1.1);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.logToggle svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Log window */
+.logWindow {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--ifm-background-surface-color);
+  backdrop-filter: blur(10px);
+  opacity: 0.95;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 50;
+}
+
+.logHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-emphasis-100);
+  border-bottom: 1px solid var(--ifm-color-emphasis-200);
+  font-weight: 600;
+  gap: 1rem;
+}
+
+.severityFilters {
+  display: flex;
+  gap: 0.5rem;
+  flex: 1;
+  justify-content: center;
+}
+
+.filterButton {
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--ifm-color-emphasis-300);
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 500;
+  opacity: 0.4;
+  transition: opacity 0.2s ease, background 0.2s ease;
+}
+
+.filterButton:hover {
+  opacity: 0.6;
+}
+
+.filterButton.active {
+  opacity: 1;
+}
+
+.filterError.active {
+  background: var(--accent-red);
+  color: white;
+  border-color: var(--accent-red);
+}
+
+.filterWarning.active {
+  background: var(--accent-yellow);
+  color: white;
+  border-color: var(--accent-yellow);
+}
+
+.filterInfo.active {
+  background: var(--ifm-color-primary);
+  color: white;
+  border-color: var(--ifm-color-primary);
+}
+
+.filterDebug.active {
+  background: var(--ifm-color-emphasis-600);
+  color: white;
+  border-color: var(--ifm-color-emphasis-600);
+}
+
+.logClose {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--ifm-font-color-base);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.logClose:hover {
+  background: var(--ifm-color-emphasis-200);
+}
+
+.logClose svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.logContent {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0.75rem;
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.logEmpty {
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.logEntry {
+  padding: 0.25rem 0;
+  word-wrap: break-word;
+}
+
+.log-command {
+  color: var(--ifm-color-primary);
+  font-weight: 600;
+}
+
+.log-debug {
+  color: var(--ifm-color-emphasis-600);
+  opacity: 0.7;
+}
+
+.log-info {
+  color: var(--ifm-font-color-base);
+}
+
+.log-warning {
+  color: var(--accent-yellow);
+  font-weight: 500;
+}
+
+.log-error {
+  color: var(--accent-red);
+  font-weight: 500;
+}
+
+.logInput {
+  display: flex;
+  border-top: 1px solid var(--ifm-color-emphasis-200);
+  background: var(--ifm-background-surface-color);
+}
+
+.commandInput {
+  flex: 1;
+  padding: 0.75rem;
+  border: none;
+  background: transparent;
+  color: var(--ifm-font-color-base);
+  font-family: 'Courier New', monospace;
+  font-size: 0.85rem;
+  outline: none;
+}
+
+.commandInput::placeholder {
+  color: var(--ifm-color-emphasis-600);
+}
+
+.commandSubmit {
+  padding: 0.75rem 1rem;
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.commandSubmit:hover {
+  background: var(--ifm-color-primary-dark);
+}
+
+.commandSubmit svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .logWindow {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .logToggle {
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+  
+  .logToggle svg {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }
