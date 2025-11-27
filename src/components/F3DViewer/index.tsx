@@ -29,14 +29,11 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
 
       Module.Log.setVerboseLevel(Module.LogVerboseLevel.QUIET, false);
       Module.Log.forward((level, message) => {
-        if (level === Module.LogVerboseLevel.ERROR)
-          addLog(message, 'error');
+        if (level === Module.LogVerboseLevel.ERROR) addLog(message, "error");
         else if (level === Module.LogVerboseLevel.WARN)
-          addLog(message, 'warning');
-        else if (level === Module.LogVerboseLevel.INFO)
-          addLog(message, 'info');
-        else
-          addLog(message, 'debug');
+          addLog(message, "warning");
+        else if (level === Module.LogVerboseLevel.INFO) addLog(message, "info");
+        else addLog(message, "debug");
       });
 
       // automatically load all supported file format readers
@@ -49,9 +46,15 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
         .getOptions()
         .setAsString("render.background.color", "#000000");
 
-      Module.engineInstance.getOptions().setAsString("ui.loader_progress", "true");
-      Module.engineInstance.getOptions().setAsString("ui.animation_progress", "true");
-      Module.engineInstance.getOptions().setAsString("scene.animation.autoplay", "true");
+      Module.engineInstance
+        .getOptions()
+        .setAsString("ui.loader_progress", "true");
+      Module.engineInstance
+        .getOptions()
+        .setAsString("ui.animation_progress", "true");
+      Module.engineInstance
+        .getOptions()
+        .setAsString("scene.animation.autoplay", "true");
 
       // setup coloring
       Module.engineInstance.getOptions().toggle("model.scivis.enable");
@@ -95,7 +98,7 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
       openFile(moduleRef, modelName);
 
       Module.engineInstance.getInteractor().start();
-      
+
       // Hide loading screen
       setIsLoading(false);
     })
@@ -129,9 +132,14 @@ interface F3DViewerProps {
 
 const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   const moduleRef = useRef(null);
-  const [logs, setLogs] = useState<Array<{ type: 'debug' | 'info' | 'warning' | 'error' | 'command'; message: string }>>([]);
+  const [logs, setLogs] = useState<
+    Array<{
+      type: "debug" | "info" | "warning" | "error" | "command";
+      message: string;
+    }>
+  >([]);
   const [isLogWindowOpen, setIsLogWindowOpen] = useState(false);
-  const [commandInput, setCommandInput] = useState('');
+  const [commandInput, setCommandInput] = useState("");
   const logEndRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [severityFilters, setSeverityFilters] = useState({
@@ -142,20 +150,27 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   });
 
   // Add log entry
-  const addLog = (message: string, type: 'debug' | 'info' | 'warning' | 'error' | 'command') => {
-    setLogs(prev => [...prev, { type, message }]);
+  const addLog = (
+    message: string,
+    type: "debug" | "info" | "warning" | "error" | "command",
+  ) => {
+    setLogs((prev) => [...prev, { type, message }]);
   };
 
   // Toggle severity filter
-  const toggleSeverityFilter = (severity: 'debug' | 'info' | 'warning' | 'error') => {
-    setSeverityFilters(prev => ({
+  const toggleSeverityFilter = (
+    severity: "debug" | "info" | "warning" | "error",
+  ) => {
+    setSeverityFilters((prev) => ({
       ...prev,
       [severity]: !prev[severity],
     }));
   };
 
   // Filter logs based on severity
-  const filteredLogs = logs.filter(log => log.type === 'command' || severityFilters[log.type]);
+  const filteredLogs = logs.filter(
+    (log) => log.type === "command" || severityFilters[log.type],
+  );
 
   // Auto-scroll to bottom when new logs are added
   React.useEffect(() => {
@@ -174,19 +189,21 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
 
     if (!commandInput.trim()) return;
 
-    addLog(`> ${commandInput}`, 'command');
-    
+    addLog(`> ${commandInput}`, "command");
+
     // Execute commands
     try {
       if (moduleRef.current) {
-        moduleRef.current.engineInstance.getInteractor().triggerCommand(commandInput);
+        moduleRef.current.engineInstance
+          .getInteractor()
+          .triggerCommand(commandInput);
         moduleRef.current.engineInstance.getWindow().render();
       }
     } catch (error) {
-      addLog(`Error: ${error.message}`, 'error');
+      addLog(`Error: ${error.message}`, "error");
     }
 
-    setCommandInput('');
+    setCommandInput("");
   };
 
   useImperativeHandle(ref, () => ({
@@ -218,12 +235,14 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   return (
     <div className={styles.viewer}>
       <canvas id="canvas"></canvas>
-      
+
       {isLoading && (
         <div className={styles.loadingScreen}>
           <div className={styles.loadingSpinner}></div>
           <div className={styles.loadingText}>Loading 3D Viewer...</div>
-          <div className={styles.loadingSubtext}>This may take a few seconds</div>
+          <div className={styles.loadingSubtext}>
+            This may take a few seconds
+          </div>
         </div>
       )}
 
@@ -237,36 +256,36 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
           <Icon icon="material-symbols:terminal" />
         </button>
       )}
-      
+
       {isLogWindowOpen && (
         <div className={styles.logWindow}>
           <div className={styles.logHeader}>
             <span>Console</span>
             <div className={styles.severityFilters}>
               <button
-                className={`${styles.filterButton} ${styles.filterError} ${severityFilters.error ? styles.active : ''}`}
-                onClick={() => toggleSeverityFilter('error')}
+                className={`${styles.filterButton} ${styles.filterError} ${severityFilters.error ? styles.active : ""}`}
+                onClick={() => toggleSeverityFilter("error")}
                 title="Toggle errors"
               >
                 Error
               </button>
               <button
-                className={`${styles.filterButton} ${styles.filterWarning} ${severityFilters.warning ? styles.active : ''}`}
-                onClick={() => toggleSeverityFilter('warning')}
+                className={`${styles.filterButton} ${styles.filterWarning} ${severityFilters.warning ? styles.active : ""}`}
+                onClick={() => toggleSeverityFilter("warning")}
                 title="Toggle warnings"
               >
                 Warning
               </button>
               <button
-                className={`${styles.filterButton} ${styles.filterInfo} ${severityFilters.info ? styles.active : ''}`}
-                onClick={() => toggleSeverityFilter('info')}
+                className={`${styles.filterButton} ${styles.filterInfo} ${severityFilters.info ? styles.active : ""}`}
+                onClick={() => toggleSeverityFilter("info")}
                 title="Toggle info"
               >
                 Info
               </button>
               <button
-                className={`${styles.filterButton} ${styles.filterDebug} ${severityFilters.debug ? styles.active : ''}`}
-                onClick={() => toggleSeverityFilter('debug')}
+                className={`${styles.filterButton} ${styles.filterDebug} ${severityFilters.debug ? styles.active : ""}`}
+                onClick={() => toggleSeverityFilter("debug")}
                 title="Toggle debug"
               >
                 Debug
@@ -281,18 +300,19 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
             </button>
           </div>
           <div className={styles.logContent}>
-            {
-              filteredLogs.map((log, idx) => (
-                <div key={idx} className={`${styles.logEntry} ${styles[`log-${log.type}`]}`}>
-                  {log.message.split('\n').map((line, lineIdx) => (
-                    <React.Fragment key={lineIdx}>
-                      {line}
-                      {lineIdx < log.message.split('\n').length - 1 && <br />}
-                    </React.Fragment>
-                  ))}
-                </div>
-              ))
-            }
+            {filteredLogs.map((log, idx) => (
+              <div
+                key={idx}
+                className={`${styles.logEntry} ${styles[`log-${log.type}`]}`}
+              >
+                {log.message.split("\n").map((line, lineIdx) => (
+                  <React.Fragment key={lineIdx}>
+                    {line}
+                    {lineIdx < log.message.split("\n").length - 1 && <br />}
+                  </React.Fragment>
+                ))}
+              </div>
+            ))}
             <div ref={logEndRef} />
           </div>
           <form className={styles.logInput} onSubmit={handleCommandSubmit}>
@@ -302,7 +322,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
               value={commandInput}
               onChange={(e) => setCommandInput(e.target.value)}
               onKeyDown={(e) => {
-                if (e.key === 'Enter') {
+                if (e.key === "Enter") {
                   e.preventDefault();
                   handleCommandSubmit(e);
                 }
