@@ -9,7 +9,7 @@ import f3d, { type LogVerboseLevel } from "f3d";
 import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
-function initViewer(moduleRef, fileUrl, addLog) {
+function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
   const canvas = document.getElementById("canvas");
   canvas.oncontextmenu = function (e) {
     e.preventDefault();
@@ -95,8 +95,14 @@ function initViewer(moduleRef, fileUrl, addLog) {
       openFile(moduleRef, modelName);
 
       Module.engineInstance.getInteractor().start();
+      
+      // Hide loading screen
+      setIsLoading(false);
     })
-    .catch((error) => console.error("Internal exception: " + error));
+    .catch((error) => {
+      console.error("Internal exception: " + error);
+      setIsLoading(false);
+    });
 }
 
 function openFile(moduleRef, file) {
@@ -127,6 +133,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   const [isLogWindowOpen, setIsLogWindowOpen] = useState(false);
   const [commandInput, setCommandInput] = useState('');
   const logEndRef = useRef<HTMLDivElement>(null);
+  const [isLoading, setIsLoading] = useState(true);
   const [severityFilters, setSeverityFilters] = useState({
     error: true,
     warning: true,
@@ -205,14 +212,22 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   }));
 
   useEffect(() => {
-    initViewer(moduleRef, fileUrl, addLog);
+    initViewer(moduleRef, fileUrl, addLog, setIsLoading);
   }, [fileUrl]);
 
   return (
     <div className={styles.viewer}>
       <canvas id="canvas"></canvas>
+      
+      {isLoading && (
+        <div className={styles.loadingScreen}>
+          <div className={styles.loadingSpinner}></div>
+          <div className={styles.loadingText}>Loading 3D Viewer...</div>
+          <div className={styles.loadingSubtext}>This may take a few seconds</div>
+        </div>
+      )}
 
-      {!isLogWindowOpen && (
+      {!isLoading && !isLogWindowOpen && (
         <button
           className={styles.logToggle}
           onClick={() => setIsLogWindowOpen(!isLogWindowOpen)}
