@@ -30,7 +30,7 @@ function ViewerApp({ model }: ViewerAppProps) {
       ambient: "render.hdri.ambient",
     };
 
-    viewerRef.current?.toggleOption?.(idOptionMappings[name]);
+    viewerRef.current?.triggerCommand(`toggle ${idOptionMappings[name]}`);
   };
 
   // Handle file selection
@@ -102,15 +102,6 @@ function ViewerApp({ model }: ViewerAppProps) {
 
   return (
     <div className={styles.viewerPage}>
-      <div
-        className={`${styles.mobileMenuToggle} ${isMobileMenuOpen ? styles.mobileMenuToggleHidden : ""}`}
-        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        aria-label="Toggle controls panel"
-        title="Controls"
-      >
-        <Icon icon="material-symbols:settings" />
-      </div>
-
       <div className={styles.layout}>
         <nav
           className={`${styles.menuPanel} ${isMobileMenuOpen ? styles.menuPanelOpen : ""}`}
@@ -242,6 +233,14 @@ function ViewerApp({ model }: ViewerAppProps) {
         )}
 
         <main className={styles.viewerPanel}>
+          <div
+            className={`${styles.mobileMenuToggle} ${isMobileMenuOpen ? styles.mobileMenuToggleHidden : ""}`}
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle controls panel"
+            title="Controls"
+          >
+            <Icon icon="material-symbols:settings" />
+          </div>
           <F3DViewer ref={viewerRef} fileUrl={fileUrl} />
         </main>
       </div>
