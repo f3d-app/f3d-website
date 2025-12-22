@@ -117,25 +117,8 @@ async function runSeaborg(api: string): Promise<void> {
       const lines = content.split(/\r?\n/g);
       const newLines: string[] = [];
       for (let i = 0; i < lines.length; i++) {
-        // remove lines starting with "**TODO**" and following lines
-        if (
-          lines[i].startsWith("**TODO**:") ||
-          lines[i].includes('{"type":"element"')
-        ) {
-          continue;
-        }
-
-        // remove links when pointing to undefined.md
-        lines[i] = lines[i].replace(
-          /\[(.+)\]\(undefined.md#undefined\)/g,
-          "$1",
-        );
-
         // remove h1 anchor links and point to the file only
         lines[i] = lines[i].replace(/\(([^.#]+)\.md#\1\)/g, "($1.md)");
-
-        // remove h1 anchors
-        lines[i] = lines[i].replace(/^# (.+) \{#.*\}$/g, "# $1");
 
         // remove useless backslashes before underscores in h1 anchors
         if (lines[i].startsWith("# ")) {
@@ -149,12 +132,6 @@ async function runSeaborg(api: string): Promise<void> {
         ) {
           continue;
         }
-
-        // fix links to files starting with underscore
-        lines[i] = lines[i].replace(
-          /\(_([a-z]+)(.*)\.md\)/g,
-          (_, letter, rest) => `(${letter.toUpperCase()}${rest}.md)`,
-        );
 
         newLines.push(lines[i]);
       }

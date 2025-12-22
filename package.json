@@ -37,7 +37,7 @@
     "@docusaurus/types": "^3.9.2",
     "@iconify/react": "^6.0.2",
     "@octokit/core": "^7.0.6",
-    "@seaborg/cli": "^0.6.3",
+    "@seaborg/cli": "^0.6.5",
     "tsx": "^4.20.6",
     "typescript": "~5.9.3"
   },
