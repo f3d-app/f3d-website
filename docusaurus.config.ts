@@ -19,6 +19,7 @@ const config: Config = {
   organizationName: "f3d-app",
   projectName: "f3d-website",
   onBrokenLinks: "throw",
+  onBrokenAnchors: "throw",
   markdown: {
     mermaid: true,
     hooks: {
