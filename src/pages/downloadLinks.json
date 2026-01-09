@@ -1,38 +1,38 @@
 {
-  "tag": "v3.3.0",
-  "date": "2025-10-22T15:11:04Z",
+  "tag": "v3.4.1",
+  "date": "2026-01-08T11:36:10Z",
   "assets": {
     "Windows": {
       "binaries": [
         {
-          "name": "F3D-3.3.0-Windows-x86_64-raytracing.exe",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Windows-x86_64-raytracing.exe",
-          "size": "50.9 MB",
-          "digest": "sha256:6c8a15649aa1b86b7c3852d01ac3bc4929a4e41657bba4f4beeabd926b6897fd",
+          "name": "F3D-3.4.1-Windows-x86_64-raytracing.exe",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Windows-x86_64-raytracing.exe",
+          "size": "51.9 MB",
+          "digest": "sha256:5a704dcef40bbf8e96b608fc1a0d2d16765df6316c2f98a97b1b60a57f68bc54",
           "short": "Installer",
           "long": "Installer (.exe) with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Windows-x86_64-raytracing.zip",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Windows-x86_64-raytracing.zip",
-          "size": "67.4 MB",
-          "digest": "sha256:6b3ded16c66256935cd701143313574beca957d3323aa958c2997405f01180a6",
+          "name": "F3D-3.4.1-Windows-x86_64-raytracing.zip",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Windows-x86_64-raytracing.zip",
+          "size": "69.0 MB",
+          "digest": "sha256:fa3b5bceacab6583f3159881eec2877a23d6e83c7bb246764d83d63f7ad79de3",
           "short": "Portable",
           "long": "Portable (.zip) with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Windows-x86_64.exe",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Windows-x86_64.exe",
-          "size": "19.9 MB",
-          "digest": "sha256:9e91cd9e493452198512ea2d77689c9579effbe9bab0266b75447d90dc5eb199",
+          "name": "F3D-3.4.1-Windows-x86_64.exe",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Windows-x86_64.exe",
+          "size": "20.9 MB",
+          "digest": "sha256:d8e8179918e24922d04892bcd6540893f1232c2133dbe906fb9ee8d86d62d96c",
           "short": "Installer",
           "long": "Installer (.exe) without raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Windows-x86_64.zip",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Windows-x86_64.zip",
-          "size": "27.0 MB",
-          "digest": "sha256:5859e10d865f7c54d48d32cad91a0e3a5d0007391e1171f47c68148ad452e5f2",
+          "name": "F3D-3.4.1-Windows-x86_64.zip",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Windows-x86_64.zip",
+          "size": "28.7 MB",
+          "digest": "sha256:00e8097cd26300b8f5b237dfc0496200719599250b61ff721f0d91c56288ff11",
           "short": "Portable",
           "long": "Portable (.zip) without raytracing support"
         }
@@ -42,50 +42,50 @@
     "Linux": {
       "binaries": [
         {
-          "name": "F3D-3.3.0-Linux-x86_64-raytracing.deb",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Linux-x86_64-raytracing.deb",
-          "size": "110.2 MB",
-          "digest": "sha256:512323f75e8d52de6fd9f98a120cb94f400fe217e478e737601f0c05ec30de1b",
+          "name": "F3D-3.4.1-Linux-x86_64-raytracing.deb",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Linux-x86_64-raytracing.deb",
+          "size": "114.1 MB",
+          "digest": "sha256:6952aff1dd5c721cfb69662edea1c4f06f3c9d1c097c401cdb3815edd328a17a",
           "short": "Package",
           "long": "Package (.deb) with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Linux-x86_64-raytracing.tar.xz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Linux-x86_64-raytracing.tar.xz",
-          "size": "75.8 MB",
-          "digest": "sha256:5b7f116f7edba61b074cf87c52a21e6e2c81aa20079de9d04b2ff58c8b3cffee",
+          "name": "F3D-3.4.1-Linux-x86_64-raytracing.tar.xz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Linux-x86_64-raytracing.tar.xz",
+          "size": "78.4 MB",
+          "digest": "sha256:c126066a5c24e47421f7f44a19a3d250d64ae39353e60e408778f846fed8adcc",
           "short": "Portable",
           "long": "Tarball (.tar.xz) with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Linux-x86_64-raytracing.tar.gz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Linux-x86_64-raytracing.tar.gz",
-          "size": "110.2 MB",
-          "digest": "sha256:18febe59cb60413973c86908d0de86b44333af454c07cddd089d9e1af088ab95",
+          "name": "F3D-3.4.1-Linux-x86_64-raytracing.tar.gz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Linux-x86_64-raytracing.tar.gz",
+          "size": "114.1 MB",
+          "digest": "sha256:326fe6e5d45933241503eac9a41eb9046ddd2310ad9b03941009272bd307ba11",
           "short": "Portable",
           "long": "Tarball (.tar.gz) with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Linux-x86_64.deb",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Linux-x86_64.deb",
-          "size": "61.7 MB",
-          "digest": "sha256:d94cd66f5a374bfb0ff1908ff9a896d254e1f7964c775222e1f15f0f3d4aa0e9",
+          "name": "F3D-3.4.1-Linux-x86_64.deb",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Linux-x86_64.deb",
+          "size": "65.6 MB",
+          "digest": "sha256:81900d80bc53eb819cbd945e2bd596100e18762b5def7323d98ecdd36846e1e7",
           "short": "Package",
           "long": "Package (.deb) without raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Linux-x86_64.tar.xz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Linux-x86_64.tar.xz",
-          "size": "40.6 MB",
-          "digest": "sha256:5ba00ea82c9b9c2510e73dd8bb45509cefcfe9482a3446110a2a7c2729ee60a0",
+          "name": "F3D-3.4.1-Linux-x86_64.tar.xz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Linux-x86_64.tar.xz",
+          "size": "43.3 MB",
+          "digest": "sha256:0e5b376617dd964cbd7c3afc19bbfb19d30962fbf8d6f302c25a0b8c8c8f7a8a",
           "short": "Portable",
           "long": "Tarball (.tar.xz) without raytracing support"
         },
         {
-          "name": "F3D-3.3.0-Linux-x86_64.tar.gz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-Linux-x86_64.tar.gz",
-          "size": "61.6 MB",
-          "digest": "sha256:90ea59e0b510bc68dec78742974e26e06ee1bb10e56f181b054f643fb52456af",
+          "name": "F3D-3.4.1-Linux-x86_64.tar.gz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-Linux-x86_64.tar.gz",
+          "size": "65.5 MB",
+          "digest": "sha256:a07a310e3836f6cd3a70815f7f76b996cd2e663161def6a39ddbbf252e6fd624",
           "short": "Portable",
           "long": "Tarball (.tar.gz) without raytracing support"
         }
@@ -95,34 +95,34 @@
     "macOS": {
       "binaries": [
         {
-          "name": "F3D-3.3.0-macOS-arm64-raytracing.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-macOS-arm64-raytracing.dmg",
-          "size": "70.6 MB",
-          "digest": "sha256:a84663d3edc362b946a5456c88907e8322392a40895f13e6bce461702a8d9b4d",
+          "name": "F3D-3.4.1-macOS-arm64-raytracing.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-macOS-arm64-raytracing.dmg",
+          "size": "73.6 MB",
+          "digest": "sha256:ba433e3b97e0745ea28efaaf14ecd3051e0e779489d13c475768e1ffe3263bd4",
           "short": "Silicon",
           "long": "Silicon installer with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-macOS-x86_64-raytracing.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-macOS-x86_64-raytracing.dmg",
-          "size": "92.5 MB",
-          "digest": "sha256:8d32719042486b4614e30c04fc516192c3e2466bd9be87ad750c0be97cd7a7ce",
+          "name": "F3D-3.4.1-macOS-x86_64-raytracing.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-macOS-x86_64-raytracing.dmg",
+          "size": "94.9 MB",
+          "digest": "sha256:d48c57d32e79150f2245a3a09eac75dd5b5048f0103775204e284abccfd39296",
           "short": "Intel",
           "long": "Intel installer with raytracing support"
         },
         {
-          "name": "F3D-3.3.0-macOS-arm64.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-macOS-arm64.dmg",
-          "size": "41.9 MB",
-          "digest": "sha256:02caa17d8b0b25db761eb16799b6a0439fb7ace998f40fb7e6ce3fa270ddcc30",
+          "name": "F3D-3.4.1-macOS-arm64.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-macOS-arm64.dmg",
+          "size": "45.0 MB",
+          "digest": "sha256:8893ff2c21fe4d9bb9902f0eb7958d1ffd125fe07015a4e17db44e570649899b",
           "short": "Silicon",
           "long": "Silicon installer without raytracing support"
         },
         {
-          "name": "F3D-3.3.0-macOS-x86_64.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v3.3.0/F3D-3.3.0-macOS-x86_64.dmg",
-          "size": "46.9 MB",
-          "digest": "sha256:c0abbcd8b2ae863be17b583732093c4f52bbf76a3969b14cc0ad526ea9755f8a",
+          "name": "F3D-3.4.1-macOS-x86_64.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v3.4.1/F3D-3.4.1-macOS-x86_64.dmg",
+          "size": "49.4 MB",
+          "digest": "sha256:1b42312affef7147e8dfb216b2fef8914ee638b43c26f6ddde8f62213ebf5548",
           "short": "Intel",
           "long": "Intel installer without raytracing support"
         }
