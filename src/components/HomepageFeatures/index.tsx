@@ -104,8 +104,7 @@ export default function HomepageFeatures(): ReactNode {
             <div className="text--center padding-horiz--md">
               <Heading as="h3">Scientific Visualization</Heading>
               <p>
-                Color with you data, so you can create accurate scientific
-                visualisations.
+                Color your data to create accurate scientific visualizations.
               </p>
             </div>
           </div>
