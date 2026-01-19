@@ -11,8 +11,8 @@ const sponsors = [
     isSvg: true,
   },
   {
-    name: "LambdaTest",
-    logo: require("@site/static/sponsors/lambdatest.png").default,
+    name: "TestMu",
+    logo: require("@site/static/sponsors/testmu.png").default,
     url: "https://www.lambdatest.com/?utm_source=f3d&utm_medium=sponsor",
     isSvg: false,
   },
