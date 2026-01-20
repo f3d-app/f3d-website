@@ -13,7 +13,7 @@ const sponsors = [
   {
     name: "TestMu",
     logo: require("@site/static/sponsors/testmu.png").default,
-    url: "https://www.lambdatest.com/?utm_source=f3d&utm_medium=sponsor",
+    url: "https://www.testmu.ai/?utm_source=f3d&utm_medium=sponsor",
     isSvg: false,
   },
   {
