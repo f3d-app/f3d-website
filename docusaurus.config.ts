@@ -78,14 +78,6 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    announcementBar: {
-      id: "main_announcement",
-      content:
-        'Welcome to our new website! Read the <a target="_blank" rel="noopener noreferrer" href="https://f3d-app.github.io/f3d-website/blog/new-website">blog post</a>. We would love to hear your feedback!',
-      backgroundColor: "#F8B20A",
-      textColor: "#1B1B19",
-      isCloseable: true,
-    },
     metadata: [
       { name: "algolia-site-verification", content: "3C64CB24A16EEA03" },
     ],
