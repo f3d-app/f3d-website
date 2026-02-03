@@ -131,6 +131,13 @@ export default function Home(): ReactNode {
                 Draco
               </a>
               ,{" "}
+              <a
+                href="https://github.com/ThatOpen/engine_web-ifc"
+                target="_blank"
+              >
+                web-ifc
+              </a>
+              ,{" "}
               <a href="https://openusd.org/release/index.html" target="_blank">
                 OpenUSD
               </a>
