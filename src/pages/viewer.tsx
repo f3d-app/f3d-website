@@ -120,7 +120,7 @@ function ViewerApp({ model }: ViewerAppProps) {
                 className={styles.fileInput}
                 type="file"
                 id="file-selector"
-                accept=".gml,.gltf,.glb,.obj,.ply,.pts,.stl,.vtk,.vtp,.vtu,.vtkhdf,.3ds,.wrl,.vrml,.fbx,.off,.x,.dae,.ex2,.exo,.e,.g,.stp,.step,.igs,.iges,.brep,.xbf,.drc,.mdl,.nc,.cdf,.ncdf,.ifc"
+                accept=".gml,.gltf,.glb,.obj,.ply,.pts,.stl,.vtk,.vtp,.vtu,.vtkhdf,.3ds,.wrl,.vrml,.fbx,.dae,.dxf,.off,.x,.3mf,.ex2,.exo,.e,.g,.stp,.step,.igs,.iges,.brep,.xbf,.drc,.mdl,.nc,.cdf,.ncdf,.ifc"
                 onChange={handleFileChange}
               />
               <span className="button button--primary button--lg">
