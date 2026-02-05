@@ -26,10 +26,10 @@
     "docusaurus-plugin-sass": "^0.2.6",
     "f3d": "^3.4.1-nightly.20260203",
     "prism-react-renderer": "^2.4.1",
-    "react": "^19.2.0",
-    "react-dom": "^19.2.0",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
     "react-tooltip": "^5.30.0",
-    "sass": "^1.93.3"
+    "sass": "^1.97.3"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",
@@ -38,7 +38,7 @@
     "@iconify/react": "^6.0.2",
     "@octokit/core": "^7.0.6",
     "@seaborg/cli": "^0.6.5",
-    "tsx": "^4.20.6",
+    "tsx": "^4.21.0",
     "typescript": "~5.9.3"
   },
   "browserslist": {
