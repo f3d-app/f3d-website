@@ -60,7 +60,6 @@ function ViewerApp({ model }: ViewerAppProps) {
         }
 
         viewerRef.current?.loadFile(
-          file.name,
           new Uint8Array(reader.result as ArrayBuffer),
         );
       });
