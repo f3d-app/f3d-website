@@ -23,7 +23,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d gearbox/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtga",
+      "f3d gearbox/scene.gltf --hdri-file=future_parking_2k.hdr --hdri-skybox --blur-background --ambient-occlusion --axis=false",
   },
   {
     title: "Animated, skinned and morphed rendering",
@@ -37,7 +37,8 @@ const galleryItems = [
         className={styles.media}
       />
     ),
-    command: "f3d dota/scene.gltf --hdri-file=future_parking_2k.hdr -fjuqxtga",
+    command:
+      "f3d dota/scene.gltf --hdri-file=future_parking_2k.hdr --hdri-skybox --blur-background --ambient-occlusion",
   },
   {
     title: "Animated scientific visualization rendering",
@@ -52,7 +53,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d can.ex2 -xtgans --up=+Z --scalar-coloring --coloring-array=VEL --animation-speed-factor=0.002",
+      "f3d can.ex2 --up=+Z --scalar-coloring --coloring-array=VEL --animation-speed-factor=0.002",
   },
   {
     title: "3D Gaussians Splatting",
@@ -67,7 +68,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d counter.splat --point-sprites-size=1 --point-sprites-type=gaussian -soynxz --up=-Y --camera-position=0,1,-5.2 --camera-focal-point=0,1,0",
+      "f3d counter.splat --point-sprites-size=1 --point-sprites=gaussian --fps --up=-Y --camera-position=0,1,-5.2 --camera-focal-point=0,1,0",
   },
   {
     title: "Direct scalars rendering of a point cloud",
@@ -79,7 +80,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d Carola_PointCloud.ply --point-sprites-size=0 --coloring-component=-2 -sofju --blur-coc=50 --coloring-array=RGBA --up=+Z --hdri-file=venice_sunset_8k.hdr",
+      "f3d Carola_PointCloud.ply --point-sprites-size=0.3 --point-sprites --hdri-skybox --blur-background --blur-coc=50 --coloring-array=RGBA --up=+Z --hdri-file=venice_sunset_8k.hdr",
   },
   {
     title: "Raytraced CAD assembly",
@@ -91,7 +92,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d 202.vtp -xtgans -rd --raytracing-samples=20 --coloring-range=-2,9",
+      "f3d 202.vtp --scalar-coloring --raytracing --raytracing-denoise --raytracing-samples=20 --coloring-range=-2,9",
   },
   {
     title: "Volume rendering of a security bag scan",
@@ -103,7 +104,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d backpack.vti -vmn --coloring-range=300,1000 --colormap=0,#000000,1,#ffffff",
+      "f3d backpack.vti --volume --metadata --coloring-range=300,1000 --colormap=0,#000000,1,#ffffff",
   },
   {
     title: "Realistic rendering #1",
@@ -114,7 +115,8 @@ const galleryItems = [
         className={styles.media}
       />
     ),
-    command: "f3d DamagedHelmet.glb --hdri-file=lebombo_4k.hdr -fjtuqap",
+    command:
+      "f3d DamagedHelmet.glb --hdri-file=lebombo_4k.hdr --hdri-skybox --blue-background --ambient-occlusion --grid=false --axis=false",
   },
   {
     title: "Showcase of interactive widgets",
@@ -125,7 +127,8 @@ const galleryItems = [
         className={styles.media}
       />
     ),
-    command: "f3d dragon.vtu -xtgansemf --coloring-component=0",
+    command:
+      "f3d dragon.vtu --scalar-coloring --edges --metadata --coloring-component=0",
   },
   {
     title: "Metallic Rendering of a STEP file",
@@ -137,7 +140,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d eta_asm.stp --hdri-file=future_parking_2k.hdr -DSTEP.linear_deflection=0.01 -fjuqxtga --up=+Z --metallic=1 --roughness=0.6 --color=0.98,0.90,0.59 --scalar-coloring=false",
+      "f3d eta_asm.stp --hdri-file=future_parking_2k.hdr -DSTEP.linear_deflection=0.01 --hdri-skybox --blur-background --ambient-occlusion --up=+Z --metallic=1 --roughness=0.6 --color=0.98,0.90,0.59 --scalar-coloring=false",
   },
   {
     title: "Rendering of a FBX file",
@@ -149,7 +152,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d zeldaPosed001.fbx --hdri-file=hikers_cave_2k.hdr -fjuqxtga --light-intensity=1.5 --blur-coc=50",
+      "f3d zelda/source/zeldaPosed001.fbx --hdri-file=hikers_cave_2k.hdr --hdri-skybox --blur-background --ambient-occlusion --light-intensity=1.5 --blur-coc=50",
   },
   {
     title: "Realistic rendering #2",
@@ -160,7 +163,8 @@ const galleryItems = [
         className={styles.media}
       />
     ),
-    command: "f3d FlightHelmet.glb --hdri-file=lebombo_4k.hdr -fjtuqap",
+    command:
+      "f3d FlightHelmet.glb --hdri-file=lebombo_4k.hdr --hdri-skybox --blur-background --ambient-occlusion --axis=false --grid=false",
   },
   {
     title: "Visualization of a CFD velocity field",
@@ -172,7 +176,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d single-pin.vtp -xtbgans --coloring-range=-2,8 --colormap=0,0.3,0.7,0,0.7,0,0.1,1,1,0.8,0.8,0",
+      "f3d single-pin.vtp --coloring-scalar-bar --scalar-coloring --coloring-range=-2,8 --colormap=0,0.3,0.7,0,0.7,0,0.1,1,1,0.8,0.8,0",
   },
   {
     title: "Volume rendering of a medical skull scan",
@@ -184,7 +188,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d skull.vti -vxbt --coloring-range=40,200 --camera-direction=1,0,0 --up=+Z",
+      "f3d skull.vti --volume --coloring-scalar-bar --coloring-range=40,200 --camera-direction=1,0,0 --up=+Z",
   },
   {
     title: "Point cloud rendering using sprites",
@@ -245,7 +249,8 @@ export default function Gallery(): ReactNode {
             >
               here
             </a>
-            .
+            . The provided commands assume a standard configuration file is
+            present in your F3D installation.
           </Admonition>
           <ul>
             <li>
