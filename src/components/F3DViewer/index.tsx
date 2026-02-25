@@ -23,10 +23,6 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
       // write in the filesystem
       const defaultFile = await fetch(fileUrl).then((b) => b.arrayBuffer());
 
-      const modelName = fileUrl.split("/").pop();
-
-      Module.FS.writeFile(modelName, new Uint8Array(defaultFile));
-
       Module.Log.setVerboseLevel(Module.LogVerboseLevel.QUIET, false);
       Module.Log.forward((level, message) => {
         if (level === Module.LogVerboseLevel.ERROR) addLog(message, "error");
@@ -39,65 +35,75 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
       // automatically load all supported file format readers
       Module.Engine.autoloadPlugins();
 
-      Module.engineInstance = Module.Engine.create();
+      moduleRef.current.engineInstance = Module.Engine.create();
 
       // background must be set to black for proper blending with transparent canvas
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("render.background.color", "#000000");
 
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("ui.loader_progress", "true");
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("ui.animation_progress", "true");
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("scene.animation.autoplay", "true");
 
       // setup coloring
-      Module.engineInstance.getOptions().toggle("model.scivis.enable");
-      Module.engineInstance
+      moduleRef.current.engineInstance
+        .getOptions()
+        .toggle("model.scivis.enable");
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("model.scivis.array_name", "Colors");
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("model.scivis.component", "-2");
-      Module.engineInstance.getOptions().toggle("model.scivis.cells");
+      moduleRef.current.engineInstance
+        .getOptions()
+        .toggle("model.scivis.cells");
 
       // make it look nice
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.effect.antialiasing.enable");
-      Module.engineInstance.getOptions().toggle("render.effect.tone_mapping");
-      Module.engineInstance
+      moduleRef.current.engineInstance
+        .getOptions()
+        .toggle("render.effect.tone_mapping");
+      moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.effect.ambient_occlusion");
-      Module.engineInstance.getOptions().toggle("render.hdri.ambient");
+      moduleRef.current.engineInstance
+        .getOptions()
+        .toggle("render.hdri.ambient");
 
       // display widgets
-      Module.engineInstance.getOptions().toggle("ui.axis");
-      Module.engineInstance.getOptions().toggle("render.grid.enable");
+      moduleRef.current.engineInstance.getOptions().toggle("ui.axis");
+      moduleRef.current.engineInstance
+        .getOptions()
+        .toggle("render.grid.enable");
 
       // default to +Z
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getOptions()
         .setAsString("scene.up_direction", "+Z");
 
       // setup the window size based on the canvas size
       const scale = window.devicePixelRatio;
-      Module.engineInstance
+      moduleRef.current.engineInstance
         .getWindow()
         .setSize(
-          scale * Module.canvas.clientWidth,
-          scale * Module.canvas.clientHeight,
+          scale * moduleRef.current.canvas.clientWidth,
+          scale * moduleRef.current.canvas.clientHeight,
         );
 
       // load file
-      openFile(moduleRef, modelName);
+      openStream(moduleRef, new Uint8Array(defaultFile));
 
-      Module.engineInstance.getInteractor().start();
+      moduleRef.current.engineInstance.getInteractor().start();
 
       // Hide loading screen
       setIsLoading(false);
@@ -108,22 +114,20 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
     });
 }
 
-function openFile(moduleRef, file) {
+function openStream(moduleRef, stream: Uint8Array) {
   const scene = moduleRef.current.engineInstance.getScene();
-  if (scene.supports(file)) {
-    scene.clear();
 
-    try {
-      scene.add(file);
-    } catch (e) {
-      console.error("File " + file + " failed to load");
-    }
-  } else {
-    console.error("File " + file + " cannot be opened");
+  scene.clear();
+
+  try {
+    scene.addBuffer(stream);
+  } catch (e) {
+    console.error("Failed to load stream: " + e);
   }
+
   moduleRef.current.engineInstance.getWindow().getCamera().resetToBounds(0.9);
   moduleRef.current.engineInstance.getWindow().render();
-  moduleRef.current.currentFile = file;
+  moduleRef.current.currentStream = stream;
 }
 
 interface F3DViewerProps {
@@ -207,10 +211,8 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   };
 
   useImperativeHandle(ref, () => ({
-    loadFile: (file, buffer) => {
-      // add to FS
-      moduleRef.current.FS.writeFile(file, buffer);
-      openFile(moduleRef, file);
+    loadFile: (buffer: Uint8Array) => {
+      openStream(moduleRef, buffer);
     },
     setUpDirection: (direction) => {
       if (!moduleRef.current) return;
@@ -218,7 +220,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       moduleRef.current.engineInstance
         .getOptions()
         .setAsString("scene.up_direction", direction);
-      openFile(moduleRef, moduleRef.current.currentFile);
+      openStream(moduleRef, moduleRef.current.currentStream);
     },
     triggerCommand: (command: string) => {
       if (!moduleRef.current) return;
