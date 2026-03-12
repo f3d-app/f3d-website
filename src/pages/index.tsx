@@ -146,6 +146,10 @@ export default function Home(): ReactNode {
                 OpenVDB
               </a>
               ,{" "}
+              <a href="https://pdal.org" target="_blank">
+                PDAL
+              </a>
+              ,{" "}
               <a href="https://www.ospray.org/" target="_blank">
                 OSPRay
               </a>
