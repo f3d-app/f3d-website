@@ -210,12 +210,7 @@ const __dirname = path.dirname(__filename);
 
     // Android
     result.assets.Android.binaries.push(
-      getAsset(
-        response.data.assets,
-        /arm64-v8a.apk/,
-        "ARM",
-        "64-bit ARM CPUs",
-      ),
+      getAsset(response.data.assets, /arm64-v8a.apk/, "ARM", "64-bit ARM CPUs"),
     );
     result.assets.Android.binaries.push(
       getAsset(
@@ -234,12 +229,7 @@ const __dirname = path.dirname(__filename);
       ),
     );
     result.assets.Android.binaries.push(
-      getAsset(
-        response.data.assets,
-        /x86.apk/,
-        "x86",
-        "32-bit x86 CPUs",
-      ),
+      getAsset(response.data.assets, /x86.apk/, "x86", "32-bit x86 CPUs"),
     );
 
     const outputPath = path.resolve(
