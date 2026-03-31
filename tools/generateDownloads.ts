@@ -22,6 +22,7 @@ const __dirname = path.dirname(__filename);
         Windows: { binaries: [], icon: "cib:windows" },
         Linux: { binaries: [], icon: "mdi:linux" },
         macOS: { binaries: [], icon: "cib:apple" },
+        Android: { binaries: [], icon: "cib:android" },
       },
     };
 
@@ -204,6 +205,40 @@ const __dirname = path.dirname(__filename);
         /macOS-x86_64.dmg/,
         "Intel",
         "Intel installer without raytracing support",
+      ),
+    );
+
+    // Android
+    result.assets.Android.binaries.push(
+      getAsset(
+        response.data.assets,
+        /arm64-v8a.apk/,
+        "ARM",
+        "64-bit ARM CPUs",
+      ),
+    );
+    result.assets.Android.binaries.push(
+      getAsset(
+        response.data.assets,
+        /x86_64.apk/,
+        "x86_64",
+        "64-bit x86_64 CPUs",
+      ),
+    );
+    result.assets.Android.binaries.push(
+      getAsset(
+        response.data.assets,
+        /armeabi-v7a.apk/,
+        "ARM (32-bits)",
+        "32-bit ARM CPUs",
+      ),
+    );
+    result.assets.Android.binaries.push(
+      getAsset(
+        response.data.assets,
+        /x86.apk/,
+        "x86",
+        "32-bit x86 CPUs",
       ),
     );
 
