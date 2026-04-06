@@ -29,7 +29,7 @@
     "react": "^19.2.4",
     "react-dom": "^19.2.4",
     "react-tooltip": "^5.30.0",
-    "sass": "^1.97.3"
+    "sass": "^1.99.0"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.9.2",
@@ -39,7 +39,7 @@
     "@octokit/core": "^7.0.6",
     "@seaborg/cli": "^0.6.5",
     "tsx": "^4.21.0",
-    "typescript": "~5.9.3"
+    "typescript": "~6.0.2"
   },
   "browserslist": {
     "production": [
