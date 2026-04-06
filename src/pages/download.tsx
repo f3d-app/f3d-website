@@ -117,7 +117,7 @@ export default function DownloadPage(): ReactNode {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const detectedOS = params.get("os") || GuessClient();
-    if (["Windows", "macOS", "Linux"].includes(detectedOS)) {
+    if (["Windows", "macOS", "Linux", "Android"].includes(detectedOS)) {
       setOperatingSystem(detectedOS);
     }
   }, []);
