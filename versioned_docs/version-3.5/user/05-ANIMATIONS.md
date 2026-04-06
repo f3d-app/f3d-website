@@ -1,0 +1,120 @@
+# Animations
+
+F3D is able to play animations for any files which contain them.
+Play them either interactively or by selecting a specific time to display.
+For files containing multiple animations, F3D allows the user to either play each animation separately or to select multiple animations to play at the same.
+
+## Demonstration
+
+This specific example uses an animation file which can be downloaded [here](https://github.com/f3d-app/f3d/blob/606089959c9520085a9cbf70660fb0ffc68fb934/testing/data/InterpolationTest.glb).
+
+![animation_0](animation_0.png)
+
+Load the example animation file shown above by executing within command line: `f3d InterpolationTest.glb`
+
+![animation_1](animation_1.png)
+To view current animation name, press <kbd>H</kbd> to open up cheatsheet menu
+
+![animation_2](animation_2.png)
+Press <kbd>W</kbd> to cycle through available animations
+
+![animation_3](animation_3.png)
+Press <kbd>space</kbd> to play/pause current animation.
+Note: A blue bar runs along the bottom of screen to indicate the current time interval of the animation sequence if animation-progress was turned on.
+
+![animation_4](animation_4.png)
+"All Animations" will play all animations at the same time if supported by the file format.
+
+## Command line options
+
+F3D animation behavior can be fully controlled from the command line using the following options.
+
+| Options                      | Default             | Description                                          |
+| ---------------------------- | ------------------- | ---------------------------------------------------- |
+| \-\-animation\-indices       |                     | Select the animations to play.                       |
+| \-\-animation\-indices=-1    |                     | Play all animations at once (only if supported)      |
+| \-\-animation\-speed\-factor | Time Unit = Seconds | Adjust time unit.                                    |
+| \-\-frame\-rate              | 60 FPS              | Adjust animation (and others components) frame rate. |
+| \-\-animation\-time          |                     | Load a specific time value on start.                 |
+
+## Exporting animation frames
+
+F3D can export multiple frames from an animation to image files. To do this, include `{frame}` in the output filename template:
+
+```bash
+f3d example.file --output=frame_{frame:04}.png
+```
+
+This will save frames as `frame_0000.png`, `frame_0001.png`, etc.
+
+The number of frames is determined by `--frame-rate`
+
+```bash
+f3d example.file --output=frame_{frame}.png --frame-rate=30
+```
+
+Use `--animation-time` to start exporting from a specific time instead of the beginning:
+
+```bash
+f3d example.file --output=frame_{frame}.png --frame-rate=10 --animation-time=1.5
+```
+
+See [Filename templating](03-OPTIONS.md#filename-templating) for more template variables.
+
+## Animation Interactions
+
+- Press <kbd>W</kbd> to cycle through animations
+- Press <kbd>Space</kbd> to play/pause animation
+- Press <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Space</kbd> to play/pause animation backward
+
+See [COMMANDS](07-COMMANDS.md) for commands like `jump_to_frame`
+
+## Cycling Animations
+
+Pressing <kbd>W</kbd> let you cycle the animation to show.
+
+When cycling, F3D will cycle like this:
+
+- Multiple animations or all animations
+- Animation index 0
+- Animation index 1
+- ...
+- Animation index N
+- All animations (if multiple animations supported and more than one animation is available)
+- No animations
+
+Please note that if you selected multiple animation indices, you will never cycle back to it.
+All animations will only be cycled if supported by the currently loaded files.
+
+## Time Units
+
+When F3D plays an animation, it assumes the time unit is in seconds to show accurate speed of animation.
+
+## Coloring range
+
+When coloring while loading a time value or playing the animation, the coloring range will be automatically expanded from previously loaded time value,
+this include `--animation-time` that first load the initial time before loading the provided time value.
+
+## Animation Support Level
+
+The animation support level is listed for each reader [here](02-SUPPORTED_FORMATS.md).
+
+- NONE: Animation is not supported, either by the file format or the implementation
+- UNIQUE: There will never be more then one animation
+- SINGLE: There can be multiple animations but only one can be selected at a time
+- MULTI: Multiple animations can be selected at a time
+
+When opening multiple files at the same time using the `--multi-file-mode` option and selecting multiple animations to show,
+F3D may warn when combining SINGLE and non SINGLE files, but will still try to respect the chosen animation indices.
+
+## Animation keyframes
+
+The `jump_to_keyframe` command allows you to load an animation at a specific keyframe. See [COMMANDS](07-COMMANDS.md) for more information and examples on how to use this command.
+
+This command is currently supported only by the following readers:
+
+- `vtkF3DGLTFImporter`
+- `vtkF3DQuakeMDLImporter`
+
+You can follow the issue below to track the progress of animation support for other readers :
+[F3D Issue – Improve Animation System #2637](https://github.com/f3d-app/f3d/issues/2637#:~:text=Access%20to%20timesteps)
