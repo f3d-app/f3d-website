@@ -29,7 +29,7 @@ Store a 3x3 transform matrix as a sequence of 9 float values VTK expects a 4x4 m
 
 ## Public functions
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1ab657bdb45cbf4124f28b96828d056d63}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1ab657bdb45cbf4124f28b96828d056d63 */}
 
 ![][public]
 
@@ -49,7 +49,7 @@ f3d::transform2d_t::transform2d_t()=default
 
 
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a3081204d9c43256e72f6cca0576f0651}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a3081204d9c43256e72f6cca0576f0651 */}
 
 ![][public]
 
@@ -73,7 +73,7 @@ f3d::transform2d_t::transform2d_t(const std::vector< double > &vec)
 
 
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a2800721840535bd112285ec29d34e881}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a2800721840535bd112285ec29d34e881 */}
 
 ![][public]
 
@@ -97,7 +97,7 @@ f3d::transform2d_t::transform2d_t(const std::initializer_list< double > &list)
 
 
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a7e76f1c32dec6276bacbbf82b35dc1bf}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a7e76f1c32dec6276bacbbf82b35dc1bf */}
 
 ![][public]
 
@@ -134,7 +134,7 @@ M =   [M2_1, M2_2, M2_3]
 
 
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf */}
 
 ![][public]
 

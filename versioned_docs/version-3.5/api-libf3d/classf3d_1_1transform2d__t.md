@@ -1,4 +1,4 @@
-# Class f3d::transform2d_t {#classf3d_1_1transform2d__t}
+# Class f3d::transform2d_t {/* #classf3d_1_1transform2d__t */}
 
 ![][C++]
 ![][public]
@@ -29,7 +29,7 @@ Store a 3x3 transform matrix as a sequence of 9 float values VTK expects a 4x4 m
 
 ## Public functions
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1ab657bdb45cbf4124f28b96828d056d63}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1ab657bdb45cbf4124f28b96828d056d63 */}
 
 ![][public]
 
@@ -47,13 +47,13 @@ f3d::transform2d_t::transform2d_t()=default
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::transform2d_t::transform2d_t"}]}`
--->
+*/}
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a3081204d9c43256e72f6cca0576f0651}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a3081204d9c43256e72f6cca0576f0651 */}
 
 ![][public]
 
@@ -75,13 +75,13 @@ f3d::transform2d_t::transform2d_t(const std::vector< double > &vec)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::transform2d_t::transform2d_t"}]}`
--->
+*/}
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a2800721840535bd112285ec29d34e881}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a2800721840535bd112285ec29d34e881 */}
 
 ![][public]
 
@@ -103,13 +103,13 @@ f3d::transform2d_t::transform2d_t(const std::initializer_list< double > &list)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::transform2d_t::transform2d_t"}]}`
--->
+*/}
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a7e76f1c32dec6276bacbbf82b35dc1bf}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a7e76f1c32dec6276bacbbf82b35dc1bf */}
 
 ![][public]
 
@@ -144,13 +144,13 @@ M =   [M2_1, M2_2, M2_3]
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::transform2d_t::transform2d_t"}]}`
--->
+*/}
 
-### Function transform2d\_t {#classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf}
+### Function transform2d\_t {/* #classf3d_1_1transform2d__t_1a87d0abcde4b4c8ed729e20fbf594b1cf */}
 
 ![][public]
 
@@ -180,17 +180,17 @@ M = [sin(a)*S(x), cos(a)*S(y),    T(y)]
 
 **Return type**: F3D_EXPORT
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::transform2d_t::transform2d_t"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"types_8h"},"children":[{"type":"text","text":"types.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

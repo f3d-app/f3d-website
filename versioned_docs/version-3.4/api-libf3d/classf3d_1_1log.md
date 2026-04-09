@@ -1,4 +1,4 @@
-# Class f3d::log {#classf3d_1_1log}
+# Class f3d::log {/* #classf3d_1_1log */}
 
 ![][C++]
 ![][public]
@@ -25,7 +25,7 @@ A class to output logs to the standard output. It supports different levels, err
 
 ## Public types
 
-### Enumeration type VerboseLevel {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28}
+### Enumeration type VerboseLevel {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28 */}
 
 ![][public]
 
@@ -58,43 +58,43 @@ Enumeration of verbose levels
 
 
 
-#### Enumerator DEBUG {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28adc30ec20708ef7b0f641ef78b7880a15}
+#### Enumerator DEBUG {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28adc30ec20708ef7b0f641ef78b7880a15 */}
 
 
 
 
 
-#### Enumerator INFO {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a551b723eafd6a31d444fcb2f5920fbd3}
+#### Enumerator INFO {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a551b723eafd6a31d444fcb2f5920fbd3 */}
 
 
 
 
 
-#### Enumerator WARN {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a32bd8a1db2275458673903bdb84cb277}
+#### Enumerator WARN {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a32bd8a1db2275458673903bdb84cb277 */}
 
 
 
 
 
-#### Enumerator ERROR {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28abb1ca97ec761fc37101737ba0aa2e7c5}
+#### Enumerator ERROR {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28abb1ca97ec761fc37101737ba0aa2e7c5 */}
 
 
 
 
 
-#### Enumerator QUIET {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a1b4462755110ae77a3bb7e319f6544fa}
+#### Enumerator QUIET {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a1b4462755110ae77a3bb7e319f6544fa */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::VerboseLevel"}]}`
--->
+*/}
 
-### Typedef forward\_fn\_t {#classf3d_1_1log_1a8c7244c79c30b454646681cdb5a2b1cd}
+### Typedef forward\_fn\_t {/* #classf3d_1_1log_1a8c7244c79c30b454646681cdb5a2b1cd */}
 
 ![][public]
 
@@ -114,15 +114,15 @@ Alias for log forwarder callback.
 
 **Return type**: std::function< void([VerboseLevel](classf3d_1_1log.md#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28), const std::string &)>
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::forward_fn_t"}]}`
--->
+*/}
 
 ## Public static functions
 
-### Function print {#classf3d_1_1log_1a00a2ff2ea22fa4a51337802440ba3ee7}
+### Function print {/* #classf3d_1_1log_1a00a2ff2ea22fa4a51337802440ba3ee7 */}
 
 ![][public]
 ![][static]
@@ -146,14 +146,14 @@ Log provided args as provided verbose level.
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename..."}]},{"type":"text","text":"\n            "},{"type":"element","name":"declname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n            "},{"type":"element","name":"defname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::print"}]}`
--->
+*/}
 
-### Function debug {#classf3d_1_1log_1a02f284fc14964d408428a6cfb816941d}
+### Function debug {/* #classf3d_1_1log_1a02f284fc14964d408428a6cfb816941d */}
 
 ![][public]
 ![][static]
@@ -176,14 +176,14 @@ Log provided args as a debug.
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename..."}]},{"type":"text","text":"\n            "},{"type":"element","name":"declname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n            "},{"type":"element","name":"defname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::debug"}]}`
--->
+*/}
 
-### Function info {#classf3d_1_1log_1abc356594e60fc5aaa23dc89890e3e95a}
+### Function info {/* #classf3d_1_1log_1abc356594e60fc5aaa23dc89890e3e95a */}
 
 ![][public]
 ![][static]
@@ -206,14 +206,14 @@ Log provided args as an info.
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename..."}]},{"type":"text","text":"\n            "},{"type":"element","name":"declname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n            "},{"type":"element","name":"defname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::info"}]}`
--->
+*/}
 
-### Function warn {#classf3d_1_1log_1a38f616ec652987ae562353e4f030273d}
+### Function warn {/* #classf3d_1_1log_1a38f616ec652987ae562353e4f030273d */}
 
 ![][public]
 ![][static]
@@ -236,14 +236,14 @@ Log provided args as a warning.
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename..."}]},{"type":"text","text":"\n            "},{"type":"element","name":"declname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n            "},{"type":"element","name":"defname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::warn"}]}`
--->
+*/}
 
-### Function error {#classf3d_1_1log_1a7cfc1246ee782202b6145a7e9e9e8752}
+### Function error {/* #classf3d_1_1log_1a7cfc1246ee782202b6145a7e9e9e8752 */}
 
 ![][public]
 ![][static]
@@ -266,14 +266,14 @@ Log provided args as an error.
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename..."}]},{"type":"text","text":"\n            "},{"type":"element","name":"declname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n            "},{"type":"element","name":"defname","attributes":{},"children":[{"type":"text","text":"Args"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::error"}]}`
--->
+*/}
 
-### Function setUseColoring {#classf3d_1_1log_1a53fe829551853d63206efb6a93287bec}
+### Function setUseColoring {/* #classf3d_1_1log_1a53fe829551853d63206efb6a93287bec */}
 
 ![][public]
 ![][static]
@@ -296,13 +296,13 @@ Set the coloring usage, if applicable (eg: console output).
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::setUseColoring"}]}`
--->
+*/}
 
-### Function setVerboseLevel {#classf3d_1_1log_1a42acb3b11578123d01b58420ebff5d65}
+### Function setVerboseLevel {/* #classf3d_1_1log_1a42acb3b11578123d01b58420ebff5d65 */}
 
 ![][public]
 ![][static]
@@ -326,13 +326,13 @@ Set the verbose level. By default, only warnings and errors are written to stder
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::setVerboseLevel"}]}`
--->
+*/}
 
-### Function getVerboseLevel {#classf3d_1_1log_1a8fedb73d694ea0b04845b59c03bb5a62}
+### Function getVerboseLevel {/* #classf3d_1_1log_1a8fedb73d694ea0b04845b59c03bb5a62 */}
 
 ![][public]
 ![][static]
@@ -351,13 +351,13 @@ Get the current verbose level.
 
 **Return type**: [VerboseLevel](classf3d_1_1log.md#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::getVerboseLevel"}]}`
--->
+*/}
 
-### Function forward {#classf3d_1_1log_1a9dd7d3c1785c3b178faeebef665c4616}
+### Function forward {/* #classf3d_1_1log_1a9dd7d3c1785c3b178faeebef665c4616 */}
 
 ![][public]
 ![][static]
@@ -380,17 +380,17 @@ Set a callback function to forward log messages. The callback will be invoked wi
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::log::forward"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"log_8h"},"children":[{"type":"text","text":"log.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

@@ -1,4 +1,4 @@
-# Structure f3d::image::metadata_exception {#structf3d_1_1image_1_1metadata__exception}
+# Structure f3d::image::metadata_exception {/* #structf3d_1_1image_1_1metadata__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the image. when there is an error related to 
 
 ## Public functions
 
-### Function metadata\_exception {#structf3d_1_1image_1_1metadata__exception_1a9752d5ec2bd62827529058654e0c9ce7}
+### Function metadata\_exception {/* #structf3d_1_1image_1_1metadata__exception_1a9752d5ec2bd62827529058654e0c9ce7 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::image::metadata_exception::metadata_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::image::metadata_exception::metadata_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

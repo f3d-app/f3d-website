@@ -20,7 +20,7 @@ An exception that can be thrown by the image when there. is an error on write.
 
 ## Public functions
 
-### Function write\_exception {#structf3d_1_1image_1_1write__exception_1ae60ce88787aeb45de2d75c16d1ae0e3a}
+### Function write\_exception {/* #structf3d_1_1image_1_1write__exception_1ae60ce88787aeb45de2d75c16d1ae0e3a */}
 
 ![][public]
 

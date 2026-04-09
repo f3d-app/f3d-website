@@ -1,4 +1,4 @@
-# Structure f3d::camera_state_t {#structf3d_1_1camera__state__t}
+# Structure f3d::camera_state_t {/* #structf3d_1_1camera__state__t */}
 
 ![][C++]
 ![][public]
@@ -18,7 +18,7 @@ a struct containing all information to configure a camera
 
 ## Public attributes
 
-### Variable position {#structf3d_1_1camera__state__t_1aa2e4ba7abf206ef14ad9b851af1fcbc6}
+### Variable position {/* #structf3d_1_1camera__state__t_1aa2e4ba7abf206ef14ad9b851af1fcbc6 */}
 
 ![][public]
 
@@ -38,13 +38,13 @@ point3_t f3d::camera_state_t::position = { 0., 0., 1. }
 
 **Type**: [point3\_t](structf3d_1_1point3__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::camera_state_t::position"}]}`
--->
+*/}
 
-### Variable focalPoint {#structf3d_1_1camera__state__t_1a108b56174ebc8c1ee9a9ad5bb6548ccc}
+### Variable focalPoint {/* #structf3d_1_1camera__state__t_1a108b56174ebc8c1ee9a9ad5bb6548ccc */}
 
 ![][public]
 
@@ -64,13 +64,13 @@ point3_t f3d::camera_state_t::focalPoint = { 0., 0., 0. }
 
 **Type**: [point3\_t](structf3d_1_1point3__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::camera_state_t::focalPoint"}]}`
--->
+*/}
 
-### Variable viewUp {#structf3d_1_1camera__state__t_1afda85e5dd3f7bc9773bc5ef22c1ccad7}
+### Variable viewUp {/* #structf3d_1_1camera__state__t_1afda85e5dd3f7bc9773bc5ef22c1ccad7 */}
 
 ![][public]
 
@@ -90,13 +90,13 @@ vector3_t f3d::camera_state_t::viewUp = { 0., 1., 0. }
 
 **Type**: [vector3\_t](structf3d_1_1vector3__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::camera_state_t::viewUp"}]}`
--->
+*/}
 
-### Variable viewAngle {#structf3d_1_1camera__state__t_1a28f08d9fc1076fe6e265822cb93fbed7}
+### Variable viewAngle {/* #structf3d_1_1camera__state__t_1a28f08d9fc1076fe6e265822cb93fbed7 */}
 
 ![][public]
 
@@ -116,11 +116,11 @@ angle_deg_t f3d::camera_state_t::viewAngle = 30.
 
 **Type**: angle_deg_t
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::camera_state_t::viewAngle"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

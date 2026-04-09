@@ -1,4 +1,4 @@
-# Structure f3d::options::scene::camera {#structf3d_1_1options_1_1scene_1_1camera}
+# Structure f3d::options::scene::camera {/* #structf3d_1_1options_1_1scene_1_1camera */}
 
 ![][C++]
 ![][public]
@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable index {#structf3d_1_1options_1_1scene_1_1camera_1a799f270b9f1766f97dd122880c398f0f}
+### Variable index {/* #structf3d_1_1options_1_1scene_1_1camera_1a799f270b9f1766f97dd122880c398f0f */}
 
 ![][public]
 
@@ -36,13 +36,13 @@ std::optional<int> f3d::options::scene::camera::index
 
 **Type**: std::optional< int >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::scene::camera::index"}]}`
--->
+*/}
 
-### Variable orthographic {#structf3d_1_1options_1_1scene_1_1camera_1a1adaab60a6bf1f25a0ae959d0b78f423}
+### Variable orthographic {/* #structf3d_1_1options_1_1scene_1_1camera_1a1adaab60a6bf1f25a0ae959d0b78f423 */}
 
 ![][public]
 
@@ -62,11 +62,11 @@ std::optional<bool> f3d::options::scene::camera::orthographic
 
 **Type**: std::optional< bool >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::scene::camera::orthographic"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

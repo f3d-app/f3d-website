@@ -1,4 +1,4 @@
-# Structure f3d::engine::plugin_exception {#structf3d_1_1engine_1_1plugin__exception}
+# Structure f3d::engine::plugin_exception {/* #structf3d_1_1engine_1_1plugin__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the engine when a plugin cannot be loaded.
 
 ## Public functions
 
-### Function plugin\_exception {#structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119}
+### Function plugin\_exception {/* #structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::engine::plugin_exception::plugin_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::plugin_exception::plugin_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

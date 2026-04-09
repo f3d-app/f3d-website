@@ -1,4 +1,4 @@
-# Structure f3d::scene::light_exception {#structf3d_1_1scene_1_1light__exception}
+# Structure f3d::scene::light_exception {/* #structf3d_1_1scene_1_1light__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the scene when it fails to index the light
 
 ## Public functions
 
-### Function light\_exception {#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed}
+### Function light\_exception {/* #structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::scene::light_exception::light_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::light_exception::light_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

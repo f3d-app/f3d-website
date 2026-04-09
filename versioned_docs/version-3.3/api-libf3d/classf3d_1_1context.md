@@ -27,7 +27,7 @@ These functions should be used only when the rendering context (the OpenGL windo
 
 ## Public types
 
-### Typedef fptr {#classf3d_1_1context_1a610f788d93aa8db773efac4238403056}
+### Typedef fptr {/* #classf3d_1_1context_1a610f788d93aa8db773efac4238403056 */}
 
 ![][public]
 
@@ -49,7 +49,7 @@ using f3d::context::fptr =  void (*)()
 
 
 
-### Typedef function {#classf3d_1_1context_1a6fca2b9e4d2591fd6b68a2f8b5ec727e}
+### Typedef function {/* #classf3d_1_1context_1a6fca2b9e4d2591fd6b68a2f8b5ec727e */}
 
 ![][public]
 
@@ -73,7 +73,7 @@ using f3d::context::function =  std::function<fptr(const char*)>
 
 ## Public static functions
 
-### Function glx {#classf3d_1_1context_1a09f0e84622124d63c5d4e81f3dc4105d}
+### Function glx {/* #classf3d_1_1context_1a09f0e84622124d63c5d4e81f3dc4105d */}
 
 ![][public]
 ![][static]
@@ -94,7 +94,7 @@ Create a GLX context function. Only supported on Linux. Throw a [loading\_except
 
 
 
-### Function wgl {#classf3d_1_1context_1a87b1ee9e5330aaa6c29a07069cf74820}
+### Function wgl {/* #classf3d_1_1context_1a87b1ee9e5330aaa6c29a07069cf74820 */}
 
 ![][public]
 ![][static]
@@ -115,7 +115,7 @@ Create a WGL context function. Only supported on Windows. Throw a [loading\_exce
 
 
 
-### Function cocoa {#classf3d_1_1context_1a8db31eba3c7458bf6dea0391dbd3ea47}
+### Function cocoa {/* #classf3d_1_1context_1a8db31eba3c7458bf6dea0391dbd3ea47 */}
 
 ![][public]
 ![][static]
@@ -136,7 +136,7 @@ Create a COCOA context function. This is usually required when using a headless 
 
 
 
-### Function egl {#classf3d_1_1context_1a90a0689215151ede480d3b1c94c28b2a}
+### Function egl {/* #classf3d_1_1context_1a90a0689215151ede480d3b1c94c28b2a */}
 
 ![][public]
 ![][static]
@@ -157,7 +157,7 @@ Create a EGL context function. This is usually required when using a headless co
 
 
 
-### Function osmesa {#classf3d_1_1context_1a88a487aa18dd42869f7852b7c6c44aed}
+### Function osmesa {/* #classf3d_1_1context_1a88a487aa18dd42869f7852b7c6c44aed */}
 
 ![][public]
 ![][static]
@@ -178,7 +178,7 @@ Create a OSMesa context function. This is usually required when using a headless
 
 
 
-### Function getSymbol {#classf3d_1_1context_1a605d0609b2db440c9e00349d9c17e2c9}
+### Function getSymbol {/* #classf3d_1_1context_1a605d0609b2db440c9e00349d9c17e2c9 */}
 
 ![][public]
 ![][static]

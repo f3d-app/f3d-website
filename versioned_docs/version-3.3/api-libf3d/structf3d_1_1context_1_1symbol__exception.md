@@ -20,7 +20,7 @@ An exception that can be thrown when the symbol resolver cannot be found in the 
 
 ## Public functions
 
-### Function symbol\_exception {#structf3d_1_1context_1_1symbol__exception_1a7b0caa387c41f6de33f386b3519079a5}
+### Function symbol\_exception {/* #structf3d_1_1context_1_1symbol__exception_1a7b0caa387c41f6de33f386b3519079a5 */}
 
 ![][public]
 

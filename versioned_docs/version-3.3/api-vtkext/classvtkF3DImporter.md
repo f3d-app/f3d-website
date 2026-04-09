@@ -21,7 +21,7 @@ This generic importer is provided to simplify implementation of other importers 
 
 ## Public static functions
 
-### Function ACTOR\_IS\_ARMATURE {#classvtkF3DImporter_1a6a7e67761cb0b562ceadf7903ec139b0}
+### Function ACTOR\_IS\_ARMATURE {/* #classvtkF3DImporter_1a6a7e67761cb0b562ceadf7903ec139b0 */}
 
 ![][public]
 ![][static]
@@ -44,7 +44,7 @@ Information key used to flag actors. Actors having this flag will be drawn on to
 
 ## Public functions
 
-### Function UpdateAtTimeValue {#classvtkF3DImporter_1afa7f0fc1608a37a57e9a2f21fcba400d}
+### Function UpdateAtTimeValue {/* #classvtkF3DImporter_1afa7f0fc1608a37a57e9a2f21fcba400d */}
 
 ![][public]
 
@@ -68,7 +68,7 @@ This method should be reimplemented in importer implementations to handle update
 
 
 
-### Function SetFailureStatus {#classvtkF3DImporter_1acd5c322fbe7f72589db10fc2fcfc8ea4}
+### Function SetFailureStatus {/* #classvtkF3DImporter_1acd5c322fbe7f72589db10fc2fcfc8ea4 */}
 
 ![][public]
 

@@ -1,4 +1,4 @@
-# Structure f3d::options::model::emissive {#structf3d_1_1options_1_1model_1_1emissive}
+# Structure f3d::options::model::emissive {/* #structf3d_1_1options_1_1model_1_1emissive */}
 
 ![][C++]
 ![][public]
@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable factor {#structf3d_1_1options_1_1model_1_1emissive_1a593590f57510c465088f2cd4a21369e9}
+### Variable factor {/* #structf3d_1_1options_1_1model_1_1emissive_1a593590f57510c465088f2cd4a21369e9 */}
 
 ![][public]
 
@@ -36,13 +36,13 @@ std::optional<f3d::color_t> f3d::options::model::emissive::factor
 
 **Type**: std::optional< [f3d::color\_t](classf3d_1_1color__t.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::emissive::factor"}]}`
--->
+*/}
 
-### Variable texture {#structf3d_1_1options_1_1model_1_1emissive_1a7dc7d4e0c944b7ccd8ef1c17df2f5c1a}
+### Variable texture {/* #structf3d_1_1options_1_1model_1_1emissive_1a7dc7d4e0c944b7ccd8ef1c17df2f5c1a */}
 
 ![][public]
 
@@ -62,11 +62,11 @@ std::optional<std::filesystem::path> f3d::options::model::emissive::texture
 
 **Type**: std::optional< std::filesystem::path >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::emissive::texture"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

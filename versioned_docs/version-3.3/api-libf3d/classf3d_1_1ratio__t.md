@@ -18,7 +18,7 @@ Describe a ratio.
 
 ## Private attributes
 
-### Variable Value {#classf3d_1_1ratio__t_1a57569a1ebdba597ad042e0a7b6273a29}
+### Variable Value {/* #classf3d_1_1ratio__t_1a57569a1ebdba597ad042e0a7b6273a29 */}
 
 ![][private]
 
@@ -42,7 +42,7 @@ double f3d::ratio_t::Value = 0
 
 ## Public functions
 
-### Function ratio\_t {#classf3d_1_1ratio__t_1a02a8a65c4b269d42dbdc136d96744b31}
+### Function ratio\_t {/* #classf3d_1_1ratio__t_1a02a8a65c4b269d42dbdc136d96744b31 */}
 
 ![][public]
 
@@ -62,7 +62,7 @@ f3d::ratio_t::ratio_t()=default
 
 
 
-### Function ratio\_t {#classf3d_1_1ratio__t_1a4f363d564b0a7b77e9abbfec2349ec04}
+### Function ratio\_t {/* #classf3d_1_1ratio__t_1a4f363d564b0a7b77e9abbfec2349ec04 */}
 
 ![][public]
 
@@ -86,7 +86,7 @@ f3d::ratio_t::ratio_t(double val)
 
 
 
-### Function operator double {#classf3d_1_1ratio__t_1ad3cabd2f8bd0ef87119cdc46fc635dec}
+### Function operator double {/* #classf3d_1_1ratio__t_1ad3cabd2f8bd0ef87119cdc46fc635dec */}
 
 ![][public]
 ![][const]

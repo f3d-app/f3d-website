@@ -1,4 +1,4 @@
-# Structure f3d::options::incompatible_exception {#structf3d_1_1options_1_1incompatible__exception}
+# Structure f3d::options::incompatible_exception {/* #structf3d_1_1options_1_1incompatible__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the options when an operation on a specific o
 
 ## Public functions
 
-### Function incompatible\_exception {#structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019}
+### Function incompatible\_exception {/* #structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::options::incompatible_exception::incompatible_exception(const std::string &
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::incompatible_exception::incompatible_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

@@ -1,4 +1,4 @@
-# Class vtkF3DImporter {#classvtkF3DImporter}
+# Class vtkF3DImporter {/* #classvtkF3DImporter */}
 
 ![][C++]
 ![][public]
@@ -22,7 +22,7 @@ This generic importer is provided to simplify implementation of other importers 
 
 ## Public functions
 
-### Function vtkTypeMacro {#classvtkF3DImporter_1a7638cc80455adc25b1268fc9f6e1858f}
+### Function vtkTypeMacro {/* #classvtkF3DImporter_1a7638cc80455adc25b1268fc9f6e1858f */}
 
 ![][public]
 
@@ -45,13 +45,13 @@ vtkF3DImporter::vtkTypeMacro(vtkF3DImporter, vtkImporter)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DImporter::vtkTypeMacro"}]}`
--->
+*/}
 
-### Function UpdateAtTimeValue {#classvtkF3DImporter_1afa7f0fc1608a37a57e9a2f21fcba400d}
+### Function UpdateAtTimeValue {/* #classvtkF3DImporter_1afa7f0fc1608a37a57e9a2f21fcba400d */}
 
 ![][public]
 
@@ -73,13 +73,13 @@ This method should be reimplemented in importer implementations to handle update
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DImporter::UpdateAtTimeValue"}]}`
--->
+*/}
 
-### Function SetFailureStatus {#classvtkF3DImporter_1acd5c322fbe7f72589db10fc2fcfc8ea4}
+### Function SetFailureStatus {/* #classvtkF3DImporter_1acd5c322fbe7f72589db10fc2fcfc8ea4 */}
 
 ![][public]
 
@@ -97,15 +97,15 @@ Call this method to set the status to failure if supported by the VTK version in
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DImporter::SetFailureStatus"}]}`
--->
+*/}
 
 ## Public static functions
 
-### Function ACTOR\_IS\_ARMATURE {#classvtkF3DImporter_1a6a7e67761cb0b562ceadf7903ec139b0}
+### Function ACTOR\_IS\_ARMATURE {/* #classvtkF3DImporter_1a6a7e67761cb0b562ceadf7903ec139b0 */}
 
 ![][public]
 ![][static]
@@ -124,17 +124,17 @@ Information key used to flag actors. Actors having this flag will be drawn on to
 
 **Return type**: vtkInformationIntegerKey *
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DImporter::ACTOR_IS_ARMATURE"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"vtkF3DImporter_8h"},"children":[{"type":"text","text":"vtkF3DImporter.h"}]}`
--->
+*/}
 
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)

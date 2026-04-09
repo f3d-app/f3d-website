@@ -31,7 +31,7 @@ Describe a RGB color.
 
 ## Public functions
 
-### Function color\_t {#classf3d_1_1color__t_1acf69164a9f721cf166a9a8270a8c3156}
+### Function color\_t {/* #classf3d_1_1color__t_1acf69164a9f721cf166a9a8270a8c3156 */}
 
 ![][public]
 
@@ -51,7 +51,7 @@ f3d::color_t::color_t()=default
 
 
 
-### Function color\_t {#classf3d_1_1color__t_1a78047417d30e9afae0ea60d38c20c283}
+### Function color\_t {/* #classf3d_1_1color__t_1a78047417d30e9afae0ea60d38c20c283 */}
 
 ![][public]
 
@@ -75,7 +75,7 @@ f3d::color_t::color_t(const std::vector< double > &vec)
 
 
 
-### Function color\_t {#classf3d_1_1color__t_1ae5633847d4df8d05405307212fbe940f}
+### Function color\_t {/* #classf3d_1_1color__t_1ae5633847d4df8d05405307212fbe940f */}
 
 ![][public]
 
@@ -99,7 +99,7 @@ f3d::color_t::color_t(const std::initializer_list< double > &list)
 
 
 
-### Function color\_t {#classf3d_1_1color__t_1ab864c2094865a5c8d04e14affcbfd08b}
+### Function color\_t {/* #classf3d_1_1color__t_1ab864c2094865a5c8d04e14affcbfd08b */}
 
 ![][public]
 
@@ -125,7 +125,7 @@ f3d::color_t::color_t(double red, double green, double blue)
 
 
 
-### Function r {#classf3d_1_1color__t_1a029f159302976b8bc773a29fa8587f69}
+### Function r {/* #classf3d_1_1color__t_1a029f159302976b8bc773a29fa8587f69 */}
 
 ![][public]
 ![][const]
@@ -146,7 +146,7 @@ double f3d::color_t::r() const
 
 
 
-### Function g {#classf3d_1_1color__t_1a2248b84a5ada178f2679426f9fea73fd}
+### Function g {/* #classf3d_1_1color__t_1a2248b84a5ada178f2679426f9fea73fd */}
 
 ![][public]
 ![][const]
@@ -167,7 +167,7 @@ double f3d::color_t::g() const
 
 
 
-### Function b {#classf3d_1_1color__t_1a51dcb99a6f2845d9d31d3a1a9adacda2}
+### Function b {/* #classf3d_1_1color__t_1a51dcb99a6f2845d9d31d3a1a9adacda2 */}
 
 ![][public]
 ![][const]

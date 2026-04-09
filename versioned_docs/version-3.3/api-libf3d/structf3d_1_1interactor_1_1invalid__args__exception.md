@@ -20,7 +20,7 @@ An exception that can be thrown by command callbacks when the arguments of the c
 
 ## Public functions
 
-### Function invalid\_args\_exception {#structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8}
+### Function invalid\_args\_exception {/* #structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8 */}
 
 ![][public]
 

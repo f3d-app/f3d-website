@@ -30,7 +30,7 @@ string_template("{greeting} {name}!")
 
 ## Private attributes
 
-### Variable fragments {#classf3d_1_1utils_1_1string__template_1affe82b419f30bca158eb8b049ffc20a3}
+### Variable fragments {/* #classf3d_1_1utils_1_1string__template_1affe82b419f30bca158eb8b049ffc20a3 */}
 
 ![][private]
 
@@ -54,7 +54,7 @@ std::vector<std::pair<std::string, bool> > f3d::utils::string_template::fragment
 
 ## Public functions
 
-### Function string\_template {#classf3d_1_1utils_1_1string__template_1abaafc00ca694d03ae57e1faaa58e594c}
+### Function string\_template {/* #classf3d_1_1utils_1_1string__template_1abaafc00ca694d03ae57e1faaa58e594c */}
 
 ![][public]
 
@@ -78,7 +78,7 @@ f3d::utils::string_template::string_template(const std::string &templateString)
 
 
 
-### Function substitute {#classf3d_1_1utils_1_1string__template_1a482286e6db45c2056d5f1e04bae721f3}
+### Function substitute {/* #classf3d_1_1utils_1_1string__template_1a482286e6db45c2056d5f1e04bae721f3 */}
 
 ![][public]
 
@@ -108,7 +108,7 @@ Variables for which the function throws a [string\_template::lookup\_error](stru
 
 
 
-### Function substitute {#classf3d_1_1utils_1_1string__template_1a3597d4917b4fb62f75bc599be4122999}
+### Function substitute {/* #classf3d_1_1utils_1_1string__template_1a3597d4917b4fb62f75bc599be4122999 */}
 
 ![][public]
 
@@ -138,7 +138,7 @@ Variables for which the map does not contain a key are left untouched.
 
 
 
-### Function str {#classf3d_1_1utils_1_1string__template_1a9b6f01393ee68ac113a9631b526dfbfb}
+### Function str {/* #classf3d_1_1utils_1_1string__template_1a9b6f01393ee68ac113a9631b526dfbfb */}
 
 ![][public]
 ![][const]
@@ -159,7 +159,7 @@ Return a string representation of the string template
 
 
 
-### Function variables {#classf3d_1_1utils_1_1string__template_1a8f45ebbc3ed5775b79d0d5e81ca52d4e}
+### Function variables {/* #classf3d_1_1utils_1_1string__template_1a8f45ebbc3ed5775b79d0d5e81ca52d4e */}
 
 ![][public]
 ![][const]
@@ -180,7 +180,7 @@ List the remaining un-substituted variables.
 
 
 
-### Function substitute {#classf3d_1_1utils_1_1string__template_1aa74c15b745ddd573b689bff3d3ddd16c}
+### Function substitute {/* #classf3d_1_1utils_1_1string__template_1aa74c15b745ddd573b689bff3d3ddd16c */}
 
 ![][public]
 

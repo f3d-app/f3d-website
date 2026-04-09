@@ -1,4 +1,4 @@
-# Structure f3d::interactor::already_exists_exception {#structf3d_1_1interactor_1_1already__exists__exception}
+# Structure f3d::interactor::already_exists_exception {/* #structf3d_1_1interactor_1_1already__exists__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the interactor when adding something that alr
 
 ## Public functions
 
-### Function already\_exists\_exception {#structf3d_1_1interactor_1_1already__exists__exception_1a356bff2bef426f4c93727c87f8850521}
+### Function already\_exists\_exception {/* #structf3d_1_1interactor_1_1already__exists__exception_1a356bff2bef426f4c93727c87f8850521 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::interactor::already_exists_exception::already_exists_exception(const std::s
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::already_exists_exception::already_exists_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

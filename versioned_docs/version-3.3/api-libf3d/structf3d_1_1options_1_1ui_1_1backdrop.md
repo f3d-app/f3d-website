@@ -15,7 +15,7 @@
 
 ## Public attributes
 
-### Variable opacity {#structf3d_1_1options_1_1ui_1_1backdrop_1a832467339ebd580527f48d872c49b69e}
+### Variable opacity {/* #structf3d_1_1options_1_1ui_1_1backdrop_1a832467339ebd580527f48d872c49b69e */}
 
 ![][public]
 

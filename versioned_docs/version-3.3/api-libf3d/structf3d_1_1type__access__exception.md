@@ -20,7 +20,7 @@ An exception that can be thrown by any type if it fails when accessing data for 
 
 ## Public functions
 
-### Function type\_access\_exception {#structf3d_1_1type__access__exception_1ab3fb2a5741c6a58afd1c17c7607fd7aa}
+### Function type\_access\_exception {/* #structf3d_1_1type__access__exception_1ab3fb2a5741c6a58afd1c17c7607fd7aa */}
 
 ![][public]
 

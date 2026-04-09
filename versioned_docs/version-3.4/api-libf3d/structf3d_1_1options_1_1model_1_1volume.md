@@ -1,4 +1,4 @@
-# Structure f3d::options::model::volume {#structf3d_1_1options_1_1model_1_1volume}
+# Structure f3d::options::model::volume {/* #structf3d_1_1options_1_1model_1_1volume */}
 
 ![][C++]
 ![][public]
@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable enable {#structf3d_1_1options_1_1model_1_1volume_1a7ac4a857fdecb94be4682b9593b770ae}
+### Variable enable {/* #structf3d_1_1options_1_1model_1_1volume_1a7ac4a857fdecb94be4682b9593b770ae */}
 
 ![][public]
 
@@ -36,13 +36,13 @@ bool f3d::options::model::volume::enable = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::volume::enable"}]}`
--->
+*/}
 
-### Variable inverse {#structf3d_1_1options_1_1model_1_1volume_1a512efc34a86fac6cdb93392dc7a5fd97}
+### Variable inverse {/* #structf3d_1_1options_1_1model_1_1volume_1a512efc34a86fac6cdb93392dc7a5fd97 */}
 
 ![][public]
 
@@ -62,11 +62,11 @@ bool f3d::options::model::volume::inverse = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::volume::inverse"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

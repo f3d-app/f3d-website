@@ -1,4 +1,4 @@
-# Structure f3d::interaction_bind_t {#structf3d_1_1interaction__bind__t}
+# Structure f3d::interaction_bind_t {/* #structf3d_1_1interaction__bind__t */}
 
 ![][C++]
 ![][public]
@@ -21,7 +21,7 @@
 
 ## Public types
 
-### Enumeration type ModifierKeys {#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34}
+### Enumeration type ModifierKeys {/* #structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34 */}
 
 ![][public]
 
@@ -45,45 +45,45 @@ Enumeration of supported modifier combination, in binary.
 
 
 
-#### Enumerator ANY {#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a8e1bde3c3d303163521522cf1d62f21f}
+#### Enumerator ANY {/* #structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a8e1bde3c3d303163521522cf1d62f21f */}
 
 
 
 
 
-#### Enumerator NONE {#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab50339a10e1de285ac99d4c3990b8693}
+#### Enumerator NONE {/* #structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab50339a10e1de285ac99d4c3990b8693 */}
 
 
 
 
 
-#### Enumerator CTRL {#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a32f7eee2581c72a5561c21df3013a89a}
+#### Enumerator CTRL {/* #structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a32f7eee2581c72a5561c21df3013a89a */}
 
 
 
 
 
-#### Enumerator SHIFT {#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a46afff2b309b8b16a46d812172a9235c}
+#### Enumerator SHIFT {/* #structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34a46afff2b309b8b16a46d812172a9235c */}
 
 
 
 
 
-#### Enumerator CTRL\_SHIFT {#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab99320973a4dd4f1f442037248dcaf8f}
+#### Enumerator CTRL\_SHIFT {/* #structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34ab99320973a4dd4f1f442037248dcaf8f */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::ModifierKeys"}]}`
--->
+*/}
 
 ## Public attributes
 
-### Variable mod {#structf3d_1_1interaction__bind__t_1a65b5e074b63fbbfa01b35e5edddf9513}
+### Variable mod {/* #structf3d_1_1interaction__bind__t_1a65b5e074b63fbbfa01b35e5edddf9513 */}
 
 ![][public]
 
@@ -103,13 +103,13 @@ ModifierKeys f3d::interaction_bind_t::mod = ModifierKeys::NONE
 
 **Type**: [ModifierKeys](structf3d_1_1interaction__bind__t.md#structf3d_1_1interaction__bind__t_1a2880a58d8f83f045aa09e4ec831fea34)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::mod"}]}`
--->
+*/}
 
-### Variable inter {#structf3d_1_1interaction__bind__t_1a1fc8a5b848dea0d130986d1c55ec4afa}
+### Variable inter {/* #structf3d_1_1interaction__bind__t_1a1fc8a5b848dea0d130986d1c55ec4afa */}
 
 ![][public]
 
@@ -129,15 +129,15 @@ std::string f3d::interaction_bind_t::inter
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::inter"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function operator\< {#structf3d_1_1interaction__bind__t_1a8eb647fcb004f4d79a900f685ec61b2c}
+### Function operator\< {/* #structf3d_1_1interaction__bind__t_1a8eb647fcb004f4d79a900f685ec61b2c */}
 
 ![][public]
 ![][const]
@@ -160,13 +160,13 @@ Operator to be able to store binds in maps and other structs Compare modifier an
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::operator<"}]}`
--->
+*/}
 
-### Function operator== {#structf3d_1_1interaction__bind__t_1a64a19a262ebd0f0c75757d458306285b}
+### Function operator== {/* #structf3d_1_1interaction__bind__t_1a64a19a262ebd0f0c75757d458306285b */}
 
 ![][public]
 ![][const]
@@ -189,13 +189,13 @@ Operator to be able to store binds in maps and other structs Compare modifier an
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::operator=="}]}`
--->
+*/}
 
-### Function format {#structf3d_1_1interaction__bind__t_1ada344efb3314a4980cae5a76ba0eceb9}
+### Function format {/* #structf3d_1_1interaction__bind__t_1ada344efb3314a4980cae5a76ba0eceb9 */}
 
 ![][public]
 ![][const]
@@ -214,15 +214,15 @@ Format this binding into a string eg: "A", "Any+Question", "Shift+L".
 
 **Return type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::format"}]}`
--->
+*/}
 
 ## Public static functions
 
-### Function parse {#structf3d_1_1interaction__bind__t_1a2e76d79fb88e1dfb682b51c41d259349}
+### Function parse {/* #structf3d_1_1interaction__bind__t_1a2e76d79fb88e1dfb682b51c41d259349 */}
 
 ![][public]
 ![][static]
@@ -245,11 +245,11 @@ Create and return an interaction bind from provided string
 
 **Return type**: [interaction\_bind\_t](structf3d_1_1interaction__bind__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interaction_bind_t::parse"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

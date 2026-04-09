@@ -1,4 +1,4 @@
-# Structure f3d::context::loading_exception {#structf3d_1_1context_1_1loading__exception}
+# Structure f3d::context::loading_exception {/* #structf3d_1_1context_1_1loading__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown when the requested library cannot be loaded.
 
 ## Public functions
 
-### Function loading\_exception {#structf3d_1_1context_1_1loading__exception_1ad8bf27581245eff871b457f9d184dbf2}
+### Function loading\_exception {/* #structf3d_1_1context_1_1loading__exception_1ad8bf27581245eff871b457f9d184dbf2 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::context::loading_exception::loading_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::context::loading_exception::loading_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

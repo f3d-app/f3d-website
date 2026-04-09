@@ -17,7 +17,7 @@
 
 ## Public attributes
 
-### Variable enable {#structf3d_1_1options_1_1model_1_1point__sprites_1aa061491718fe61349eb0a348d0295288}
+### Variable enable {/* #structf3d_1_1options_1_1model_1_1point__sprites_1aa061491718fe61349eb0a348d0295288 */}
 
 ![][public]
 
@@ -39,7 +39,7 @@ bool f3d::options::model::point_sprites::enable = false
 
 
 
-### Variable size {#structf3d_1_1options_1_1model_1_1point__sprites_1a1a5a95b925c2051c4923e67eb43c0db3}
+### Variable size {/* #structf3d_1_1options_1_1model_1_1point__sprites_1a1a5a95b925c2051c4923e67eb43c0db3 */}
 
 ![][public]
 
@@ -61,7 +61,7 @@ double f3d::options::model::point_sprites::size = 10.0
 
 
 
-### Variable type {#structf3d_1_1options_1_1model_1_1point__sprites_1a66d2ab28578659e1811cc6b9c979b249}
+### Variable type {/* #structf3d_1_1options_1_1model_1_1point__sprites_1a66d2ab28578659e1811cc6b9c979b249 */}
 
 ![][public]
 

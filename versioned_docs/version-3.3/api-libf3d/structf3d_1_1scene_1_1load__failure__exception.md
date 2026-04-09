@@ -20,7 +20,7 @@ An exception that can be thrown by the scene when it failed to load a file for s
 
 ## Public functions
 
-### Function load\_failure\_exception {#structf3d_1_1scene_1_1load__failure__exception_1ac9d2e898967ab161709bc871afc4e0a7}
+### Function load\_failure\_exception {/* #structf3d_1_1scene_1_1load__failure__exception_1ac9d2e898967ab161709bc871afc4e0a7 */}
 
 ![][public]
 

@@ -20,7 +20,7 @@ An exception that can be thrown by the interactor when adding something that alr
 
 ## Public functions
 
-### Function already\_exists\_exception {#structf3d_1_1interactor_1_1already__exists__exception_1a356bff2bef426f4c93727c87f8850521}
+### Function already\_exists\_exception {/* #structf3d_1_1interactor_1_1already__exists__exception_1a356bff2bef426f4c93727c87f8850521 */}
 
 ![][public]
 

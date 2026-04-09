@@ -1,4 +1,4 @@
-# Class f3d::interactor {#classf3d_1_1interactor}
+# Class f3d::interactor {/* #classf3d_1_1interactor */}
 
 ![][C++]
 ![][public]
@@ -64,7 +64,7 @@ A class to control interaction with the window as well as animation. It also pro
 
 ## Bindings
 
-### Enumeration type BindingType {#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e}
+### Enumeration type BindingType {/* #classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e */}
 
 ![][public]
 
@@ -87,37 +87,37 @@ Enumeration of binding types. Duplication present in vtkext/private/module/vtkF3
 
 
 
-#### Enumerator CYCLIC {#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9eab970fa647bc2f4761a80276428780061}
+#### Enumerator CYCLIC {/* #classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9eab970fa647bc2f4761a80276428780061 */}
 
 
 
 
 
-#### Enumerator NUMERICAL {#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9ea3a5e2d78492ca47b9db502227af9d76a}
+#### Enumerator NUMERICAL {/* #classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9ea3a5e2d78492ca47b9db502227af9d76a */}
 
 
 
 
 
-#### Enumerator TOGGLE {#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9ea1252c45651289c0b553a30d27bb5ae9b}
+#### Enumerator TOGGLE {/* #classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9ea1252c45651289c0b553a30d27bb5ae9b */}
 
 
 
 
 
-#### Enumerator OTHER {#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9ea03570470bad94692ce93e32700d2e1cb}
+#### Enumerator OTHER {/* #classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9ea03570470bad94692ce93e32700d2e1cb */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::BindingType"}]}`
--->
+*/}
 
-### Enumeration type AnimationDirection {#classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdf}
+### Enumeration type AnimationDirection {/* #classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdf */}
 
 ![][public]
 
@@ -138,25 +138,25 @@ Enumeration of animation direction.
 
 
 
-#### Enumerator FORWARD {#classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdfabfec72bb37910c61f36b6c29a1f7ec31}
+#### Enumerator FORWARD {/* #classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdfabfec72bb37910c61f36b6c29a1f7ec31 */}
 
 
 
 
 
-#### Enumerator BACKWARD {#classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdfa6377b4908ae38f9a57fe9120cf179eb1}
+#### Enumerator BACKWARD {/* #classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdfa6377b4908ae38f9a57fe9120cf179eb1 */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::AnimationDirection"}]}`
--->
+*/}
 
-### Typedef documentation\_callback\_t {#classf3d_1_1interactor_1a0da4a08de781bf1594885d5e47f3bad0}
+### Typedef documentation\_callback\_t {/* #classf3d_1_1interactor_1a0da4a08de781bf1594885d5e47f3bad0 */}
 
 ![][public]
 
@@ -176,13 +176,13 @@ Enumeration of binding types. Duplication present in vtkext/private/module/vtkF3
 
 **Return type**: std::function< std::pair< std::string, std::string >()>
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::documentation_callback_t"}]}`
--->
+*/}
 
-### Function initBindings {#classf3d_1_1interactor_1a5c846fc542b9f211f62c657a9c9afc04}
+### Function initBindings {/* #classf3d_1_1interactor_1a5c846fc542b9f211f62c657a9c9afc04 */}
 
 ![][public]
 
@@ -200,13 +200,13 @@ Remove all existing interaction commands and add all default bindings see INTERA
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::initBindings"}]}`
--->
+*/}
 
-### Function addBinding {#classf3d_1_1interactor_1a623aa8e44854c1a9d6de1dd49ff39e64}
+### Function addBinding {/* #classf3d_1_1interactor_1a623aa8e44854c1a9d6de1dd49ff39e64 */}
 
 ![][public]
 
@@ -274,13 +274,13 @@ Adding commands for an existing bind will throw a [interactor::already\_exists\_
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::addBinding"}]}`
--->
+*/}
 
-### Function addBinding {#classf3d_1_1interactor_1a6f3b7851d7a66b911f8084d220cf0e24}
+### Function addBinding {/* #classf3d_1_1interactor_1a6f3b7851d7a66b911f8084d220cf0e24 */}
 
 ![][public]
 
@@ -312,13 +312,13 @@ Adding command for an existing bind will throw a [interactor::already\_exists\_e
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::addBinding"}]}`
--->
+*/}
 
-### Function addBinding {#classf3d_1_1interactor_1a73af47683b6965382c3d7baa490d390a}
+### Function addBinding {/* #classf3d_1_1interactor_1a73af47683b6965382c3d7baa490d390a */}
 
 ![][public]
 
@@ -344,13 +344,13 @@ Convenience initializer list signature for add binding method
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::addBinding"}]}`
--->
+*/}
 
-### Function removeBinding {#classf3d_1_1interactor_1a5ddd284c44e8522302e5154ab5f299ff}
+### Function removeBinding {/* #classf3d_1_1interactor_1a5ddd284c44e8522302e5154ab5f299ff */}
 
 ![][public]
 
@@ -372,13 +372,13 @@ Remove binding corresponding to provided bind. Does not do anything if the provi
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::removeBinding"}]}`
--->
+*/}
 
-### Function getBindGroups {#classf3d_1_1interactor_1a88e9812cf827a4b7aaf8ff9204fb014b}
+### Function getBindGroups {/* #classf3d_1_1interactor_1a88e9812cf827a4b7aaf8ff9204fb014b */}
 
 ![][public]
 ![][const]
@@ -397,13 +397,13 @@ Return a vector of available bind groups, in order of addition
 
 **Return type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getBindGroups"}]}`
--->
+*/}
 
-### Function getBindsForGroup {#classf3d_1_1interactor_1a1677a80780efb32ae5416244b911eed8}
+### Function getBindsForGroup {/* #classf3d_1_1interactor_1a1677a80780efb32ae5416244b911eed8 */}
 
 ![][public]
 ![][const]
@@ -432,13 +432,13 @@ Getting binds for a group that does not exists will throw a [does\_not\_exists\_
 
 **Return type**: std::vector< [interaction\_bind\_t](structf3d_1_1interaction__bind__t.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getBindsForGroup"}]}`
--->
+*/}
 
-### Function getBinds {#classf3d_1_1interactor_1a1e1c1ce203738615db14c86b953a1b7b}
+### Function getBinds {/* #classf3d_1_1interactor_1a1e1c1ce203738615db14c86b953a1b7b */}
 
 ![][public]
 ![][const]
@@ -457,13 +457,13 @@ Return a vector of all binds, in order of addition
 
 **Return type**: std::vector< [interaction\_bind\_t](structf3d_1_1interaction__bind__t.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getBinds"}]}`
--->
+*/}
 
-### Function getBindingDocumentation {#classf3d_1_1interactor_1a51f4448cd8d473a36d5c8c47fc6c0c35}
+### Function getBindingDocumentation {/* #classf3d_1_1interactor_1a51f4448cd8d473a36d5c8c47fc6c0c35 */}
 
 ![][public]
 ![][const]
@@ -504,13 +504,13 @@ Getting documentation for a bind that does not exists will throw a [does\_not\_e
 
 **Return type**: std::pair< std::string, std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getBindingDocumentation"}]}`
--->
+*/}
 
-### Function getBindingType {#classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17}
+### Function getBindingType {/* #classf3d_1_1interactor_1a2428ea38b7fe65eeaa925bdce4cefa17 */}
 
 ![][public]
 ![][const]
@@ -539,15 +539,15 @@ Getting type for a bind that does not exists will throw a [does\_not\_exists\_ex
 
 **Return type**: [BindingType](classf3d_1_1interactor.md#classf3d_1_1interactor_1abdd1b2c798fa2f1bc37ca5f56e671e9e)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getBindingType"}]}`
--->
+*/}
 
 ## Forwarding input events
 
-### Enumeration type MouseButton {#classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4}
+### Enumeration type MouseButton {/* #classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4 */}
 
 ![][public]
 
@@ -569,31 +569,31 @@ Enumeration of supported mouse buttons.
 
 
 
-#### Enumerator LEFT {#classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4a684d325a7303f52e64011467ff5c5758}
+#### Enumerator LEFT {/* #classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4a684d325a7303f52e64011467ff5c5758 */}
 
 
 
 
 
-#### Enumerator RIGHT {#classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4a21507b40c80068eda19865706fdc2403}
+#### Enumerator RIGHT {/* #classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4a21507b40c80068eda19865706fdc2403 */}
 
 
 
 
 
-#### Enumerator MIDDLE {#classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4a43eedd8685eb86592022f8da962e3474}
+#### Enumerator MIDDLE {/* #classf3d_1_1interactor_1a139b5304356e4ec448c1a2f0b30f5ca4a43eedd8685eb86592022f8da962e3474 */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::MouseButton"}]}`
--->
+*/}
 
-### Enumeration type WheelDirection {#classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6}
+### Enumeration type WheelDirection {/* #classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6 */}
 
 ![][public]
 
@@ -616,37 +616,37 @@ Enumeration of supported mouse wheel directions.
 
 
 
-#### Enumerator FORWARD {#classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6abfec72bb37910c61f36b6c29a1f7ec31}
+#### Enumerator FORWARD {/* #classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6abfec72bb37910c61f36b6c29a1f7ec31 */}
 
 
 
 
 
-#### Enumerator BACKWARD {#classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6a6377b4908ae38f9a57fe9120cf179eb1}
+#### Enumerator BACKWARD {/* #classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6a6377b4908ae38f9a57fe9120cf179eb1 */}
 
 
 
 
 
-#### Enumerator LEFT {#classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6a684d325a7303f52e64011467ff5c5758}
+#### Enumerator LEFT {/* #classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6a684d325a7303f52e64011467ff5c5758 */}
 
 
 
 
 
-#### Enumerator RIGHT {#classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6a21507b40c80068eda19865706fdc2403}
+#### Enumerator RIGHT {/* #classf3d_1_1interactor_1adebcd9542f77a81f07c4bce98dfa73e6a21507b40c80068eda19865706fdc2403 */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::WheelDirection"}]}`
--->
+*/}
 
-### Enumeration type InputAction {#classf3d_1_1interactor_1a5c52dc4bedb695d4853b843a3257204c}
+### Enumeration type InputAction {/* #classf3d_1_1interactor_1a5c52dc4bedb695d4853b843a3257204c */}
 
 ![][public]
 
@@ -667,25 +667,25 @@ Enumeration of supported input actions.
 
 
 
-#### Enumerator PRESS {#classf3d_1_1interactor_1a5c52dc4bedb695d4853b843a3257204ca93146f537356b7396d2f0413cf0bfc9e}
+#### Enumerator PRESS {/* #classf3d_1_1interactor_1a5c52dc4bedb695d4853b843a3257204ca93146f537356b7396d2f0413cf0bfc9e */}
 
 
 
 
 
-#### Enumerator RELEASE {#classf3d_1_1interactor_1a5c52dc4bedb695d4853b843a3257204ca7d649ef069df9885e382417c79f3d5cd}
+#### Enumerator RELEASE {/* #classf3d_1_1interactor_1a5c52dc4bedb695d4853b843a3257204ca7d649ef069df9885e382417c79f3d5cd */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::InputAction"}]}`
--->
+*/}
 
-### Enumeration type InputModifier {#classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782ad}
+### Enumeration type InputModifier {/* #classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782ad */}
 
 ![][public]
 
@@ -708,37 +708,37 @@ Enumeration of supported input modifiers.
 
 
 
-#### Enumerator NONE {#classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782adab50339a10e1de285ac99d4c3990b8693}
+#### Enumerator NONE {/* #classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782adab50339a10e1de285ac99d4c3990b8693 */}
 
 
 
 
 
-#### Enumerator CTRL {#classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782ada32f7eee2581c72a5561c21df3013a89a}
+#### Enumerator CTRL {/* #classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782ada32f7eee2581c72a5561c21df3013a89a */}
 
 
 
 
 
-#### Enumerator SHIFT {#classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782ada46afff2b309b8b16a46d812172a9235c}
+#### Enumerator SHIFT {/* #classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782ada46afff2b309b8b16a46d812172a9235c */}
 
 
 
 
 
-#### Enumerator CTRL\_SHIFT {#classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782adab99320973a4dd4f1f442037248dcaf8f}
+#### Enumerator CTRL\_SHIFT {/* #classf3d_1_1interactor_1a6b7cf5f64ee8812854766738325782adab99320973a4dd4f1f442037248dcaf8f */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::InputModifier"}]}`
--->
+*/}
 
-### Function triggerModUpdate {#classf3d_1_1interactor_1aae1a76b389b65b8a9a19ef07fab11e8e}
+### Function triggerModUpdate {/* #classf3d_1_1interactor_1aae1a76b389b65b8a9a19ef07fab11e8e */}
 
 ![][public]
 
@@ -760,13 +760,13 @@ Trigger a modifier update. This will update the internal modifier state of the i
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerModUpdate"}]}`
--->
+*/}
 
-### Function triggerMouseButton {#classf3d_1_1interactor_1a13f4308317204095482bbd3fe59efea1}
+### Function triggerMouseButton {/* #classf3d_1_1interactor_1a13f4308317204095482bbd3fe59efea1 */}
 
 ![][public]
 
@@ -789,13 +789,13 @@ Trigger a mouse button event. This will trigger the corresponding mouse button p
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerMouseButton"}]}`
--->
+*/}
 
-### Function triggerMousePosition {#classf3d_1_1interactor_1a8f6fe4e7a4daabecb9c7e0bb48640dc8}
+### Function triggerMousePosition {/* #classf3d_1_1interactor_1a8f6fe4e7a4daabecb9c7e0bb48640dc8 */}
 
 ![][public]
 
@@ -818,13 +818,13 @@ Trigger a mouse new position event. Positions are in window coordinates, with (0
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerMousePosition"}]}`
--->
+*/}
 
-### Function triggerMouseWheel {#classf3d_1_1interactor_1a3221678893461c3186a75861bef7bf33}
+### Function triggerMouseWheel {/* #classf3d_1_1interactor_1a3221678893461c3186a75861bef7bf33 */}
 
 ![][public]
 
@@ -846,13 +846,13 @@ Trigger a mouse wheel event. At the moment, only vertical wheel events are obser
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerMouseWheel"}]}`
--->
+*/}
 
-### Function triggerKeyboardKey {#classf3d_1_1interactor_1a7a3b0e57d18d3cafcafe0d65c00d17cb}
+### Function triggerKeyboardKey {/* #classf3d_1_1interactor_1a7a3b0e57d18d3cafcafe0d65c00d17cb */}
 
 ![][public]
 
@@ -894,13 +894,13 @@ It's possible to run F3D application in verbose mode and press keys to print the
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerKeyboardKey"}]}`
--->
+*/}
 
-### Function triggerTextCharacter {#classf3d_1_1interactor_1af6f808f87468f7e99a5b351f5f09d99b}
+### Function triggerTextCharacter {/* #classf3d_1_1interactor_1af6f808f87468f7e99a5b351f5f09d99b */}
 
 ![][public]
 
@@ -922,15 +922,15 @@ Trigger a text character input event. This will trigger the corresponding charac
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerTextCharacter"}]}`
--->
+*/}
 
 ## Command
 
-### Typedef command\_documentation\_t {#classf3d_1_1interactor_1a8b22627ae6305bfb27a1000ebdd21c09}
+### Typedef command\_documentation\_t {/* #classf3d_1_1interactor_1a8b22627ae6305bfb27a1000ebdd21c09 */}
 
 ![][public]
 
@@ -950,13 +950,13 @@ Remove all existing commands and add all default commands, see COMMANDS.md for d
 
 **Return type**: std::pair< std::string, std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::command_documentation_t"}]}`
--->
+*/}
 
-### Function initCommands {#classf3d_1_1interactor_1a3a0fc5893095224be3345be17b4dc6dd}
+### Function initCommands {/* #classf3d_1_1interactor_1a3a0fc5893095224be3345be17b4dc6dd */}
 
 ![][public]
 
@@ -974,13 +974,13 @@ Remove all existing commands and add all default commands, see COMMANDS.md for d
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::initCommands"}]}`
--->
+*/}
 
-### Function addCommand {#classf3d_1_1interactor_1a15fd84bdc0bddae3cb4c3873e01c9e87}
+### Function addCommand {/* #classf3d_1_1interactor_1a15fd84bdc0bddae3cb4c3873e01c9e87 */}
 
 ![][public]
 
@@ -1011,13 +1011,13 @@ Considering namespacing dedicated action to avoid conflicts with default action,
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::addCommand"}]}`
--->
+*/}
 
-### Function removeCommand {#classf3d_1_1interactor_1a358acbd4fa57a835d94b1ce0e6316986}
+### Function removeCommand {/* #classf3d_1_1interactor_1a358acbd4fa57a835d94b1ce0e6316986 */}
 
 ![][public]
 
@@ -1039,13 +1039,13 @@ Remove a command for provided action, does not do anything if it does not exists
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::removeCommand"}]}`
--->
+*/}
 
-### Function getCommandActions {#classf3d_1_1interactor_1a68f1196003c42ca6d3514ca4eacbfdbe}
+### Function getCommandActions {/* #classf3d_1_1interactor_1a68f1196003c42ca6d3514ca4eacbfdbe */}
 
 ![][public]
 ![][const]
@@ -1064,13 +1064,13 @@ Return a string vector containing all currently defined actions of commands
 
 **Return type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getCommandActions"}]}`
--->
+*/}
 
-### Function triggerCommand {#classf3d_1_1interactor_1a20ab155181432751c7644b87490a1085}
+### Function triggerCommand {/* #classf3d_1_1interactor_1a20ab155181432751c7644b87490a1085 */}
 
 ![][public]
 
@@ -1117,15 +1117,15 @@ Note that default commands will never throw this exception, but adding commands 
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerCommand"}]}`
--->
+*/}
 
 ## Animation
 
-### Function toggleAnimation {#classf3d_1_1interactor_1a9d0791058c75a2b68e159deb041f1c8e}
+### Function toggleAnimation {/* #classf3d_1_1interactor_1a9d0791058c75a2b68e159deb041f1c8e */}
 
 ![][public]
 
@@ -1147,13 +1147,13 @@ Control the animation.
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::toggleAnimation"}]}`
--->
+*/}
 
-### Function startAnimation {#classf3d_1_1interactor_1a409b7cc7cf9931f43f164549742a1180}
+### Function startAnimation {/* #classf3d_1_1interactor_1a409b7cc7cf9931f43f164549742a1180 */}
 
 ![][public]
 
@@ -1175,13 +1175,13 @@ Control the animation.
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::startAnimation"}]}`
--->
+*/}
 
-### Function stopAnimation {#classf3d_1_1interactor_1aa233327057f5ad0e0a8c278ed8aec8c8}
+### Function stopAnimation {/* #classf3d_1_1interactor_1aa233327057f5ad0e0a8c278ed8aec8c8 */}
 
 ![][public]
 
@@ -1199,13 +1199,13 @@ Control the animation.
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::stopAnimation"}]}`
--->
+*/}
 
-### Function isPlayingAnimation {#classf3d_1_1interactor_1a4c1b56b4ec237630491274511a17fe8e}
+### Function isPlayingAnimation {/* #classf3d_1_1interactor_1a4c1b56b4ec237630491274511a17fe8e */}
 
 ![][public]
 
@@ -1223,13 +1223,13 @@ Control the animation.
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::isPlayingAnimation"}]}`
--->
+*/}
 
-### Function getAnimationDirection {#classf3d_1_1interactor_1acec03fa4d45f6280f54eedafaa53122f}
+### Function getAnimationDirection {/* #classf3d_1_1interactor_1acec03fa4d45f6280f54eedafaa53122f */}
 
 ![][public]
 
@@ -1247,15 +1247,15 @@ Control the animation.
 
 **Return type**: [interactor::AnimationDirection](classf3d_1_1interactor.md#classf3d_1_1interactor_1a9e00479a3bda00c9a73552ba308a4bdf)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::getAnimationDirection"}]}`
--->
+*/}
 
 ## Movement
 
-### Function enableCameraMovement {#classf3d_1_1interactor_1afc9f9301857e092abf2d92e38a94915e}
+### Function enableCameraMovement {/* #classf3d_1_1interactor_1afc9f9301857e092abf2d92e38a94915e */}
 
 ![][public]
 
@@ -1273,13 +1273,13 @@ Control if camera movements are enabled, which they are by default.
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::enableCameraMovement"}]}`
--->
+*/}
 
-### Function disableCameraMovement {#classf3d_1_1interactor_1a07f159edfbb3907a7e72307de5043599}
+### Function disableCameraMovement {/* #classf3d_1_1interactor_1a07f159edfbb3907a7e72307de5043599 */}
 
 ![][public]
 
@@ -1297,15 +1297,15 @@ Control if camera movements are enabled, which they are by default.
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::disableCameraMovement"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function triggerEventLoop {#classf3d_1_1interactor_1ac37ed5c948034580812f2e24f25c5c10}
+### Function triggerEventLoop {/* #classf3d_1_1interactor_1ac37ed5c948034580812f2e24f25c5c10 */}
 
 ![][public]
 
@@ -1327,13 +1327,13 @@ Manually trigger the event loop. Advances the internal timers of `deltaTime` sec
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::triggerEventLoop"}]}`
--->
+*/}
 
-### Function playInteraction {#classf3d_1_1interactor_1a1ed1405954d49fcee5e687a56cc83bf1}
+### Function playInteraction {/* #classf3d_1_1interactor_1a1ed1405954d49fcee5e687a56cc83bf1 */}
 
 ![][public]
 
@@ -1357,13 +1357,13 @@ Play a VTK interaction file. Provided file path is used as is and file existence
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::playInteraction"}]}`
--->
+*/}
 
-### Function recordInteraction {#classf3d_1_1interactor_1a22d9604dde214323080fae5ab947e08b}
+### Function recordInteraction {/* #classf3d_1_1interactor_1a22d9604dde214323080fae5ab947e08b */}
 
 ![][public]
 
@@ -1385,13 +1385,13 @@ Start interaction and record it all in a VTK interaction file. Provided file pat
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::recordInteraction"}]}`
--->
+*/}
 
-### Function start {#classf3d_1_1interactor_1af971c61f5dd60430a8f574f9572c8aed}
+### Function start {/* #classf3d_1_1interactor_1af971c61f5dd60430a8f574f9572c8aed */}
 
 ![][public]
 
@@ -1414,13 +1414,13 @@ Start the interactor event loop. The event loop will be triggered every deltaTim
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::start"}]}`
--->
+*/}
 
-### Function stop {#classf3d_1_1interactor_1ab8172c398e25b753a421e6b38f568539}
+### Function stop {/* #classf3d_1_1interactor_1ab8172c398e25b753a421e6b38f568539 */}
 
 ![][public]
 
@@ -1438,13 +1438,13 @@ Stop the interactor. If interactor has not been started, this logs an info and r
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::stop"}]}`
--->
+*/}
 
-### Function requestRender {#classf3d_1_1interactor_1a12abd21c1a1fb5973e09633c877e2e7a}
+### Function requestRender {/* #classf3d_1_1interactor_1a12abd21c1a1fb5973e09633c877e2e7a */}
 
 ![][public]
 
@@ -1462,13 +1462,13 @@ Request a render to be done on the next event loop. Safe to call in a multithrea
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::requestRender"}]}`
--->
+*/}
 
-### Function requestStop {#classf3d_1_1interactor_1a284d360e23d7df1b95c3a49b6e3b630f}
+### Function requestStop {/* #classf3d_1_1interactor_1a284d360e23d7df1b95c3a49b6e3b630f */}
 
 ![][public]
 
@@ -1486,17 +1486,17 @@ Request the interactor to stop on the next event loop. Safe to call in a multith
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::requestStop"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"interactor_8h"},"children":[{"type":"text","text":"interactor.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

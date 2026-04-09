@@ -1,4 +1,4 @@
-# Structure f3d::options::scene {#structf3d_1_1options_1_1scene}
+# Structure f3d::options::scene {/* #structf3d_1_1options_1_1scene */}
 
 ![][C++]
 ![][public]
@@ -23,7 +23,7 @@
 
 ## Public attributes
 
-### Variable animation {#structf3d_1_1options_1_1scene_1ac3464ac5bd167c679929d5a03b074644}
+### Variable animation {/* #structf3d_1_1options_1_1scene_1ac3464ac5bd167c679929d5a03b074644 */}
 
 ![][public]
 
@@ -43,13 +43,13 @@ struct f3d::options::scene::animation f3d::options::scene::animation
 
 **Type**: struct f3d::options::scene::animation
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::scene::animation"}]}`
--->
+*/}
 
-### Variable camera {#structf3d_1_1options_1_1scene_1aa8e5b6b5f400f79002b44d369e72ffd8}
+### Variable camera {/* #structf3d_1_1options_1_1scene_1aa8e5b6b5f400f79002b44d369e72ffd8 */}
 
 ![][public]
 
@@ -69,13 +69,13 @@ struct f3d::options::scene::camera f3d::options::scene::camera
 
 **Type**: struct f3d::options::scene::camera
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::scene::camera"}]}`
--->
+*/}
 
-### Variable force\_reader {#structf3d_1_1options_1_1scene_1aa631f4c6c8dfe8d9b8c05bd68f8e94c9}
+### Variable force\_reader {/* #structf3d_1_1options_1_1scene_1aa631f4c6c8dfe8d9b8c05bd68f8e94c9 */}
 
 ![][public]
 
@@ -95,13 +95,13 @@ std::optional<std::string> f3d::options::scene::force_reader
 
 **Type**: std::optional< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::scene::force_reader"}]}`
--->
+*/}
 
-### Variable up\_direction {#structf3d_1_1options_1_1scene_1aac37efed7759b93cc67cfed797fe258d}
+### Variable up\_direction {/* #structf3d_1_1options_1_1scene_1aac37efed7759b93cc67cfed797fe258d */}
 
 ![][public]
 
@@ -121,11 +121,11 @@ f3d::direction_t f3d::options::scene::up_direction = [f3d::direction\_t](classf3
 
 **Type**: [f3d::direction\_t](classf3d_1_1direction__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::scene::up_direction"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

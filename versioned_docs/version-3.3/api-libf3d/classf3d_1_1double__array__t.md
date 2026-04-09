@@ -27,7 +27,7 @@ A base template type for an array of double
 
 ## Protected attributes
 
-### Variable Array {#classf3d_1_1double__array__t_1ab4ec6824918af432b4c7b3fa6ac54792}
+### Variable Array {/* #classf3d_1_1double__array__t_1ab4ec6824918af432b4c7b3fa6ac54792 */}
 
 ![][protected]
 
@@ -51,7 +51,7 @@ std::array<double, N> f3d::double_array_t< N >::Array { 0 }
 
 ## Public functions
 
-### Function double\_array\_t {#classf3d_1_1double__array__t_1a13bdc79ab1512e3105862d0cf06a1e50}
+### Function double\_array\_t {/* #classf3d_1_1double__array__t_1a13bdc79ab1512e3105862d0cf06a1e50 */}
 
 ![][public]
 
@@ -71,7 +71,7 @@ f3d::double_array_t< N >::double_array_t()=default
 
 
 
-### Function double\_array\_t {#classf3d_1_1double__array__t_1a872c1e46cf2b5c14f5c43c0fdc9c7394}
+### Function double\_array\_t {/* #classf3d_1_1double__array__t_1a872c1e46cf2b5c14f5c43c0fdc9c7394 */}
 
 ![][public]
 
@@ -95,7 +95,7 @@ f3d::double_array_t< N >::double_array_t(const std::vector< double > &vec)
 
 
 
-### Function double\_array\_t {#classf3d_1_1double__array__t_1aed53b98cd814aa024f6566c1f2b2dfc7}
+### Function double\_array\_t {/* #classf3d_1_1double__array__t_1aed53b98cd814aa024f6566c1f2b2dfc7 */}
 
 ![][public]
 
@@ -119,7 +119,7 @@ f3d::double_array_t< N >::double_array_t(const std::initializer_list< double > &
 
 
 
-### Function operator== {#classf3d_1_1double__array__t_1a7a03eb4ac6c40822b820b8acd255e7c3}
+### Function operator== {/* #classf3d_1_1double__array__t_1a7a03eb4ac6c40822b820b8acd255e7c3 */}
 
 ![][public]
 ![][const]
@@ -144,7 +144,7 @@ bool f3d::double_array_t< N >::operator==(const double_array_t &other) const
 
 
 
-### Function operator!= {#classf3d_1_1double__array__t_1a31aa2831b1185ba168f8b23951bb675b}
+### Function operator!= {/* #classf3d_1_1double__array__t_1a31aa2831b1185ba168f8b23951bb675b */}
 
 ![][public]
 ![][const]
@@ -169,7 +169,7 @@ bool f3d::double_array_t< N >::operator!=(const double_array_t &other) const
 
 
 
-### Function operator[] {#classf3d_1_1double__array__t_1a0c160f2e0625cce337988dd018e7b6a1}
+### Function operator[] {/* #classf3d_1_1double__array__t_1a0c160f2e0625cce337988dd018e7b6a1 */}
 
 ![][public]
 ![][const]
@@ -194,7 +194,7 @@ double f3d::double_array_t< N >::operator[](size_t i) const
 
 
 
-### Function operator[] {#classf3d_1_1double__array__t_1ac2ebe0188822e128084ac53be7ffbf03}
+### Function operator[] {/* #classf3d_1_1double__array__t_1ac2ebe0188822e128084ac53be7ffbf03 */}
 
 ![][public]
 
@@ -218,7 +218,7 @@ double & f3d::double_array_t< N >::operator[](size_t i)
 
 
 
-### Function data {#classf3d_1_1double__array__t_1af27ad47a15ebbfde487ecb7d67ffe0de}
+### Function data {/* #classf3d_1_1double__array__t_1af27ad47a15ebbfde487ecb7d67ffe0de */}
 
 ![][public]
 ![][const]

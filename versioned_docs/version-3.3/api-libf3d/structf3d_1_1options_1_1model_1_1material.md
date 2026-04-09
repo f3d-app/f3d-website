@@ -18,7 +18,7 @@
 
 ## Public attributes
 
-### Variable base\_ior {#structf3d_1_1options_1_1model_1_1material_1afa366f578919794d07c3786b9def4764}
+### Variable base\_ior {/* #structf3d_1_1options_1_1model_1_1material_1afa366f578919794d07c3786b9def4764 */}
 
 ![][public]
 
@@ -40,7 +40,7 @@ std::optional<double> f3d::options::model::material::base_ior
 
 
 
-### Variable metallic {#structf3d_1_1options_1_1model_1_1material_1a27e2d3edd9a46ecb64c0f034eaad14c9}
+### Variable metallic {/* #structf3d_1_1options_1_1model_1_1material_1a27e2d3edd9a46ecb64c0f034eaad14c9 */}
 
 ![][public]
 
@@ -62,7 +62,7 @@ std::optional<double> f3d::options::model::material::metallic
 
 
 
-### Variable roughness {#structf3d_1_1options_1_1model_1_1material_1ab7781989154c64f8253703b46cf1e109}
+### Variable roughness {/* #structf3d_1_1options_1_1model_1_1material_1ab7781989154c64f8253703b46cf1e109 */}
 
 ![][public]
 
@@ -84,7 +84,7 @@ std::optional<double> f3d::options::model::material::roughness
 
 
 
-### Variable texture {#structf3d_1_1options_1_1model_1_1material_1a572df4419d87744f080b7397f57fdccb}
+### Variable texture {/* #structf3d_1_1options_1_1model_1_1material_1a572df4419d87744f080b7397f57fdccb */}
 
 ![][public]
 

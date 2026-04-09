@@ -858,37 +858,35 @@ export default function ThanksPage(): ReactNode {
                     </div>
                   </div>
 
-                  <p>
-                    <details>
-                      <summary>Alternatives</summary>
+                  <details>
+                    <summary>Alternatives</summary>
 
+                    <ul
+                      style={{ marginLeft: "1.5rem", marginBottom: "1.5rem" }}
+                    >
+                      <li>
+                        <a href="https://github.com/sponsors/f3d-app">
+                          Github sponsors
+                        </a>
+                      </li>
+                      <li>
+                        <a href="https://ko-fi.com/f3d_app">ko-fi</a>
+                      </li>
+                      <li>
+                        <a href="https://liberapay.com/f3d-app/">liberapay</a>
+                      </li>
+                      <li>Direct Transfer</li>
                       <ul
-                        style={{ marginLeft: "1.5rem", marginBottom: "1.5rem" }}
+                        style={{
+                          marginLeft: "1.5rem",
+                          marginBottom: "1.5rem",
+                        }}
                       >
-                        <li>
-                          <a href="https://github.com/sponsors/f3d-app">
-                            Github sponsors
-                          </a>
-                        </li>
-                        <li>
-                          <a href="https://ko-fi.com/f3d_app">ko-fi</a>
-                        </li>
-                        <li>
-                          <a href="https://liberapay.com/f3d-app/">liberapay</a>
-                        </li>
-                        <li>Direct Transfer</li>
-                        <ul
-                          style={{
-                            marginLeft: "1.5rem",
-                            marginBottom: "1.5rem",
-                          }}
-                        >
-                          <li>IBAN: FR7616958000018496562230572</li>
-                          <li>BIC/SWIFT: QNTOFRP1XXX</li>
-                        </ul>
+                        <li>IBAN: FR7616958000018496562230572</li>
+                        <li>BIC/SWIFT: QNTOFRP1XXX</li>
                       </ul>
-                    </details>
-                  </p>
+                    </ul>
+                  </details>
 
                   <p>
                     Make sure to reach out on{" "}

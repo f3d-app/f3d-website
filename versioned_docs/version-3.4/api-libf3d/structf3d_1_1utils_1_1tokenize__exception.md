@@ -1,4 +1,4 @@
-# Structure f3d::utils::tokenize_exception {#structf3d_1_1utils_1_1tokenize__exception}
+# Structure f3d::utils::tokenize_exception {/* #structf3d_1_1utils_1_1tokenize__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by tokenize
 
 ## Public functions
 
-### Function tokenize\_exception {#structf3d_1_1utils_1_1tokenize__exception_1a0693bd9dc5395dedd10c3e6bd7f3e271}
+### Function tokenize\_exception {/* #structf3d_1_1utils_1_1tokenize__exception_1a0693bd9dc5395dedd10c3e6bd7f3e271 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::utils::tokenize_exception::tokenize_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::tokenize_exception::tokenize_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

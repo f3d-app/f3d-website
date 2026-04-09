@@ -1,4 +1,4 @@
-# Structure f3d::utils::string_template::lookup_error {#structf3d_1_1utils_1_1string__template_1_1lookup__error}
+# Structure f3d::utils::string_template::lookup_error {/* #structf3d_1_1utils_1_1string__template_1_1lookup__error */}
 
 ![][C++]
 ![][public]
@@ -19,7 +19,7 @@ Exception to be thrown by substitution functions to let untouched variables thro
 
 ## Public functions
 
-### Function lookup\_error {#structf3d_1_1utils_1_1string__template_1_1lookup__error_1ace69fe341e39403ce1ac61a1e8ded114}
+### Function lookup\_error {/* #structf3d_1_1utils_1_1string__template_1_1lookup__error_1ace69fe341e39403ce1ac61a1e8ded114 */}
 
 ![][public]
 
@@ -41,11 +41,11 @@ f3d::utils::string_template::lookup_error::lookup_error(const std::string &what=
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::lookup_error::lookup_error"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

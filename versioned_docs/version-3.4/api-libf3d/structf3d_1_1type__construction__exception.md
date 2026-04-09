@@ -1,4 +1,4 @@
-# Structure f3d::type_construction_exception {#structf3d_1_1type__construction__exception}
+# Structure f3d::type_construction_exception {/* #structf3d_1_1type__construction__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by any type if it fails in the constructor for s
 
 ## Public functions
 
-### Function type\_construction\_exception {#structf3d_1_1type__construction__exception_1ae979e25c0c37cd043f1f82fee310209e}
+### Function type\_construction\_exception {/* #structf3d_1_1type__construction__exception_1ae979e25c0c37cd043f1f82fee310209e */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::type_construction_exception::type_construction_exception(const std::string 
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::type_construction_exception::type_construction_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

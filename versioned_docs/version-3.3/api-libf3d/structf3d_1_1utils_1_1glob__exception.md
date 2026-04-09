@@ -20,7 +20,7 @@ An exception that can be thrown by globToRegex
 
 ## Public functions
 
-### Function glob\_exception {#structf3d_1_1utils_1_1glob__exception_1aabe348542f8fb983670e0871892166b9}
+### Function glob\_exception {/* #structf3d_1_1utils_1_1glob__exception_1aabe348542f8fb983670e0871892166b9 */}
 
 ![][public]
 

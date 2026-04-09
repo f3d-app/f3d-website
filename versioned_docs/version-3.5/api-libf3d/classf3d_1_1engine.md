@@ -1,4 +1,4 @@
-# Class f3d::engine {#classf3d_1_1engine}
+# Class f3d::engine {/* #classf3d_1_1engine */}
 
 ![][C++]
 ![][public]
@@ -76,7 +76,7 @@ inter.start();
 
 ## Private attributes
 
-### Variable Internals {#classf3d_1_1engine_1a5129a2dfd256ea59aa30818d30708188}
+### Variable Internals {/* #classf3d_1_1engine_1a5129a2dfd256ea59aa30818d30708188 */}
 
 ![][private]
 
@@ -96,15 +96,15 @@ internals* f3d::engine::Internals
 
 **Type**: internals *
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::Internals"}]}`
--->
+*/}
 
 ## Public static functions
 
-### Function create {#classf3d_1_1engine_1a8dc98863d9785dee5c90725248c46b8a}
+### Function create {/* #classf3d_1_1engine_1a8dc98863d9785dee5c90725248c46b8a */}
 
 ![][public]
 ![][static]
@@ -133,13 +133,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::create"}]}`
--->
+*/}
 
-### Function createNone {#classf3d_1_1engine_1a6c74166d9132a8e0e30e7bd8c4a3ce0f}
+### Function createNone {/* #classf3d_1_1engine_1a6c74166d9132a8e0e30e7bd8c4a3ce0f */}
 
 ![][public]
 ![][static]
@@ -164,13 +164,13 @@ Throws a [engine::no\_window\_exception](structf3d_1_1engine_1_1no__window__exce
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createNone"}]}`
--->
+*/}
 
-### Function createGLX {#classf3d_1_1engine_1a0cf626f2585af37614b088c5c78a2a1a}
+### Function createGLX {/* #classf3d_1_1engine_1a0cf626f2585af37614b088c5c78a2a1a */}
 
 ![][public]
 ![][static]
@@ -199,13 +199,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createGLX"}]}`
--->
+*/}
 
-### Function createWGL {#classf3d_1_1engine_1aad8377f8ceef620a494c3d1ccb86ef4a}
+### Function createWGL {/* #classf3d_1_1engine_1aad8377f8ceef620a494c3d1ccb86ef4a */}
 
 ![][public]
 ![][static]
@@ -234,13 +234,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createWGL"}]}`
--->
+*/}
 
-### Function createEGL {#classf3d_1_1engine_1af2ad280d2be4c58a8f30eec351cd3bf4}
+### Function createEGL {/* #classf3d_1_1engine_1af2ad280d2be4c58a8f30eec351cd3bf4 */}
 
 ![][public]
 ![][static]
@@ -265,13 +265,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createEGL"}]}`
--->
+*/}
 
-### Function createOSMesa {#classf3d_1_1engine_1a1ea3b63b10d5f826528545a562297cd1}
+### Function createOSMesa {/* #classf3d_1_1engine_1a1ea3b63b10d5f826528545a562297cd1 */}
 
 ![][public]
 ![][static]
@@ -296,13 +296,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createOSMesa"}]}`
--->
+*/}
 
-### Function createExternal {#classf3d_1_1engine_1ad34defb23976727cdb2ae884e119e533}
+### Function createExternal {/* #classf3d_1_1engine_1ad34defb23976727cdb2ae884e119e533 */}
 
 ![][public]
 ![][static]
@@ -335,13 +335,13 @@ Throws a [engine::no\_window\_exception](structf3d_1_1engine_1_1no__window__exce
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createExternal"}]}`
--->
+*/}
 
-### Function createExternalGLX {#classf3d_1_1engine_1a4fc077683aa9807ce52d3c0b45494250}
+### Function createExternalGLX {/* #classf3d_1_1engine_1a4fc077683aa9807ce52d3c0b45494250 */}
 
 ![][public]
 ![][static]
@@ -366,13 +366,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createExternalGLX"}]}`
--->
+*/}
 
-### Function createExternalWGL {#classf3d_1_1engine_1aa5ae12e2c05726524b94df82f63e1cc3}
+### Function createExternalWGL {/* #classf3d_1_1engine_1aa5ae12e2c05726524b94df82f63e1cc3 */}
 
 ![][public]
 ![][static]
@@ -397,13 +397,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createExternalWGL"}]}`
--->
+*/}
 
-### Function createExternalCOCOA {#classf3d_1_1engine_1aa361310e43db522f80340d1b6489f614}
+### Function createExternalCOCOA {/* #classf3d_1_1engine_1aa361310e43db522f80340d1b6489f614 */}
 
 ![][public]
 ![][static]
@@ -428,13 +428,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createExternalCOCOA"}]}`
--->
+*/}
 
-### Function createExternalEGL {#classf3d_1_1engine_1a033427bc8d9cfc37340d566e7d901fbe}
+### Function createExternalEGL {/* #classf3d_1_1engine_1a033427bc8d9cfc37340d566e7d901fbe */}
 
 ![][public]
 ![][static]
@@ -459,13 +459,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createExternalEGL"}]}`
--->
+*/}
 
-### Function createExternalOSMesa {#classf3d_1_1engine_1a2228768b97a56a53ce23fb315ff368ab}
+### Function createExternalOSMesa {/* #classf3d_1_1engine_1a2228768b97a56a53ce23fb315ff368ab */}
 
 ![][public]
 ![][static]
@@ -490,13 +490,13 @@ Throws a [context::loading\_exception](structf3d_1_1context_1_1loading__exceptio
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::createExternalOSMesa"}]}`
--->
+*/}
 
-### Function getRenderingBackendList {#classf3d_1_1engine_1ac2fc13fa23e4f33f0aeda81d9925a2ac}
+### Function getRenderingBackendList {/* #classf3d_1_1engine_1ac2fc13fa23e4f33f0aeda81d9925a2ac */}
 
 ![][public]
 ![][static]
@@ -515,13 +515,13 @@ List rendering backends supported by libf3d. All backends have an associated boo
 
 **Return type**: std::map< std::string, bool >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getRenderingBackendList"}]}`
--->
+*/}
 
-### Function loadPlugin {#classf3d_1_1engine_1a820b4a59f829b77f669f267cfde09186}
+### Function loadPlugin {/* #classf3d_1_1engine_1a820b4a59f829b77f669f267cfde09186 */}
 
 ![][public]
 ![][static]
@@ -557,13 +557,13 @@ Custom plugins can also be available that F3D is not supporting officially. Thro
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::loadPlugin"}]}`
--->
+*/}
 
-### Function autoloadPlugins {#classf3d_1_1engine_1ac4d909a879b94b496a3e9292162fb855}
+### Function autoloadPlugins {/* #classf3d_1_1engine_1ac4d909a879b94b496a3e9292162fb855 */}
 
 ![][public]
 ![][static]
@@ -582,13 +582,13 @@ Automatically load all the static plugins. The plugin "native" is guaranteed to 
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::autoloadPlugins"}]}`
--->
+*/}
 
-### Function getPluginsList {#classf3d_1_1engine_1ab72eb52263a39accd6f296f893808b5a}
+### Function getPluginsList {/* #classf3d_1_1engine_1ab72eb52263a39accd6f296f893808b5a */}
 
 ![][public]
 ![][static]
@@ -617,13 +617,13 @@ Return available plugins if any, or an empty vector if there are none or the pro
 
 **Return type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getPluginsList"}]}`
--->
+*/}
 
-### Function getAllReaderOptionNames {#classf3d_1_1engine_1ae1f1d77bb0ec0b5df9997eb77c1b42fd}
+### Function getAllReaderOptionNames {/* #classf3d_1_1engine_1ae1f1d77bb0ec0b5df9997eb77c1b42fd */}
 
 ![][public]
 ![][static]
@@ -642,13 +642,13 @@ Get all plugin option names that can be set using `setReaderOption` This vector 
 
 **Return type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getAllReaderOptionNames"}]}`
--->
+*/}
 
-### Function setReaderOption {#classf3d_1_1engine_1a95e7c2840b75b4f56f6a48ce25a4bc45}
+### Function setReaderOption {/* #classf3d_1_1engine_1a95e7c2840b75b4f56f6a48ce25a4bc45 */}
 
 ![][public]
 ![][static]
@@ -672,13 +672,13 @@ Set a specific reader option from a plugin to provided value if it exists. Throw
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::setReaderOption"}]}`
--->
+*/}
 
-### Function getLibInfo {#classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7}
+### Function getLibInfo {/* #classf3d_1_1engine_1aaf3b6314d61f6b033887ed09255fe5a7 */}
 
 ![][public]
 ![][static]
@@ -697,13 +697,13 @@ Get a struct containing info about the libf3d.
 
 **Return type**: [libInformation](structf3d_1_1engine_1_1libInformation.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getLibInfo"}]}`
--->
+*/}
 
-### Function getReadersInfo {#classf3d_1_1engine_1a5b2887501e1975218442d9142f4d3b8e}
+### Function getReadersInfo {/* #classf3d_1_1engine_1a5b2887501e1975218442d9142f4d3b8e */}
 
 ![][public]
 ![][static]
@@ -722,15 +722,15 @@ Get a vector of struct containing info about the supported readers.
 
 **Return type**: std::vector< [readerInformation](structf3d_1_1engine_1_1readerInformation.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getReadersInfo"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function ~engine {#classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37}
+### Function ~engine {/* #classf3d_1_1engine_1a42c3dd21a33f10e849c804d91af3ca37 */}
 
 ![][public]
 
@@ -748,13 +748,13 @@ Engine destructor, delete all object instances as well.
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::~engine"}]}`
--->
+*/}
 
-### Function engine {#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857}
+### Function engine {/* #classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857 */}
 
 ![][public]
 
@@ -776,13 +776,13 @@ Engine copy is not possible but move is allowed.
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::engine"}]}`
--->
+*/}
 
-### Function engine {#classf3d_1_1engine_1a763538a512e6405aa5d05de6eef8e43e}
+### Function engine {/* #classf3d_1_1engine_1a763538a512e6405aa5d05de6eef8e43e */}
 
 ![][public]
 
@@ -804,13 +804,13 @@ f3d::engine::engine(engine &&other) noexcept
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::engine"}]}`
--->
+*/}
 
-### Function operator= {#classf3d_1_1engine_1a4755881d465474f30bda5b7f1b630ecf}
+### Function operator= {/* #classf3d_1_1engine_1a4755881d465474f30bda5b7f1b630ecf */}
 
 ![][public]
 
@@ -832,13 +832,13 @@ engine & f3d::engine::operator=(const engine &other)=delete
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::operator="}]}`
--->
+*/}
 
-### Function operator= {#classf3d_1_1engine_1a99cd2684bdd36a245b947075cb28dfa5}
+### Function operator= {/* #classf3d_1_1engine_1a99cd2684bdd36a245b947075cb28dfa5 */}
 
 ![][public]
 
@@ -860,13 +860,13 @@ engine & f3d::engine::operator=(engine &&other) noexcept
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::operator="}]}`
--->
+*/}
 
-### Function setCachePath {#classf3d_1_1engine_1a4883c97389b1ab88d606e138d969611a}
+### Function setCachePath {/* #classf3d_1_1engine_1a4883c97389b1ab88d606e138d969611a */}
 
 ![][public]
 
@@ -901,13 +901,13 @@ Throws a [engine::cache\_exception](structf3d_1_1engine_1_1cache__exception.md) 
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::setCachePath"}]}`
--->
+*/}
 
-### Function setOptions {#classf3d_1_1engine_1ac4f1d538ed3b0f29c4730893208689df}
+### Function setOptions {/* #classf3d_1_1engine_1ac4f1d538ed3b0f29c4730893208689df */}
 
 ![][public]
 
@@ -929,13 +929,13 @@ Engine provide a default options that you can use using [engine::getOptions()](c
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::setOptions"}]}`
--->
+*/}
 
-### Function setOptions {#classf3d_1_1engine_1ac59b6c8c87b1b671b8c7f55d0d7cc6d9}
+### Function setOptions {/* #classf3d_1_1engine_1ac59b6c8c87b1b671b8c7f55d0d7cc6d9 */}
 
 ![][public]
 
@@ -957,13 +957,13 @@ Engine provide a default options that you can use using [engine::getOptions()](c
 
 **Return type**: [engine](classf3d_1_1engine.md#classf3d_1_1engine_1a091ec0742f81eb1931aa008b6d2eb857) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::setOptions"}]}`
--->
+*/}
 
-### Function getOptions {#classf3d_1_1engine_1a412f027391ddf8a752eb9230ae30986a}
+### Function getOptions {/* #classf3d_1_1engine_1a412f027391ddf8a752eb9230ae30986a */}
 
 ![][public]
 
@@ -981,13 +981,13 @@ Get the default options provided by the engine.
 
 **Return type**: [options](classf3d_1_1options.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getOptions"}]}`
--->
+*/}
 
-### Function getWindow {#classf3d_1_1engine_1a621751cc41669de47c318b6f20ec0cd7}
+### Function getWindow {/* #classf3d_1_1engine_1a621751cc41669de47c318b6f20ec0cd7 */}
 
 ![][public]
 
@@ -1005,13 +1005,13 @@ Get the window provided by the engine, if any. If not, will throw a [engine::no\
 
 **Return type**: [window](classf3d_1_1window.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getWindow"}]}`
--->
+*/}
 
-### Function getScene {#classf3d_1_1engine_1a7de2279c63696943a16c8995f6fbbc82}
+### Function getScene {/* #classf3d_1_1engine_1a7de2279c63696943a16c8995f6fbbc82 */}
 
 ![][public]
 
@@ -1029,13 +1029,13 @@ Get the loaded provided by the engine.
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getScene"}]}`
--->
+*/}
 
-### Function getInteractor {#classf3d_1_1engine_1aaa84654442772987a9d233ed1ca8e113}
+### Function getInteractor {/* #classf3d_1_1engine_1aaa84654442772987a9d233ed1ca8e113 */}
 
 ![][public]
 
@@ -1053,15 +1053,15 @@ Get the interactor provided by the engine, if any. If not, will throw a [engine:
 
 **Return type**: [interactor](classf3d_1_1interactor.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::getInteractor"}]}`
--->
+*/}
 
 ## Private functions
 
-### Function engine {#classf3d_1_1engine_1ace9f4b7a546a1be097355df320bf0953}
+### Function engine {/* #classf3d_1_1engine_1ace9f4b7a546a1be097355df320bf0953 */}
 
 ![][private]
 
@@ -1085,17 +1085,17 @@ Engine constructor. This is a private method. The user must rely on factories to
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::engine"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"engine_8h"},"children":[{"type":"text","text":"engine.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

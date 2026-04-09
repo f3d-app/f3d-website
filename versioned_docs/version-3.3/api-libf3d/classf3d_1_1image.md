@@ -50,7 +50,7 @@ A class to represent an image, which can be created from a file, a buffer and pr
 
 ## Constructors
 
-### Function image {#classf3d_1_1image_1aefc24a2599c90b88461892a9010b2521}
+### Function image {/* #classf3d_1_1image_1aefc24a2599c90b88461892a9010b2521 */}
 
 ![][public]
 
@@ -70,7 +70,7 @@ Default/copy/move constructors/operators.
 
 
 
-### Function ~image {#classf3d_1_1image_1a22ecd909c5406f00af4ecab8c5f65924}
+### Function ~image {/* #classf3d_1_1image_1a22ecd909c5406f00af4ecab8c5f65924 */}
 
 ![][public]
 
@@ -90,7 +90,7 @@ Default/copy/move constructors/operators.
 
 
 
-### Function image {#classf3d_1_1image_1a3018cb02119749352d3b43c8b2fbb4c0}
+### Function image {/* #classf3d_1_1image_1a3018cb02119749352d3b43c8b2fbb4c0 */}
 
 ![][public]
 
@@ -114,7 +114,7 @@ Default/copy/move constructors/operators.
 
 
 
-### Function operator= {#classf3d_1_1image_1a8c88a096697c62b4d82c9874ade2a2b6}
+### Function operator= {/* #classf3d_1_1image_1a8c88a096697c62b4d82c9874ade2a2b6 */}
 
 ![][public]
 
@@ -138,7 +138,7 @@ Default/copy/move constructors/operators.
 
 
 
-### Function image {#classf3d_1_1image_1a849dfd623e0fd30b8423a8428ce6683a}
+### Function image {/* #classf3d_1_1image_1a849dfd623e0fd30b8423a8428ce6683a */}
 
 ![][public]
 
@@ -162,7 +162,7 @@ Default/copy/move constructors/operators.
 
 
 
-### Function operator= {#classf3d_1_1image_1ad7b6c7999638d424bae865edea71075f}
+### Function operator= {/* #classf3d_1_1image_1ad7b6c7999638d424bae865edea71075f */}
 
 ![][public]
 
@@ -188,7 +188,7 @@ Default/copy/move constructors/operators.
 
 ## Operators
 
-### Function operator== {#classf3d_1_1image_1a9946310d12ccca5d8524eb99686c7852}
+### Function operator== {/* #classf3d_1_1image_1a9946310d12ccca5d8524eb99686c7852 */}
 
 ![][public]
 ![][const]
@@ -213,7 +213,7 @@ Comparison operators, uses [image::compare](classf3d_1_1image.md#classf3d_1_1ima
 
 
 
-### Function operator!= {#classf3d_1_1image_1a0117eff18734cc22b4658d9b5cf9ffcf}
+### Function operator!= {/* #classf3d_1_1image_1a0117eff18734cc22b4658d9b5cf9ffcf */}
 
 ![][public]
 ![][const]
@@ -240,7 +240,7 @@ Comparison operators, uses [image::compare](classf3d_1_1image.md#classf3d_1_1ima
 
 ## Resolution
 
-### Function getWidth {#classf3d_1_1image_1ae59d1943a87a24c48919beb3ee4c50cd}
+### Function getWidth {/* #classf3d_1_1image_1ae59d1943a87a24c48919beb3ee4c50cd */}
 
 ![][public]
 ![][const]
@@ -261,7 +261,7 @@ Set/Get image resolution.
 
 
 
-### Function getHeight {#classf3d_1_1image_1a1f3cede0d5c810d273d9406fbe9c9f88}
+### Function getHeight {/* #classf3d_1_1image_1a1f3cede0d5c810d273d9406fbe9c9f88 */}
 
 ![][public]
 ![][const]
@@ -284,7 +284,7 @@ Set/Get image resolution.
 
 ## Channel Count
 
-### Function getChannelCount {#classf3d_1_1image_1a02cc5b09cf3d682b918ab7d6928dd74a}
+### Function getChannelCount {/* #classf3d_1_1image_1a02cc5b09cf3d682b918ab7d6928dd74a */}
 
 ![][public]
 ![][const]
@@ -307,7 +307,7 @@ Set/Get image channel count.
 
 ## Buffer Data
 
-### Function setContent {#classf3d_1_1image_1a0a410810b64e6d7169ca1326d7e1bd28}
+### Function setContent {/* #classf3d_1_1image_1a0a410810b64e6d7169ca1326d7e1bd28 */}
 
 ![][public]
 
@@ -331,7 +331,7 @@ Set/Get image buffer data. Its size is expected to be `width * height * channelC
 
 
 
-### Function getContent {#classf3d_1_1image_1a846017e60bf8ad4518de086a30796089}
+### Function getContent {/* #classf3d_1_1image_1a846017e60bf8ad4518de086a30796089 */}
 
 ![][public]
 ![][const]
@@ -354,7 +354,7 @@ Set/Get image buffer data. Its size is expected to be `width * height * channelC
 
 ## Public types
 
-### Enumeration type SaveFormat {#classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3f}
+### Enumeration type SaveFormat {/* #classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3f */}
 
 ![][public]
 
@@ -377,25 +377,25 @@ Enumeration of supported export formats
 
 
 
-#### Enumerator PNG {#classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3fa55505ba281b015ec31f03ccb151b2a34}
+#### Enumerator PNG {/* #classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3fa55505ba281b015ec31f03ccb151b2a34 */}
 
 
 
 
 
-#### Enumerator JPG {#classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3fa92769fe7c40229f4301d6125e0a9e928}
+#### Enumerator JPG {/* #classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3fa92769fe7c40229f4301d6125e0a9e928 */}
 
 
 
 
 
-#### Enumerator TIF {#classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3fa9442880680eb5d7fb60d15f422004547}
+#### Enumerator TIF {/* #classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3fa9442880680eb5d7fb60d15f422004547 */}
 
 
 
 
 
-#### Enumerator BMP {#classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3faa5d5ca1447586e23dc011f8c0cc0a6db}
+#### Enumerator BMP {/* #classf3d_1_1image_1a3965ccbe6b7c763e623ea98458bf0c3faa5d5ca1447586e23dc011f8c0cc0a6db */}
 
 
 
@@ -403,7 +403,7 @@ Enumeration of supported export formats
 
 
 
-### Enumeration type ChannelType {#classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4}
+### Enumeration type ChannelType {/* #classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4 */}
 
 ![][public]
 
@@ -430,19 +430,19 @@ Enumeration of supported channel types
 
 
 
-#### Enumerator BYTE {#classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4ae409eb2ba6eb6801f52763ae370c350e}
+#### Enumerator BYTE {/* #classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4ae409eb2ba6eb6801f52763ae370c350e */}
 
 
 
 
 
-#### Enumerator SHORT {#classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4aa35c2b02966b1563e5bf7b81b8b0cf77}
+#### Enumerator SHORT {/* #classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4aa35c2b02966b1563e5bf7b81b8b0cf77 */}
 
 
 
 
 
-#### Enumerator FLOAT {#classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4ae738c26bf4ce1037fa81b039a915cbf6}
+#### Enumerator FLOAT {/* #classf3d_1_1image_1a3a84fa8e32dc1597a5589865654e65f4ae738c26bf4ce1037fa81b039a915cbf6 */}
 
 
 
@@ -452,7 +452,7 @@ Enumeration of supported channel types
 
 ## Private attributes
 
-### Variable Internals {#classf3d_1_1image_1ab77091bd6d48ad000c32e3435a668566}
+### Variable Internals {/* #classf3d_1_1image_1ab77091bd6d48ad000c32e3435a668566 */}
 
 ![][private]
 
@@ -476,7 +476,7 @@ internals* f3d::image::Internals
 
 ## Public functions
 
-### Function image {#classf3d_1_1image_1ab94585a274b65994972b88e35884f34a}
+### Function image {/* #classf3d_1_1image_1ab94585a274b65994972b88e35884f34a */}
 
 ![][public]
 
@@ -506,7 +506,7 @@ Throws an [image::read\_exception](structf3d_1_1image_1_1read__exception.md) in 
 
 
 
-### Function image {#classf3d_1_1image_1a86af78ae19a5d661fd4d91ea6d27d5b3}
+### Function image {/* #classf3d_1_1image_1a86af78ae19a5d661fd4d91ea6d27d5b3 */}
 
 ![][public]
 
@@ -533,7 +533,7 @@ Create an image from a given width, height, and channel count. A channel type ca
 
 
 
-### Function getNormalizedPixel {#classf3d_1_1image_1a743f3828f85e1f0bc1f582d7d798d094}
+### Function getNormalizedPixel {/* #classf3d_1_1image_1a743f3828f85e1f0bc1f582d7d798d094 */}
 
 ![][public]
 ![][const]
@@ -564,7 +564,7 @@ Because of the normalization, this function can be slow, prefer [getContent()](c
 
 
 
-### Function getChannelType {#classf3d_1_1image_1aa8740c8c109540e99c31e88ac1f28987}
+### Function getChannelType {/* #classf3d_1_1image_1aa8740c8c109540e99c31e88ac1f28987 */}
 
 ![][public]
 ![][const]
@@ -585,7 +585,7 @@ Get image channel type. Throws an [image::read\_exception](structf3d_1_1image_1_
 
 
 
-### Function getChannelTypeSize {#classf3d_1_1image_1a81c2f37a735c1d4c8a6b066f83674712}
+### Function getChannelTypeSize {/* #classf3d_1_1image_1a81c2f37a735c1d4c8a6b066f83674712 */}
 
 ![][public]
 ![][const]
@@ -606,7 +606,7 @@ Get image channel type size in bytes.
 
 
 
-### Function compare {#classf3d_1_1image_1a49d3d5c99d0a1cb014e6c3392caa9f45}
+### Function compare {/* #classf3d_1_1image_1a49d3d5c99d0a1cb014e6c3392caa9f45 */}
 
 ![][public]
 ![][const]
@@ -640,7 +640,7 @@ Compare current image to a reference. The error is minimum between Minkownski an
 
 
 
-### Function save {#classf3d_1_1image_1a1c671d94e024662f0931168ced58e4da}
+### Function save {/* #classf3d_1_1image_1a1c671d94e024662f0931168ced58e4da */}
 
 ![][public]
 ![][const]
@@ -681,7 +681,7 @@ Throws an [image::write\_exception](structf3d_1_1image_1_1write__exception.md) i
 
 
 
-### Function saveBuffer {#classf3d_1_1image_1ae52106bbd1dd8572276befea251b06df}
+### Function saveBuffer {/* #classf3d_1_1image_1ae52106bbd1dd8572276befea251b06df */}
 
 ![][public]
 ![][const]
@@ -721,7 +721,7 @@ Throws an [image::write\_exception](structf3d_1_1image_1_1write__exception.md) i
 
 
 
-### Function toTerminalText {#classf3d_1_1image_1adf1f0fbdabe4f57e64b3a903b15ad7ee}
+### Function toTerminalText {/* #classf3d_1_1image_1adf1f0fbdabe4f57e64b3a903b15ad7ee */}
 
 ![][public]
 ![][const]
@@ -759,7 +759,7 @@ Throws a [image::write\_exception](structf3d_1_1image_1_1write__exception.md) if
 
 
 
-### Function toTerminalText {#classf3d_1_1image_1a73c7e3090c75126b2f5bc03b9a57d3b6}
+### Function toTerminalText {/* #classf3d_1_1image_1a73c7e3090c75126b2f5bc03b9a57d3b6 */}
 
 ![][public]
 ![][const]
@@ -786,7 +786,7 @@ Throws a [image::write\_exception](structf3d_1_1image_1_1write__exception.md) if
 
 
 
-### Function setMetadata {#classf3d_1_1image_1ad1e9fd5f8f94f12d5d6a9e84c59adf11}
+### Function setMetadata {/* #classf3d_1_1image_1ad1e9fd5f8f94f12d5d6a9e84c59adf11 */}
 
 ![][public]
 
@@ -811,7 +811,7 @@ Set the value for a metadata key. Setting an empty value (`""`) removes the key.
 
 
 
-### Function getMetadata {#classf3d_1_1image_1a9e10e64f8bde29faaba00e00d134e60f}
+### Function getMetadata {/* #classf3d_1_1image_1a9e10e64f8bde29faaba00e00d134e60f */}
 
 ![][public]
 ![][const]
@@ -836,7 +836,7 @@ Get the value for a metadata key. Throws a [image::read\_exception](structf3d_1_
 
 
 
-### Function allMetadata {#classf3d_1_1image_1a253f66210d3ffee1e3810ed850965859}
+### Function allMetadata {/* #classf3d_1_1image_1a253f66210d3ffee1e3810ed850965859 */}
 
 ![][public]
 ![][const]
@@ -859,7 +859,7 @@ List all the metadata keys which have a value set.
 
 ## Public static functions
 
-### Function getSupportedFormats {#classf3d_1_1image_1a7172165ee5c5b19d15a94914becc4a12}
+### Function getSupportedFormats {/* #classf3d_1_1image_1a7172165ee5c5b19d15a94914becc4a12 */}
 
 ![][public]
 ![][static]

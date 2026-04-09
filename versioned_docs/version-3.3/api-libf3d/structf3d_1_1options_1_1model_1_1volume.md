@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable enable {#structf3d_1_1options_1_1model_1_1volume_1a7ac4a857fdecb94be4682b9593b770ae}
+### Variable enable {/* #structf3d_1_1options_1_1model_1_1volume_1a7ac4a857fdecb94be4682b9593b770ae */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ bool f3d::options::model::volume::enable = false
 
 
 
-### Variable inverse {#structf3d_1_1options_1_1model_1_1volume_1a512efc34a86fac6cdb93392dc7a5fd97}
+### Variable inverse {/* #structf3d_1_1options_1_1model_1_1volume_1a512efc34a86fac6cdb93392dc7a5fd97 */}
 
 ![][public]
 

@@ -32,7 +32,7 @@ Describe a 3D direction.
 
 ## Public functions
 
-### Function direction\_t {#classf3d_1_1direction__t_1aeef8b5002e7596df41f95feb8d7ee8aa}
+### Function direction\_t {/* #classf3d_1_1direction__t_1aeef8b5002e7596df41f95feb8d7ee8aa */}
 
 ![][public]
 
@@ -52,7 +52,7 @@ f3d::direction_t::direction_t()=default
 
 
 
-### Function direction\_t {#classf3d_1_1direction__t_1a4a537a5f6eeb6bac3a07b0b86f3cd2e4}
+### Function direction\_t {/* #classf3d_1_1direction__t_1a4a537a5f6eeb6bac3a07b0b86f3cd2e4 */}
 
 ![][public]
 
@@ -76,7 +76,7 @@ f3d::direction_t::direction_t(const std::vector< double > &vec)
 
 
 
-### Function direction\_t {#classf3d_1_1direction__t_1aa947f4c442ec9246023f947c52fad5c0}
+### Function direction\_t {/* #classf3d_1_1direction__t_1aa947f4c442ec9246023f947c52fad5c0 */}
 
 ![][public]
 
@@ -100,7 +100,7 @@ f3d::direction_t::direction_t(const std::initializer_list< double > &list)
 
 
 
-### Function direction\_t {#classf3d_1_1direction__t_1a771efb8b0f871b1a62be45e8e652aa4a}
+### Function direction\_t {/* #classf3d_1_1direction__t_1a771efb8b0f871b1a62be45e8e652aa4a */}
 
 ![][public]
 
@@ -126,7 +126,7 @@ f3d::direction_t::direction_t(double x, double y, double z)
 
 
 
-### Function x {#classf3d_1_1direction__t_1ac91362a4d72347f51706c3e6b5db259d}
+### Function x {/* #classf3d_1_1direction__t_1ac91362a4d72347f51706c3e6b5db259d */}
 
 ![][public]
 ![][const]
@@ -147,7 +147,7 @@ double f3d::direction_t::x() const
 
 
 
-### Function y {#classf3d_1_1direction__t_1ac5c01406d2be095e4c05f793feb282fd}
+### Function y {/* #classf3d_1_1direction__t_1ac5c01406d2be095e4c05f793feb282fd */}
 
 ![][public]
 ![][const]
@@ -168,7 +168,7 @@ double f3d::direction_t::y() const
 
 
 
-### Function z {#classf3d_1_1direction__t_1ad099e4ab17ddb0b70d0c003f7e820fe9}
+### Function z {/* #classf3d_1_1direction__t_1ad099e4ab17ddb0b70d0c003f7e820fe9 */}
 
 ![][public]
 ![][const]
@@ -189,7 +189,7 @@ double f3d::direction_t::z() const
 
 
 
-### Function operator f3d::vector3\_t {#classf3d_1_1direction__t_1ae242b6bd09057602bc2666b5d857f57e}
+### Function operator f3d::vector3\_t {/* #classf3d_1_1direction__t_1ae242b6bd09057602bc2666b5d857f57e */}
 
 ![][public]
 ![][const]

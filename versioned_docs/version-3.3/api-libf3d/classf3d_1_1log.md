@@ -23,7 +23,7 @@ A class to output logs to the standard output. It supports different levels, err
 
 ## Public types
 
-### Enumeration type VerboseLevel {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28}
+### Enumeration type VerboseLevel {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28 */}
 
 ![][public]
 
@@ -56,31 +56,31 @@ Enumeration of verbose levels
 
 
 
-#### Enumerator DEBUG {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28adc30ec20708ef7b0f641ef78b7880a15}
+#### Enumerator DEBUG {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28adc30ec20708ef7b0f641ef78b7880a15 */}
 
 
 
 
 
-#### Enumerator INFO {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a551b723eafd6a31d444fcb2f5920fbd3}
+#### Enumerator INFO {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a551b723eafd6a31d444fcb2f5920fbd3 */}
 
 
 
 
 
-#### Enumerator WARN {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a32bd8a1db2275458673903bdb84cb277}
+#### Enumerator WARN {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a32bd8a1db2275458673903bdb84cb277 */}
 
 
 
 
 
-#### Enumerator ERROR {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28abb1ca97ec761fc37101737ba0aa2e7c5}
+#### Enumerator ERROR {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28abb1ca97ec761fc37101737ba0aa2e7c5 */}
 
 
 
 
 
-#### Enumerator QUIET {#classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a1b4462755110ae77a3bb7e319f6544fa}
+#### Enumerator QUIET {/* #classf3d_1_1log_1acd0826518d1036fcae9e3eddb210ec28a1b4462755110ae77a3bb7e319f6544fa */}
 
 
 
@@ -90,7 +90,7 @@ Enumeration of verbose levels
 
 ## Public static functions
 
-### Function print {#classf3d_1_1log_1a00a2ff2ea22fa4a51337802440ba3ee7}
+### Function print {/* #classf3d_1_1log_1a00a2ff2ea22fa4a51337802440ba3ee7 */}
 
 ![][public]
 ![][static]
@@ -116,7 +116,7 @@ Log provided args as provided verbose level.
 
 
 
-### Function debug {#classf3d_1_1log_1a02f284fc14964d408428a6cfb816941d}
+### Function debug {/* #classf3d_1_1log_1a02f284fc14964d408428a6cfb816941d */}
 
 ![][public]
 ![][static]
@@ -141,7 +141,7 @@ Log provided args as a debug.
 
 
 
-### Function info {#classf3d_1_1log_1abc356594e60fc5aaa23dc89890e3e95a}
+### Function info {/* #classf3d_1_1log_1abc356594e60fc5aaa23dc89890e3e95a */}
 
 ![][public]
 ![][static]
@@ -166,7 +166,7 @@ Log provided args as an info.
 
 
 
-### Function warn {#classf3d_1_1log_1a38f616ec652987ae562353e4f030273d}
+### Function warn {/* #classf3d_1_1log_1a38f616ec652987ae562353e4f030273d */}
 
 ![][public]
 ![][static]
@@ -191,7 +191,7 @@ Log provided args as a warning.
 
 
 
-### Function error {#classf3d_1_1log_1a7cfc1246ee782202b6145a7e9e9e8752}
+### Function error {/* #classf3d_1_1log_1a7cfc1246ee782202b6145a7e9e9e8752 */}
 
 ![][public]
 ![][static]
@@ -216,7 +216,7 @@ Log provided args as an error.
 
 
 
-### Function setUseColoring {#classf3d_1_1log_1a53fe829551853d63206efb6a93287bec}
+### Function setUseColoring {/* #classf3d_1_1log_1a53fe829551853d63206efb6a93287bec */}
 
 ![][public]
 ![][static]
@@ -241,7 +241,7 @@ Set the coloring usage, if applicable (eg: console output).
 
 
 
-### Function setVerboseLevel {#classf3d_1_1log_1a42acb3b11578123d01b58420ebff5d65}
+### Function setVerboseLevel {/* #classf3d_1_1log_1a42acb3b11578123d01b58420ebff5d65 */}
 
 ![][public]
 ![][static]
@@ -267,7 +267,7 @@ Set the verbose level. By default, only warnings and errors are written to stder
 
 
 
-### Function getVerboseLevel {#classf3d_1_1log_1a8fedb73d694ea0b04845b59c03bb5a62}
+### Function getVerboseLevel {/* #classf3d_1_1log_1a8fedb73d694ea0b04845b59c03bb5a62 */}
 
 ![][public]
 ![][static]

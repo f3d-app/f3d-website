@@ -20,7 +20,7 @@ An exception that can be thrown by tokenize
 
 ## Public functions
 
-### Function tokenize\_exception {#structf3d_1_1utils_1_1tokenize__exception_1a0693bd9dc5395dedd10c3e6bd7f3e271}
+### Function tokenize\_exception {/* #structf3d_1_1utils_1_1tokenize__exception_1a0693bd9dc5395dedd10c3e6bd7f3e271 */}
 
 ![][public]
 

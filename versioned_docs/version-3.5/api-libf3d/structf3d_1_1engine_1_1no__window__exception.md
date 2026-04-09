@@ -1,4 +1,4 @@
-# Structure f3d::engine::no_window_exception {#structf3d_1_1engine_1_1no__window__exception}
+# Structure f3d::engine::no_window_exception {/* #structf3d_1_1engine_1_1no__window__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the engine when no window is available.
 
 ## Public functions
 
-### Function no\_window\_exception {#structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64}
+### Function no\_window\_exception {/* #structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::engine::no_window_exception::no_window_exception(const std::string &what=""
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::no_window_exception::no_window_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

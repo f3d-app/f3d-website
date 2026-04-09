@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable enable {#structf3d_1_1options_1_1render_1_1effect_1_1antialiasing_1ae5f17473d2f93f33a9538a4b00441420}
+### Variable enable {/* #structf3d_1_1options_1_1render_1_1effect_1_1antialiasing_1ae5f17473d2f93f33a9538a4b00441420 */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ bool f3d::options::render::effect::antialiasing::enable = false
 
 
 
-### Variable mode {#structf3d_1_1options_1_1render_1_1effect_1_1antialiasing_1a5f6e22e3f6631fe5eeca6414cf61dbc8}
+### Variable mode {/* #structf3d_1_1options_1_1render_1_1effect_1_1antialiasing_1a5f6e22e3f6631fe5eeca6414cf61dbc8 */}
 
 ![][public]
 

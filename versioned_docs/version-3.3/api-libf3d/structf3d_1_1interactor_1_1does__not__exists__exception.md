@@ -20,7 +20,7 @@ An exception that can be thrown by the interactor when looking for something tha
 
 ## Public functions
 
-### Function does\_not\_exists\_exception {#structf3d_1_1interactor_1_1does__not__exists__exception_1a8f83956aa6132858e28d94ca1f8b7685}
+### Function does\_not\_exists\_exception {/* #structf3d_1_1interactor_1_1does__not__exists__exception_1a8f83956aa6132858e28d94ca1f8b7685 */}
 
 ![][public]
 

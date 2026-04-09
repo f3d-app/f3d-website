@@ -1,4 +1,4 @@
-# Structure f3d::image::write_exception {#structf3d_1_1image_1_1write__exception}
+# Structure f3d::image::write_exception {/* #structf3d_1_1image_1_1write__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the image when there. is an error on write.
 
 ## Public functions
 
-### Function write\_exception {#structf3d_1_1image_1_1write__exception_1ae60ce88787aeb45de2d75c16d1ae0e3a}
+### Function write\_exception {/* #structf3d_1_1image_1_1write__exception_1ae60ce88787aeb45de2d75c16d1ae0e3a */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::image::write_exception::write_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::image::write_exception::write_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

@@ -1,4 +1,4 @@
-# Class f3d::exception {#structf3d_1_1exception}
+# Class f3d::exception {/* #structf3d_1_1exception */}
 
 ![][C++]
 ![][public]
@@ -45,7 +45,7 @@ A generic exception used in the libf3d. Can be used to catch all exceptions when
 
 ## Public functions
 
-### Function exception {#structf3d_1_1exception_1aef4c85042406694200c7f8793785692d}
+### Function exception {/* #structf3d_1_1exception_1aef4c85042406694200c7f8793785692d */}
 
 ![][public]
 
@@ -67,17 +67,17 @@ f3d::exception::exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::exception::exception"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"exception_8h"},"children":[{"type":"text","text":"exception.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

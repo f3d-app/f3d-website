@@ -20,7 +20,7 @@ An exception that can be thrown by the engine when no window is available.
 
 ## Public functions
 
-### Function no\_window\_exception {#structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64}
+### Function no\_window\_exception {/* #structf3d_1_1engine_1_1no__window__exception_1a696bd4e971733f40df2d91c2a8ff0f64 */}
 
 ![][public]
 

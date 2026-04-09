@@ -29,7 +29,7 @@ Describe a 3D surfacic mesh. A valid mesh fulfills these requirements:
 
 ## Public attributes
 
-### Variable points {#structf3d_1_1mesh__t_1aae9562d60d312a986f8a0d0f61bd4d3c}
+### Variable points {/* #structf3d_1_1mesh__t_1aae9562d60d312a986f8a0d0f61bd4d3c */}
 
 ![][public]
 
@@ -51,7 +51,7 @@ std::vector<float> f3d::mesh_t::points
 
 
 
-### Variable normals {#structf3d_1_1mesh__t_1ad0b4a90786f214a89dbae5b2d8468e59}
+### Variable normals {/* #structf3d_1_1mesh__t_1ad0b4a90786f214a89dbae5b2d8468e59 */}
 
 ![][public]
 
@@ -73,7 +73,7 @@ std::vector<float> f3d::mesh_t::normals
 
 
 
-### Variable texture\_coordinates {#structf3d_1_1mesh__t_1a5c2cd44ccd008d9f258dc74e4bb074bd}
+### Variable texture\_coordinates {/* #structf3d_1_1mesh__t_1a5c2cd44ccd008d9f258dc74e4bb074bd */}
 
 ![][public]
 
@@ -95,7 +95,7 @@ std::vector<float> f3d::mesh_t::texture_coordinates
 
 
 
-### Variable face\_sides {#structf3d_1_1mesh__t_1a40e1735ee41d5c088e446dce73214d31}
+### Variable face\_sides {/* #structf3d_1_1mesh__t_1a40e1735ee41d5c088e446dce73214d31 */}
 
 ![][public]
 
@@ -117,7 +117,7 @@ std::vector<unsigned int> f3d::mesh_t::face_sides
 
 
 
-### Variable face\_indices {#structf3d_1_1mesh__t_1a309630f63c3f2105e70e079f777f0c81}
+### Variable face\_indices {/* #structf3d_1_1mesh__t_1a309630f63c3f2105e70e079f777f0c81 */}
 
 ![][public]
 
@@ -141,7 +141,7 @@ std::vector<unsigned int> f3d::mesh_t::face_indices
 
 ## Public functions
 
-### Function isValid {#structf3d_1_1mesh__t_1a16d9b017479bf3e65e3d50e5081916eb}
+### Function isValid {/* #structf3d_1_1mesh__t_1a16d9b017479bf3e65e3d50e5081916eb */}
 
 ![][public]
 ![][const]

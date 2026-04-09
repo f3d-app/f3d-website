@@ -20,7 +20,7 @@ An exception that can be thrown by any type if it fails in the constructor for s
 
 ## Public functions
 
-### Function type\_construction\_exception {#structf3d_1_1type__construction__exception_1ae979e25c0c37cd043f1f82fee310209e}
+### Function type\_construction\_exception {/* #structf3d_1_1type__construction__exception_1ae979e25c0c37cd043f1f82fee310209e */}
 
 ![][public]
 

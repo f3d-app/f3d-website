@@ -7,7 +7,7 @@ tags: [website]
 
 Welcome to the new website!
 
-<!-- truncate -->
+{/* truncate */}
 
 It is time to say goodbye to our technical albeit beloved markdown based website that we have been rocking
 since we moved to github 4 years ago.

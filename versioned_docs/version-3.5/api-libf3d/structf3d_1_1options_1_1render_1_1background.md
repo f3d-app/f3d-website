@@ -1,4 +1,4 @@
-# Structure f3d::options::render::background {#structf3d_1_1options_1_1render_1_1background}
+# Structure f3d::options::render::background {/* #structf3d_1_1options_1_1render_1_1background */}
 
 ![][C++]
 ![][public]
@@ -21,7 +21,7 @@
 
 ## Public attributes
 
-### Variable blur {#structf3d_1_1options_1_1render_1_1background_1a2c5319c4d09b3568fe33c78f45670671}
+### Variable blur {/* #structf3d_1_1options_1_1render_1_1background_1a2c5319c4d09b3568fe33c78f45670671 */}
 
 ![][public]
 
@@ -41,13 +41,13 @@ struct f3d::options::render::background::blur f3d::options::render::background::
 
 **Type**: struct f3d::options::render::background::blur
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::render::background::blur"}]}`
--->
+*/}
 
-### Variable color {#structf3d_1_1options_1_1render_1_1background_1a0e2d7fe0d8c80f744da83c4e405a00a3}
+### Variable color {/* #structf3d_1_1options_1_1render_1_1background_1a0e2d7fe0d8c80f744da83c4e405a00a3 */}
 
 ![][public]
 
@@ -67,13 +67,13 @@ f3d::color_t f3d::options::render::background::color = [f3d::color\_t](classf3d_
 
 **Type**: [f3d::color\_t](classf3d_1_1color__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::render::background::color"}]}`
--->
+*/}
 
-### Variable skybox {#structf3d_1_1options_1_1render_1_1background_1ad298f61f6e400c3d7264773da00c5ab8}
+### Variable skybox {/* #structf3d_1_1options_1_1render_1_1background_1ad298f61f6e400c3d7264773da00c5ab8 */}
 
 ![][public]
 
@@ -93,11 +93,11 @@ bool f3d::options::render::background::skybox = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::render::background::skybox"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
