@@ -112,7 +112,10 @@ async function runSeaborg(api: string): Promise<void> {
 
       // First apply the multi-line regex before splitting into lines
       // replace <a> elements by Markdown anchors
-      content = content.replace(/<a id="([^"]+)"><\/a>\n(.+)/g, "$2 {/* #$1 */}");
+      content = content.replace(
+        /<a id="([^"]+)"><\/a>\n(.+)/g,
+        "$2 {/* #$1 */}",
+      );
 
       const lines = content.split(/\r?\n/g);
       const newLines: string[] = [];
