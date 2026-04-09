@@ -20,7 +20,7 @@ An exception that can be thrown by the options when an operation on a specific o
 
 ## Public functions
 
-### Function incompatible\_exception {#structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019}
+### Function incompatible\_exception {/* #structf3d_1_1options_1_1incompatible__exception_1a01c418f614d55e39981d7a0e223a0019 */}
 
 ![][public]
 

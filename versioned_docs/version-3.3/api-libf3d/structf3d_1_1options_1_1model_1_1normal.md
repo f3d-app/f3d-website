@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable scale {#structf3d_1_1options_1_1model_1_1normal_1adf36b79f2b2a5886b88ccd5865b6ef44}
+### Variable scale {/* #structf3d_1_1options_1_1model_1_1normal_1adf36b79f2b2a5886b88ccd5865b6ef44 */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ std::optional<double> f3d::options::model::normal::scale
 
 
 
-### Variable texture {#structf3d_1_1options_1_1model_1_1normal_1a1d99f885535bd92d3ad430596d954d1d}
+### Variable texture {/* #structf3d_1_1options_1_1model_1_1normal_1a1d99f885535bd92d3ad430596d954d1d */}
 
 ![][public]
 

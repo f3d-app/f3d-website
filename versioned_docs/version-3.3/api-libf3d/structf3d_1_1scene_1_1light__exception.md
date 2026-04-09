@@ -20,7 +20,7 @@ An exception that can be thrown by the scene when it fails to index the light
 
 ## Public functions
 
-### Function light\_exception {#structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed}
+### Function light\_exception {/* #structf3d_1_1scene_1_1light__exception_1acd6c3a9a9db4c724d13df35fa1a455ed */}
 
 ![][public]
 

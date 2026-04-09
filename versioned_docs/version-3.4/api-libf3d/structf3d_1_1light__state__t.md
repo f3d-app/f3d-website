@@ -1,4 +1,4 @@
-# Structure f3d::light_state_t {#structf3d_1_1light__state__t}
+# Structure f3d::light_state_t {/* #structf3d_1_1light__state__t */}
 
 ![][C++]
 ![][public]
@@ -22,7 +22,7 @@
 
 ## Public attributes
 
-### Variable type {#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11}
+### Variable type {/* #structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11 */}
 
 ![][public]
 
@@ -42,13 +42,13 @@ light_type f3d::light_state_t::type = light_type::SCENE_LIGHT
 
 **Type**: light_type
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::type"}]}`
--->
+*/}
 
-### Variable position {#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a}
+### Variable position {/* #structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a */}
 
 ![][public]
 
@@ -68,13 +68,13 @@ point3_t f3d::light_state_t::position = { 0., 0., 0. }
 
 **Type**: [point3\_t](structf3d_1_1point3__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::position"}]}`
--->
+*/}
 
-### Variable color {#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633}
+### Variable color {/* #structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633 */}
 
 ![][public]
 
@@ -94,13 +94,13 @@ color_t f3d::light_state_t::color = { 1., 1., 1. }
 
 **Type**: [color\_t](classf3d_1_1color__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::color"}]}`
--->
+*/}
 
-### Variable direction {#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465}
+### Variable direction {/* #structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465 */}
 
 ![][public]
 
@@ -120,13 +120,13 @@ vector3_t f3d::light_state_t::direction = { 1., 0., 0. }
 
 **Type**: [vector3\_t](structf3d_1_1vector3__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::direction"}]}`
--->
+*/}
 
-### Variable positionalLight {#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24}
+### Variable positionalLight {/* #structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24 */}
 
 ![][public]
 
@@ -146,13 +146,13 @@ bool f3d::light_state_t::positionalLight = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::positionalLight"}]}`
--->
+*/}
 
-### Variable intensity {#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6}
+### Variable intensity {/* #structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6 */}
 
 ![][public]
 
@@ -172,13 +172,13 @@ double f3d::light_state_t::intensity = 1.0
 
 **Type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::intensity"}]}`
--->
+*/}
 
-### Variable switchState {#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a}
+### Variable switchState {/* #structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a */}
 
 ![][public]
 
@@ -198,15 +198,15 @@ bool f3d::light_state_t::switchState = true
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::switchState"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function operator== {#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168}
+### Function operator== {/* #structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168 */}
 
 ![][public]
 ![][const]
@@ -229,11 +229,11 @@ bool f3d::light_state_t::operator==(const light_state_t &other) const
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_state_t::operator=="}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

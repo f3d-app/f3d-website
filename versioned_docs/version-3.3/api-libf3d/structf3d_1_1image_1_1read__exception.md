@@ -20,7 +20,7 @@ An exception that can be thrown by the image. when there is an error on read.
 
 ## Public functions
 
-### Function read\_exception {#structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477}
+### Function read\_exception {/* #structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477 */}
 
 ![][public]
 

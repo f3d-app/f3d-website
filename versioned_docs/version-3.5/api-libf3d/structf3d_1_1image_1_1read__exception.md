@@ -1,4 +1,4 @@
-# Structure f3d::image::read_exception {#structf3d_1_1image_1_1read__exception}
+# Structure f3d::image::read_exception {/* #structf3d_1_1image_1_1read__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the image. when there is an error on read.
 
 ## Public functions
 
-### Function read\_exception {#structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477}
+### Function read\_exception {/* #structf3d_1_1image_1_1read__exception_1a8494b506cc69a6e1252b171d5ffa4477 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::image::read_exception::read_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::image::read_exception::read_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

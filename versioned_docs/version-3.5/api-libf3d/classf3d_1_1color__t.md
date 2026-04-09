@@ -1,4 +1,4 @@
-# Class f3d::color_t {#classf3d_1_1color__t}
+# Class f3d::color_t {/* #classf3d_1_1color__t */}
 
 ![][C++]
 ![][public]
@@ -31,7 +31,7 @@ Describe a RGB color.
 
 ## Public functions
 
-### Function color\_t {#classf3d_1_1color__t_1acf69164a9f721cf166a9a8270a8c3156}
+### Function color\_t {/* #classf3d_1_1color__t_1acf69164a9f721cf166a9a8270a8c3156 */}
 
 ![][public]
 
@@ -49,13 +49,13 @@ f3d::color_t::color_t()=default
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::color_t"}]}`
--->
+*/}
 
-### Function color\_t {#classf3d_1_1color__t_1a78047417d30e9afae0ea60d38c20c283}
+### Function color\_t {/* #classf3d_1_1color__t_1a78047417d30e9afae0ea60d38c20c283 */}
 
 ![][public]
 
@@ -77,13 +77,13 @@ f3d::color_t::color_t(const std::vector< double > &vec)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::color_t"}]}`
--->
+*/}
 
-### Function color\_t {#classf3d_1_1color__t_1ae5633847d4df8d05405307212fbe940f}
+### Function color\_t {/* #classf3d_1_1color__t_1ae5633847d4df8d05405307212fbe940f */}
 
 ![][public]
 
@@ -105,13 +105,13 @@ f3d::color_t::color_t(const std::initializer_list< double > &list)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::color_t"}]}`
--->
+*/}
 
-### Function color\_t {#classf3d_1_1color__t_1ab864c2094865a5c8d04e14affcbfd08b}
+### Function color\_t {/* #classf3d_1_1color__t_1ab864c2094865a5c8d04e14affcbfd08b */}
 
 ![][public]
 
@@ -135,13 +135,13 @@ f3d::color_t::color_t(double red, double green, double blue)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::color_t"}]}`
--->
+*/}
 
-### Function r {#classf3d_1_1color__t_1a029f159302976b8bc773a29fa8587f69}
+### Function r {/* #classf3d_1_1color__t_1a029f159302976b8bc773a29fa8587f69 */}
 
 ![][public]
 ![][const]
@@ -160,13 +160,13 @@ double f3d::color_t::r() const
 
 **Return type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::r"}]}`
--->
+*/}
 
-### Function g {#classf3d_1_1color__t_1a2248b84a5ada178f2679426f9fea73fd}
+### Function g {/* #classf3d_1_1color__t_1a2248b84a5ada178f2679426f9fea73fd */}
 
 ![][public]
 ![][const]
@@ -185,13 +185,13 @@ double f3d::color_t::g() const
 
 **Return type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::g"}]}`
--->
+*/}
 
-### Function b {#classf3d_1_1color__t_1a51dcb99a6f2845d9d31d3a1a9adacda2}
+### Function b {/* #classf3d_1_1color__t_1a51dcb99a6f2845d9d31d3a1a9adacda2 */}
 
 ![][public]
 ![][const]
@@ -210,17 +210,17 @@ double f3d::color_t::b() const
 
 **Return type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::color_t::b"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"types_8h"},"children":[{"type":"text","text":"types.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

@@ -1,4 +1,4 @@
-# Structure f3d::options::model::normal_glyphs {#structf3d_1_1options_1_1model_1_1normal__glyphs}
+# Structure f3d::options::model::normal_glyphs {/* #structf3d_1_1options_1_1model_1_1normal__glyphs */}
 
 ![][C++]
 ![][public]
@@ -15,7 +15,7 @@
 
 ## Public attributes
 
-### Variable enable {#structf3d_1_1options_1_1model_1_1normal__glyphs_1a60f4d1adba162155c11979f9a34ec975}
+### Variable enable {/* #structf3d_1_1options_1_1model_1_1normal__glyphs_1a60f4d1adba162155c11979f9a34ec975 */}
 
 ![][public]
 
@@ -35,11 +35,11 @@ bool f3d::options::model::normal_glyphs::enable = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::normal_glyphs::enable"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

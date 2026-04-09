@@ -1,4 +1,4 @@
-# Structure f3d::options::parsing_exception {#structf3d_1_1options_1_1parsing__exception}
+# Structure f3d::options::parsing_exception {/* #structf3d_1_1options_1_1parsing__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the options when parsing of a string into an 
 
 ## Public functions
 
-### Function parsing\_exception {#structf3d_1_1options_1_1parsing__exception_1a2bd70a7c8381df3df1aca091bd3c71cc}
+### Function parsing\_exception {/* #structf3d_1_1options_1_1parsing__exception_1a2bd70a7c8381df3df1aca091bd3c71cc */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::options::parsing_exception::parsing_exception(const std::string &what="")
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::parsing_exception::parsing_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

@@ -53,7 +53,7 @@ A class to control the different options of f3d.
 
 ## Constructors
 
-### Function options {#classf3d_1_1options_1ac7d2a41fa0d89a27674fce76f097df07}
+### Function options {/* #classf3d_1_1options_1ac7d2a41fa0d89a27674fce76f097df07 */}
 
 ![][public]
 
@@ -73,7 +73,7 @@ Default/Copy/move constructors/operators.
 
 
 
-### Function ~options {#classf3d_1_1options_1a4f9b6f55863744717bfcca64c0d2db10}
+### Function ~options {/* #classf3d_1_1options_1a4f9b6f55863744717bfcca64c0d2db10 */}
 
 ![][public]
 
@@ -93,7 +93,7 @@ Default/Copy/move constructors/operators.
 
 
 
-### Function options {#classf3d_1_1options_1a1b05085aaa9b359e26bf1dc34c447277}
+### Function options {/* #classf3d_1_1options_1a1b05085aaa9b359e26bf1dc34c447277 */}
 
 ![][public]
 
@@ -117,7 +117,7 @@ Default/Copy/move constructors/operators.
 
 
 
-### Function operator= {#classf3d_1_1options_1aaa79aa9d8182451fef7dbea10b3de64a}
+### Function operator= {/* #classf3d_1_1options_1aaa79aa9d8182451fef7dbea10b3de64a */}
 
 ![][public]
 
@@ -141,7 +141,7 @@ Default/Copy/move constructors/operators.
 
 
 
-### Function options {#classf3d_1_1options_1aaf9453ef24d28f1da697afbcfa65e67a}
+### Function options {/* #classf3d_1_1options_1aaf9453ef24d28f1da697afbcfa65e67a */}
 
 ![][public]
 
@@ -165,7 +165,7 @@ Default/Copy/move constructors/operators.
 
 
 
-### Function operator= {#classf3d_1_1options_1a069f395f37e24c1b7158467d09b0e379}
+### Function operator= {/* #classf3d_1_1options_1a069f395f37e24c1b7158467d09b0e379 */}
 
 ![][public]
 
@@ -191,7 +191,7 @@ Default/Copy/move constructors/operators.
 
 ## Public attributes
 
-### Variable interactor {#classf3d_1_1options_1aa287e68c8f75c10e32a1b1c99cd5478b}
+### Variable interactor {/* #classf3d_1_1options_1aa287e68c8f75c10e32a1b1c99cd5478b */}
 
 ![][public]
 
@@ -213,7 +213,7 @@ struct f3d::options::interactor f3d::options::interactor
 
 
 
-### Variable model {#classf3d_1_1options_1a8cc373e7f784206675a0eb539484b1c6}
+### Variable model {/* #classf3d_1_1options_1a8cc373e7f784206675a0eb539484b1c6 */}
 
 ![][public]
 
@@ -235,7 +235,7 @@ struct f3d::options::model f3d::options::model
 
 
 
-### Variable render {#classf3d_1_1options_1a032db47739d7efcabeb5dcea65c9a649}
+### Variable render {/* #classf3d_1_1options_1a032db47739d7efcabeb5dcea65c9a649 */}
 
 ![][public]
 
@@ -257,7 +257,7 @@ struct f3d::options::render f3d::options::render
 
 
 
-### Variable scene {#classf3d_1_1options_1a10ce695a833bd835305c60377c627ec3}
+### Variable scene {/* #classf3d_1_1options_1a10ce695a833bd835305c60377c627ec3 */}
 
 ![][public]
 
@@ -279,7 +279,7 @@ struct f3d::options::scene f3d::options::scene
 
 
 
-### Variable ui {#classf3d_1_1options_1a2f4da5927f7441605182f4e33b4d5a51}
+### Variable ui {/* #classf3d_1_1options_1a2f4da5927f7441605182f4e33b4d5a51 */}
 
 ![][public]
 
@@ -303,7 +303,7 @@ struct f3d::options::ui f3d::options::ui
 
 ## Public functions
 
-### Function set {#classf3d_1_1options_1a863b0153b83210d422a4a6e3012a2590}
+### Function set {/* #classf3d_1_1options_1a863b0153b83210d422a4a6e3012a2590 */}
 
 ![][public]
 
@@ -334,7 +334,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function get {#classf3d_1_1options_1a340535d7dceb9fced1c19b6571d91f81}
+### Function get {/* #classf3d_1_1options_1a340535d7dceb9fced1c19b6571d91f81 */}
 
 ![][public]
 ![][const]
@@ -365,7 +365,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function setAsString {#classf3d_1_1options_1a5224e2d850dbb2b811bf00eb3e2d390c}
+### Function setAsString {/* #classf3d_1_1options_1a5224e2d850dbb2b811bf00eb3e2d390c */}
 
 ![][public]
 
@@ -396,7 +396,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function getAsString {#classf3d_1_1options_1a4a238691779258bf860cf1dcd455b41e}
+### Function getAsString {/* #classf3d_1_1options_1a4a238691779258bf860cf1dcd455b41e */}
 
 ![][public]
 ![][const]
@@ -427,7 +427,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function toggle {#classf3d_1_1options_1add0d53143dc8f3d3bf8d7770c0585de7}
+### Function toggle {/* #classf3d_1_1options_1add0d53143dc8f3d3bf8d7770c0585de7 */}
 
 ![][public]
 
@@ -457,7 +457,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function isSame {#classf3d_1_1options_1a4fb9ff49cd54cf5e8c03ac412e734fbd}
+### Function isSame {/* #classf3d_1_1options_1a4fb9ff49cd54cf5e8c03ac412e734fbd */}
 
 ![][public]
 ![][const]
@@ -489,7 +489,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function hasValue {#classf3d_1_1options_1aa907225ddee7f51c844fea9eef7728a1}
+### Function hasValue {/* #classf3d_1_1options_1aa907225ddee7f51c844fea9eef7728a1 */}
 
 ![][public]
 ![][const]
@@ -520,7 +520,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function copy {#classf3d_1_1options_1ab9d687afd0665f68274b4bbe6b7d11f5}
+### Function copy {/* #classf3d_1_1options_1ab9d687afd0665f68274b4bbe6b7d11f5 */}
 
 ![][public]
 
@@ -551,7 +551,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function getNames {#classf3d_1_1options_1ab3b98399029bd7437fcae7b4b43ce5bf}
+### Function getNames {/* #classf3d_1_1options_1ab3b98399029bd7437fcae7b4b43ce5bf */}
 
 ![][public]
 ![][const]
@@ -572,7 +572,7 @@ Get all option names that currently have values.
 
 
 
-### Function getClosestOption {#classf3d_1_1options_1a115a0c9d76e250657283bb195a4428ee}
+### Function getClosestOption {/* #classf3d_1_1options_1a115a0c9d76e250657283bb195a4428ee */}
 
 ![][public]
 ![][const]
@@ -597,7 +597,7 @@ Get the closest option name and its Levenshtein distance.
 
 
 
-### Function isOptional {#classf3d_1_1options_1ae075b953f83e90773333b1cd447b918e}
+### Function isOptional {/* #classf3d_1_1options_1ae075b953f83e90773333b1cd447b918e */}
 
 ![][public]
 ![][const]
@@ -628,7 +628,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function reset {#classf3d_1_1options_1a14b30525d9a905087449bf89eff38634}
+### Function reset {/* #classf3d_1_1options_1a14b30525d9a905087449bf89eff38634 */}
 
 ![][public]
 
@@ -658,7 +658,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 
 
-### Function removeValue {#classf3d_1_1options_1af4a3df470307fca3f27f0b6be9069b11}
+### Function removeValue {/* #classf3d_1_1options_1af4a3df470307fca3f27f0b6be9069b11 */}
 
 ![][public]
 
@@ -690,7 +690,7 @@ Throws an [options::inexistent\_exception](structf3d_1_1options_1_1inexistent__e
 
 ## Public static functions
 
-### Function getAllNames {#classf3d_1_1options_1a722119028984f674b21abecaef51f859}
+### Function getAllNames {/* #classf3d_1_1options_1a722119028984f674b21abecaef51f859 */}
 
 ![][public]
 ![][static]
@@ -711,7 +711,7 @@ Get all available option names.
 
 
 
-### Function parse {#classf3d_1_1options_1ad95e308431a7bf07c4dc1454ee90d4e6}
+### Function parse {/* #classf3d_1_1options_1ad95e308431a7bf07c4dc1454ee90d4e6 */}
 
 ![][public]
 ![][static]
@@ -742,7 +742,7 @@ Throws an [options::parsing\_exception](structf3d_1_1options_1_1parsing__excepti
 
 
 
-### Function format {#classf3d_1_1options_1a5c84338393f315d46e82a697cb65f410}
+### Function format {/* #classf3d_1_1options_1a5c84338393f315d46e82a697cb65f410 */}
 
 ![][public]
 ![][static]

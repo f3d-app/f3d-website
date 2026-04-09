@@ -1,4 +1,4 @@
-# Class f3d::utils::string_template {#classf3d_1_1utils_1_1string__template}
+# Class f3d::utils::string_template {/* #classf3d_1_1utils_1_1string__template */}
 
 ![][C++]
 ![][public]
@@ -31,7 +31,7 @@ string_template("{greeting} {name}!")
 
 ## Private attributes
 
-### Variable fragments {#classf3d_1_1utils_1_1string__template_1affe82b419f30bca158eb8b049ffc20a3}
+### Variable fragments {/* #classf3d_1_1utils_1_1string__template_1affe82b419f30bca158eb8b049ffc20a3 */}
 
 ![][private]
 
@@ -51,15 +51,15 @@ std::vector<std::pair<std::string, bool> > f3d::utils::string_template::fragment
 
 **Type**: std::vector< std::pair< std::string, bool > >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::fragments"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function string\_template {#classf3d_1_1utils_1_1string__template_1abaafc00ca694d03ae57e1faaa58e594c}
+### Function string\_template {/* #classf3d_1_1utils_1_1string__template_1abaafc00ca694d03ae57e1faaa58e594c */}
 
 ![][public]
 
@@ -81,13 +81,13 @@ f3d::utils::string_template::string_template(const std::string &templateString)
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::string_template"}]}`
--->
+*/}
 
-### Function substitute {#classf3d_1_1utils_1_1string__template_1a482286e6db45c2056d5f1e04bae721f3}
+### Function substitute {/* #classf3d_1_1utils_1_1string__template_1a482286e6db45c2056d5f1e04bae721f3 */}
 
 ![][public]
 
@@ -115,14 +115,14 @@ Variables for which the function throws a [string\_template::lookup\_error](stru
 
 **Return type**: string_template &
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename F"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::substitute"}]}`
--->
+*/}
 
-### Function substitute {#classf3d_1_1utils_1_1string__template_1a3597d4917b4fb62f75bc599be4122999}
+### Function substitute {/* #classf3d_1_1utils_1_1string__template_1a3597d4917b4fb62f75bc599be4122999 */}
 
 ![][public]
 
@@ -150,13 +150,13 @@ Variables for which the map does not contain a key are left untouched.
 
 **Return type**: string_template &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::substitute"}]}`
--->
+*/}
 
-### Function str {#classf3d_1_1utils_1_1string__template_1a9b6f01393ee68ac113a9631b526dfbfb}
+### Function str {/* #classf3d_1_1utils_1_1string__template_1a9b6f01393ee68ac113a9631b526dfbfb */}
 
 ![][public]
 ![][const]
@@ -175,13 +175,13 @@ Return a string representation of the string template
 
 **Return type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::str"}]}`
--->
+*/}
 
-### Function variables {#classf3d_1_1utils_1_1string__template_1a8f45ebbc3ed5775b79d0d5e81ca52d4e}
+### Function variables {/* #classf3d_1_1utils_1_1string__template_1a8f45ebbc3ed5775b79d0d5e81ca52d4e */}
 
 ![][public]
 ![][const]
@@ -200,13 +200,13 @@ List the remaining un-substituted variables.
 
 **Return type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::variables"}]}`
--->
+*/}
 
-### Function hasVariable {#classf3d_1_1utils_1_1string__template_1a9128cadc44b569eb5efdfcf69d924c4f}
+### Function hasVariable {/* #classf3d_1_1utils_1_1string__template_1a9128cadc44b569eb5efdfcf69d924c4f */}
 
 ![][public]
 ![][const]
@@ -229,13 +229,13 @@ Check if the template contains a variable matching the regex pattern.
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::hasVariable"}]}`
--->
+*/}
 
-### Function substitute {#classf3d_1_1utils_1_1string__template_1aa74c15b745ddd573b689bff3d3ddd16c}
+### Function substitute {/* #classf3d_1_1utils_1_1string__template_1aa74c15b745ddd573b689bff3d3ddd16c */}
 
 ![][public]
 
@@ -257,18 +257,18 @@ utils::string_template & f3d::utils::string_template::substitute(F lookup)
 
 **Return type**: [utils::string\_template](classf3d_1_1utils_1_1string__template.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `templateparamlist {"type":"element","name":"templateparamlist","attributes":{},"children":[{"type":"text","text":"\n          "},{"type":"element","name":"param","attributes":{},"children":[{"type":"text","text":"\n            "},{"type":"element","name":"type","attributes":{},"children":[{"type":"text","text":"typename F"}]},{"type":"text","text":"\n          "}]},{"type":"text","text":"\n        "}]}`
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::string_template::substitute"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"utils_8h"},"children":[{"type":"text","text":"utils.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

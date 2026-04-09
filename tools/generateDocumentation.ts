@@ -112,7 +112,10 @@ async function runSeaborg(api: string): Promise<void> {
 
       // First apply the multi-line regex before splitting into lines
       // replace <a> elements by Markdown anchors
-      content = content.replace(/<a id="([^"]+)"><\/a>\n(.+)/g, "$2 {#$1}");
+      content = content.replace(
+        /<a id="([^"]+)"><\/a>\n(.+)/g,
+        "$2 {/* #$1 */}",
+      );
 
       const lines = content.split(/\r?\n/g);
       const newLines: string[] = [];
@@ -124,6 +127,10 @@ async function runSeaborg(api: string): Promise<void> {
         if (lines[i].startsWith("# ")) {
           lines[i] = lines[i].replaceAll(/\\_/g, "_");
         }
+
+        // replace HTML comments by MDX comments
+        lines[i] = lines[i].replace(/^<!--$/, "{/*");
+        lines[i] = lines[i].replace(/^-->$/, "*/}");
 
         // remove file in namespace
         if (

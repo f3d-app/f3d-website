@@ -42,7 +42,7 @@ A class to control a camera in a window. When modifying the Position/FocalPoint/
 
 Set/Get the camera parameters.
 
-### Function setPosition {#classf3d_1_1camera_1a14f81460eb981f789c5d4a6784fd8d29}
+### Function setPosition {/* #classf3d_1_1camera_1a14f81460eb981f789c5d4a6784fd8d29 */}
 
 ![][public]
 
@@ -66,7 +66,7 @@ Set the position of the camera to the provided arg
 
 
 
-### Function getPosition {#classf3d_1_1camera_1a40c5b3c88d916dab949adab8d426595b}
+### Function getPosition {/* #classf3d_1_1camera_1a40c5b3c88d916dab949adab8d426595b */}
 
 ![][public]
 ![][const]
@@ -87,7 +87,7 @@ Return the position of the camera
 
 
 
-### Function getPosition {#classf3d_1_1camera_1ab295a53f2d6f22ef7344b6e6a783f57d}
+### Function getPosition {/* #classf3d_1_1camera_1ab295a53f2d6f22ef7344b6e6a783f57d */}
 
 ![][public]
 ![][const]
@@ -112,7 +112,7 @@ Get the position of the camera into the provided arg
 
 
 
-### Function setFocalPoint {#classf3d_1_1camera_1a698939cac8bdccf066b902ef7786abaf}
+### Function setFocalPoint {/* #classf3d_1_1camera_1a698939cac8bdccf066b902ef7786abaf */}
 
 ![][public]
 
@@ -136,7 +136,7 @@ Set the focal point of the camera to the provided arg
 
 
 
-### Function getFocalPoint {#classf3d_1_1camera_1a9f6c94e3ef2c043dd6cae735dec083e0}
+### Function getFocalPoint {/* #classf3d_1_1camera_1a9f6c94e3ef2c043dd6cae735dec083e0 */}
 
 ![][public]
 ![][const]
@@ -157,7 +157,7 @@ Return the focal point of the camera
 
 
 
-### Function getFocalPoint {#classf3d_1_1camera_1aeb8cd30cd39bc60136669892d3cdcc57}
+### Function getFocalPoint {/* #classf3d_1_1camera_1aeb8cd30cd39bc60136669892d3cdcc57 */}
 
 ![][public]
 ![][const]
@@ -182,7 +182,7 @@ Get the focal point of the camera into the provided arg
 
 
 
-### Function setViewUp {#classf3d_1_1camera_1af41a32697463f7a9557a626ce36b309e}
+### Function setViewUp {/* #classf3d_1_1camera_1af41a32697463f7a9557a626ce36b309e */}
 
 ![][public]
 
@@ -206,7 +206,7 @@ Set the view up of the camera to the provided arg
 
 
 
-### Function getViewUp {#classf3d_1_1camera_1ad063e0a053acb2e5e9275bec1d6e0054}
+### Function getViewUp {/* #classf3d_1_1camera_1ad063e0a053acb2e5e9275bec1d6e0054 */}
 
 ![][public]
 ![][const]
@@ -227,7 +227,7 @@ Return the view up of the camera
 
 
 
-### Function getViewUp {#classf3d_1_1camera_1ae676ec1e47bf39276146a36ba37530c0}
+### Function getViewUp {/* #classf3d_1_1camera_1ae676ec1e47bf39276146a36ba37530c0 */}
 
 ![][public]
 ![][const]
@@ -252,7 +252,7 @@ Get the view up of the camera into the provided arg
 
 
 
-### Function setViewAngle {#classf3d_1_1camera_1aca943dc34c65f3b5f9f3773a7b943084}
+### Function setViewAngle {/* #classf3d_1_1camera_1aca943dc34c65f3b5f9f3773a7b943084 */}
 
 ![][public]
 
@@ -276,7 +276,7 @@ Set the view angle in degrees of the camera to the provided arg
 
 
 
-### Function getViewAngle {#classf3d_1_1camera_1add0fc7c6cdd21ff002c8e3b9e9f41f34}
+### Function getViewAngle {/* #classf3d_1_1camera_1add0fc7c6cdd21ff002c8e3b9e9f41f34 */}
 
 ![][public]
 ![][const]
@@ -297,7 +297,7 @@ Return the view angle in degrees of the camera
 
 
 
-### Function getViewAngle {#classf3d_1_1camera_1a87f4da6b5c0893c703dabde78423c6d2}
+### Function getViewAngle {/* #classf3d_1_1camera_1a87f4da6b5c0893c703dabde78423c6d2 */}
 
 ![][public]
 ![][const]
@@ -322,7 +322,7 @@ Get the view angle in degrees of the camera into the provided arg
 
 
 
-### Function setState {#classf3d_1_1camera_1a24144f2aa3dd5785f23d6f641a82f549}
+### Function setState {/* #classf3d_1_1camera_1a24144f2aa3dd5785f23d6f641a82f549 */}
 
 ![][public]
 
@@ -346,7 +346,7 @@ Set the complete state of the provided arg
 
 
 
-### Function getState {#classf3d_1_1camera_1a948a86b0f4cdd00ffaab16e3138b3472}
+### Function getState {/* #classf3d_1_1camera_1a948a86b0f4cdd00ffaab16e3138b3472 */}
 
 ![][public]
 ![][const]
@@ -367,7 +367,7 @@ Return the complete state of the camera
 
 
 
-### Function getState {#classf3d_1_1camera_1ad3a3808a94f57e11ba44a06dc107bc9a}
+### Function getState {/* #classf3d_1_1camera_1ad3a3808a94f57e11ba44a06dc107bc9a */}
 
 ![][public]
 ![][const]
@@ -396,7 +396,7 @@ Get the complete state of the camera into the provided arg
 
 Standard camera manipulation methods. Angles are in degrees.
 
-### Function dolly {#classf3d_1_1camera_1a52b3ef3992b10bc5d0ef0d0af78c18dd}
+### Function dolly {/* #classf3d_1_1camera_1a52b3ef3992b10bc5d0ef0d0af78c18dd */}
 
 ![][public]
 
@@ -420,7 +420,7 @@ Divide the camera's distance from the focal point by the given value.
 
 
 
-### Function pan {#classf3d_1_1camera_1ab04f6d77ca126becdf76f8c54b69b2d2}
+### Function pan {/* #classf3d_1_1camera_1ab04f6d77ca126becdf76f8c54b69b2d2 */}
 
 ![][public]
 
@@ -446,7 +446,7 @@ Move the camera along its horizontal, vertical, and forward axes
 
 
 
-### Function zoom {#classf3d_1_1camera_1a25389ac60a7dfc9f70a01e85f1f887de}
+### Function zoom {/* #classf3d_1_1camera_1a25389ac60a7dfc9f70a01e85f1f887de */}
 
 ![][public]
 
@@ -470,7 +470,7 @@ Decrease the view angle (or the parallel scale in parallel mode) by the specifie
 
 
 
-### Function roll {#classf3d_1_1camera_1aba63ef9b310c53f90cecb2d546fe18cf}
+### Function roll {/* #classf3d_1_1camera_1aba63ef9b310c53f90cecb2d546fe18cf */}
 
 ![][public]
 
@@ -494,7 +494,7 @@ Rotate the camera about its forward axis.
 
 
 
-### Function azimuth {#classf3d_1_1camera_1a1f7e0da617b9404229131c722d27692b}
+### Function azimuth {/* #classf3d_1_1camera_1a1f7e0da617b9404229131c722d27692b */}
 
 ![][public]
 
@@ -518,7 +518,7 @@ Rotate the camera about its vertical axis, centered at the focal point.
 
 
 
-### Function yaw {#classf3d_1_1camera_1a31e21553e251eb931127b138bfd44cef}
+### Function yaw {/* #classf3d_1_1camera_1a31e21553e251eb931127b138bfd44cef */}
 
 ![][public]
 
@@ -542,7 +542,7 @@ Rotate the camera about its vertical axis, centered the camera's position.
 
 
 
-### Function elevation {#classf3d_1_1camera_1a834dcc2896ad2881c7bdef6e1759d67e}
+### Function elevation {/* #classf3d_1_1camera_1a834dcc2896ad2881c7bdef6e1759d67e */}
 
 ![][public]
 
@@ -566,7 +566,7 @@ Rotate the camera about its horizontal axis, centered at the focal point.
 
 
 
-### Function pitch {#classf3d_1_1camera_1aac2ed5910d98ba57c2d19335dcbca87b}
+### Function pitch {/* #classf3d_1_1camera_1aac2ed5910d98ba57c2d19335dcbca87b */}
 
 ![][public]
 
@@ -592,7 +592,7 @@ Rotate the camera about its horizontal axis, centered the camera's position.
 
 ## Public functions
 
-### Function setCurrentAsDefault {#classf3d_1_1camera_1a008bf4b1b3a0e06ed1e6753ddd12c10d}
+### Function setCurrentAsDefault {/* #classf3d_1_1camera_1a008bf4b1b3a0e06ed1e6753ddd12c10d */}
 
 ![][public]
 
@@ -612,7 +612,7 @@ Store the current camera configuration as default.
 
 
 
-### Function resetToDefault {#classf3d_1_1camera_1a419f50f67c84bb4bae12742a399f4132}
+### Function resetToDefault {/* #classf3d_1_1camera_1a419f50f67c84bb4bae12742a399f4132 */}
 
 ![][public]
 
@@ -632,7 +632,7 @@ Reset the camera to the stored default camera configuration.
 
 
 
-### Function resetToBounds {#classf3d_1_1camera_1a78013e452116352500cb02af8356cb4e}
+### Function resetToBounds {/* #classf3d_1_1camera_1a78013e452116352500cb02af8356cb4e */}
 
 ![][public]
 

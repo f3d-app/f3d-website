@@ -1,4 +1,4 @@
-# Structure f3d::vector3_t {#structf3d_1_1vector3__t}
+# Structure f3d::vector3_t {/* #structf3d_1_1vector3__t */}
 
 ![][C++]
 ![][public]

@@ -16,7 +16,7 @@ The complete generated options struct
 
 ## Public attributes
 
-### Variable invert\_zoom {#structf3d_1_1options_1_1interactor_1a51efd48124f91472c68c78209d966b80}
+### Variable invert\_zoom {/* #structf3d_1_1options_1_1interactor_1a51efd48124f91472c68c78209d966b80 */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ bool f3d::options::interactor::invert_zoom = false
 
 
 
-### Variable trackball {#structf3d_1_1options_1_1interactor_1a36aa5b6cc5667b149b037fbb0ea758ae}
+### Variable trackball {/* #structf3d_1_1options_1_1interactor_1a36aa5b6cc5667b149b037fbb0ea758ae */}
 
 ![][public]
 

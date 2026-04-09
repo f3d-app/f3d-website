@@ -1,4 +1,4 @@
-# Structure f3d::options::inexistent_exception {#structf3d_1_1options_1_1inexistent__exception}
+# Structure f3d::options::inexistent_exception {/* #structf3d_1_1options_1_1inexistent__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by the options when a provided option does not e
 
 ## Public functions
 
-### Function inexistent\_exception {#structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3}
+### Function inexistent\_exception {/* #structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::options::inexistent_exception::inexistent_exception(const std::string &what
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::inexistent_exception::inexistent_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

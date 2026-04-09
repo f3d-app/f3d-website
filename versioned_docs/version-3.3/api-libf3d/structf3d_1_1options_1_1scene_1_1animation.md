@@ -18,7 +18,7 @@
 
 ## Public attributes
 
-### Variable autoplay {#structf3d_1_1options_1_1scene_1_1animation_1a644b44fa974613e62bbabe0076699c60}
+### Variable autoplay {/* #structf3d_1_1options_1_1scene_1_1animation_1a644b44fa974613e62bbabe0076699c60 */}
 
 ![][public]
 
@@ -40,7 +40,7 @@ bool f3d::options::scene::animation::autoplay = false
 
 
 
-### Variable index {#structf3d_1_1options_1_1scene_1_1animation_1ae3270de15c7fbc48104bb5a89baa8881}
+### Variable index {/* #structf3d_1_1options_1_1scene_1_1animation_1ae3270de15c7fbc48104bb5a89baa8881 */}
 
 ![][public]
 
@@ -62,7 +62,7 @@ int f3d::options::scene::animation::index = 0
 
 
 
-### Variable indices {#structf3d_1_1options_1_1scene_1_1animation_1a2e8dc8d4ba58c493b95605d9cb60b85a}
+### Variable indices {/* #structf3d_1_1options_1_1scene_1_1animation_1a2e8dc8d4ba58c493b95605d9cb60b85a */}
 
 ![][public]
 
@@ -84,7 +84,7 @@ std::vector<int> f3d::options::scene::animation::indices = {0}
 
 
 
-### Variable speed\_factor {#structf3d_1_1options_1_1scene_1_1animation_1a1b672c686a3d7fffb993f11179b78368}
+### Variable speed\_factor {/* #structf3d_1_1options_1_1scene_1_1animation_1a1b672c686a3d7fffb993f11179b78368 */}
 
 ![][public]
 

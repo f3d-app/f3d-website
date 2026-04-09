@@ -20,7 +20,7 @@ An exception that can be thrown by the image. when there is an error related to 
 
 ## Public functions
 
-### Function metadata\_exception {#structf3d_1_1image_1_1metadata__exception_1a9752d5ec2bd62827529058654e0c9ce7}
+### Function metadata\_exception {/* #structf3d_1_1image_1_1metadata__exception_1a9752d5ec2bd62827529058654e0c9ce7 */}
 
 ![][public]
 

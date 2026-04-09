@@ -1,4 +1,4 @@
-# Structure f3d::options::ui {#structf3d_1_1options_1_1ui}
+# Structure f3d::options::ui {/* #structf3d_1_1options_1_1ui */}
 
 ![][C++]
 ![][public]
@@ -47,7 +47,7 @@
 
 ## Public attributes
 
-### Variable animation\_progress {#structf3d_1_1options_1_1ui_1ae59abab94c46ea815619719508e4cc45}
+### Variable animation\_progress {/* #structf3d_1_1options_1_1ui_1ae59abab94c46ea815619719508e4cc45 */}
 
 ![][public]
 
@@ -67,13 +67,13 @@ bool f3d::options::ui::animation_progress = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::animation_progress"}]}`
--->
+*/}
 
-### Variable animation\_progress\_color {#structf3d_1_1options_1_1ui_1abf4a5fc40533edd4aab39f9aafa102b9}
+### Variable animation\_progress\_color {/* #structf3d_1_1options_1_1ui_1abf4a5fc40533edd4aab39f9aafa102b9 */}
 
 ![][public]
 
@@ -93,13 +93,13 @@ std::optional<f3d::color_t> f3d::options::ui::animation_progress_color
 
 **Type**: std::optional< [f3d::color\_t](classf3d_1_1color__t.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::animation_progress_color"}]}`
--->
+*/}
 
-### Variable axis {#structf3d_1_1options_1_1ui_1abfd8854499551ce7c0c540d78df2aff1}
+### Variable axis {/* #structf3d_1_1options_1_1ui_1abfd8854499551ce7c0c540d78df2aff1 */}
 
 ![][public]
 
@@ -119,13 +119,13 @@ bool f3d::options::ui::axis = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::axis"}]}`
--->
+*/}
 
-### Variable backdrop {#structf3d_1_1options_1_1ui_1a22decd9179c26365b4bd3a362f082ffa}
+### Variable backdrop {/* #structf3d_1_1options_1_1ui_1a22decd9179c26365b4bd3a362f082ffa */}
 
 ![][public]
 
@@ -145,13 +145,13 @@ struct f3d::options::ui::backdrop f3d::options::ui::backdrop
 
 **Type**: struct f3d::options::ui::backdrop
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::backdrop"}]}`
--->
+*/}
 
-### Variable cheatsheet {#structf3d_1_1options_1_1ui_1a1cde66196d0a9ce0226138000375fe34}
+### Variable cheatsheet {/* #structf3d_1_1options_1_1ui_1a1cde66196d0a9ce0226138000375fe34 */}
 
 ![][public]
 
@@ -171,13 +171,13 @@ bool f3d::options::ui::cheatsheet = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::cheatsheet"}]}`
--->
+*/}
 
-### Variable console {#structf3d_1_1options_1_1ui_1a6f1714ac73921c439ec565d81a37ab6f}
+### Variable console {/* #structf3d_1_1options_1_1ui_1a6f1714ac73921c439ec565d81a37ab6f */}
 
 ![][public]
 
@@ -197,13 +197,13 @@ bool f3d::options::ui::console = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::console"}]}`
--->
+*/}
 
-### Variable dpi\_aware {#structf3d_1_1options_1_1ui_1ada3f3b11f1572a35a3cc18982ab49b3b}
+### Variable dpi\_aware {/* #structf3d_1_1options_1_1ui_1ada3f3b11f1572a35a3cc18982ab49b3b */}
 
 ![][public]
 
@@ -223,13 +223,13 @@ bool f3d::options::ui::dpi_aware = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::dpi_aware"}]}`
--->
+*/}
 
-### Variable drop\_zone {#structf3d_1_1options_1_1ui_1a3d7eb05cdc0b47b25ebe4c064ed193fc}
+### Variable drop\_zone {/* #structf3d_1_1options_1_1ui_1a3d7eb05cdc0b47b25ebe4c064ed193fc */}
 
 ![][public]
 
@@ -249,13 +249,13 @@ struct f3d::options::ui::drop_zone f3d::options::ui::drop_zone
 
 **Type**: struct f3d::options::ui::drop_zone
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::drop_zone"}]}`
--->
+*/}
 
-### Variable dropzone {#structf3d_1_1options_1_1ui_1a9fbb41f4b580d17168ec5de11684b8a7}
+### Variable dropzone {/* #structf3d_1_1options_1_1ui_1a9fbb41f4b580d17168ec5de11684b8a7 */}
 
 ![][public]
 
@@ -275,13 +275,13 @@ bool f3d::options::ui::dropzone = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::dropzone"}]}`
--->
+*/}
 
-### Variable dropzone\_info {#structf3d_1_1options_1_1ui_1a83d3e3bca58cdf8b05ebf40d6720db91}
+### Variable dropzone\_info {/* #structf3d_1_1options_1_1ui_1a83d3e3bca58cdf8b05ebf40d6720db91 */}
 
 ![][public]
 
@@ -301,13 +301,13 @@ std::string f3d::options::ui::dropzone_info = ""
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::dropzone_info"}]}`
--->
+*/}
 
-### Variable filename {#structf3d_1_1options_1_1ui_1a7048320d9bb390ae7835661897e95dd1}
+### Variable filename {/* #structf3d_1_1options_1_1ui_1a7048320d9bb390ae7835661897e95dd1 */}
 
 ![][public]
 
@@ -327,13 +327,13 @@ bool f3d::options::ui::filename = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::filename"}]}`
--->
+*/}
 
-### Variable filename\_info {#structf3d_1_1options_1_1ui_1a0e50b1165e587143d700f0c2d63ad418}
+### Variable filename\_info {/* #structf3d_1_1options_1_1ui_1a0e50b1165e587143d700f0c2d63ad418 */}
 
 ![][public]
 
@@ -353,13 +353,13 @@ std::string f3d::options::ui::filename_info = ""
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::filename_info"}]}`
--->
+*/}
 
-### Variable font\_color {#structf3d_1_1options_1_1ui_1aef4e16640f1a1d39b082e95065cf92cf}
+### Variable font\_color {/* #structf3d_1_1options_1_1ui_1aef4e16640f1a1d39b082e95065cf92cf */}
 
 ![][public]
 
@@ -379,13 +379,13 @@ f3d::color_t f3d::options::ui::font_color = [f3d::color\_t](classf3d_1_1color__t
 
 **Type**: [f3d::color\_t](classf3d_1_1color__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::font_color"}]}`
--->
+*/}
 
-### Variable font\_file {#structf3d_1_1options_1_1ui_1aa3b74802f8b6f49f192b5e10bdf0e57d}
+### Variable font\_file {/* #structf3d_1_1options_1_1ui_1aa3b74802f8b6f49f192b5e10bdf0e57d */}
 
 ![][public]
 
@@ -405,13 +405,13 @@ std::optional<std::filesystem::path> f3d::options::ui::font_file
 
 **Type**: std::optional< std::filesystem::path >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::font_file"}]}`
--->
+*/}
 
-### Variable fps {#structf3d_1_1options_1_1ui_1a32b32dd1964f7aef02551de40fd7f621}
+### Variable fps {/* #structf3d_1_1options_1_1ui_1a32b32dd1964f7aef02551de40fd7f621 */}
 
 ![][public]
 
@@ -431,13 +431,13 @@ bool f3d::options::ui::fps = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::fps"}]}`
--->
+*/}
 
-### Variable hdri\_filename {#structf3d_1_1options_1_1ui_1a0be6a75fb4cb26a99b3d2de679428a68}
+### Variable hdri\_filename {/* #structf3d_1_1options_1_1ui_1a0be6a75fb4cb26a99b3d2de679428a68 */}
 
 ![][public]
 
@@ -457,13 +457,13 @@ bool f3d::options::ui::hdri_filename = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::hdri_filename"}]}`
--->
+*/}
 
-### Variable loader\_progress {#structf3d_1_1options_1_1ui_1a57c3b693a4c40a2b53c2bbd78a424590}
+### Variable loader\_progress {/* #structf3d_1_1options_1_1ui_1a57c3b693a4c40a2b53c2bbd78a424590 */}
 
 ![][public]
 
@@ -483,13 +483,13 @@ bool f3d::options::ui::loader_progress = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::loader_progress"}]}`
--->
+*/}
 
-### Variable loader\_progress\_color {#structf3d_1_1options_1_1ui_1ada8e682055fabcd818b2f82cb094c119}
+### Variable loader\_progress\_color {/* #structf3d_1_1options_1_1ui_1ada8e682055fabcd818b2f82cb094c119 */}
 
 ![][public]
 
@@ -509,13 +509,13 @@ std::optional<f3d::color_t> f3d::options::ui::loader_progress_color
 
 **Type**: std::optional< [f3d::color\_t](classf3d_1_1color__t.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::loader_progress_color"}]}`
--->
+*/}
 
-### Variable metadata {#structf3d_1_1options_1_1ui_1a15cbd89b8b286034c91edf77f6278a7e}
+### Variable metadata {/* #structf3d_1_1options_1_1ui_1a15cbd89b8b286034c91edf77f6278a7e */}
 
 ![][public]
 
@@ -535,13 +535,13 @@ bool f3d::options::ui::metadata = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::metadata"}]}`
--->
+*/}
 
-### Variable minimal\_console {#structf3d_1_1options_1_1ui_1af69b0a70c39649a14b49b06a3c429f37}
+### Variable minimal\_console {/* #structf3d_1_1options_1_1ui_1af69b0a70c39649a14b49b06a3c429f37 */}
 
 ![][public]
 
@@ -561,13 +561,13 @@ bool f3d::options::ui::minimal_console = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::minimal_console"}]}`
--->
+*/}
 
-### Variable notifications {#structf3d_1_1options_1_1ui_1a65758894ab746dc244ff501b849a618a}
+### Variable notifications {/* #structf3d_1_1options_1_1ui_1a65758894ab746dc244ff501b849a618a */}
 
 ![][public]
 
@@ -587,13 +587,13 @@ struct f3d::options::ui::notifications f3d::options::ui::notifications
 
 **Type**: struct f3d::options::ui::notifications
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::notifications"}]}`
--->
+*/}
 
-### Variable scalar\_bar {#structf3d_1_1options_1_1ui_1a00a0273d310e85dd94b8e974affc6b44}
+### Variable scalar\_bar {/* #structf3d_1_1options_1_1ui_1a00a0273d310e85dd94b8e974affc6b44 */}
 
 ![][public]
 
@@ -613,13 +613,13 @@ bool f3d::options::ui::scalar_bar = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::scalar_bar"}]}`
--->
+*/}
 
-### Variable scale {#structf3d_1_1options_1_1ui_1a240d1a8507160aa83f10508efa911f56}
+### Variable scale {/* #structf3d_1_1options_1_1ui_1a240d1a8507160aa83f10508efa911f56 */}
 
 ![][public]
 
@@ -639,13 +639,13 @@ f3d::ratio_t f3d::options::ui::scale = [f3d::ratio\_t](classf3d_1_1ratio__t.md){
 
 **Type**: [f3d::ratio\_t](classf3d_1_1ratio__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::scale"}]}`
--->
+*/}
 
-### Variable scene\_hierarchy {#structf3d_1_1options_1_1ui_1a4fffa6b3c5870ecf8b143d1501a30cbe}
+### Variable scene\_hierarchy {/* #structf3d_1_1options_1_1ui_1a4fffa6b3c5870ecf8b143d1501a30cbe */}
 
 ![][public]
 
@@ -665,13 +665,13 @@ bool f3d::options::ui::scene_hierarchy = false
 
 **Type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::scene_hierarchy"}]}`
--->
+*/}
 
-### Variable x\_color {#structf3d_1_1options_1_1ui_1aa8d952112cf3576c45e68b3826d04eda}
+### Variable x\_color {/* #structf3d_1_1options_1_1ui_1aa8d952112cf3576c45e68b3826d04eda */}
 
 ![][public]
 
@@ -691,13 +691,13 @@ f3d::color_t f3d::options::ui::x_color = [f3d::color\_t](classf3d_1_1color__t.md
 
 **Type**: [f3d::color\_t](classf3d_1_1color__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::x_color"}]}`
--->
+*/}
 
-### Variable y\_color {#structf3d_1_1options_1_1ui_1ad39fabdba87a573799118efc53c49038}
+### Variable y\_color {/* #structf3d_1_1options_1_1ui_1ad39fabdba87a573799118efc53c49038 */}
 
 ![][public]
 
@@ -717,13 +717,13 @@ f3d::color_t f3d::options::ui::y_color = [f3d::color\_t](classf3d_1_1color__t.md
 
 **Type**: [f3d::color\_t](classf3d_1_1color__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::y_color"}]}`
--->
+*/}
 
-### Variable z\_color {#structf3d_1_1options_1_1ui_1ab72517b9b3a0ef4bb5ff08442207bec0}
+### Variable z\_color {/* #structf3d_1_1options_1_1ui_1ab72517b9b3a0ef4bb5ff08442207bec0 */}
 
 ![][public]
 
@@ -743,11 +743,11 @@ f3d::color_t f3d::options::ui::z_color = [f3d::color\_t](classf3d_1_1color__t.md
 
 **Type**: [f3d::color\_t](classf3d_1_1color__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::ui::z_color"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

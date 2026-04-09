@@ -1,4 +1,4 @@
-# Structure f3d::interactor::invalid_args_exception {#structf3d_1_1interactor_1_1invalid__args__exception}
+# Structure f3d::interactor::invalid_args_exception {/* #structf3d_1_1interactor_1_1invalid__args__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by command callbacks when the arguments of the c
 
 ## Public functions
 
-### Function invalid\_args\_exception {#structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8}
+### Function invalid\_args\_exception {/* #structf3d_1_1interactor_1_1invalid__args__exception_1ac50a14b6ce17534752862bf4d9f562a8 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::interactor::invalid_args_exception::invalid_args_exception(const std::strin
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::invalid_args_exception::invalid_args_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

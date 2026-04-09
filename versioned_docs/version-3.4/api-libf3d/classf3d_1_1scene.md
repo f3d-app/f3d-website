@@ -1,4 +1,4 @@
-# Class f3d::scene {#classf3d_1_1scene}
+# Class f3d::scene {/* #classf3d_1_1scene */}
 
 ![][C++]
 ![][public]
@@ -52,7 +52,7 @@ if (load.supports(path)
 
 ## undefined
 
-### Function add {#classf3d_1_1scene_1abb62b89f76dc0c102c7b040cd8837fae}
+### Function add {/* #classf3d_1_1scene_1abb62b89f76dc0c102c7b040cd8837fae */}
 
 ![][public]
 
@@ -74,13 +74,13 @@ Add and load provided files into the scene Already added file will NOT be reload
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::add"}]}`
--->
+*/}
 
-### Function add {#classf3d_1_1scene_1a7bfb6563cbc4b43741141da059092c1f}
+### Function add {/* #classf3d_1_1scene_1a7bfb6563cbc4b43741141da059092c1f */}
 
 ![][public]
 
@@ -102,13 +102,13 @@ Add and load provided files into the scene Already added file will NOT be reload
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::add"}]}`
--->
+*/}
 
-### Function add {#classf3d_1_1scene_1a19c696c7ab1b02655cc8598187c4b71c}
+### Function add {/* #classf3d_1_1scene_1a19c696c7ab1b02655cc8598187c4b71c */}
 
 ![][public]
 
@@ -130,15 +130,15 @@ Add and load provided files into the scene Already added file will NOT be reload
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::add"}]}`
--->
+*/}
 
 ## undefined
 
-### Function add {#classf3d_1_1scene_1a0a57d92388317148755090a471f2e10c}
+### Function add {/* #classf3d_1_1scene_1a0a57d92388317148755090a471f2e10c */}
 
 ![][public]
 
@@ -160,13 +160,13 @@ Convenience initializer list signature for add method
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::add"}]}`
--->
+*/}
 
-### Function add {#classf3d_1_1scene_1a981b64ee508c6a0882cbdf57a99b3bb4}
+### Function add {/* #classf3d_1_1scene_1a981b64ee508c6a0882cbdf57a99b3bb4 */}
 
 ![][public]
 
@@ -188,15 +188,15 @@ Convenience initializer list signature for add method
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::add"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function add {#classf3d_1_1scene_1a7bdb1253de9d9b0a2ecafea62628b9e4}
+### Function add {/* #classf3d_1_1scene_1a7bdb1253de9d9b0a2ecafea62628b9e4 */}
 
 ![][public]
 
@@ -218,13 +218,13 @@ Add and load provided mesh into the scene
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::add"}]}`
--->
+*/}
 
-### Function clear {#classf3d_1_1scene_1ae154db17f90d720aafb2346411604c1d}
+### Function clear {/* #classf3d_1_1scene_1ae154db17f90d720aafb2346411604c1d */}
 
 ![][public]
 
@@ -242,13 +242,13 @@ Clear the scene of all added files
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::clear"}]}`
--->
+*/}
 
-### Function addLight {#classf3d_1_1scene_1ae0dbd636405f91b884a41798c0488000}
+### Function addLight {/* #classf3d_1_1scene_1ae0dbd636405f91b884a41798c0488000 */}
 
 ![][public]
 ![][const]
@@ -271,13 +271,13 @@ Add a light based on a light state, returns the index of the added light.
 
 **Return type**: int
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::addLight"}]}`
--->
+*/}
 
-### Function getLightCount {#classf3d_1_1scene_1a05905e5c7dc7540ba29303153b881af6}
+### Function getLightCount {/* #classf3d_1_1scene_1a05905e5c7dc7540ba29303153b881af6 */}
 
 ![][public]
 ![][const]
@@ -296,13 +296,13 @@ Get the number of lights.
 
 **Return type**: int
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::getLightCount"}]}`
--->
+*/}
 
-### Function getLight {#classf3d_1_1scene_1a7dd307c6b9005ca6673d5738a9df6ef2}
+### Function getLight {/* #classf3d_1_1scene_1a7dd307c6b9005ca6673d5738a9df6ef2 */}
 
 ![][public]
 ![][const]
@@ -325,13 +325,13 @@ Get the light state at provided index. [light\_exception](structf3d_1_1scene_1_1
 
 **Return type**: [light\_state\_t](structf3d_1_1light__state__t.md)
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::getLight"}]}`
--->
+*/}
 
-### Function updateLight {#classf3d_1_1scene_1a77e8a0bad217262f01f902e756ba49c2}
+### Function updateLight {/* #classf3d_1_1scene_1a77e8a0bad217262f01f902e756ba49c2 */}
 
 ![][public]
 
@@ -354,13 +354,13 @@ Update a light at provided index with the provided light state. [light\_exceptio
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::updateLight"}]}`
--->
+*/}
 
-### Function removeLight {#classf3d_1_1scene_1ad3b235b9a70810f1cbfa609d9802fa34}
+### Function removeLight {/* #classf3d_1_1scene_1ad3b235b9a70810f1cbfa609d9802fa34 */}
 
 ![][public]
 
@@ -382,13 +382,13 @@ Remove a light at provided index. [light\_exception](structf3d_1_1scene_1_1light
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::removeLight"}]}`
--->
+*/}
 
-### Function removeAllLights {#classf3d_1_1scene_1adcd47d1cee28ec70333ac691d3db48aa}
+### Function removeAllLights {/* #classf3d_1_1scene_1adcd47d1cee28ec70333ac691d3db48aa */}
 
 ![][public]
 
@@ -406,13 +406,13 @@ Remove all lights from the scene.
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::removeAllLights"}]}`
--->
+*/}
 
-### Function supports {#classf3d_1_1scene_1a7542a5ca95dd82a89a3b7772cb416dfd}
+### Function supports {/* #classf3d_1_1scene_1a7542a5ca95dd82a89a3b7772cb416dfd */}
 
 ![][public]
 
@@ -434,13 +434,13 @@ Return true if provided file path is supported, false otherwise.
 
 **Return type**: bool
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::supports"}]}`
--->
+*/}
 
-### Function loadAnimationTime {#classf3d_1_1scene_1ae225316a771e942f930ec61588201233}
+### Function loadAnimationTime {/* #classf3d_1_1scene_1ae225316a771e942f930ec61588201233 */}
 
 ![][public]
 
@@ -462,13 +462,13 @@ Load added files at provided time value if they contain any animation Providing 
 
 **Return type**: [scene](classf3d_1_1scene.md) &
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::loadAnimationTime"}]}`
--->
+*/}
 
-### Function animationTimeRange {#classf3d_1_1scene_1af6303bb8cd99ba35cf67c700d1550867}
+### Function animationTimeRange {/* #classf3d_1_1scene_1af6303bb8cd99ba35cf67c700d1550867 */}
 
 ![][public]
 
@@ -486,13 +486,13 @@ Get animation time range of currently added files. Returns [0, 0] if there is no
 
 **Return type**: std::pair< double, double >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::animationTimeRange"}]}`
--->
+*/}
 
-### Function availableAnimations {#classf3d_1_1scene_1ac9b41a495f0e8cf680d2511e3959ce6a}
+### Function availableAnimations {/* #classf3d_1_1scene_1ac9b41a495f0e8cf680d2511e3959ce6a */}
 
 ![][public]
 ![][const]
@@ -511,17 +511,17 @@ Return the number of animations available in the currently loaded files.
 
 **Return type**: unsigned int
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::scene::availableAnimations"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"scene_8h"},"children":[{"type":"text","text":"scene.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

@@ -1,4 +1,4 @@
-# Class vtkF3DFaceVaryingPointDispatcher {#classvtkF3DFaceVaryingPointDispatcher}
+# Class vtkF3DFaceVaryingPointDispatcher {/* #classvtkF3DFaceVaryingPointDispatcher */}
 
 ![][C++]
 ![][public]
@@ -32,7 +32,7 @@ Face-varying attributes are a special case between point and cell data where the
 
 ## Public static functions
 
-### Function New {#classvtkF3DFaceVaryingPointDispatcher_1a2c01bd1a69ac6e03ddac5069eb8d4166}
+### Function New {/* #classvtkF3DFaceVaryingPointDispatcher_1a2c01bd1a69ac6e03ddac5069eb8d4166 */}
 
 ![][public]
 ![][static]
@@ -51,13 +51,13 @@ static vtkF3DFaceVaryingPointDispatcher * vtkF3DFaceVaryingPointDispatcher::New(
 
 **Return type**: [vtkF3DFaceVaryingPointDispatcher](classvtkF3DFaceVaryingPointDispatcher.md) *
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::New"}]}`
--->
+*/}
 
-### Function INTERPOLATION\_TYPE {#classvtkF3DFaceVaryingPointDispatcher_1a71fff9c5f8f911a8acc521188a098aaf}
+### Function INTERPOLATION\_TYPE {/* #classvtkF3DFaceVaryingPointDispatcher_1a71fff9c5f8f911a8acc521188a098aaf */}
 
 ![][public]
 ![][static]
@@ -76,15 +76,15 @@ Metadata used to indicate which interpolation is used on arrays
 
 **Return type**: vtkInformationIntegerKey *
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::INTERPOLATION_TYPE"}]}`
--->
+*/}
 
 ## Public functions
 
-### Function vtkTypeMacro {#classvtkF3DFaceVaryingPointDispatcher_1a91d5a06042aa2ffe4e5659a762c94a06}
+### Function vtkTypeMacro {/* #classvtkF3DFaceVaryingPointDispatcher_1a91d5a06042aa2ffe4e5659a762c94a06 */}
 
 ![][public]
 
@@ -107,15 +107,15 @@ vtkF3DFaceVaryingPointDispatcher::vtkTypeMacro(vtkF3DFaceVaryingPointDispatcher,
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::vtkTypeMacro"}]}`
--->
+*/}
 
 ## Protected functions
 
-### Function vtkF3DFaceVaryingPointDispatcher {#classvtkF3DFaceVaryingPointDispatcher_1ac6c58598dd120e26d9f89e8cae1f47f8}
+### Function vtkF3DFaceVaryingPointDispatcher {/* #classvtkF3DFaceVaryingPointDispatcher_1ac6c58598dd120e26d9f89e8cae1f47f8 */}
 
 ![][protected]
 
@@ -133,13 +133,13 @@ vtkF3DFaceVaryingPointDispatcher::vtkF3DFaceVaryingPointDispatcher()
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::vtkF3DFaceVaryingPointDispatcher"}]}`
--->
+*/}
 
-### Function ~vtkF3DFaceVaryingPointDispatcher {#classvtkF3DFaceVaryingPointDispatcher_1a2cec14ec93fc87d03e21823ab42e90a5}
+### Function ~vtkF3DFaceVaryingPointDispatcher {/* #classvtkF3DFaceVaryingPointDispatcher_1a2cec14ec93fc87d03e21823ab42e90a5 */}
 
 ![][protected]
 
@@ -157,13 +157,13 @@ vtkF3DFaceVaryingPointDispatcher::~vtkF3DFaceVaryingPointDispatcher() override
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::~vtkF3DFaceVaryingPointDispatcher"}]}`
--->
+*/}
 
-### Function RequestData {#classvtkF3DFaceVaryingPointDispatcher_1ace7ef1e416f2d4f6808df00d68ead236}
+### Function RequestData {/* #classvtkF3DFaceVaryingPointDispatcher_1ace7ef1e416f2d4f6808df00d68ead236 */}
 
 ![][protected]
 
@@ -187,15 +187,15 @@ int vtkF3DFaceVaryingPointDispatcher::RequestData(vtkInformation *, vtkInformati
 
 **Return type**: int
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::RequestData"}]}`
--->
+*/}
 
 ## Private functions
 
-### Function vtkF3DFaceVaryingPointDispatcher {#classvtkF3DFaceVaryingPointDispatcher_1a3e661430576b8d1e4cd85e483454ed6f}
+### Function vtkF3DFaceVaryingPointDispatcher {/* #classvtkF3DFaceVaryingPointDispatcher_1a3e661430576b8d1e4cd85e483454ed6f */}
 
 ![][private]
 
@@ -217,13 +217,13 @@ vtkF3DFaceVaryingPointDispatcher::vtkF3DFaceVaryingPointDispatcher(const vtkF3DF
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::vtkF3DFaceVaryingPointDispatcher"}]}`
--->
+*/}
 
-### Function operator= {#classvtkF3DFaceVaryingPointDispatcher_1a42c19b9e10ddf1a1847f8a8ce6722c48}
+### Function operator= {/* #classvtkF3DFaceVaryingPointDispatcher_1a42c19b9e10ddf1a1847f8a8ce6722c48 */}
 
 ![][private]
 
@@ -245,17 +245,17 @@ void vtkF3DFaceVaryingPointDispatcher::operator=(const vtkF3DFaceVaryingPointDis
 
 **Return type**: void
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher::operator="}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"vtkF3DFaceVaryingPointDispatcher_8h"},"children":[{"type":"text","text":"vtkF3DFaceVaryingPointDispatcher.h"}]}`
--->
+*/}
 
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)
 [public]: https://img.shields.io/badge/-public-brightgreen (public)

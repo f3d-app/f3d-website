@@ -1,4 +1,4 @@
-# Structure f3d::options::render::light {#structf3d_1_1options_1_1render_1_1light}
+# Structure f3d::options::render::light {/* #structf3d_1_1options_1_1render_1_1light */}
 
 ![][C++]
 ![][public]
@@ -15,7 +15,7 @@
 
 ## Public attributes
 
-### Variable intensity {#structf3d_1_1options_1_1render_1_1light_1a7c3dde26359761f7150d726128ef4714}
+### Variable intensity {/* #structf3d_1_1options_1_1render_1_1light_1a7c3dde26359761f7150d726128ef4714 */}
 
 ![][public]
 
@@ -35,11 +35,11 @@ double f3d::options::render::light::intensity = 1.0
 
 **Type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::render::light::intensity"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

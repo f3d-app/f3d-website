@@ -9,7 +9,7 @@
 
 ## Functions
 
-### Function ParseToDouble {#F3DUtils_8h_1a1f3f6d785aab63015203d8a2deb62df5}
+### Function ParseToDouble {/* #F3DUtils_8h_1a1f3f6d785aab63015203d8a2deb62df5 */}
 
 ![][public]
 
@@ -35,7 +35,7 @@ VTKEXT_EXPORT double F3DUtils::ParseToDouble(const std::string &str, double def,
 
 
 
-### Function ParseToInt {#F3DUtils_8h_1aa80ae10ed644843e29f6929be254c33b}
+### Function ParseToInt {/* #F3DUtils_8h_1aa80ae10ed644843e29f6929be254c33b */}
 
 ![][public]
 

@@ -1,4 +1,4 @@
-# Namespace f3d {#namespacef3d}
+# Namespace f3d {/* #namespacef3d */}
 
 ![][C++]
 
@@ -37,7 +37,7 @@
 
 ## Typedefs
 
-### Typedef option\_variant\_t {#options_8h_1a64f3fb0a25524b592638f097793a05f6}
+### Typedef option\_variant\_t {/* #options_8h_1a64f3fb0a25524b592638f097793a05f6 */}
 
 ![][public]
 
@@ -57,13 +57,13 @@ using f3d::option_variant_t =
 
 **Return type**: std::variant< bool, int, double, std::string, std::vector< double >, std::vector< int > >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::option_variant_t"}]}`
--->
+*/}
 
-### Typedef angle\_deg\_t {#types_8h_1afffcb2b9b7c98468046339a5f53837ce}
+### Typedef angle\_deg\_t {/* #types_8h_1afffcb2b9b7c98468046339a5f53837ce */}
 
 ![][public]
 
@@ -82,15 +82,15 @@ Describe an angle in degrees.
 
 **Return type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::angle_deg_t"}]}`
--->
+*/}
 
 ## Variables
 
-### Variable light\_type {#types_8h_1abf2507668577f7e4f3f728cd68724320}
+### Variable light\_type {/* #types_8h_1abf2507668577f7e4f3f728cd68724320 */}
 
 ![][public]
 
@@ -109,13 +109,13 @@ enum F3D_EXPORT f3d::light_type
 
 **Type**: enum F3D_EXPORT
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::light_type"}]}`
--->
+*/}
 
-### Variable CAMERA\_LIGHT {#types_8h_1aa00b99d10397b786c4d08f690cf37bde}
+### Variable CAMERA\_LIGHT {/* #types_8h_1aa00b99d10397b786c4d08f690cf37bde */}
 
 ![][public]
 
@@ -134,13 +134,13 @@ enum F3D_EXPORT f3d::CAMERA_LIGHT = 2
 
 **Type**: enum F3D_EXPORT
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::CAMERA_LIGHT"}]}`
--->
+*/}
 
-### Variable SCENE\_LIGHT {#types_8h_1a05caa6569d9851cec58bebd695c05d3d}
+### Variable SCENE\_LIGHT {/* #types_8h_1a05caa6569d9851cec58bebd695c05d3d */}
 
 ![][public]
 
@@ -159,11 +159,11 @@ enum F3D_EXPORT f3d::SCENE_LIGHT = 3
 
 **Type**: enum F3D_EXPORT
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::SCENE_LIGHT"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

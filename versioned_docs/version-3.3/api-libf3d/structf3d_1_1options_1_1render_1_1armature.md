@@ -15,7 +15,7 @@
 
 ## Public attributes
 
-### Variable enable {#structf3d_1_1options_1_1render_1_1armature_1a1b0faf6db4400d0e15be0468413db1f6}
+### Variable enable {/* #structf3d_1_1options_1_1render_1_1armature_1a1b0faf6db4400d0e15be0468413db1f6 */}
 
 ![][public]
 

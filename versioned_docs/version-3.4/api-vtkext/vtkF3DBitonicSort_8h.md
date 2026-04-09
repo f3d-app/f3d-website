@@ -1,4 +1,4 @@
-# File vtkF3DBitonicSort.h {#vtkF3DBitonicSort_8h}
+# File vtkF3DBitonicSort.h {/* #vtkF3DBitonicSort_8h */}
 
 ![][C++]
 

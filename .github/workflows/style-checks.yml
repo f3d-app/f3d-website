@@ -34,7 +34,7 @@ jobs:
         uses: creyD/prettier_action@v4.3
         with:
           dry: True
-          prettier_options: "-w **/*.{ts,tsx,js,json,md,html,yml}"
+          prettier_options: "-w **/*.{ts,tsx,js,json,md,mdx,html,yml}"
 
       - name: Echo Diff
         shell: bash

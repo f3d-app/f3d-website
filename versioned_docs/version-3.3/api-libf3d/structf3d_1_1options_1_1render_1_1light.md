@@ -15,7 +15,7 @@
 
 ## Public attributes
 
-### Variable intensity {#structf3d_1_1options_1_1render_1_1light_1a7c3dde26359761f7150d726128ef4714}
+### Variable intensity {/* #structf3d_1_1options_1_1render_1_1light_1a7c3dde26359761f7150d726128ef4714 */}
 
 ![][public]
 

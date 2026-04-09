@@ -1,4 +1,4 @@
-# File vtkF3DGLTFImporter.h {#vtkF3DGLTFImporter_8h}
+# File vtkF3DGLTFImporter.h {/* #vtkF3DGLTFImporter_8h */}
 
 ![][C++]
 

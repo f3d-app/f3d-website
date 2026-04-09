@@ -20,7 +20,7 @@ An exception that can be thrown by the options when parsing of a string into an 
 
 ## Public functions
 
-### Function parsing\_exception {#structf3d_1_1options_1_1parsing__exception_1a2bd70a7c8381df3df1aca091bd3c71cc}
+### Function parsing\_exception {/* #structf3d_1_1options_1_1parsing__exception_1a2bd70a7c8381df3df1aca091bd3c71cc */}
 
 ![][public]
 

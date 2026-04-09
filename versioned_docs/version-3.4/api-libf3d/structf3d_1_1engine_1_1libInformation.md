@@ -1,4 +1,4 @@
-# Structure f3d::engine::libInformation {#structf3d_1_1engine_1_1libInformation}
+# Structure f3d::engine::libInformation {/* #structf3d_1_1engine_1_1libInformation */}
 
 ![][C++]
 ![][public]
@@ -23,7 +23,7 @@ A structure providing information about the libf3d. Returned by [getLibInfo()](c
 
 ## Public attributes
 
-### Variable Version {#structf3d_1_1engine_1_1libInformation_1a77e76b84e18488fd4cbc69011632809c}
+### Variable Version {/* #structf3d_1_1engine_1_1libInformation_1a77e76b84e18488fd4cbc69011632809c */}
 
 ![][public]
 
@@ -43,13 +43,13 @@ std::string f3d::engine::libInformation::Version
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::Version"}]}`
--->
+*/}
 
-### Variable VersionFull {#structf3d_1_1engine_1_1libInformation_1a22ab02e3f1d8e92fbd4e391bdbab16ee}
+### Variable VersionFull {/* #structf3d_1_1engine_1_1libInformation_1a22ab02e3f1d8e92fbd4e391bdbab16ee */}
 
 ![][public]
 
@@ -69,13 +69,13 @@ std::string f3d::engine::libInformation::VersionFull
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::VersionFull"}]}`
--->
+*/}
 
-### Variable BuildDate {#structf3d_1_1engine_1_1libInformation_1a96f5421664b16f4911a2a244a5b17130}
+### Variable BuildDate {/* #structf3d_1_1engine_1_1libInformation_1a96f5421664b16f4911a2a244a5b17130 */}
 
 ![][public]
 
@@ -95,13 +95,13 @@ std::string f3d::engine::libInformation::BuildDate
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::BuildDate"}]}`
--->
+*/}
 
-### Variable BuildSystem {#structf3d_1_1engine_1_1libInformation_1a9bc8f08c8a6a54d8c398db63a100f103}
+### Variable BuildSystem {/* #structf3d_1_1engine_1_1libInformation_1a9bc8f08c8a6a54d8c398db63a100f103 */}
 
 ![][public]
 
@@ -121,13 +121,13 @@ std::string f3d::engine::libInformation::BuildSystem
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::BuildSystem"}]}`
--->
+*/}
 
-### Variable Compiler {#structf3d_1_1engine_1_1libInformation_1a89403217bdae41dc3cb2af5a46123fc2}
+### Variable Compiler {/* #structf3d_1_1engine_1_1libInformation_1a89403217bdae41dc3cb2af5a46123fc2 */}
 
 ![][public]
 
@@ -147,13 +147,13 @@ std::string f3d::engine::libInformation::Compiler
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::Compiler"}]}`
--->
+*/}
 
-### Variable Modules {#structf3d_1_1engine_1_1libInformation_1ae91661d2e5ec8af1db9b73ac3a38fe45}
+### Variable Modules {/* #structf3d_1_1engine_1_1libInformation_1ae91661d2e5ec8af1db9b73ac3a38fe45 */}
 
 ![][public]
 
@@ -173,13 +173,13 @@ std::map<std::string, bool> f3d::engine::libInformation::Modules
 
 **Type**: std::map< std::string, bool >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::Modules"}]}`
--->
+*/}
 
-### Variable VTKVersion {#structf3d_1_1engine_1_1libInformation_1ae18443c52968409bbba45aa86ecbe116}
+### Variable VTKVersion {/* #structf3d_1_1engine_1_1libInformation_1ae18443c52968409bbba45aa86ecbe116 */}
 
 ![][public]
 
@@ -199,13 +199,13 @@ std::string f3d::engine::libInformation::VTKVersion
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::VTKVersion"}]}`
--->
+*/}
 
-### Variable Copyrights {#structf3d_1_1engine_1_1libInformation_1aa5fcaf4da0e499f963511197bafcaa68}
+### Variable Copyrights {/* #structf3d_1_1engine_1_1libInformation_1aa5fcaf4da0e499f963511197bafcaa68 */}
 
 ![][public]
 
@@ -225,13 +225,13 @@ std::vector<std::string> f3d::engine::libInformation::Copyrights
 
 **Type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::Copyrights"}]}`
--->
+*/}
 
-### Variable License {#structf3d_1_1engine_1_1libInformation_1aa1fc55f2019aefc29181dc1220d29093}
+### Variable License {/* #structf3d_1_1engine_1_1libInformation_1aa1fc55f2019aefc29181dc1220d29093 */}
 
 ![][public]
 
@@ -251,11 +251,11 @@ std::string f3d::engine::libInformation::License
 
 **Type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::engine::libInformation::License"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

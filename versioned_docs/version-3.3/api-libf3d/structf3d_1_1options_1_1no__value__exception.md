@@ -20,7 +20,7 @@ An exception that can be thrown by the options when a provided option is accesse
 
 ## Public functions
 
-### Function no\_value\_exception {#structf3d_1_1options_1_1no__value__exception_1aec096654198ece1c092d4f5db8950a8d}
+### Function no\_value\_exception {/* #structf3d_1_1options_1_1no__value__exception_1aec096654198ece1c092d4f5db8950a8d */}
 
 ![][public]
 

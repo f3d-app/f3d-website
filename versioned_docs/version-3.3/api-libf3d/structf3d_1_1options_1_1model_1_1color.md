@@ -17,7 +17,7 @@
 
 ## Public attributes
 
-### Variable opacity {#structf3d_1_1options_1_1model_1_1color_1a65270b2230a702a7658beefc83e815fe}
+### Variable opacity {/* #structf3d_1_1options_1_1model_1_1color_1a65270b2230a702a7658beefc83e815fe */}
 
 ![][public]
 
@@ -39,7 +39,7 @@ std::optional<double> f3d::options::model::color::opacity
 
 
 
-### Variable rgb {#structf3d_1_1options_1_1model_1_1color_1a5608a561ab77df64de65f40b4fae5f88}
+### Variable rgb {/* #structf3d_1_1options_1_1model_1_1color_1a5608a561ab77df64de65f40b4fae5f88 */}
 
 ![][public]
 
@@ -61,7 +61,7 @@ std::optional<f3d::color_t> f3d::options::model::color::rgb
 
 
 
-### Variable texture {#structf3d_1_1options_1_1model_1_1color_1a9574cb855badcc67b83eea7e73aed7c1}
+### Variable texture {/* #structf3d_1_1options_1_1model_1_1color_1a9574cb855badcc67b83eea7e73aed7c1 */}
 
 ![][public]
 

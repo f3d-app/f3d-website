@@ -37,7 +37,7 @@
 
 ## Typedefs
 
-### Typedef option\_variant\_t {#options_8h_1a64f3fb0a25524b592638f097793a05f6}
+### Typedef option\_variant\_t {/* #options_8h_1a64f3fb0a25524b592638f097793a05f6 */}
 
 ![][public]
 
@@ -59,7 +59,7 @@ using f3d::option_variant_t =
 
 
 
-### Typedef angle\_deg\_t {#types_8h_1afffcb2b9b7c98468046339a5f53837ce}
+### Typedef angle\_deg\_t {/* #types_8h_1afffcb2b9b7c98468046339a5f53837ce */}
 
 ![][public]
 
@@ -82,7 +82,7 @@ Describe an angle in degrees.
 
 ## Variables
 
-### Variable light\_type {#types_8h_1abf2507668577f7e4f3f728cd68724320}
+### Variable light\_type {/* #types_8h_1abf2507668577f7e4f3f728cd68724320 */}
 
 ![][public]
 
@@ -103,7 +103,7 @@ enum F3D_EXPORT f3d::light_type
 
 
 
-### Variable CAMERA\_LIGHT {#types_8h_1aa00b99d10397b786c4d08f690cf37bde}
+### Variable CAMERA\_LIGHT {/* #types_8h_1aa00b99d10397b786c4d08f690cf37bde */}
 
 ![][public]
 
@@ -124,7 +124,7 @@ enum F3D_EXPORT f3d::CAMERA_LIGHT = 2
 
 
 
-### Variable SCENE\_LIGHT {#types_8h_1a05caa6569d9851cec58bebd695c05d3d}
+### Variable SCENE\_LIGHT {/* #types_8h_1a05caa6569d9851cec58bebd695c05d3d */}
 
 ![][public]
 

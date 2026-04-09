@@ -27,7 +27,7 @@ A class containing useful static functions unrelated to other classes.
 
 ## Public types
 
-### Enumeration type KnownFolder {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037}
+### Enumeration type KnownFolder {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037 */}
 
 ![][public]
 
@@ -49,19 +49,19 @@ Enumeration of supported Windows known folders
 
 
 
-#### Enumerator ROAMINGAPPDATA {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037ae38588db6e73d4680ec6a0fb2717b85b}
+#### Enumerator ROAMINGAPPDATA {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037ae38588db6e73d4680ec6a0fb2717b85b */}
 
 
 
 
 
-#### Enumerator LOCALAPPDATA {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a26e533b6cb5cf77f7d0a48c2e45598f7}
+#### Enumerator LOCALAPPDATA {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037a26e533b6cb5cf77f7d0a48c2e45598f7 */}
 
 
 
 
 
-#### Enumerator PICTURES {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a7aa9c13a2316c4a661679ecb863b3775}
+#### Enumerator PICTURES {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037a7aa9c13a2316c4a661679ecb863b3775 */}
 
 
 
@@ -71,7 +71,7 @@ Enumeration of supported Windows known folders
 
 ## Public static functions
 
-### Function textDistance {#classf3d_1_1utils_1a57ebdf21e25b83bdefe7f23743e74424}
+### Function textDistance {/* #classf3d_1_1utils_1a57ebdf21e25b83bdefe7f23743e74424 */}
 
 ![][public]
 ![][static]
@@ -97,7 +97,7 @@ Compute the Levenshtein distance between two strings. Can be useful for spell ch
 
 
 
-### Function tokenize {#classf3d_1_1utils_1ae1cfff8e2b9d13a7556133db81b7971f}
+### Function tokenize {/* #classf3d_1_1utils_1ae1cfff8e2b9d13a7556133db81b7971f */}
 
 ![][public]
 ![][static]
@@ -152,7 +152,7 @@ Examples:
 
 
 
-### Function collapsePath {#classf3d_1_1utils_1a42d295d8692eeab2def58534f52dd3cb}
+### Function collapsePath {/* #classf3d_1_1utils_1a42d295d8692eeab2def58534f52dd3cb */}
 
 ![][public]
 ![][static]
@@ -191,7 +191,7 @@ Rely on vtksys::SystemTools::CollapseFullPath but return empty string if the pro
 
 
 
-### Function globToRegex {#classf3d_1_1utils_1a31985a8c903ca9880f66e48e0b2cdd99}
+### Function globToRegex {/* #classf3d_1_1utils_1a31985a8c903ca9880f66e48e0b2cdd99 */}
 
 ![][public]
 ![][static]
@@ -242,7 +242,7 @@ Throws a [utils::glob\_exception](structf3d_1_1utils_1_1glob__exception.md) if a
 
 
 
-### Function getEnv {#classf3d_1_1utils_1a79dd2ab7d2021779d80b14dbfc7520d1}
+### Function getEnv {/* #classf3d_1_1utils_1a79dd2ab7d2021779d80b14dbfc7520d1 */}
 
 ![][public]
 ![][static]
@@ -267,7 +267,7 @@ Get an environment variable value, returns std::nullopt if not set
 
 
 
-### Function getKnownFolder {#classf3d_1_1utils_1a19f45d7340b90d124a7bef05d82acbaf}
+### Function getKnownFolder {/* #classf3d_1_1utils_1a19f45d7340b90d124a7bef05d82acbaf */}
 
 ![][public]
 ![][static]

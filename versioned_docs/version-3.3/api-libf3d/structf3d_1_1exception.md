@@ -45,7 +45,7 @@ A generic exception used in the libf3d. Can be used to catch all exceptions when
 
 ## Public functions
 
-### Function exception {#structf3d_1_1exception_1aef4c85042406694200c7f8793785692d}
+### Function exception {/* #structf3d_1_1exception_1aef4c85042406694200c7f8793785692d */}
 
 ![][public]
 

@@ -1,4 +1,4 @@
-# Class f3d::utils {#classf3d_1_1utils}
+# Class f3d::utils {/* #classf3d_1_1utils */}
 
 ![][C++]
 ![][public]
@@ -28,7 +28,7 @@ A class containing useful static functions unrelated to other classes.
 
 ## Public types
 
-### Enumeration type KnownFolder {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037}
+### Enumeration type KnownFolder {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037 */}
 
 ![][public]
 
@@ -50,33 +50,33 @@ Enumeration of supported Windows known folders
 
 
 
-#### Enumerator ROAMINGAPPDATA {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037ae38588db6e73d4680ec6a0fb2717b85b}
+#### Enumerator ROAMINGAPPDATA {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037ae38588db6e73d4680ec6a0fb2717b85b */}
 
 
 
 
 
-#### Enumerator LOCALAPPDATA {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a26e533b6cb5cf77f7d0a48c2e45598f7}
+#### Enumerator LOCALAPPDATA {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037a26e533b6cb5cf77f7d0a48c2e45598f7 */}
 
 
 
 
 
-#### Enumerator PICTURES {#classf3d_1_1utils_1aebad957764dffbf22565e30997402037a7aa9c13a2316c4a661679ecb863b3775}
+#### Enumerator PICTURES {/* #classf3d_1_1utils_1aebad957764dffbf22565e30997402037a7aa9c13a2316c4a661679ecb863b3775 */}
 
 
 
 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::KnownFolder"}]}`
--->
+*/}
 
 ## Public static functions
 
-### Function textDistance {#classf3d_1_1utils_1a57ebdf21e25b83bdefe7f23743e74424}
+### Function textDistance {/* #classf3d_1_1utils_1a57ebdf21e25b83bdefe7f23743e74424 */}
 
 ![][public]
 ![][static]
@@ -100,13 +100,13 @@ Compute the Levenshtein distance between two strings. Can be useful for spell ch
 
 **Return type**: unsigned int
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::textDistance"}]}`
--->
+*/}
 
-### Function tokenize {#classf3d_1_1utils_1ae1cfff8e2b9d13a7556133db81b7971f}
+### Function tokenize {/* #classf3d_1_1utils_1ae1cfff8e2b9d13a7556133db81b7971f */}
 
 ![][public]
 ![][static]
@@ -159,13 +159,13 @@ Examples:
 
 **Return type**: std::vector< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::tokenize"}]}`
--->
+*/}
 
-### Function collapsePath {#classf3d_1_1utils_1a42d295d8692eeab2def58534f52dd3cb}
+### Function collapsePath {/* #classf3d_1_1utils_1a42d295d8692eeab2def58534f52dd3cb */}
 
 ![][public]
 ![][static]
@@ -202,13 +202,13 @@ Rely on vtksys::SystemTools::CollapseFullPath but return empty string if the pro
 
 **Return type**: std::filesystem::path
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::collapsePath"}]}`
--->
+*/}
 
-### Function globToRegex {#classf3d_1_1utils_1a31985a8c903ca9880f66e48e0b2cdd99}
+### Function globToRegex {/* #classf3d_1_1utils_1a31985a8c903ca9880f66e48e0b2cdd99 */}
 
 ![][public]
 ![][static]
@@ -257,13 +257,13 @@ Throws a [utils::glob\_exception](structf3d_1_1utils_1_1glob__exception.md) if a
 
 **Return type**: std::string
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::globToRegex"}]}`
--->
+*/}
 
-### Function getDPIScale {#classf3d_1_1utils_1a3875daede98917c9d18efa5191cb7381}
+### Function getDPIScale {/* #classf3d_1_1utils_1a3875daede98917c9d18efa5191cb7381 */}
 
 ![][public]
 ![][static]
@@ -282,13 +282,13 @@ Calculate the primary monitor system zoom scale base on DPI. Only supported on W
 
 **Return type**: double
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::getDPIScale"}]}`
--->
+*/}
 
-### Function getEnv {#classf3d_1_1utils_1a79dd2ab7d2021779d80b14dbfc7520d1}
+### Function getEnv {/* #classf3d_1_1utils_1a79dd2ab7d2021779d80b14dbfc7520d1 */}
 
 ![][public]
 ![][static]
@@ -311,13 +311,13 @@ Get an environment variable value, returns std::nullopt if not set
 
 **Return type**: std::optional< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::getEnv"}]}`
--->
+*/}
 
-### Function getKnownFolder {#classf3d_1_1utils_1a19f45d7340b90d124a7bef05d82acbaf}
+### Function getKnownFolder {/* #classf3d_1_1utils_1a19f45d7340b90d124a7bef05d82acbaf */}
 
 ![][public]
 ![][static]
@@ -340,17 +340,17 @@ Get an Windows known folder, returns std::nullopt in case of error. Return std::
 
 **Return type**: std::optional< std::string >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::utils::getKnownFolder"}]}`
--->
+*/}
 
-<!--
+{/*
 **TODO**:
 
 * `includes  {"type":"element","name":"includes","attributes":{"local":"no","refid":"utils_8h"},"children":[{"type":"text","text":"utils.h"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

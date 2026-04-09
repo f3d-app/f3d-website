@@ -17,7 +17,7 @@
 
 ## Public attributes
 
-### Variable denoise {#structf3d_1_1options_1_1render_1_1raytracing_1ac3a92729e19de09a1c3f104ac1a4842f}
+### Variable denoise {/* #structf3d_1_1options_1_1render_1_1raytracing_1ac3a92729e19de09a1c3f104ac1a4842f */}
 
 ![][public]
 
@@ -39,7 +39,7 @@ bool f3d::options::render::raytracing::denoise = false
 
 
 
-### Variable enable {#structf3d_1_1options_1_1render_1_1raytracing_1a3832be90cd41271078744a0e9fa0f918}
+### Variable enable {/* #structf3d_1_1options_1_1render_1_1raytracing_1a3832be90cd41271078744a0e9fa0f918 */}
 
 ![][public]
 
@@ -61,7 +61,7 @@ bool f3d::options::render::raytracing::enable = false
 
 
 
-### Variable samples {#structf3d_1_1options_1_1render_1_1raytracing_1aff2952d83334ceb714ad46a973104ddb}
+### Variable samples {/* #structf3d_1_1options_1_1render_1_1raytracing_1aff2952d83334ceb714ad46a973104ddb */}
 
 ![][public]
 

@@ -20,7 +20,7 @@ An exception that can be thrown by the engine when a plugin cannot be loaded.
 
 ## Public functions
 
-### Function plugin\_exception {#structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119}
+### Function plugin\_exception {/* #structf3d_1_1engine_1_1plugin__exception_1a912959867189cd1c31a315af92278119 */}
 
 ![][public]
 

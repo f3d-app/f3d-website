@@ -1,4 +1,4 @@
-# Structure f3d::interactor::command_runtime_exception {#structf3d_1_1interactor_1_1command__runtime__exception}
+# Structure f3d::interactor::command_runtime_exception {/* #structf3d_1_1interactor_1_1command__runtime__exception */}
 
 ![][C++]
 ![][public]
@@ -20,7 +20,7 @@ An exception that can be thrown by [interactor::triggerCommand](classf3d_1_1inte
 
 ## Public functions
 
-### Function command\_runtime\_exception {#structf3d_1_1interactor_1_1command__runtime__exception_1ac33aa8920fd869f50066de4ca067f950}
+### Function command\_runtime\_exception {/* #structf3d_1_1interactor_1_1command__runtime__exception_1ac33aa8920fd869f50066de4ca067f950 */}
 
 ![][public]
 
@@ -42,11 +42,11 @@ f3d::interactor::command_runtime_exception::command_runtime_exception(const std:
 
 **Return type**: 
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::interactor::command_runtime_exception::command_runtime_exception"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

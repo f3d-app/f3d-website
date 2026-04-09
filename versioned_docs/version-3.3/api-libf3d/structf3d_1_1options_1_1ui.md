@@ -36,7 +36,7 @@
 
 ## Public attributes
 
-### Variable animation\_progress {#structf3d_1_1options_1_1ui_1ae59abab94c46ea815619719508e4cc45}
+### Variable animation\_progress {/* #structf3d_1_1options_1_1ui_1ae59abab94c46ea815619719508e4cc45 */}
 
 ![][public]
 
@@ -58,7 +58,7 @@ bool f3d::options::ui::animation_progress = false
 
 
 
-### Variable axis {#structf3d_1_1options_1_1ui_1abfd8854499551ce7c0c540d78df2aff1}
+### Variable axis {/* #structf3d_1_1options_1_1ui_1abfd8854499551ce7c0c540d78df2aff1 */}
 
 ![][public]
 
@@ -80,7 +80,7 @@ bool f3d::options::ui::axis = false
 
 
 
-### Variable backdrop {#structf3d_1_1options_1_1ui_1a22decd9179c26365b4bd3a362f082ffa}
+### Variable backdrop {/* #structf3d_1_1options_1_1ui_1a22decd9179c26365b4bd3a362f082ffa */}
 
 ![][public]
 
@@ -102,7 +102,7 @@ struct f3d::options::ui::backdrop f3d::options::ui::backdrop
 
 
 
-### Variable cheatsheet {#structf3d_1_1options_1_1ui_1a1cde66196d0a9ce0226138000375fe34}
+### Variable cheatsheet {/* #structf3d_1_1options_1_1ui_1a1cde66196d0a9ce0226138000375fe34 */}
 
 ![][public]
 
@@ -124,7 +124,7 @@ bool f3d::options::ui::cheatsheet = false
 
 
 
-### Variable console {#structf3d_1_1options_1_1ui_1a6f1714ac73921c439ec565d81a37ab6f}
+### Variable console {/* #structf3d_1_1options_1_1ui_1a6f1714ac73921c439ec565d81a37ab6f */}
 
 ![][public]
 
@@ -146,7 +146,7 @@ bool f3d::options::ui::console = false
 
 
 
-### Variable drop\_zone {#structf3d_1_1options_1_1ui_1a3d7eb05cdc0b47b25ebe4c064ed193fc}
+### Variable drop\_zone {/* #structf3d_1_1options_1_1ui_1a3d7eb05cdc0b47b25ebe4c064ed193fc */}
 
 ![][public]
 
@@ -168,7 +168,7 @@ struct f3d::options::ui::drop_zone f3d::options::ui::drop_zone
 
 
 
-### Variable dropzone {#structf3d_1_1options_1_1ui_1a9fbb41f4b580d17168ec5de11684b8a7}
+### Variable dropzone {/* #structf3d_1_1options_1_1ui_1a9fbb41f4b580d17168ec5de11684b8a7 */}
 
 ![][public]
 
@@ -190,7 +190,7 @@ bool f3d::options::ui::dropzone = false
 
 
 
-### Variable dropzone\_info {#structf3d_1_1options_1_1ui_1a83d3e3bca58cdf8b05ebf40d6720db91}
+### Variable dropzone\_info {/* #structf3d_1_1options_1_1ui_1a83d3e3bca58cdf8b05ebf40d6720db91 */}
 
 ![][public]
 
@@ -212,7 +212,7 @@ std::string f3d::options::ui::dropzone_info = ""
 
 
 
-### Variable filename {#structf3d_1_1options_1_1ui_1a7048320d9bb390ae7835661897e95dd1}
+### Variable filename {/* #structf3d_1_1options_1_1ui_1a7048320d9bb390ae7835661897e95dd1 */}
 
 ![][public]
 
@@ -234,7 +234,7 @@ bool f3d::options::ui::filename = false
 
 
 
-### Variable filename\_info {#structf3d_1_1options_1_1ui_1a0e50b1165e587143d700f0c2d63ad418}
+### Variable filename\_info {/* #structf3d_1_1options_1_1ui_1a0e50b1165e587143d700f0c2d63ad418 */}
 
 ![][public]
 
@@ -256,7 +256,7 @@ std::string f3d::options::ui::filename_info = ""
 
 
 
-### Variable font\_file {#structf3d_1_1options_1_1ui_1aa3b74802f8b6f49f192b5e10bdf0e57d}
+### Variable font\_file {/* #structf3d_1_1options_1_1ui_1aa3b74802f8b6f49f192b5e10bdf0e57d */}
 
 ![][public]
 
@@ -278,7 +278,7 @@ std::optional<std::filesystem::path> f3d::options::ui::font_file
 
 
 
-### Variable fps {#structf3d_1_1options_1_1ui_1a32b32dd1964f7aef02551de40fd7f621}
+### Variable fps {/* #structf3d_1_1options_1_1ui_1a32b32dd1964f7aef02551de40fd7f621 */}
 
 ![][public]
 
@@ -300,7 +300,7 @@ bool f3d::options::ui::fps = false
 
 
 
-### Variable loader\_progress {#structf3d_1_1options_1_1ui_1a57c3b693a4c40a2b53c2bbd78a424590}
+### Variable loader\_progress {/* #structf3d_1_1options_1_1ui_1a57c3b693a4c40a2b53c2bbd78a424590 */}
 
 ![][public]
 
@@ -322,7 +322,7 @@ bool f3d::options::ui::loader_progress = false
 
 
 
-### Variable metadata {#structf3d_1_1options_1_1ui_1a15cbd89b8b286034c91edf77f6278a7e}
+### Variable metadata {/* #structf3d_1_1options_1_1ui_1a15cbd89b8b286034c91edf77f6278a7e */}
 
 ![][public]
 
@@ -344,7 +344,7 @@ bool f3d::options::ui::metadata = false
 
 
 
-### Variable minimal\_console {#structf3d_1_1options_1_1ui_1af69b0a70c39649a14b49b06a3c429f37}
+### Variable minimal\_console {/* #structf3d_1_1options_1_1ui_1af69b0a70c39649a14b49b06a3c429f37 */}
 
 ![][public]
 
@@ -366,7 +366,7 @@ bool f3d::options::ui::minimal_console = false
 
 
 
-### Variable scalar\_bar {#structf3d_1_1options_1_1ui_1a00a0273d310e85dd94b8e974affc6b44}
+### Variable scalar\_bar {/* #structf3d_1_1options_1_1ui_1a00a0273d310e85dd94b8e974affc6b44 */}
 
 ![][public]
 
@@ -388,7 +388,7 @@ bool f3d::options::ui::scalar_bar = false
 
 
 
-### Variable scale {#structf3d_1_1options_1_1ui_1a240d1a8507160aa83f10508efa911f56}
+### Variable scale {/* #structf3d_1_1options_1_1ui_1a240d1a8507160aa83f10508efa911f56 */}
 
 ![][public]
 

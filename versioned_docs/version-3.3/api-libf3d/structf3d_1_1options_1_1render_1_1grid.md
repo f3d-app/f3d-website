@@ -19,7 +19,7 @@
 
 ## Public attributes
 
-### Variable absolute {#structf3d_1_1options_1_1render_1_1grid_1ae488bf218987600f649b068f9dbe42dd}
+### Variable absolute {/* #structf3d_1_1options_1_1render_1_1grid_1ae488bf218987600f649b068f9dbe42dd */}
 
 ![][public]
 
@@ -41,7 +41,7 @@ bool f3d::options::render::grid::absolute = false
 
 
 
-### Variable color {#structf3d_1_1options_1_1render_1_1grid_1afabbc758f560678486c7a767791bbb00}
+### Variable color {/* #structf3d_1_1options_1_1render_1_1grid_1afabbc758f560678486c7a767791bbb00 */}
 
 ![][public]
 
@@ -63,7 +63,7 @@ f3d::color_t f3d::options::render::grid::color = [f3d::color\_t](classf3d_1_1col
 
 
 
-### Variable enable {#structf3d_1_1options_1_1render_1_1grid_1a8103928ee8571d9fd207c3b00c23b8ea}
+### Variable enable {/* #structf3d_1_1options_1_1render_1_1grid_1a8103928ee8571d9fd207c3b00c23b8ea */}
 
 ![][public]
 
@@ -85,7 +85,7 @@ bool f3d::options::render::grid::enable = false
 
 
 
-### Variable subdivisions {#structf3d_1_1options_1_1render_1_1grid_1a21af5f4e4d4de08175b66e348fc383d0}
+### Variable subdivisions {/* #structf3d_1_1options_1_1render_1_1grid_1a21af5f4e4d4de08175b66e348fc383d0 */}
 
 ![][public]
 
@@ -107,7 +107,7 @@ int f3d::options::render::grid::subdivisions = 10
 
 
 
-### Variable unit {#structf3d_1_1options_1_1render_1_1grid_1a36c0cd39a1804e9f73f6ed715a7350d7}
+### Variable unit {/* #structf3d_1_1options_1_1render_1_1grid_1a36c0cd39a1804e9f73f6ed715a7350d7 */}
 
 ![][public]
 

@@ -21,7 +21,7 @@ Describe a colormap, which is a vector of repeated: val,r,g,b
 
 ## Protected attributes
 
-### Variable Vector {#classf3d_1_1colormap__t_1aa9d270c81176f8025c47cc7d7c933975}
+### Variable Vector {/* #classf3d_1_1colormap__t_1aa9d270c81176f8025c47cc7d7c933975 */}
 
 ![][protected]
 
@@ -45,7 +45,7 @@ std::vector<double> f3d::colormap_t::Vector
 
 ## Public functions
 
-### Function colormap\_t {#classf3d_1_1colormap__t_1a52bf9c26a6d9658e080ce536cf67f195}
+### Function colormap\_t {/* #classf3d_1_1colormap__t_1a52bf9c26a6d9658e080ce536cf67f195 */}
 
 ![][public]
 
@@ -65,7 +65,7 @@ f3d::colormap_t::colormap_t()=default
 
 
 
-### Function colormap\_t {#classf3d_1_1colormap__t_1ae64d62b6ec1fae4875959a4d331b179f}
+### Function colormap\_t {/* #classf3d_1_1colormap__t_1ae64d62b6ec1fae4875959a4d331b179f */}
 
 ![][public]
 
@@ -89,7 +89,7 @@ f3d::colormap_t::colormap_t(const std::vector< double > &vec)
 
 
 
-### Function colormap\_t {#classf3d_1_1colormap__t_1aef7b5f89eeb562d31ad3548342d556f5}
+### Function colormap\_t {/* #classf3d_1_1colormap__t_1aef7b5f89eeb562d31ad3548342d556f5 */}
 
 ![][public]
 
@@ -113,7 +113,7 @@ f3d::colormap_t::colormap_t(const std::initializer_list< double > &list)
 
 
 
-### Function operator== {#classf3d_1_1colormap__t_1a9d90894bec8b68e89da9ef10f73be83f}
+### Function operator== {/* #classf3d_1_1colormap__t_1a9d90894bec8b68e89da9ef10f73be83f */}
 
 ![][public]
 ![][const]
@@ -138,7 +138,7 @@ bool f3d::colormap_t::operator==(const colormap_t &other) const
 
 
 
-### Function operator!= {#classf3d_1_1colormap__t_1a812e11d74e119dc5eb62e0772b096987}
+### Function operator!= {/* #classf3d_1_1colormap__t_1a812e11d74e119dc5eb62e0772b096987 */}
 
 ![][public]
 ![][const]
@@ -163,7 +163,7 @@ bool f3d::colormap_t::operator!=(const colormap_t &other) const
 
 
 
-### Function data {#classf3d_1_1colormap__t_1afd948309686178af70463e014d2dfb35}
+### Function data {/* #classf3d_1_1colormap__t_1afd948309686178af70463e014d2dfb35 */}
 
 ![][public]
 ![][const]

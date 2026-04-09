@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable factor {#structf3d_1_1options_1_1model_1_1emissive_1a593590f57510c465088f2cd4a21369e9}
+### Variable factor {/* #structf3d_1_1options_1_1model_1_1emissive_1a593590f57510c465088f2cd4a21369e9 */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ std::optional<f3d::color_t> f3d::options::model::emissive::factor
 
 
 
-### Variable texture {#structf3d_1_1options_1_1model_1_1emissive_1a7dc7d4e0c944b7ccd8ef1c17df2f5c1a}
+### Variable texture {/* #structf3d_1_1options_1_1model_1_1emissive_1a7dc7d4e0c944b7ccd8ef1c17df2f5c1a */}
 
 ![][public]
 

@@ -20,7 +20,7 @@ An exception that can be thrown by the options when a provided option does not e
 
 ## Public functions
 
-### Function inexistent\_exception {#structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3}
+### Function inexistent\_exception {/* #structf3d_1_1options_1_1inexistent__exception_1a709b2f34f7c2bea677e71bfa3cae39e3 */}
 
 ![][public]
 

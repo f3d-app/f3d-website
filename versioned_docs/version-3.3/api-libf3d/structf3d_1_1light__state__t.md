@@ -22,7 +22,7 @@
 
 ## Public attributes
 
-### Variable type {#structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11}
+### Variable type {/* #structf3d_1_1light__state__t_1a9686287a8a646fcbb4d1071f78165a11 */}
 
 ![][public]
 
@@ -44,7 +44,7 @@ light_type f3d::light_state_t::type = light_type::SCENE_LIGHT
 
 
 
-### Variable position {#structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a}
+### Variable position {/* #structf3d_1_1light__state__t_1a54a1ed683ee594e405061ed1f7502b4a */}
 
 ![][public]
 
@@ -66,7 +66,7 @@ point3_t f3d::light_state_t::position = { 0., 0., 0. }
 
 
 
-### Variable color {#structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633}
+### Variable color {/* #structf3d_1_1light__state__t_1adbbb786c2bcf02d19a4cec2f4c754633 */}
 
 ![][public]
 
@@ -88,7 +88,7 @@ color_t f3d::light_state_t::color = { 1., 1., 1. }
 
 
 
-### Variable direction {#structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465}
+### Variable direction {/* #structf3d_1_1light__state__t_1afaac12a01b4b165cf25d3dffa056a465 */}
 
 ![][public]
 
@@ -110,7 +110,7 @@ vector3_t f3d::light_state_t::direction = { 1., 0., 0. }
 
 
 
-### Variable positionalLight {#structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24}
+### Variable positionalLight {/* #structf3d_1_1light__state__t_1a953b11665623a73c83dffe27238b6b24 */}
 
 ![][public]
 
@@ -132,7 +132,7 @@ bool f3d::light_state_t::positionalLight = false
 
 
 
-### Variable intensity {#structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6}
+### Variable intensity {/* #structf3d_1_1light__state__t_1ac67bbfa7a078033cf9e97b0648bb15d6 */}
 
 ![][public]
 
@@ -154,7 +154,7 @@ double f3d::light_state_t::intensity = 1.0
 
 
 
-### Variable switchState {#structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a}
+### Variable switchState {/* #structf3d_1_1light__state__t_1a9ed6434bb4f3a39aa97d9d79b9175b9a */}
 
 ![][public]
 
@@ -178,7 +178,7 @@ bool f3d::light_state_t::switchState = true
 
 ## Public functions
 
-### Function operator== {#structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168}
+### Function operator== {/* #structf3d_1_1light__state__t_1aa0c6bb838ea67037f4a318549da66168 */}
 
 ![][public]
 ![][const]

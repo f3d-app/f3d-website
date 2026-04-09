@@ -1,4 +1,4 @@
-# Structure f3d::options::model {#structf3d_1_1options_1_1model}
+# Structure f3d::options::model {/* #structf3d_1_1options_1_1model */}
 
 ![][C++]
 ![][public]
@@ -39,7 +39,7 @@
 
 ## Public attributes
 
-### Variable checkerboard {#structf3d_1_1options_1_1model_1ae1955c353187bfb9b993bf2943ee11c3}
+### Variable checkerboard {/* #structf3d_1_1options_1_1model_1ae1955c353187bfb9b993bf2943ee11c3 */}
 
 ![][public]
 
@@ -59,13 +59,13 @@ struct f3d::options::model::checkerboard f3d::options::model::checkerboard
 
 **Type**: struct f3d::options::model::checkerboard
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::checkerboard"}]}`
--->
+*/}
 
-### Variable color {#structf3d_1_1options_1_1model_1af431816844fcf2363c491cae36ae27a3}
+### Variable color {/* #structf3d_1_1options_1_1model_1af431816844fcf2363c491cae36ae27a3 */}
 
 ![][public]
 
@@ -85,13 +85,13 @@ struct f3d::options::model::color f3d::options::model::color
 
 **Type**: struct f3d::options::model::color
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::color"}]}`
--->
+*/}
 
-### Variable emissive {#structf3d_1_1options_1_1model_1a8576319993b667a32f791126bee11b47}
+### Variable emissive {/* #structf3d_1_1options_1_1model_1a8576319993b667a32f791126bee11b47 */}
 
 ![][public]
 
@@ -111,13 +111,13 @@ struct f3d::options::model::emissive f3d::options::model::emissive
 
 **Type**: struct f3d::options::model::emissive
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::emissive"}]}`
--->
+*/}
 
-### Variable matcap {#structf3d_1_1options_1_1model_1acfddb706b49f026263e6d0c4d1d0b07f}
+### Variable matcap {/* #structf3d_1_1options_1_1model_1acfddb706b49f026263e6d0c4d1d0b07f */}
 
 ![][public]
 
@@ -137,13 +137,13 @@ struct f3d::options::model::matcap f3d::options::model::matcap
 
 **Type**: struct f3d::options::model::matcap
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::matcap"}]}`
--->
+*/}
 
-### Variable material {#structf3d_1_1options_1_1model_1a9e2da200d13d4bda02caa6cc004c8cc4}
+### Variable material {/* #structf3d_1_1options_1_1model_1a9e2da200d13d4bda02caa6cc004c8cc4 */}
 
 ![][public]
 
@@ -163,13 +163,13 @@ struct f3d::options::model::material f3d::options::model::material
 
 **Type**: struct f3d::options::model::material
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::material"}]}`
--->
+*/}
 
-### Variable normal {#structf3d_1_1options_1_1model_1ae1ad2f7a6c8deae51b7b4074160a20e9}
+### Variable normal {/* #structf3d_1_1options_1_1model_1ae1ad2f7a6c8deae51b7b4074160a20e9 */}
 
 ![][public]
 
@@ -189,13 +189,13 @@ struct f3d::options::model::normal f3d::options::model::normal
 
 **Type**: struct f3d::options::model::normal
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::normal"}]}`
--->
+*/}
 
-### Variable normal\_glyphs {#structf3d_1_1options_1_1model_1a9df6cc7497c2eb5f230d556d626c7483}
+### Variable normal\_glyphs {/* #structf3d_1_1options_1_1model_1a9df6cc7497c2eb5f230d556d626c7483 */}
 
 ![][public]
 
@@ -215,13 +215,13 @@ struct f3d::options::model::normal_glyphs f3d::options::model::normal_glyphs
 
 **Type**: struct f3d::options::model::normal_glyphs
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::normal_glyphs"}]}`
--->
+*/}
 
-### Variable point\_sprites {#structf3d_1_1options_1_1model_1aefc3dad289eb1460139d71ea5ae9fdb6}
+### Variable point\_sprites {/* #structf3d_1_1options_1_1model_1aefc3dad289eb1460139d71ea5ae9fdb6 */}
 
 ![][public]
 
@@ -241,13 +241,13 @@ struct f3d::options::model::point_sprites f3d::options::model::point_sprites
 
 **Type**: struct f3d::options::model::point_sprites
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::point_sprites"}]}`
--->
+*/}
 
-### Variable scivis {#structf3d_1_1options_1_1model_1a26daeb95647332f6e04250b4dcc07a38}
+### Variable scivis {/* #structf3d_1_1options_1_1model_1a26daeb95647332f6e04250b4dcc07a38 */}
 
 ![][public]
 
@@ -267,13 +267,13 @@ struct f3d::options::model::scivis f3d::options::model::scivis
 
 **Type**: struct f3d::options::model::scivis
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::scivis"}]}`
--->
+*/}
 
-### Variable textures\_transform {#structf3d_1_1options_1_1model_1a2b8efc944525703ee71255da231ff02e}
+### Variable textures\_transform {/* #structf3d_1_1options_1_1model_1a2b8efc944525703ee71255da231ff02e */}
 
 ![][public]
 
@@ -293,13 +293,13 @@ std::optional<f3d::transform2d_t> f3d::options::model::textures_transform
 
 **Type**: std::optional< [f3d::transform2d\_t](classf3d_1_1transform2d__t.md) >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::textures_transform"}]}`
--->
+*/}
 
-### Variable unlit {#structf3d_1_1options_1_1model_1a6e763ff8fcb3395b0ed82c99c5bbb925}
+### Variable unlit {/* #structf3d_1_1options_1_1model_1a6e763ff8fcb3395b0ed82c99c5bbb925 */}
 
 ![][public]
 
@@ -319,13 +319,13 @@ std::optional<bool> f3d::options::model::unlit
 
 **Type**: std::optional< bool >
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::unlit"}]}`
--->
+*/}
 
-### Variable volume {#structf3d_1_1options_1_1model_1adf879ca381172543f8eb5087fd1127a7}
+### Variable volume {/* #structf3d_1_1options_1_1model_1adf879ca381172543f8eb5087fd1127a7 */}
 
 ![][public]
 
@@ -345,11 +345,11 @@ struct f3d::options::model::volume f3d::options::model::volume
 
 **Type**: struct f3d::options::model::volume
 
-<!--
+{/*
 **TODO**:
 
 * `qualifiedname {"type":"element","name":"qualifiedname","attributes":{},"children":[{"type":"text","text":"f3d::options::model::volume"}]}`
--->
+*/}
 
 [public]: https://img.shields.io/badge/-public-brightgreen (public)
 [C++]: https://img.shields.io/badge/language-C%2B%2B-blue (C++)

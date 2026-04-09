@@ -1,4 +1,4 @@
-# File vtkF3DFaceVaryingPointDispatcher.h {#vtkF3DFaceVaryingPointDispatcher_8h}
+# File vtkF3DFaceVaryingPointDispatcher.h {/* #vtkF3DFaceVaryingPointDispatcher_8h */}
 
 ![][C++]
 

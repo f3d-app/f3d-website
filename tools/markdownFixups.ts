@@ -19,7 +19,7 @@ function processUserOptions(content: string): string {
     // put the rest of the line (if any) as <small> so we can style it later
     const details_html = details ? ` <small>${details}</small>` : "";
 
-    return `${h_tag} ${flags_md}${details_html} {#${anchor}}`;
+    return `${h_tag} ${flags_md}${details_html} {/* #${anchor} */}`;
   }
 
   function addAnchorLinksForKnownFlags(substring: string, ...args: string[]) {
@@ -58,7 +58,7 @@ function processLibOptions(content: string): string {
     const anchor = option;
     const details_html = details ? ` <small>${details}</small>` : "";
 
-    return `${h_tag} \`${option}\`${details_html} {#${anchor}}`;
+    return `${h_tag} \`${option}\`${details_html} {/* #${anchor} */}`;
   }
 
   function addCliLink(substring: string, ...args: string[]) {

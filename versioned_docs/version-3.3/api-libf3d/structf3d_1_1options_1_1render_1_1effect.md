@@ -24,7 +24,7 @@
 
 ## Public attributes
 
-### Variable ambient\_occlusion {#structf3d_1_1options_1_1render_1_1effect_1a1b7f2866937fbd9fe07997aec7162709}
+### Variable ambient\_occlusion {/* #structf3d_1_1options_1_1render_1_1effect_1a1b7f2866937fbd9fe07997aec7162709 */}
 
 ![][public]
 
@@ -46,7 +46,7 @@ bool f3d::options::render::effect::ambient_occlusion = false
 
 
 
-### Variable anti\_aliasing {#structf3d_1_1options_1_1render_1_1effect_1a062714bd4ce6da94b4492fa778d4f419}
+### Variable anti\_aliasing {/* #structf3d_1_1options_1_1render_1_1effect_1a062714bd4ce6da94b4492fa778d4f419 */}
 
 ![][public]
 
@@ -68,7 +68,7 @@ bool f3d::options::render::effect::anti_aliasing = false
 
 
 
-### Variable antialiasing {#structf3d_1_1options_1_1render_1_1effect_1ac339a4122e38c01b2692d69b86a7aef6}
+### Variable antialiasing {/* #structf3d_1_1options_1_1render_1_1effect_1ac339a4122e38c01b2692d69b86a7aef6 */}
 
 ![][public]
 
@@ -90,7 +90,7 @@ struct f3d::options::render::effect::antialiasing f3d::options::render::effect::
 
 
 
-### Variable final\_shader {#structf3d_1_1options_1_1render_1_1effect_1a4ab6e1b40873de56044a8b94fad39aa1}
+### Variable final\_shader {/* #structf3d_1_1options_1_1render_1_1effect_1a4ab6e1b40873de56044a8b94fad39aa1 */}
 
 ![][public]
 
@@ -112,7 +112,7 @@ std::optional<std::string> f3d::options::render::effect::final_shader
 
 
 
-### Variable tone\_mapping {#structf3d_1_1options_1_1render_1_1effect_1ae94762121c57b1829521701daf0de245}
+### Variable tone\_mapping {/* #structf3d_1_1options_1_1render_1_1effect_1ae94762121c57b1829521701daf0de245 */}
 
 ![][public]
 
@@ -134,7 +134,7 @@ bool f3d::options::render::effect::tone_mapping = false
 
 
 
-### Variable translucency\_support {#structf3d_1_1options_1_1render_1_1effect_1a638f07c2ed641c9a6b381c624b98de64}
+### Variable translucency\_support {/* #structf3d_1_1options_1_1render_1_1effect_1a638f07c2ed641c9a6b381c624b98de64 */}
 
 ![][public]
 

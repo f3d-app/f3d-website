@@ -100,7 +100,7 @@ click 1 "options_8h.md#options_8h"
 
 ## Functions
 
-### Function operator\<\< {#options_8h_1ae45474fc5074fe195869b53d2a5429c1}
+### Function operator\<\< {/* #options_8h_1ae45474fc5074fe195869b53d2a5429c1 */}
 
 ![][public]
 
@@ -123,7 +123,7 @@ std::ostream & operator<<(std::ostream &os, const f3d::color_t &color)
 
 **Return type**: std::ostream &
 
-### Function operator\<\< {#options_8h_1a787081c010d4258cf01a9d7e4c0fdc1a}
+### Function operator\<\< {/* #options_8h_1a787081c010d4258cf01a9d7e4c0fdc1a */}
 
 ![][public]
 
@@ -146,7 +146,7 @@ std::ostream & operator<<(std::ostream &os, const f3d::direction_t &direction)
 
 **Return type**: std::ostream &
 
-### Function operator\<\< {#options_8h_1a9ac8e9c6c6a4dab9c5d3479c457f136d}
+### Function operator\<\< {/* #options_8h_1a9ac8e9c6c6a4dab9c5d3479c457f136d */}
 
 ![][public]
 
@@ -169,7 +169,7 @@ std::ostream & operator<<(std::ostream &os, const f3d::colormap_t &cm)
 
 **Return type**: std::ostream &
 
-### Function operator\<\< {#options_8h_1a690455850de66a7a03be6b3208cb16a4}
+### Function operator\<\< {/* #options_8h_1a690455850de66a7a03be6b3208cb16a4 */}
 
 ![][public]
 

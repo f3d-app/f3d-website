@@ -15,7 +15,7 @@
 
 ## Public attributes
 
-### Variable texture {#structf3d_1_1options_1_1model_1_1matcap_1a1384d51f8f1621e3cc1860ca2c15b33e}
+### Variable texture {/* #structf3d_1_1options_1_1model_1_1matcap_1a1384d51f8f1621e3cc1860ca2c15b33e */}
 
 ![][public]
 

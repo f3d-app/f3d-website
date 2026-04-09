@@ -28,7 +28,7 @@ A class to render things in a window or an image. An icon and windowName can be 
 
 ## Public types
 
-### Enumeration type Type {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471}
+### Enumeration type Type {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471 */}
 
 ![][public]
 
@@ -73,55 +73,55 @@ Enumeration of supported window types
 
 
 
-#### Enumerator NONE {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ab50339a10e1de285ac99d4c3990b8693}
+#### Enumerator NONE {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ab50339a10e1de285ac99d4c3990b8693 */}
 
 
 
 
 
-#### Enumerator EXTERNAL {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a3932d629fb5e2be9d09b3a4485b3cc9d}
+#### Enumerator EXTERNAL {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a3932d629fb5e2be9d09b3a4485b3cc9d */}
 
 
 
 
 
-#### Enumerator GLX {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ac313d26d26abf7402a24ce15663b52b6}
+#### Enumerator GLX {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ac313d26d26abf7402a24ce15663b52b6 */}
 
 
 
 
 
-#### Enumerator WGL {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471aef3c7326c5c23cc9c408d29410352b67}
+#### Enumerator WGL {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471aef3c7326c5c23cc9c408d29410352b67 */}
 
 
 
 
 
-#### Enumerator COCOA {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a0439e3cee63c8741e500230121911962}
+#### Enumerator COCOA {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a0439e3cee63c8741e500230121911962 */}
 
 
 
 
 
-#### Enumerator EGL {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ab1e1fe0cc927dbeae22dc1839e01bb20}
+#### Enumerator EGL {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ab1e1fe0cc927dbeae22dc1839e01bb20 */}
 
 
 
 
 
-#### Enumerator OSMESA {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a8e7cb674425fba84b801d46f1fd26b34}
+#### Enumerator OSMESA {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a8e7cb674425fba84b801d46f1fd26b34 */}
 
 
 
 
 
-#### Enumerator WASM {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ac7dbeb10b3299406a04231654cf6defd}
+#### Enumerator WASM {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471ac7dbeb10b3299406a04231654cf6defd */}
 
 
 
 
 
-#### Enumerator UNKNOWN {#classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a696b031073e74bf2cb98e5ef201d4aa3}
+#### Enumerator UNKNOWN {/* #classf3d_1_1window_1a4742753b53b500ca62f402424aa1f471a696b031073e74bf2cb98e5ef201d4aa3 */}
 
 
 
@@ -131,7 +131,7 @@ Enumeration of supported window types
 
 ## Public functions
 
-### Function getType {#classf3d_1_1window_1aef4007b0592061fa3f47152b311cc680}
+### Function getType {/* #classf3d_1_1window_1aef4007b0592061fa3f47152b311cc680 */}
 
 ![][public]
 
@@ -151,7 +151,7 @@ Get the type of the window.
 
 
 
-### Function isOffscreen {#classf3d_1_1window_1a0c44d1982ff046a99204937e0df1169d}
+### Function isOffscreen {/* #classf3d_1_1window_1a0c44d1982ff046a99204937e0df1169d */}
 
 ![][public]
 
@@ -171,7 +171,7 @@ Is the window offscreen.
 
 
 
-### Function getCamera {#classf3d_1_1window_1a96bc2fa72c67f0fd2242388bb3cbd32b}
+### Function getCamera {/* #classf3d_1_1window_1a96bc2fa72c67f0fd2242388bb3cbd32b */}
 
 ![][public]
 
@@ -191,7 +191,7 @@ Get the camera provided by the window.
 
 
 
-### Function render {#classf3d_1_1window_1ab0b3550f37167c31821e7ec7400bc0de}
+### Function render {/* #classf3d_1_1window_1ab0b3550f37167c31821e7ec7400bc0de */}
 
 ![][public]
 
@@ -211,7 +211,7 @@ Perform a render of the window to the screen. All dynamic options are updated if
 
 
 
-### Function renderToImage {#classf3d_1_1window_1a5f680e97668e40cb8640a9c6d8340b57}
+### Function renderToImage {/* #classf3d_1_1window_1a5f680e97668e40cb8640a9c6d8340b57 */}
 
 ![][public]
 
@@ -235,7 +235,7 @@ Perform a render of the window to the screen and save the result in a [f3d::imag
 
 
 
-### Function setSize {#classf3d_1_1window_1ac88005ab237f1aaa559968b3752a8509}
+### Function setSize {/* #classf3d_1_1window_1ac88005ab237f1aaa559968b3752a8509 */}
 
 ![][public]
 
@@ -260,7 +260,7 @@ Set the size of the window.
 
 
 
-### Function getWidth {#classf3d_1_1window_1a7c115887e68c0bdd5cf7c6048f410c52}
+### Function getWidth {/* #classf3d_1_1window_1a7c115887e68c0bdd5cf7c6048f410c52 */}
 
 ![][public]
 ![][const]
@@ -281,7 +281,7 @@ Get the width of the window.
 
 
 
-### Function getHeight {#classf3d_1_1window_1ad6a230a5f6b8e83ea7680da1c6a32434}
+### Function getHeight {/* #classf3d_1_1window_1ad6a230a5f6b8e83ea7680da1c6a32434 */}
 
 ![][public]
 ![][const]
@@ -302,7 +302,7 @@ Get the height of the window.
 
 
 
-### Function setPosition {#classf3d_1_1window_1a80d951424a1687434219a6e8030d5db3}
+### Function setPosition {/* #classf3d_1_1window_1a80d951424a1687434219a6e8030d5db3 */}
 
 ![][public]
 
@@ -327,7 +327,7 @@ Set the position of the window.
 
 
 
-### Function setIcon {#classf3d_1_1window_1a97032a56c303d51b9b74a438341696d7}
+### Function setIcon {/* #classf3d_1_1window_1a97032a56c303d51b9b74a438341696d7 */}
 
 ![][public]
 
@@ -352,7 +352,7 @@ Set the icon to be shown by a window manager. icon should be an unsigned char ar
 
 
 
-### Function setWindowName {#classf3d_1_1window_1ae5d1313a7822bd6bf234369feb544f37}
+### Function setWindowName {/* #classf3d_1_1window_1ae5d1313a7822bd6bf234369feb544f37 */}
 
 ![][public]
 
@@ -376,7 +376,7 @@ Set the window name to be shown by a window manager.
 
 
 
-### Function getWorldFromDisplay {#classf3d_1_1window_1ae963c7f41cecb2fb585a83495b05bb73}
+### Function getWorldFromDisplay {/* #classf3d_1_1window_1ae963c7f41cecb2fb585a83495b05bb73 */}
 
 ![][public]
 ![][const]
@@ -401,7 +401,7 @@ Convert a point in display coordinate to world coordinate.
 
 
 
-### Function getDisplayFromWorld {#classf3d_1_1window_1a95946b71f0ff9a3cbc36bc9b717270b8}
+### Function getDisplayFromWorld {/* #classf3d_1_1window_1a95946b71f0ff9a3cbc36bc9b717270b8 */}
 
 ![][public]
 ![][const]

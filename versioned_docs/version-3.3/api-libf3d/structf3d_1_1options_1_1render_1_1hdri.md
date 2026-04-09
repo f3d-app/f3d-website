@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable ambient {#structf3d_1_1options_1_1render_1_1hdri_1ae52e1bf0f408631def5fce25c447eeff}
+### Variable ambient {/* #structf3d_1_1options_1_1render_1_1hdri_1ae52e1bf0f408631def5fce25c447eeff */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ bool f3d::options::render::hdri::ambient = false
 
 
 
-### Variable file {#structf3d_1_1options_1_1render_1_1hdri_1af35a37bc9fc02d0dee17d7fd24487b54}
+### Variable file {/* #structf3d_1_1options_1_1render_1_1hdri_1af35a37bc9fc02d0dee17d7fd24487b54 */}
 
 ![][public]
 

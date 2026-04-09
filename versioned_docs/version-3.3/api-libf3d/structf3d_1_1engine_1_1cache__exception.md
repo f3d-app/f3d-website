@@ -20,7 +20,7 @@ An exception that can be thrown by the engine when the cache cannot be used
 
 ## Public functions
 
-### Function cache\_exception {#structf3d_1_1engine_1_1cache__exception_1ab75d07f81b5a88b12a4e45781aed373d}
+### Function cache\_exception {/* #structf3d_1_1engine_1_1cache__exception_1ab75d07f81b5a88b12a4e45781aed373d */}
 
 ![][public]
 

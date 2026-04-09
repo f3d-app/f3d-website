@@ -16,7 +16,7 @@
 
 ## Public attributes
 
-### Variable index {#structf3d_1_1options_1_1scene_1_1camera_1a799f270b9f1766f97dd122880c398f0f}
+### Variable index {/* #structf3d_1_1options_1_1scene_1_1camera_1a799f270b9f1766f97dd122880c398f0f */}
 
 ![][public]
 
@@ -38,7 +38,7 @@ std::optional<int> f3d::options::scene::camera::index
 
 
 
-### Variable orthographic {#structf3d_1_1options_1_1scene_1_1camera_1a1adaab60a6bf1f25a0ae959d0b78f423}
+### Variable orthographic {/* #structf3d_1_1options_1_1scene_1_1camera_1a1adaab60a6bf1f25a0ae959d0b78f423 */}
 
 ![][public]
 
