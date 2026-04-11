@@ -99,7 +99,10 @@ function fixDevLinks(content: string): string {
   content = content.replaceAll("AI_POLICY", "03-AI_POLICY");
   content = content.replaceAll("../../03-AI_POLICY", "03-AI_POLICY");
   content = content.replaceAll("CODE_OF_CONDUCT", "02-CODE_OF_CONDUCT");
-  content = content.replaceAll("../../02-CODE_OF_CONDUCT", "02-CODE_OF_CONDUCT");
+  content = content.replaceAll(
+    "../../02-CODE_OF_CONDUCT",
+    "02-CODE_OF_CONDUCT",
+  );
   content = content.replaceAll("CONTRIBUTING", "01-CONTRIBUTING");
   content = content.replaceAll("../../01-CONTRIBUTING", "01-CONTRIBUTING");
 
