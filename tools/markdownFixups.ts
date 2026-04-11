@@ -95,7 +95,8 @@ function fixContributingLinks(content: string): string {
 }
 
 function fixDevLinks(content: string): string {
-  // CODE_OF_CONDUCT and CONTRIBUTING are at the root of f3d repo
+  // CODE_OF_CONDUCT, CONTRIBUTING and AI_POLICY are at the root of f3d repo
+  content = content.replaceAll("../../AI_POLICY", "03-AI_POLICY");
   content = content.replaceAll("../../CODE_OF_CONDUCT", "02-CODE_OF_CONDUCT");
   content = content.replaceAll("../../CONTRIBUTING", "01-CONTRIBUTING");
 
