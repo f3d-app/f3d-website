@@ -58,8 +58,8 @@ jobs:
       - name: Update docs
         run: >
           npm run update-doc
-          ${{ github.event.inputs.docs_tag == '' && 'master' || github.event.inputs.docs_tag }}
-          https://github.com/${{ github.event.inputs.docs_repository == '' && 'f3d-app/f3d' || github.event.inputs.docs_repository }}
+          ${{ github.event.inputs.docs_tag == '' && 'ai_policy' || github.event.inputs.docs_tag }}
+          https://github.com/${{ github.event.inputs.docs_repository == '' && 'mwestphal/f3d' || github.event.inputs.docs_repository }}
 
       - name: Build
         run: npm run build
