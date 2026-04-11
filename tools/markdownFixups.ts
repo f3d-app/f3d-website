@@ -96,9 +96,12 @@ function fixContributingLinks(content: string): string {
 
 function fixDevLinks(content: string): string {
   // CODE_OF_CONDUCT, CONTRIBUTING and AI_POLICY are at the root of f3d repo
-  content = content.replaceAll("../../AI_POLICY", "03-AI_POLICY");
-  content = content.replaceAll("../../CODE_OF_CONDUCT", "02-CODE_OF_CONDUCT");
-  content = content.replaceAll("../../CONTRIBUTING", "01-CONTRIBUTING");
+  content = content.replaceAll("AI_POLICY", "03-AI_POLICY");
+  content = content.replaceAll("../../03-AI_POLICY", "03-AI_POLICY");
+  content = content.replaceAll("CODE_OF_CONDUCT", "02-CODE_OF_CONDUCT");
+  content = content.replaceAll("../../02-CODE_OF_CONDUCT", "02-CODE_OF_CONDUCT");
+  content = content.replaceAll("CONTRIBUTING", "01-CONTRIBUTING");
+  content = content.replaceAll("../../01-CONTRIBUTING", "01-CONTRIBUTING");
 
   // Replace links like this: `../libf3d/01-OVERVIEW.md` into `/docs/next/libf3d/OVERVIEW`
   return content.replaceAll(
