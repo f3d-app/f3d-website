@@ -201,8 +201,8 @@ async function copyDocs(): Promise<void> {
     });
 
     // copy some specific files
-    const files = ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md"];
-    for (var i = 0; i < 2; i++) {
+    const files = ["CONTRIBUTING.md", "CODE_OF_CONDUCT.md", "AI_POLICY.md"];
+    for (var i = 0; i < 3; i++) {
       const srcFile = path.join(SOURCE_DIR, files[i]);
       const destFile = path.join(
         __dirname,
