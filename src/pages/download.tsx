@@ -105,6 +105,7 @@ export default function DownloadPage(): ReactNode {
     {},
   );
   const [operatingSystem, setOperatingSystem] = useState<string | null>(null);
+  const initialTabValue = operatingSystem?.toLowerCase() || "windows";
 
   const handleCopy = (text: string, key: string) => {
     navigator.clipboard.writeText(text);
@@ -180,7 +181,7 @@ export default function DownloadPage(): ReactNode {
                 </p>
               </div>
 
-              <Tabs defaultValue={operatingSystem?.toLowerCase() || "windows"}>
+              <Tabs key={initialTabValue} defaultValue={initialTabValue}>
                 {Object.keys(downloadLinks.assets).map((platform, index) => (
                   <TabItem
                     key={platform}
