@@ -11,12 +11,6 @@ const sponsors = [
     isSvg: true,
   },
   {
-    name: "TestMu",
-    logo: require("@site/static/sponsors/testmu.png").default,
-    url: "https://www.testmuai.com/?utm_medium=sponsor&utm_source=f3d-app",
-    isSvg: false,
-  },
-  {
     name: "OpenDroneMap",
     logo: require("@site/static/sponsors/opendronemap.png").default,
     url: "https://www.opendronemap.org/",
