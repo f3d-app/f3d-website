@@ -31,7 +31,7 @@ jobs:
 
       - name: Prettier Formatting
         continue-on-error: true
-        uses: creyD/prettier_action@v4.6
+        uses: creyD/prettier_action@8c18391fdc98ed0d884c6345f03975edac71b8f0
         with:
           dry: True
           prettier_options: "-w **/*.{ts,tsx,js,json,md,mdx,html,yml}"
@@ -60,14 +60,14 @@ jobs:
           name: f3d-style-checks-diff-${{ github.event.pull_request.head.ref }}
 
       - name: Delete comment
-        uses: marocchino/sticky-pull-request-comment@v3
+        uses: marocchino/sticky-pull-request-comment@v3.0.4
         with:
           header: style
           delete: true
 
       - name: Create comment
         if: failure()
-        uses: marocchino/sticky-pull-request-comment@v3
+        uses: marocchino/sticky-pull-request-comment@v3.0.4
         with:
           header: style
           message: |
