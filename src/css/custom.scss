@@ -26,6 +26,7 @@ $f3d_white: #F4F4F4;
 $f3d_blue: #788BFF;
 $f3d_yellow: #F9b208;
 $f3d_red: #F94306;
+$f3d_green: #7AFF7A;
 
 :root {
   /* Color Palette */
@@ -34,6 +35,13 @@ $f3d_red: #F94306;
   --accent-yellow: #{$f3d_yellow};
   --accent-blue: #{$f3d_blue};
   --accent-red: #{$f3d_red};
+  --accent-green: #{color.scale($f3d_green, $lightness: -50%)};
+
+  /* Make dimmed colors for accent colors */
+  --accent-yellow-dim: #{color.scale($f3d_yellow, $lightness: 80%)};
+  --accent-blue-dim: #{color.scale($f3d_blue, $lightness: 80%)};
+  --accent-red-dim: #{color.scale($f3d_red, $lightness: 80%)};
+  --accent-green-dim: #{color.scale($f3d_green, $lightness: 80%)};
 
   /* Typography */
   --font-primary: "Mulish", sans-serif;

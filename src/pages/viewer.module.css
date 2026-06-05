@@ -110,20 +110,68 @@
 
 /* File input */
 .fileInputGroup {
-  margin-bottom: 1rem;
-}
-.fileLabel {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  font-weight: 500;
+  gap: 0.35rem;
+}
+.fileLabel {
+  display: contents;
   cursor: pointer;
 }
 .fileInput {
   display: none;
 }
-.fileName {
+.fileButtonIcon {
+  width: 1.25em;
+  height: 1.25em;
+  vertical-align: middle;
+  margin-right: 0.4em;
+}
+.dragHint {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: var(--ifm-color-emphasis-600);
+  text-align: center;
+}
+.fileNameBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.35em;
   font-size: 0.8rem;
+  font-weight: 600;
+  padding: 0.3em 0.6em;
+  border-radius: 6px;
+  min-width: 0;
+}
+.fileNameBadge span {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.fileNameBadgeSuccess {
+  background: var(--accent-green-dim);
+  color: var(--accent-green);
+}
+.fileNameBadgeError {
+  background: var(--accent-red-dim);
+  color: var(--accent-red);
+}
+.fileNameBadgeLoading {
+  background: var(--accent-blue-dim);
+  color: var(--accent-blue);
+}
+.fileBadgeIcon {
+  width: 1em;
+  height: 1em;
+  flex-shrink: 0;
+}
+.fileBadgeSpinner {
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
 }
 
 /* Up direction buttons */
@@ -202,6 +250,44 @@
   cursor: pointer;
   user-select: none;
   margin-left: 0.5em;
+}
+
+/* Drag-and-drop */
+.dropZone {
+  position: relative;
+  flex: 1;
+  display: flex;
+  align-items: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.dropZoneActive {
+  outline: 3px dashed var(--ifm-color-primary);
+  border-radius: 8px;
+}
+
+.dropOverlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--bg-primary);
+  opacity: 0.8;
+  border-radius: 8px;
+  z-index: 10;
+  color: var(--text-primary);
+  font-size: 1.25rem;
+  font-weight: 600;
+  pointer-events: none;
+}
+
+.dropIcon {
+  width: 3rem;
+  height: 3rem;
 }
 
 /* Progress bar container */
