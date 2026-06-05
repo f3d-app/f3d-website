@@ -17,7 +17,9 @@ function ViewerApp({ model }: ViewerAppProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   const [fileName, setFileName] = useState(model || "f3d.vtp");
-  const [fileStatus, setFileStatus] = useState<"loading" | "success" | "error">("success");
+  const [fileStatus, setFileStatus] = useState<"loading" | "success" | "error">(
+    "success",
+  );
   const [fileError, setFileError] = useState<string | undefined>(undefined);
   const fileUrl = model || useBaseUrl("/data/f3d.vtp");
 
@@ -34,9 +36,9 @@ function ViewerApp({ model }: ViewerAppProps) {
 
   // Callback for switch toggles
   const handleSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, } = event.target;
+    const { name } = event.target;
 
-    const idOptionMappings : Record<string, string> = {
+    const idOptionMappings: Record<string, string> = {
       grid: "render.grid.enable",
       axis: "ui.axis",
       fxaa: "render.effect.antialiasing.enable",
@@ -168,22 +170,38 @@ function ViewerApp({ model }: ViewerAppProps) {
                 onChange={handleFileChange}
               />
               <span className="button button--primary button--lg">
-                <Icon icon="material-symbols:folder-open" className={styles.fileButtonIcon} />
+                <Icon
+                  icon="material-symbols:folder-open"
+                  className={styles.fileButtonIcon}
+                />
                 Open a file...
               </span>
             </label>
-            <span className={styles.dragHint}>
-              or drag &amp; drop a file
-            </span>
+            <span className={styles.dragHint}>or drag &amp; drop a file</span>
             {(() => {
               const badgeConfig = {
-                success: { mod: styles.fileNameBadgeSuccess, icon: "material-symbols:check-circle-outline", iconClass: styles.fileBadgeIcon },
-                error:   { mod: styles.fileNameBadgeError,   icon: "material-symbols:error-outline",        iconClass: styles.fileBadgeIcon },
-                loading: { mod: styles.fileNameBadgeLoading, icon: "material-symbols:progress-activity",    iconClass: `${styles.fileBadgeIcon} ${styles.fileBadgeSpinner}` },
+                success: {
+                  mod: styles.fileNameBadgeSuccess,
+                  icon: "material-symbols:check-circle-outline",
+                  iconClass: styles.fileBadgeIcon,
+                },
+                error: {
+                  mod: styles.fileNameBadgeError,
+                  icon: "material-symbols:error-outline",
+                  iconClass: styles.fileBadgeIcon,
+                },
+                loading: {
+                  mod: styles.fileNameBadgeLoading,
+                  icon: "material-symbols:progress-activity",
+                  iconClass: `${styles.fileBadgeIcon} ${styles.fileBadgeSpinner}`,
+                },
               };
               const { mod, icon, iconClass } = badgeConfig[fileStatus];
               return (
-                <span className={`${styles.fileNameBadge} ${mod}`} title={fileError}>
+                <span
+                  className={`${styles.fileNameBadge} ${mod}`}
+                  title={fileError}
+                >
                   <Icon icon={icon} className={iconClass} />
                   <span>{fileName}</span>
                 </span>
@@ -308,7 +326,10 @@ function ViewerApp({ model }: ViewerAppProps) {
           >
             {isDragging && (
               <div className={styles.dropOverlay}>
-                <Icon icon="material-symbols:upload-file" className={styles.dropIcon} />
+                <Icon
+                  icon="material-symbols:upload-file"
+                  className={styles.dropIcon}
+                />
                 <span>Drop file to open</span>
               </div>
             )}

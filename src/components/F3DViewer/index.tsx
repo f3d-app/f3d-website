@@ -9,7 +9,15 @@ import f3d, { type LogVerboseLevel } from "f3d";
 import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
-function initViewer(moduleRef: any, fileUrl: string, addLog: (message: string, level: "error" | "warning" | "info" | "debug") => void, setIsLoading: (isLoading: boolean) => void) {
+function initViewer(
+  moduleRef: any,
+  fileUrl: string,
+  addLog: (
+    message: string,
+    level: "error" | "warning" | "info" | "debug",
+  ) => void,
+  setIsLoading: (isLoading: boolean) => void,
+) {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
   canvas.oncontextmenu = function (e) {
     e.preventDefault();
