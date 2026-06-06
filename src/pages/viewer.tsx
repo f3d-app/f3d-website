@@ -1,4 +1,4 @@
-import React, { useRef, useState, ReactNode } from "react";
+import React, { useRef, useState, useEffect, ReactNode } from "react";
 import { useLocation } from "@docusaurus/router";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from "@docusaurus/useBaseUrl";
@@ -12,16 +12,33 @@ interface ViewerAppProps {
 }
 
 function ViewerApp({ model }: ViewerAppProps) {
-  const viewerRef = useRef(null);
+  const viewerRef = useRef<any>(null);
   const [upDirection, setUpDirection] = useState("+Z");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isDragging, setIsDragging] = useState(false);
+  const [fileName, setFileName] = useState(model || "f3d.vtp");
+  const [fileStatus, setFileStatus] = useState<"loading" | "success" | "error">(
+    "success",
+  );
+  const [fileError, setFileError] = useState<string | undefined>(undefined);
   const fileUrl = model || useBaseUrl("/data/f3d.vtp");
+
+  // Prevent the browser from accepting a dropped file outside the drop zone
+  useEffect(() => {
+    const prevent = (e: DragEvent) => e.preventDefault();
+    window.addEventListener("dragover", prevent);
+    window.addEventListener("drop", prevent);
+    return () => {
+      window.removeEventListener("dragover", prevent);
+      window.removeEventListener("drop", prevent);
+    };
+  }, []);
 
   // Callback for switch toggles
   const handleSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, checked } = event.target;
+    const { name } = event.target;
 
-    const idOptionMappings = {
+    const idOptionMappings: Record<string, string> = {
       grid: "render.grid.enable",
       axis: "ui.axis",
       fxaa: "render.effect.antialiasing.enable",
@@ -33,64 +50,94 @@ function ViewerApp({ model }: ViewerAppProps) {
     viewerRef.current?.triggerCommand(`toggle ${idOptionMappings[name]}`);
   };
 
-  // Handle file selection
-  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (file) {
-      const fileNameSpan = document.getElementById("file-name");
-      if (fileNameSpan) fileNameSpan.textContent = file.name;
+  // Load a File object into the viewer
+  const loadFile = (file: File) => {
+    setFileName(file.name);
+    setFileStatus("loading");
 
-      const reader = new FileReader();
-      reader.addEventListener("loadend", (e) => {
-        const progressContainer = document.getElementById("progressContainer");
-        const progressFill = document.getElementById("progressFill");
-        const progressText = document.getElementById("progressText");
-
-        if (progressFill && progressText) {
-          progressFill.style.width = "100%";
-          progressText.textContent = "100%";
-        }
-
-        if (progressContainer) {
-          progressContainer.classList.add(styles.fadeOut);
-          setTimeout(() => {
-            progressContainer.style.display = "none";
-            progressContainer.classList.remove(styles.fadeOut);
-          }, 1000);
-        }
-
-        viewerRef.current?.loadFile(
-          new Uint8Array(reader.result as ArrayBuffer),
-        );
-      });
-
-      reader.addEventListener("progress", (evt) => {
-        const progressContainer = document.getElementById("progressContainer");
-        const progressFill = document.getElementById("progressFill");
-        const progressText = document.getElementById("progressText");
-
-        if (evt.lengthComputable && progressFill && progressText) {
-          const progress = Math.floor((100 * evt.loaded) / evt.total);
-          if (progressContainer) {
-            progressContainer.style.display = "flex";
-          }
-          progressFill.style.width = `${progress}%`;
-          progressText.textContent = `${progress}%`;
-        }
-      });
-
+    const reader = new FileReader();
+    reader.addEventListener("loadend", () => {
       const progressContainer = document.getElementById("progressContainer");
       const progressFill = document.getElementById("progressFill");
       const progressText = document.getElementById("progressText");
 
-      if (progressFill && progressText && progressContainer) {
-        progressFill.style.width = "0%";
-        progressText.textContent = "0%";
-        progressContainer.style.display = "flex";
+      if (progressFill && progressText) {
+        progressFill.style.width = "100%";
+        progressText.textContent = "100%";
       }
 
-      reader.readAsArrayBuffer(file);
+      if (progressContainer) {
+        progressContainer.classList.add(styles.fadeOut);
+        setTimeout(() => {
+          progressContainer.style.display = "none";
+          progressContainer.classList.remove(styles.fadeOut);
+        }, 1000);
+      }
+
+      const result = viewerRef.current?.loadFile(
+        new Uint8Array(reader.result as ArrayBuffer),
+      );
+      if (result.success === false) {
+        setFileStatus("error");
+        setFileError(result.error);
+      } else {
+        setFileStatus("success");
+        setFileError(undefined);
+      }
+    });
+
+    reader.addEventListener("error", () => {
+      setFileStatus("error");
+      setFileError("Failed to read file");
+    });
+
+    reader.addEventListener("progress", (evt) => {
+      const progressContainer = document.getElementById("progressContainer");
+      const progressFill = document.getElementById("progressFill");
+      const progressText = document.getElementById("progressText");
+
+      if (evt.lengthComputable && progressFill && progressText) {
+        const progress = Math.floor((100 * evt.loaded) / evt.total);
+        if (progressContainer) {
+          progressContainer.style.display = "flex";
+        }
+        progressFill.style.width = `${progress}%`;
+        progressText.textContent = `${progress}%`;
+      }
+    });
+
+    const progressContainer = document.getElementById("progressContainer");
+    const progressFill = document.getElementById("progressFill");
+    const progressText = document.getElementById("progressText");
+
+    if (progressFill && progressText && progressContainer) {
+      progressFill.style.width = "0%";
+      progressText.textContent = "0%";
+      progressContainer.style.display = "flex";
     }
+
+    reader.readAsArrayBuffer(file);
+  };
+
+  // Handle file selection when the dialog returns
+  const handleFileChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const file = event.target.files?.[0];
+    if (file) loadFile(file);
+  };
+
+  // Drag-and-drop handlers
+  const handleDragEnter = (event: React.DragEvent) => {
+    setIsDragging(true);
+  };
+
+  const handleDragLeave = (event: React.DragEvent) => {
+    setIsDragging(false);
+  };
+
+  const handleDrop = (event: React.DragEvent) => {
+    setIsDragging(false);
+    const file = event.dataTransfer.files?.[0];
+    if (file) loadFile(file);
   };
 
   // Callback for up direction buttons
@@ -123,12 +170,43 @@ function ViewerApp({ model }: ViewerAppProps) {
                 onChange={handleFileChange}
               />
               <span className="button button--primary button--lg">
+                <Icon
+                  icon="material-symbols:folder-open"
+                  className={styles.fileButtonIcon}
+                />
                 Open a file...
               </span>
-              <span className={styles.fileName} id="file-name">
-                {model || "f3d.vtp"}
-              </span>
             </label>
+            <span className={styles.dragHint}>or drag &amp; drop a file</span>
+            {(() => {
+              const badgeConfig = {
+                success: {
+                  mod: styles.fileNameBadgeSuccess,
+                  icon: "material-symbols:check-circle-outline",
+                  iconClass: styles.fileBadgeIcon,
+                },
+                error: {
+                  mod: styles.fileNameBadgeError,
+                  icon: "material-symbols:error-outline",
+                  iconClass: styles.fileBadgeIcon,
+                },
+                loading: {
+                  mod: styles.fileNameBadgeLoading,
+                  icon: "material-symbols:progress-activity",
+                  iconClass: `${styles.fileBadgeIcon} ${styles.fileBadgeSpinner}`,
+                },
+              };
+              const { mod, icon, iconClass } = badgeConfig[fileStatus];
+              return (
+                <span
+                  className={`${styles.fileNameBadge} ${mod}`}
+                  title={fileError}
+                >
+                  <Icon icon={icon} className={iconClass} />
+                  <span>{fileName}</span>
+                </span>
+              );
+            })()}
           </div>
           <div className={styles.upDirectionGroup}>
             <button
@@ -240,7 +318,23 @@ function ViewerApp({ model }: ViewerAppProps) {
           >
             <Icon icon="material-symbols:settings" />
           </div>
-          <F3DViewer ref={viewerRef} fileUrl={fileUrl} />
+          <div
+            className={`${styles.dropZone} ${isDragging ? styles.dropZoneActive : ""}`}
+            onDragEnter={handleDragEnter}
+            onDragLeave={handleDragLeave}
+            onDrop={handleDrop}
+          >
+            {isDragging && (
+              <div className={styles.dropOverlay}>
+                <Icon
+                  icon="material-symbols:upload-file"
+                  className={styles.dropIcon}
+                />
+                <span>Drop file to open</span>
+              </div>
+            )}
+            <F3DViewer ref={viewerRef} fileUrl={fileUrl} />
+          </div>
         </main>
       </div>
       <div className={styles.progressContainer} id="progressContainer">

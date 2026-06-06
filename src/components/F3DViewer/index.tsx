@@ -9,8 +9,16 @@ import f3d, { type LogVerboseLevel } from "f3d";
 import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
-function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
-  const canvas = document.getElementById("canvas");
+function initViewer(
+  moduleRef: any,
+  fileUrl: string,
+  addLog: (
+    message: string,
+    level: "error" | "warning" | "info" | "debug",
+  ) => void,
+  setIsLoading: (isLoading: boolean) => void,
+) {
+  const canvas = document.getElementById("canvas") as HTMLCanvasElement;
   canvas.oncontextmenu = function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -24,7 +32,7 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
       const defaultFile = await fetch(fileUrl).then((b) => b.arrayBuffer());
 
       Module.Log.setVerboseLevel(Module.LogVerboseLevel.QUIET, false);
-      Module.Log.forward((level, message) => {
+      Module.Log.forward((level: LogVerboseLevel, message: string) => {
         if (level === Module.LogVerboseLevel.ERROR) addLog(message, "error");
         else if (level === Module.LogVerboseLevel.WARN)
           addLog(message, "warning");
@@ -114,20 +122,23 @@ function initViewer(moduleRef, fileUrl, addLog, setIsLoading) {
     });
 }
 
-function openStream(moduleRef, stream: Uint8Array) {
+function openStream(moduleRef: any, stream: Uint8Array) {
   const scene = moduleRef.current.engineInstance.getScene();
 
   scene.clear();
 
+  let result: { success: boolean; error?: string } = { success: true };
   try {
     scene.addBuffer(stream);
   } catch (e) {
-    console.error("Failed to load stream: " + e);
+    let [, errorMsg] = moduleRef.current.getExceptionMessage(e);
+    result = { success: false, error: errorMsg };
   }
 
   moduleRef.current.engineInstance.getWindow().getCamera().resetToBounds(0.9);
   moduleRef.current.engineInstance.getWindow().render();
   moduleRef.current.currentStream = stream;
+  return result;
 }
 
 interface F3DViewerProps {
@@ -135,7 +146,7 @@ interface F3DViewerProps {
 }
 
 const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
-  const moduleRef = useRef(null);
+  const moduleRef = useRef<any>(null);
   const [logs, setLogs] = useState<
     Array<{
       type: "debug" | "info" | "warning" | "error" | "command";
@@ -203,7 +214,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
           .triggerCommand(commandInput);
         moduleRef.current.engineInstance.getWindow().render();
       }
-    } catch (error) {
+    } catch (error: any) {
       addLog(`Error: ${error.message}`, "error");
     }
 
@@ -212,9 +223,9 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
 
   useImperativeHandle(ref, () => ({
     loadFile: (buffer: Uint8Array) => {
-      openStream(moduleRef, buffer);
+      return openStream(moduleRef, buffer);
     },
-    setUpDirection: (direction) => {
+    setUpDirection: (direction: "+Y" | "+Z") => {
       if (!moduleRef.current) return;
       // Set up direction in the engine options
       moduleRef.current.engineInstance
