@@ -39,7 +39,7 @@
     "@iconify/react": "^6.0.2",
     "@octokit/core": "^7.0.6",
     "@seaborg/cli": "^0.6.5",
-    "tsx": "^4.22.3",
+    "tsx": "^4.22.4",
     "typescript": "~6.0.3"
   },
   "browserslist": {
