@@ -36,18 +36,31 @@ function ViewerApp({ model }: ViewerAppProps) {
 
   // Callback for switch toggles
   const handleSwitchToggle = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const { name } = event.target;
+    const { name, checked } = event.target;
 
     const idOptionMappings: Record<string, string> = {
-      grid: "render.grid.enable",
-      axis: "ui.axis",
-      fxaa: "render.effect.antialiasing.enable",
-      tone: "render.effect.tone_mapping",
-      ssao: "render.effect.ambient_occlusion",
-      ambient: "render.hdri.ambient",
+      grid: `set render.grid.enable ${checked}`,
+      reflection: `set render.grid.reflection ${checked ? ".5" : "0"}`,
+      axis: `set ui.axis ${checked}`,
+      fxaa: `set render.effect.antialiasing.enable ${checked}`,
+      tone: `set render.effect.tone_mapping ${checked}`,
+      ssao: `set render.effect.ambient_occlusion ${checked}`,
+      ambient: `set render.hdri.ambient ${checked}`,
     };
 
-    viewerRef.current?.triggerCommand(`toggle ${idOptionMappings[name]}`);
+    viewerRef.current?.triggerCommand(`${idOptionMappings[name]}`);
+
+    // If grid is disabled, also disable reflection and update its value
+    if (name === "grid") {
+      const reflectionInput = document.getElementById(
+        "reflection",
+      ) as HTMLInputElement;
+      reflectionInput.checked = checked && reflectionInput.checked;
+      reflectionInput.disabled = !checked;
+      viewerRef.current?.triggerCommand(
+        `set render.grid.reflection ${reflectionInput.checked ? ".5" : "0"}`,
+      );
+    }
   };
 
   // Load a File object into the viewer
@@ -242,6 +255,17 @@ function ViewerApp({ model }: ViewerAppProps) {
               onChange={handleSwitchToggle}
             />
             <label htmlFor="grid">Grid</label>
+          </div>
+          <div className={styles.switchField}>
+            <input
+              id="reflection"
+              type="checkbox"
+              name="reflection"
+              className={styles.switchInput}
+              defaultChecked
+              onChange={handleSwitchToggle}
+            />
+            <label htmlFor="reflection">Reflection</label>
           </div>
           <div className={styles.switchField}>
             <input
