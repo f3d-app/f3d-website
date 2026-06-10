@@ -52,10 +52,14 @@ function ViewerApp({ model }: ViewerAppProps) {
 
     // If grid is disabled, also disable reflection and update its value
     if (name === "grid") {
-      const reflectionInput = document.getElementById("reflection") as HTMLInputElement;
+      const reflectionInput = document.getElementById(
+        "reflection",
+      ) as HTMLInputElement;
       reflectionInput.checked = checked && reflectionInput.checked;
       reflectionInput.disabled = !checked;
-      viewerRef.current?.triggerCommand(`set render.grid.reflection ${reflectionInput.checked ? ".5" : "0"}`);
+      viewerRef.current?.triggerCommand(
+        `set render.grid.reflection ${reflectionInput.checked ? ".5" : "0"}`,
+      );
     }
   };
 
