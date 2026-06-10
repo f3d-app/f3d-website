@@ -94,6 +94,10 @@ function initViewer(
         .getOptions()
         .toggle("render.grid.enable");
 
+      moduleRef.current.engineInstance
+        .getOptions()
+        .setAsString("render.grid.reflection", "0.5");
+
       // default to +Z
       moduleRef.current.engineInstance
         .getOptions()
