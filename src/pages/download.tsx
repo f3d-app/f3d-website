@@ -20,6 +20,7 @@ import {
   WindowsPackageManagerCard,
   DistroLinks,
 } from "@site/src/components/PackageManagers";
+import DownloadBox from "@site/src/components/DownloadBox";
 import styles from "./download.module.css";
 
 function GuessClient(): string | null {
@@ -100,25 +101,13 @@ const windowsPackageManagers = [
 ];
 
 export default function DownloadPage(): ReactNode {
-  const { siteConfig } = useDocusaurusContext();
-  const [copiedStates, setCopiedStates] = useState<{ [key: string]: boolean }>(
-    {},
-  );
   const [operatingSystem, setOperatingSystem] = useState<string | null>(null);
   const initialTabValue = operatingSystem?.toLowerCase() || "windows";
-
-  const handleCopy = (text: string, key: string) => {
-    navigator.clipboard.writeText(text);
-    setCopiedStates((prev) => ({ ...prev, [key]: true }));
-    setTimeout(() => {
-      setCopiedStates((prev) => ({ ...prev, [key]: false }));
-    }, 2000);
-  };
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const detectedOS = params.get("os") || GuessClient();
-    if (["Windows", "macOS", "Linux", "Android"].includes(detectedOS)) {
+    if (["Windows", "macOS", "Linux", "Android"].includes(detectedOS as string)) {
       setOperatingSystem(detectedOS);
     }
   }, []);
@@ -182,7 +171,7 @@ export default function DownloadPage(): ReactNode {
               </div>
 
               <Tabs key={initialTabValue} defaultValue={initialTabValue}>
-                {Object.keys(downloadLinks.assets).map((platform, index) => (
+                {Object.keys(downloadLinks.assets).map((platform) => (
                   <TabItem
                     key={platform}
                     value={platform.toLowerCase()}
@@ -208,107 +197,9 @@ export default function DownloadPage(): ReactNode {
 
                     <div className={styles.binariesGrid}>
                       {downloadLinks.assets[platform].binaries.map(
-                        (binary, binaryIndex) => {
-                          const tooltipId = `digest-${platform}-${binaryIndex}`;
-                          const copyKey = `${platform}-${binaryIndex}`;
-                          const isCopied = copiedStates[copyKey];
-
+                        (binary) => {
                           return (
-                            <div
-                              key={binary.name}
-                              className={styles.binaryCard}
-                            >
-                              <div className={styles.binaryHeader}>
-                                <div className={styles.binaryInfo}>
-                                  <Icon
-                                    icon={downloadLinks.assets[platform].icon}
-                                    className={styles.binaryIcon}
-                                  />
-                                  <div className={styles.binaryDetails}>
-                                    <h4 className={styles.binaryTitle}>
-                                      {binary.long}
-                                    </h4>
-                                    <p className={styles.binaryMeta}>
-                                      {binary.size} ·{" "}
-                                      <a
-                                        data-tooltip-id={tooltipId}
-                                        className={styles.hashLink}
-                                      >
-                                        sha256
-                                      </a>
-                                    </p>
-                                    <Tooltip
-                                      id={tooltipId}
-                                      clickable={true}
-                                      positionStrategy="fixed"
-                                      place="bottom"
-                                      style={{ zIndex: 999999 }}
-                                    >
-                                      <div
-                                        style={{
-                                          display: "flex",
-                                          alignItems: "center",
-                                          gap: "0.5rem",
-                                        }}
-                                      >
-                                        <span>
-                                          {binary.digest.replace("sha256:", "")}
-                                        </span>
-                                        <button
-                                          onClick={() =>
-                                            handleCopy(
-                                              binary.digest.replace(
-                                                "sha256:",
-                                                "",
-                                              ),
-                                              copyKey,
-                                            )
-                                          }
-                                          style={{
-                                            background: "none",
-                                            border: "none",
-                                            cursor: "pointer",
-                                            padding: "2px",
-                                            display: "flex",
-                                            alignItems: "center",
-                                          }}
-                                          title={
-                                            isCopied
-                                              ? "Copied!"
-                                              : "Copy to clipboard"
-                                          }
-                                        >
-                                          <Icon
-                                            icon={
-                                              isCopied
-                                                ? "material-symbols:check"
-                                                : "material-symbols:content-copy"
-                                            }
-                                            style={{
-                                              fontSize: "14px",
-                                              color: isCopied
-                                                ? "var(--accent-yellow)"
-                                                : "var(--accent-blue)",
-                                              transition: "color 0.2s ease",
-                                            }}
-                                          />
-                                        </button>
-                                      </div>
-                                    </Tooltip>
-                                  </div>
-                                </div>
-                              </div>
-                              <Link
-                                to={`/thanks?download=${encodeURIComponent(binary.url)}`}
-                                className={styles.downloadButton}
-                              >
-                                <Icon
-                                  icon="material-symbols:download-rounded"
-                                  className={styles.downloadIcon}
-                                />
-                                Download
-                              </Link>
-                            </div>
+                            <DownloadBox title={binary.short} description={binary.long} icon={downloadLinks.assets[platform].icon} size={binary.size} sha256={binary.digest.replace("sha256:", "")} link={`/thanks?download=${encodeURIComponent(binary.url)}`} isLinkPage={true} />
                           );
                         },
                       )}
