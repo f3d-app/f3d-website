@@ -107,7 +107,9 @@ export default function DownloadPage(): ReactNode {
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
     const detectedOS = params.get("os") || GuessClient();
-    if (["Windows", "macOS", "Linux", "Android"].includes(detectedOS as string)) {
+    if (
+      ["Windows", "macOS", "Linux", "Android"].includes(detectedOS as string)
+    ) {
       setOperatingSystem(detectedOS);
     }
   }, []);
@@ -196,13 +198,19 @@ export default function DownloadPage(): ReactNode {
                     </p>
 
                     <div className={styles.binariesGrid}>
-                      {downloadLinks.assets[platform].binaries.map(
-                        (binary) => {
-                          return (
-                            <DownloadBox title={binary.short} description={binary.long} icon={downloadLinks.assets[platform].icon} size={binary.size} sha256={binary.digest.replace("sha256:", "")} link={`/thanks?download=${encodeURIComponent(binary.url)}`} isLinkPage={true} />
-                          );
-                        },
-                      )}
+                      {downloadLinks.assets[platform].binaries.map((binary) => {
+                        return (
+                          <DownloadBox
+                            title={binary.short}
+                            description={binary.long}
+                            icon={downloadLinks.assets[platform].icon}
+                            size={binary.size}
+                            sha256={binary.digest.replace("sha256:", "")}
+                            link={`/thanks?download=${encodeURIComponent(binary.url)}`}
+                            isLinkPage={true}
+                          />
+                        );
+                      })}
                     </div>
 
                     {platform === "macOS" && (

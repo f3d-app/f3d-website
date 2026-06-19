@@ -54,10 +54,20 @@
     "title": "bristleback_dota_fan-art.glb",
     "description": "Animated model of a Dota character",
     "icon": "qlementine-icons:movie-16",
-    "license": "CC BY-NC",
+    "license": "CC-BY-NC-4.0",
     "author": "Nikolay_Tsys",
     "size": 16.48,
     "sha256": "c47130fe6df38a882ef132f54dc9bd392e5267701c762a87e8aa2d40bc9cc954"
+  },
+  {
+    "file": "zelda.zip",
+    "title": "zelda.zip",
+    "description": "3D model of a Zelda character",
+    "icon": "ion:cube",
+    "license": "CC-BY-4.0",
+    "author": "theStoff",
+    "size": 12.98,
+    "sha256": "22f2f99a387f5182f2981dd9c5addae1083c127da1b81a1ca30e8e3aa42f8e1a"
   },
   {
     "file": "can.ex2",
@@ -94,8 +104,8 @@
     "title": "eta_asm.stp",
     "description": "CAD assembly of a mechanical watch",
     "icon": "mdi:file-cad-box",
-    "license": "",
-    "author": "",
+    "license": "GrabCAD",
+    "author": "Greg Brown",
     "size": 3.97,
     "sha256": "91dd9fd6ed67cfb673c338020939e5fc4c602230d537c0a85d8995a3af0216ad"
   },
@@ -104,55 +114,25 @@
     "title": "f3d.vtp",
     "description": "3D logo of F3D",
     "icon": "ion:cube",
-    "license": "",
-    "author": "",
+    "license": "BSD-3-Clause",
+    "author": "F3D",
     "size": 0.01,
     "sha256": "c8a5b245b4b637a1b5a4b5e4240dff0f86b0426fb5f22ba8a3591122a31437b7"
-  },
-  {
-    "file": "future_parking_2k.hdr",
-    "title": "future_parking_2k.hdr",
-    "description": "HDR image of a futuristic parking scene",
-    "icon": "ep:picture-filled",
-    "license": "CC0-1.0",
-    "author": "Poly Haven",
-    "size": 5.93,
-    "sha256": "8621abbe080b52a2abe7e9a20c8019466b0664290069bfd040a4897df490c80d"
   },
   {
     "file": "gearbox.zip",
     "title": "gearbox.zip",
     "description": "Animated 3D model of a gearbox",
     "icon": "qlementine-icons:movie-16",
-    "license": "",
-    "author": "",
+    "license": "CC-BY-4.0",
+    "author": "DZHUSI ØNE",
     "size": 22.84,
     "sha256": "38268dac3f5aa2e5303b18773804a755f27819586cd5fb4e79d91f5fd02bebab"
   },
   {
-    "file": "hikers_cave_2k.hdr",
-    "title": "hikers_cave_2k.hdr",
-    "description": "HDR image of a hikers cave scene",
-    "icon": "ep:picture-filled",
-    "license": "CC0-1.0",
-    "author": "Poly Haven",
-    "size": 6.95,
-    "sha256": "73b39879d1c7f17fd2808510c1940297f8b071bad1809a13e5af2ad3f511deaf"
-  },
-  {
-    "file": "lebombo_4k.hdr",
-    "title": "lebombo_4k.hdr",
-    "description": "HDR image",
-    "icon": "ep:picture-filled",
-    "license": "CC0-1.0",
-    "author": "Poly Haven",
-    "size": 23.23,
-    "sha256": "23a59b56482e804985ae8eae404a0d15a24ec924ad2f250e6f81371760ae2a48"
-  },
-  {
     "file": "pointCloud.vtp",
     "title": "pointCloud.vtp",
-    "description": "Point cloud data of a street scene",
+    "description": "Point cloud data from a LIDAR",
     "icon": "gravity-ui:dots-9",
     "license": "",
     "author": "",
@@ -180,23 +160,43 @@
     "sha256": "8c2cdb8cc9e6a5c6b8c0a8e7db60a451cf53df34e2365a1916ef2dcdb33f39cf"
   },
   {
+    "file": "future_parking_2k.hdr",
+    "title": "future_parking_2k.hdr",
+    "description": "HDR image of a futuristic parking scene",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Sergej Majboroda",
+    "size": 5.93,
+    "sha256": "8621abbe080b52a2abe7e9a20c8019466b0664290069bfd040a4897df490c80d"
+  },
+  {
+    "file": "hikers_cave_2k.hdr",
+    "title": "hikers_cave_2k.hdr",
+    "description": "HDR image of a hikers cave scene",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Greg Zaal",
+    "size": 6.95,
+    "sha256": "73b39879d1c7f17fd2808510c1940297f8b071bad1809a13e5af2ad3f511deaf"
+  },
+  {
+    "file": "lebombo_4k.hdr",
+    "title": "lebombo_4k.hdr",
+    "description": "HDR image",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Poly Haven",
+    "size": 23.23,
+    "sha256": "23a59b56482e804985ae8eae404a0d15a24ec924ad2f250e6f81371760ae2a48"
+  },
+  {
     "file": "venice_sunset_8k.hdr",
     "title": "venice_sunset_8k.hdr",
     "description": "HDR image of a Venice sunset",
     "icon": "ep:picture-filled",
-    "license": "",
-    "author": "",
+    "license": "CC0-1.0",
+    "author": "Greg Zaal",
     "size": 84.92,
     "sha256": "d77530f340ecc20de550b87b9a6a6eabf38e6e64b7a740292dc540e1815191e0"
-  },
-  {
-    "file": "zelda.zip",
-    "title": "zelda.zip",
-    "description": "3D model of a Zelda character",
-    "icon": "ion:cube",
-    "license": "",
-    "author": "",
-    "size": 12.98,
-    "sha256": "22f2f99a387f5182f2981dd9c5addae1083c127da1b81a1ca30e8e3aa42f8e1a"
   }
 ]

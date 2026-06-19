@@ -29,7 +29,7 @@ export default function DownloadBox({
   isLinkPage,
   license,
   author,
-  thumbnail
+  thumbnail,
 }: DownloadBoxProps): ReactNode {
   const [copied, setCopied] = useState<boolean>(false);
 
@@ -53,10 +53,12 @@ export default function DownloadBox({
             <h4 className={styles.downloadTitle}>{title}</h4>
             <span className={styles.downloadDescription}>{description}</span>
             <p className={styles.downloadMeta}>
-              {
-                license && (
+              {license && (
                 <>
-                  <a data-tooltip-id={tooltipLicenseId} className={styles.tooltipLink}>
+                  <a
+                    data-tooltip-id={tooltipLicenseId}
+                    className={styles.tooltipLink}
+                  >
                     {license}
                   </a>
                   {" · "}
@@ -74,13 +76,16 @@ export default function DownloadBox({
                         gap: "0.5rem",
                       }}
                     >
-                      <span>{license}{author && <span> by {author}</span>}</span>
+                      <span>
+                        {license}
+                        {author && <span> by {author}</span>}
+                      </span>
                     </div>
                   </Tooltip>
                 </>
-              )
-              }
-              {size}{" · "}
+              )}
+              {size}
+              {" · "}
               <a data-tooltip-id={tooltipShaId} className={styles.tooltipLink}>
                 sha256
               </a>
@@ -133,17 +138,23 @@ export default function DownloadBox({
         </div>
       </div>
 
-        {thumbnail && <img src={thumbnail} alt={`${title} thumbnail`} className={styles.downloadThumbnail} />}
+      {thumbnail && (
+        <img
+          src={thumbnail}
+          alt={`${title} thumbnail`}
+          className={styles.downloadThumbnail}
+        />
+      )}
 
-        {isLinkPage && (
-          <Link to={link} className={styles.downloadButton}>
-            <Icon
-              icon="material-symbols:download-rounded"
-              className={styles.downloadIcon}
-            />
-            Download
-          </Link>
-        )}
+      {isLinkPage && (
+        <Link to={link} className={styles.downloadButton}>
+          <Icon
+            icon="material-symbols:download-rounded"
+            className={styles.downloadIcon}
+          />
+          Download
+        </Link>
+      )}
 
       {!isLinkPage && (
         <a href={link} className={styles.downloadButton} download>

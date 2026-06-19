@@ -68,6 +68,10 @@
   cursor: pointer;
 }
 
+.downloadThumbnail {
+  border-radius: 6px;
+}
+
 .downloadButton {
   display: inline-flex;
   align-items: center;
@@ -83,3 +87,9 @@
   justify-content: center;
   position: relative;
 }
+
+.downloadButton:hover {
+  background: var(--ifm-color-primary-dark);
+  transform: translateY(-1px);
+}
+
