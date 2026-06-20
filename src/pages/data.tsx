@@ -62,12 +62,9 @@ export default function DataPage() {
           {dataList
             .filter(({ icon }) => {
               if (!icon) return true;
-              // Find a matching category by icon identifier or by label
-              const match = categories.find(
-                (c) => c.icon === icon || c.label === icon,
-              );
+              const match = categories.find((c) => c.icon === icon);
               if (!match) return true;
-              return Boolean(filters[match.label]);
+              return filters[match.label];
             })
             .map(
               ({
