@@ -242,12 +242,9 @@ export default function Gallery(): ReactNode {
           <Heading as="h2">Acknowledgments</Heading>
           <Admonition type="note">
             Images and videos displayed below use public datasets, you can
-            download them{" "}
-            <Link to="/data">
-              here
-            </Link>
-            . The provided commands assume a standard configuration file is
-            present in your F3D installation.
+            download them <Link to="/data">here</Link>. The provided commands
+            assume a standard configuration file is present in your F3D
+            installation.
           </Admonition>
           <ul>
             <li>
