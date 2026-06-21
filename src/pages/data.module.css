@@ -1,0 +1,65 @@
+/* Download page styles */
+
+.dataGrid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 1.5rem 0;
+}
+
+.filterBar {
+  margin: 1rem 0;
+  background: var(--ifm-background-surface-color);
+  padding: 0.6rem;
+  border-radius: 12px;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.filterList {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 0.25rem 0.15rem;
+}
+
+.filterItem {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--ifm-background-translucent, rgba(0,0,0,0.03));
+  padding: 0.35rem 0.6rem;
+  border-radius: 999px;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.filterItem input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+}
+
+.filterLabel {
+  white-space: nowrap;
+}
+
+.filterIcon {
+  font-size: 1rem;
+  width: 1rem;
+  height: 1rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.filterItem {
+  border: 1px solid transparent;
+  transition: background 120ms ease, border-color 120ms ease, transform 120ms ease;
+}
+
+.filterItem:hover {
+  background: rgba(0,0,0,0.04);
+  border-color: rgba(0,0,0,0.06);
+  transform: translateY(-1px);
+}

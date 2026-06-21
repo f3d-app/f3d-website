@@ -1,0 +1,202 @@
+[
+  {
+    "file": "202.vtp",
+    "title": "202.vtp",
+    "description": "CAD assembly",
+    "icon": "mdi:file-cad-box",
+    "license": "BSD-3-Clause",
+    "author": "Kitware Inc.",
+    "size": 0.42,
+    "sha256": "68733629389ced1bb65b756eaeae7de908c8119093033b5980f71a855300dc31"
+  },
+  {
+    "file": "Carola_PointCloud.ply",
+    "title": "Carola_PointCloud.ply",
+    "description": "Point cloud data of a boat",
+    "icon": "gravity-ui:dots-9",
+    "license": "CC0-1.0",
+    "author": "Scottish Maritime Museum",
+    "size": 133.27,
+    "sha256": "acaee5ca93251d9fcd876a2eb34458c476aa32d1c10c7250dd8fc160041aecf5"
+  },
+  {
+    "file": "DamagedHelmet.glb",
+    "title": "DamagedHelmet.glb",
+    "description": "Realistic 3D model of a futuristic helmet",
+    "icon": "ion:cube",
+    "license": "CC-BY-4.0",
+    "author": "ctxwing",
+    "size": 3.6,
+    "sha256": "a1e3b04de97b11de564ce6e53b95f02954a297f0008183ac63a4f5974f6b32d8"
+  },
+  {
+    "file": "FlightHelmet.glb",
+    "title": "FlightHelmet.glb",
+    "description": "Realistic 3D model of a flight helmet",
+    "icon": "ion:cube",
+    "license": "CC0-1.0",
+    "author": "Gary Hsu",
+    "size": 52.21,
+    "sha256": "43f7018e2ba5272d25cbcdff148177fd3814ecb1e6ce2c91f914e95aea2a489c"
+  },
+  {
+    "file": "backpack.vti",
+    "title": "backpack.vti",
+    "description": "Volumetric scan of a backpack",
+    "icon": "icomoon-free:lab",
+    "license": "BSD-3-Clause",
+    "author": "Kitware Inc.",
+    "size": 56.42,
+    "sha256": "4105bfabb448ff4a1850d9b1937a823f7158fb6e19520415a2243a6e5fcece55"
+  },
+  {
+    "file": "bristleback_dota_fan-art.glb",
+    "title": "bristleback_dota_fan-art.glb",
+    "description": "Animated model of a Dota character",
+    "icon": "qlementine-icons:movie-16",
+    "license": "CC-BY-NC-4.0",
+    "author": "Nikolay_Tsys",
+    "size": 16.48,
+    "sha256": "c47130fe6df38a882ef132f54dc9bd392e5267701c762a87e8aa2d40bc9cc954"
+  },
+  {
+    "file": "zelda.zip",
+    "title": "zelda.zip",
+    "description": "3D model of a Zelda character",
+    "icon": "ion:cube",
+    "license": "CC-BY-4.0",
+    "author": "theStoff",
+    "size": 12.98,
+    "sha256": "22f2f99a387f5182f2981dd9c5addae1083c127da1b81a1ca30e8e3aa42f8e1a"
+  },
+  {
+    "file": "can.ex2",
+    "title": "can.ex2",
+    "description": "Deformation simulation of a can",
+    "icon": "icomoon-free:lab",
+    "license": "BSD-3-Clause",
+    "author": "Ken Martin, Will Schroeder, Bill Lorensen",
+    "size": 16.81,
+    "sha256": "04bea4337fcecf2388a40d3288a815dee0c2fe647b691b9e8f474db91b0619cc"
+  },
+  {
+    "file": "counter.splat",
+    "title": "counter.splat",
+    "description": "3D gaussian splatting",
+    "icon": "gravity-ui:dots-9",
+    "license": "Apache-2.0",
+    "author": "Jon Barron",
+    "size": 37.32,
+    "sha256": "fbce85f58f5273f7f56c89dfe3496c76f0be6e4c99510c56cfebaed3a5916e8b"
+  },
+  {
+    "file": "dragon.vtu",
+    "title": "dragon.vtu",
+    "description": "3D model of a dragon",
+    "icon": "ion:cube",
+    "license": "Public Domain",
+    "author": "Stanford",
+    "size": 6.53,
+    "sha256": "934a8fb81257275f8c034feec8dca771192c40e06b67a49108ff9e3fbd260ff2"
+  },
+  {
+    "file": "eta_asm.stp",
+    "title": "eta_asm.stp",
+    "description": "CAD assembly of a mechanical watch",
+    "icon": "mdi:file-cad-box",
+    "license": "GrabCAD",
+    "author": "Greg Brown",
+    "size": 3.97,
+    "sha256": "91dd9fd6ed67cfb673c338020939e5fc4c602230d537c0a85d8995a3af0216ad"
+  },
+  {
+    "file": "f3d.vtp",
+    "title": "f3d.vtp",
+    "description": "3D logo of F3D",
+    "icon": "ion:cube",
+    "license": "BSD-3-Clause",
+    "author": "F3D-APP Foundation",
+    "size": 0.01,
+    "sha256": "c8a5b245b4b637a1b5a4b5e4240dff0f86b0426fb5f22ba8a3591122a31437b7"
+  },
+  {
+    "file": "gearbox.zip",
+    "title": "gearbox.zip",
+    "description": "Animated 3D model of a gearbox",
+    "icon": "qlementine-icons:movie-16",
+    "license": "CC-BY-4.0",
+    "author": "DZHUSI ØNE",
+    "size": 22.84,
+    "sha256": "38268dac3f5aa2e5303b18773804a755f27819586cd5fb4e79d91f5fd02bebab"
+  },
+  {
+    "file": "pointCloud.vtp",
+    "title": "pointCloud.vtp",
+    "description": "Point cloud data from a LIDAR",
+    "icon": "gravity-ui:dots-9",
+    "license": "Apache-2.0",
+    "author": "Velodyne LiDAR",
+    "size": 10.87,
+    "sha256": "31c5f3cc1ffaa17339c9d85ba5bed9072a4e8d14431dac3765fc3d599cc525d4"
+  },
+  {
+    "file": "single-pin.vtp",
+    "title": "single-pin.vtp",
+    "description": "CFD simulation with streamlines",
+    "icon": "icomoon-free:lab",
+    "license": "BSD-3-Clause",
+    "author": "Kitware Inc.",
+    "size": 10.38,
+    "sha256": "8016ed7acd91a27349528fc6f2097d19e73f60391b14af9f689690da2106a0a3"
+  },
+  {
+    "file": "skull.vti",
+    "title": "skull.vti",
+    "description": "Volumetric scan of a human skull",
+    "icon": "icomoon-free:lab",
+    "license": "BSD-3-Clause",
+    "author": "Kitware Inc.",
+    "size": 9.94,
+    "sha256": "8c2cdb8cc9e6a5c6b8c0a8e7db60a451cf53df34e2365a1916ef2dcdb33f39cf"
+  },
+  {
+    "file": "future_parking_2k.hdr",
+    "title": "future_parking_2k.hdr",
+    "description": "HDR image of a futuristic parking scene",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Sergej Majboroda",
+    "size": 5.93,
+    "sha256": "8621abbe080b52a2abe7e9a20c8019466b0664290069bfd040a4897df490c80d"
+  },
+  {
+    "file": "hikers_cave_2k.hdr",
+    "title": "hikers_cave_2k.hdr",
+    "description": "HDR image of a hikers cave scene",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Greg Zaal",
+    "size": 6.95,
+    "sha256": "73b39879d1c7f17fd2808510c1940297f8b071bad1809a13e5af2ad3f511deaf"
+  },
+  {
+    "file": "lebombo_4k.hdr",
+    "title": "lebombo_4k.hdr",
+    "description": "HDR image",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Poly Haven",
+    "size": 23.23,
+    "sha256": "23a59b56482e804985ae8eae404a0d15a24ec924ad2f250e6f81371760ae2a48"
+  },
+  {
+    "file": "venice_sunset_8k.hdr",
+    "title": "venice_sunset_8k.hdr",
+    "description": "HDR image of a Venice sunset",
+    "icon": "ep:picture-filled",
+    "license": "CC0-1.0",
+    "author": "Greg Zaal",
+    "size": 84.92,
+    "sha256": "d77530f340ecc20de550b87b9a6a6eabf38e6e64b7a740292dc540e1815191e0"
+  }
+]

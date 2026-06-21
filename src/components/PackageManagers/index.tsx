@@ -117,6 +117,10 @@ export function DistroLinks({ distros }: DistroLinksProps) {
           className={styles.distroLink}
         >
           {distro.name}
+          <Icon
+            icon="material-symbols:open-in-new"
+            style={{ fontSize: "1rem", marginLeft: "0.5rem" }}
+          />
         </a>
       ))}
     </div>

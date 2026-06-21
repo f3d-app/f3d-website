@@ -190,8 +190,8 @@ const config: Config = {
               to: "/LICENSE",
             },
             {
-              label: "Web Viewer",
-              to: "/viewer",
+              label: "Assets",
+              to: "/data",
             },
             {
               label: "GitHub",
