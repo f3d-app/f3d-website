@@ -8,6 +8,7 @@ import "@splidejs/react-splide/css/sea-green";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import CodeBlock from "@theme/CodeBlock";
 import styles from "./gallery.module.css";
+import Link from "@docusaurus/Link";
 
 const galleryItems = [
   {
@@ -242,13 +243,9 @@ export default function Gallery(): ReactNode {
           <Admonition type="note">
             Images and videos displayed below use public datasets, you can
             download them{" "}
-            <a
-              href="https://drive.google.com/file/d/1hYGAHr67T7tBrUKFrCF_uc_jnvJaQF-A/view?usp=sharing"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Link to="/data">
               here
-            </a>
+            </Link>
             . The provided commands assume a standard configuration file is
             present in your F3D installation.
           </Admonition>
