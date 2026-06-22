@@ -1,12 +1,13 @@
 
 .downloadCard {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--ifm-color-emphasis-200);
   border-radius: 12px;
   padding: 1.5rem;
   background: var(--ifm-background-surface-color);
   box-shadow: 0 2px 8px rgba(0,0,0,0.08);
   transition: all 0.3s ease;
-  cursor: pointer;
 }
 
 .downloadHeader {
@@ -75,21 +76,22 @@
 .downloadButton {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  background: var(--accent-blue);
-  color: white;
-  padding: 0.75rem 1.5rem;
-  border-radius: 8px;
+  gap: 0.4rem;
+  background: var(--ifm-background-color);
+  color: var(--ifm-color-emphasis-900);
+  padding: 0.45rem 1rem;
+  border-radius: 6px;
   text-decoration: none;
   font-weight: 600;
-  font-size: 0.9rem;
-  width: 100%;
+  font-size: 0.8rem;
+  width: fit-content;
+  margin: 0 auto;
   justify-content: center;
   position: relative;
+  transition: background 0.2s ease;
 }
 
 .downloadButton:hover {
-  background: var(--ifm-color-primary-dark);
-  transform: translateY(-1px);
+  background: var(--accent-blue);
 }
 

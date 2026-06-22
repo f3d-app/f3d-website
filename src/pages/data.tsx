@@ -78,7 +78,7 @@ export default function DataPage() {
                 sha256,
               }) => {
                 // replace extension by .png
-                const thumbnail = file.replace(/\.[^/.]+$/, ".png");
+                const thumbnail = `/data/${file.replace(/\.[^/.]+$/, ".png")}`;
                 return (
                   <DownloadBox
                     key={file}

@@ -52,7 +52,7 @@ export default function DownloadBox({
           <div className={styles.downloadDetails}>
             <h4 className={styles.downloadTitle}>{title}</h4>
             <span className={styles.downloadDescription}>{description}</span>
-            <p className={styles.downloadMeta}>
+            <div className={styles.downloadMeta}>
               {license && (
                 <>
                   <a
@@ -89,7 +89,7 @@ export default function DownloadBox({
               <a data-tooltip-id={tooltipShaId} className={styles.tooltipLink}>
                 sha256
               </a>
-            </p>
+            </div>
             <Tooltip
               id={tooltipShaId}
               clickable={true}
