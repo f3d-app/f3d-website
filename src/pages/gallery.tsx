@@ -266,6 +266,7 @@ export default function Gallery(): ReactNode {
             autoplay: false, // Stops the automatic rotating, no need on pauseOnHover is autoplay is disabled
             pagination: true,
             arrows: true,
+            noDrag: "pre, pre *",
           }}
         >
           {galleryItems.map((item, idx) => (
