@@ -11,7 +11,8 @@ import CodeBlock from "@theme/CodeBlock";
 import styles from "./gallery.module.css";
 import Link from "@docusaurus/Link";
 
-function toSlug(title: string): string {   //toSlug func. converts the slide titles as has URLs
+function toSlug(title: string): string {
+  //toSlug func. converts the slide titles as has URLs
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
@@ -214,10 +215,11 @@ const galleryItems = [
 ];
 
 export default function Gallery(): ReactNode {
-
   const { siteConfig } = useDocusaurusContext();
-  const splideRef = useRef<{ splide: { go: (index: number) => void } } | null>(null);
-  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);       // null -> closed | number -> which item is enlarged | the counter for that entry
+  const splideRef = useRef<{ splide: { go: (index: number) => void } } | null>(
+    null,
+  );
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null); // null -> closed | number -> which item is enlarged | the counter for that entry
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
@@ -228,7 +230,7 @@ export default function Gallery(): ReactNode {
     }
   }, []);
 
-  useEffect(() => {               
+  useEffect(() => {
     if (lightboxIndex === null) return;
     document.body.style.overflow = "hidden";
     const onKeyDown = (e: KeyboardEvent) => {
@@ -253,7 +255,7 @@ export default function Gallery(): ReactNode {
       <div className="container">
         <Splide
           className={styles.gallerySplide}
-          ref={splideRef}               // updates the window.location.hash when slide is moved 
+          ref={splideRef} // updates the window.location.hash when slide is moved
           onMoved={(_splide, newIndex) => {
             window.location.hash = toSlug(galleryItems[newIndex].title);
           }}
@@ -261,7 +263,7 @@ export default function Gallery(): ReactNode {
             type: "loop",
             perPage: 1,
             gap: "2rem",
-            autoplay: false,     // Stops the automatic rotating, no need on pauseOnHover is autoplay is disabled
+            autoplay: false, // Stops the automatic rotating, no need on pauseOnHover is autoplay is disabled
             pagination: true,
             arrows: true,
           }}
@@ -278,7 +280,8 @@ export default function Gallery(): ReactNode {
                   tabIndex={0}
                   aria-label={`View ${item.title} in full size`}
                   onKeyDown={(e) => {
-                    if (e.key === "Enter" || e.key === " ") setLightboxIndex(idx);
+                    if (e.key === "Enter" || e.key === " ")
+                      setLightboxIndex(idx);
                   }}
                 >
                   {item.media}
@@ -360,8 +363,10 @@ export default function Gallery(): ReactNode {
               <Icon icon="material-symbols:close" />
             </button>
             {React.cloneElement(
-              galleryItems[lightboxIndex].media as React.ReactElement<{ className: string }>,
-              { className: styles.lightboxMedia }
+              galleryItems[lightboxIndex].media as React.ReactElement<{
+                className: string;
+              }>,
+              { className: styles.lightboxMedia },
             )}
           </div>
         </div>
