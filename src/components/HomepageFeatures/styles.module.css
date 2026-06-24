@@ -4,3 +4,9 @@
   padding: 6rem 0;
   width: 100%;
 }
+
+.ctaIcon {
+  font-size: 1.8rem;
+  margin-left: 0.8rem;
+  vertical-align: -0.25em;
+}
