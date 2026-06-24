@@ -3,12 +3,19 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Admonition from "@theme/Admonition";
 import Heading from "@theme/Heading";
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "@splidejs/react-splide/css/sea-green";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import CodeBlock from "@theme/CodeBlock";
 import styles from "./gallery.module.css";
 import Link from "@docusaurus/Link";
+
+function toSlug(title: string): string {
+  return title
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-|-$/g, "");
+}
 
 const galleryItems = [
   {
@@ -207,6 +214,17 @@ const galleryItems = [
 
 export default function Gallery(): ReactNode {
   const { siteConfig } = useDocusaurusContext();
+  const splideRef = useRef<{ splide: { go: (index: number) => void } } | null>(null);
+
+  useEffect(() => {
+    const hash = window.location.hash.slice(1);
+    if (!hash || !splideRef.current) return;
+    const index = galleryItems.findIndex((item) => toSlug(item.title) === hash);
+    if (index !== -1) {
+      splideRef.current.splide.go(index);
+    }
+  }, []);
+
   return (
     <Layout
       title="Gallery"
@@ -218,6 +236,10 @@ export default function Gallery(): ReactNode {
       </div>
       <div className="container">
         <Splide
+          ref={splideRef}
+          onMoved={(_splide, newIndex) => {
+            window.location.hash = toSlug(galleryItems[newIndex].title);
+          }}
           options={{
             type: "loop",
             perPage: 1,
