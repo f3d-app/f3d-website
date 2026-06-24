@@ -252,6 +252,7 @@ export default function Gallery(): ReactNode {
       </div>
       <div className="container">
         <Splide
+          className={styles.gallerySplide}
           ref={splideRef}               // updates the window.location.hash when slide is moved 
           onMoved={(_splide, newIndex) => {
             window.location.hash = toSlug(galleryItems[newIndex].title);

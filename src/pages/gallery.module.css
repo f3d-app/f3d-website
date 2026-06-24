@@ -116,6 +116,24 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  /*
+   * Sea-green Splide theme already adds padding: 3em on .splide and places arrows at
+   * left/right: 1em. Each arrow is 2.5em wide, so they bleed ~0.5em into the slide.
+   * Reposition arrows into the outer gutter and shrink them — no extra slide padding.
+   */
+  .gallerySplide :global(.splide__arrow--prev) {
+    left: 0;
+  }
+
+  .gallerySplide :global(.splide__arrow--next) {
+    right: 0;
+  }
+
+  .gallerySplide :global(.splide__arrow svg) {
+    width: 2em;
+    height: 2em;
+  }
+
   .lightboxMedia {
     max-width: 95vw;
     max-height: 72vh;
