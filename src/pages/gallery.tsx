@@ -281,6 +281,14 @@ export default function Gallery(): ReactNode {
                   }}
                 >
                   {item.media}
+                  <button
+                    type="button"
+                    className={styles.expandButton}
+                    aria-label={`Expand ${item.title}`}
+                    tabIndex={-1}
+                  >
+                    <Icon icon="material-symbols:open-in-full" />
+                  </button>
                 </div>
                 <CodeBlock>{item.command}</CodeBlock>
               </section>

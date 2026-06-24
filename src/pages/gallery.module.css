@@ -5,8 +5,9 @@
   width: 700px;
 }
 
-/* Media wrapper — shows zoom cursor and accepts click */
+/* Media wrapper — positions expand button over media */
 .mediaWrapper {
+  position: relative;
   display: inline-block;
   cursor: zoom-in;
   border-radius: 8px;
@@ -15,6 +16,33 @@
 
 .mediaWrapper:focus-visible {
   outline: 2px solid var(--ifm-color-primary);
+}
+
+/* Expand button — same style as .lightboxClose */
+.expandButton {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.expandButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.expandButton svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.7));
 }
 
 /* Lightbox backdrop */
