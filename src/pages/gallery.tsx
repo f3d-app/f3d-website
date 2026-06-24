@@ -3,14 +3,15 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import Admonition from "@theme/Admonition";
 import Heading from "@theme/Heading";
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "@splidejs/react-splide/css/sea-green";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { Icon } from "@iconify/react";
 import CodeBlock from "@theme/CodeBlock";
 import styles from "./gallery.module.css";
 import Link from "@docusaurus/Link";
 
-function toSlug(title: string): string {
+function toSlug(title: string): string {   //toSlug func. converts the slide titles as has URLs
   return title
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
@@ -213,8 +214,10 @@ const galleryItems = [
 ];
 
 export default function Gallery(): ReactNode {
+
   const { siteConfig } = useDocusaurusContext();
   const splideRef = useRef<{ splide: { go: (index: number) => void } } | null>(null);
+  const [lightboxIndex, setLightboxIndex] = useState<number | null>(null);       // null -> closed | number -> which item is enlarged | the counter for that entry
 
   useEffect(() => {
     const hash = window.location.hash.slice(1);
@@ -224,6 +227,19 @@ export default function Gallery(): ReactNode {
       splideRef.current.splide.go(index);
     }
   }, []);
+
+  useEffect(() => {               
+    if (lightboxIndex === null) return;
+    document.body.style.overflow = "hidden";
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") setLightboxIndex(null);
+    };
+    window.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.body.style.overflow = "";
+      window.removeEventListener("keydown", onKeyDown);
+    };
+  }, [lightboxIndex]);
 
   return (
     <Layout
@@ -236,7 +252,7 @@ export default function Gallery(): ReactNode {
       </div>
       <div className="container">
         <Splide
-          ref={splideRef}
+          ref={splideRef}               // updates the window.location.hash when slide is moved 
           onMoved={(_splide, newIndex) => {
             window.location.hash = toSlug(galleryItems[newIndex].title);
           }}
@@ -253,7 +269,19 @@ export default function Gallery(): ReactNode {
             <SplideSlide key={idx}>
               <section style={{ textAlign: "center" }}>
                 <Heading as="h2">{item.title}</Heading>
-                <div style={{ marginBottom: "1em" }}>{item.media}</div>
+                <div
+                  style={{ marginBottom: "1em" }}
+                  className={styles.mediaWrapper}
+                  onClick={() => setLightboxIndex(idx)}
+                  role="button"
+                  tabIndex={0}
+                  aria-label={`View ${item.title} in full size`}
+                  onKeyDown={(e) => {
+                    if (e.key === "Enter" || e.key === " ") setLightboxIndex(idx);
+                  }}
+                >
+                  {item.media}
+                </div>
                 <CodeBlock>{item.command}</CodeBlock>
               </section>
             </SplideSlide>
@@ -303,6 +331,32 @@ export default function Gallery(): ReactNode {
           </ul>
         </section>
       </div>
+      {lightboxIndex !== null && (
+        <div
+          className={styles.lightboxBackdrop}
+          onClick={() => setLightboxIndex(null)}
+          role="dialog"
+          aria-modal="true"
+          aria-label={galleryItems[lightboxIndex].title}
+        >
+          <div
+            className={styles.lightboxContent}
+            onClick={(e) => e.stopPropagation()}
+          >
+            <button
+              className={styles.lightboxClose}
+              onClick={() => setLightboxIndex(null)}
+              aria-label="Close"
+            >
+              <Icon icon="material-symbols:close" />
+            </button>
+            {React.cloneElement(
+              galleryItems[lightboxIndex].media as React.ReactElement<{ className: string }>,
+              { className: styles.lightboxMedia }
+            )}
+          </div>
+        </div>
+      )}
     </Layout>
   );
 }
