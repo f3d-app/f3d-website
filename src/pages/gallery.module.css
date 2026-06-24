@@ -4,3 +4,142 @@
   height: auto;
   width: 700px;
 }
+
+/* Media wrapper — positions expand button over media */
+.mediaWrapper {
+  position: relative;
+  display: inline-block;
+  cursor: zoom-in;
+  border-radius: 8px;
+  outline-offset: 3px;
+}
+
+.mediaWrapper:focus-visible {
+  outline: 2px solid var(--ifm-color-primary);
+}
+
+/* Expand button — same style as .lightboxClose */
+.expandButton {
+  position: absolute;
+  top: 0.35rem;
+  right: 0.35rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.expandButton:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.expandButton svg {
+  width: 1.2rem;
+  height: 1.2rem;
+  filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.7));
+}
+
+/* Lightbox backdrop */
+.lightboxBackdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 200;
+  padding: 1rem;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Lightbox content wrapper */
+.lightboxContent {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: scaleIn 0.15s ease;
+}
+
+@keyframes scaleIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to   { transform: scale(1);    opacity: 1; }
+}
+
+/* Enlarged media inside lightbox */
+.lightboxMedia {
+  display: block;
+  max-width: 90vw;
+  max-height: 82vh;
+  width: auto;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+}
+
+/* Close button — positioned above the media */
+.lightboxClose {
+  position: absolute;
+  top: -2.75rem;
+  right: 0;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 0.35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.lightboxClose:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.lightboxClose svg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  /*
+   * Sea-green Splide theme adds padding: 3em on .splide and places arrows at the 
+   * left/right: 1em. Each arrow is 2.5em wide, so they bleed around 0.5em into the slide.
+   * Reposition arrows into the outer gutter and shrink them, no extra slide padding.
+   */
+  .gallerySplide :global(.splide__arrow--prev) {
+    left: 0;
+  }
+
+  .gallerySplide :global(.splide__arrow--next) {
+    right: 0;
+  }
+
+  .gallerySplide :global(.splide__arrow svg) {
+    width: 2em;
+    height: 2em;
+  }
+
+  .lightboxMedia {
+    max-width: 95vw;
+    max-height: 72vh;
+  }
+
+  .lightboxClose {
+    top: -2.25rem;
+  }
+}

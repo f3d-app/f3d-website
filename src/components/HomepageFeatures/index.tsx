@@ -1,5 +1,7 @@
 import type { ReactNode } from "react";
 import Heading from "@theme/Heading";
+import Link from "@docusaurus/Link";
+import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
 export default function HomepageFeatures(): ReactNode {
@@ -108,6 +110,18 @@ export default function HomepageFeatures(): ReactNode {
               </p>
             </div>
           </div>
+        </div>
+        <div className="text--center" style={{ marginTop: "3rem" }}>
+          <Link
+            className="button button--primary button--outline button--lg"
+            to="/gallery"
+          >
+            View more
+            <Icon
+              icon="material-symbols:arrow-forward-rounded"
+              className={styles.ctaIcon}
+            />
+          </Link>
         </div>
       </div>
     </section>
