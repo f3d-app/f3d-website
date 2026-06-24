@@ -40,13 +40,20 @@ async function fetchRepository(): Promise<void> {
     // Directory might not exist, that's ok
   }
 
-  // Clone the repository at the specific tag
+  // Clone the repository at the specific tag without LFS
   const cloneCmd = `git clone --depth 1 --branch ${repo_tag} ${repo_url} "${SOURCE_DIR}"`;
 
   try {
     const { stdout, stderr } = await execAsync(cloneCmd, {
       env: { ...process.env, GIT_LFS_SKIP_SMUDGE: "1" },
     });
+
+    // pull LFS files after cloning in docs/user/images path
+    const lfsCmd = `git -C "${SOURCE_DIR}" lfs pull --include "doc/user/images/*"`;
+    await execAsync(lfsCmd, {
+      env: { ...process.env, GIT_LFS_SKIP_SMUDGE: "0" },
+    });
+
     console.log("Repository cloned successfully");
     if (stderr) console.log("Git output:", stderr);
   } catch (error) {
