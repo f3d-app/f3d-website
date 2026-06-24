@@ -222,8 +222,7 @@ export default function Gallery(): ReactNode {
             type: "loop",
             perPage: 1,
             gap: "2rem",
-            autoplay: true,
-            pauseOnHover: true,
+            autoplay: false,     // Stops the automatic rotating, no need on pauseOnHover is autoplay is disabled
             pagination: true,
             arrows: true,
           }}
