@@ -81,22 +81,27 @@ function initViewer(
       moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.effect.tone_mapping");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("render.effect.ambient_occlusion");
+      // Workaround: SSAO, grid and reflection are disabled on mobile by default.
+      // SSAO is memory-bandwidth heavy and causes thermal throttling on mobile GPUs.
+      // Grid + reflection cause depth artifacts (jagged edges) when SSAO is off on mobile.
+      // Users can still enable them manually via the settings panel.
+      if (!window.matchMedia("(max-width: 768px)").matches) {
+        moduleRef.current.engineInstance
+          .getOptions()
+          .toggle("render.effect.ambient_occlusion");
+        moduleRef.current.engineInstance
+          .getOptions()
+          .toggle("render.grid.enable");
+        moduleRef.current.engineInstance
+          .getOptions()
+          .setAsString("render.grid.reflection", "0.5");
+      }
       moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.hdri.ambient");
 
       // display widgets
       moduleRef.current.engineInstance.getOptions().toggle("ui.axis");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("render.grid.enable");
-
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("render.grid.reflection", "0.5");
 
       // default to +Z
       moduleRef.current.engineInstance
