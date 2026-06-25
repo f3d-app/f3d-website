@@ -307,7 +307,8 @@ function ViewerApp({ model }: ViewerAppProps) {
               type="checkbox"
               name="ssao"
               className={styles.switchInput}
-              defaultChecked
+              // Keep the checkbox in sync with the engine: SSAO is off by default on mobile.
+              defaultChecked={!window.matchMedia("(max-width: 768px)").matches}
               onChange={handleSwitchToggle}
             />
             <label htmlFor="ssao">Ambient occlusion</label>
