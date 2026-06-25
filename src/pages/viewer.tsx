@@ -17,7 +17,10 @@ function ViewerApp({ model }: ViewerAppProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   // Default true (SSR-safe); corrected to false on mobile after hydration.
+  // Workaround: grid + reflection cause depth artifacts on mobile when SSAO is off.
   const [ssaoDefault, setSsaoDefault] = useState(true);
+  const [gridDefault, setGridDefault] = useState(true);
+  const [reflectionDefault, setReflectionDefault] = useState(true);
   const [fileName, setFileName] = useState(model || "f3d.vtp");
   const [fileStatus, setFileStatus] = useState<"loading" | "success" | "error">(
     "success",
@@ -27,7 +30,10 @@ function ViewerApp({ model }: ViewerAppProps) {
 
   // window is unavailable during SSR, so detect mobile only after mount.
   useEffect(() => {
-    setSsaoDefault(!window.matchMedia("(max-width: 768px)").matches);
+    const isDesktop = !window.matchMedia("(max-width: 768px)").matches;
+    setSsaoDefault(isDesktop);
+    setGridDefault(isDesktop);
+    setReflectionDefault(isDesktop);
   }, []);
 
   // Prevent the browser from accepting a dropped file outside the drop zone
@@ -254,22 +260,25 @@ function ViewerApp({ model }: ViewerAppProps) {
           <div className={styles.sectionLabel}>Widgets</div>
           <div className={styles.switchField}>
             <input
+              key={String(gridDefault)}
               id="grid"
               type="checkbox"
               name="grid"
               className={styles.switchInput}
-              defaultChecked
+              defaultChecked={gridDefault}
               onChange={handleSwitchToggle}
             />
             <label htmlFor="grid">Grid</label>
           </div>
           <div className={styles.switchField}>
             <input
+              key={`reflection-${String(reflectionDefault)}`}
               id="reflection"
               type="checkbox"
               name="reflection"
               className={styles.switchInput}
-              defaultChecked
+              defaultChecked={reflectionDefault}
+              disabled={!gridDefault}
               onChange={handleSwitchToggle}
             />
             <label htmlFor="reflection">Reflection</label>
