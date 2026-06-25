@@ -16,12 +16,19 @@ function ViewerApp({ model }: ViewerAppProps) {
   const [upDirection, setUpDirection] = useState("+Z");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
+  // Default true (SSR-safe); corrected to false on mobile after hydration.
+  const [ssaoDefault, setSsaoDefault] = useState(true);
   const [fileName, setFileName] = useState(model || "f3d.vtp");
   const [fileStatus, setFileStatus] = useState<"loading" | "success" | "error">(
     "success",
   );
   const [fileError, setFileError] = useState<string | undefined>(undefined);
   const fileUrl = model || useBaseUrl("/data/f3d.vtp");
+
+  // window is unavailable during SSR, so detect mobile only after mount.
+  useEffect(() => {
+    setSsaoDefault(!window.matchMedia("(max-width: 768px)").matches);
+  }, []);
 
   // Prevent the browser from accepting a dropped file outside the drop zone
   useEffect(() => {
@@ -303,12 +310,13 @@ function ViewerApp({ model }: ViewerAppProps) {
           </div>
           <div className={styles.switchField}>
             <input
+              key={String(ssaoDefault)}
               id="ssao"
               type="checkbox"
               name="ssao"
               className={styles.switchInput}
               // Keep the checkbox in sync with the engine: SSAO is off by default on mobile.
-              defaultChecked={!window.matchMedia("(max-width: 768px)").matches}
+              defaultChecked={ssaoDefault}
               onChange={handleSwitchToggle}
             />
             <label htmlFor="ssao">Ambient occlusion</label>
