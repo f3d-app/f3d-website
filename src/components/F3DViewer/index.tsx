@@ -81,9 +81,13 @@ function initViewer(
       moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.effect.tone_mapping");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("render.effect.ambient_occlusion");
+      // SSAO is memory-bandwidth heavy and causes thermal throttling on mobile GPUs,
+      // so skip enabling it by default on narrow viewports.
+      if (!window.matchMedia("(max-width: 768px)").matches) {
+        moduleRef.current.engineInstance
+          .getOptions()
+          .toggle("render.effect.ambient_occlusion");
+      }
       moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.hdri.ambient");
