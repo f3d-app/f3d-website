@@ -1,0 +1,25 @@
+.card {
+  max-width: 500px;
+  margin: 0 auto;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.5);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.label {
+  font-size: 0.75rem;
+}
+
+.divider {
+  margin: 0;
+  border: 0.5px solid var(--ifm-color-emphasis-200);
+}
+
+.description {
+  text-align: center;
+  padding: 10px 16px 14px;
+  color: var(--ifm-color-emphasis-600);
+  font-style: italic;
+  font-size: 0.8rem;
+}
