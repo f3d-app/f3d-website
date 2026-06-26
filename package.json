@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "update-downloads": "tsx ./tools/generateDownloads.ts",
-    "update-doc": "tsx ./tools/generateDocumentation.ts option-illustration https://github.com/Meakk/f3d"
+    "update-doc": "tsx ./tools/generateDocumentation.ts"
   },
   "dependencies": {
     "@docusaurus/core": "^3.10.1",

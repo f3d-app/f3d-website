@@ -40,11 +40,16 @@ const remarkCompare: Plugin = () => {
 
       let description = getText(heading).trim();
 
-      if (!description.startsWith("compare:")) {
+      if (!description.startsWith("compare")) {
         return;
       }
 
-      description = description.replace(/^compare:\s*/, "");
+      if (description.startsWith("compare:")) {
+        description = description.replace(/^compare:\s*/, "");
+      }
+      else {
+        description = "";
+      }
 
       const table = parent.children[index + 1];
 
