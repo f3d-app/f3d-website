@@ -46,8 +46,7 @@ const remarkCompare: Plugin = () => {
 
       if (description.startsWith("compare:")) {
         description = description.replace(/^compare:\s*/, "");
-      }
-      else {
+      } else {
         description = "";
       }
 

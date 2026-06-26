@@ -23,8 +23,8 @@ export default function CompareImage({
       <ReactCompareImage
         leftImage={leftImage}
         rightImage={rightImage}
-        leftImageLabel={(<span className={styles.label}>{leftLabel}</span>)}
-        rightImageLabel={(<span className={styles.label}>{rightLabel}</span>)}
+        leftImageLabel={<span className={styles.label}>{leftLabel}</span>}
+        rightImageLabel={<span className={styles.label}>{rightLabel}</span>}
         sliderLineColor="var(--ifm-color-emphasis-400)"
       />
       {description && (
