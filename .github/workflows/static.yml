@@ -47,7 +47,7 @@ jobs:
 
       - name: Restore cache
         id: cache-npm
-        uses: actions/cache/restore@v5
+        uses: actions/cache/restore@v6
         with:
           path: "~/.npm"
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -71,7 +71,7 @@ jobs:
 
       - name: Save cache
         if: steps.cache-npm.outputs.cache-hit != 'true'
-        uses: actions/cache/save@v5
+        uses: actions/cache/save@v6
         with:
           key: ${{ steps.cache-npm.outputs.cache-primary-key }}
           path: "~/.npm"
