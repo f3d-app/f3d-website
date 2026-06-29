@@ -275,10 +275,10 @@ async function preprocessMarkdown(): Promise<void> {
     await writeFile(filePath, processLibOptions(contents));
   }
 
-  // Fix images in 05-ANIMATIONS.md and 09-COLOR_MAPS.md
+  // Fix images in 05-ANIMATIONS.md and 10-COLOR_MAPS.md
   for (const file of [
     "docs/user/05-ANIMATIONS.md",
-    "docs/user/09-COLOR_MAPS.md",
+    "docs/user/10-COLOR_MAPS.md",
   ]) {
     const filePath = path.join(__dirname, "..", file);
     const contents = await readFile(filePath, { encoding: "utf8" });
