@@ -4,6 +4,7 @@ import type * as Preset from "@docusaurus/preset-classic";
 
 // Remark plugins
 import compareImage from "./src/remark/compare-image";
+import colorSwatch from "./src/remark/color-swatch";
 
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
@@ -39,7 +40,7 @@ const config: Config = {
       "classic",
       {
         docs: {
-          remarkPlugins: [compareImage],
+          remarkPlugins: [compareImage, colorSwatch],
           sidebarPath: "./sidebars.ts",
           versions: {
             current: {
