@@ -22,7 +22,9 @@ const remarkColorSwatch: Plugin = () => {
     visit(tree, "tableCell", (cell: any) => {
       const text = getText(cell).trim();
 
-      const m = text.match(/^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/i);
+      const m = text.match(
+        /^rgb\(\s*(\d{1,3})\s*,\s*(\d{1,3})\s*,\s*(\d{1,3})\s*\)$/i,
+      );
 
       if (!m) {
         return;

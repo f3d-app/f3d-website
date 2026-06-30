@@ -7,7 +7,6 @@ type Props = {
 };
 
 export default function Swatch({ color, size = 28 }: Props) {
-
   const cssVars: React.CSSProperties = {
     ["--swatch-color" as any]: color,
     ["--swatch-size" as any]: `${size}px`,
