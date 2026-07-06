@@ -90,6 +90,16 @@
     "sha256": "fbce85f58f5273f7f56c89dfe3496c76f0be6e4c99510c56cfebaed3a5916e8b"
   },
   {
+    "file": "cluster_fly.spz",
+    "title": "cluster_fly.spz",
+    "description": "3D gaussian splatting",
+    "icon": "gravity-ui:dots-9",
+    "license": "CC-BY-4.0",
+    "author": "Dany Bittel",
+    "size": 49.37,
+    "sha256": "e4f2529b7e17fa9f21cf5dc781b083c36a81902e9cc9c588ee2c7311d2baa80c"
+  },
+  {
     "file": "dragon.vtu",
     "title": "dragon.vtu",
     "description": "3D model of a dragon",
