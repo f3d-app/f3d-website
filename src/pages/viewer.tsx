@@ -55,7 +55,7 @@ function ViewerApp({ model }: ViewerAppProps) {
       grid: `set render.grid.enable ${checked}`,
       reflection: `set render.grid.reflection ${checked ? ".5" : "0"}`,
       axis: `set ui.axis ${checked}`,
-      fxaa: `set render.effect.antialiasing.enable ${checked}`,
+      fxaa: `set render.effect.antialiasing.mode ${checked ? "fxaa" : "none"}`,
       tone: `set render.effect.tone_mapping ${checked}`,
       ssao: `set render.effect.ambient_occlusion ${checked}`,
       ambient: `set render.hdri.ambient ${checked}`,

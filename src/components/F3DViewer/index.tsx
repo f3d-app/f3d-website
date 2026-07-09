@@ -77,7 +77,7 @@ function initViewer(
       // make it look nice
       moduleRef.current.engineInstance
         .getOptions()
-        .toggle("render.effect.antialiasing.enable");
+        .setAsString("render.effect.antialiasing.mode", "fxaa");
       moduleRef.current.engineInstance
         .getOptions()
         .toggle("render.effect.tone_mapping");
@@ -126,7 +126,9 @@ function initViewer(
       setIsLoading(false);
     })
     .catch((error) => {
-      console.error("Internal exception: " + error);
+      console.error(
+        "Internal exception: " + moduleRef.current.getExceptionMessage(error),
+      );
       setIsLoading(false);
     });
 }
