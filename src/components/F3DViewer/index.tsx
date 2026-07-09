@@ -126,7 +126,9 @@ function initViewer(
       setIsLoading(false);
     })
     .catch((error) => {
-      console.error("Internal exception: " + moduleRef.current.getExceptionMessage(error));
+      console.error(
+        "Internal exception: " + moduleRef.current.getExceptionMessage(error),
+      );
       setIsLoading(false);
     });
 }
