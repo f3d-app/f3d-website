@@ -199,6 +199,10 @@ const config: Config = {
               to: "/data",
             },
             {
+              label: "Brand",
+              to: "/brand",
+            },
+            {
               label: "GitHub",
               href: "https://github.com/f3d-app/f3d",
             },
