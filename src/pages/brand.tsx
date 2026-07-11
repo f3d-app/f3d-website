@@ -88,7 +88,8 @@ export default function BrandPage(): ReactNode {
             <a href="https://creativecommons.org/licenses/by-nd/4.0/">
               CC BY-ND 4.0
             </a>
-            , &copy; {new Date().getFullYear()} F3D-APP Foundation. Do not alter the logo proportions or colors.
+            , &copy; {new Date().getFullYear()} F3D-APP Foundation. Do not alter
+            the logo proportions or colors.
           </p>
           <div className={styles.logoGrid}>
             {logos.map((v) => (
@@ -103,8 +104,8 @@ export default function BrandPage(): ReactNode {
             Color Palette
           </Heading>
           <p className={styles.sectionDescription}>
-            These are the official F3D brand colors. Blue and Yellow is the primary accent
-            colors. Red and Green are secondary accents.
+            These are the official F3D brand colors. Blue and Yellow is the
+            primary accent colors. Red and Green are secondary accents.
           </p>
           <div className={styles.colorGrid}>
             {colors.map((c) => (
