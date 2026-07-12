@@ -17,7 +17,7 @@
     "update-doc": "tsx ./tools/generateDocumentation.ts"
   },
   "dependencies": {
-    "@docusaurus/core": "^3.10.1",
+    "@docusaurus/core": "^3.10.2",
     "@docusaurus/faster": "^3.10.1",
     "@docusaurus/preset-classic": "^3.10.1",
     "@docusaurus/theme-mermaid": "^3.10.1",
