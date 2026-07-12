@@ -41,7 +41,7 @@
     "@octokit/core": "^7.0.6",
     "@seaborg/cli": "^0.6.5",
     "tsx": "^4.23.0",
-    "typescript": "~6.0.3"
+    "typescript": "~7.0.2"
   },
   "browserslist": {
     "production": [
