@@ -35,7 +35,7 @@
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.1",
-    "@docusaurus/tsconfig": "^3.10.1",
+    "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.1",
     "@iconify/react": "^6.0.2",
     "@octokit/core": "^7.0.6",
