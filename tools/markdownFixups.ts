@@ -90,7 +90,7 @@ function convertGithubAdmonitions(content: string): string {
   });
 }
 
-function fixContributingLinks(content: string): string {
+function fixDevLinksInRoot(content: string): string {
   return content.replaceAll("doc/dev/", "");
 }
 
@@ -123,5 +123,5 @@ export {
   convertGithubAdmonitions,
   fixDevLinks,
   fixImages,
-  fixContributingLinks,
+  fixDevLinksInRoot,
 };

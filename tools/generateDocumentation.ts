@@ -11,7 +11,7 @@ import {
   convertGithubAdmonitions,
   fixDevLinks,
   fixImages,
-  fixContributingLinks,
+  fixDevLinksInRoot,
 } from "./markdownFixups";
 
 const __filename = fileURLToPath(import.meta.url);
@@ -265,7 +265,14 @@ async function preprocessMarkdown(): Promise<void> {
   for (const file of ["dev/01-CONTRIBUTING.md"]) {
     const filePath = path.join(__dirname, "..", file);
     const contents = await readFile(filePath, { encoding: "utf8" });
-    await writeFile(filePath, fixContributingLinks(contents));
+    await writeFile(filePath, fixDevLinksInRoot(contents));
+  }
+
+  // Fix links in 03-AI_POLICY.md
+  for (const file of ["dev/03-AI_POLICY.md"]) {
+    const filePath = path.join(__dirname, "..", file);
+    const contents = await readFile(filePath, { encoding: "utf8" });
+    await writeFile(filePath, fixDevLinksInRoot(contents));
   }
 
   // Improve libf3d/03-OPTIONS.md anchors and formatting
