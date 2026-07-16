@@ -19,6 +19,10 @@ function initViewer(
   setIsLoading: (isLoading: boolean) => void,
 ) {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+
+  // Focus the canvas when the user clicks it so keyboard events are forwarded
+  canvas.addEventListener("mousedown", () => canvas.focus());
+
   canvas.oncontextmenu = function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -53,9 +57,6 @@ function initViewer(
       moduleRef.current.engineInstance
         .getOptions()
         .setAsString("ui.loader_progress", "true");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("ui.animation_progress", "true");
       moduleRef.current.engineInstance
         .getOptions()
         .setAsString("scene.animation.autoplay", "true");
@@ -122,6 +123,8 @@ function initViewer(
 
       moduleRef.current.engineInstance.getInteractor().start();
 
+      moduleRef.current.canvas.focus(); // focus by default
+
       // Hide loading screen
       setIsLoading(false);
     })
@@ -167,6 +170,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   const [isLogWindowOpen, setIsLogWindowOpen] = useState(false);
   const [commandInput, setCommandInput] = useState("");
   const logEndRef = useRef<HTMLDivElement>(null);
+  const commandInputRef = useRef<HTMLInputElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [severityFilters, setSeverityFilters] = useState({
     error: true,
@@ -207,6 +211,13 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       }
     }
   }, [logs]);
+
+  // When the log window opens, focus the command input so the user can type immediately
+  useEffect(() => {
+    if (isLogWindowOpen) {
+      commandInputRef.current?.focus();
+    }
+  }, [isLogWindowOpen]);
 
   // Handle command submission
   const handleCommandSubmit = (e: React.FormEvent) => {
@@ -254,11 +265,19 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
 
   useEffect(() => {
     initViewer(moduleRef, fileUrl, addLog, setIsLoading);
+
+    // Open the log window when escape is pressed
+    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+    canvas.addEventListener("keydown", (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsLogWindowOpen(true);
+      }
+    });
   }, [fileUrl]);
 
   return (
     <div className={styles.viewer}>
-      <canvas id="canvas"></canvas>
+      <canvas id="canvas" tabIndex={0}></canvas>
 
       {isLoading && (
         <div className={styles.loadingScreen}>
@@ -273,7 +292,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       {!isLoading && !isLogWindowOpen && (
         <button
           className={styles.logToggle}
-          onClick={() => setIsLogWindowOpen(!isLogWindowOpen)}
+          onClick={() => setIsLogWindowOpen(true)}
           aria-label="Toggle log window"
           title="Console"
         >
@@ -341,6 +360,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
           </div>
           <form className={styles.logInput} onSubmit={handleCommandSubmit}>
             <input
+              ref={commandInputRef}
               type="text"
               placeholder="Enter command..."
               value={commandInput}
@@ -349,6 +369,18 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
                 if (e.key === "Enter") {
                   e.preventDefault();
                   handleCommandSubmit(e);
+                } else if (e.key === "Escape") {
+                  e.stopPropagation();
+                  e.preventDefault();
+                  if (commandInput !== "") {
+                    setCommandInput("");
+                  } else {
+                    setIsLogWindowOpen(false);
+                    const c = document.getElementById(
+                      "canvas",
+                    ) as HTMLCanvasElement;
+                    if (c) c.focus();
+                  }
                 }
               }}
               className={styles.commandInput}
