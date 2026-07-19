@@ -358,7 +358,7 @@ function ViewerApp({ model }: ViewerAppProps) {
             aria-label="Toggle controls panel"
             title="Controls"
           >
-            <Icon icon="material-symbols:settings" />
+            <Icon icon="material-symbols:tune" />
           </div>
           <div
             className={`${styles.dropZone} ${isDragging ? styles.dropZoneActive : ""}`}

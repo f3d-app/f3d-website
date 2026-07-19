@@ -356,6 +356,8 @@
     display: flex;
     width: 2.5rem;
     height: 2.5rem;
+    top: 1rem;
+    left: 1rem;
   }
   
   .mobileMenuToggle svg {
