@@ -20,9 +20,6 @@ function initViewer(
 ) {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 
-  // Focus the canvas when the user clicks it so keyboard events are forwarded
-  canvas.addEventListener("mousedown", () => canvas.focus());
-
   canvas.oncontextmenu = function (e) {
     e.preventDefault();
     e.stopPropagation();
@@ -233,7 +230,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       if (moduleRef.current) {
         moduleRef.current.engineInstance
           .getInteractor()
-          .triggerCommand(commandInput);
+          .triggerCommand(commandInput, true);
         moduleRef.current.engineInstance.getWindow().render();
       }
     } catch (error: any) {
@@ -257,22 +254,40 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     },
     triggerCommand: (command: string) => {
       if (!moduleRef.current) return;
-      moduleRef.current.engineInstance.getInteractor().triggerCommand(command);
+      moduleRef.current.engineInstance
+        .getInteractor()
+        .triggerCommand(command, true);
       moduleRef.current.engineInstance.getWindow().render();
     },
     addLog: addLog,
   }));
 
   useEffect(() => {
-    initViewer(moduleRef, fileUrl, addLog, setIsLoading);
+    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+
+    // Focus the canvas when the user clicks it so keyboard events are forwarded
+    const handleMouseDown = () => canvas.focus();
+    canvas.addEventListener("mousedown", handleMouseDown);
 
     // Open the log window when escape is pressed
-    const canvas = document.getElementById("canvas") as HTMLCanvasElement;
-    canvas.addEventListener("keydown", (e: KeyboardEvent) => {
+    const handleKeyDown = (e: KeyboardEvent) => {
       if (e.key === "Escape") {
         setIsLogWindowOpen(true);
       }
-    });
+    };
+    canvas.addEventListener("keydown", handleKeyDown);
+
+    initViewer(moduleRef, fileUrl, addLog, setIsLoading);
+
+    return () => {
+      canvas.removeEventListener("mousedown", handleMouseDown);
+      canvas.removeEventListener("keydown", handleKeyDown);
+      if (moduleRef.current?.engineInstance) {
+        moduleRef.current.engineInstance.getInteractor().requestStop();
+        moduleRef.current.engineInstance[Symbol.dispose]();
+        moduleRef.current.engineInstance = null;
+      }
+    };
   }, [fileUrl]);
 
   return (
