@@ -32,7 +32,7 @@ permissions:
 
 jobs:
   cache_lfs:
-    runs-on: ubuntu-24.04
+    runs-on: ubuntu-latest
     name: Update LFS data cache
     outputs:
       lfs_sha: ${{ steps.lfs_sha_recover.outputs.lfs_sha }}
@@ -57,6 +57,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v7
         with:
+          path: "source"
+          fetch-depth: 1
           lfs: false
 
       - name: Recover LFS Data
@@ -80,21 +82,24 @@ jobs:
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
 
       - name: Install Dependencies
+        working-directory: source
         run: npm install --no-fund --no-audit --loglevel verbose
 
       - name: Update docs
+        working-directory: source
         run: >
           npm run update-doc
           ${{ github.event.inputs.docs_tag == '' && 'master' || github.event.inputs.docs_tag }}
           https://github.com/${{ github.event.inputs.docs_repository == '' && 'f3d-app/f3d' || github.event.inputs.docs_repository }}
 
       - name: Build
+        working-directory: source
         run: npm run build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v5
         with:
-          path: "./build"
+          path: "source/build"
 
       - name: Save cache
         if: steps.cache-npm.outputs.cache-hit != 'true'
