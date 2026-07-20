@@ -7,8 +7,6 @@
 /* Canvas focus indicator */
 .viewer canvas:focus {
   outline: none;
-  border: 1px solid var(--ifm-color-primary);
-  border-radius: 6px;
 }
 
 /* Loading screen */
@@ -85,6 +83,51 @@
 .logToggle svg {
   width: 1.5rem;
   height: 1.5rem;
+}
+
+/* Notifications */
+.notifications {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  z-index: 40;
+  pointer-events: none;
+  align-items: flex-start;
+}
+
+.notification {
+  pointer-events: auto;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color);
+  padding: 0.35rem 0.6rem;
+  border-radius: 6px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+  min-width: 120px;
+  max-width: 420px;
+  font-size: 0.8rem;
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+  display: flex;
+  align-items: center;
+}
+
+.fading {
+  opacity: 0;
+  transform: translateX(50px);
+}
+
+.notificationText {
+  display: inline-flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.notificationValue {
+  color: var(--ifm-color-primary);
 }
 
 /* Log window */
