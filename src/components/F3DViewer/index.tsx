@@ -9,13 +9,22 @@ import f3d, { type LogVerboseLevel } from "f3d";
 import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
+type notificationFn = (
+  desc: string,
+  value: string,
+  bindStr: string,
+  duration: number,
+) => boolean;
+type logFn = (
+  message: string,
+  level: "error" | "warning" | "info" | "debug",
+) => void;
+
 function initViewer(
   moduleRef: any,
   fileUrl: string,
-  addLog: (
-    message: string,
-    level: "error" | "warning" | "info" | "debug",
-  ) => void,
+  addLog: logFn,
+  addNotification: notificationFn,
   setIsLoading: (isLoading: boolean) => void,
 ) {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
@@ -115,6 +124,10 @@ function initViewer(
           scale * moduleRef.current.canvas.clientHeight,
         );
 
+      moduleRef.current.engineInstance
+        .getInteractor()
+        .setNotificationCallback(addNotification);
+
       // load file
       openStream(moduleRef, new Uint8Array(defaultFile));
 
@@ -126,9 +139,14 @@ function initViewer(
       setIsLoading(false);
     })
     .catch((error) => {
-      console.error(
-        "Internal exception: " + moduleRef.current.getExceptionMessage(error),
-      );
+      // if the exception is a webassembly exception
+      if (error instanceof WebAssembly.RuntimeError) {
+        console.error(
+          "Internal exception: " + moduleRef.current.getExceptionMessage(error),
+        );
+      } else {
+        console.error("Error: " + error.message);
+      }
       setIsLoading(false);
     });
 }
@@ -175,6 +193,17 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     info: true,
     debug: false,
   });
+
+  const [notifications, setNotifications] = useState<
+    Array<{
+      startTime: number;
+      desc: string;
+      value: string;
+      bindStr: string;
+      duration: number;
+      fading: boolean;
+    }>
+  >([]);
 
   // Add log entry
   const addLog = (
@@ -277,7 +306,51 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     };
     canvas.addEventListener("keydown", handleKeyDown);
 
-    initViewer(moduleRef, fileUrl, addLog, setIsLoading);
+    const addNotification: notificationFn = (
+      desc,
+      value,
+      bindStr,
+      duration,
+    ) => {
+      const startTime = Date.now();
+      const notif = {
+        startTime,
+        desc,
+        value,
+        bindStr,
+        duration,
+        fading: false,
+      };
+
+      // add new notification to the top of the list
+      setNotifications((prev) => [notif, ...prev]);
+
+      // should match the transition duration in styles.module.css
+      const fadeDuration = 600;
+
+      // start fade after duration seconds
+      setTimeout(() => {
+        setNotifications((prev) =>
+          prev.map((n) =>
+            n.startTime === startTime ? { ...n, fading: true } : n,
+          ),
+        );
+      }, duration * 1000);
+
+      // remove after duration + fade
+      setTimeout(
+        () => {
+          setNotifications((prev) =>
+            prev.filter((n) => n.startTime !== startTime),
+          );
+        },
+        duration * 1000 + fadeDuration,
+      );
+
+      return false;
+    };
+
+    initViewer(moduleRef, fileUrl, addLog, addNotification, setIsLoading);
 
     return () => {
       canvas.removeEventListener("mousedown", handleMouseDown);
@@ -293,6 +366,20 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   return (
     <div className={styles.viewer}>
       <canvas id="canvas" tabIndex={0}></canvas>
+
+      <div className={styles.notifications}>
+        {notifications.map((n) => (
+          <div
+            key={n.startTime}
+            className={`${styles.notification} ${n.fading ? styles.fading : ""}`}
+          >
+            <div className={styles.notificationText}>
+              <span className={styles.notificationDesc}>{n.desc}</span>
+              <span className={styles.notificationValue}>{n.value}</span>
+            </div>
+          </div>
+        ))}
+      </div>
 
       {isLoading && (
         <div className={styles.loadingScreen}>
