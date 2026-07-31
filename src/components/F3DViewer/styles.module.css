@@ -280,6 +280,36 @@
   font-weight: 500;
 }
 
+.logInputWrapper {
+  position: relative;
+}
+
+.suggestions {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background: var(--ifm-background-surface-color);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 10;
+}
+
+.suggestionItem {
+  padding: 0.4rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  color: var(--ifm-font-color-base);
+}
+
+.suggestionItem:hover,
+.suggestionItemSelected {
+  background: var(--ifm-color-emphasis-100);
+}
+
 .logInput {
   display: flex;
   border-top: 1px solid var(--ifm-color-emphasis-200);
