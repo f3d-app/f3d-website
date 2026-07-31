@@ -184,8 +184,12 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   >([]);
   const [isLogWindowOpen, setIsLogWindowOpen] = useState(false);
   const [commandInput, setCommandInput] = useState("");
+  const [commandHistory, setCommandHistory] = useState<string[]>([]);
+  const [suggestions, setSuggestions] = useState<string[]>([]);
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1);
   const logEndRef = useRef<HTMLDivElement>(null);
   const commandInputRef = useRef<HTMLInputElement>(null);
+  const suggestionsRef = useRef<HTMLUListElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [severityFilters, setSeverityFilters] = useState({
     error: true,
@@ -242,8 +246,29 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   useEffect(() => {
     if (isLogWindowOpen) {
       commandInputRef.current?.focus();
+      if (commandInput === "") {
+        setSuggestions(commandHistory);
+        setSelectedSuggestionIndex(commandHistory.length > 0 ? 0 : -1);
+      }
     }
   }, [isLogWindowOpen]);
+
+  // Scroll selected suggestion into view when navigating
+  useEffect(() => {
+    if (suggestionsRef.current && selectedSuggestionIndex >= 0) {
+      const item = suggestionsRef.current.children[
+        selectedSuggestionIndex
+      ] as HTMLElement;
+      item?.scrollIntoView({ block: "nearest" });
+    }
+  }, [selectedSuggestionIndex]);
+
+  const acceptSuggestion = (suggestion: string) => {
+    setCommandInput(suggestion);
+    setSuggestions([]);
+    setSelectedSuggestionIndex(-1);
+    commandInputRef.current?.focus();
+  };
 
   // Handle command submission
   const handleCommandSubmit = (e: React.FormEvent) => {
@@ -253,6 +278,14 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     if (!commandInput.trim()) return;
 
     addLog(`> ${commandInput}`, "command");
+
+    let newHistory = commandHistory;
+
+    // Add to history if not already present
+    if (!commandHistory.includes(commandInput)) {
+      newHistory = [commandInput, ...commandHistory];
+      setCommandHistory(newHistory);
+    }
 
     // Execute commands
     try {
@@ -267,6 +300,8 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     }
 
     setCommandInput("");
+    setSuggestions(newHistory);
+    setSelectedSuggestionIndex(0);
   };
 
   useImperativeHandle(ref, () => ({
@@ -460,37 +495,99 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
             ))}
             <div ref={logEndRef} />
           </div>
-          <form className={styles.logInput} onSubmit={handleCommandSubmit}>
-            <input
-              ref={commandInputRef}
-              type="text"
-              placeholder="Enter command..."
-              value={commandInput}
-              onChange={(e) => setCommandInput(e.target.value)}
-              onKeyDown={(e) => {
-                if (e.key === "Enter") {
-                  e.preventDefault();
-                  handleCommandSubmit(e);
-                } else if (e.key === "Escape") {
-                  e.stopPropagation();
-                  e.preventDefault();
-                  if (commandInput !== "") {
-                    setCommandInput("");
+          <div className={styles.logInputWrapper}>
+            {/* Autocomplete suggestions if not empty */}
+            {suggestions.length > 0 && (
+              <ul ref={suggestionsRef} className={styles.suggestions}>
+                {suggestions.map((str, index) => (
+                  <li
+                    key={index}
+                    className={`${styles.suggestionItem} ${index === selectedSuggestionIndex ? styles.suggestionItemSelected : ""}`}
+                    onMouseDown={(event) => {
+                      event.preventDefault();
+                      acceptSuggestion(str);
+                    }}
+                  >
+                    {str}
+                  </li>
+                ))}
+              </ul>
+            )}
+            <form className={styles.logInput} onSubmit={handleCommandSubmit}>
+              <input
+                ref={commandInputRef}
+                type="text"
+                placeholder="Enter command..."
+                value={commandInput}
+                onChange={(e) => {
+                  const value = e.target.value;
+                  setCommandInput(value);
+                  // if empty, show history, else existing commands
+                  if (value === "") {
+                    setSuggestions(commandHistory);
+                    setSelectedSuggestionIndex(
+                      commandHistory.length > 0 ? 0 : -1,
+                    );
                   } else {
-                    setIsLogWindowOpen(false);
-                    const c = document.getElementById(
-                      "canvas",
-                    ) as HTMLCanvasElement;
-                    if (c) c.focus();
+                    setSuggestions(
+                      moduleRef.current.engineInstance
+                        .getInteractor()
+                        .getCommandActions()
+                        .filter((cmd: string) => cmd.startsWith(value)),
+                    );
+                    setSelectedSuggestionIndex(0);
                   }
-                }
-              }}
-              className={styles.commandInput}
-            />
-            <button type="submit" className={styles.commandSubmit}>
-              <Icon icon="material-symbols:send" />
-            </button>
-          </form>
+                }}
+                onKeyDown={(e) => {
+                  if (suggestions.length > 0) {
+                    if (e.key === "ArrowUp") {
+                      e.preventDefault();
+                      setSelectedSuggestionIndex((prev) =>
+                        Math.max(0, prev - 1),
+                      );
+                      return;
+                    } else if (e.key === "ArrowDown") {
+                      e.preventDefault();
+                      setSelectedSuggestionIndex((prev) =>
+                        Math.min(suggestions.length - 1, prev + 1),
+                      );
+                      return;
+                    } else if (e.key === "Tab" || e.key === "Enter") {
+                      e.preventDefault();
+                      acceptSuggestion(suggestions[selectedSuggestionIndex]);
+                      return;
+                    } else if (e.key === "Escape") {
+                      e.stopPropagation();
+                      e.preventDefault();
+                      setSuggestions([]);
+                      setSelectedSuggestionIndex(0);
+                      return;
+                    }
+                  }
+                  if (e.key === "Enter") {
+                    e.preventDefault();
+                    handleCommandSubmit(e);
+                  } else if (e.key === "Escape") {
+                    e.stopPropagation();
+                    e.preventDefault();
+                    if (commandInput !== "") {
+                      setCommandInput("");
+                    } else {
+                      setIsLogWindowOpen(false);
+                      const c = document.getElementById(
+                        "canvas",
+                      ) as HTMLCanvasElement;
+                      if (c) c.focus();
+                    }
+                  }
+                }}
+                className={styles.commandInput}
+              />
+              <button type="submit" className={styles.commandSubmit}>
+                <Icon icon="material-symbols:send" />
+              </button>
+            </form>
+          </div>
         </div>
       )}
     </div>
