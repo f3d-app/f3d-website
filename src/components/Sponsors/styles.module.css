@@ -36,28 +36,25 @@
   align-items: center;
   justify-content: center;
   padding: 2rem;
-  background: var(--ifm-card-background-color);
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition: transform 0.2s ease;
   text-decoration: none;
   min-height: 120px;
 }
 
 .sponsorCard:hover {
   transform: translateY(-4px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
 }
 
 .sponsorLogo {
   max-width: 100%;
   max-height: 80px;
   width: auto;
-  height: auto;
   object-fit: contain;
   filter: grayscale(0%);
   transition: filter 0.2s ease;
   border-radius: 8px;
+  padding: 1rem;
+  background: white;
 }
 
 .sponsorCard:hover .sponsorLogo {

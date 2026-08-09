@@ -2,12 +2,19 @@ import React from "react";
 import styles from "./styles.module.css";
 import Heading from "@theme/Heading";
 import NGI0CoreSvg from "@site/static/sponsors/NGI0Core.svg";
+import TestMuSvg from "@site/static/sponsors/testmu.svg";
 
 const sponsors = [
   {
     name: "NGI0 Core",
     logo: NGI0CoreSvg,
     url: "https://nlnet.nl/project/F3D/",
+    isSvg: true,
+  },
+  {
+    name: "TestMu",
+    logo: TestMuSvg,
+    url: "https://www.testmuai.com/?utm_medium=sponsor&utm_source=f3d-app",
     isSvg: true,
   },
   {
