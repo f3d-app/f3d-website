@@ -28,7 +28,7 @@
     "f3d": "^3.5.0-nightly.20260720",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.2.8",
-    "react-compare-image": "^3.5.19",
+    "react-compare-image": "^3.5.20",
     "react-dom": "^19.2.8",
     "react-tooltip": "^6.0.8",
     "sass": "^1.102.0"
