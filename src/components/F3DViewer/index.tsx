@@ -5,7 +5,7 @@ import React, {
   useImperativeHandle,
   useState,
 } from "react";
-import f3d, { type LogVerboseLevel } from "f3d";
+import f3d, { type LogVerboseLevel, InteractorState } from "f3d";
 import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
@@ -26,6 +26,8 @@ function initViewer(
   addLog: logFn,
   addNotification: notificationFn,
   setIsLoading: (isLoading: boolean) => void,
+  onSceneLoaded?: () => void,
+  onAnimationTimeChanged?: (time: number) => void,
 ) {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 
@@ -129,7 +131,23 @@ function initViewer(
         .setNotificationCallback(addNotification);
 
       // load file
-      openStream(moduleRef, new Uint8Array(defaultFile));
+      openStream(moduleRef, new Uint8Array(defaultFile), onSceneLoaded);
+
+      moduleRef.current.engineInstance
+        .getInteractor()
+        .setEventLoopUserCallback((state: InteractorState) => {
+          onAnimationTimeChanged?.(state.animationTime);
+        });
+
+      // Default binding maps "Space" but wasm key is " " (space character)
+      // so we need to add a new binding for it
+      // https://gitlab.kitware.com/vtk/vtk/-/work_items/20161
+      const bind = new Module.InteractionBind();
+      bind.mod = Module.InteractionBindModifierKeys.NONE;
+      bind.inter = " ";
+      moduleRef.current.engineInstance
+        .getInteractor()
+        .addBinding(bind, ["toggle_animation"]);
 
       moduleRef.current.engineInstance.getInteractor().start();
 
@@ -151,10 +169,18 @@ function initViewer(
     });
 }
 
-function openStream(moduleRef: any, stream: Uint8Array) {
+function openStream(
+  moduleRef: any,
+  stream: Uint8Array,
+  onSceneLoaded?: () => void,
+) {
   const scene = moduleRef.current.engineInstance.getScene();
 
   scene.clear();
+
+  moduleRef.current.engineInstance
+    .getOptions()
+    .reset("scene.animation.indices");
 
   let result: { success: boolean; error?: string } = { success: true };
   try {
@@ -167,6 +193,7 @@ function openStream(moduleRef: any, stream: Uint8Array) {
   moduleRef.current.engineInstance.getWindow().getCamera().resetToBounds(0.9);
   moduleRef.current.engineInstance.getWindow().render();
   moduleRef.current.currentStream = stream;
+  onSceneLoaded?.();
   return result;
 }
 
@@ -190,6 +217,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   const logEndRef = useRef<HTMLDivElement>(null);
   const commandInputRef = useRef<HTMLInputElement>(null);
   const suggestionsRef = useRef<HTMLUListElement>(null);
+  const progressBarRef = useRef<HTMLDivElement>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [severityFilters, setSeverityFilters] = useState({
     error: true,
@@ -197,6 +225,129 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     info: true,
     debug: false,
   });
+
+  type AnimationInfo = {
+    names: string[];
+    start: number;
+    end: number;
+  };
+
+  const [animations, setAnimations] = useState<AnimationInfo>({
+    start: 0,
+    end: 1,
+    names: [],
+  });
+  const [isPlaying, setIsPlaying] = useState(true);
+  const [activeAnimationIndex, setActiveAnimationIndex] = useState(0);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [playbackSpeed, setPlaybackSpeed] = useState(1);
+  const [isAnimDragging, setIsAnimDragging] = useState(false);
+  const handleAnimationTimeChanged = (time: number) => {
+    setCurrentTime(time);
+  };
+
+  const hasAnimations = animations.names.length > 0;
+  const animationDuration = hasAnimations
+    ? Math.max(1, animations.end - animations.start)
+    : 1;
+  const progressPercent = hasAnimations
+    ? Math.min(
+        100,
+        Math.max(
+          0,
+          ((currentTime - animations.start) / animationDuration) * 100,
+        ),
+      )
+    : 0;
+
+  const formatTime = (value: number) => {
+    const minutes = Math.floor(value / 60);
+    const secondsValue = value - minutes * 60;
+    const wholeSeconds = Math.floor(secondsValue);
+    const hundredths = Math.floor((secondsValue - wholeSeconds) * 100);
+    const seconds = wholeSeconds.toString().padStart(2, "0");
+    const hundredthsString = hundredths.toString().padStart(2, "0");
+    return `${minutes}:${seconds}.${hundredthsString}`;
+  };
+
+  const updateAnimationTime = (clientX: number) => {
+    if (!hasAnimations || !progressBarRef.current) {
+      return;
+    }
+
+    const rect = progressBarRef.current.getBoundingClientRect();
+    const ratio = Math.min(
+      1,
+      Math.max(0, (clientX - rect.left) / Math.max(rect.width, 1)),
+    );
+    const duration = animations.end - animations.start;
+    const nextTime = Math.min(
+      animations.end,
+      Math.max(animations.start, animations.start + ratio * duration),
+    );
+
+    setCurrentTime(nextTime);
+    moduleRef.current.engineInstance.getScene().loadAnimationTime(nextTime);
+    moduleRef.current.engineInstance.getWindow().render();
+  };
+
+  const refreshAnimationState = () => {
+    const scene = moduleRef.current.engineInstance.getScene();
+
+    const names = scene.getAnimationNames();
+    const timeRange = scene.animationTimeRange();
+    const start = timeRange[0];
+    const end = timeRange[1];
+
+    setAnimations({ names, start, end });
+    setActiveAnimationIndex(0);
+    setCurrentTime(start);
+  };
+
+  const applyAnimationSpeed = (value: number) => {
+    setPlaybackSpeed(value);
+    moduleRef.current.engineInstance
+      .getOptions()
+      .setAsString("scene.animation.speed_factor", value.toString());
+  };
+
+  const handlePlayPause = () => {
+    setIsPlaying((prev) => !prev);
+
+    if (isPlaying) {
+      moduleRef.current.engineInstance.getInteractor().stopAnimation();
+    } else {
+      moduleRef.current.engineInstance.getInteractor().startAnimation();
+    }
+  };
+
+  const selectAnimation = (direction: -1 | 1) => {
+    if (!hasAnimations) {
+      return;
+    }
+
+    const nextIndex =
+      (activeAnimationIndex + direction + animations.names.length) %
+      animations.names.length;
+
+    setActiveAnimationIndex(nextIndex);
+    setCurrentTime(animations.start);
+    moduleRef.current.engineInstance
+      .getScene()
+      .loadAnimationTime(animations.start);
+    moduleRef.current.engineInstance
+      .getOptions()
+      .setAsString("scene.animation.indices", nextIndex.toString());
+    moduleRef.current.engineInstance.getWindow().render();
+  };
+
+  const handlePreviousAnimation = () => {
+    selectAnimation(-1);
+  };
+
+  const handleNextAnimation = () => {
+    selectAnimation(1);
+  };
 
   const [notifications, setNotifications] = useState<
     Array<{
@@ -253,6 +404,28 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     }
   }, [isLogWindowOpen]);
 
+  useEffect(() => {
+    if (!isAnimDragging) {
+      return;
+    }
+
+    const handlePointerMove = (event: PointerEvent) => {
+      updateAnimationTime(event.clientX);
+    };
+
+    const handlePointerUp = () => {
+      setIsAnimDragging(false);
+    };
+
+    window.addEventListener("pointermove", handlePointerMove);
+    window.addEventListener("pointerup", handlePointerUp);
+
+    return () => {
+      window.removeEventListener("pointermove", handlePointerMove);
+      window.removeEventListener("pointerup", handlePointerUp);
+    };
+  }, [animationDuration, isAnimDragging]);
+
   // Scroll selected suggestion into view when navigating
   useEffect(() => {
     if (suggestionsRef.current && selectedSuggestionIndex >= 0) {
@@ -306,7 +479,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
 
   useImperativeHandle(ref, () => ({
     loadFile: (buffer: Uint8Array) => {
-      return openStream(moduleRef, buffer);
+      return openStream(moduleRef, buffer, refreshAnimationState);
     },
     setUpDirection: (direction: "+Y" | "+Z") => {
       if (!moduleRef.current) return;
@@ -314,7 +487,6 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       moduleRef.current.engineInstance
         .getOptions()
         .setAsString("scene.up_direction", direction);
-      openStream(moduleRef, moduleRef.current.currentStream);
     },
     triggerCommand: (command: string) => {
       if (!moduleRef.current) return;
@@ -385,7 +557,15 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       return false;
     };
 
-    initViewer(moduleRef, fileUrl, addLog, addNotification, setIsLoading);
+    initViewer(
+      moduleRef,
+      fileUrl,
+      addLog,
+      addNotification,
+      setIsLoading,
+      refreshAnimationState,
+      handleAnimationTimeChanged,
+    );
 
     return () => {
       canvas.removeEventListener("mousedown", handleMouseDown);
@@ -401,6 +581,112 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
   return (
     <div className={styles.viewer}>
       <canvas id="canvas" tabIndex={0}></canvas>
+
+      {hasAnimations && (
+        <div className={styles.animationControls}>
+          <div className={styles.animationMeta}>
+            <div className={styles.animationInfo}>
+              <strong>
+                {animations.names[activeAnimationIndex] ?? "No animations"}
+              </strong>
+            </div>
+            <div className={styles.timeDisplay}>
+              <span>{formatTime(currentTime)}</span>
+              <span>/</span>
+              <span>{formatTime(animationDuration)}</span>
+            </div>
+          </div>
+
+          <div className={styles.progressRow}>
+            <div
+              ref={progressBarRef}
+              className={styles.progressBar}
+              onPointerDown={(event) => {
+                event.preventDefault();
+                setIsAnimDragging(true);
+                setIsPlaying(false);
+                moduleRef.current?.engineInstance
+                  ?.getInteractor()
+                  ?.stopAnimation?.();
+                updateAnimationTime(event.clientX);
+              }}
+              onClick={(event) => {
+                if (!isAnimDragging) {
+                  updateAnimationTime(event.clientX);
+                }
+              }}
+              role="slider"
+              aria-valuemin={animations.start ?? 0}
+              aria-valuemax={animations.end ?? 0}
+              aria-valuenow={currentTime}
+              tabIndex={0}
+            >
+              <div
+                className={styles.progressFill}
+                style={{ width: `${progressPercent}%` }}
+              />
+              <div
+                className={styles.progressHandle}
+                style={{ left: `${progressPercent}%` }}
+              />
+            </div>
+          </div>
+
+          <div className={styles.controlsRow}>
+            <div className={styles.controlGroup}>
+              {animations.names.length > 1 && (
+                <button
+                  className={styles.controlButton}
+                  onClick={handlePreviousAnimation}
+                  aria-label="Previous animation"
+                  title="Previous animation"
+                >
+                  <Icon icon="material-symbols:skip-previous-rounded" />
+                </button>
+              )}
+              <button
+                className={styles.controlButton}
+                onClick={handlePlayPause}
+                aria-label={isPlaying ? "Pause animation" : "Play animation"}
+                title={isPlaying ? "Pause animation" : "Play animation"}
+              >
+                <Icon
+                  icon={
+                    isPlaying
+                      ? "material-symbols:pause-rounded"
+                      : "material-symbols:play-arrow-rounded"
+                  }
+                />
+              </button>
+              {animations.names.length > 1 && (
+                <button
+                  className={styles.controlButton}
+                  onClick={handleNextAnimation}
+                  aria-label="Next animation"
+                  title="Next animation"
+                >
+                  <Icon icon="material-symbols:skip-next-rounded" />
+                </button>
+              )}
+            </div>
+
+            <label className={styles.speedControl}>
+              <select
+                value={playbackSpeed}
+                onChange={(e) => {
+                  applyAnimationSpeed(Number(e.target.value));
+                }}
+              >
+                <option value="0.25">0.25{String.fromCharCode(0x00d7)}</option>
+                <option value="0.5">0.5{String.fromCharCode(0x00d7)}</option>
+                <option value="1">1{String.fromCharCode(0x00d7)}</option>
+                <option value="1.5">1.5{String.fromCharCode(0x00d7)}</option>
+                <option value="2">2{String.fromCharCode(0x00d7)}</option>
+              </select>
+            </label>
+          </div>
+        </div>
+      )}
 
       <div className={styles.notifications}>
         {notifications.map((n) => (
