@@ -377,19 +377,19 @@ function ViewerApp({ model }: ViewerAppProps) {
             )}
             <F3DViewer ref={viewerRef} fileUrl={fileUrl} />
           </div>
+          <div className={styles.progressContainer} id="progressContainer">
+            <span className={styles.progressText} id="progressText">
+              0%
+            </span>
+            <div className={styles.progressBar}>
+              <div
+                className={styles.progressFill}
+                id="progressFill"
+                style={{ width: "0%" }}
+              ></div>
+            </div>
+          </div>
         </main>
-      </div>
-      <div className={styles.progressContainer} id="progressContainer">
-        <span className={styles.progressText} id="progressText">
-          0%
-        </span>
-        <div className={styles.progressBar}>
-          <div
-            className={styles.progressFill}
-            id="progressFill"
-            style={{ width: "0%" }}
-          ></div>
-        </div>
       </div>
     </div>
   );

@@ -9,6 +9,115 @@
   outline: none;
 }
 
+.animationControls {
+  position: absolute;
+  bottom: 1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(92%, 480px);
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  backdrop-filter: blur(10px);
+}
+
+.animationMeta {
+  display: flex;
+}
+
+.animationInfo {
+  flex: 1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.timeDisplay {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.9rem;
+}
+
+.progressBar {
+  width: 100%;
+  height: 0.45rem;
+  border-radius: 3px;
+  background: rgba(255, 255, 255, 0.16);
+  overflow: visible;
+  position: relative;
+  cursor: pointer;
+}
+
+.progressFill {
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ifm-color-primary);
+}
+
+.progressHandle {
+  position: absolute;
+  top: 50%;
+  width: 0.95rem;
+  height: 0.95rem;
+  border-radius: 50%;
+  background: var(--ifm-font-color-base);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.controlsRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.controlGroup {
+  display: flex;
+  gap: 0.55rem;
+}
+
+.controlButton {
+  width: 2.35rem;
+  height: 2.35rem;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.controlButton:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.controlButton svg {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.speedControl {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 0.6rem;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.speedControl select {
+  border: none;
+  background: transparent;
+}
+
 /* Loading screen */
 .loadingScreen {
   position: absolute;
@@ -371,5 +480,20 @@
   .logToggle svg {
     width: 1.25rem;
     height: 1.25rem;
+  }
+
+  .animationControls {
+    width: min(96%, 720px);
+    padding: 0.8rem;
+  }
+
+  .controlsRow {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .animationMeta {
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
