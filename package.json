@@ -25,7 +25,7 @@
     "@splidejs/react-splide": "^0.7.12",
     "clsx": "^2.1.1",
     "docusaurus-plugin-sass": "^0.2.7",
-    "f3d": "^3.5.0-nightly.20260909",
+    "f3d": "^3.5.0-nightly.20260912",
     "prism-react-renderer": "^2.4.1",
     "react": "^19.3.0",
     "react-compare-image": "^3.5.22",
