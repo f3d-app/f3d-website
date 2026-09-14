@@ -162,6 +162,7 @@ function initViewer(
         console.error(
           "Internal exception: " + moduleRef.current.getExceptionMessage(error),
         );
+        moduleRef.current.decrementExceptionRefcount(error);
       } else {
         console.error("Error: " + error.message);
       }
@@ -187,6 +188,7 @@ function openStream(
     scene.addBuffer(stream);
   } catch (e) {
     let [, errorMsg] = moduleRef.current.getExceptionMessage(e);
+    moduleRef.current.decrementExceptionRefcount(e);
     result = { success: false, error: errorMsg };
   }
 
