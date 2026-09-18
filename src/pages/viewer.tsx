@@ -26,6 +26,7 @@ function ViewerApp({ model }: ViewerAppProps) {
     "success",
   );
   const [fileError, setFileError] = useState<string | undefined>(undefined);
+  const [supportedExtensions, setSupportedExtensions] = useState("");
   const fileUrl = model || useBaseUrl("/data/f3d.vtp");
 
   // window is unavailable during SSR, so detect mobile only after mount.
@@ -192,7 +193,7 @@ function ViewerApp({ model }: ViewerAppProps) {
                 className={styles.fileInput}
                 type="file"
                 id="file-selector"
-                accept=".gml,.gltf,.glb,.obj,.ply,.pts,.stl,.vtk,.vtp,.vtu,.vtkhdf,.3ds,.wrl,.vrml,.fbx,.dae,.dxf,.off,.x,.3mf,.ex2,.exo,.e,.g,.stp,.step,.igs,.iges,.brep,.xbf,.drc,.mdl,.nc,.cdf,.ncdf,.ifc"
+                accept={supportedExtensions}
                 onChange={handleFileChange}
               />
               <span className="button button--primary button--lg">
@@ -375,7 +376,11 @@ function ViewerApp({ model }: ViewerAppProps) {
                 <span>Drop file to open</span>
               </div>
             )}
-            <F3DViewer ref={viewerRef} fileUrl={fileUrl} />
+            <F3DViewer
+              ref={viewerRef}
+              fileUrl={fileUrl}
+              updateSupportedExtensions={setSupportedExtensions}
+            />
           </div>
           <div className={styles.progressContainer} id="progressContainer">
             <span className={styles.progressText} id="progressText">
