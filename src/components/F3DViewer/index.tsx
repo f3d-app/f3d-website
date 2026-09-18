@@ -28,6 +28,7 @@ function initViewer(
   setIsLoading: (isLoading: boolean) => void,
   onSceneLoaded?: () => void,
   onAnimationTimeChanged?: (time: number) => void,
+  updateSupportedExtensions?: (supportedExtensions: string) => void,
 ) {
   const canvas = document.getElementById("canvas") as HTMLCanvasElement;
 
@@ -54,6 +55,15 @@ function initViewer(
 
       // automatically load all supported file format readers
       Module.Engine.autoloadPlugins();
+
+      // store list of supported extensions
+      const supportedExtensions = Module.Engine.getReadersInfo()
+        .map((reader: any) => reader.extensions)
+        .flat()
+        .map((ext: string) => "." + ext)
+        .join(",");
+
+      updateSupportedExtensions?.(supportedExtensions);
 
       moduleRef.current.engineInstance = Module.Engine.create();
 
@@ -201,9 +211,10 @@ function openStream(
 
 interface F3DViewerProps {
   fileUrl: string;
+  updateSupportedExtensions?: (supportedExtensions: string) => void;
 }
 
-const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
+const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl, updateSupportedExtensions }, ref) => {
   const moduleRef = useRef<any>(null);
   const [logs, setLogs] = useState<
     Array<{
@@ -248,9 +259,9 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
     setCurrentTime(time);
   };
 
-  const hasAnimations = animations.names.length > 0;
+  const hasAnimations = animations.names.length > 0 && animations.end > animations.start;
   const animationDuration = hasAnimations
-    ? Math.max(1, animations.end - animations.start)
+    ? animations.end - animations.start
     : 1;
   const progressPercent = hasAnimations
     ? Math.min(
@@ -567,6 +578,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(({ fileUrl }, ref) => {
       setIsLoading,
       refreshAnimationState,
       handleAnimationTimeChanged,
+      updateSupportedExtensions,
     );
 
     return () => {
