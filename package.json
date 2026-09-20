@@ -31,7 +31,7 @@
     "react-compare-image": "^3.5.22",
     "react-dom": "^19.3.0",
     "react-tooltip": "^6.0.8",
-    "sass": "^1.104.0"
+    "sass": "^1.104.1"
   },
   "devDependencies": {
     "@docusaurus/module-type-aliases": "^3.10.2",
