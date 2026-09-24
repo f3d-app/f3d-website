@@ -414,7 +414,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
         commandInputRef.current?.focus();
         if (commandInput === "") {
           setSuggestions(commandHistory);
-          setSelectedSuggestionIndex(commandHistory.length > 0 ? 0 : -1);
+          setSelectedSuggestionIndex(commandHistory.length - 1);
         }
       }
     }, [isLogWindowOpen]);
@@ -471,7 +471,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
 
       // Add to history if not already present
       if (!commandHistory.includes(commandInput)) {
-        newHistory = [commandInput, ...commandHistory];
+        newHistory = [...commandHistory, commandInput];
         setCommandHistory(newHistory);
       }
 
@@ -489,7 +489,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
 
       setCommandInput("");
       setSuggestions(newHistory);
-      setSelectedSuggestionIndex(0);
+      setSelectedSuggestionIndex(newHistory.length - 1);
     };
 
     useImperativeHandle(ref, () => ({
@@ -829,9 +829,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
                     // if empty, show history, else existing commands
                     if (value === "") {
                       setSuggestions(commandHistory);
-                      setSelectedSuggestionIndex(
-                        commandHistory.length > 0 ? 0 : -1,
-                      );
+                      setSelectedSuggestionIndex(commandHistory.length - 1);
                     } else {
                       setSuggestions(
                         moduleRef.current.engineInstance
