@@ -5,7 +5,7 @@ import React, {
   useImperativeHandle,
   useState,
 } from "react";
-import f3d, { type LogVerboseLevel, InteractorState } from "f3d";
+import f3d, { type LogVerboseLevel, InteractorState, Engine } from "f3d";
 import { Icon } from "@iconify/react";
 import styles from "./styles.module.css";
 
@@ -20,6 +20,28 @@ type logFn = (
   level: "error" | "warning" | "info" | "debug",
 ) => void;
 
+// The <f3d-viewer> element is bound to the first module instance, so load it only once
+let modulePromise: Promise<any> | undefined;
+
+interface F3DViewerElement extends HTMLElement {
+  canvas: HTMLCanvasElement;
+  module: any;
+  options: Record<string, any>;
+  _ensureEngine(): Promise<any>;
+  getEngine(): Engine;
+}
+
+declare module "react" {
+  namespace JSX {
+    interface IntrinsicElements {
+      "f3d-viewer": React.DetailedHTMLProps<
+        React.HTMLAttributes<F3DViewerElement>,
+        F3DViewerElement
+      >;
+    }
+  }
+}
+
 function initViewer(
   moduleRef: any,
   fileUrl: string,
@@ -30,19 +52,52 @@ function initViewer(
   onAnimationTimeChanged?: (time: number) => void,
   updateSupportedExtensions?: (supportedExtensions: string) => void,
 ) {
-  const canvas = document.getElementById("canvas") as HTMLCanvasElement;
+  const viewer = document.getElementById("viewer") as F3DViewerElement;
 
-  canvas.oncontextmenu = function (e) {
-    e.preventDefault();
-    e.stopPropagation();
-  };
+  viewer.addEventListener("ready", () => {
+    const isDesktop = !window.matchMedia("(max-width: 768px)").matches;
 
-  f3d({ canvas: canvas })
+    viewer.options = {
+      "ui.loader_progress": true,
+      "scene.animation.autoplay": true,
+      "model.scivis.enable": true,
+      "model.scivis.array_name": "Colors",
+      "model.scivis.component": -2,
+      "model.scivis.cells": true,
+      "render.effect.antialiasing.mode": "fxaa",
+      "render.effect.tone_mapping": true,
+      "render.hdri.ambient": true,
+      "ui.axis": true,
+      "scene.up_direction": "+Z",
+      "render.effect.ambient_occlusion": isDesktop,
+      "render.grid.enable": true,
+      "render.grid.reflection": isDesktop ? 0.5 : 0,
+    };
+
+    // focus by default
+    viewer.canvas.focus();
+
+    // setup interactor
+    const interactor = viewer.getEngine().getInteractor();
+
+    interactor.setNotificationCallback(addNotification);
+
+    interactor.setEventLoopUserCallback((state: InteractorState) => {
+      onAnimationTimeChanged?.(state.animationTime);
+    });
+
+    // Default binding maps "Space" but wasm key is " " (space character)
+    // so we need to add a new binding for it
+    // https://gitlab.kitware.com/vtk/vtk/-/work_items/20161
+    const bind = new viewer.module.InteractionBind();
+    bind.mod = viewer.module.InteractionBindModifierKeys.NONE;
+    bind.inter = " ";
+    interactor.addBinding(bind, ["toggle_animation"]);
+  });
+
+  (modulePromise ??= f3d())
     .then(async (Module) => {
       moduleRef.current = Module;
-
-      // write in the filesystem
-      const defaultFile = await fetch(fileUrl).then((b) => b.arrayBuffer());
 
       Module.Log.setVerboseLevel(Module.LogVerboseLevel.QUIET, false);
       Module.Log.forward((level: LogVerboseLevel, message: string) => {
@@ -53,9 +108,6 @@ function initViewer(
         else addLog(message, "debug");
       });
 
-      // automatically load all supported file format readers
-      Module.Engine.autoloadPlugins();
-
       // store list of supported extensions
       const supportedExtensions = Module.Engine.getReadersInfo()
         .map((reader: any) => reader.extensions)
@@ -65,103 +117,13 @@ function initViewer(
 
       updateSupportedExtensions?.(supportedExtensions);
 
-      moduleRef.current.engineInstance = Module.Engine.create();
-
-      // background must be set to black for proper blending with transparent canvas
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("render.background.color", "#000000");
-
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("ui.loader_progress", "true");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("scene.animation.autoplay", "true");
-
-      // setup coloring
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("model.scivis.enable");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("model.scivis.array_name", "Colors");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("model.scivis.component", "-2");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("model.scivis.cells");
-
-      // make it look nice
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("render.effect.antialiasing.mode", "fxaa");
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("render.effect.tone_mapping");
-      // Workaround: SSAO, grid and reflection are disabled on mobile by default.
-      // SSAO is memory-bandwidth heavy and causes thermal throttling on mobile GPUs.
-      // Grid + reflection cause depth artifacts (jagged edges) when SSAO is off on mobile.
-      // Users can still enable them manually via the settings panel.
-      if (!window.matchMedia("(max-width: 768px)").matches) {
-        moduleRef.current.engineInstance
-          .getOptions()
-          .toggle("render.effect.ambient_occlusion");
-        moduleRef.current.engineInstance
-          .getOptions()
-          .toggle("render.grid.enable");
-        moduleRef.current.engineInstance
-          .getOptions()
-          .setAsString("render.grid.reflection", "0.5");
-      }
-      moduleRef.current.engineInstance
-        .getOptions()
-        .toggle("render.hdri.ambient");
-
-      // display widgets
-      moduleRef.current.engineInstance.getOptions().toggle("ui.axis");
-
-      // default to +Z
-      moduleRef.current.engineInstance
-        .getOptions()
-        .setAsString("scene.up_direction", "+Z");
-
-      // setup the window size based on the canvas size
-      const scale = window.devicePixelRatio;
-      moduleRef.current.engineInstance
-        .getWindow()
-        .setSize(
-          scale * moduleRef.current.canvas.clientWidth,
-          scale * moduleRef.current.canvas.clientHeight,
-        );
-
-      moduleRef.current.engineInstance
-        .getInteractor()
-        .setNotificationCallback(addNotification);
+      moduleRef.current.engineInstance = await viewer._ensureEngine();
 
       // load file
+      // write in the filesystem
+      const defaultFile = await fetch(fileUrl).then((b) => b.arrayBuffer());
       openStream(moduleRef, new Uint8Array(defaultFile), onSceneLoaded);
 
-      moduleRef.current.engineInstance
-        .getInteractor()
-        .setEventLoopUserCallback((state: InteractorState) => {
-          onAnimationTimeChanged?.(state.animationTime);
-        });
-
-      // Default binding maps "Space" but wasm key is " " (space character)
-      // so we need to add a new binding for it
-      // https://gitlab.kitware.com/vtk/vtk/-/work_items/20161
-      const bind = new Module.InteractionBind();
-      bind.mod = Module.InteractionBindModifierKeys.NONE;
-      bind.inter = " ";
-      moduleRef.current.engineInstance
-        .getInteractor()
-        .addBinding(bind, ["toggle_animation"]);
-
-      moduleRef.current.engineInstance.getInteractor().start();
-
-      moduleRef.current.canvas.focus(); // focus by default
 
       // Hide loading screen
       setIsLoading(false);
@@ -302,15 +264,15 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
       );
 
       setCurrentTime(nextTime);
-      moduleRef.current.engineInstance.getScene().loadAnimationTime(nextTime);
+      moduleRef.current.engineInstance.getScene().getAnimation().loadTime(nextTime);
       moduleRef.current.engineInstance.getWindow().render();
     };
 
     const refreshAnimationState = () => {
       const scene = moduleRef.current.engineInstance.getScene();
 
-      const names = scene.getAnimationNames();
-      const timeRange = scene.animationTimeRange();
+      const names = scene.getAnimation().getNames();
+      const timeRange = scene.getAnimation().getTimeRange();
       const start = timeRange[0];
       const end = timeRange[1];
 
@@ -349,7 +311,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
       setCurrentTime(animations.start);
       moduleRef.current.engineInstance
         .getScene()
-        .loadAnimationTime(animations.start);
+        .getAnimation().loadTime(animations.start);
       moduleRef.current.engineInstance
         .getOptions()
         .setAsString("scene.animation.indices", nextIndex.toString());
@@ -514,11 +476,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
     }));
 
     useEffect(() => {
-      const canvas = document.getElementById("canvas") as HTMLCanvasElement;
-
-      // Focus the canvas when the user clicks it so keyboard events are forwarded
-      const handleMouseDown = () => canvas.focus();
-      canvas.addEventListener("mousedown", handleMouseDown);
+      const viewer = document.getElementById("viewer") as F3DViewerElement;
 
       // Open the log window when escape is pressed
       const handleKeyDown = (e: KeyboardEvent) => {
@@ -526,7 +484,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
           setIsLogWindowOpen(true);
         }
       };
-      canvas.addEventListener("keydown", handleKeyDown);
+      viewer.addEventListener("keydown", handleKeyDown);
 
       const addNotification: notificationFn = (
         desc,
@@ -584,8 +542,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
       );
 
       return () => {
-        canvas.removeEventListener("mousedown", handleMouseDown);
-        canvas.removeEventListener("keydown", handleKeyDown);
+        viewer.removeEventListener("keydown", handleKeyDown);
         if (moduleRef.current?.engineInstance) {
           moduleRef.current.engineInstance.getInteractor().requestStop();
           moduleRef.current.engineInstance[Symbol.dispose]();
@@ -596,7 +553,9 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
 
     return (
       <div className={styles.viewer}>
-        <canvas id="canvas" tabIndex={0}></canvas>
+        <f3d-viewer
+          id="viewer"
+        ></f3d-viewer>
 
         {hasAnimations && (
           <div className={styles.animationControls}>
@@ -877,9 +836,9 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
                       } else {
                         setIsLogWindowOpen(false);
                         const c = document.getElementById(
-                          "canvas",
-                        ) as HTMLCanvasElement;
-                        if (c) c.focus();
+                          "viewer",
+                        ) as F3DViewerElement;
+                        if (c) c.canvas.focus();
                       }
                     }
                   }}
