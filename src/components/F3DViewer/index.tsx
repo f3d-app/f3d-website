@@ -94,40 +94,45 @@ function initViewer(
     interactor.addBinding(bind, ["toggle_animation"]);
 
     // open file
-    fetch(fileUrl).then(
-      async (b) => {
+    fetch(fileUrl)
+      .then(async (b) => {
         const arrayBuffer = await b.arrayBuffer();
         return new Uint8Array(arrayBuffer);
-      }).then(async (buffer) => {
+      })
+      .then(async (buffer) => {
         await openStream(viewer, buffer, onSceneLoaded);
-      }).catch((error) => {
-        console.error("Error while loading model:", viewer.exceptionMessage(error));
-      }).finally(() => {
+      })
+      .catch((error) => {
+        console.error(
+          "Error while loading model:",
+          viewer.exceptionMessage(error),
+        );
+      })
+      .finally(() => {
         // Hide loading screen
         setIsLoading(false);
       });
   });
 
-  (modulePromise ??= f3d())
-    .then((module) => {
-      // set up logging
-      module.Log.forward((level: LogVerboseLevel, message: string) => {
-        if (level === module.LogVerboseLevel.ERROR) addLog(message, "error");
-        else if (level === module.LogVerboseLevel.WARN)
-          addLog(message, "warning");
-        else if (level === module.LogVerboseLevel.INFO) addLog(message, "info");
-        else addLog(message, "debug");
-      });
-
-      // store list of supported extensions
-      const supportedExtensions = module.Engine.getReadersInfo()
-        .map((reader: any) => reader.extensions)
-        .flat()
-        .map((ext: string) => "." + ext)
-        .join(",");
-
-      updateSupportedExtensions?.(supportedExtensions);
+  (modulePromise ??= f3d()).then((module) => {
+    // set up logging
+    module.Log.forward((level: LogVerboseLevel, message: string) => {
+      if (level === module.LogVerboseLevel.ERROR) addLog(message, "error");
+      else if (level === module.LogVerboseLevel.WARN)
+        addLog(message, "warning");
+      else if (level === module.LogVerboseLevel.INFO) addLog(message, "info");
+      else addLog(message, "debug");
     });
+
+    // store list of supported extensions
+    const supportedExtensions = module.Engine.getReadersInfo()
+      .map((reader: any) => reader.extensions)
+      .flat()
+      .map((ext: string) => "." + ext)
+      .join(",");
+
+    updateSupportedExtensions?.(supportedExtensions);
+  });
 }
 
 async function openStream(
@@ -266,10 +271,9 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
 
     const applyAnimationSpeed = (value: number) => {
       setPlaybackSpeed(value);
-      viewerRef.current?.engine?.getOptions().setAsString(
-        "scene.animation.speed_factor",
-        value.toString(),
-      );
+      viewerRef.current?.engine
+        ?.getOptions()
+        .setAsString("scene.animation.speed_factor", value.toString());
     };
 
     const handlePlayPause = () => {
@@ -295,7 +299,9 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
       setCurrentTime(animations.start);
       const engine = viewerRef.current?.engine;
       engine?.getScene().getAnimation().loadTime(animations.start);
-      engine?.getOptions().setAsString("scene.animation.indices", nextIndex.toString());
+      engine
+        ?.getOptions()
+        .setAsString("scene.animation.indices", nextIndex.toString());
       engine?.getWindow().render();
     };
 
@@ -448,9 +454,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
       },
       triggerCommand: (command: string) => {
         if (!viewerRef.current?.engine) return;
-        viewerRef.current.engine
-          .getInteractor()
-          .triggerCommand(command, true);
+        viewerRef.current.engine.getInteractor().triggerCommand(command, true);
         viewerRef.current.engine.getWindow().render();
       },
       addLog: addLog,
@@ -539,9 +543,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
 
     return (
       <div className={styles.viewer}>
-        <f3d-viewer
-          id="viewer"
-        ></f3d-viewer>
+        <f3d-viewer id="viewer"></f3d-viewer>
 
         {hasAnimations && (
           <div className={styles.animationControls}>
@@ -566,10 +568,7 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
                   event.preventDefault();
                   setIsAnimDragging(true);
                   setIsPlaying(false);
-                  viewerRef.current?.engine
-                    ?.getScene()
-                    ?.getAnimation()
-                    ?.stop();
+                  viewerRef.current?.engine?.getScene()?.getAnimation()?.stop();
                   updateAnimationTime(event.clientX);
                 }}
                 onClick={(event) => {
@@ -778,9 +777,8 @@ const F3DViewer = forwardRef<any, F3DViewerProps>(
                       setSelectedSuggestionIndex(commandHistory.length - 1);
                     } else {
                       setSuggestions(
-                        viewerRef.current!
-                          .engine
-                          .getInteractor()
+                        viewerRef
+                          .current!.engine.getInteractor()
                           .getCommandActions()
                           .filter((cmd: string) => cmd.startsWith(value)),
                       );
