@@ -130,6 +130,16 @@
     "sha256": "c8a5b245b4b637a1b5a4b5e4240dff0f86b0426fb5f22ba8a3591122a31437b7"
   },
   {
+    "file": "f3d.glb",
+    "title": "f3d.glb",
+    "description": "Animated 3D logo of F3D",
+    "icon": "qlementine-icons:movie-16",
+    "license": "BSD-3-Clause",
+    "author": "F3D-APP Foundation",
+    "size": 0.01,
+    "sha256": "8f4b8990cb6a45a366a724de79f6c996cc2e92abe6161bd78735780d4a2db5b8"
+  },
+  {
     "file": "gearbox.zip",
     "title": "gearbox.zip",
     "description": "Animated 3D model of a gearbox",
