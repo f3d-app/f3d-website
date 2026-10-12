@@ -13,7 +13,7 @@ interface ViewerAppProps {
 
 function ViewerApp({ model }: ViewerAppProps) {
   const viewerRef = useRef<any>(null);
-  const [upDirection, setUpDirection] = useState("+Z");
+  const [upDirection, setUpDirection] = useState("+Y");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isDragging, setIsDragging] = useState(false);
   // Default true (SSR-safe); corrected to false on mobile after hydration.
@@ -21,13 +21,13 @@ function ViewerApp({ model }: ViewerAppProps) {
   const [ssaoDefault, setSsaoDefault] = useState(true);
   const [gridDefault, setGridDefault] = useState(true);
   const [reflectionDefault, setReflectionDefault] = useState(true);
-  const [fileName, setFileName] = useState(model || "f3d.vtp");
+  const [fileName, setFileName] = useState(model || "f3d.glb");
   const [fileStatus, setFileStatus] = useState<"loading" | "success" | "error">(
     "success",
   );
   const [fileError, setFileError] = useState<string | undefined>(undefined);
   const [supportedExtensions, setSupportedExtensions] = useState("");
-  const fileUrl = model || useBaseUrl("/data/f3d.vtp");
+  const fileUrl = model || useBaseUrl("/data/f3d.glb");
 
   // window is unavailable during SSR, so detect mobile only after mount.
   useEffect(() => {
@@ -83,7 +83,7 @@ function ViewerApp({ model }: ViewerAppProps) {
     setFileStatus("loading");
 
     const reader = new FileReader();
-    reader.addEventListener("loadend", () => {
+    reader.addEventListener("loadend", async () => {
       const progressContainer = document.getElementById("progressContainer");
       const progressFill = document.getElementById("progressFill");
       const progressText = document.getElementById("progressText");
@@ -101,7 +101,7 @@ function ViewerApp({ model }: ViewerAppProps) {
         }, 1000);
       }
 
-      const result = viewerRef.current?.loadFile(
+      const result = await viewerRef.current?.loadFile(
         new Uint8Array(reader.result as ArrayBuffer),
       );
       if (result.success === false) {

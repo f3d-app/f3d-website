@@ -4,11 +4,6 @@
   position: relative;
 }
 
-/* Canvas focus indicator */
-.viewer canvas:focus {
-  outline: none;
-}
-
 .animationControls {
   position: absolute;
   bottom: 1rem;
