@@ -91,7 +91,14 @@ function initViewer(
     const bind = new viewer.module.InteractionBind();
     bind.mod = viewer.module.InteractionBindModifierKeys.NONE;
     bind.inter = " ";
-    interactor.addBinding(bind, ["toggle_animation"]);
+
+    const bindCommands = new viewer.module.InteractorBindCommands();
+    bindCommands.push_back("toggle_animation");
+
+    const bindParams = new viewer.module.InteractorBindingParam();
+    bindParams.bind = bind;
+    bindParams.commands = bindCommands;
+    interactor.addBinding(bindParams);
 
     // open file
     fetch(fileUrl)
