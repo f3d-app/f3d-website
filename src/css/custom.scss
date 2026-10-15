@@ -49,8 +49,8 @@ $f3d_green: #7AFF7A;
   --accent-green-dim: #{color.scale($f3d_green, $lightness: 80%)};
 
   /* Typography */
-  --font-primary: "LTSaeda-Medium", sans-serif;
-  --font-heading: "ModernSans-Light", serif;
+  --font-heading: "LTSaeda-Medium", serif;
+  --font-primary: "ModernSans-Light", sans-serif;
   --font-mono: "Monaspace Neon NF", monospace;
 
   /* Spacing */

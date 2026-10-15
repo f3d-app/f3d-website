@@ -17,6 +17,34 @@ const colors = [
   { name: "Green", hex: "#7AFF7A" },
 ];
 
+type FontSample = {
+  name: string;
+  role: string;
+  family: string;
+  sample: string;
+};
+
+const fonts: FontSample[] = [
+  {
+    name: "LT Saeada Medium",
+    role: "Headings",
+    family: "var(--font-heading)",
+    sample: "The quick brown fox jumps over the lazy dog",
+  },
+  {
+    name: "Modern Sans Light",
+    role: "Body text",
+    family: "var(--font-primary)",
+    sample: "The quick brown fox jumps over the lazy dog",
+  },
+  {
+    name: "Monaspace Neon",
+    role: "Code",
+    family: "var(--font-mono)",
+    sample: "f3d --output=image.png model.glb",
+  },
+];
+
 type LogoVariant = {
   label: string;
   Component: ComponentType<SVGProps<SVGSVGElement>>;
@@ -75,7 +103,7 @@ export default function BrandPage(): ReactNode {
   return (
     <Layout
       title="Brand"
-      description="Official F3D brand resources: logos, color palette."
+      description="Official F3D brand resources: logos, color palette, typography."
     >
       <main className="container margin-vert--lg">
         {/* Logos */}
@@ -117,6 +145,33 @@ export default function BrandPage(): ReactNode {
                 <div className={styles.colorCardBody}>
                   <p className={styles.colorName}>{c.name}</p>
                   <p className={styles.colorHex}>{c.hex}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </section>
+
+        {/* Typography */}
+        <section className={styles.section}>
+          <Heading as="h1" className={styles.sectionTitle}>
+            Typography
+          </Heading>
+          <p className={styles.sectionDescription}>
+            These are the official F3D brand fonts.
+          </p>
+          <div className={styles.fontGrid}>
+            {fonts.map((f) => (
+              <div className={styles.fontCard} key={f.name}>
+                <div
+                  className={styles.fontPreview}
+                  style={{ fontFamily: f.family }}
+                >
+                  <p className={styles.fontAa}>Aa</p>
+                  <p className={styles.fontSample}>{f.sample}</p>
+                </div>
+                <div className={styles.fontCardFooter}>
+                  <p className={styles.fontName}>{f.name}</p>
+                  <p className={styles.fontRole}>{f.role}</p>
                 </div>
               </div>
             ))}
