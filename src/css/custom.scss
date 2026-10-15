@@ -1,13 +1,18 @@
 @use 'sass:color';
 
 @font-face {
-  font-family: 'Mulish';
-  src: local('Mulish'), url(../fonts/Mulish.ttf) format('truetype');
+  font-family: 'LTSaeda-Medium';
+  src: local('LTSaeda-Medium'), url(../fonts/LTSaeada-Medium.otf) format('opentype');
 }
 
 @font-face {
-  font-family: 'DM Sans';
-  src: local('DM Sans'), url(../fonts/DMSans.ttf) format('truetype');
+  font-family: 'ModernSans-Light';
+  src: local('ModernSans-Light'), url(../fonts/ModernSans-Light.otf) format('opentype');
+}
+
+@font-face {
+  font-family: 'Monaspace Neon NF';
+  src: local('Monaspace Neon NF'), url(../fonts/MonaspaceNeonNF-Regular.otf) format('opentype');
 }
 
 /* Copied from https://github.com/antinomyhq/antinomyhq.github.io/pull/216 */
@@ -44,8 +49,9 @@ $f3d_green: #7AFF7A;
   --accent-green-dim: #{color.scale($f3d_green, $lightness: 80%)};
 
   /* Typography */
-  --font-primary: "Mulish", sans-serif;
-  --font-heading: "DM Sans", serif;
+  --font-primary: "LTSaeda-Medium", sans-serif;
+  --font-heading: "ModernSans-Light", serif;
+  --font-mono: "Monaspace Neon NF", monospace;
 
   /* Spacing */
   --spacing-xs: 0.5rem;
@@ -72,6 +78,7 @@ $f3d_green: #7AFF7A;
 
   --ifm-font-family-base: var(--font-primary);
   --ifm-font-family-headings: var(--font-heading);
+  --ifm-font-family-monospace: var(--font-mono);
 }
 
 [data-theme='dark'] {
