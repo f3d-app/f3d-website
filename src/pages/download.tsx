@@ -373,7 +373,6 @@ export default function DownloadPage(): ReactNode {
                       Web Package
                     </Heading>
                   </a>
-                  <span className={styles.betaBadge}>Beta</span>
                 </div>
                 <p className={styles.libraryDescription}>
                   Use F3D in web applications with our JavaScript/WebAssembly
