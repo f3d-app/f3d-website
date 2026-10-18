@@ -32,7 +32,7 @@ const fonts: FontSample[] = [
     sample: "The quick brown fox jumps over the lazy dog",
   },
   {
-    name: "Modern Sans Light",
+    name: "Unageo Regular",
     role: "Body text",
     family: "var(--font-primary)",
     sample: "The quick brown fox jumps over the lazy dog",

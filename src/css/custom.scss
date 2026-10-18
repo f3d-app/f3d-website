@@ -6,8 +6,8 @@
 }
 
 @font-face {
-  font-family: 'ModernSans-Light';
-  src: local('ModernSans-Light'), url(../fonts/ModernSans-Light.otf) format('opentype');
+  font-family: 'Unageo-Regular';
+  src: local('Unageo-Regular'), url(../fonts/Unageo-Regular.ttf) format('truetype');
 }
 
 @font-face {
@@ -50,7 +50,7 @@ $f3d_green: #7AFF7A;
 
   /* Typography */
   --font-heading: "LTSaeda-Medium", serif;
-  --font-primary: "ModernSans-Light", sans-serif;
+  --font-primary: "Unageo-Regular", sans-serif;
   --font-mono: "Monaspace Neon NF", monospace;
 
   /* Spacing */
