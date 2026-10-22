@@ -83,6 +83,7 @@ const linuxDistros = [
   { name: "NixOS", url: "https://search.nixos.org/packages?query=f3d" },
   { name: "FreeBSD", url: "https://cgit.freebsd.org/ports/tree/graphics/f3d" },
   { name: "Spack", url: "https://packages.spack.io/package.html?name=f3d" },
+  { name: "Alpine", url: "https://pkgs.alpinelinux.org/packages?name=f3d" },
 ];
 
 const windowsPackageManagers = [
