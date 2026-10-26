@@ -37,7 +37,7 @@
     "@docusaurus/module-type-aliases": "^3.10.2",
     "@docusaurus/tsconfig": "^3.10.2",
     "@docusaurus/types": "^3.10.2",
-    "@iconify/react": "^6.0.2",
+    "@iconify/react": "^6.0.3",
     "@octokit/core": "^7.0.8",
     "@seaborg/cli": "^0.6.5",
     "tsx": "^4.23.15",
