@@ -7,6 +7,9 @@ import LogoSvg from "@site/static/logos/logo.svg";
 import LogoMonoSvg from "@site/static/logos/logo-mono.svg";
 import HexLogoSvg from "@site/static/logos/f3d-hex-logo.svg";
 import HexLogoSmallSvg from "@site/static/logos/f3d-hex-logo-small.svg";
+import LogoStickerSvg from "@site/static/logos/logo-sticker.svg";
+import LogoWhiteTextStickerSvg from "@site/static/logos/logo-white-text-sticker.svg";
+import LogoBlackTextStickerSvg from "@site/static/logos/logo-black-text-sticker.svg";
 
 const colors = [
   { name: "Black", hex: "#141414" },
@@ -71,6 +74,21 @@ const logos: LogoVariant[] = [
     label: "Hex logo (small)",
     Component: HexLogoSmallSvg,
     downloads: "/logos/f3d-hex-logo-small.svg",
+  },
+  {
+    label: "Logo (sticker)",
+    Component: LogoStickerSvg,
+    downloads: "/logos/logo-sticker.svg",
+  },
+  {
+    label: "Logo (white text sticker)",
+    Component: LogoWhiteTextStickerSvg,
+    downloads: "/logos/logo-white-text-sticker.svg",
+  },
+  {
+    label: "Logo (black text sticker)",
+    Component: LogoBlackTextStickerSvg,
+    downloads: "/logos/logo-black-text-sticker.svg",
   },
 ];
 
