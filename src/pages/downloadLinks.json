@@ -1,38 +1,38 @@
 {
-  "tag": "v4.0.0",
-  "date": "2026-10-20T20:13:05Z",
+  "tag": "v4.0.1",
+  "date": "2026-10-31T13:22:17Z",
   "assets": {
     "Windows": {
       "binaries": [
         {
-          "name": "F3D-4.0.0-Windows-x86_64-raytracing.exe",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Windows-x86_64-raytracing.exe",
+          "name": "F3D-4.0.1-Windows-x86_64-raytracing.exe",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Windows-x86_64-raytracing.exe",
           "size": "78.7 MB",
-          "digest": "sha256:2f8f6d2af78c203240bc7e8ef165347c0e041f5474895846d0a06402ed133cc2",
+          "digest": "sha256:52b1a741f17751bf1d260a51c35d6ffceaff09b15e8d04d8933ac9d0070a0784",
           "short": "Installer",
           "long": "Installer (.exe) with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Windows-x86_64-raytracing.zip",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Windows-x86_64-raytracing.zip",
+          "name": "F3D-4.0.1-Windows-x86_64-raytracing.zip",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Windows-x86_64-raytracing.zip",
           "size": "105.8 MB",
-          "digest": "sha256:4b77fcd45f5ea4628732855eee7cd6da0aebb5090cf685ebd9b5ac78b7bbc0a5",
+          "digest": "sha256:8df790b42a67904d887f728f974b10fb1a9329967f9467019000c06172e99daf",
           "short": "Portable",
           "long": "Portable (.zip) with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Windows-x86_64.exe",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Windows-x86_64.exe",
+          "name": "F3D-4.0.1-Windows-x86_64.exe",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Windows-x86_64.exe",
           "size": "47.7 MB",
-          "digest": "sha256:e6e5896bdad35e70ac3a13812c86f7017e4114542d505cabf58bcd246e060c76",
+          "digest": "sha256:62cdfc082f0cb26a9df1a1fc4eaf899e862147e21365c1f9e9a32006433da774",
           "short": "Installer",
           "long": "Installer (.exe) without raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Windows-x86_64.zip",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Windows-x86_64.zip",
+          "name": "F3D-4.0.1-Windows-x86_64.zip",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Windows-x86_64.zip",
           "size": "65.5 MB",
-          "digest": "sha256:98e3db83a0e486d1a5d69f0d10d0b018432e9d200c8fecd0020afc7da26ab71e",
+          "digest": "sha256:7c36b7abc2929dafb7d93fc132354d69dbc1ea05c6bf858e7c70d75676ca56f8",
           "short": "Portable",
           "long": "Portable (.zip) without raytracing support"
         }
@@ -42,50 +42,50 @@
     "Linux": {
       "binaries": [
         {
-          "name": "F3D-4.0.0-Linux-x86_64-raytracing.deb",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Linux-x86_64-raytracing.deb",
+          "name": "F3D-4.0.1-Linux-x86_64-raytracing.deb",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Linux-x86_64-raytracing.deb",
           "size": "175.5 MB",
-          "digest": "sha256:fb974788f79a67ae6e631e9206be89c5484cd091a94fbb81a54ff3007bc181d0",
+          "digest": "sha256:113c2e85399453ca961a98acfa1ed707dc239b2f5d0a56333396aaf0ba15856f",
           "short": "Package",
           "long": "Package (.deb) with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Linux-x86_64-raytracing.tar.xz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Linux-x86_64-raytracing.tar.xz",
-          "size": "122.6 MB",
-          "digest": "sha256:c3f213ea1b11ea139ba3201ae56782116e0d2c5672894699464f403ee6ecae2e",
+          "name": "F3D-4.0.1-Linux-x86_64-raytracing.tar.xz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Linux-x86_64-raytracing.tar.xz",
+          "size": "122.9 MB",
+          "digest": "sha256:206adc1b8985270837d885ad78a94cf959f856fc82b2836d6f42200236424133",
           "short": "Portable",
           "long": "Tarball (.tar.xz) with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Linux-x86_64-raytracing.tar.gz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Linux-x86_64-raytracing.tar.gz",
+          "name": "F3D-4.0.1-Linux-x86_64-raytracing.tar.gz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Linux-x86_64-raytracing.tar.gz",
           "size": "175.5 MB",
-          "digest": "sha256:6446c9215c1dc2ef41ffdcc8671114437591e4afb4a716d33659f71b2e3494b0",
+          "digest": "sha256:c25b3ad6a4b9527fadeb0a1aec66baf608a40dbf6bf5666ea85fc6f1b2bfbf95",
           "short": "Portable",
           "long": "Tarball (.tar.gz) with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Linux-x86_64.deb",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Linux-x86_64.deb",
+          "name": "F3D-4.0.1-Linux-x86_64.deb",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Linux-x86_64.deb",
           "size": "126.7 MB",
-          "digest": "sha256:6a437c7a6179785ce92dd9e538b65b5a97672bf7ea34f281d6361dc441d32907",
+          "digest": "sha256:e43eca43d1e1a984dfeb6d8bed996339612f749ea04a835b1f12720a98ff8d0d",
           "short": "Package",
           "long": "Package (.deb) without raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Linux-x86_64.tar.xz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Linux-x86_64.tar.xz",
-          "size": "87.0 MB",
-          "digest": "sha256:4285d24b0d17ce31d741a0d94434bdbb7106b1c544c6dac8916e50c272da2e62",
+          "name": "F3D-4.0.1-Linux-x86_64.tar.xz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Linux-x86_64.tar.xz",
+          "size": "87.2 MB",
+          "digest": "sha256:c3ed56ed9a9717b688d82d878e268b57155e1285fc38c94be424c7ae7cca6850",
           "short": "Portable",
           "long": "Tarball (.tar.xz) without raytracing support"
         },
         {
-          "name": "F3D-4.0.0-Linux-x86_64.tar.gz",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-Linux-x86_64.tar.gz",
+          "name": "F3D-4.0.1-Linux-x86_64.tar.gz",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-Linux-x86_64.tar.gz",
           "size": "126.6 MB",
-          "digest": "sha256:88d5ddd2bffb1342a33bd8b69ac08ce1e908ae2653e47249e0c3d53cf2e93810",
+          "digest": "sha256:7fd4c139b74fb2ec411d81b4675dce2f721dd4d244c0a7c5f3d0bde0d15e811b",
           "short": "Portable",
           "long": "Tarball (.tar.gz) without raytracing support"
         }
@@ -95,34 +95,34 @@
     "macOS": {
       "binaries": [
         {
-          "name": "F3D-4.0.0-macOS-arm64-raytracing.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-macOS-arm64-raytracing.dmg",
+          "name": "F3D-4.0.1-macOS-arm64-raytracing.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-macOS-arm64-raytracing.dmg",
           "size": "115.6 MB",
-          "digest": "sha256:19ba3fbf80b3048d29c3b75e70f47b4cf7dba5ebd625e9e3a135bc4e9bb0a628",
+          "digest": "sha256:c4da4af7062146899c7e64ad13c4f306ff00fdb8d714c80137f6d94bba3f101f",
           "short": "Silicon",
           "long": "Silicon installer with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-macOS-x86_64-raytracing.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-macOS-x86_64-raytracing.dmg",
+          "name": "F3D-4.0.1-macOS-x86_64-raytracing.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-macOS-x86_64-raytracing.dmg",
           "size": "140.5 MB",
-          "digest": "sha256:3001038f1b2263d069ae86b20784611a26848313c70829144d22f92dde1165b5",
+          "digest": "sha256:c9b4f6637e530e68e05396b7d1d2e0b94d9ea7122da941cb961c72bec887cdcf",
           "short": "Intel",
           "long": "Intel installer with raytracing support"
         },
         {
-          "name": "F3D-4.0.0-macOS-arm64.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-macOS-arm64.dmg",
+          "name": "F3D-4.0.1-macOS-arm64.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-macOS-arm64.dmg",
           "size": "87.0 MB",
-          "digest": "sha256:f742c86e897fc83a2297cd3ea5980541ba9718ba09570fe285e6a791c43bfdf6",
+          "digest": "sha256:4350a31b5e196d99758d95e9dc785be3bf6ba91509aadba80c50c93b16413097",
           "short": "Silicon",
           "long": "Silicon installer without raytracing support"
         },
         {
-          "name": "F3D-4.0.0-macOS-x86_64.dmg",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/F3D-4.0.0-macOS-x86_64.dmg",
+          "name": "F3D-4.0.1-macOS-x86_64.dmg",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/F3D-4.0.1-macOS-x86_64.dmg",
           "size": "95.1 MB",
-          "digest": "sha256:b50789987cc0224f2adac394a1de50d02ff5090c286e325edbcf0a5954099ddd",
+          "digest": "sha256:afba280faa2d529fa766a5eb17789de6eaa7d05ccadab786bcb702bdf656ac31",
           "short": "Intel",
           "long": "Intel installer without raytracing support"
         }
@@ -132,34 +132,34 @@
     "Android": {
       "binaries": [
         {
-          "name": "f3d-android-v4.0.0-arm64-v8a.apk",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/f3d-android-v4.0.0-arm64-v8a.apk",
+          "name": "f3d-android-v4.0.1-arm64-v8a.apk",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/f3d-android-v4.0.1-arm64-v8a.apk",
           "size": "144.7 MB",
-          "digest": "sha256:9c1a56c02f72582d8b2f2e6f9e516cf2eeff708ec2c4fd30a409a5ea6cf46059",
+          "digest": "sha256:3a4a94e05272ea6ee119f34849ea4f0c96794ca2bd4559fc1d7418bdab76998b",
           "short": "ARM",
           "long": "64-bit ARM CPUs"
         },
         {
-          "name": "f3d-android-v4.0.0-x86_64.apk",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/f3d-android-v4.0.0-x86_64.apk",
+          "name": "f3d-android-v4.0.1-x86_64.apk",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/f3d-android-v4.0.1-x86_64.apk",
           "size": "149.3 MB",
-          "digest": "sha256:0e80d4c28e372e9ae31150ec34c09f1ef55f757cc7ca04dbbc5753a4102ffb2e",
+          "digest": "sha256:152784e0083bcacc1ab7e7b0b84de63d143559b6630672e42878deffd6db3eee",
           "short": "x86_64",
           "long": "64-bit x86_64 CPUs"
         },
         {
-          "name": "f3d-android-v4.0.0-armeabi-v7a.apk",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/f3d-android-v4.0.0-armeabi-v7a.apk",
+          "name": "f3d-android-v4.0.1-armeabi-v7a.apk",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/f3d-android-v4.0.1-armeabi-v7a.apk",
           "size": "81.1 MB",
-          "digest": "sha256:c2a4b9a0fdceb0a315672227e39e066cd0086428a5cd742dd531bb7b47258295",
+          "digest": "sha256:0bde2658e4419254a84cd89a0b3f6571eefa8b37a201155c603fdbe41aaa5661",
           "short": "ARM (32-bits)",
           "long": "32-bit ARM CPUs"
         },
         {
-          "name": "f3d-android-v4.0.0-x86.apk",
-          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.0/f3d-android-v4.0.0-x86.apk",
+          "name": "f3d-android-v4.0.1-x86.apk",
+          "url": "https://github.com/f3d-app/f3d/releases/download/v4.0.1/f3d-android-v4.0.1-x86.apk",
           "size": "107.6 MB",
-          "digest": "sha256:d62231619cb470a5c02b6e08de1cc85132f265aacf6401162fbb50e7cac4476f",
+          "digest": "sha256:118098cfa83f84591ee8173b7b3b5f0ba15f894a712ba8285461f6ac9763dc2b",
           "short": "x86",
           "long": "32-bit x86 CPUs"
         }
