@@ -199,6 +199,10 @@ const config: Config = {
               to: "/data",
             },
             {
+              label: "Android privacy policy",
+              to: "/ANDROID_PRIVACY_POLICY",
+            },
+            {
               label: "Brand",
               to: "/brand",
             },
