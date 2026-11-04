@@ -220,6 +220,29 @@ async function copyDocs(): Promise<void> {
       await cp(srcFile, destFile);
     }
 
+    // copy ANDROID_PRIVACY_POLICY.md
+    const androidPrivacyPolicySrc = path.join(
+      SOURCE_DIR,
+      "doc",
+      "ANDROID_PRIVACY_POLICY.md",
+    );
+    const androidPrivacyPolicyDest = path.join(
+      __dirname,
+      "..",
+      "src",
+      "pages",
+      "ANDROID_PRIVACY_POLICY.md",
+    );
+
+    const androidPrivacyPolicy = await readFile(
+      androidPrivacyPolicySrc,
+      "utf8",
+    );
+    await writeFile(
+      androidPrivacyPolicyDest,
+      convertGithubAdmonitions(androidPrivacyPolicy),
+    );
+
     // copy CHANGELOG.md
     const changelogSrc = path.join(SOURCE_DIR, "doc", "CHANGELOG.md");
     const changelogDest = path.join(
