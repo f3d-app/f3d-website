@@ -208,10 +208,7 @@ function installEventLoopTracker(): void {
       if (!tracked) {
         return;
       }
-      if (
-        result &&
-        typeof (result as Promise<unknown>).then === "function"
-      ) {
+      if (result && typeof (result as Promise<unknown>).then === "function") {
         (result as Promise<unknown>).then(
           () => {
             pending -= 1;
