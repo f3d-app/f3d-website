@@ -13,17 +13,28 @@ import {
   sanitizeViewerModelPath,
   type PreviewCamera,
   type PreviewOptions,
+  type PreviewOptionValue,
   type PreviewVec3,
 } from "@site/src/utils/assetPreview";
 import styles from "./styles.module.css";
 
 type PreviewViewerElement = HTMLElement & {
   engine: Engine | null;
+  enginePromise: Promise<Engine | null> | null;
+  resizeObserver: ResizeObserver | null;
   options: PreviewOptions;
   load: (data: Uint8Array) => Promise<void>;
   exceptionMessage: (error: unknown) => string;
   _resize: () => void;
+  _ensureEngine?: () => Promise<Engine | null>;
+  module?: {
+    Engine: {
+      setReaderOption: (name: string, value: string) => void;
+    };
+  };
 };
+
+const READER_OPTION = /^[A-Z][A-Za-z0-9]*\./;
 
 export type AssetPreviewModalProps = {
   title: string;
@@ -58,6 +69,59 @@ function readException(viewer: PreviewViewerElement, error: unknown): string {
 
 function vec3(value: ArrayLike<number>): PreviewVec3 {
   return [Number(value[0]), Number(value[1]), Number(value[2])];
+}
+
+function optionToString(key: string, value: PreviewOptionValue): string {
+  // F3D 4.0 skybox is an enum, not a boolean.
+  if (key === "render.background.skybox") {
+    if (value === true || value === "true") {
+      return "enabled";
+    }
+    if (value === false || value === "false") {
+      return "disabled";
+    }
+  }
+  return String(value);
+}
+
+function applyReaderOptions(
+  viewer: PreviewViewerElement,
+  options: PreviewOptions,
+) {
+  const setReaderOption = viewer.module?.Engine?.setReaderOption;
+  if (!setReaderOption) {
+    return;
+  }
+  for (const [key, value] of Object.entries(options)) {
+    if (!READER_OPTION.test(key)) {
+      continue;
+    }
+    try {
+      setReaderOption(key, String(value));
+    } catch {
+      // This reader may not expose the option.
+    }
+  }
+}
+
+function applyViewerOptions(
+  viewer: PreviewViewerElement,
+  options: PreviewOptions,
+) {
+  if (!viewer.engine) {
+    return;
+  }
+  const engineOptions = viewer.engine.getOptions();
+  for (const [key, value] of Object.entries(options)) {
+    if (READER_OPTION.test(key)) {
+      continue;
+    }
+    try {
+      engineOptions.setAsString(key, optionToString(key, value));
+    } catch {
+      // Skip an invalid key and keep applying the rest.
+    }
+  }
 }
 
 function applyPreviewCamera(
@@ -99,75 +163,152 @@ function applyPreviewCamera(
   viewer.engine.getWindow().render();
 }
 
-function waitFrames(count: number): Promise<void> {
-  return new Promise((resolve) => {
-    const step = (left: number) => {
-      if (left <= 0) {
-        resolve();
+const LOOP_TRACKER = Symbol.for("f3d.previewLoopTracker");
+
+type LoopTracker = {
+  native: typeof window.requestAnimationFrame;
+  pending: () => number;
+};
+
+function installEventLoopTracker(): void {
+  if (typeof window === "undefined") {
+    return;
+  }
+  const host = window as Window & { [LOOP_TRACKER]?: LoopTracker };
+  if (host[LOOP_TRACKER]) {
+    return;
+  }
+
+  const native = window.requestAnimationFrame.bind(window);
+  let pending = 0;
+  host[LOOP_TRACKER] = { native, pending: () => pending };
+
+  window.requestAnimationFrame = ((callback: FrameRequestCallback) => {
+    let tracked = false;
+    try {
+      tracked = Function.prototype.toString
+        .call(callback)
+        .includes("unRegisterInteractor");
+    } catch {
+      tracked = false;
+    }
+    if (tracked) {
+      pending += 1;
+    }
+    return native((time) => {
+      let result: unknown;
+      try {
+        result = callback(time);
+      } catch (error) {
+        if (tracked) {
+          pending -= 1;
+        }
+        throw error;
+      }
+      if (!tracked) {
         return;
       }
-      requestAnimationFrame(() => step(left - 1));
-    };
-    step(count);
+      if (
+        result &&
+        typeof (result as Promise<unknown>).then === "function"
+      ) {
+        (result as Promise<unknown>).then(
+          () => {
+            pending -= 1;
+          },
+          () => {
+            pending -= 1;
+          },
+        );
+      } else {
+        pending -= 1;
+      }
+    });
+  }) as typeof window.requestAnimationFrame;
+}
+
+function loopTracker(): LoopTracker | undefined {
+  return (window as Window & { [LOOP_TRACKER]?: LoopTracker })[LOOP_TRACKER];
+}
+
+function nextNativeFrame(): Promise<void> {
+  const native =
+    loopTracker()?.native ?? window.requestAnimationFrame.bind(window);
+  return new Promise((resolve) => {
+    native(() => resolve());
   });
 }
 
-function teardownEngine(engine: Engine | null | undefined): Promise<void> {
-  if (!engine) {
-    return Promise.resolve();
+async function waitForRenderLoopToStop(): Promise<boolean> {
+  const start = performance.now();
+  let idleFrames = 0;
+  while (performance.now() - start < 8000) {
+    if ((loopTracker()?.pending() ?? 0) === 0) {
+      idleFrames += 1;
+      if (idleFrames >= 2) {
+        return true;
+      }
+    } else {
+      idleFrames = 0;
+    }
+    await nextNativeFrame();
+  }
+  return (loopTracker()?.pending() ?? 0) === 0;
+}
+
+if (typeof window !== "undefined") {
+  installEventLoopTracker();
+}
+
+async function teardownViewer(
+  viewer: PreviewViewerElement | null,
+): Promise<void> {
+  if (!viewer) {
+    return;
   }
 
-  let settled = false;
-  const dispose = () => {
-    if (settled) {
-      return;
+  viewer.load = async () => {};
+  viewer._resize = () => {};
+  viewer._ensureEngine = async () => viewer.engine;
+  try {
+    viewer.resizeObserver?.disconnect();
+  } catch {
+    // Observer may already be disconnected.
+  }
+
+  try {
+    await viewer.enginePromise;
+  } catch {
+    // Engine creation can fail if the element was removed mid-init.
+  }
+
+  const engine = viewer.engine;
+  if (!engine) {
+    return;
+  }
+
+  try {
+    // The queued animation frame must finish before the engine is freed.
+    engine.getInteractor().stop();
+  } catch {
+    try {
+      engine.getInteractor().requestStop();
+    } catch {
+      // The loop may not have started.
     }
-    settled = true;
+  }
+
+  const loopStopped = await waitForRenderLoopToStop();
+  if (loopStopped) {
     try {
       engine[Symbol.dispose]();
     } catch {
-      // Ignore a second dispose during a fast close/reopen.
+      // A fast reopen can dispose the same engine twice.
     }
-  };
-
-  try {
-    const interactor = engine.getInteractor();
-    try {
-      interactor.setEventLoopUserCallback(() => {});
-      interactor.setNotificationCallback(() => false);
-    } catch {
-      // Callbacks may already be gone.
-    }
-    // Ask the current frame to exit. Disposing before that frame returns
-    // calls a freed WASM function (`indirect call to null` / `null function`).
-    interactor.requestStop();
-  } catch {
-    dispose();
-    return Promise.resolve();
   }
 
-  return new Promise((resolve) => {
-    const finish = () => {
-      void waitFrames(3).then(() => {
-        dispose();
-        resolve();
-      });
-    };
-
-    if (document.hidden) {
-      const onVisible = () => {
-        if (document.hidden) {
-          return;
-        }
-        document.removeEventListener("visibilitychange", onVisible);
-        finish();
-      };
-      document.addEventListener("visibilitychange", onVisible);
-      return;
-    }
-
-    finish();
-  });
+  viewer.engine = null;
+  viewer.enginePromise = Promise.resolve(null);
 }
 
 export default function AssetPreviewModal({
@@ -184,6 +325,7 @@ export default function AssetPreviewModal({
   const onCloseRef = useRef(onClose);
   const releasedRef = useRef(false);
   const loadTaskRef = useRef(Promise.resolve());
+  const abortRef = useRef<AbortController | null>(null);
   onCloseRef.current = onClose;
 
   const safePath = sanitizeViewerModelPath(filePath);
@@ -197,14 +339,20 @@ export default function AssetPreviewModal({
     safePath ? undefined : "This file cannot be previewed.",
   );
 
-  // Stop the WASM loop while the canvas is still mounted, then unmount.
   const requestClose = () => {
     if (releasedRef.current) {
       return;
     }
     releasedRef.current = true;
+    abortRef.current?.abort();
+    document.body.style.overflow = "";
     if (dialogRef.current) {
       dialogRef.current.style.visibility = "hidden";
+      const backdrop = dialogRef.current.parentElement;
+      if (backdrop) {
+        backdrop.style.visibility = "hidden";
+        backdrop.style.pointerEvents = "none";
+      }
     }
 
     const viewer = viewerRef.current;
@@ -216,7 +364,7 @@ export default function AssetPreviewModal({
 
     void (async () => {
       await loadTaskRef.current.catch(() => undefined);
-      await teardownEngine(viewer.engine);
+      await teardownViewer(viewer);
       finish();
     })();
   };
@@ -280,72 +428,68 @@ export default function AssetPreviewModal({
       ? { ...optionsToApply, "model.volume.enable": false }
       : optionsToApply;
     const originalLoad = viewer.load.bind(viewer);
+    const abort = new AbortController();
+    abortRef.current = abort;
 
-    const onReady = () => {
-      if (isClosed()) {
-        return;
-      }
-      viewer.options = initialOptions;
-      // The element turns DPI scaling on before `ready`. Heavy scenes
-      // (point clouds, volumes) opt out, then the canvas has to be resized.
-      if (optionsToApply["ui.dpi_aware"] === false) {
-        viewer._resize();
-      }
-    };
-
-    // `src` calls `load` when the file bytes arrive. The overlay stays up
-    // until that call finishes, which is when the model is actually shown.
-    viewer.load = async (data: Uint8Array) => {
-      if (isClosed()) {
-        return;
-      }
-      const task = (async () => {
-        try {
-          await originalLoad(data);
-          if (isClosed() || !viewer.engine) {
-            return;
-          }
-          // Volume rendering rejects an empty scene, so turn it on after the
-          // image is loaded.
-          if (enableVolume) {
-            viewer.options = { "model.volume.enable": true };
-            if (!camera) {
-              viewer.engine.getWindow().getCamera().resetToBounds(0.9);
-            }
-          }
-          applyPreviewCamera(viewer, camera);
-          viewer.engine.getWindow().render();
-          setSceneReady(true);
-        } catch (error) {
-          if (isClosed()) {
-            return;
-          }
-          console.error("F3D preview failed:", readException(viewer, error));
-          setError("This file could not be previewed.");
+    const task = (async () => {
+      try {
+        await viewer.enginePromise;
+        if (isClosed() || !viewer.engine) {
+          return;
         }
-      })();
-      loadTaskRef.current = task;
-      await task;
-    };
+        applyReaderOptions(viewer, optionsToApply);
+        applyViewerOptions(viewer, initialOptions);
+        if (optionsToApply["ui.dpi_aware"] === false) {
+          viewer._resize();
+        }
 
-    viewer.addEventListener("ready", onReady);
-    // `ready` can fire before this effect attaches, because the element
-    // creates its engine during mount.
-    if (viewer.engine) {
-      onReady();
-    }
-    viewer.setAttribute("src", src);
+        const response = await fetch(src, { signal: abort.signal });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+        const data = new Uint8Array(await response.arrayBuffer());
+        if (isClosed()) {
+          return;
+        }
+
+        await originalLoad(data);
+        if (isClosed() || !viewer.engine) {
+          return;
+        }
+        // load() clears the scene, so options have to be applied again.
+        applyViewerOptions(viewer, optionsToApply);
+        if (enableVolume && !camera) {
+          viewer.engine.getWindow().getCamera().resetToBounds(0.9);
+        }
+        applyPreviewCamera(viewer, camera);
+        viewer.engine.getWindow().render();
+        setSceneReady(true);
+      } catch (error) {
+        if (
+          isClosed() ||
+          (error instanceof DOMException && error.name === "AbortError")
+        ) {
+          return;
+        }
+        console.error("F3D preview failed:", readException(viewer, error));
+        setError("This file could not be previewed.");
+      }
+    })();
+    loadTaskRef.current = task;
 
     return () => {
       disposed = true;
-      viewer.removeEventListener("ready", onReady);
+      abort.abort();
+      if (abortRef.current === abort) {
+        abortRef.current = null;
+      }
       if (releasedRef.current) {
         return;
       }
       releasedRef.current = true;
       void (async () => {
         await loadTaskRef.current.catch(() => undefined);
-        await teardownEngine(viewer.engine);
+        await teardownViewer(viewer);
       })();
     };
   }, [camera, options, safePath, src, wasmReady]);

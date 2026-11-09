@@ -11,7 +11,13 @@
     "previewable": true,
     "options": {
       "render.backface_type": "visible",
+      "model.coloring": "material",
       "scene.animation.autoplay": false
+    },
+    "camera": {
+      "direction": [0.5, 0.1, 1],
+      "viewUp": [0, 1, 0],
+      "zoom": 0.9
     }
   },
   {
@@ -25,15 +31,20 @@
     "sha256": "acaee5ca93251d9fcd876a2eb34458c476aa32d1c10c7250dd8fc160041aecf5",
     "previewable": true,
     "options": {
+      "render.hdri.ambient": true,
       "render.effect.tone_mapping": false,
       "render.effect.antialiasing.mode": "none",
       "render.effect.ambient_occlusion": false,
+      "render.grid.enable": true,
+      "render.grid.reflection": 0,
       "model.point_sprites.type": "sphere",
       "model.point_sprites.size": 0.3,
       "model.coloring": "direct",
       "model.scivis.array_name": "RGBA",
       "scene.up_direction": "+Z",
       "scene.animation.autoplay": false,
+      "ui.axis": true,
+      "ui.loader_progress": true,
       "ui.dpi_aware": false
     }
   },
@@ -74,8 +85,16 @@
       "model.coloring": "scivis",
       "model.scivis.array_name": "ImageFile",
       "model.scivis.range": "300,1000",
+      "model.scivis.colormap": "0,#000000,1,#ffffff",
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
+      "render.effect.antialiasing.mode": "fxaa",
       "render.effect.ambient_occlusion": false,
+      "render.grid.enable": true,
+      "render.grid.reflection": 0,
       "scene.animation.autoplay": false,
+      "ui.axis": true,
+      "ui.loader_progress": true,
       "ui.dpi_aware": false
     }
   },
@@ -197,7 +216,17 @@
     "author": "Greg Brown",
     "size": 3.97,
     "sha256": "91dd9fd6ed67cfb673c338020939e5fc4c602230d537c0a85d8995a3af0216ad",
-    "previewable": true
+    "previewable": true,
+    "options": {
+      "model.coloring": "direct",
+      "model.scivis.array_name": "Colors",
+      "model.scivis.field": "cells",
+      "STEP.linear_deflection": 0.01,
+      "scene.animation.autoplay": false
+    },
+    "camera": {
+      "zoom": 0.82
+    }
   },
   {
     "file": "f3d.vtp",
@@ -211,7 +240,15 @@
     "previewable": true,
     "options": {
       "scene.up_direction": "+Z",
-      "scene.animation.autoplay": false
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
+      "render.effect.antialiasing.mode": "fxaa",
+      "render.effect.ambient_occlusion": true,
+      "render.grid.enable": true,
+      "render.grid.reflection": 0.5,
+      "scene.animation.autoplay": false,
+      "ui.axis": true,
+      "ui.loader_progress": true
     },
     "camera": {
       "zoom": 0.7
@@ -251,23 +288,18 @@
     "previewable": true,
     "options": {
       "model.point_sprites.type": "sphere",
-      "model.point_sprites.size": 2,
+      "model.point_sprites.size": 0.2,
       "model.coloring": "scivis",
       "model.scivis.array_name": "intensity",
       "model.scivis.colormap": "0,0,0.8,0,0.4,0.9,0,0,0.8,0.9,0.9,0,1,0.5,0.5,1",
       "scene.up_direction": "+Z",
-      "render.hdri.ambient": true,
-      "render.effect.tone_mapping": true,
-      "render.effect.antialiasing.mode": "fxaa",
       "render.effect.ambient_occlusion": false,
-      "render.grid.enable": false,
-      "scene.animation.autoplay": false,
-      "ui.dpi_aware": false
+      "scene.animation.autoplay": false
     },
     "camera": {
-      "direction": [0, 0, 1],
-      "viewUp": [0, 1, 0],
-      "zoom": 0.85
+      "position": [436.4, -349.9, 124.7],
+      "focalPoint": [436.4, -140.6, 51.4],
+      "viewUp": [0, 0, 1]
     }
   },
   {
@@ -279,7 +311,19 @@
     "author": "Kitware Inc.",
     "size": 10.38,
     "sha256": "8016ed7acd91a27349528fc6f2097d19e73f60391b14af9f689690da2106a0a3",
-    "previewable": true
+    "previewable": true,
+    "options": {
+      "model.coloring": "scivis",
+      "model.scivis.array_name": "velocityMagnitude",
+      "model.scivis.range": "-2,8",
+      "model.scivis.colormap": "0,#000000,0.4,0.9,0,0,0.8,0.9,0.9,0,1,#ffffff",
+      "scene.animation.autoplay": false
+    },
+    "camera": {
+      "position": [0.006, -0.7, 2.081],
+      "focalPoint": [0.006, 0.006, 2.081],
+      "viewUp": [1, 0, 0]
+    }
   },
   {
     "file": "skull.vti",
@@ -297,8 +341,16 @@
       "model.scivis.array_name": "ImageFile",
       "model.scivis.range": "40,200",
       "scene.up_direction": "+Z",
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
+      "render.effect.antialiasing.mode": "fxaa",
       "render.effect.ambient_occlusion": false,
+      "render.grid.enable": true,
+      "render.grid.reflection": 0,
       "scene.animation.autoplay": false,
+      "ui.axis": true,
+      "ui.scalar_bar": true,
+      "ui.loader_progress": true,
       "ui.dpi_aware": false
     },
     "camera": {
@@ -317,7 +369,9 @@
     "sha256": "8621abbe080b52a2abe7e9a20c8019466b0664290069bfd040a4897df490c80d",
     "previewable": true,
     "options": {
-      "render.background.skybox": true,
+      "render.background.skybox": "enabled",
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
     }
   },
@@ -332,7 +386,9 @@
     "sha256": "73b39879d1c7f17fd2808510c1940297f8b071bad1809a13e5af2ad3f511deaf",
     "previewable": true,
     "options": {
-      "render.background.skybox": true,
+      "render.background.skybox": "enabled",
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
     }
   },
@@ -347,7 +403,9 @@
     "sha256": "23a59b56482e804985ae8eae404a0d15a24ec924ad2f250e6f81371760ae2a48",
     "previewable": true,
     "options": {
-      "render.background.skybox": true,
+      "render.background.skybox": "enabled",
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
     }
   },
@@ -362,7 +420,9 @@
     "sha256": "d77530f340ecc20de550b87b9a6a6eabf38e6e64b7a740292dc540e1815191e0",
     "previewable": true,
     "options": {
-      "render.background.skybox": true,
+      "render.background.skybox": "enabled",
+      "render.hdri.ambient": true,
+      "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
     }
   }
