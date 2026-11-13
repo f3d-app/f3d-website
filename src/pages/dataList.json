@@ -239,6 +239,9 @@
     "sha256": "c8a5b245b4b637a1b5a4b5e4240dff0f86b0426fb5f22ba8a3591122a31437b7",
     "previewable": true,
     "options": {
+      "model.coloring": "direct",
+      "model.scivis.array_name": "Colors",
+      "model.scivis.field": "cells",
       "scene.up_direction": "+Z",
       "render.hdri.ambient": true,
       "render.effect.tone_mapping": true,
@@ -320,9 +323,9 @@
       "scene.animation.autoplay": false
     },
     "camera": {
-      "position": [0.006, -0.7, 2.081],
-      "focalPoint": [0.006, 0.006, 2.081],
-      "viewUp": [1, 0, 0]
+      "direction": [1, 0.15, 0],
+      "viewUp": [0, 1, 0],
+      "zoom": 0.55
     }
   },
   {
@@ -354,7 +357,7 @@
       "ui.dpi_aware": false
     },
     "camera": {
-      "direction": [1, 0, 0],
+      "direction": [-1, 0, 0],
       "viewUp": [0, 0, 1]
     }
   },
@@ -369,7 +372,7 @@
     "sha256": "8621abbe080b52a2abe7e9a20c8019466b0664290069bfd040a4897df490c80d",
     "previewable": true,
     "options": {
-      "render.background.skybox": "enabled",
+      "render.background.skybox": "disabled",
       "render.hdri.ambient": true,
       "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
@@ -386,7 +389,7 @@
     "sha256": "73b39879d1c7f17fd2808510c1940297f8b071bad1809a13e5af2ad3f511deaf",
     "previewable": true,
     "options": {
-      "render.background.skybox": "enabled",
+      "render.background.skybox": "disabled",
       "render.hdri.ambient": true,
       "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
@@ -403,7 +406,7 @@
     "sha256": "23a59b56482e804985ae8eae404a0d15a24ec924ad2f250e6f81371760ae2a48",
     "previewable": true,
     "options": {
-      "render.background.skybox": "enabled",
+      "render.background.skybox": "disabled",
       "render.hdri.ambient": true,
       "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false
@@ -420,7 +423,7 @@
     "sha256": "d77530f340ecc20de550b87b9a6a6eabf38e6e64b7a740292dc540e1815191e0",
     "previewable": true,
     "options": {
-      "render.background.skybox": "enabled",
+      "render.background.skybox": "disabled",
       "render.hdri.ambient": true,
       "render.effect.tone_mapping": true,
       "scene.animation.autoplay": false

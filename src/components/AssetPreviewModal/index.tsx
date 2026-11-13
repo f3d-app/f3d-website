@@ -9,6 +9,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Icon } from "@iconify/react";
 import type { Engine } from "f3d";
 import {
+  limitHdrTexture,
   previewViewerDomId,
   sanitizeViewerModelPath,
   type PreviewCamera,
@@ -298,6 +299,11 @@ async function teardownViewer(
   const loopStopped = await waitForRenderLoopToStop();
   if (loopStopped) {
     try {
+      engine.getScene().clear();
+    } catch {
+      // The scene may already be gone.
+    }
+    try {
       engine[Symbol.dispose]();
     } catch {
       // A fast reopen can dispose the same engine twice.
@@ -306,6 +312,19 @@ async function teardownViewer(
 
   viewer.engine = null;
   viewer.enginePromise = Promise.resolve(null);
+}
+
+let previewModulePromise: Promise<void> | undefined;
+
+function loadPreviewModule(): Promise<void> {
+  previewModulePromise ??= import("f3d")
+    .then((module) => module.default())
+    .then(() => undefined)
+    .catch((error: unknown) => {
+      previewModulePromise = undefined;
+      throw error;
+    });
+  return previewModulePromise;
 }
 
 export default function AssetPreviewModal({
@@ -321,6 +340,7 @@ export default function AssetPreviewModal({
   const viewerRef = useRef<PreviewViewerElement>(null);
   const onCloseRef = useRef(onClose);
   const releasedRef = useRef(false);
+  const backdropPressRef = useRef(false);
   const loadTaskRef = useRef(Promise.resolve());
   const abortRef = useRef<AbortController | null>(null);
   onCloseRef.current = onClose;
@@ -393,9 +413,8 @@ export default function AssetPreviewModal({
     }
 
     let cancelled = false;
-    import("f3d")
-      .then(async (module) => {
-        await module.default();
+    loadPreviewModule()
+      .then(() => {
         if (!cancelled) {
           setWasmReady(true);
         }
@@ -421,9 +440,6 @@ export default function AssetPreviewModal({
     const isClosed = () => disposed || releasedRef.current;
     const optionsToApply = { ...defaultPreviewOptions(), ...options };
     const enableVolume = optionsToApply["model.volume.enable"] === true;
-    const initialOptions = enableVolume
-      ? { ...optionsToApply, "model.volume.enable": false }
-      : optionsToApply;
     const originalLoad = viewer.load.bind(viewer);
     const abort = new AbortController();
     abortRef.current = abort;
@@ -435,7 +451,8 @@ export default function AssetPreviewModal({
           return;
         }
         applyReaderOptions(viewer, optionsToApply);
-        applyViewerOptions(viewer, initialOptions);
+        // Volume actors are built inside load(), so the flag has to be on first.
+        applyViewerOptions(viewer, optionsToApply);
         if (optionsToApply["ui.dpi_aware"] === false) {
           viewer._resize();
         }
@@ -444,18 +461,23 @@ export default function AssetPreviewModal({
         if (!response.ok) {
           throw new Error(`HTTP ${response.status}`);
         }
-        const data = new Uint8Array(await response.arrayBuffer());
+        let data = new Uint8Array(await response.arrayBuffer());
+        if (safePath.toLowerCase().endsWith(".hdr")) {
+          // Wide HDR scanlines render as stripes. 2048 matches the 2K files.
+          data = limitHdrTexture(data, 2048);
+        }
         if (isClosed()) {
           return;
         }
 
         await originalLoad(data);
+        data = new Uint8Array(0);
         if (isClosed() || !viewer.engine) {
           return;
         }
         // load() clears the scene, so options have to be applied again.
         applyViewerOptions(viewer, optionsToApply);
-        if (enableVolume && !camera) {
+        if (enableVolume) {
           viewer.engine.getWindow().getCamera().resetToBounds(0.9);
         }
         applyPreviewCamera(viewer, camera);
@@ -492,7 +514,18 @@ export default function AssetPreviewModal({
   }, [camera, options, safePath, src, wasmReady]);
 
   return (
-    <div className={styles.backdrop} onClick={() => requestClose()}>
+    <div
+      className={styles.backdrop}
+      onPointerDown={(event) => {
+        backdropPressRef.current = event.target === event.currentTarget;
+      }}
+      onClick={(event) => {
+        if (event.target === event.currentTarget && backdropPressRef.current) {
+          requestClose();
+        }
+        backdropPressRef.current = false;
+      }}
+    >
       <div
         ref={dialogRef}
         className={styles.dialog}
