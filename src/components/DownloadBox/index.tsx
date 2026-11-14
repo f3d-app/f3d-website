@@ -17,6 +17,10 @@ export type DownloadBoxProps = {
   license?: string;
   author?: string;
   thumbnail?: string;
+  /** When true, shows Preview (left) and Download (right) actions. */
+  showPreview?: boolean;
+  /** Opens an in-page preview. Required for an enabled Preview button. */
+  onPreview?: () => void;
 };
 
 export default function DownloadBox({
@@ -30,8 +34,11 @@ export default function DownloadBox({
   license,
   author,
   thumbnail,
+  showPreview = false,
+  onPreview,
 }: DownloadBoxProps): ReactNode {
   const [copied, setCopied] = useState<boolean>(false);
+  const canPreview = Boolean(onPreview);
 
   const tooltipShaId = useId();
   const tooltipLicenseId = useId();
@@ -146,24 +153,87 @@ export default function DownloadBox({
         />
       )}
 
-      {isLinkPage && (
-        <Link to={link} className={styles.downloadButton}>
-          <Icon
-            icon="material-symbols:download-rounded"
-            className={styles.downloadIcon}
-          />
-          Download
-        </Link>
-      )}
+      {showPreview ? (
+        <div className={styles.actionRow}>
+          {canPreview ? (
+            <button
+              type="button"
+              className={`${styles.cardActionButton} ${styles.previewActionButton}`}
+              aria-label="Preview in 3D"
+              onClick={onPreview}
+            >
+              <Icon
+                icon="material-symbols:visibility-outline-rounded"
+                className={styles.downloadIcon}
+                aria-hidden="true"
+              />
+              Preview
+            </button>
+          ) : (
+            <button
+              type="button"
+              className={`${styles.cardActionButton} ${styles.previewActionButton}`}
+              aria-label="Preview in 3D not available for this file type"
+              disabled
+              title="Preview is not available for this file type"
+            >
+              <Icon
+                icon="material-symbols:visibility-outline-rounded"
+                className={styles.downloadIcon}
+                aria-hidden="true"
+              />
+              Preview
+            </button>
+          )}
+          {isLinkPage ? (
+            <Link
+              to={link}
+              className={`${styles.cardActionButton} ${styles.downloadActionButton}`}
+            >
+              <Icon
+                icon="material-symbols:download-rounded"
+                className={styles.downloadIcon}
+                aria-hidden="true"
+              />
+              Download
+            </Link>
+          ) : (
+            <a
+              href={link}
+              className={`${styles.cardActionButton} ${styles.downloadActionButton}`}
+              download
+            >
+              <Icon
+                icon="material-symbols:download-rounded"
+                className={styles.downloadIcon}
+                aria-hidden="true"
+              />
+              Download
+            </a>
+          )}
+        </div>
+      ) : (
+        <>
+          {isLinkPage && (
+            <Link to={link} className={styles.downloadButton}>
+              <Icon
+                icon="material-symbols:download-rounded"
+                className={styles.downloadIcon}
+              />
+              Download
+            </Link>
+          )}
 
-      {!isLinkPage && (
-        <a href={link} className={styles.downloadButton} download>
-          <Icon
-            icon="material-symbols:download-rounded"
-            className={styles.downloadIcon}
-          />
-          Download
-        </a>
+          {!isLinkPage && (
+            <a href={link} className={styles.downloadButton} download>
+              <Icon
+                icon="material-symbols:download-rounded"
+                className={styles.downloadIcon}
+              />
+              Download
+            </a>
+          )}
+        </>
       )}
     </div>
   );
