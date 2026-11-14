@@ -9,7 +9,6 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 import { Icon } from "@iconify/react";
 import type { Engine } from "f3d";
 import {
-  limitHdrTexture,
   previewViewerDomId,
   sanitizeViewerModelPath,
   type PreviewCamera,
@@ -462,10 +461,6 @@ export default function AssetPreviewModal({
           throw new Error(`HTTP ${response.status}`);
         }
         let data = new Uint8Array(await response.arrayBuffer());
-        if (safePath.toLowerCase().endsWith(".hdr")) {
-          // Wide HDR scanlines render as stripes. 2048 matches the 2K files.
-          data = limitHdrTexture(data, 2048);
-        }
         if (isClosed()) {
           return;
         }

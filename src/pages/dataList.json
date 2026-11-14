@@ -421,7 +421,7 @@
     "author": "Greg Zaal",
     "size": 84.92,
     "sha256": "d77530f340ecc20de550b87b9a6a6eabf38e6e64b7a740292dc540e1815191e0",
-    "previewable": true,
+    "previewable": false,
     "options": {
       "render.background.skybox": "disabled",
       "render.hdri.ambient": true,
