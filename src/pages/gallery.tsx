@@ -63,7 +63,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d can.ex2 --up=+Z --scalar-coloring --coloring-array=VEL --animation-speed-factor=0.002",
+      "f3d can.ex2 --up=+Z --coloring-mode=scivis --coloring-array=VEL --animation-speed-factor=0.002",
   },
   {
     title: "3D Gaussians Splatting",
@@ -102,7 +102,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d 202.vtp --scalar-coloring --raytracing --raytracing-denoise --raytracing-samples=20 --coloring-range=-2,9",
+      "f3d 202.vtp --coloring-mode=scivis --coloring-array=RegionId --raytracing --raytracing-denoise --raytracing-samples=20 --coloring-range=-2,9",
   },
   {
     title: "Volume rendering of a security bag scan",
@@ -126,7 +126,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d DamagedHelmet.glb --hdri-file=lebombo_4k.hdr --hdri-skybox --blue-background --ambient-occlusion --grid=false --axis=false",
+      "f3d DamagedHelmet.glb --hdri-file=lebombo_4k.hdr --hdri-skybox --blur-background --ambient-occlusion --grid=false --axis=false",
   },
   {
     title: "Showcase of interactive widgets",
@@ -138,7 +138,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d dragon.vtu --scalar-coloring --edges --metadata --coloring-component=0",
+      "f3d dragon.vtu --coloring-mode=scivis --edges --metadata --coloring-component=0",
   },
   {
     title: "Metallic Rendering of a STEP file",
@@ -150,7 +150,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d eta_asm.stp --hdri-file=future_parking_2k.hdr -DSTEP.linear_deflection=0.01 --hdri-skybox --blur-background --ambient-occlusion --up=+Z --metallic=1 --roughness=0.6 --color=0.98,0.90,0.59 --scalar-coloring=false",
+      "f3d eta_asm.stp --hdri-file=future_parking_2k.hdr -DSTEP.linear_deflection=0.01 --hdri-skybox --blur-background --ambient-occlusion --up=+Z --metallic=1 --roughness=0.6 --color=0.98,0.90,0.59 --coloring-mode=material",
   },
   {
     title: "Rendering of a FBX file",
@@ -186,7 +186,7 @@ const galleryItems = [
       />
     ),
     command:
-      "f3d single-pin.vtp --coloring-scalar-bar --scalar-coloring --coloring-range=-2,8 --colormap=0,0.3,0.7,0,0.7,0,0.1,1,1,0.8,0.8,0",
+      "f3d single-pin.vtp --coloring-scalar-bar --coloring-mode=scivis --coloring-range=-2,8 --colormap=0,0.3,0.7,0,0.7,0,0.1,1,1,0.8,0.8,0",
   },
   {
     title: "Volume rendering of a medical skull scan",
