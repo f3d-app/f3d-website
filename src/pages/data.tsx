@@ -2,8 +2,25 @@ import React from "react";
 import Layout from "@theme/Layout";
 import dataList from "./dataList.json";
 import { Icon } from "@iconify/react";
+import AssetPreviewModal from "@site/src/components/AssetPreviewModal";
 import DownloadBox from "@site/src/components/DownloadBox";
+import type {
+  PreviewCamera,
+  PreviewOptions,
+} from "@site/src/utils/assetPreview";
 import styles from "./data.module.css";
+
+type AssetRecord = (typeof dataList)[number] & {
+  options?: PreviewOptions;
+  camera?: PreviewCamera;
+};
+
+type PreviewRequest = {
+  file: string;
+  title: string;
+  options?: PreviewOptions;
+  camera?: PreviewCamera;
+};
 
 export default function DataPage() {
   const categories = [
@@ -18,6 +35,8 @@ export default function DataPage() {
   const [filters, setFilters] = React.useState<Record<string, boolean>>(
     categories.reduce((acc, c) => ({ ...acc, [c.label]: true }), {}),
   );
+  const [preview, setPreview] = React.useState<PreviewRequest | null>(null);
+  const assets = dataList as AssetRecord[];
 
   return (
     <Layout title="Download assets">
@@ -59,7 +78,7 @@ export default function DataPage() {
         </div>
 
         <div className={styles.dataGrid}>
-          {dataList
+          {assets
             .filter(({ icon }) => {
               if (!icon) return true;
               const match = categories.find((c) => c.icon === icon);
@@ -76,9 +95,13 @@ export default function DataPage() {
                 author,
                 size,
                 sha256,
+                previewable,
+                options,
+                camera,
               }) => {
                 // replace extension by .png
                 const thumbnail = `/data/${file.replace(/\.[^/.]+$/, ".png")}`;
+                const assetPath = `/data/${file}`;
                 return (
                   <DownloadBox
                     key={file}
@@ -87,16 +110,38 @@ export default function DataPage() {
                     icon={icon}
                     size={`${size} MB`}
                     sha256={sha256}
-                    link={`/data/${file}`}
+                    link={assetPath}
                     isLinkPage={false}
                     license={license}
                     author={author}
                     thumbnail={thumbnail}
+                    showPreview
+                    onPreview={
+                      previewable
+                        ? () =>
+                            setPreview({
+                              file: assetPath,
+                              title,
+                              options,
+                              camera,
+                            })
+                        : undefined
+                    }
                   />
                 );
               },
             )}
         </div>
+        {preview && (
+          <AssetPreviewModal
+            key={preview.file}
+            title={preview.title}
+            filePath={preview.file}
+            options={preview.options}
+            camera={preview.camera}
+            onClose={() => setPreview(null)}
+          />
+        )}
       </main>
     </Layout>
   );
